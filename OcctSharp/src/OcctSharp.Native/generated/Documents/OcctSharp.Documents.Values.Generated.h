@@ -3,6 +3,9 @@
 // Source: c:@S@BinMDataXtd@F@SetDocumentVersion#I#S
 // Source: c:@S@FSD_BinaryFile@F@InverseInt#I#S
 // Source: c:@S@FSD_BinaryFile@F@InverseReal#d#S
+// Source: c:@S@FSD_BinaryFile@F@InverseShortReal#f#S
+// Source: c:@S@FSD_BinaryFile@F@InverseSize#k#S
+// Source: c:@S@FSD_BinaryFile@F@InverseUint64#k#S
 // Source: c:@S@TDataXtd_Presentation@F@getColorNameFromOldEnum#I#S
 // Source: c:@S@TDataXtd_Presentation@F@getOldColorNameFromNewEnum#$@E@Quantity_NameOfColor#S
 // Source: c:@S@TDocStd_Document@F@CurrentStorageFormatVersion#S
@@ -32,6 +35,12 @@ OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_fsd_binary_file_inverse
 
 OCCTSHARP_API double OCCTSHARP_CALL occtsharp_generated_fsd_binary_file_inverse_real_static_inverse_real_0(
   double theValue);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fsd_binary_file_inverse_short_real_static_inverse_short_real_0(float theValue, float* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fsd_binary_file_inverse_size_static_inverse_size_0(uint64_t theValue, uint64_t* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fsd_binary_file_inverse_uint64_static_inverse_uint64_0(uint64_t theValue, uint64_t* generatedResult);
 
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_tdata_xtd_presentation_get_color_name_from_old_enum_static_get_color_name_from_old_enum_0(
   int32_t theOld);

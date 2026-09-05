@@ -3,6 +3,9 @@
 // Source: c:@S@BinMDataXtd@F@SetDocumentVersion#I#S
 // Source: c:@S@FSD_BinaryFile@F@InverseInt#I#S
 // Source: c:@S@FSD_BinaryFile@F@InverseReal#d#S
+// Source: c:@S@FSD_BinaryFile@F@InverseShortReal#f#S
+// Source: c:@S@FSD_BinaryFile@F@InverseSize#k#S
+// Source: c:@S@FSD_BinaryFile@F@InverseUint64#k#S
 // Source: c:@S@TDataXtd_Presentation@F@getColorNameFromOldEnum#I#S
 // Source: c:@S@TDataXtd_Presentation@F@getOldColorNameFromNewEnum#$@E@Quantity_NameOfColor#S
 // Source: c:@S@TDocStd_Document@F@CurrentStorageFormatVersion#S
@@ -13,6 +16,16 @@
 // Source: c:@S@XmlMDataXtd@F@DocumentVersion#S
 // Source: c:@S@XmlMDataXtd@F@SetDocumentVersion#I#S
 #include "OcctSharp.Documents.Values.Generated.h"
+#include <climits>
+#include <cstdint>
+#include <limits>
+static_assert(CHAR_BIT == 8 && sizeof(short) == 2 && sizeof(int) == 4);
+static_assert(sizeof(long) == 4 && sizeof(long long) == 8 && sizeof(size_t) == 8);
+static_assert(sizeof(float) == 4 && std::numeric_limits<float>::is_iec559);
+static_assert(sizeof(double) == 8 && std::numeric_limits<double>::is_iec559);
+#include <Standard_Failure.hxx>
+#include <exception>
+#include "../../include/OcctSharp.Native.Internal.hxx"
 
 #include <BinMDataXtd.hxx>
 #include <FSD_BinaryFile.hxx>
@@ -42,6 +55,51 @@ double OCCTSHARP_CALL occtsharp_generated_fsd_binary_file_inverse_real_static_in
   const double theValue)
 {
   return FSD_BinaryFile::InverseReal(theValue);
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fsd_binary_file_inverse_short_real_static_inverse_short_real_0(float theValue, float* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = FSD_BinaryFile::InverseShortReal(static_cast<const float>(theValue));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fsd_binary_file_inverse_size_static_inverse_size_0(uint64_t theValue, uint64_t* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = FSD_BinaryFile::InverseSize(static_cast<const unsigned long long>(theValue));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fsd_binary_file_inverse_uint64_static_inverse_uint64_0(uint64_t theValue, uint64_t* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = FSD_BinaryFile::InverseUint64(static_cast<const unsigned long long>(theValue));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
 }
 
 int32_t OCCTSHARP_CALL occtsharp_generated_tdata_xtd_presentation_get_color_name_from_old_enum_static_get_color_name_from_old_enum_0(

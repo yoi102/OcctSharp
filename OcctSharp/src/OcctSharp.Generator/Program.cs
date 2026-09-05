@@ -393,13 +393,12 @@ static IReadOnlyDictionary<string, BindingSkipReason> GetExcludedBindings(
     string[] missingDispositions = emitterExclusions.Except(result.Keys, StringComparer.Ordinal)
         .Order(StringComparer.Ordinal)
         .ToArray();
-    string[] unusedDispositions = result.Keys.Except(emitterExclusions, StringComparer.Ordinal)
-        .Order(StringComparer.Ordinal)
-        .ToArray();
-    if (missingDispositions.Length != 0 || unusedDispositions.Length != 0)
+    // Global exclusions also apply to static/value declarations with no shared-handle scope.
+    // ConfiguredExclusionPass independently rejects unknown stable IDs in the discovered model.
+    if (missingDispositions.Length != 0)
     {
         throw new InvalidDataException(
-            $"Emitter exclusions and excluded binding dispositions differ. Missing dispositions: {string.Join(", ", missingDispositions)}; unused dispositions: {string.Join(", ", unusedDispositions)}.");
+            $"Emitter exclusions lack excluded binding dispositions: {string.Join(", ", missingDispositions)}.");
     }
 
     return result;

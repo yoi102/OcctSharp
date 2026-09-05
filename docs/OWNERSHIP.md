@@ -1,5 +1,17 @@
 # Ownership and Lifetime
 
+## Batch X generated const-reference copies
+
+ADR-0092 adds no borrowed owner category. Known scalar/enum/point const-reference
+returns are copied before leaving the native call. A selected const handle reference
+is copied into a local intrusive handle and then moved into a new registered wrapper;
+null stays null. The result survives receiver disposal or later replacement of its
+handle field. Existing sharing remains intentional; it is not a deep copy of OCCT state.
+The receiver and inputs must remain valid during the call under existing thread and
+mutation rules. New const methods invoke a const receiver. Pointers, mutable references,
+rvalue transfers and general TopoDS reference returns retain their prior restrictions.
+Sequence-start references require an explicit length/copy contract (SC-061).
+
 ## Batch W render-resource contract
 
 The existing creating-thread Viewer context owns light, texture, environment and layer

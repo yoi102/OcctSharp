@@ -3,6 +3,7 @@
 // Source: c:@S@Adaptor2d_Curve2d@F@Bezier#1
 // Source: c:@S@Adaptor2d_Curve2d@F@Continuity#1
 // Source: c:@S@Adaptor2d_Curve2d@F@Degree#1
+// Source: c:@S@Adaptor2d_Curve2d@F@DynamicType#1
 // Source: c:@S@Adaptor2d_Curve2d@F@FirstParameter#1
 // Source: c:@S@Adaptor2d_Curve2d@F@GetType#1
 // Source: c:@S@Adaptor2d_Curve2d@F@IsClosed#1
@@ -22,6 +23,7 @@
 // Source: c:@S@Adaptor2d_Line2d@F@Bezier#1
 // Source: c:@S@Adaptor2d_Line2d@F@Continuity#1
 // Source: c:@S@Adaptor2d_Line2d@F@Degree#1
+// Source: c:@S@Adaptor2d_Line2d@F@DynamicType#1
 // Source: c:@S@Adaptor2d_Line2d@F@FirstParameter#1
 // Source: c:@S@Adaptor2d_Line2d@F@GetType#1
 // Source: c:@S@Adaptor2d_Line2d@F@IsClosed#1
@@ -42,7 +44,9 @@
 // Source: c:@S@Adaptor2d_OffsetCurve@F@BSpline#1
 // Source: c:@S@Adaptor2d_OffsetCurve@F@Bezier#1
 // Source: c:@S@Adaptor2d_OffsetCurve@F@Continuity#1
+// Source: c:@S@Adaptor2d_OffsetCurve@F@Curve#1
 // Source: c:@S@Adaptor2d_OffsetCurve@F@Degree#1
+// Source: c:@S@Adaptor2d_OffsetCurve@F@DynamicType#1
 // Source: c:@S@Adaptor2d_OffsetCurve@F@FirstParameter#1
 // Source: c:@S@Adaptor2d_OffsetCurve@F@GetType#1
 // Source: c:@S@Adaptor2d_OffsetCurve@F@IsClosed#1
@@ -66,6 +70,7 @@
 // Source: c:@S@Adaptor3d_Curve@F@Bezier#1
 // Source: c:@S@Adaptor3d_Curve@F@Continuity#1
 // Source: c:@S@Adaptor3d_Curve@F@Degree#1
+// Source: c:@S@Adaptor3d_Curve@F@DynamicType#1
 // Source: c:@S@Adaptor3d_Curve@F@EvalD0#d#1
 // Source: c:@S@Adaptor3d_Curve@F@FirstParameter#1
 // Source: c:@S@Adaptor3d_Curve@F@GetType#1
@@ -89,8 +94,11 @@
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@Bezier#1
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@Continuity#1
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@Degree#1
+// Source: c:@S@Adaptor3d_CurveOnSurface@F@DynamicType#1
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@EvalD0#d#1
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@FirstParameter#1
+// Source: c:@S@Adaptor3d_CurveOnSurface@F@GetCurve#1
+// Source: c:@S@Adaptor3d_CurveOnSurface@F@GetSurface#1
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@GetType#1
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@IsClosed#1
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@IsPeriodic#1
@@ -107,6 +115,7 @@
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@ShallowCopy#1
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@Trim#d#d#d#1
 // Source: c:@S@Adaptor3d_HVertex@F@Adaptor3d_HVertex#
+// Source: c:@S@Adaptor3d_HVertex@F@DynamicType#1
 // Source: c:@S@Adaptor3d_HVertex@F@IsSame#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_HVertex#
 // Source: c:@S@Adaptor3d_HVertex@F@Orientation#
 // Source: c:@S@Adaptor3d_HVertex@F@Parameter#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#
@@ -119,6 +128,7 @@
 // Source: c:@S@Adaptor3d_IsoCurve@F@Bezier#1
 // Source: c:@S@Adaptor3d_IsoCurve@F@Continuity#1
 // Source: c:@S@Adaptor3d_IsoCurve@F@Degree#1
+// Source: c:@S@Adaptor3d_IsoCurve@F@DynamicType#1
 // Source: c:@S@Adaptor3d_IsoCurve@F@EvalD0#d#1
 // Source: c:@S@Adaptor3d_IsoCurve@F@FirstParameter#1
 // Source: c:@S@Adaptor3d_IsoCurve@F@GetType#1
@@ -137,11 +147,13 @@
 // Source: c:@S@Adaptor3d_IsoCurve@F@Period#1
 // Source: c:@S@Adaptor3d_IsoCurve@F@Resolution#d#1
 // Source: c:@S@Adaptor3d_IsoCurve@F@ShallowCopy#1
+// Source: c:@S@Adaptor3d_IsoCurve@F@Surface#1
 // Source: c:@S@Adaptor3d_IsoCurve@F@Trim#d#d#d#1
 // Source: c:@S@Adaptor3d_Surface@F@BSpline#1
 // Source: c:@S@Adaptor3d_Surface@F@BasisCurve#1
 // Source: c:@S@Adaptor3d_Surface@F@BasisSurface#1
 // Source: c:@S@Adaptor3d_Surface@F@Bezier#1
+// Source: c:@S@Adaptor3d_Surface@F@DynamicType#1
 // Source: c:@S@Adaptor3d_Surface@F@EvalD0#d#d#1
 // Source: c:@S@Adaptor3d_Surface@F@FirstUParameter#1
 // Source: c:@S@Adaptor3d_Surface@F@FirstVParameter#1
@@ -178,6 +190,7 @@
 // Source: c:@S@Adaptor3d_TopolTool@F@BSplSamplePnts#d#I#I#
 // Source: c:@S@Adaptor3d_TopolTool@F@ComputeSamplePoints#
 // Source: c:@S@Adaptor3d_TopolTool@F@DomainIsInfinite#
+// Source: c:@S@Adaptor3d_TopolTool@F@DynamicType#1
 // Source: c:@S@Adaptor3d_TopolTool@F@Has3d#1
 // Source: c:@S@Adaptor3d_TopolTool@F@Identical#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_HVertex#S0_#
 // Source: c:@S@Adaptor3d_TopolTool@F@Init#
@@ -207,6 +220,7 @@
 // Source: c:@S@AdvApp2Var_Iso@F@ChangeDomain#d#d#
 // Source: c:@S@AdvApp2Var_Iso@F@ChangeDomain#d#d#d#d#
 // Source: c:@S@AdvApp2Var_Iso@F@Constante#1
+// Source: c:@S@AdvApp2Var_Iso@F@DynamicType#1
 // Source: c:@S@AdvApp2Var_Iso@F@HasResult#1
 // Source: c:@S@AdvApp2Var_Iso@F@IsApproximated#1
 // Source: c:@S@AdvApp2Var_Iso@F@NbCoeff#1
@@ -226,7 +240,9 @@
 // Source: c:@S@AdvApp2Var_Iso@F@VOrder#1
 // Source: c:@S@AdvApp2Var_Node@F@AdvApp2Var_Node#
 // Source: c:@S@AdvApp2Var_Node@F@AdvApp2Var_Node#I#I#
+// Source: c:@S@AdvApp2Var_Node@F@DynamicType#1
 // Source: c:@S@AdvApp2Var_Node@F@Error#I#I#1
+// Source: c:@S@AdvApp2Var_Node@F@Point#I#I#1
 // Source: c:@S@AdvApp2Var_Node@F@SetCoord#d#d#
 // Source: c:@S@AdvApp2Var_Node@F@SetError#I#I#d#
 // Source: c:@S@AdvApp2Var_Node@F@SetPoint#I#I#&1$@S@gp_Pnt#
@@ -238,6 +254,7 @@
 // Source: c:@S@AdvApp2Var_Patch@F@ChangeNbCoeff#I#I#
 // Source: c:@S@AdvApp2Var_Patch@F@CritValue#1
 // Source: c:@S@AdvApp2Var_Patch@F@CutSense#1
+// Source: c:@S@AdvApp2Var_Patch@F@DynamicType#1
 // Source: c:@S@AdvApp2Var_Patch@F@HasResult#1
 // Source: c:@S@AdvApp2Var_Patch@F@IsApproximated#1
 // Source: c:@S@AdvApp2Var_Patch@F@IsDiscretised#1
@@ -252,13 +269,16 @@
 // Source: c:@S@AdvApp2Var_Patch@F@V0#1
 // Source: c:@S@AdvApp2Var_Patch@F@V1#1
 // Source: c:@S@AdvApp2Var_Patch@F@VOrder#1
+// Source: c:@S@AppDef_LinearCriteria@F@DynamicType#1
 // Source: c:@S@AppDef_LinearCriteria@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@FEmTool_Curve#
 // Source: c:@S@AppDef_LinearCriteria@F@SetEstimation#d#d#d#
 // Source: c:@S@AppDef_LinearCriteria@F@SetWeight#d#d#d#d#d#
 // Source: c:@S@AppDef_SmoothCriterion@F@Curve#1
+// Source: c:@S@AppDef_SmoothCriterion@F@DynamicType#1
 // Source: c:@S@Approx_CurvlinFunc@F@Approx_CurvlinFunc#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#d#
 // Source: c:@S@Approx_CurvlinFunc@F@Approx_CurvlinFunc#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#S0_#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#S3_#d#
 // Source: c:@S@Approx_CurvlinFunc@F@Approx_CurvlinFunc#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#d#
+// Source: c:@S@Approx_CurvlinFunc@F@DynamicType#1
 // Source: c:@S@Approx_CurvlinFunc@F@FirstParameter#1
 // Source: c:@S@Approx_CurvlinFunc@F@GetLength#1
 // Source: c:@S@Approx_CurvlinFunc@F@GetSParameter#d#1
@@ -268,14 +288,18 @@
 // Source: c:@S@Approx_CurvlinFunc@F@SetTol#d#
 // Source: c:@S@Approx_CurvlinFunc@F@Trim#d#d#d#
 // Source: c:@S@Approx_SweepFunction@F@BarycentreOfSurf#1
+// Source: c:@S@Approx_SweepFunction@F@DynamicType#1
 // Source: c:@S@Approx_SweepFunction@F@MaximalSection#1
+// Source: c:@S@BSplCLib_Cache@F@DynamicType#1
 // Source: c:@S@BSplCLib_Cache@F@IsCacheValid#d#1
+// Source: c:@S@BSplSLib_Cache@F@DynamicType#1
 // Source: c:@S@BSplSLib_Cache@F@IsCacheValid#d#d#1
 // Source: c:@S@BiTgte_CurveOnEdge@F@BSpline#1
 // Source: c:@S@BiTgte_CurveOnEdge@F@Bezier#1
 // Source: c:@S@BiTgte_CurveOnEdge@F@BiTgte_CurveOnEdge#
 // Source: c:@S@BiTgte_CurveOnEdge@F@Continuity#1
 // Source: c:@S@BiTgte_CurveOnEdge@F@Degree#1
+// Source: c:@S@BiTgte_CurveOnEdge@F@DynamicType#1
 // Source: c:@S@BiTgte_CurveOnEdge@F@EvalD0#d#1
 // Source: c:@S@BiTgte_CurveOnEdge@F@FirstParameter#1
 // Source: c:@S@BiTgte_CurveOnEdge@F@GetType#1
@@ -295,6 +319,7 @@
 // Source: c:@S@BiTgte_CurveOnVertex@F@BiTgte_CurveOnVertex#
 // Source: c:@S@BiTgte_CurveOnVertex@F@Continuity#1
 // Source: c:@S@BiTgte_CurveOnVertex@F@Degree#1
+// Source: c:@S@BiTgte_CurveOnVertex@F@DynamicType#1
 // Source: c:@S@BiTgte_CurveOnVertex@F@EvalD0#d#1
 // Source: c:@S@BiTgte_CurveOnVertex@F@FirstParameter#1
 // Source: c:@S@BiTgte_CurveOnVertex@F@GetType#1
@@ -312,6 +337,7 @@
 // Source: c:@S@Bisector_BisecAna@F@Continuity#1
 // Source: c:@S@Bisector_BisecAna@F@Copy#1
 // Source: c:@S@Bisector_BisecAna@F@Dump#I#I#1
+// Source: c:@S@Bisector_BisecAna@F@DynamicType#1
 // Source: c:@S@Bisector_BisecAna@F@FirstParameter#1
 // Source: c:@S@Bisector_BisecAna@F@Geom2dCurve#1
 // Source: c:@S@Bisector_BisecAna@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom2d_TrimmedCurve#
@@ -336,6 +362,7 @@
 // Source: c:@S@Bisector_BisecCC@F@Copy#1
 // Source: c:@S@Bisector_BisecCC@F@Curve#I#1
 // Source: c:@S@Bisector_BisecCC@F@Dump#I#I#1
+// Source: c:@S@Bisector_BisecCC@F@DynamicType#1
 // Source: c:@S@Bisector_BisecCC@F@FirstParameter#1
 // Source: c:@S@Bisector_BisecCC@F@IntervalContinuity#1
 // Source: c:@S@Bisector_BisecCC@F@IntervalFirst#I#1
@@ -357,6 +384,7 @@
 // Source: c:@S@Bisector_BisecPC@F@Copy#1
 // Source: c:@S@Bisector_BisecPC@F@Distance#d#1
 // Source: c:@S@Bisector_BisecPC@F@Dump#I#I#1
+// Source: c:@S@Bisector_BisecPC@F@DynamicType#1
 // Source: c:@S@Bisector_BisecPC@F@FirstParameter#1
 // Source: c:@S@Bisector_BisecPC@F@IntervalContinuity#1
 // Source: c:@S@Bisector_BisecPC@F@IntervalFirst#I#1
@@ -373,6 +401,8 @@
 // Source: c:@S@Bisector_BisecPC@F@NbIntervals#1
 // Source: c:@S@Bisector_BisecPC@F@Reverse#
 // Source: c:@S@Bisector_BisecPC@F@ReversedParameter#d#1
+// Source: c:@S@Bisector_Curve@F@DynamicType#1
+// Source: c:@S@Extrema_ExtPExtS@F@DynamicType#1
 // Source: c:@S@Extrema_ExtPExtS@F@Extrema_ExtPExtS#
 // Source: c:@S@Extrema_ExtPExtS@F@Extrema_ExtPExtS#&1$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@GeomAdaptor_SurfaceOfLinearExtrusion#d#d#
 // Source: c:@S@Extrema_ExtPExtS@F@Extrema_ExtPExtS#&1$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@GeomAdaptor_SurfaceOfLinearExtrusion#d#d#d#d#d#d#
@@ -381,6 +411,7 @@
 // Source: c:@S@Extrema_ExtPExtS@F@NbExt#1
 // Source: c:@S@Extrema_ExtPExtS@F@Perform#&1$@S@gp_Pnt#
 // Source: c:@S@Extrema_ExtPExtS@F@SquareDistance#I#1
+// Source: c:@S@Extrema_ExtPRevS@F@DynamicType#1
 // Source: c:@S@Extrema_ExtPRevS@F@Extrema_ExtPRevS#
 // Source: c:@S@Extrema_ExtPRevS@F@Extrema_ExtPRevS#&1$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@GeomAdaptor_SurfaceOfRevolution#d#d#
 // Source: c:@S@Extrema_ExtPRevS@F@Extrema_ExtPRevS#&1$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@GeomAdaptor_SurfaceOfRevolution#d#d#d#d#d#d#
@@ -391,33 +422,49 @@
 // Source: c:@S@Extrema_ExtPRevS@F@SquareDistance#I#1
 // Source: c:@S@FEmTool_Curve@F@Degree#I#1
 // Source: c:@S@FEmTool_Curve@F@Dimension#1
+// Source: c:@S@FEmTool_Curve@F@DynamicType#1
 // Source: c:@S@FEmTool_Curve@F@NbElements#1
 // Source: c:@S@FEmTool_Curve@F@SetDegree#I#I#
+// Source: c:@S@FEmTool_ElementaryCriterion@F@DynamicType#1
 // Source: c:@S@FEmTool_ElementaryCriterion@F@Set#d#d#
+// Source: c:@S@FEmTool_LinearFlexion@F@DynamicType#1
 // Source: c:@S@FEmTool_LinearFlexion@F@FEmTool_LinearFlexion#I#$@E@GeomAbs_Shape#
 // Source: c:@S@FEmTool_LinearFlexion@F@Value#
+// Source: c:@S@FEmTool_LinearJerk@F@DynamicType#1
 // Source: c:@S@FEmTool_LinearJerk@F@FEmTool_LinearJerk#I#$@E@GeomAbs_Shape#
 // Source: c:@S@FEmTool_LinearJerk@F@Value#
+// Source: c:@S@FEmTool_LinearTension@F@DynamicType#1
 // Source: c:@S@FEmTool_LinearTension@F@FEmTool_LinearTension#I#$@E@GeomAbs_Shape#
 // Source: c:@S@FEmTool_LinearTension@F@Value#
 // Source: c:@S@FEmTool_ProfileMatrix@F@ColNumber#1
 // Source: c:@S@FEmTool_ProfileMatrix@F@Decompose#
+// Source: c:@S@FEmTool_ProfileMatrix@F@DynamicType#1
 // Source: c:@S@FEmTool_ProfileMatrix@F@Init#d#
 // Source: c:@S@FEmTool_ProfileMatrix@F@IsInProfile#I#I#1
 // Source: c:@S@FEmTool_ProfileMatrix@F@OutM#1
 // Source: c:@S@FEmTool_ProfileMatrix@F@OutS#1
 // Source: c:@S@FEmTool_ProfileMatrix@F@Prepare#
 // Source: c:@S@FEmTool_ProfileMatrix@F@RowNumber#1
+// Source: c:@S@FEmTool_SparseMatrix@F@DynamicType#1
 // Source: c:@S@GccInt_BCirc@F@ArcType#1
+// Source: c:@S@GccInt_BCirc@F@DynamicType#1
 // Source: c:@S@GccInt_BElips@F@ArcType#1
+// Source: c:@S@GccInt_BElips@F@DynamicType#1
 // Source: c:@S@GccInt_BHyper@F@ArcType#1
+// Source: c:@S@GccInt_BHyper@F@DynamicType#1
 // Source: c:@S@GccInt_BLine@F@ArcType#1
+// Source: c:@S@GccInt_BLine@F@DynamicType#1
 // Source: c:@S@GccInt_BParab@F@ArcType#1
+// Source: c:@S@GccInt_BParab@F@DynamicType#1
 // Source: c:@S@GccInt_BPoint@F@ArcType#1
+// Source: c:@S@GccInt_BPoint@F@DynamicType#1
+// Source: c:@S@GccInt_Bisec@F@DynamicType#1
 // Source: c:@S@Geom2dAdaptor_Curve@F@BSpline#1
 // Source: c:@S@Geom2dAdaptor_Curve@F@Bezier#1
 // Source: c:@S@Geom2dAdaptor_Curve@F@Continuity#1
+// Source: c:@S@Geom2dAdaptor_Curve@F@Curve#1
 // Source: c:@S@Geom2dAdaptor_Curve@F@Degree#1
+// Source: c:@S@Geom2dAdaptor_Curve@F@DynamicType#1
 // Source: c:@S@Geom2dAdaptor_Curve@F@FirstParameter#1
 // Source: c:@S@Geom2dAdaptor_Curve@F@Geom2dAdaptor_Curve#
 // Source: c:@S@Geom2dAdaptor_Curve@F@Geom2dAdaptor_Curve#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#
@@ -444,6 +491,7 @@
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@Beta#1
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@Copy#1
+// Source: c:@S@Geom2dEval_AHTBezierCurve@F@DynamicType#1
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@FirstParameter#1
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@IsCN#I#1
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@IsClosed#1
@@ -455,6 +503,7 @@
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@Copy#1
+// Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@DynamicType#1
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@FirstParameter#1
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@GrowthRate#1
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@InitialRadius#1
@@ -466,6 +515,7 @@
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@Copy#1
+// Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@DynamicType#1
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@FirstParameter#1
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@IsCN#I#1
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@IsClosed#1
@@ -476,6 +526,7 @@
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@Copy#1
+// Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@DynamicType#1
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@FirstParameter#1
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@GrowthExponent#1
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@IsCN#I#1
@@ -488,6 +539,7 @@
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Amplitude#1
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Copy#1
+// Source: c:@S@Geom2dEval_SineWaveCurve@F@DynamicType#1
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@FirstParameter#1
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@IsCN#I#1
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@IsClosed#1
@@ -500,6 +552,7 @@
 // Source: c:@S@Geom2dEval_TBezierCurve@F@Alpha#1
 // Source: c:@S@Geom2dEval_TBezierCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_TBezierCurve@F@Copy#1
+// Source: c:@S@Geom2dEval_TBezierCurve@F@DynamicType#1
 // Source: c:@S@Geom2dEval_TBezierCurve@F@FirstParameter#1
 // Source: c:@S@Geom2dEval_TBezierCurve@F@IsCN#I#1
 // Source: c:@S@Geom2dEval_TBezierCurve@F@IsClosed#1
@@ -512,12 +565,15 @@
 // Source: c:@S@Geom2dEval_TBezierCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_AxisPlacement@F@Angle#&1$@N@opencascade@S@handle>#$@S@Geom2d_AxisPlacement#1
 // Source: c:@S@Geom2d_AxisPlacement@F@Copy#1
+// Source: c:@S@Geom2d_AxisPlacement@F@DynamicType#1
 // Source: c:@S@Geom2d_AxisPlacement@F@Reverse#
 // Source: c:@S@Geom2d_AxisPlacement@F@Reversed#1
 // Source: c:@S@Geom2d_BSplineCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom2d_BSplineCurve@F@Continuity#1
 // Source: c:@S@Geom2d_BSplineCurve@F@Copy#1
 // Source: c:@S@Geom2d_BSplineCurve@F@Degree#1
+// Source: c:@S@Geom2d_BSplineCurve@F@DynamicType#1
+// Source: c:@S@Geom2d_BSplineCurve@F@EvalRepresentation#1
 // Source: c:@S@Geom2d_BSplineCurve@F@FirstParameter#1
 // Source: c:@S@Geom2d_BSplineCurve@F@FirstUKnotIndex#1
 // Source: c:@S@Geom2d_BSplineCurve@F@HasEvalRepresentation#1
@@ -555,6 +611,8 @@
 // Source: c:@S@Geom2d_BezierCurve@F@Continuity#1
 // Source: c:@S@Geom2d_BezierCurve@F@Copy#1
 // Source: c:@S@Geom2d_BezierCurve@F@Degree#1
+// Source: c:@S@Geom2d_BezierCurve@F@DynamicType#1
+// Source: c:@S@Geom2d_BezierCurve@F@EvalRepresentation#1
 // Source: c:@S@Geom2d_BezierCurve@F@FirstParameter#1
 // Source: c:@S@Geom2d_BezierCurve@F@HasEvalRepresentation#1
 // Source: c:@S@Geom2d_BezierCurve@F@Increase#I#
@@ -571,7 +629,9 @@
 // Source: c:@S@Geom2d_BezierCurve@F@SetEvalRepresentation#&1$@N@opencascade@S@handle>#$@N@Geom2dEval_RepCurveDesc@S@Base#
 // Source: c:@S@Geom2d_BezierCurve@F@SetWeight#I#d#
 // Source: c:@S@Geom2d_BezierCurve@F@Weight#I#1
+// Source: c:@S@Geom2d_BoundedCurve@F@DynamicType#1
 // Source: c:@S@Geom2d_CartesianPoint@F@Copy#1
+// Source: c:@S@Geom2d_CartesianPoint@F@DynamicType#1
 // Source: c:@S@Geom2d_CartesianPoint@F@Geom2d_CartesianPoint#d#d#
 // Source: c:@S@Geom2d_CartesianPoint@F@SetCoord#d#d#
 // Source: c:@S@Geom2d_CartesianPoint@F@SetX#d#
@@ -579,6 +639,7 @@
 // Source: c:@S@Geom2d_CartesianPoint@F@X#1
 // Source: c:@S@Geom2d_CartesianPoint@F@Y#1
 // Source: c:@S@Geom2d_Circle@F@Copy#1
+// Source: c:@S@Geom2d_Circle@F@DynamicType#1
 // Source: c:@S@Geom2d_Circle@F@Eccentricity#1
 // Source: c:@S@Geom2d_Circle@F@FirstParameter#1
 // Source: c:@S@Geom2d_Circle@F@IsClosed#1
@@ -588,12 +649,15 @@
 // Source: c:@S@Geom2d_Circle@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_Circle@F@SetRadius#d#
 // Source: c:@S@Geom2d_Conic@F@Continuity#1
+// Source: c:@S@Geom2d_Conic@F@DynamicType#1
 // Source: c:@S@Geom2d_Conic@F@IsCN#I#1
 // Source: c:@S@Geom2d_Conic@F@Reverse#
+// Source: c:@S@Geom2d_Curve@F@DynamicType#1
 // Source: c:@S@Geom2d_Curve@F@Period#1
 // Source: c:@S@Geom2d_Curve@F@Reversed#1
 // Source: c:@S@Geom2d_Direction@F@Copy#1
 // Source: c:@S@Geom2d_Direction@F@Crossed#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
+// Source: c:@S@Geom2d_Direction@F@DynamicType#1
 // Source: c:@S@Geom2d_Direction@F@Geom2d_Direction#d#d#
 // Source: c:@S@Geom2d_Direction@F@Magnitude#1
 // Source: c:@S@Geom2d_Direction@F@SetCoord#d#d#
@@ -601,6 +665,7 @@
 // Source: c:@S@Geom2d_Direction@F@SetY#d#
 // Source: c:@S@Geom2d_Direction@F@SquareMagnitude#1
 // Source: c:@S@Geom2d_Ellipse@F@Copy#1
+// Source: c:@S@Geom2d_Ellipse@F@DynamicType#1
 // Source: c:@S@Geom2d_Ellipse@F@Eccentricity#1
 // Source: c:@S@Geom2d_Ellipse@F@FirstParameter#1
 // Source: c:@S@Geom2d_Ellipse@F@Focal#1
@@ -613,7 +678,9 @@
 // Source: c:@S@Geom2d_Ellipse@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_Ellipse@F@SetMajorRadius#d#
 // Source: c:@S@Geom2d_Ellipse@F@SetMinorRadius#d#
+// Source: c:@S@Geom2d_Geometry@F@DynamicType#1
 // Source: c:@S@Geom2d_Hyperbola@F@Copy#1
+// Source: c:@S@Geom2d_Hyperbola@F@DynamicType#1
 // Source: c:@S@Geom2d_Hyperbola@F@Eccentricity#1
 // Source: c:@S@Geom2d_Hyperbola@F@FirstParameter#1
 // Source: c:@S@Geom2d_Hyperbola@F@Focal#1
@@ -628,6 +695,7 @@
 // Source: c:@S@Geom2d_Hyperbola@F@SetMinorRadius#d#
 // Source: c:@S@Geom2d_Line@F@Continuity#1
 // Source: c:@S@Geom2d_Line@F@Copy#1
+// Source: c:@S@Geom2d_Line@F@DynamicType#1
 // Source: c:@S@Geom2d_Line@F@FirstParameter#1
 // Source: c:@S@Geom2d_Line@F@IsCN#I#1
 // Source: c:@S@Geom2d_Line@F@IsClosed#1
@@ -639,6 +707,8 @@
 // Source: c:@S@Geom2d_OffsetCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom2d_OffsetCurve@F@Continuity#1
 // Source: c:@S@Geom2d_OffsetCurve@F@Copy#1
+// Source: c:@S@Geom2d_OffsetCurve@F@DynamicType#1
+// Source: c:@S@Geom2d_OffsetCurve@F@EvalRepresentation#1
 // Source: c:@S@Geom2d_OffsetCurve@F@FirstParameter#1
 // Source: c:@S@Geom2d_OffsetCurve@F@Geom2d_OffsetCurve#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#d#b#
 // Source: c:@S@Geom2d_OffsetCurve@F@GetBasisCurveContinuity#1
@@ -655,6 +725,7 @@
 // Source: c:@S@Geom2d_OffsetCurve@F@SetEvalRepresentation#&1$@N@opencascade@S@handle>#$@N@Geom2dEval_RepCurveDesc@S@Base#
 // Source: c:@S@Geom2d_OffsetCurve@F@SetOffsetValue#d#
 // Source: c:@S@Geom2d_Parabola@F@Copy#1
+// Source: c:@S@Geom2d_Parabola@F@DynamicType#1
 // Source: c:@S@Geom2d_Parabola@F@Eccentricity#1
 // Source: c:@S@Geom2d_Parabola@F@FirstParameter#1
 // Source: c:@S@Geom2d_Parabola@F@Focal#1
@@ -665,8 +736,10 @@
 // Source: c:@S@Geom2d_Parabola@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_Parabola@F@SetFocal#d#
 // Source: c:@S@Geom2d_Point@F@Distance#&1$@N@opencascade@S@handle>#$@S@Geom2d_Point#1
+// Source: c:@S@Geom2d_Point@F@DynamicType#1
 // Source: c:@S@Geom2d_Point@F@SquareDistance#&1$@N@opencascade@S@handle>#$@S@Geom2d_Point#1
 // Source: c:@S@Geom2d_Transformation@F@Copy#1
+// Source: c:@S@Geom2d_Transformation@F@DynamicType#1
 // Source: c:@S@Geom2d_Transformation@F@Form#1
 // Source: c:@S@Geom2d_Transformation@F@Geom2d_Transformation#
 // Source: c:@S@Geom2d_Transformation@F@Invert#
@@ -682,6 +755,7 @@
 // Source: c:@S@Geom2d_TrimmedCurve@F@BasisCurve#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@Continuity#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@Copy#1
+// Source: c:@S@Geom2d_TrimmedCurve@F@DynamicType#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@FirstParameter#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@Geom2d_TrimmedCurve#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#d#d#b#b#
 // Source: c:@S@Geom2d_TrimmedCurve@F@IsCN#I#1
@@ -694,6 +768,7 @@
 // Source: c:@S@Geom2d_TrimmedCurve@F@SetTrim#d#d#b#b#
 // Source: c:@S@Geom2d_Vector@F@Angle#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
 // Source: c:@S@Geom2d_Vector@F@Dot#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
+// Source: c:@S@Geom2d_Vector@F@DynamicType#1
 // Source: c:@S@Geom2d_Vector@F@Reverse#
 // Source: c:@S@Geom2d_Vector@F@Reversed#1
 // Source: c:@S@Geom2d_Vector@F@X#1
@@ -704,6 +779,7 @@
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@Crossed#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@Divide#d#
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@Divided#d#1
+// Source: c:@S@Geom2d_VectorWithMagnitude@F@DynamicType#1
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@Geom2d_VectorWithMagnitude#d#d#
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@Magnitude#1
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@Multiplied#d#1
@@ -719,7 +795,9 @@
 // Source: c:@S@GeomAdaptor_Curve@F@BSpline#1
 // Source: c:@S@GeomAdaptor_Curve@F@Bezier#1
 // Source: c:@S@GeomAdaptor_Curve@F@Continuity#1
+// Source: c:@S@GeomAdaptor_Curve@F@Curve#1
 // Source: c:@S@GeomAdaptor_Curve@F@Degree#1
+// Source: c:@S@GeomAdaptor_Curve@F@DynamicType#1
 // Source: c:@S@GeomAdaptor_Curve@F@EvalD0#d#1
 // Source: c:@S@GeomAdaptor_Curve@F@FirstParameter#1
 // Source: c:@S@GeomAdaptor_Curve@F@GeomAdaptor_Curve#
@@ -745,6 +823,7 @@
 // Source: c:@S@GeomAdaptor_Surface@F@BasisCurve#1
 // Source: c:@S@GeomAdaptor_Surface@F@BasisSurface#1
 // Source: c:@S@GeomAdaptor_Surface@F@Bezier#1
+// Source: c:@S@GeomAdaptor_Surface@F@DynamicType#1
 // Source: c:@S@GeomAdaptor_Surface@F@EvalD0#d#d#1
 // Source: c:@S@GeomAdaptor_Surface@F@FirstUParameter#1
 // Source: c:@S@GeomAdaptor_Surface@F@FirstVParameter#1
@@ -770,6 +849,7 @@
 // Source: c:@S@GeomAdaptor_Surface@F@NbVPoles#1
 // Source: c:@S@GeomAdaptor_Surface@F@OffsetValue#1
 // Source: c:@S@GeomAdaptor_Surface@F@ShallowCopy#1
+// Source: c:@S@GeomAdaptor_Surface@F@Surface#1
 // Source: c:@S@GeomAdaptor_Surface@F@ToleranceU#1
 // Source: c:@S@GeomAdaptor_Surface@F@ToleranceV#1
 // Source: c:@S@GeomAdaptor_Surface@F@UContinuity#1
@@ -785,6 +865,7 @@
 // Source: c:@S@GeomAdaptor_SurfaceOfLinearExtrusion@F@BSpline#1
 // Source: c:@S@GeomAdaptor_SurfaceOfLinearExtrusion@F@BasisCurve#1
 // Source: c:@S@GeomAdaptor_SurfaceOfLinearExtrusion@F@Bezier#1
+// Source: c:@S@GeomAdaptor_SurfaceOfLinearExtrusion@F@DynamicType#1
 // Source: c:@S@GeomAdaptor_SurfaceOfLinearExtrusion@F@FirstUParameter#1
 // Source: c:@S@GeomAdaptor_SurfaceOfLinearExtrusion@F@FirstVParameter#1
 // Source: c:@S@GeomAdaptor_SurfaceOfLinearExtrusion@F@GeomAdaptor_SurfaceOfLinearExtrusion#
@@ -815,6 +896,7 @@
 // Source: c:@S@GeomAdaptor_SurfaceOfRevolution@F@BSpline#1
 // Source: c:@S@GeomAdaptor_SurfaceOfRevolution@F@BasisCurve#1
 // Source: c:@S@GeomAdaptor_SurfaceOfRevolution@F@Bezier#1
+// Source: c:@S@GeomAdaptor_SurfaceOfRevolution@F@DynamicType#1
 // Source: c:@S@GeomAdaptor_SurfaceOfRevolution@F@FirstUParameter#1
 // Source: c:@S@GeomAdaptor_SurfaceOfRevolution@F@FirstVParameter#1
 // Source: c:@S@GeomAdaptor_SurfaceOfRevolution@F@GeomAdaptor_SurfaceOfRevolution#
@@ -847,9 +929,11 @@
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Bezier#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Continuity#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Degree#1
+// Source: c:@S@GeomAdaptor_TransformedCurve@F@DynamicType#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@EvalD0#d#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@FirstParameter#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@GeomAdaptor_TransformedCurve#
+// Source: c:@S@GeomAdaptor_TransformedCurve@F@GeomCurve#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@GetType#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Is3DCurve#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@IsClosed#1
@@ -872,10 +956,14 @@
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@BasisCurve#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@BasisSurface#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@Bezier#1
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@DynamicType#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@EvalD0#d#d#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@FirstUParameter#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@FirstVParameter#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomAdaptor_TransformedSurface#
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomSurface#1
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomSurfaceOriginal#1
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomSurfaceTransformed#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@GetType#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@HasTrsf#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@IsUClosed#1
@@ -911,6 +999,7 @@
 // Source: c:@S@GeomEval_AHTBezierCurve@F@Beta#1
 // Source: c:@S@GeomEval_AHTBezierCurve@F@Continuity#1
 // Source: c:@S@GeomEval_AHTBezierCurve@F@Copy#1
+// Source: c:@S@GeomEval_AHTBezierCurve@F@DynamicType#1
 // Source: c:@S@GeomEval_AHTBezierCurve@F@EndPoint#1
 // Source: c:@S@GeomEval_AHTBezierCurve@F@EvalD0#d#1
 // Source: c:@S@GeomEval_AHTBezierCurve@F@FirstParameter#1
@@ -931,6 +1020,7 @@
 // Source: c:@S@GeomEval_AHTBezierSurface@F@BetaV#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@Continuity#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@Copy#1
+// Source: c:@S@GeomEval_AHTBezierSurface@F@DynamicType#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@EvalD0#d#d#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@IsCNu#I#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@IsCNv#I#1
@@ -949,6 +1039,7 @@
 // Source: c:@S@GeomEval_AHTBezierSurface@F@VReverse#
 // Source: c:@S@GeomEval_AHTBezierSurface@F@VReversedParameter#d#1
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@Copy#1
+// Source: c:@S@GeomEval_CircularHelicoidSurface@F@DynamicType#1
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@EvalD0#d#d#1
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@IsUClosed#1
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@IsUPeriodic#1
@@ -964,6 +1055,7 @@
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@VReversedParameter#d#1
 // Source: c:@S@GeomEval_CircularHelixCurve@F@Continuity#1
 // Source: c:@S@GeomEval_CircularHelixCurve@F@Copy#1
+// Source: c:@S@GeomEval_CircularHelixCurve@F@DynamicType#1
 // Source: c:@S@GeomEval_CircularHelixCurve@F@EvalD0#d#1
 // Source: c:@S@GeomEval_CircularHelixCurve@F@FirstParameter#1
 // Source: c:@S@GeomEval_CircularHelixCurve@F@IsCN#I#1
@@ -975,6 +1067,7 @@
 // Source: c:@S@GeomEval_CircularHelixCurve@F@Reverse#
 // Source: c:@S@GeomEval_CircularHelixCurve@F@ReversedParameter#d#1
 // Source: c:@S@GeomEval_EllipsoidSurface@F@Copy#1
+// Source: c:@S@GeomEval_EllipsoidSurface@F@DynamicType#1
 // Source: c:@S@GeomEval_EllipsoidSurface@F@EvalD0#d#d#1
 // Source: c:@S@GeomEval_EllipsoidSurface@F@IsUClosed#1
 // Source: c:@S@GeomEval_EllipsoidSurface@F@IsUPeriodic#1
@@ -993,6 +1086,7 @@
 // Source: c:@S@GeomEval_EllipsoidSurface@F@VReverse#
 // Source: c:@S@GeomEval_EllipsoidSurface@F@VReversedParameter#d#1
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@Copy#1
+// Source: c:@S@GeomEval_HypParaboloidSurface@F@DynamicType#1
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@EvalD0#d#d#1
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@IsUClosed#1
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@IsUPeriodic#1
@@ -1009,6 +1103,7 @@
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@VReverse#
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@VReversedParameter#d#1
 // Source: c:@S@GeomEval_HyperboloidSurface@F@Copy#1
+// Source: c:@S@GeomEval_HyperboloidSurface@F@DynamicType#1
 // Source: c:@S@GeomEval_HyperboloidSurface@F@EvalD0#d#d#1
 // Source: c:@S@GeomEval_HyperboloidSurface@F@IsUClosed#1
 // Source: c:@S@GeomEval_HyperboloidSurface@F@IsUPeriodic#1
@@ -1027,6 +1122,7 @@
 // Source: c:@S@GeomEval_HyperboloidSurface@F@VReverse#
 // Source: c:@S@GeomEval_HyperboloidSurface@F@VReversedParameter#d#1
 // Source: c:@S@GeomEval_ParaboloidSurface@F@Copy#1
+// Source: c:@S@GeomEval_ParaboloidSurface@F@DynamicType#1
 // Source: c:@S@GeomEval_ParaboloidSurface@F@EvalD0#d#d#1
 // Source: c:@S@GeomEval_ParaboloidSurface@F@Focal#1
 // Source: c:@S@GeomEval_ParaboloidSurface@F@IsUClosed#1
@@ -1043,6 +1139,7 @@
 // Source: c:@S@GeomEval_SineWaveCurve@F@Amplitude#1
 // Source: c:@S@GeomEval_SineWaveCurve@F@Continuity#1
 // Source: c:@S@GeomEval_SineWaveCurve@F@Copy#1
+// Source: c:@S@GeomEval_SineWaveCurve@F@DynamicType#1
 // Source: c:@S@GeomEval_SineWaveCurve@F@EvalD0#d#1
 // Source: c:@S@GeomEval_SineWaveCurve@F@FirstParameter#1
 // Source: c:@S@GeomEval_SineWaveCurve@F@IsCN#I#1
@@ -1056,6 +1153,7 @@
 // Source: c:@S@GeomEval_TBezierCurve@F@Alpha#1
 // Source: c:@S@GeomEval_TBezierCurve@F@Continuity#1
 // Source: c:@S@GeomEval_TBezierCurve@F@Copy#1
+// Source: c:@S@GeomEval_TBezierCurve@F@DynamicType#1
 // Source: c:@S@GeomEval_TBezierCurve@F@EndPoint#1
 // Source: c:@S@GeomEval_TBezierCurve@F@EvalD0#d#1
 // Source: c:@S@GeomEval_TBezierCurve@F@FirstParameter#1
@@ -1073,6 +1171,7 @@
 // Source: c:@S@GeomEval_TBezierSurface@F@AlphaV#1
 // Source: c:@S@GeomEval_TBezierSurface@F@Continuity#1
 // Source: c:@S@GeomEval_TBezierSurface@F@Copy#1
+// Source: c:@S@GeomEval_TBezierSurface@F@DynamicType#1
 // Source: c:@S@GeomEval_TBezierSurface@F@EvalD0#d#d#1
 // Source: c:@S@GeomEval_TBezierSurface@F@IsCNu#I#1
 // Source: c:@S@GeomEval_TBezierSurface@F@IsCNv#I#1
@@ -1091,16 +1190,19 @@
 // Source: c:@S@GeomEval_TBezierSurface@F@VIso#d#1
 // Source: c:@S@GeomEval_TBezierSurface@F@VReverse#
 // Source: c:@S@GeomEval_TBezierSurface@F@VReversedParameter#d#1
+// Source: c:@S@GeomFill_BoundWithSurf@F@DynamicType#1
 // Source: c:@S@GeomFill_BoundWithSurf@F@HasNormals#1
 // Source: c:@S@GeomFill_BoundWithSurf@F@IsDegenerated#1
 // Source: c:@S@GeomFill_BoundWithSurf@F@Reparametrize#d#d#b#b#d#d#b#
 // Source: c:@S@GeomFill_BoundWithSurf@F@Value#d#1
+// Source: c:@S@GeomFill_Boundary@F@DynamicType#1
 // Source: c:@S@GeomFill_Boundary@F@HasNormals#1
 // Source: c:@S@GeomFill_Boundary@F@Tol3d#1
 // Source: c:@S@GeomFill_Boundary@F@Tol3d#d#
 // Source: c:@S@GeomFill_Boundary@F@Tolang#1
 // Source: c:@S@GeomFill_Boundary@F@Tolang#d#
 // Source: c:@S@GeomFill_CircularBlendFunc@F@BarycentreOfSurf#1
+// Source: c:@S@GeomFill_CircularBlendFunc@F@DynamicType#1
 // Source: c:@S@GeomFill_CircularBlendFunc@F@GeomFill_CircularBlendFunc#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#S0_#S0_#d#b#
 // Source: c:@S@GeomFill_CircularBlendFunc@F@IsRational#1
 // Source: c:@S@GeomFill_CircularBlendFunc@F@MaximalSection#1
@@ -1109,14 +1211,20 @@
 // Source: c:@S@GeomFill_CircularBlendFunc@F@SetInterval#d#d#
 // Source: c:@S@GeomFill_CircularBlendFunc@F@SetTolerance#d#d#
 // Source: c:@S@GeomFill_ConstantBiNormal@F@Copy#1
+// Source: c:@S@GeomFill_ConstantBiNormal@F@DynamicType#1
 // Source: c:@S@GeomFill_ConstantBiNormal@F@IsConstant#1
 // Source: c:@S@GeomFill_ConstantBiNormal@F@IsOnlyBy3dCurve#1
 // Source: c:@S@GeomFill_ConstantBiNormal@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@GeomFill_ConstantBiNormal@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
+// Source: c:@S@GeomFill_CoonsAlgPatch@F@Bound#I#1
+// Source: c:@S@GeomFill_CoonsAlgPatch@F@Corner#I#1
+// Source: c:@S@GeomFill_CoonsAlgPatch@F@DynamicType#1
+// Source: c:@S@GeomFill_CoonsAlgPatch@F@Func#I#1
 // Source: c:@S@GeomFill_CoonsAlgPatch@F@GeomFill_CoonsAlgPatch#&1$@N@opencascade@S@handle>#$@S@GeomFill_Boundary#S0_#S0_#S0_#
 // Source: c:@S@GeomFill_CoonsAlgPatch@F@SetFunc#&1$@N@opencascade@S@handle>#$@S@Law_Function#S0_#
 // Source: c:@S@GeomFill_CoonsAlgPatch@F@Value#d#d#1
 // Source: c:@S@GeomFill_CorrectedFrenet@F@Copy#1
+// Source: c:@S@GeomFill_CorrectedFrenet@F@DynamicType#1
 // Source: c:@S@GeomFill_CorrectedFrenet@F@EvaluateBestMode#
 // Source: c:@S@GeomFill_CorrectedFrenet@F@GeomFill_CorrectedFrenet#
 // Source: c:@S@GeomFill_CorrectedFrenet@F@GeomFill_CorrectedFrenet#b#
@@ -1126,21 +1234,26 @@
 // Source: c:@S@GeomFill_CorrectedFrenet@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
 // Source: c:@S@GeomFill_CorrectedFrenet@F@SetInterval#d#d#
 // Source: c:@S@GeomFill_CurveAndTrihedron@F@Copy#1
+// Source: c:@S@GeomFill_CurveAndTrihedron@F@DynamicType#1
 // Source: c:@S@GeomFill_CurveAndTrihedron@F@GeomFill_CurveAndTrihedron#&1$@N@opencascade@S@handle>#$@S@GeomFill_TrihedronLaw#
+// Source: c:@S@GeomFill_CurveAndTrihedron@F@GetCurve#1
 // Source: c:@S@GeomFill_CurveAndTrihedron@F@GetMaximalNorm#
 // Source: c:@S@GeomFill_CurveAndTrihedron@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@GeomFill_CurveAndTrihedron@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
 // Source: c:@S@GeomFill_CurveAndTrihedron@F@SetInterval#d#d#
 // Source: c:@S@GeomFill_Darboux@F@Copy#1
+// Source: c:@S@GeomFill_Darboux@F@DynamicType#1
 // Source: c:@S@GeomFill_Darboux@F@GeomFill_Darboux#
 // Source: c:@S@GeomFill_Darboux@F@IsConstant#1
 // Source: c:@S@GeomFill_Darboux@F@IsOnlyBy3dCurve#1
 // Source: c:@S@GeomFill_Darboux@F@NbIntervals#$@E@GeomAbs_Shape#1
+// Source: c:@S@GeomFill_DegeneratedBound@F@DynamicType#1
 // Source: c:@S@GeomFill_DegeneratedBound@F@GeomFill_DegeneratedBound#&1$@S@gp_Pnt#d#d#d#d#
 // Source: c:@S@GeomFill_DegeneratedBound@F@IsDegenerated#1
 // Source: c:@S@GeomFill_DegeneratedBound@F@Reparametrize#d#d#b#b#d#d#b#
 // Source: c:@S@GeomFill_DegeneratedBound@F@Value#d#1
 // Source: c:@S@GeomFill_DiscreteTrihedron@F@Copy#1
+// Source: c:@S@GeomFill_DiscreteTrihedron@F@DynamicType#1
 // Source: c:@S@GeomFill_DiscreteTrihedron@F@GeomFill_DiscreteTrihedron#
 // Source: c:@S@GeomFill_DiscreteTrihedron@F@Init#
 // Source: c:@S@GeomFill_DiscreteTrihedron@F@IsConstant#1
@@ -1148,6 +1261,7 @@
 // Source: c:@S@GeomFill_DiscreteTrihedron@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@GeomFill_DiscreteTrihedron@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
 // Source: c:@S@GeomFill_DraftTrihedron@F@Copy#1
+// Source: c:@S@GeomFill_DraftTrihedron@F@DynamicType#1
 // Source: c:@S@GeomFill_DraftTrihedron@F@IsConstant#1
 // Source: c:@S@GeomFill_DraftTrihedron@F@IsOnlyBy3dCurve#1
 // Source: c:@S@GeomFill_DraftTrihedron@F@NbIntervals#$@E@GeomAbs_Shape#1
@@ -1155,6 +1269,7 @@
 // Source: c:@S@GeomFill_EvolvedSection@F@BSplineSurface#1
 // Source: c:@S@GeomFill_EvolvedSection@F@BarycentreOfSurf#1
 // Source: c:@S@GeomFill_EvolvedSection@F@ConstantSection#1
+// Source: c:@S@GeomFill_EvolvedSection@F@DynamicType#1
 // Source: c:@S@GeomFill_EvolvedSection@F@GeomFill_EvolvedSection#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@N@opencascade@S@handle>#$@S@Law_Function#
 // Source: c:@S@GeomFill_EvolvedSection@F@IsRational#1
 // Source: c:@S@GeomFill_EvolvedSection@F@IsUPeriodic#1
@@ -1163,9 +1278,11 @@
 // Source: c:@S@GeomFill_EvolvedSection@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@GeomFill_EvolvedSection@F@SetInterval#d#d#
 // Source: c:@S@GeomFill_Fixed@F@Copy#1
+// Source: c:@S@GeomFill_Fixed@F@DynamicType#1
 // Source: c:@S@GeomFill_Fixed@F@IsConstant#1
 // Source: c:@S@GeomFill_Fixed@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@GeomFill_Frenet@F@Copy#1
+// Source: c:@S@GeomFill_Frenet@F@DynamicType#1
 // Source: c:@S@GeomFill_Frenet@F@GeomFill_Frenet#
 // Source: c:@S@GeomFill_Frenet@F@Init#
 // Source: c:@S@GeomFill_Frenet@F@IsConstant#1
@@ -1173,6 +1290,7 @@
 // Source: c:@S@GeomFill_Frenet@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@GeomFill_Frenet@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
 // Source: c:@S@GeomFill_GuideTrihedronAC@F@Copy#1
+// Source: c:@S@GeomFill_GuideTrihedronAC@F@DynamicType#1
 // Source: c:@S@GeomFill_GuideTrihedronAC@F@GeomFill_GuideTrihedronAC#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
 // Source: c:@S@GeomFill_GuideTrihedronAC@F@Guide#1
 // Source: c:@S@GeomFill_GuideTrihedronAC@F@IsConstant#1
@@ -1182,6 +1300,7 @@
 // Source: c:@S@GeomFill_GuideTrihedronAC@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
 // Source: c:@S@GeomFill_GuideTrihedronAC@F@SetInterval#d#d#
 // Source: c:@S@GeomFill_GuideTrihedronPlan@F@Copy#1
+// Source: c:@S@GeomFill_GuideTrihedronPlan@F@DynamicType#1
 // Source: c:@S@GeomFill_GuideTrihedronPlan@F@ErrorStatus#1
 // Source: c:@S@GeomFill_GuideTrihedronPlan@F@GeomFill_GuideTrihedronPlan#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
 // Source: c:@S@GeomFill_GuideTrihedronPlan@F@Guide#1
@@ -1191,11 +1310,14 @@
 // Source: c:@S@GeomFill_GuideTrihedronPlan@F@Origine#d#d#
 // Source: c:@S@GeomFill_GuideTrihedronPlan@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
 // Source: c:@S@GeomFill_GuideTrihedronPlan@F@SetInterval#d#d#
+// Source: c:@S@GeomFill_Line@F@DynamicType#1
 // Source: c:@S@GeomFill_Line@F@GeomFill_Line#
 // Source: c:@S@GeomFill_Line@F@GeomFill_Line#I#
 // Source: c:@S@GeomFill_Line@F@NbPoints#1
 // Source: c:@S@GeomFill_Line@F@Point#I#1
 // Source: c:@S@GeomFill_LocationDraft@F@Copy#1
+// Source: c:@S@GeomFill_LocationDraft@F@DynamicType#1
+// Source: c:@S@GeomFill_LocationDraft@F@GetCurve#1
 // Source: c:@S@GeomFill_LocationDraft@F@GetMaximalNorm#
 // Source: c:@S@GeomFill_LocationDraft@F@HasFirstRestriction#1
 // Source: c:@S@GeomFill_LocationDraft@F@HasLastRestriction#1
@@ -1207,9 +1329,11 @@
 // Source: c:@S@GeomFill_LocationDraft@F@SetStopSurf#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#
 // Source: c:@S@GeomFill_LocationDraft@F@TraceNumber#1
 // Source: c:@S@GeomFill_LocationGuide@F@Copy#1
+// Source: c:@S@GeomFill_LocationGuide@F@DynamicType#1
 // Source: c:@S@GeomFill_LocationGuide@F@EraseRotation#
 // Source: c:@S@GeomFill_LocationGuide@F@ErrorStatus#1
 // Source: c:@S@GeomFill_LocationGuide@F@GeomFill_LocationGuide#&1$@N@opencascade@S@handle>#$@S@GeomFill_TrihedronWithGuide#
+// Source: c:@S@GeomFill_LocationGuide@F@GetCurve#1
 // Source: c:@S@GeomFill_LocationGuide@F@GetMaximalNorm#
 // Source: c:@S@GeomFill_LocationGuide@F@Guide#1
 // Source: c:@S@GeomFill_LocationGuide@F@HasFirstRestriction#1
@@ -1221,6 +1345,7 @@
 // Source: c:@S@GeomFill_LocationGuide@F@SetOrigine#d#d#
 // Source: c:@S@GeomFill_LocationGuide@F@SetTolerance#d#d#
 // Source: c:@S@GeomFill_LocationGuide@F@TraceNumber#1
+// Source: c:@S@GeomFill_LocationLaw@F@DynamicType#1
 // Source: c:@S@GeomFill_LocationLaw@F@ErrorStatus#1
 // Source: c:@S@GeomFill_LocationLaw@F@HasFirstRestriction#1
 // Source: c:@S@GeomFill_LocationLaw@F@HasLastRestriction#1
@@ -1232,6 +1357,7 @@
 // Source: c:@S@GeomFill_NSections@F@CirclSection#d#1
 // Source: c:@S@GeomFill_NSections@F@ComputeSurface#
 // Source: c:@S@GeomFill_NSections@F@ConstantSection#1
+// Source: c:@S@GeomFill_NSections@F@DynamicType#1
 // Source: c:@S@GeomFill_NSections@F@IsRational#1
 // Source: c:@S@GeomFill_NSections@F@IsUPeriodic#1
 // Source: c:@S@GeomFill_NSections@F@IsVPeriodic#1
@@ -1243,7 +1369,9 @@
 // Source: c:@S@GeomFill_SectionLaw@F@BarycentreOfSurf#1
 // Source: c:@S@GeomFill_SectionLaw@F@CirclSection#d#1
 // Source: c:@S@GeomFill_SectionLaw@F@ConstantSection#1
+// Source: c:@S@GeomFill_SectionLaw@F@DynamicType#1
 // Source: c:@S@GeomFill_SectionLaw@F@SetTolerance#d#d#
+// Source: c:@S@GeomFill_SimpleBound@F@DynamicType#1
 // Source: c:@S@GeomFill_SimpleBound@F@GeomFill_SimpleBound#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#d#d#
 // Source: c:@S@GeomFill_SimpleBound@F@IsDegenerated#1
 // Source: c:@S@GeomFill_SimpleBound@F@Reparametrize#d#d#b#b#d#d#b#
@@ -1260,6 +1388,7 @@
 // Source: c:@S@GeomFill_SnglrFunc@F@SetRatio#d#
 // Source: c:@S@GeomFill_SnglrFunc@F@ShallowCopy#1
 // Source: c:@S@GeomFill_SweepFunction@F@BarycentreOfSurf#1
+// Source: c:@S@GeomFill_SweepFunction@F@DynamicType#1
 // Source: c:@S@GeomFill_SweepFunction@F@GeomFill_SweepFunction#&1$@N@opencascade@S@handle>#$@S@GeomFill_SectionLaw#&1$@N@opencascade@S@handle>#$@S@GeomFill_LocationLaw#d#d#d#
 // Source: c:@S@GeomFill_SweepFunction@F@IsRational#1
 // Source: c:@S@GeomFill_SweepFunction@F@MaximalSection#1
@@ -1267,18 +1396,23 @@
 // Source: c:@S@GeomFill_SweepFunction@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@GeomFill_SweepFunction@F@SetInterval#d#d#
 // Source: c:@S@GeomFill_SweepFunction@F@SetTolerance#d#d#
+// Source: c:@S@GeomFill_TgtField@F@DynamicType#1
 // Source: c:@S@GeomFill_TgtField@F@IsScalable#1
 // Source: c:@S@GeomFill_TgtField@F@Scale#&1$@N@opencascade@S@handle>#$@S@Law_BSpline#
+// Source: c:@S@GeomFill_TgtOnCoons@F@DynamicType#1
 // Source: c:@S@GeomFill_TgtOnCoons@F@GeomFill_TgtOnCoons#&1$@N@opencascade@S@handle>#$@S@GeomFill_CoonsAlgPatch#I#
+// Source: c:@S@GeomFill_TrihedronLaw@F@DynamicType#1
 // Source: c:@S@GeomFill_TrihedronLaw@F@ErrorStatus#1
 // Source: c:@S@GeomFill_TrihedronLaw@F@IsConstant#1
 // Source: c:@S@GeomFill_TrihedronLaw@F@IsOnlyBy3dCurve#1
 // Source: c:@S@GeomFill_TrihedronLaw@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
 // Source: c:@S@GeomFill_TrihedronLaw@F@SetInterval#d#d#
 // Source: c:@S@GeomFill_TrihedronWithGuide@F@CurrentPointOnGuide#1
+// Source: c:@S@GeomFill_TrihedronWithGuide@F@DynamicType#1
 // Source: c:@S@GeomFill_UniformSection@F@BSplineSurface#1
 // Source: c:@S@GeomFill_UniformSection@F@BarycentreOfSurf#1
 // Source: c:@S@GeomFill_UniformSection@F@ConstantSection#1
+// Source: c:@S@GeomFill_UniformSection@F@DynamicType#1
 // Source: c:@S@GeomFill_UniformSection@F@GeomFill_UniformSection#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#d#
 // Source: c:@S@GeomFill_UniformSection@F@IsRational#1
 // Source: c:@S@GeomFill_UniformSection@F@IsUPeriodic#1
@@ -1288,6 +1422,7 @@
 // Source: c:@S@GeomFill_UniformSection@F@SetInterval#d#d#
 // Source: c:@S@GeomPlate_CurveConstraint@F@Curve2dOnSurf#1
 // Source: c:@S@GeomPlate_CurveConstraint@F@Curve3d#1
+// Source: c:@S@GeomPlate_CurveConstraint@F@DynamicType#1
 // Source: c:@S@GeomPlate_CurveConstraint@F@FirstParameter#1
 // Source: c:@S@GeomPlate_CurveConstraint@F@G0Criterion#d#1
 // Source: c:@S@GeomPlate_CurveConstraint@F@G1Criterion#d#1
@@ -1306,6 +1441,7 @@
 // Source: c:@S@GeomPlate_CurveConstraint@F@SetNbPoints#I#
 // Source: c:@S@GeomPlate_CurveConstraint@F@SetOrder#I#
 // Source: c:@S@GeomPlate_CurveConstraint@F@SetProjectedCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#d#d#
+// Source: c:@S@GeomPlate_PointConstraint@F@DynamicType#1
 // Source: c:@S@GeomPlate_PointConstraint@F@G0Criterion#1
 // Source: c:@S@GeomPlate_PointConstraint@F@G1Criterion#1
 // Source: c:@S@GeomPlate_PointConstraint@F@G2Criterion#1
@@ -1320,6 +1456,7 @@
 // Source: c:@S@GeomPlate_Surface@F@CallSurfinit#1
 // Source: c:@S@GeomPlate_Surface@F@Continuity#1
 // Source: c:@S@GeomPlate_Surface@F@Copy#1
+// Source: c:@S@GeomPlate_Surface@F@DynamicType#1
 // Source: c:@S@GeomPlate_Surface@F@EvalD0#d#d#1
 // Source: c:@S@GeomPlate_Surface@F@IsCNu#I#1
 // Source: c:@S@GeomPlate_Surface@F@IsCNv#I#1
@@ -1336,18 +1473,23 @@
 // Source: c:@S@GeomPlate_Surface@F@VPeriod#1
 // Source: c:@S@GeomPlate_Surface@F@VReverse#
 // Source: c:@S@GeomPlate_Surface@F@VReversedParameter#d#1
+// Source: c:@S@GeomTools_UndefinedTypeHandler@F@DynamicType#1
 // Source: c:@S@GeomTools_UndefinedTypeHandler@F@GeomTools_UndefinedTypeHandler#
 // Source: c:@S@Geom_Axis1Placement@F@Copy#1
+// Source: c:@S@Geom_Axis1Placement@F@DynamicType#1
 // Source: c:@S@Geom_Axis1Placement@F@Reverse#
 // Source: c:@S@Geom_Axis1Placement@F@Reversed#1
 // Source: c:@S@Geom_Axis2Placement@F@Copy#1
+// Source: c:@S@Geom_Axis2Placement@F@DynamicType#1
 // Source: c:@S@Geom_AxisPlacement@F@Angle#&1$@N@opencascade@S@handle>#$@S@Geom_AxisPlacement#1
+// Source: c:@S@Geom_AxisPlacement@F@DynamicType#1
 // Source: c:@S@Geom_AxisPlacement@F@Location#1
 // Source: c:@S@Geom_AxisPlacement@F@SetLocation#&1$@S@gp_Pnt#
 // Source: c:@S@Geom_BSplineCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_BSplineCurve@F@Continuity#1
 // Source: c:@S@Geom_BSplineCurve@F@Copy#1
 // Source: c:@S@Geom_BSplineCurve@F@Degree#1
+// Source: c:@S@Geom_BSplineCurve@F@DynamicType#1
 // Source: c:@S@Geom_BSplineCurve@F@EndPoint#1
 // Source: c:@S@Geom_BSplineCurve@F@EvalD0#d#1
 // Source: c:@S@Geom_BSplineCurve@F@FirstParameter#1
@@ -1391,6 +1533,7 @@
 // Source: c:@S@Geom_BSplineSurface@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_BSplineSurface@F@Continuity#1
 // Source: c:@S@Geom_BSplineSurface@F@Copy#1
+// Source: c:@S@Geom_BSplineSurface@F@DynamicType#1
 // Source: c:@S@Geom_BSplineSurface@F@EvalD0#d#d#1
 // Source: c:@S@Geom_BSplineSurface@F@ExchangeUV#
 // Source: c:@S@Geom_BSplineSurface@F@FirstUKnotIndex#1
@@ -1457,6 +1600,7 @@
 // Source: c:@S@Geom_BezierCurve@F@Continuity#1
 // Source: c:@S@Geom_BezierCurve@F@Copy#1
 // Source: c:@S@Geom_BezierCurve@F@Degree#1
+// Source: c:@S@Geom_BezierCurve@F@DynamicType#1
 // Source: c:@S@Geom_BezierCurve@F@EndPoint#1
 // Source: c:@S@Geom_BezierCurve@F@EvalD0#d#1
 // Source: c:@S@Geom_BezierCurve@F@FirstParameter#1
@@ -1484,6 +1628,7 @@
 // Source: c:@S@Geom_BezierSurface@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_BezierSurface@F@Continuity#1
 // Source: c:@S@Geom_BezierSurface@F@Copy#1
+// Source: c:@S@Geom_BezierSurface@F@DynamicType#1
 // Source: c:@S@Geom_BezierSurface@F@EvalD0#d#d#1
 // Source: c:@S@Geom_BezierSurface@F@ExchangeUV#
 // Source: c:@S@Geom_BezierSurface@F@HasEvalRepresentation#1
@@ -1513,7 +1658,10 @@
 // Source: c:@S@Geom_BezierSurface@F@VReverse#
 // Source: c:@S@Geom_BezierSurface@F@VReversedParameter#d#1
 // Source: c:@S@Geom_BezierSurface@F@Weight#I#I#1
+// Source: c:@S@Geom_BoundedCurve@F@DynamicType#1
+// Source: c:@S@Geom_BoundedSurface@F@DynamicType#1
 // Source: c:@S@Geom_CartesianPoint@F@Copy#1
+// Source: c:@S@Geom_CartesianPoint@F@DynamicType#1
 // Source: c:@S@Geom_CartesianPoint@F@Geom_CartesianPoint#&1$@S@gp_Pnt#
 // Source: c:@S@Geom_CartesianPoint@F@Geom_CartesianPoint#d#d#d#
 // Source: c:@S@Geom_CartesianPoint@F@Pnt#1
@@ -1526,6 +1674,7 @@
 // Source: c:@S@Geom_CartesianPoint@F@Y#1
 // Source: c:@S@Geom_CartesianPoint@F@Z#1
 // Source: c:@S@Geom_Circle@F@Copy#1
+// Source: c:@S@Geom_Circle@F@DynamicType#1
 // Source: c:@S@Geom_Circle@F@Eccentricity#1
 // Source: c:@S@Geom_Circle@F@EvalD0#d#1
 // Source: c:@S@Geom_Circle@F@FirstParameter#1
@@ -1536,11 +1685,14 @@
 // Source: c:@S@Geom_Circle@F@ReversedParameter#d#1
 // Source: c:@S@Geom_Circle@F@SetRadius#d#
 // Source: c:@S@Geom_Conic@F@Continuity#1
+// Source: c:@S@Geom_Conic@F@DynamicType#1
 // Source: c:@S@Geom_Conic@F@IsCN#I#1
+// Source: c:@S@Geom_Conic@F@Location#1
 // Source: c:@S@Geom_Conic@F@Reverse#
 // Source: c:@S@Geom_Conic@F@SetLocation#&1$@S@gp_Pnt#
 // Source: c:@S@Geom_ConicalSurface@F@Apex#1
 // Source: c:@S@Geom_ConicalSurface@F@Copy#1
+// Source: c:@S@Geom_ConicalSurface@F@DynamicType#1
 // Source: c:@S@Geom_ConicalSurface@F@EvalD0#d#d#1
 // Source: c:@S@Geom_ConicalSurface@F@IsUClosed#1
 // Source: c:@S@Geom_ConicalSurface@F@IsUPeriodic#1
@@ -1555,10 +1707,12 @@
 // Source: c:@S@Geom_ConicalSurface@F@VIso#d#1
 // Source: c:@S@Geom_ConicalSurface@F@VReverse#
 // Source: c:@S@Geom_ConicalSurface@F@VReversedParameter#d#1
+// Source: c:@S@Geom_Curve@F@DynamicType#1
 // Source: c:@S@Geom_Curve@F@Period#1
 // Source: c:@S@Geom_Curve@F@Reversed#1
 // Source: c:@S@Geom_Curve@F@Value#d#1
 // Source: c:@S@Geom_CylindricalSurface@F@Copy#1
+// Source: c:@S@Geom_CylindricalSurface@F@DynamicType#1
 // Source: c:@S@Geom_CylindricalSurface@F@EvalD0#d#d#1
 // Source: c:@S@Geom_CylindricalSurface@F@IsUClosed#1
 // Source: c:@S@Geom_CylindricalSurface@F@IsUPeriodic#1
@@ -1575,6 +1729,7 @@
 // Source: c:@S@Geom_Direction@F@CrossCross#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#S0_#
 // Source: c:@S@Geom_Direction@F@CrossCrossed#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#S0_#1
 // Source: c:@S@Geom_Direction@F@Crossed#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#1
+// Source: c:@S@Geom_Direction@F@DynamicType#1
 // Source: c:@S@Geom_Direction@F@Geom_Direction#d#d#d#
 // Source: c:@S@Geom_Direction@F@Magnitude#1
 // Source: c:@S@Geom_Direction@F@SetCoord#d#d#d#
@@ -1583,12 +1738,15 @@
 // Source: c:@S@Geom_Direction@F@SetZ#d#
 // Source: c:@S@Geom_Direction@F@SquareMagnitude#1
 // Source: c:@S@Geom_ElementarySurface@F@Continuity#1
+// Source: c:@S@Geom_ElementarySurface@F@DynamicType#1
 // Source: c:@S@Geom_ElementarySurface@F@IsCNu#I#1
 // Source: c:@S@Geom_ElementarySurface@F@IsCNv#I#1
+// Source: c:@S@Geom_ElementarySurface@F@Location#1
 // Source: c:@S@Geom_ElementarySurface@F@SetLocation#&1$@S@gp_Pnt#
 // Source: c:@S@Geom_ElementarySurface@F@UReverse#
 // Source: c:@S@Geom_ElementarySurface@F@VReverse#
 // Source: c:@S@Geom_Ellipse@F@Copy#1
+// Source: c:@S@Geom_Ellipse@F@DynamicType#1
 // Source: c:@S@Geom_Ellipse@F@Eccentricity#1
 // Source: c:@S@Geom_Ellipse@F@EvalD0#d#1
 // Source: c:@S@Geom_Ellipse@F@FirstParameter#1
@@ -1604,6 +1762,7 @@
 // Source: c:@S@Geom_Ellipse@F@ReversedParameter#d#1
 // Source: c:@S@Geom_Ellipse@F@SetMajorRadius#d#
 // Source: c:@S@Geom_Ellipse@F@SetMinorRadius#d#
+// Source: c:@S@Geom_Geometry@F@DynamicType#1
 // Source: c:@S@Geom_Geometry@F@Mirror#&1$@S@gp_Pnt#
 // Source: c:@S@Geom_Geometry@F@Mirrored#&1$@S@gp_Pnt#1
 // Source: c:@S@Geom_Geometry@F@Scale#&1$@S@gp_Pnt#d#
@@ -1611,6 +1770,7 @@
 // Source: c:@S@Geom_Geometry@F@Translate#&1$@S@gp_Pnt#S0_#
 // Source: c:@S@Geom_Geometry@F@Translated#&1$@S@gp_Pnt#S0_#1
 // Source: c:@S@Geom_Hyperbola@F@Copy#1
+// Source: c:@S@Geom_Hyperbola@F@DynamicType#1
 // Source: c:@S@Geom_Hyperbola@F@Eccentricity#1
 // Source: c:@S@Geom_Hyperbola@F@EvalD0#d#1
 // Source: c:@S@Geom_Hyperbola@F@FirstParameter#1
@@ -1628,6 +1788,7 @@
 // Source: c:@S@Geom_Hyperbola@F@SetMinorRadius#d#
 // Source: c:@S@Geom_Line@F@Continuity#1
 // Source: c:@S@Geom_Line@F@Copy#1
+// Source: c:@S@Geom_Line@F@DynamicType#1
 // Source: c:@S@Geom_Line@F@EvalD0#d#1
 // Source: c:@S@Geom_Line@F@FirstParameter#1
 // Source: c:@S@Geom_Line@F@IsCN#I#1
@@ -1641,6 +1802,7 @@
 // Source: c:@S@Geom_OffsetCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_OffsetCurve@F@Continuity#1
 // Source: c:@S@Geom_OffsetCurve@F@Copy#1
+// Source: c:@S@Geom_OffsetCurve@F@DynamicType#1
 // Source: c:@S@Geom_OffsetCurve@F@EvalD0#d#1
 // Source: c:@S@Geom_OffsetCurve@F@FirstParameter#1
 // Source: c:@S@Geom_OffsetCurve@F@GetBasisCurveContinuity#1
@@ -1655,9 +1817,11 @@
 // Source: c:@S@Geom_OffsetCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom_OffsetCurve@F@SetBasisCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#b#
 // Source: c:@S@Geom_OffsetCurve@F@SetOffsetValue#d#
+// Source: c:@S@Geom_OffsetSurface@F@BasisSurface#1
 // Source: c:@S@Geom_OffsetSurface@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_OffsetSurface@F@Continuity#1
 // Source: c:@S@Geom_OffsetSurface@F@Copy#1
+// Source: c:@S@Geom_OffsetSurface@F@DynamicType#1
 // Source: c:@S@Geom_OffsetSurface@F@EvalD0#d#d#1
 // Source: c:@S@Geom_OffsetSurface@F@Geom_OffsetSurface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#b#
 // Source: c:@S@Geom_OffsetSurface@F@GetBasisSurfContinuity#1
@@ -1681,6 +1845,7 @@
 // Source: c:@S@Geom_OffsetSurface@F@VReverse#
 // Source: c:@S@Geom_OffsetSurface@F@VReversedParameter#d#1
 // Source: c:@S@Geom_Parabola@F@Copy#1
+// Source: c:@S@Geom_Parabola@F@DynamicType#1
 // Source: c:@S@Geom_Parabola@F@Eccentricity#1
 // Source: c:@S@Geom_Parabola@F@EvalD0#d#1
 // Source: c:@S@Geom_Parabola@F@FirstParameter#1
@@ -1693,6 +1858,7 @@
 // Source: c:@S@Geom_Parabola@F@ReversedParameter#d#1
 // Source: c:@S@Geom_Parabola@F@SetFocal#d#
 // Source: c:@S@Geom_Plane@F@Copy#1
+// Source: c:@S@Geom_Plane@F@DynamicType#1
 // Source: c:@S@Geom_Plane@F@EvalD0#d#d#1
 // Source: c:@S@Geom_Plane@F@Geom_Plane#d#d#d#d#
 // Source: c:@S@Geom_Plane@F@IsUClosed#1
@@ -1706,10 +1872,12 @@
 // Source: c:@S@Geom_Plane@F@VReverse#
 // Source: c:@S@Geom_Plane@F@VReversedParameter#d#1
 // Source: c:@S@Geom_Point@F@Distance#&1$@N@opencascade@S@handle>#$@S@Geom_Point#1
+// Source: c:@S@Geom_Point@F@DynamicType#1
 // Source: c:@S@Geom_Point@F@SquareDistance#&1$@N@opencascade@S@handle>#$@S@Geom_Point#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@BasisSurface#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@Continuity#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@Copy#1
+// Source: c:@S@Geom_RectangularTrimmedSurface@F@DynamicType#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@EvalD0#d#d#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@Geom_RectangularTrimmedSurface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#b#b#
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@Geom_RectangularTrimmedSurface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#d#d#b#b#
@@ -1731,6 +1899,7 @@
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@VReversedParameter#d#1
 // Source: c:@S@Geom_SphericalSurface@F@Area#1
 // Source: c:@S@Geom_SphericalSurface@F@Copy#1
+// Source: c:@S@Geom_SphericalSurface@F@DynamicType#1
 // Source: c:@S@Geom_SphericalSurface@F@EvalD0#d#d#1
 // Source: c:@S@Geom_SphericalSurface@F@IsUClosed#1
 // Source: c:@S@Geom_SphericalSurface@F@IsUPeriodic#1
@@ -1743,6 +1912,7 @@
 // Source: c:@S@Geom_SphericalSurface@F@VIso#d#1
 // Source: c:@S@Geom_SphericalSurface@F@VReversedParameter#d#1
 // Source: c:@S@Geom_SphericalSurface@F@Volume#1
+// Source: c:@S@Geom_Surface@F@DynamicType#1
 // Source: c:@S@Geom_Surface@F@UPeriod#1
 // Source: c:@S@Geom_Surface@F@UReversed#1
 // Source: c:@S@Geom_Surface@F@VPeriod#1
@@ -1750,6 +1920,7 @@
 // Source: c:@S@Geom_Surface@F@Value#d#d#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@Copy#1
+// Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@DynamicType#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@EvalD0#d#d#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@HasEvalRepresentation#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@IsCNu#I#1
@@ -1767,6 +1938,7 @@
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@VReversedParameter#d#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@Copy#1
+// Source: c:@S@Geom_SurfaceOfRevolution@F@DynamicType#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@EvalD0#d#d#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@HasEvalRepresentation#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@IsCNu#I#1
@@ -1775,6 +1947,7 @@
 // Source: c:@S@Geom_SurfaceOfRevolution@F@IsUPeriodic#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@IsVClosed#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@IsVPeriodic#1
+// Source: c:@S@Geom_SurfaceOfRevolution@F@Location#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@SetBasisCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@SetLocation#&1$@S@gp_Pnt#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@UIso#d#1
@@ -1785,8 +1958,10 @@
 // Source: c:@S@Geom_SurfaceOfRevolution@F@VReversedParameter#d#1
 // Source: c:@S@Geom_SweptSurface@F@BasisCurve#1
 // Source: c:@S@Geom_SweptSurface@F@Continuity#1
+// Source: c:@S@Geom_SweptSurface@F@DynamicType#1
 // Source: c:@S@Geom_ToroidalSurface@F@Area#1
 // Source: c:@S@Geom_ToroidalSurface@F@Copy#1
+// Source: c:@S@Geom_ToroidalSurface@F@DynamicType#1
 // Source: c:@S@Geom_ToroidalSurface@F@EvalD0#d#d#1
 // Source: c:@S@Geom_ToroidalSurface@F@IsUClosed#1
 // Source: c:@S@Geom_ToroidalSurface@F@IsUPeriodic#1
@@ -1802,6 +1977,7 @@
 // Source: c:@S@Geom_ToroidalSurface@F@VReversedParameter#d#1
 // Source: c:@S@Geom_ToroidalSurface@F@Volume#1
 // Source: c:@S@Geom_Transformation@F@Copy#1
+// Source: c:@S@Geom_Transformation@F@DynamicType#1
 // Source: c:@S@Geom_Transformation@F@Form#1
 // Source: c:@S@Geom_Transformation@F@Geom_Transformation#
 // Source: c:@S@Geom_Transformation@F@Invert#
@@ -1820,6 +1996,7 @@
 // Source: c:@S@Geom_TrimmedCurve@F@BasisCurve#1
 // Source: c:@S@Geom_TrimmedCurve@F@Continuity#1
 // Source: c:@S@Geom_TrimmedCurve@F@Copy#1
+// Source: c:@S@Geom_TrimmedCurve@F@DynamicType#1
 // Source: c:@S@Geom_TrimmedCurve@F@EndPoint#1
 // Source: c:@S@Geom_TrimmedCurve@F@EvalD0#d#1
 // Source: c:@S@Geom_TrimmedCurve@F@FirstParameter#1
@@ -1837,6 +2014,7 @@
 // Source: c:@S@Geom_Vector@F@AngleWithRef#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#S0_#1
 // Source: c:@S@Geom_Vector@F@Dot#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#1
 // Source: c:@S@Geom_Vector@F@DotCross#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#S0_#1
+// Source: c:@S@Geom_Vector@F@DynamicType#1
 // Source: c:@S@Geom_Vector@F@Reverse#
 // Source: c:@S@Geom_Vector@F@Reversed#1
 // Source: c:@S@Geom_Vector@F@X#1
@@ -1851,6 +2029,7 @@
 // Source: c:@S@Geom_VectorWithMagnitude@F@Crossed#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#1
 // Source: c:@S@Geom_VectorWithMagnitude@F@Divide#d#
 // Source: c:@S@Geom_VectorWithMagnitude@F@Divided#d#1
+// Source: c:@S@Geom_VectorWithMagnitude@F@DynamicType#1
 // Source: c:@S@Geom_VectorWithMagnitude@F@Geom_VectorWithMagnitude#&1$@S@gp_Pnt#S0_#
 // Source: c:@S@Geom_VectorWithMagnitude@F@Geom_VectorWithMagnitude#d#d#d#
 // Source: c:@S@Geom_VectorWithMagnitude@F@Magnitude#1
@@ -1865,8 +2044,10 @@
 // Source: c:@S@Geom_VectorWithMagnitude@F@SquareMagnitude#1
 // Source: c:@S@Geom_VectorWithMagnitude@F@Subtract#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#
 // Source: c:@S@Geom_VectorWithMagnitude@F@Subtracted#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#1
+// Source: c:@S@GeometryTest_DrawableQualifiedCurve2d@F@DynamicType#1
 // Source: c:@S@Law_BSpFunc@F@Continuity#1
 // Source: c:@S@Law_BSpFunc@F@Curve#1
+// Source: c:@S@Law_BSpFunc@F@DynamicType#1
 // Source: c:@S@Law_BSpFunc@F@Law_BSpFunc#
 // Source: c:@S@Law_BSpFunc@F@Law_BSpFunc#&1$@N@opencascade@S@handle>#$@S@Law_BSpline#d#d#
 // Source: c:@S@Law_BSpFunc@F@NbIntervals#$@E@GeomAbs_Shape#1
@@ -1877,6 +2058,7 @@
 // Source: c:@S@Law_BSpline@F@Copy#1
 // Source: c:@S@Law_BSpline@F@DN#d#I#1
 // Source: c:@S@Law_BSpline@F@Degree#1
+// Source: c:@S@Law_BSpline@F@DynamicType#1
 // Source: c:@S@Law_BSpline@F@EndPoint#1
 // Source: c:@S@Law_BSpline@F@FirstParameter#1
 // Source: c:@S@Law_BSpline@F@FirstUKnotIndex#1
@@ -1915,6 +2097,7 @@
 // Source: c:@S@Law_BSpline@F@Value#d#1
 // Source: c:@S@Law_BSpline@F@Weight#I#1
 // Source: c:@S@Law_Composite@F@Continuity#1
+// Source: c:@S@Law_Composite@F@DynamicType#1
 // Source: c:@S@Law_Composite@F@IsPeriodic#1
 // Source: c:@S@Law_Composite@F@Law_Composite#
 // Source: c:@S@Law_Composite@F@Law_Composite#d#d#d#
@@ -1923,23 +2106,29 @@
 // Source: c:@S@Law_Composite@F@Trim#d#d#d#1
 // Source: c:@S@Law_Composite@F@Value#d#
 // Source: c:@S@Law_Constant@F@Continuity#1
+// Source: c:@S@Law_Constant@F@DynamicType#1
 // Source: c:@S@Law_Constant@F@Law_Constant#
 // Source: c:@S@Law_Constant@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@Law_Constant@F@Set#d#d#d#
 // Source: c:@S@Law_Constant@F@Trim#d#d#d#1
 // Source: c:@S@Law_Constant@F@Value#d#
+// Source: c:@S@Law_Function@F@DynamicType#1
+// Source: c:@S@Law_Interpol@F@DynamicType#1
 // Source: c:@S@Law_Interpol@F@Law_Interpol#
 // Source: c:@S@Law_Linear@F@Continuity#1
+// Source: c:@S@Law_Linear@F@DynamicType#1
 // Source: c:@S@Law_Linear@F@Law_Linear#
 // Source: c:@S@Law_Linear@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@Law_Linear@F@Set#d#d#d#d#
 // Source: c:@S@Law_Linear@F@Trim#d#d#d#1
 // Source: c:@S@Law_Linear@F@Value#d#
+// Source: c:@S@Law_S@F@DynamicType#1
 // Source: c:@S@Law_S@F@Law_S#
 // Source: c:@S@Law_S@F@Set#d#d#d#d#
 // Source: c:@S@Law_S@F@Set#d#d#d#d#d#d#
 // Source: c:@S@MAT2d_Circuit@F@Connexion#I#1
 // Source: c:@S@MAT2d_Circuit@F@ConnexionOn#I#1
+// Source: c:@S@MAT2d_Circuit@F@DynamicType#1
 // Source: c:@S@MAT2d_Circuit@F@LineLength#I#1
 // Source: c:@S@MAT2d_Circuit@F@MAT2d_Circuit#$@E@GeomAbs_JoinType#b#
 // Source: c:@S@MAT2d_Circuit@F@NumberOfItems#1
@@ -1947,6 +2136,7 @@
 // Source: c:@S@MAT2d_Connexion@F@Distance#1
 // Source: c:@S@MAT2d_Connexion@F@Distance#d#
 // Source: c:@S@MAT2d_Connexion@F@Dump#I#I#1
+// Source: c:@S@MAT2d_Connexion@F@DynamicType#1
 // Source: c:@S@MAT2d_Connexion@F@IndexFirstLine#1
 // Source: c:@S@MAT2d_Connexion@F@IndexFirstLine#I#
 // Source: c:@S@MAT2d_Connexion@F@IndexItemOnFirst#1
@@ -1962,6 +2152,7 @@
 // Source: c:@S@MAT2d_Connexion@F@ParameterOnSecond#1
 // Source: c:@S@MAT2d_Connexion@F@ParameterOnSecond#d#
 // Source: c:@S@MAT2d_Connexion@F@Reverse#1
+// Source: c:@S@MAT_Arc@F@DynamicType#1
 // Source: c:@S@MAT_Arc@F@FirstElement#1
 // Source: c:@S@MAT_Arc@F@FirstNode#1
 // Source: c:@S@MAT_Arc@F@GeomIndex#1
@@ -1981,6 +2172,7 @@
 // Source: c:@S@MAT_Arc@F@SetSecondElement#&1$@N@opencascade@S@handle>#$@S@MAT_BasicElt#
 // Source: c:@S@MAT_Arc@F@SetSecondNode#&1$@N@opencascade@S@handle>#$@S@MAT_Node#
 // Source: c:@S@MAT_Arc@F@TheOtherNode#&1$@N@opencascade@S@handle>#$@S@MAT_Node#1
+// Source: c:@S@MAT_BasicElt@F@DynamicType#1
 // Source: c:@S@MAT_BasicElt@F@EndArc#1
 // Source: c:@S@MAT_BasicElt@F@GeomIndex#1
 // Source: c:@S@MAT_BasicElt@F@Index#1
@@ -1996,6 +2188,7 @@
 // Source: c:@S@MAT_Bisector@F@DistIssuePoint#1
 // Source: c:@S@MAT_Bisector@F@DistIssuePoint#d#
 // Source: c:@S@MAT_Bisector@F@Dump#I#I#1
+// Source: c:@S@MAT_Bisector@F@DynamicType#1
 // Source: c:@S@MAT_Bisector@F@EndPoint#1
 // Source: c:@S@MAT_Bisector@F@EndPoint#I#
 // Source: c:@S@MAT_Bisector@F@FirstBisector#1
@@ -2023,6 +2216,7 @@
 // Source: c:@S@MAT_Edge@F@Distance#1
 // Source: c:@S@MAT_Edge@F@Distance#d#
 // Source: c:@S@MAT_Edge@F@Dump#I#I#1
+// Source: c:@S@MAT_Edge@F@DynamicType#1
 // Source: c:@S@MAT_Edge@F@EdgeNumber#1
 // Source: c:@S@MAT_Edge@F@EdgeNumber#I#
 // Source: c:@S@MAT_Edge@F@FirstBisector#&1$@N@opencascade@S@handle>#$@S@MAT_Bisector#
@@ -2037,6 +2231,7 @@
 // Source: c:@S@MAT_Graph@F@ChangeBasicElt#I#
 // Source: c:@S@MAT_Graph@F@CompactArcs#
 // Source: c:@S@MAT_Graph@F@CompactNodes#
+// Source: c:@S@MAT_Graph@F@DynamicType#1
 // Source: c:@S@MAT_Graph@F@MAT_Graph#
 // Source: c:@S@MAT_Graph@F@Node#I#1
 // Source: c:@S@MAT_Graph@F@NumberOfArcs#1
@@ -2049,6 +2244,7 @@
 // Source: c:@S@MAT_ListOfBisector@F@Current#&1$@N@opencascade@S@handle>#$@S@MAT_Bisector#1
 // Source: c:@S@MAT_ListOfBisector@F@Current#1
 // Source: c:@S@MAT_ListOfBisector@F@Dump#I#I#
+// Source: c:@S@MAT_ListOfBisector@F@DynamicType#1
 // Source: c:@S@MAT_ListOfBisector@F@First#
 // Source: c:@S@MAT_ListOfBisector@F@FirstItem#1
 // Source: c:@S@MAT_ListOfBisector@F@FrontAdd#&1$@N@opencascade@S@handle>#$@S@MAT_Bisector#
@@ -2074,6 +2270,7 @@
 // Source: c:@S@MAT_ListOfEdge@F@Current#&1$@N@opencascade@S@handle>#$@S@MAT_Edge#1
 // Source: c:@S@MAT_ListOfEdge@F@Current#1
 // Source: c:@S@MAT_ListOfEdge@F@Dump#I#I#
+// Source: c:@S@MAT_ListOfEdge@F@DynamicType#1
 // Source: c:@S@MAT_ListOfEdge@F@First#
 // Source: c:@S@MAT_ListOfEdge@F@FirstItem#1
 // Source: c:@S@MAT_ListOfEdge@F@FrontAdd#&1$@N@opencascade@S@handle>#$@S@MAT_Edge#
@@ -2095,6 +2292,7 @@
 // Source: c:@S@MAT_ListOfEdge@F@PreviousItem#1
 // Source: c:@S@MAT_ListOfEdge@F@Unlink#
 // Source: c:@S@MAT_Node@F@Distance#1
+// Source: c:@S@MAT_Node@F@DynamicType#1
 // Source: c:@S@MAT_Node@F@GeomIndex#1
 // Source: c:@S@MAT_Node@F@Index#1
 // Source: c:@S@MAT_Node@F@Infinite#1
@@ -2104,6 +2302,7 @@
 // Source: c:@S@MAT_Node@F@SetIndex#I#
 // Source: c:@S@MAT_Node@F@SetLinkedArc#&1$@N@opencascade@S@handle>#$@S@MAT_Arc#
 // Source: c:@S@MAT_TListNodeOfListOfBisector@F@Dummy#1
+// Source: c:@S@MAT_TListNodeOfListOfBisector@F@DynamicType#1
 // Source: c:@S@MAT_TListNodeOfListOfBisector@F@GetItem#1
 // Source: c:@S@MAT_TListNodeOfListOfBisector@F@MAT_TListNodeOfListOfBisector#
 // Source: c:@S@MAT_TListNodeOfListOfBisector@F@MAT_TListNodeOfListOfBisector#&1$@N@opencascade@S@handle>#$@S@MAT_Bisector#
@@ -2113,6 +2312,7 @@
 // Source: c:@S@MAT_TListNodeOfListOfBisector@F@Previous#1
 // Source: c:@S@MAT_TListNodeOfListOfBisector@F@SetItem#&1$@N@opencascade@S@handle>#$@S@MAT_Bisector#
 // Source: c:@S@MAT_TListNodeOfListOfEdge@F@Dummy#1
+// Source: c:@S@MAT_TListNodeOfListOfEdge@F@DynamicType#1
 // Source: c:@S@MAT_TListNodeOfListOfEdge@F@GetItem#1
 // Source: c:@S@MAT_TListNodeOfListOfEdge@F@MAT_TListNodeOfListOfEdge#
 // Source: c:@S@MAT_TListNodeOfListOfEdge@F@MAT_TListNodeOfListOfEdge#&1$@N@opencascade@S@handle>#$@S@MAT_Edge#
@@ -2122,12 +2322,14 @@
 // Source: c:@S@MAT_TListNodeOfListOfEdge@F@Previous#1
 // Source: c:@S@MAT_TListNodeOfListOfEdge@F@SetItem#&1$@N@opencascade@S@handle>#$@S@MAT_Edge#
 // Source: c:@S@MAT_Zone@F@ArcOnFrontier#I#1
+// Source: c:@S@MAT_Zone@F@DynamicType#1
 // Source: c:@S@MAT_Zone@F@Limited#1
 // Source: c:@S@MAT_Zone@F@MAT_Zone#
 // Source: c:@S@MAT_Zone@F@MAT_Zone#&1$@N@opencascade@S@handle>#$@S@MAT_BasicElt#
 // Source: c:@S@MAT_Zone@F@NoEmptyZone#1
 // Source: c:@S@MAT_Zone@F@NumberOfArcs#1
 // Source: c:@S@MAT_Zone@F@Perform#&1$@N@opencascade@S@handle>#$@S@MAT_BasicElt#
+// Source: c:@S@NLPlate_HGPPConstraint@F@DynamicType#1
 // Source: c:@S@NLPlate_HGPPConstraint@F@G0Criterion#1
 // Source: c:@S@NLPlate_HGPPConstraint@F@G1Criterion#1
 // Source: c:@S@NLPlate_HGPPConstraint@F@G2Criterion#1
@@ -2144,26 +2346,35 @@
 // Source: c:@S@NLPlate_HGPPConstraint@F@SetUVFreeSliding#b#
 // Source: c:@S@NLPlate_HGPPConstraint@F@UVFreeSliding#1
 // Source: c:@S@NLPlate_HPG0Constraint@F@ActiveOrder#1
+// Source: c:@S@NLPlate_HPG0Constraint@F@DynamicType#1
 // Source: c:@S@NLPlate_HPG0Constraint@F@IncrementalLoadAllowed#1
 // Source: c:@S@NLPlate_HPG0Constraint@F@IsG0#1
 // Source: c:@S@NLPlate_HPG0Constraint@F@SetIncrementalLoadAllowed#b#
 // Source: c:@S@NLPlate_HPG0Constraint@F@SetUVFreeSliding#b#
 // Source: c:@S@NLPlate_HPG0Constraint@F@UVFreeSliding#1
 // Source: c:@S@NLPlate_HPG0G1Constraint@F@ActiveOrder#1
+// Source: c:@S@NLPlate_HPG0G1Constraint@F@DynamicType#1
 // Source: c:@S@NLPlate_HPG0G1Constraint@F@Orientation#
 // Source: c:@S@NLPlate_HPG0G1Constraint@F@SetOrientation#I#
 // Source: c:@S@NLPlate_HPG0G2Constraint@F@ActiveOrder#1
+// Source: c:@S@NLPlate_HPG0G2Constraint@F@DynamicType#1
 // Source: c:@S@NLPlate_HPG0G3Constraint@F@ActiveOrder#1
+// Source: c:@S@NLPlate_HPG0G3Constraint@F@DynamicType#1
 // Source: c:@S@NLPlate_HPG1Constraint@F@ActiveOrder#1
+// Source: c:@S@NLPlate_HPG1Constraint@F@DynamicType#1
 // Source: c:@S@NLPlate_HPG1Constraint@F@IncrementalLoadAllowed#1
 // Source: c:@S@NLPlate_HPG1Constraint@F@IsG0#1
 // Source: c:@S@NLPlate_HPG1Constraint@F@Orientation#
 // Source: c:@S@NLPlate_HPG1Constraint@F@SetIncrementalLoadAllowed#b#
 // Source: c:@S@NLPlate_HPG1Constraint@F@SetOrientation#I#
 // Source: c:@S@NLPlate_HPG2Constraint@F@ActiveOrder#1
+// Source: c:@S@NLPlate_HPG2Constraint@F@DynamicType#1
 // Source: c:@S@NLPlate_HPG3Constraint@F@ActiveOrder#1
+// Source: c:@S@NLPlate_HPG3Constraint@F@DynamicType#1
 // Source: c:@S@ProjLib_CompProjectedCurve@F@Continuity#1
+// Source: c:@S@ProjLib_CompProjectedCurve@F@DynamicType#1
 // Source: c:@S@ProjLib_CompProjectedCurve@F@FirstParameter#1
+// Source: c:@S@ProjLib_CompProjectedCurve@F@GetCurve#1
 // Source: c:@S@ProjLib_CompProjectedCurve@F@GetProj2d#1
 // Source: c:@S@ProjLib_CompProjectedCurve@F@GetProj3d#1
 // Source: c:@S@ProjLib_CompProjectedCurve@F@GetResult2dC#I#1
@@ -2172,6 +2383,7 @@
 // Source: c:@S@ProjLib_CompProjectedCurve@F@GetResult3dApproxError#I#1
 // Source: c:@S@ProjLib_CompProjectedCurve@F@GetResult3dC#I#1
 // Source: c:@S@ProjLib_CompProjectedCurve@F@GetResult3dP#I#1
+// Source: c:@S@ProjLib_CompProjectedCurve@F@GetSurface#1
 // Source: c:@S@ProjLib_CompProjectedCurve@F@GetType#1
 // Source: c:@S@ProjLib_CompProjectedCurve@F@Init#
 // Source: c:@S@ProjLib_CompProjectedCurve@F@LastParameter#1
@@ -2200,6 +2412,8 @@
 // Source: c:@S@ProjLib_ProjectOnPlane@F@Degree#1
 // Source: c:@S@ProjLib_ProjectOnPlane@F@EvalD0#d#1
 // Source: c:@S@ProjLib_ProjectOnPlane@F@FirstParameter#1
+// Source: c:@S@ProjLib_ProjectOnPlane@F@GetCurve#1
+// Source: c:@S@ProjLib_ProjectOnPlane@F@GetResult#1
 // Source: c:@S@ProjLib_ProjectOnPlane@F@GetType#1
 // Source: c:@S@ProjLib_ProjectOnPlane@F@IsClosed#1
 // Source: c:@S@ProjLib_ProjectOnPlane@F@IsPeriodic#1
@@ -2218,7 +2432,10 @@
 // Source: c:@S@ProjLib_ProjectedCurve@F@Bezier#1
 // Source: c:@S@ProjLib_ProjectedCurve@F@Continuity#1
 // Source: c:@S@ProjLib_ProjectedCurve@F@Degree#1
+// Source: c:@S@ProjLib_ProjectedCurve@F@DynamicType#1
 // Source: c:@S@ProjLib_ProjectedCurve@F@FirstParameter#1
+// Source: c:@S@ProjLib_ProjectedCurve@F@GetCurve#1
+// Source: c:@S@ProjLib_ProjectedCurve@F@GetSurface#1
 // Source: c:@S@ProjLib_ProjectedCurve@F@GetTolerance#1
 // Source: c:@S@ProjLib_ProjectedCurve@F@GetType#1
 // Source: c:@S@ProjLib_ProjectedCurve@F@IsClosed#1
@@ -2629,6 +2846,8 @@ typedef struct OcctSharp_ProjLibProjectOnPlaneHandle OcctSharp_ProjLibProjectOnP
 
 typedef struct OcctSharp_ProjLibProjectedCurveHandle OcctSharp_ProjLibProjectedCurveHandle;
 
+typedef struct OcctSharp_StandardTypeHandle OcctSharp_StandardTypeHandle;
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor2d_curve2d_method_bezier_0(
   const OcctSharp_Adaptor2dCurve2dHandle* handle,
   OcctSharp_Geom2dBezierCurveHandle** out_handle);
@@ -2644,6 +2863,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor2d_curv
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor2d_curve2d_method_degree_0(
   const OcctSharp_Adaptor2dCurve2dHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor2d_curve2d_method_dynamic_type_0(
+  const OcctSharp_Adaptor2dCurve2dHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor2d_curve2d_method_first_parameter_0(
   const OcctSharp_Adaptor2dCurve2dHandle* handle,
@@ -2743,6 +2966,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor2d_line
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor2d_line2d_method_degree_0(
   const OcctSharp_Adaptor2dLine2dHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor2d_line2d_method_dynamic_type_0(
+  const OcctSharp_Adaptor2dLine2dHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor2d_line2d_method_first_parameter_0(
   const OcctSharp_Adaptor2dLine2dHandle* handle,
@@ -2851,9 +3078,17 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor2d_offs
   const OcctSharp_Adaptor2dOffsetCurveHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor2d_offset_curve_method_curve_0(
+  const OcctSharp_Adaptor2dOffsetCurveHandle* handle,
+  OcctSharp_Adaptor2dCurve2dHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor2d_offset_curve_method_degree_0(
   const OcctSharp_Adaptor2dOffsetCurveHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor2d_offset_curve_method_dynamic_type_0(
+  const OcctSharp_Adaptor2dOffsetCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor2d_offset_curve_method_first_parameter_0(
   const OcctSharp_Adaptor2dOffsetCurveHandle* handle,
@@ -2971,6 +3206,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_curv
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_curve_method_degree_0(
   const OcctSharp_Adaptor3dCurveHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_curve_method_dynamic_type_0(
+  const OcctSharp_Adaptor3dCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_curve_method_eval_d0_0(
   const OcctSharp_Adaptor3dCurveHandle* handle,
@@ -3090,6 +3329,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_curv
   const OcctSharp_Adaptor3dCurveOnSurfaceHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_curve_on_surface_method_dynamic_type_0(
+  const OcctSharp_Adaptor3dCurveOnSurfaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_curve_on_surface_method_eval_d0_0(
   const OcctSharp_Adaptor3dCurveOnSurfaceHandle* handle,
   double theU,
@@ -3098,6 +3341,14 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_curv
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_curve_on_surface_method_first_parameter_0(
   const OcctSharp_Adaptor3dCurveOnSurfaceHandle* handle,
   double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_curve_on_surface_method_get_curve_0(
+  const OcctSharp_Adaptor3dCurveOnSurfaceHandle* handle,
+  OcctSharp_Adaptor2dCurve2dHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_curve_on_surface_method_get_surface_0(
+  const OcctSharp_Adaptor3dCurveOnSurfaceHandle* handle,
+  OcctSharp_Adaptor3dSurfaceHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_curve_on_surface_method_get_type_0(
   const OcctSharp_Adaptor3dCurveOnSurfaceHandle* handle,
@@ -3187,6 +3438,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_adaptor3d_curve_on_surface
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_hvertex_create_0(
   OcctSharp_Adaptor3dHVertexHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_hvertex_method_dynamic_type_0(
+  const OcctSharp_Adaptor3dHVertexHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_hvertex_method_is_same_0(
   const OcctSharp_Adaptor3dHVertexHandle* handle,
   const OcctSharp_Adaptor3dHVertexHandle* other,
@@ -3261,6 +3516,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_iso_
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_iso_curve_method_degree_0(
   const OcctSharp_Adaptor3dIsoCurveHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_iso_curve_method_dynamic_type_0(
+  const OcctSharp_Adaptor3dIsoCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_iso_curve_method_eval_d0_0(
   const OcctSharp_Adaptor3dIsoCurveHandle* handle,
@@ -3341,6 +3600,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_iso_
   const OcctSharp_Adaptor3dIsoCurveHandle* handle,
   OcctSharp_Adaptor3dCurveHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_iso_curve_method_surface_0(
+  const OcctSharp_Adaptor3dIsoCurveHandle* handle,
+  OcctSharp_Adaptor3dSurfaceHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_iso_curve_method_trim_0(
   const OcctSharp_Adaptor3dIsoCurveHandle* handle,
   double first,
@@ -3382,6 +3645,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_surf
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_surface_method_bspline_0(
   const OcctSharp_Adaptor3dSurfaceHandle* handle,
   OcctSharp_GeomBSplineSurfaceHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_surface_method_dynamic_type_0(
+  const OcctSharp_Adaptor3dSurfaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_surface_method_eval_d0_0(
   const OcctSharp_Adaptor3dSurfaceHandle* handle,
@@ -3560,6 +3827,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_topo
   const OcctSharp_Adaptor3dTopolToolHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_topol_tool_method_dynamic_type_0(
+  const OcctSharp_Adaptor3dTopolToolHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adaptor3d_topol_tool_method_has3d_0(
   const OcctSharp_Adaptor3dTopolToolHandle* handle,
   int32_t* out_value);
@@ -3712,6 +3983,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adv_app2_var_i
   const OcctSharp_AdvApp2VarIsoHandle* handle,
   double* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adv_app2_var_iso_method_dynamic_type_0(
+  const OcctSharp_AdvApp2VarIsoHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adv_app2_var_iso_method_has_result_0(
   const OcctSharp_AdvApp2VarIsoHandle* handle,
   int32_t* out_value);
@@ -3805,11 +4080,21 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adv_app2_var_n
   int32_t iv,
   OcctSharp_AdvApp2VarNodeHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adv_app2_var_node_method_dynamic_type_0(
+  const OcctSharp_AdvApp2VarNodeHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adv_app2_var_node_method_error_0(
   const OcctSharp_AdvApp2VarNodeHandle* handle,
   int32_t iu,
   int32_t iv,
   double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adv_app2_var_node_method_point_0(
+  const OcctSharp_AdvApp2VarNodeHandle* handle,
+  int32_t iu,
+  int32_t iv,
+  OcctSharp_Point3d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adv_app2_var_node_method_set_coord_0(
   const OcctSharp_AdvApp2VarNodeHandle* handle,
@@ -3887,6 +4172,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adv_app2_var_p
   const OcctSharp_AdvApp2VarPatchHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adv_app2_var_patch_method_dynamic_type_0(
+  const OcctSharp_AdvApp2VarPatchHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adv_app2_var_patch_method_has_result_0(
   const OcctSharp_AdvApp2VarPatchHandle* handle,
   int32_t* out_value);
@@ -3960,6 +4249,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_adv_app2_var_p
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_adv_app2_var_patch_release(OcctSharp_AdvApp2VarPatchHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_app_def_linear_criteria_method_dynamic_type_0(
+  const OcctSharp_AppDefLinearCriteriaHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_app_def_linear_criteria_method_set_curve_0(
   const OcctSharp_AppDefLinearCriteriaHandle* handle,
   const OcctSharp_FEmToolCurveHandle* c);
@@ -4001,6 +4294,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_app_def_smooth
   const OcctSharp_AppDefSmoothCriterionHandle* handle,
   OcctSharp_FEmToolCurveHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_app_def_smooth_criterion_method_dynamic_type_0(
+  const OcctSharp_AppDefSmoothCriterionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_app_def_smooth_criterion_clone(
   const OcctSharp_AppDefSmoothCriterionHandle* source,
   OcctSharp_AppDefSmoothCriterionHandle** out_handle);
@@ -4038,6 +4335,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_approx_curvlin
   const OcctSharp_Adaptor3dCurveHandle* c,
   double tol,
   OcctSharp_ApproxCurvlinFuncHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_approx_curvlin_func_method_dynamic_type_0(
+  const OcctSharp_ApproxCurvlinFuncHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_approx_curvlin_func_method_first_parameter_0(
   const OcctSharp_ApproxCurvlinFuncHandle* handle,
@@ -4097,6 +4398,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_approx_sweep_f
   const OcctSharp_ApproxSweepFunctionHandle* handle,
   OcctSharp_Point3d* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_approx_sweep_function_method_dynamic_type_0(
+  const OcctSharp_ApproxSweepFunctionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_approx_sweep_function_method_maximal_section_0(
   const OcctSharp_ApproxSweepFunctionHandle* handle,
   double* out_value);
@@ -4119,6 +4424,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_approx_sweep_f
   int32_t* out_is_kind);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_approx_sweep_function_release(OcctSharp_ApproxSweepFunctionHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bspl_clib_cache_method_dynamic_type_0(
+  const OcctSharp_BSplCLibCacheHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bspl_clib_cache_method_is_cache_valid_0(
   const OcctSharp_BSplCLibCacheHandle* handle,
@@ -4143,6 +4452,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bspl_clib_cach
   int32_t* out_is_kind);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_bspl_clib_cache_release(OcctSharp_BSplCLibCacheHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bspl_slib_cache_method_dynamic_type_0(
+  const OcctSharp_BSplSLibCacheHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bspl_slib_cache_method_is_cache_valid_0(
   const OcctSharp_BSplSLibCacheHandle* handle,
@@ -4187,6 +4500,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bi_tgte_curve_
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bi_tgte_curve_on_edge_method_degree_0(
   const OcctSharp_BiTgteCurveOnEdgeHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bi_tgte_curve_on_edge_method_dynamic_type_0(
+  const OcctSharp_BiTgteCurveOnEdgeHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bi_tgte_curve_on_edge_method_eval_d0_0(
   const OcctSharp_BiTgteCurveOnEdgeHandle* handle,
@@ -4288,6 +4605,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bi_tgte_curve_
   const OcctSharp_BiTgteCurveOnVertexHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bi_tgte_curve_on_vertex_method_dynamic_type_0(
+  const OcctSharp_BiTgteCurveOnVertexHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bi_tgte_curve_on_vertex_method_eval_d0_0(
   const OcctSharp_BiTgteCurveOnVertexHandle* handle,
   double theU,
@@ -4380,6 +4701,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_bisec
   const OcctSharp_BisectorBisecAnaHandle* handle,
   int32_t deep,
   int32_t offset);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_bisec_ana_method_dynamic_type_0(
+  const OcctSharp_BisectorBisecAnaHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_bisec_ana_method_first_parameter_0(
   const OcctSharp_BisectorBisecAnaHandle* handle,
@@ -4501,6 +4826,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_bisec
   int32_t deep,
   int32_t offset);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_bisec_cc_method_dynamic_type_0(
+  const OcctSharp_BisectorBisecCCHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_bisec_cc_method_first_parameter_0(
   const OcctSharp_BisectorBisecCCHandle* handle,
   double* out_value);
@@ -4610,6 +4939,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_bisec
   int32_t deep,
   int32_t offset);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_bisec_pc_method_dynamic_type_0(
+  const OcctSharp_BisectorBisecPCHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_bisec_pc_method_first_parameter_0(
   const OcctSharp_BisectorBisecPCHandle* handle,
   double* out_value);
@@ -4698,6 +5031,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_bisec
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_bisector_bisec_pc_release(OcctSharp_BisectorBisecPCHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_curve_method_dynamic_type_0(
+  const OcctSharp_BisectorCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_curve_clone(
   const OcctSharp_BisectorCurveHandle* source,
   OcctSharp_BisectorCurveHandle** out_handle);
@@ -4737,6 +5074,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_extrema_ext_pe
   double tolU,
   double tolV,
   OcctSharp_ExtremaExtPExtSHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_extrema_ext_pext_s_method_dynamic_type_0(
+  const OcctSharp_ExtremaExtPExtSHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_extrema_ext_pext_s_method_initialize_0(
   const OcctSharp_ExtremaExtPExtSHandle* handle,
@@ -4805,6 +5146,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_extrema_ext_pr
   double tolV,
   OcctSharp_ExtremaExtPRevSHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_extrema_ext_prev_s_method_dynamic_type_0(
+  const OcctSharp_ExtremaExtPRevSHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_extrema_ext_prev_s_method_initialize_0(
   const OcctSharp_ExtremaExtPRevSHandle* handle,
   const OcctSharp_GeomAdaptorSurfaceOfRevolutionHandle* s,
@@ -4860,6 +5205,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve
   const OcctSharp_FEmToolCurveHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_method_dynamic_type_0(
+  const OcctSharp_FEmToolCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_method_nb_elements_0(
   const OcctSharp_FEmToolCurveHandle* handle,
   int32_t* out_value);
@@ -4887,6 +5236,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve
   int32_t* out_is_kind);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_release(OcctSharp_FEmToolCurveHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_elementary_criterion_method_dynamic_type_0(
+  const OcctSharp_FEmToolElementaryCriterionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_elementary_criterion_method_set_0(
   const OcctSharp_FEmToolElementaryCriterionHandle* handle,
@@ -4917,6 +5270,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linea
   int32_t constraintOrder,
   OcctSharp_FEmToolLinearFlexionHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_flexion_method_dynamic_type_0(
+  const OcctSharp_FEmToolLinearFlexionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_flexion_method_value_0(
   const OcctSharp_FEmToolLinearFlexionHandle* handle,
   double* out_value);
@@ -4945,6 +5302,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linea
   int32_t constraintOrder,
   OcctSharp_FEmToolLinearJerkHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_jerk_method_dynamic_type_0(
+  const OcctSharp_FEmToolLinearJerkHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_jerk_method_value_0(
   const OcctSharp_FEmToolLinearJerkHandle* handle,
   double* out_value);
@@ -4972,6 +5333,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linea
   int32_t workDegree,
   int32_t constraintOrder,
   OcctSharp_FEmToolLinearTensionHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_tension_method_dynamic_type_0(
+  const OcctSharp_FEmToolLinearTensionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_tension_method_value_0(
   const OcctSharp_FEmToolLinearTensionHandle* handle,
@@ -5003,6 +5368,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profi
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_method_decompose_0(
   const OcctSharp_FEmToolProfileMatrixHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_method_dynamic_type_0(
+  const OcctSharp_FEmToolProfileMatrixHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_method_init_0(
   const OcctSharp_FEmToolProfileMatrixHandle* handle,
@@ -5047,6 +5416,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profi
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_release(OcctSharp_FEmToolProfileMatrixHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_sparse_matrix_method_dynamic_type_0(
+  const OcctSharp_FEmToolSparseMatrixHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_sparse_matrix_clone(
   const OcctSharp_FEmToolSparseMatrixHandle* source,
   OcctSharp_FEmToolSparseMatrixHandle** out_handle);
@@ -5069,6 +5442,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_fem_tool_sparse_matrix_rel
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gcc_int_bcirc_method_arc_type_0(
   const OcctSharp_GccIntBCircHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gcc_int_bcirc_method_dynamic_type_0(
+  const OcctSharp_GccIntBCircHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gcc_int_bcirc_clone(
   const OcctSharp_GccIntBCircHandle* source,
@@ -5093,6 +5470,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gcc_int_belips
   const OcctSharp_GccIntBElipsHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gcc_int_belips_method_dynamic_type_0(
+  const OcctSharp_GccIntBElipsHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gcc_int_belips_clone(
   const OcctSharp_GccIntBElipsHandle* source,
   OcctSharp_GccIntBElipsHandle** out_handle);
@@ -5115,6 +5496,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_gcc_int_belips_release(Occ
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gcc_int_bhyper_method_arc_type_0(
   const OcctSharp_GccIntBHyperHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gcc_int_bhyper_method_dynamic_type_0(
+  const OcctSharp_GccIntBHyperHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gcc_int_bhyper_clone(
   const OcctSharp_GccIntBHyperHandle* source,
@@ -5139,6 +5524,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gcc_int_bline_
   const OcctSharp_GccIntBLineHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gcc_int_bline_method_dynamic_type_0(
+  const OcctSharp_GccIntBLineHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gcc_int_bline_clone(
   const OcctSharp_GccIntBLineHandle* source,
   OcctSharp_GccIntBLineHandle** out_handle);
@@ -5161,6 +5550,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_gcc_int_bline_release(Occt
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gcc_int_bparab_method_arc_type_0(
   const OcctSharp_GccIntBParabHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gcc_int_bparab_method_dynamic_type_0(
+  const OcctSharp_GccIntBParabHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gcc_int_bparab_clone(
   const OcctSharp_GccIntBParabHandle* source,
@@ -5185,6 +5578,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gcc_int_bpoint
   const OcctSharp_GccIntBPointHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gcc_int_bpoint_method_dynamic_type_0(
+  const OcctSharp_GccIntBPointHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gcc_int_bpoint_clone(
   const OcctSharp_GccIntBPointHandle* source,
   OcctSharp_GccIntBPointHandle** out_handle);
@@ -5203,6 +5600,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gcc_int_bpoint
   int32_t* out_is_kind);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_gcc_int_bpoint_release(OcctSharp_GccIntBPointHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gcc_int_bisec_method_dynamic_type_0(
+  const OcctSharp_GccIntBisecHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gcc_int_bisec_clone(
   const OcctSharp_GccIntBisecHandle* source,
@@ -5248,9 +5649,17 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_adaptor
   const OcctSharp_Geom2dAdaptorCurveHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_adaptor_curve_method_curve_0(
+  const OcctSharp_Geom2dAdaptorCurveHandle* handle,
+  OcctSharp_Geom2dCurveHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_adaptor_curve_method_degree_0(
   const OcctSharp_Geom2dAdaptorCurveHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_adaptor_curve_method_dynamic_type_0(
+  const OcctSharp_Geom2dAdaptorCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_adaptor_curve_method_first_parameter_0(
   const OcctSharp_Geom2dAdaptorCurveHandle* handle,
@@ -5369,6 +5778,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_ah
   const OcctSharp_Geom2dEvalAHTBezierCurveHandle* handle,
   OcctSharp_Geom2dGeometryHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_ahtbezier_curve_method_dynamic_type_0(
+  const OcctSharp_Geom2dEvalAHTBezierCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_ahtbezier_curve_method_first_parameter_0(
   const OcctSharp_Geom2dEvalAHTBezierCurveHandle* handle,
   double* out_value);
@@ -5432,6 +5845,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_ar
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_archimedean_spiral_curve_method_copy_0(
   const OcctSharp_Geom2dEvalArchimedeanSpiralCurveHandle* handle,
   OcctSharp_Geom2dGeometryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_archimedean_spiral_curve_method_dynamic_type_0(
+  const OcctSharp_Geom2dEvalArchimedeanSpiralCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_archimedean_spiral_curve_method_first_parameter_0(
   const OcctSharp_Geom2dEvalArchimedeanSpiralCurveHandle* handle,
@@ -5497,6 +5914,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_ci
   const OcctSharp_Geom2dEvalCircleInvoluteCurveHandle* handle,
   OcctSharp_Geom2dGeometryHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_circle_involute_curve_method_dynamic_type_0(
+  const OcctSharp_Geom2dEvalCircleInvoluteCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_circle_involute_curve_method_first_parameter_0(
   const OcctSharp_Geom2dEvalCircleInvoluteCurveHandle* handle,
   double* out_value);
@@ -5556,6 +5977,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_lo
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_logarithmic_spiral_curve_method_copy_0(
   const OcctSharp_Geom2dEvalLogarithmicSpiralCurveHandle* handle,
   OcctSharp_Geom2dGeometryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_logarithmic_spiral_curve_method_dynamic_type_0(
+  const OcctSharp_Geom2dEvalLogarithmicSpiralCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_logarithmic_spiral_curve_method_first_parameter_0(
   const OcctSharp_Geom2dEvalLogarithmicSpiralCurveHandle* handle,
@@ -5644,6 +6069,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_si
   const OcctSharp_Geom2dEvalSineWaveCurveHandle* handle,
   OcctSharp_Geom2dGeometryHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_sine_wave_curve_method_dynamic_type_0(
+  const OcctSharp_Geom2dEvalSineWaveCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_sine_wave_curve_method_first_parameter_0(
   const OcctSharp_Geom2dEvalSineWaveCurveHandle* handle,
   double* out_value);
@@ -5711,6 +6140,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_tb
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_tbezier_curve_method_copy_0(
   const OcctSharp_Geom2dEvalTBezierCurveHandle* handle,
   OcctSharp_Geom2dGeometryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_tbezier_curve_method_dynamic_type_0(
+  const OcctSharp_Geom2dEvalTBezierCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_tbezier_curve_method_first_parameter_0(
   const OcctSharp_Geom2dEvalTBezierCurveHandle* handle,
@@ -5781,6 +6214,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_axis_pl
   const OcctSharp_Geom2dAxisPlacementHandle* handle,
   OcctSharp_Geom2dGeometryHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_axis_placement_method_dynamic_type_0(
+  const OcctSharp_Geom2dAxisPlacementHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_axis_placement_method_reverse_0(
   const OcctSharp_Geom2dAxisPlacementHandle* handle);
 
@@ -5821,6 +6258,14 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_bspline
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_bspline_curve_method_degree_0(
   const OcctSharp_Geom2dBSplineCurveHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_bspline_curve_method_dynamic_type_0(
+  const OcctSharp_Geom2dBSplineCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_bspline_curve_method_eval_representation_0(
+  const OcctSharp_Geom2dBSplineCurveHandle* handle,
+  OcctSharp_Geom2dEvalRepCurveDescBaseHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_bspline_curve_method_first_parameter_0(
   const OcctSharp_Geom2dBSplineCurveHandle* handle,
@@ -6009,6 +6454,14 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_bezier_
   const OcctSharp_Geom2dBezierCurveHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_bezier_curve_method_dynamic_type_0(
+  const OcctSharp_Geom2dBezierCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_bezier_curve_method_eval_representation_0(
+  const OcctSharp_Geom2dBezierCurveHandle* handle,
+  OcctSharp_Geom2dEvalRepCurveDescBaseHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_bezier_curve_method_first_parameter_0(
   const OcctSharp_Geom2dBezierCurveHandle* handle,
   double* out_value);
@@ -6096,6 +6549,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_bezier_
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom2d_bezier_curve_release(OcctSharp_Geom2dBezierCurveHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_bounded_curve_method_dynamic_type_0(
+  const OcctSharp_Geom2dBoundedCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_bounded_curve_clone(
   const OcctSharp_Geom2dBoundedCurveHandle* source,
   OcctSharp_Geom2dBoundedCurveHandle** out_handle);
@@ -6123,6 +6580,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_cartesi
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_cartesian_point_method_copy_0(
   const OcctSharp_Geom2dCartesianPointHandle* handle,
   OcctSharp_Geom2dGeometryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_cartesian_point_method_dynamic_type_0(
+  const OcctSharp_Geom2dCartesianPointHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_cartesian_point_method_set_coord_0(
   const OcctSharp_Geom2dCartesianPointHandle* handle,
@@ -6167,6 +6628,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom2d_cartesian_point_rel
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_circle_method_copy_0(
   const OcctSharp_Geom2dCircleHandle* handle,
   OcctSharp_Geom2dGeometryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_circle_method_dynamic_type_0(
+  const OcctSharp_Geom2dCircleHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_circle_method_eccentricity_0(
   const OcctSharp_Geom2dCircleHandle* handle,
@@ -6224,6 +6689,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_conic_m
   const OcctSharp_Geom2dConicHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_conic_method_dynamic_type_0(
+  const OcctSharp_Geom2dConicHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_conic_method_is_cn_0(
   const OcctSharp_Geom2dConicHandle* handle,
   int32_t n,
@@ -6250,6 +6719,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_conic_i
   int32_t* out_is_kind);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom2d_conic_release(OcctSharp_Geom2dConicHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_curve_method_dynamic_type_0(
+  const OcctSharp_Geom2dCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_curve_method_period_0(
   const OcctSharp_Geom2dCurveHandle* handle,
@@ -6291,6 +6764,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_directi
   const OcctSharp_Geom2dDirectionHandle* handle,
   const OcctSharp_Geom2dVectorHandle* other,
   double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_direction_method_dynamic_type_0(
+  const OcctSharp_Geom2dDirectionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_direction_method_magnitude_0(
   const OcctSharp_Geom2dDirectionHandle* handle,
@@ -6335,6 +6812,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom2d_direction_release(O
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_ellipse_method_copy_0(
   const OcctSharp_Geom2dEllipseHandle* handle,
   OcctSharp_Geom2dGeometryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_ellipse_method_dynamic_type_0(
+  const OcctSharp_Geom2dEllipseHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_ellipse_method_eccentricity_0(
   const OcctSharp_Geom2dEllipseHandle* handle,
@@ -6404,6 +6885,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_ellipse
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom2d_ellipse_release(OcctSharp_Geom2dEllipseHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_geometry_method_dynamic_type_0(
+  const OcctSharp_Geom2dGeometryHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_geometry_clone(
   const OcctSharp_Geom2dGeometryHandle* source,
   OcctSharp_Geom2dGeometryHandle** out_handle);
@@ -6426,6 +6911,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom2d_geometry_release(Oc
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_hyperbola_method_copy_0(
   const OcctSharp_Geom2dHyperbolaHandle* handle,
   OcctSharp_Geom2dGeometryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_hyperbola_method_dynamic_type_0(
+  const OcctSharp_Geom2dHyperbolaHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_hyperbola_method_eccentricity_0(
   const OcctSharp_Geom2dHyperbolaHandle* handle,
@@ -6503,6 +6992,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_line_me
   const OcctSharp_Geom2dLineHandle* handle,
   OcctSharp_Geom2dGeometryHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_line_method_dynamic_type_0(
+  const OcctSharp_Geom2dLineHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_line_method_first_parameter_0(
   const OcctSharp_Geom2dLineHandle* handle,
   double* out_value);
@@ -6571,6 +7064,14 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_offset_
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_offset_curve_method_copy_0(
   const OcctSharp_Geom2dOffsetCurveHandle* handle,
   OcctSharp_Geom2dGeometryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_offset_curve_method_dynamic_type_0(
+  const OcctSharp_Geom2dOffsetCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_offset_curve_method_eval_representation_0(
+  const OcctSharp_Geom2dOffsetCurveHandle* handle,
+  OcctSharp_Geom2dEvalRepCurveDescBaseHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_offset_curve_method_first_parameter_0(
   const OcctSharp_Geom2dOffsetCurveHandle* handle,
@@ -6653,6 +7154,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_parabol
   const OcctSharp_Geom2dParabolaHandle* handle,
   OcctSharp_Geom2dGeometryHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_parabola_method_dynamic_type_0(
+  const OcctSharp_Geom2dParabolaHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_parabola_method_eccentricity_0(
   const OcctSharp_Geom2dParabolaHandle* handle,
   double* out_value);
@@ -6714,6 +7219,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_point_m
   const OcctSharp_Geom2dPointHandle* other,
   double* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_point_method_dynamic_type_0(
+  const OcctSharp_Geom2dPointHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_point_method_square_distance_0(
   const OcctSharp_Geom2dPointHandle* handle,
   const OcctSharp_Geom2dPointHandle* other,
@@ -6744,6 +7253,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_transfo
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_transformation_method_copy_0(
   const OcctSharp_Geom2dTransformationHandle* handle,
   OcctSharp_Geom2dTransformationHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_transformation_method_dynamic_type_0(
+  const OcctSharp_Geom2dTransformationHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_transformation_method_form_0(
   const OcctSharp_Geom2dTransformationHandle* handle,
@@ -6831,6 +7344,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_trimmed
   const OcctSharp_Geom2dTrimmedCurveHandle* handle,
   OcctSharp_Geom2dGeometryHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_trimmed_curve_method_dynamic_type_0(
+  const OcctSharp_Geom2dTrimmedCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_trimmed_curve_method_first_parameter_0(
   const OcctSharp_Geom2dTrimmedCurveHandle* handle,
   double* out_value);
@@ -6900,6 +7417,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_vector_
   const OcctSharp_Geom2dVectorHandle* other,
   double* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_vector_method_dynamic_type_0(
+  const OcctSharp_Geom2dVectorHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_vector_method_reverse_0(
   const OcctSharp_Geom2dVectorHandle* handle);
 
@@ -6965,6 +7486,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_vector_
   const OcctSharp_Geom2dVectorWithMagnitudeHandle* handle,
   double scalar,
   OcctSharp_Geom2dVectorWithMagnitudeHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_vector_with_magnitude_method_dynamic_type_0(
+  const OcctSharp_Geom2dVectorWithMagnitudeHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_vector_with_magnitude_method_magnitude_0(
   const OcctSharp_Geom2dVectorWithMagnitudeHandle* handle,
@@ -7056,9 +7581,17 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_c
   const OcctSharp_GeomAdaptorCurveHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_curve_method_curve_0(
+  const OcctSharp_GeomAdaptorCurveHandle* handle,
+  OcctSharp_GeomCurveHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_curve_method_degree_0(
   const OcctSharp_GeomAdaptorCurveHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_curve_method_dynamic_type_0(
+  const OcctSharp_GeomAdaptorCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_curve_method_eval_d0_0(
   const OcctSharp_GeomAdaptorCurveHandle* handle,
@@ -7191,6 +7724,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_s
   const OcctSharp_GeomAdaptorSurfaceHandle* handle,
   OcctSharp_GeomBSplineSurfaceHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_surface_method_dynamic_type_0(
+  const OcctSharp_GeomAdaptorSurfaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_surface_method_eval_d0_0(
   const OcctSharp_GeomAdaptorSurfaceHandle* handle,
   double theU,
@@ -7289,6 +7826,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_s
   const OcctSharp_GeomAdaptorSurfaceHandle* handle,
   OcctSharp_Adaptor3dSurfaceHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_surface_method_surface_0(
+  const OcctSharp_GeomAdaptorSurfaceHandle* handle,
+  OcctSharp_GeomSurfaceHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_surface_method_tolerance_u_0(
   const OcctSharp_GeomAdaptorSurfaceHandle* handle,
   double* out_value);
@@ -7382,6 +7923,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_s
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_surface_of_linear_extrusion_method_bspline_0(
   const OcctSharp_GeomAdaptorSurfaceOfLinearExtrusionHandle* handle,
   OcctSharp_GeomBSplineSurfaceHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_surface_of_linear_extrusion_method_dynamic_type_0(
+  const OcctSharp_GeomAdaptorSurfaceOfLinearExtrusionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_surface_of_linear_extrusion_method_first_uparameter_0(
   const OcctSharp_GeomAdaptorSurfaceOfLinearExtrusionHandle* handle,
@@ -7530,6 +8075,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_s
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_surface_of_revolution_method_bspline_0(
   const OcctSharp_GeomAdaptorSurfaceOfRevolutionHandle* handle,
   OcctSharp_GeomBSplineSurfaceHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_surface_of_revolution_method_dynamic_type_0(
+  const OcctSharp_GeomAdaptorSurfaceOfRevolutionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_surface_of_revolution_method_first_uparameter_0(
   const OcctSharp_GeomAdaptorSurfaceOfRevolutionHandle* handle,
@@ -7683,6 +8232,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_t
   const OcctSharp_GeomAdaptorTransformedCurveHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_curve_method_dynamic_type_0(
+  const OcctSharp_GeomAdaptorTransformedCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_curve_method_eval_d0_0(
   const OcctSharp_GeomAdaptorTransformedCurveHandle* handle,
   double theU,
@@ -7691,6 +8244,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_t
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_curve_method_first_parameter_0(
   const OcctSharp_GeomAdaptorTransformedCurveHandle* handle,
   double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_curve_method_geom_curve_0(
+  const OcctSharp_GeomAdaptorTransformedCurveHandle* handle,
+  OcctSharp_GeomCurveHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_curve_method_get_type_0(
   const OcctSharp_GeomAdaptorTransformedCurveHandle* handle,
@@ -7809,6 +8366,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_t
   const OcctSharp_GeomAdaptorTransformedSurfaceHandle* handle,
   OcctSharp_GeomBSplineSurfaceHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_surface_method_dynamic_type_0(
+  const OcctSharp_GeomAdaptorTransformedSurfaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_surface_method_eval_d0_0(
   const OcctSharp_GeomAdaptorTransformedSurfaceHandle* handle,
   double theU,
@@ -7822,6 +8383,18 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_t
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_surface_method_first_vparameter_0(
   const OcctSharp_GeomAdaptorTransformedSurfaceHandle* handle,
   double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_surface_method_geom_surface_0(
+  const OcctSharp_GeomAdaptorTransformedSurfaceHandle* handle,
+  OcctSharp_GeomSurfaceHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_surface_method_geom_surface_original_0(
+  const OcctSharp_GeomAdaptorTransformedSurfaceHandle* handle,
+  OcctSharp_GeomSurfaceHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_surface_method_geom_surface_transformed_0(
+  const OcctSharp_GeomAdaptorTransformedSurfaceHandle* handle,
+  OcctSharp_GeomSurfaceHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_surface_method_get_type_0(
   const OcctSharp_GeomAdaptorTransformedSurfaceHandle* handle,
@@ -7992,6 +8565,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_ahtb
   const OcctSharp_GeomEvalAHTBezierCurveHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_ahtbezier_curve_method_dynamic_type_0(
+  const OcctSharp_GeomEvalAHTBezierCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_ahtbezier_curve_method_end_point_0(
   const OcctSharp_GeomEvalAHTBezierCurveHandle* handle,
   OcctSharp_Point3d* out_value);
@@ -8093,6 +8670,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_ahtb
   const OcctSharp_GeomEvalAHTBezierSurfaceHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_ahtbezier_surface_method_dynamic_type_0(
+  const OcctSharp_GeomEvalAHTBezierSurfaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_ahtbezier_surface_method_eval_d0_0(
   const OcctSharp_GeomEvalAHTBezierSurfaceHandle* handle,
   double u,
@@ -8190,6 +8771,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_circ
   const OcctSharp_GeomEvalCircularHelicoidSurfaceHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_circular_helicoid_surface_method_dynamic_type_0(
+  const OcctSharp_GeomEvalCircularHelicoidSurfaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_circular_helicoid_surface_method_eval_d0_0(
   const OcctSharp_GeomEvalCircularHelicoidSurfaceHandle* handle,
   double u,
@@ -8273,6 +8858,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_circ
   const OcctSharp_GeomEvalCircularHelixCurveHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_circular_helix_curve_method_dynamic_type_0(
+  const OcctSharp_GeomEvalCircularHelixCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_circular_helix_curve_method_eval_d0_0(
   const OcctSharp_GeomEvalCircularHelixCurveHandle* handle,
   double u,
@@ -8337,6 +8926,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom_eval_circular_helix_c
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_ellipsoid_surface_method_copy_0(
   const OcctSharp_GeomEvalEllipsoidSurfaceHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_ellipsoid_surface_method_dynamic_type_0(
+  const OcctSharp_GeomEvalEllipsoidSurfaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_ellipsoid_surface_method_eval_d0_0(
   const OcctSharp_GeomEvalEllipsoidSurfaceHandle* handle,
@@ -8433,6 +9026,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_hyp_
   const OcctSharp_GeomEvalHypParaboloidSurfaceHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_hyp_paraboloid_surface_method_dynamic_type_0(
+  const OcctSharp_GeomEvalHypParaboloidSurfaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_hyp_paraboloid_surface_method_eval_d0_0(
   const OcctSharp_GeomEvalHypParaboloidSurfaceHandle* handle,
   double u,
@@ -8519,6 +9116,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom_eval_hyp_paraboloid_s
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_hyperboloid_surface_method_copy_0(
   const OcctSharp_GeomEvalHyperboloidSurfaceHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_hyperboloid_surface_method_dynamic_type_0(
+  const OcctSharp_GeomEvalHyperboloidSurfaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_hyperboloid_surface_method_eval_d0_0(
   const OcctSharp_GeomEvalHyperboloidSurfaceHandle* handle,
@@ -8615,6 +9216,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_para
   const OcctSharp_GeomEvalParaboloidSurfaceHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_paraboloid_surface_method_dynamic_type_0(
+  const OcctSharp_GeomEvalParaboloidSurfaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_paraboloid_surface_method_eval_d0_0(
   const OcctSharp_GeomEvalParaboloidSurfaceHandle* handle,
   double u,
@@ -8702,6 +9307,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_sine
   const OcctSharp_GeomEvalSineWaveCurveHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_sine_wave_curve_method_dynamic_type_0(
+  const OcctSharp_GeomEvalSineWaveCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_sine_wave_curve_method_eval_d0_0(
   const OcctSharp_GeomEvalSineWaveCurveHandle* handle,
   double u,
@@ -8774,6 +9383,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_tbez
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_tbezier_curve_method_copy_0(
   const OcctSharp_GeomEvalTBezierCurveHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_tbezier_curve_method_dynamic_type_0(
+  const OcctSharp_GeomEvalTBezierCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_tbezier_curve_method_end_point_0(
   const OcctSharp_GeomEvalTBezierCurveHandle* handle,
@@ -8863,6 +9476,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_tbez
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_tbezier_surface_method_copy_0(
   const OcctSharp_GeomEvalTBezierSurfaceHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_tbezier_surface_method_dynamic_type_0(
+  const OcctSharp_GeomEvalTBezierSurfaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_tbezier_surface_method_eval_d0_0(
   const OcctSharp_GeomEvalTBezierSurfaceHandle* handle,
@@ -8961,6 +9578,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_tbez
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom_eval_tbezier_surface_release(OcctSharp_GeomEvalTBezierSurfaceHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_bound_with_surf_method_dynamic_type_0(
+  const OcctSharp_GeomFillBoundWithSurfHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_bound_with_surf_method_has_normals_0(
   const OcctSharp_GeomFillBoundWithSurfHandle* handle,
   int32_t* out_value);
@@ -9002,6 +9623,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_boun
   int32_t* out_is_kind);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom_fill_bound_with_surf_release(OcctSharp_GeomFillBoundWithSurfHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_boundary_method_dynamic_type_0(
+  const OcctSharp_GeomFillBoundaryHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_boundary_method_has_normals_0(
   const OcctSharp_GeomFillBoundaryHandle* handle,
@@ -9054,6 +9679,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_circ
   const OcctSharp_GeomFillCircularBlendFuncHandle* handle,
   OcctSharp_Point3d* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_circular_blend_func_method_dynamic_type_0(
+  const OcctSharp_GeomFillCircularBlendFuncHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_circular_blend_func_method_is_rational_0(
   const OcctSharp_GeomFillCircularBlendFuncHandle* handle,
   int32_t* out_value);
@@ -9104,6 +9733,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_cons
   const OcctSharp_GeomFillConstantBiNormalHandle* handle,
   OcctSharp_GeomFillTrihedronLawHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_constant_bi_normal_method_dynamic_type_0(
+  const OcctSharp_GeomFillConstantBiNormalHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_constant_bi_normal_method_is_constant_0(
   const OcctSharp_GeomFillConstantBiNormalHandle* handle,
   int32_t* out_value);
@@ -9148,6 +9781,25 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_coon
   const OcctSharp_GeomFillBoundaryHandle* b4,
   OcctSharp_GeomFillCoonsAlgPatchHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_coons_alg_patch_method_bound_0(
+  const OcctSharp_GeomFillCoonsAlgPatchHandle* handle,
+  int32_t i,
+  OcctSharp_GeomFillBoundaryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_coons_alg_patch_method_corner_0(
+  const OcctSharp_GeomFillCoonsAlgPatchHandle* handle,
+  int32_t i,
+  OcctSharp_Point3d* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_coons_alg_patch_method_dynamic_type_0(
+  const OcctSharp_GeomFillCoonsAlgPatchHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_coons_alg_patch_method_func_0(
+  const OcctSharp_GeomFillCoonsAlgPatchHandle* handle,
+  int32_t i,
+  OcctSharp_LawFunctionHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_coons_alg_patch_method_set_func_0(
   const OcctSharp_GeomFillCoonsAlgPatchHandle* handle,
   const OcctSharp_LawFunctionHandle* f1,
@@ -9188,6 +9840,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_corr
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_corrected_frenet_method_copy_0(
   const OcctSharp_GeomFillCorrectedFrenetHandle* handle,
   OcctSharp_GeomFillTrihedronLawHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_corrected_frenet_method_dynamic_type_0(
+  const OcctSharp_GeomFillCorrectedFrenetHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_corrected_frenet_method_evaluate_best_mode_0(
   const OcctSharp_GeomFillCorrectedFrenetHandle* handle,
@@ -9243,6 +9899,14 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_curv
   const OcctSharp_GeomFillCurveAndTrihedronHandle* handle,
   OcctSharp_GeomFillLocationLawHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_curve_and_trihedron_method_dynamic_type_0(
+  const OcctSharp_GeomFillCurveAndTrihedronHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_curve_and_trihedron_method_get_curve_0(
+  const OcctSharp_GeomFillCurveAndTrihedronHandle* handle,
+  OcctSharp_Adaptor3dCurveHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_curve_and_trihedron_method_get_maximal_norm_0(
   const OcctSharp_GeomFillCurveAndTrihedronHandle* handle,
   double* out_value);
@@ -9288,6 +9952,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_darb
   const OcctSharp_GeomFillDarbouxHandle* handle,
   OcctSharp_GeomFillTrihedronLawHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_darboux_method_dynamic_type_0(
+  const OcctSharp_GeomFillDarbouxHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_darboux_method_is_constant_0(
   const OcctSharp_GeomFillDarbouxHandle* handle,
   int32_t* out_value);
@@ -9327,6 +9995,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_dege
   double tol3d,
   double tolang,
   OcctSharp_GeomFillDegeneratedBoundHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_degenerated_bound_method_dynamic_type_0(
+  const OcctSharp_GeomFillDegeneratedBoundHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_degenerated_bound_method_is_degenerated_0(
   const OcctSharp_GeomFillDegeneratedBoundHandle* handle,
@@ -9373,6 +10045,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_disc
   const OcctSharp_GeomFillDiscreteTrihedronHandle* handle,
   OcctSharp_GeomFillTrihedronLawHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_discrete_trihedron_method_dynamic_type_0(
+  const OcctSharp_GeomFillDiscreteTrihedronHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_discrete_trihedron_method_init_0(
   const OcctSharp_GeomFillDiscreteTrihedronHandle* handle);
 
@@ -9416,6 +10092,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom_fill_discrete_trihedr
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_draft_trihedron_method_copy_0(
   const OcctSharp_GeomFillDraftTrihedronHandle* handle,
   OcctSharp_GeomFillTrihedronLawHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_draft_trihedron_method_dynamic_type_0(
+  const OcctSharp_GeomFillDraftTrihedronHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_draft_trihedron_method_is_constant_0(
   const OcctSharp_GeomFillDraftTrihedronHandle* handle,
@@ -9470,6 +10150,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_evol
   const OcctSharp_GeomFillEvolvedSectionHandle* handle,
   OcctSharp_GeomCurveHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_evolved_section_method_dynamic_type_0(
+  const OcctSharp_GeomFillEvolvedSectionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_evolved_section_method_is_rational_0(
   const OcctSharp_GeomFillEvolvedSectionHandle* handle,
   int32_t* out_value);
@@ -9519,6 +10203,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_fixe
   const OcctSharp_GeomFillFixedHandle* handle,
   OcctSharp_GeomFillTrihedronLawHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_fixed_method_dynamic_type_0(
+  const OcctSharp_GeomFillFixedHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_fixed_method_is_constant_0(
   const OcctSharp_GeomFillFixedHandle* handle,
   int32_t* out_value);
@@ -9553,6 +10241,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_fren
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_frenet_method_copy_0(
   const OcctSharp_GeomFillFrenetHandle* handle,
   OcctSharp_GeomFillTrihedronLawHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_frenet_method_dynamic_type_0(
+  const OcctSharp_GeomFillFrenetHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_frenet_method_init_0(
   const OcctSharp_GeomFillFrenetHandle* handle);
@@ -9601,6 +10293,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_guid
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_guide_trihedron_ac_method_copy_0(
   const OcctSharp_GeomFillGuideTrihedronACHandle* handle,
   OcctSharp_GeomFillTrihedronLawHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_guide_trihedron_ac_method_dynamic_type_0(
+  const OcctSharp_GeomFillGuideTrihedronACHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_guide_trihedron_ac_method_guide_0(
   const OcctSharp_GeomFillGuideTrihedronACHandle* handle,
@@ -9660,6 +10356,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_guid
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_guide_trihedron_plan_method_copy_0(
   const OcctSharp_GeomFillGuideTrihedronPlanHandle* handle,
   OcctSharp_GeomFillTrihedronLawHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_guide_trihedron_plan_method_dynamic_type_0(
+  const OcctSharp_GeomFillGuideTrihedronPlanHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_guide_trihedron_plan_method_error_status_0(
   const OcctSharp_GeomFillGuideTrihedronPlanHandle* handle,
@@ -9723,6 +10423,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_line
   int32_t nbPoints,
   OcctSharp_GeomFillLineHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_line_method_dynamic_type_0(
+  const OcctSharp_GeomFillLineHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_line_method_nb_points_0(
   const OcctSharp_GeomFillLineHandle* handle,
   int32_t* out_value);
@@ -9754,6 +10458,14 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom_fill_line_release(Occ
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_location_draft_method_copy_0(
   const OcctSharp_GeomFillLocationDraftHandle* handle,
   OcctSharp_GeomFillLocationLawHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_location_draft_method_dynamic_type_0(
+  const OcctSharp_GeomFillLocationDraftHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_location_draft_method_get_curve_0(
+  const OcctSharp_GeomFillLocationDraftHandle* handle,
+  OcctSharp_Adaptor3dCurveHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_location_draft_method_get_maximal_norm_0(
   const OcctSharp_GeomFillLocationDraftHandle* handle,
@@ -9825,12 +10537,20 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_loca
   const OcctSharp_GeomFillLocationGuideHandle* handle,
   OcctSharp_GeomFillLocationLawHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_location_guide_method_dynamic_type_0(
+  const OcctSharp_GeomFillLocationGuideHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_location_guide_method_erase_rotation_0(
   const OcctSharp_GeomFillLocationGuideHandle* handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_location_guide_method_error_status_0(
   const OcctSharp_GeomFillLocationGuideHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_location_guide_method_get_curve_0(
+  const OcctSharp_GeomFillLocationGuideHandle* handle,
+  OcctSharp_Adaptor3dCurveHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_location_guide_method_get_maximal_norm_0(
   const OcctSharp_GeomFillLocationGuideHandle* handle,
@@ -9900,6 +10620,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_loca
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom_fill_location_guide_release(OcctSharp_GeomFillLocationGuideHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_location_law_method_dynamic_type_0(
+  const OcctSharp_GeomFillLocationLawHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_location_law_method_error_status_0(
   const OcctSharp_GeomFillLocationLawHandle* handle,
   int32_t* out_value);
@@ -9963,6 +10687,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_nsec
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_nsections_method_constant_section_0(
   const OcctSharp_GeomFillNSectionsHandle* handle,
   OcctSharp_GeomCurveHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_nsections_method_dynamic_type_0(
+  const OcctSharp_GeomFillNSectionsHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_nsections_method_is_rational_0(
   const OcctSharp_GeomFillNSectionsHandle* handle,
@@ -10030,6 +10758,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_sect
   const OcctSharp_GeomFillSectionLawHandle* handle,
   OcctSharp_GeomCurveHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_section_law_method_dynamic_type_0(
+  const OcctSharp_GeomFillSectionLawHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_section_law_method_set_tolerance_0(
   const OcctSharp_GeomFillSectionLawHandle* handle,
   double tol3d,
@@ -10059,6 +10791,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_simp
   double tol3d,
   double tolang,
   OcctSharp_GeomFillSimpleBoundHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_simple_bound_method_dynamic_type_0(
+  const OcctSharp_GeomFillSimpleBoundHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_simple_bound_method_is_degenerated_0(
   const OcctSharp_GeomFillSimpleBoundHandle* handle,
@@ -10176,6 +10912,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_swee
   const OcctSharp_GeomFillSweepFunctionHandle* handle,
   OcctSharp_Point3d* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_sweep_function_method_dynamic_type_0(
+  const OcctSharp_GeomFillSweepFunctionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_sweep_function_method_is_rational_0(
   const OcctSharp_GeomFillSweepFunctionHandle* handle,
   int32_t* out_value);
@@ -10222,6 +10962,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_swee
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom_fill_sweep_function_release(OcctSharp_GeomFillSweepFunctionHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_tgt_field_method_dynamic_type_0(
+  const OcctSharp_GeomFillTgtFieldHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_tgt_field_method_is_scalable_0(
   const OcctSharp_GeomFillTgtFieldHandle* handle,
   int32_t* out_value);
@@ -10254,6 +10998,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_tgt_
   int32_t i,
   OcctSharp_GeomFillTgtOnCoonsHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_tgt_on_coons_method_dynamic_type_0(
+  const OcctSharp_GeomFillTgtOnCoonsHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_tgt_on_coons_clone(
   const OcctSharp_GeomFillTgtOnCoonsHandle* source,
   OcctSharp_GeomFillTgtOnCoonsHandle** out_handle);
@@ -10272,6 +11020,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_tgt_
   int32_t* out_is_kind);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom_fill_tgt_on_coons_release(OcctSharp_GeomFillTgtOnCoonsHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_trihedron_law_method_dynamic_type_0(
+  const OcctSharp_GeomFillTrihedronLawHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_trihedron_law_method_error_status_0(
   const OcctSharp_GeomFillTrihedronLawHandle* handle,
@@ -10318,6 +11070,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_trih
   const OcctSharp_GeomFillTrihedronWithGuideHandle* handle,
   OcctSharp_Point3d* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_trihedron_with_guide_method_dynamic_type_0(
+  const OcctSharp_GeomFillTrihedronWithGuideHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_trihedron_with_guide_clone(
   const OcctSharp_GeomFillTrihedronWithGuideHandle* source,
   OcctSharp_GeomFillTrihedronWithGuideHandle** out_handle);
@@ -10354,6 +11110,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_unif
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_uniform_section_method_constant_section_0(
   const OcctSharp_GeomFillUniformSectionHandle* handle,
   OcctSharp_GeomCurveHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_uniform_section_method_dynamic_type_0(
+  const OcctSharp_GeomFillUniformSectionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_fill_uniform_section_method_is_rational_0(
   const OcctSharp_GeomFillUniformSectionHandle* handle,
@@ -10419,6 +11179,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plate_cur
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plate_curve_constraint_method_curve3d_0(
   const OcctSharp_GeomPlateCurveConstraintHandle* handle,
   OcctSharp_Adaptor3dCurveHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plate_curve_constraint_method_dynamic_type_0(
+  const OcctSharp_GeomPlateCurveConstraintHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plate_curve_constraint_method_first_parameter_0(
   const OcctSharp_GeomPlateCurveConstraintHandle* handle,
@@ -10524,6 +11288,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plate_poi
   double tolDist,
   OcctSharp_GeomPlatePointConstraintHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plate_point_constraint_method_dynamic_type_0(
+  const OcctSharp_GeomPlatePointConstraintHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plate_point_constraint_method_g0_criterion_0(
   const OcctSharp_GeomPlatePointConstraintHandle* handle,
   double* out_value);
@@ -10590,6 +11358,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plate_sur
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plate_surface_method_copy_0(
   const OcctSharp_GeomPlateSurfaceHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plate_surface_method_dynamic_type_0(
+  const OcctSharp_GeomPlateSurfaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plate_surface_method_eval_d0_0(
   const OcctSharp_GeomPlateSurfaceHandle* handle,
@@ -10686,6 +11458,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom_plate_surface_release
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_tools_undefined_type_handler_create_0(
   OcctSharp_GeomToolsUndefinedTypeHandlerHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_tools_undefined_type_handler_method_dynamic_type_0(
+  const OcctSharp_GeomToolsUndefinedTypeHandlerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_tools_undefined_type_handler_clone(
   const OcctSharp_GeomToolsUndefinedTypeHandlerHandle* source,
   OcctSharp_GeomToolsUndefinedTypeHandlerHandle** out_handle);
@@ -10708,6 +11484,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom_tools_undefined_type_
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_axis1_placement_method_copy_0(
   const OcctSharp_GeomAxis1PlacementHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_axis1_placement_method_dynamic_type_0(
+  const OcctSharp_GeomAxis1PlacementHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_axis1_placement_method_reverse_0(
   const OcctSharp_GeomAxis1PlacementHandle* handle);
@@ -10739,6 +11519,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_axis2_pla
   const OcctSharp_GeomAxis2PlacementHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_axis2_placement_method_dynamic_type_0(
+  const OcctSharp_GeomAxis2PlacementHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_axis2_placement_clone(
   const OcctSharp_GeomAxis2PlacementHandle* source,
   OcctSharp_GeomAxis2PlacementHandle** out_handle);
@@ -10762,6 +11546,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_axis_plac
   const OcctSharp_GeomAxisPlacementHandle* handle,
   const OcctSharp_GeomAxisPlacementHandle* other,
   double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_axis_placement_method_dynamic_type_0(
+  const OcctSharp_GeomAxisPlacementHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_axis_placement_method_location_0(
   const OcctSharp_GeomAxisPlacementHandle* handle,
@@ -10804,6 +11592,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bspline_c
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bspline_curve_method_degree_0(
   const OcctSharp_GeomBSplineCurveHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bspline_curve_method_dynamic_type_0(
+  const OcctSharp_GeomBSplineCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bspline_curve_method_end_point_0(
   const OcctSharp_GeomBSplineCurveHandle* handle,
@@ -11031,6 +11823,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bspline_s
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bspline_surface_method_copy_0(
   const OcctSharp_GeomBSplineSurfaceHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bspline_surface_method_dynamic_type_0(
+  const OcctSharp_GeomBSplineSurfaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bspline_surface_method_eval_d0_0(
   const OcctSharp_GeomBSplineSurfaceHandle* handle,
@@ -11372,6 +12168,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bezier_cu
   const OcctSharp_GeomBezierCurveHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bezier_curve_method_dynamic_type_0(
+  const OcctSharp_GeomBezierCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bezier_curve_method_end_point_0(
   const OcctSharp_GeomBezierCurveHandle* handle,
   OcctSharp_Point3d* out_value);
@@ -11511,6 +12311,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bezier_su
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bezier_surface_method_copy_0(
   const OcctSharp_GeomBezierSurfaceHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bezier_surface_method_dynamic_type_0(
+  const OcctSharp_GeomBezierSurfaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bezier_surface_method_eval_d0_0(
   const OcctSharp_GeomBezierSurfaceHandle* handle,
@@ -11665,6 +12469,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bezier_su
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom_bezier_surface_release(OcctSharp_GeomBezierSurfaceHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bounded_curve_method_dynamic_type_0(
+  const OcctSharp_GeomBoundedCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bounded_curve_clone(
   const OcctSharp_GeomBoundedCurveHandle* source,
   OcctSharp_GeomBoundedCurveHandle** out_handle);
@@ -11683,6 +12491,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bounded_c
   int32_t* out_is_kind);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom_bounded_curve_release(OcctSharp_GeomBoundedCurveHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bounded_surface_method_dynamic_type_0(
+  const OcctSharp_GeomBoundedSurfaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bounded_surface_clone(
   const OcctSharp_GeomBoundedSurfaceHandle* source,
@@ -11716,6 +12528,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_cartesian
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_cartesian_point_method_copy_0(
   const OcctSharp_GeomCartesianPointHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_cartesian_point_method_dynamic_type_0(
+  const OcctSharp_GeomCartesianPointHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_cartesian_point_method_pnt_0(
   const OcctSharp_GeomCartesianPointHandle* handle,
@@ -11778,6 +12594,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_circle_me
   const OcctSharp_GeomCircleHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_circle_method_dynamic_type_0(
+  const OcctSharp_GeomCircleHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_circle_method_eccentricity_0(
   const OcctSharp_GeomCircleHandle* handle,
   double* out_value);
@@ -11839,10 +12659,18 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_conic_met
   const OcctSharp_GeomConicHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_conic_method_dynamic_type_0(
+  const OcctSharp_GeomConicHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_conic_method_is_cn_0(
   const OcctSharp_GeomConicHandle* handle,
   int32_t n,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_conic_method_location_0(
+  const OcctSharp_GeomConicHandle* handle,
+  OcctSharp_Point3d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_conic_method_reverse_0(
   const OcctSharp_GeomConicHandle* handle);
@@ -11877,6 +12705,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_conical_s
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_conical_surface_method_copy_0(
   const OcctSharp_GeomConicalSurfaceHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_conical_surface_method_dynamic_type_0(
+  const OcctSharp_GeomConicalSurfaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_conical_surface_method_eval_d0_0(
   const OcctSharp_GeomConicalSurfaceHandle* handle,
@@ -11958,6 +12790,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_conical_s
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom_conical_surface_release(OcctSharp_GeomConicalSurfaceHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_curve_method_dynamic_type_0(
+  const OcctSharp_GeomCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_curve_method_period_0(
   const OcctSharp_GeomCurveHandle* handle,
   double* out_value);
@@ -11993,6 +12829,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom_curve_release(OcctSha
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_cylindrical_surface_method_copy_0(
   const OcctSharp_GeomCylindricalSurfaceHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_cylindrical_surface_method_dynamic_type_0(
+  const OcctSharp_GeomCylindricalSurfaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_cylindrical_surface_method_eval_d0_0(
   const OcctSharp_GeomCylindricalSurfaceHandle* handle,
@@ -12093,6 +12933,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_direction
   const OcctSharp_GeomVectorHandle* other,
   OcctSharp_GeomVectorHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_direction_method_dynamic_type_0(
+  const OcctSharp_GeomDirectionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_direction_method_magnitude_0(
   const OcctSharp_GeomDirectionHandle* handle,
   double* out_value);
@@ -12142,6 +12986,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_elementar
   const OcctSharp_GeomElementarySurfaceHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_elementary_surface_method_dynamic_type_0(
+  const OcctSharp_GeomElementarySurfaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_elementary_surface_method_is_cnu_0(
   const OcctSharp_GeomElementarySurfaceHandle* handle,
   int32_t n,
@@ -12151,6 +12999,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_elementar
   const OcctSharp_GeomElementarySurfaceHandle* handle,
   int32_t n,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_elementary_surface_method_location_0(
+  const OcctSharp_GeomElementarySurfaceHandle* handle,
+  OcctSharp_Point3d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_elementary_surface_method_set_location_0(
   const OcctSharp_GeomElementarySurfaceHandle* handle,
@@ -12184,6 +13036,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom_elementary_surface_re
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_ellipse_method_copy_0(
   const OcctSharp_GeomEllipseHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_ellipse_method_dynamic_type_0(
+  const OcctSharp_GeomEllipseHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_ellipse_method_eccentricity_0(
   const OcctSharp_GeomEllipseHandle* handle,
@@ -12266,6 +13122,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_ellipse_i
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom_ellipse_release(OcctSharp_GeomEllipseHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_geometry_method_dynamic_type_0(
+  const OcctSharp_GeomGeometryHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_geometry_method_mirror_0(
   const OcctSharp_GeomGeometryHandle* handle,
   OcctSharp_Point3d p);
@@ -12319,6 +13179,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom_geometry_release(Occt
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_hyperbola_method_copy_0(
   const OcctSharp_GeomHyperbolaHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_hyperbola_method_dynamic_type_0(
+  const OcctSharp_GeomHyperbolaHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_hyperbola_method_eccentricity_0(
   const OcctSharp_GeomHyperbolaHandle* handle,
@@ -12409,6 +13273,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_line_meth
   const OcctSharp_GeomLineHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_line_method_dynamic_type_0(
+  const OcctSharp_GeomLineHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_line_method_eval_d0_0(
   const OcctSharp_GeomLineHandle* handle,
   double u,
@@ -12480,6 +13348,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_cu
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_curve_method_copy_0(
   const OcctSharp_GeomOffsetCurveHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_curve_method_dynamic_type_0(
+  const OcctSharp_GeomOffsetCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_curve_method_eval_d0_0(
   const OcctSharp_GeomOffsetCurveHandle* handle,
@@ -12565,6 +13437,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_su
   int32_t isNotCheckC0,
   OcctSharp_GeomOffsetSurfaceHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_surface_method_basis_surface_0(
+  const OcctSharp_GeomOffsetSurfaceHandle* handle,
+  OcctSharp_GeomSurfaceHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_surface_method_clear_eval_representation_0(
   const OcctSharp_GeomOffsetSurfaceHandle* handle);
 
@@ -12575,6 +13451,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_su
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_surface_method_copy_0(
   const OcctSharp_GeomOffsetSurfaceHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_surface_method_dynamic_type_0(
+  const OcctSharp_GeomOffsetSurfaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_surface_method_eval_d0_0(
   const OcctSharp_GeomOffsetSurfaceHandle* handle,
@@ -12690,6 +13570,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_parabola_
   const OcctSharp_GeomParabolaHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_parabola_method_dynamic_type_0(
+  const OcctSharp_GeomParabolaHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_parabola_method_eccentricity_0(
   const OcctSharp_GeomParabolaHandle* handle,
   double* out_value);
@@ -12766,6 +13650,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plane_met
   const OcctSharp_GeomPlaneHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plane_method_dynamic_type_0(
+  const OcctSharp_GeomPlaneHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plane_method_eval_d0_0(
   const OcctSharp_GeomPlaneHandle* handle,
   double u,
@@ -12838,6 +13726,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_point_met
   const OcctSharp_GeomPointHandle* other,
   double* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_point_method_dynamic_type_0(
+  const OcctSharp_GeomPointHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_point_method_square_distance_0(
   const OcctSharp_GeomPointHandle* handle,
   const OcctSharp_GeomPointHandle* other,
@@ -12891,6 +13783,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_rectangul
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_rectangular_trimmed_surface_method_copy_0(
   const OcctSharp_GeomRectangularTrimmedSurfaceHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_rectangular_trimmed_surface_method_dynamic_type_0(
+  const OcctSharp_GeomRectangularTrimmedSurfaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_rectangular_trimmed_surface_method_eval_d0_0(
   const OcctSharp_GeomRectangularTrimmedSurfaceHandle* handle,
@@ -13001,6 +13897,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_spherical
   const OcctSharp_GeomSphericalSurfaceHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_spherical_surface_method_dynamic_type_0(
+  const OcctSharp_GeomSphericalSurfaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_spherical_surface_method_eval_d0_0(
   const OcctSharp_GeomSphericalSurfaceHandle* handle,
   double u,
@@ -13074,6 +13974,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_spherical
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom_spherical_surface_release(OcctSharp_GeomSphericalSurfaceHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_method_dynamic_type_0(
+  const OcctSharp_GeomSurfaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_method_uperiod_0(
   const OcctSharp_GeomSurfaceHandle* handle,
   double* out_value);
@@ -13121,6 +14025,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_o
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_linear_extrusion_method_copy_0(
   const OcctSharp_GeomSurfaceOfLinearExtrusionHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_linear_extrusion_method_dynamic_type_0(
+  const OcctSharp_GeomSurfaceOfLinearExtrusionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_linear_extrusion_method_eval_d0_0(
   const OcctSharp_GeomSurfaceOfLinearExtrusionHandle* handle,
@@ -13214,6 +14122,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_o
   const OcctSharp_GeomSurfaceOfRevolutionHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_revolution_method_dynamic_type_0(
+  const OcctSharp_GeomSurfaceOfRevolutionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_revolution_method_eval_d0_0(
   const OcctSharp_GeomSurfaceOfRevolutionHandle* handle,
   double u,
@@ -13249,6 +14161,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_o
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_revolution_method_is_vperiodic_0(
   const OcctSharp_GeomSurfaceOfRevolutionHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_revolution_method_location_0(
+  const OcctSharp_GeomSurfaceOfRevolutionHandle* handle,
+  OcctSharp_Point3d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_revolution_method_set_basis_curve_0(
   const OcctSharp_GeomSurfaceOfRevolutionHandle* handle,
@@ -13311,6 +14227,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_swept_sur
   const OcctSharp_GeomSweptSurfaceHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_swept_surface_method_dynamic_type_0(
+  const OcctSharp_GeomSweptSurfaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_swept_surface_clone(
   const OcctSharp_GeomSweptSurfaceHandle* source,
   OcctSharp_GeomSweptSurfaceHandle** out_handle);
@@ -13337,6 +14257,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_toroidal_
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_toroidal_surface_method_copy_0(
   const OcctSharp_GeomToroidalSurfaceHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_toroidal_surface_method_dynamic_type_0(
+  const OcctSharp_GeomToroidalSurfaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_toroidal_surface_method_eval_d0_0(
   const OcctSharp_GeomToroidalSurfaceHandle* handle,
@@ -13425,6 +14349,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_transform
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_transformation_method_copy_0(
   const OcctSharp_GeomTransformationHandle* handle,
   OcctSharp_GeomTransformationHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_transformation_method_dynamic_type_0(
+  const OcctSharp_GeomTransformationHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_transformation_method_form_0(
   const OcctSharp_GeomTransformationHandle* handle,
@@ -13526,6 +14454,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_trimmed_c
   const OcctSharp_GeomTrimmedCurveHandle* handle,
   OcctSharp_GeomGeometryHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_trimmed_curve_method_dynamic_type_0(
+  const OcctSharp_GeomTrimmedCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_trimmed_curve_method_end_point_0(
   const OcctSharp_GeomTrimmedCurveHandle* handle,
   OcctSharp_Point3d* out_value);
@@ -13620,6 +14552,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_vector_me
   const OcctSharp_GeomVectorHandle* v2,
   double* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_vector_method_dynamic_type_0(
+  const OcctSharp_GeomVectorHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_vector_method_reverse_0(
   const OcctSharp_GeomVectorHandle* handle);
 
@@ -13711,6 +14647,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_vector_wi
   double scalar,
   OcctSharp_GeomVectorWithMagnitudeHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_vector_with_magnitude_method_dynamic_type_0(
+  const OcctSharp_GeomVectorWithMagnitudeHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_vector_with_magnitude_method_magnitude_0(
   const OcctSharp_GeomVectorWithMagnitudeHandle* handle,
   double* out_value);
@@ -13781,6 +14721,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_vector_wi
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom_vector_with_magnitude_release(OcctSharp_GeomVectorWithMagnitudeHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geometry_test_drawable_qualified_curve2d_method_dynamic_type_0(
+  const OcctSharp_GeometryTestDrawableQualifiedCurve2dHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geometry_test_drawable_qualified_curve2d_clone(
   const OcctSharp_GeometryTestDrawableQualifiedCurve2dHandle* source,
   OcctSharp_GeometryTestDrawableQualifiedCurve2dHandle** out_handle);
@@ -13816,6 +14760,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_m
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_method_curve_0(
   const OcctSharp_LawBSpFuncHandle* handle,
   OcctSharp_LawBSplineHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_method_dynamic_type_0(
+  const OcctSharp_LawBSpFuncHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_method_nb_intervals_0(
   const OcctSharp_LawBSpFuncHandle* handle,
@@ -13874,6 +14822,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_me
   double u,
   int32_t n,
   double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_dynamic_type_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_end_point_0(
   const OcctSharp_LawBSplineHandle* handle,
@@ -14085,6 +15037,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_composite_
   const OcctSharp_LawCompositeHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_composite_method_dynamic_type_0(
+  const OcctSharp_LawCompositeHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_composite_method_is_periodic_0(
   const OcctSharp_LawCompositeHandle* handle,
   int32_t* out_value);
@@ -14135,6 +15091,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_constant_m
   const OcctSharp_LawConstantHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_constant_method_dynamic_type_0(
+  const OcctSharp_LawConstantHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_constant_method_nb_intervals_0(
   const OcctSharp_LawConstantHandle* handle,
   int32_t s,
@@ -14177,6 +15137,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_constant_i
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_law_constant_release(OcctSharp_LawConstantHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_function_method_dynamic_type_0(
+  const OcctSharp_LawFunctionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_function_clone(
   const OcctSharp_LawFunctionHandle* source,
   OcctSharp_LawFunctionHandle** out_handle);
@@ -14198,6 +15162,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_law_function_release(OcctS
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_interpol_create_0(
   OcctSharp_LawInterpolHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_interpol_method_dynamic_type_0(
+  const OcctSharp_LawInterpolHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_interpol_clone(
   const OcctSharp_LawInterpolHandle* source,
@@ -14224,6 +15192,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_linear_cre
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_linear_method_continuity_0(
   const OcctSharp_LawLinearHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_linear_method_dynamic_type_0(
+  const OcctSharp_LawLinearHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_linear_method_nb_intervals_0(
   const OcctSharp_LawLinearHandle* handle,
@@ -14270,6 +15242,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_law_linear_release(OcctSha
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_s_create_0(
   OcctSharp_LawSHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_s_method_dynamic_type_0(
+  const OcctSharp_LawSHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_s_method_set_0(
   const OcctSharp_LawSHandle* handle,
@@ -14321,6 +15297,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat2d_circuit_
   int32_t index,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat2d_circuit_method_dynamic_type_0(
+  const OcctSharp_MAT2dCircuitHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat2d_circuit_method_line_length_0(
   const OcctSharp_MAT2dCircuitHandle* handle,
   int32_t indexLine,
@@ -14369,6 +15349,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat2d_connexio
   const OcctSharp_MAT2dConnexionHandle* handle,
   int32_t deep,
   int32_t offset);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat2d_connexion_method_dynamic_type_0(
+  const OcctSharp_MAT2dConnexionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat2d_connexion_method_index_first_line_0(
   const OcctSharp_MAT2dConnexionHandle* handle,
@@ -14453,6 +15437,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_arc_create
   const OcctSharp_MATBasicEltHandle* firstElement,
   const OcctSharp_MATBasicEltHandle* secondElement,
   OcctSharp_MATArcHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_arc_method_dynamic_type_0(
+  const OcctSharp_MATArcHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_arc_method_first_element_0(
   const OcctSharp_MATArcHandle* handle,
@@ -14558,6 +15546,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_basic_elt_
   int32_t anInteger,
   OcctSharp_MATBasicEltHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_basic_elt_method_dynamic_type_0(
+  const OcctSharp_MATBasicEltHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_basic_elt_method_end_arc_0(
   const OcctSharp_MATBasicEltHandle* handle,
   OcctSharp_MATArcHandle** out_handle);
@@ -14636,6 +15628,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_bisector_m
   const OcctSharp_MATBisectorHandle* handle,
   int32_t ashift,
   int32_t alevel);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_bisector_method_dynamic_type_0(
+  const OcctSharp_MATBisectorHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_bisector_method_end_point_0(
   const OcctSharp_MATBisectorHandle* handle,
@@ -14764,6 +15760,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_edge_metho
   int32_t ashift,
   int32_t alevel);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_edge_method_dynamic_type_0(
+  const OcctSharp_MATEdgeHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_edge_method_edge_number_0(
   const OcctSharp_MATEdgeHandle* handle,
   int32_t* out_value);
@@ -14839,6 +15839,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_graph_meth
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_graph_method_compact_nodes_0(
   const OcctSharp_MATGraphHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_graph_method_dynamic_type_0(
+  const OcctSharp_MATGraphHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_graph_method_node_0(
   const OcctSharp_MATGraphHandle* handle,
   int32_t index,
@@ -14910,6 +15914,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_list_of_bi
   const OcctSharp_MATListOfBisectorHandle* handle,
   int32_t ashift,
   int32_t alevel);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_list_of_bisector_method_dynamic_type_0(
+  const OcctSharp_MATListOfBisectorHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_list_of_bisector_method_first_0(
   const OcctSharp_MATListOfBisectorHandle* handle);
@@ -15024,6 +16032,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_list_of_ed
   int32_t ashift,
   int32_t alevel);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_list_of_edge_method_dynamic_type_0(
+  const OcctSharp_MATListOfEdgeHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_list_of_edge_method_first_0(
   const OcctSharp_MATListOfEdgeHandle* handle);
 
@@ -15122,6 +16134,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_node_metho
   const OcctSharp_MATNodeHandle* handle,
   double* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_node_method_dynamic_type_0(
+  const OcctSharp_MATNodeHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_node_method_geom_index_0(
   const OcctSharp_MATNodeHandle* handle,
   int32_t* out_value);
@@ -15179,6 +16195,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_tlist_node
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_tlist_node_of_list_of_bisector_method_dummy_0(
   const OcctSharp_MATTListNodeOfListOfBisectorHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_tlist_node_of_list_of_bisector_method_dynamic_type_0(
+  const OcctSharp_MATTListNodeOfListOfBisectorHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_tlist_node_of_list_of_bisector_method_get_item_0(
   const OcctSharp_MATTListNodeOfListOfBisectorHandle* handle,
   OcctSharp_MATBisectorHandle** out_handle);
@@ -15231,6 +16251,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_tlist_node
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_tlist_node_of_list_of_edge_method_dummy_0(
   const OcctSharp_MATTListNodeOfListOfEdgeHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_tlist_node_of_list_of_edge_method_dynamic_type_0(
+  const OcctSharp_MATTListNodeOfListOfEdgeHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_tlist_node_of_list_of_edge_method_get_item_0(
   const OcctSharp_MATTListNodeOfListOfEdgeHandle* handle,
@@ -15287,6 +16311,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_zone_metho
   int32_t index,
   OcctSharp_MATArcHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_zone_method_dynamic_type_0(
+  const OcctSharp_MATZoneHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_zone_method_limited_0(
   const OcctSharp_MATZoneHandle* handle,
   int32_t* out_value);
@@ -15321,6 +16349,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat_zone_is_ki
   int32_t* out_is_kind);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_mat_zone_release(OcctSharp_MATZoneHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_nlplate_hgppconstraint_method_dynamic_type_0(
+  const OcctSharp_NLPlateHGPPConstraintHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_nlplate_hgppconstraint_method_g0_criterion_0(
   const OcctSharp_NLPlateHGPPConstraintHandle* handle,
@@ -15405,6 +16437,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_nlplate_hpg0_c
   const OcctSharp_NLPlateHPG0ConstraintHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_nlplate_hpg0_constraint_method_dynamic_type_0(
+  const OcctSharp_NLPlateHPG0ConstraintHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_nlplate_hpg0_constraint_method_incremental_load_allowed_0(
   const OcctSharp_NLPlateHPG0ConstraintHandle* handle,
   int32_t* out_value);
@@ -15448,6 +16484,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_nlplate_hpg0_g
   const OcctSharp_NLPlateHPG0G1ConstraintHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_nlplate_hpg0_g1_constraint_method_dynamic_type_0(
+  const OcctSharp_NLPlateHPG0G1ConstraintHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_nlplate_hpg0_g1_constraint_method_orientation_0(
   const OcctSharp_NLPlateHPG0G1ConstraintHandle* handle,
   int32_t* out_value);
@@ -15479,6 +16519,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_nlplate_hpg0_g
   const OcctSharp_NLPlateHPG0G2ConstraintHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_nlplate_hpg0_g2_constraint_method_dynamic_type_0(
+  const OcctSharp_NLPlateHPG0G2ConstraintHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_nlplate_hpg0_g2_constraint_clone(
   const OcctSharp_NLPlateHPG0G2ConstraintHandle* source,
   OcctSharp_NLPlateHPG0G2ConstraintHandle** out_handle);
@@ -15502,6 +16546,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_nlplate_hpg0_g
   const OcctSharp_NLPlateHPG0G3ConstraintHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_nlplate_hpg0_g3_constraint_method_dynamic_type_0(
+  const OcctSharp_NLPlateHPG0G3ConstraintHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_nlplate_hpg0_g3_constraint_clone(
   const OcctSharp_NLPlateHPG0G3ConstraintHandle* source,
   OcctSharp_NLPlateHPG0G3ConstraintHandle** out_handle);
@@ -15524,6 +16572,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_nlplate_hpg0_g3_constraint
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_nlplate_hpg1_constraint_method_active_order_0(
   const OcctSharp_NLPlateHPG1ConstraintHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_nlplate_hpg1_constraint_method_dynamic_type_0(
+  const OcctSharp_NLPlateHPG1ConstraintHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_nlplate_hpg1_constraint_method_incremental_load_allowed_0(
   const OcctSharp_NLPlateHPG1ConstraintHandle* handle,
@@ -15568,6 +16620,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_nlplate_hpg2_c
   const OcctSharp_NLPlateHPG2ConstraintHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_nlplate_hpg2_constraint_method_dynamic_type_0(
+  const OcctSharp_NLPlateHPG2ConstraintHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_nlplate_hpg2_constraint_clone(
   const OcctSharp_NLPlateHPG2ConstraintHandle* source,
   OcctSharp_NLPlateHPG2ConstraintHandle** out_handle);
@@ -15590,6 +16646,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_nlplate_hpg2_constraint_re
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_nlplate_hpg3_constraint_method_active_order_0(
   const OcctSharp_NLPlateHPG3ConstraintHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_nlplate_hpg3_constraint_method_dynamic_type_0(
+  const OcctSharp_NLPlateHPG3ConstraintHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_nlplate_hpg3_constraint_clone(
   const OcctSharp_NLPlateHPG3ConstraintHandle* source,
@@ -15639,9 +16699,17 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_comp_
   const OcctSharp_ProjLibCompProjectedCurveHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_comp_projected_curve_method_dynamic_type_0(
+  const OcctSharp_ProjLibCompProjectedCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_comp_projected_curve_method_first_parameter_0(
   const OcctSharp_ProjLibCompProjectedCurveHandle* handle,
   double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_comp_projected_curve_method_get_curve_0(
+  const OcctSharp_ProjLibCompProjectedCurveHandle* handle,
+  OcctSharp_Adaptor3dCurveHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_comp_projected_curve_method_get_proj2d_0(
   const OcctSharp_ProjLibCompProjectedCurveHandle* handle,
@@ -15680,6 +16748,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_comp_
   const OcctSharp_ProjLibCompProjectedCurveHandle* handle,
   int32_t theIndex,
   OcctSharp_Point3d* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_comp_projected_curve_method_get_surface_0(
+  const OcctSharp_ProjLibCompProjectedCurveHandle* handle,
+  OcctSharp_Adaptor3dSurfaceHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_comp_projected_curve_method_get_type_0(
   const OcctSharp_ProjLibCompProjectedCurveHandle* handle,
@@ -15804,6 +16876,14 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_proje
   const OcctSharp_ProjLibProjectOnPlaneHandle* handle,
   double* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_project_on_plane_method_get_curve_0(
+  const OcctSharp_ProjLibProjectOnPlaneHandle* handle,
+  OcctSharp_Adaptor3dCurveHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_project_on_plane_method_get_result_0(
+  const OcctSharp_ProjLibProjectOnPlaneHandle* handle,
+  OcctSharp_GeomAdaptorCurveHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_project_on_plane_method_get_type_0(
   const OcctSharp_ProjLibProjectOnPlaneHandle* handle,
   int32_t* out_value);
@@ -15916,9 +16996,21 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_proje
   const OcctSharp_ProjLibProjectedCurveHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_projected_curve_method_dynamic_type_0(
+  const OcctSharp_ProjLibProjectedCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_projected_curve_method_first_parameter_0(
   const OcctSharp_ProjLibProjectedCurveHandle* handle,
   double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_projected_curve_method_get_curve_0(
+  const OcctSharp_ProjLibProjectedCurveHandle* handle,
+  OcctSharp_Adaptor3dCurveHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_projected_curve_method_get_surface_0(
+  const OcctSharp_ProjLibProjectedCurveHandle* handle,
+  OcctSharp_Adaptor3dSurfaceHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_projected_curve_method_get_tolerance_0(
   const OcctSharp_ProjLibProjectedCurveHandle* handle,
@@ -16220,6 +17312,13 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_proj_lib_projected_curve_r
 #include <ProjLib_ProjectOnPlane.hxx>
 #include <ProjLib_ProjectedCurve.hxx>
 #include <utility>
+#include <climits>
+#include <cstdint>
+#include <limits>
+static_assert(CHAR_BIT == 8 && sizeof(short) == 2 && sizeof(int) == 4);
+static_assert(sizeof(long) == 4 && sizeof(long long) == 8 && sizeof(size_t) == 8);
+static_assert(sizeof(float) == 4 && std::numeric_limits<float>::is_iec559);
+static_assert(sizeof(double) == 8 && std::numeric_limits<double>::is_iec559);
 
 struct OcctSharp_Adaptor2dCurve2dHandle
 {

@@ -3,6 +3,7 @@
 // Source: c:@S@AIS_Animation@F@Clear#
 // Source: c:@S@AIS_Animation@F@CopyFrom#&1$@N@opencascade@S@handle>#$@S@AIS_Animation#
 // Source: c:@S@AIS_Animation@F@Duration#1
+// Source: c:@S@AIS_Animation@F@DynamicType#1
 // Source: c:@S@AIS_Animation@F@ElapsedTime#1
 // Source: c:@S@AIS_Animation@F@HasOwnDuration#1
 // Source: c:@S@AIS_Animation@F@IsStopped#
@@ -17,15 +18,23 @@
 // Source: c:@S@AIS_Animation@F@StartPts#1
 // Source: c:@S@AIS_Animation@F@StartTimer#d#d#b#b#
 // Source: c:@S@AIS_Animation@F@Stop#
+// Source: c:@S@AIS_Animation@F@Timer#1
 // Source: c:@S@AIS_Animation@F@Update#d#
 // Source: c:@S@AIS_Animation@F@UpdateTimer#
 // Source: c:@S@AIS_Animation@F@UpdateTotalDuration#
+// Source: c:@S@AIS_AnimationAxisRotation@F@DynamicType#1
+// Source: c:@S@AIS_AnimationCamera@F@CameraEnd#1
+// Source: c:@S@AIS_AnimationCamera@F@CameraStart#1
+// Source: c:@S@AIS_AnimationCamera@F@DynamicType#1
 // Source: c:@S@AIS_AnimationCamera@F@SetCameraEnd#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@AIS_AnimationCamera@F@SetCameraStart#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@AIS_AnimationCamera@F@SetView#&1$@N@opencascade@S@handle>#$@S@V3d_View#
+// Source: c:@S@AIS_AnimationCamera@F@View#1
+// Source: c:@S@AIS_AnimationObject@F@DynamicType#1
 // Source: c:@S@AIS_AttributeFilter@F@AIS_AttributeFilter#
 // Source: c:@S@AIS_AttributeFilter@F@AIS_AttributeFilter#$@E@Quantity_NameOfColor#
 // Source: c:@S@AIS_AttributeFilter@F@AIS_AttributeFilter#d#
+// Source: c:@S@AIS_AttributeFilter@F@DynamicType#1
 // Source: c:@S@AIS_AttributeFilter@F@HasColor#1
 // Source: c:@S@AIS_AttributeFilter@F@HasWidth#1
 // Source: c:@S@AIS_AttributeFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
@@ -37,6 +46,9 @@
 // Source: c:@S@AIS_Axis@F@AIS_Axis#&1$@N@opencascade@S@handle>#$@S@Geom_Axis2Placement#$@E@AIS_TypeOfAxis#
 // Source: c:@S@AIS_Axis@F@AIS_Axis#&1$@N@opencascade@S@handle>#$@S@Geom_Line#
 // Source: c:@S@AIS_Axis@F@AcceptDisplayMode#I#1
+// Source: c:@S@AIS_Axis@F@Axis2Placement#1
+// Source: c:@S@AIS_Axis@F@Component#1
+// Source: c:@S@AIS_Axis@F@DynamicType#1
 // Source: c:@S@AIS_Axis@F@IsXYZAxis#1
 // Source: c:@S@AIS_Axis@F@SetAxis1Placement#&1$@N@opencascade@S@handle>#$@S@Geom_Axis1Placement#
 // Source: c:@S@AIS_Axis@F@SetAxis2Placement#&1$@N@opencascade@S@handle>#$@S@Geom_Axis2Placement#$@E@AIS_TypeOfAxis#
@@ -51,18 +63,24 @@
 // Source: c:@S@AIS_Axis@F@UnsetWidth#
 // Source: c:@S@AIS_BadEdgeFilter@F@AIS_BadEdgeFilter#
 // Source: c:@S@AIS_BadEdgeFilter@F@ActsOn#$@E@TopAbs_ShapeEnum#1
+// Source: c:@S@AIS_BadEdgeFilter@F@DynamicType#1
 // Source: c:@S@AIS_BadEdgeFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@AIS_BadEdgeFilter@F@RemoveEdges#I#
 // Source: c:@S@AIS_BadEdgeFilter@F@SetContour#I#
+// Source: c:@S@AIS_BaseAnimationObject@F@DynamicType#1
 // Source: c:@S@AIS_C0RegularityFilter@F@ActsOn#$@E@TopAbs_ShapeEnum#1
+// Source: c:@S@AIS_C0RegularityFilter@F@DynamicType#1
 // Source: c:@S@AIS_C0RegularityFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@AIS_CameraFrustum@F@AIS_CameraFrustum#
 // Source: c:@S@AIS_CameraFrustum@F@AcceptDisplayMode#I#1
+// Source: c:@S@AIS_CameraFrustum@F@DynamicType#1
 // Source: c:@S@AIS_CameraFrustum@F@SetCameraFrustum#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@AIS_CameraFrustum@F@UnsetColor#
 // Source: c:@S@AIS_CameraFrustum@F@UnsetTransparency#
 // Source: c:@S@AIS_Circle@F@AIS_Circle#&1$@N@opencascade@S@handle>#$@S@Geom_Circle#
 // Source: c:@S@AIS_Circle@F@AIS_Circle#&1$@N@opencascade@S@handle>#$@S@Geom_Circle#d#d#b#
+// Source: c:@S@AIS_Circle@F@Circle#1
+// Source: c:@S@AIS_Circle@F@DynamicType#1
 // Source: c:@S@AIS_Circle@F@IsFilledCircleSens#1
 // Source: c:@S@AIS_Circle@F@SetCircle#&1$@N@opencascade@S@handle>#$@S@Geom_Circle#
 // Source: c:@S@AIS_Circle@F@SetFilledCircleSens#b#
@@ -76,6 +94,7 @@
 // Source: c:@S@AIS_ColorScale@F@AIS_ColorScale#
 // Source: c:@S@AIS_ColorScale@F@AcceptDisplayMode#I#1
 // Source: c:@S@AIS_ColorScale@F@ComputeSelection#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Selection#I#
+// Source: c:@S@AIS_ColorScale@F@DynamicType#1
 // Source: c:@S@AIS_ColorScale@F@GetBreadth#1
 // Source: c:@S@AIS_ColorScale@F@GetColorType#1
 // Source: c:@S@AIS_ColorScale@F@GetHeight#1
@@ -116,6 +135,7 @@
 // Source: c:@S@AIS_ColorScale@F@SetXPosition#I#
 // Source: c:@S@AIS_ColorScale@F@SetYPosition#I#
 // Source: c:@S@AIS_ColoredDrawer@F@AIS_ColoredDrawer#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#
+// Source: c:@S@AIS_ColoredDrawer@F@DynamicType#1
 // Source: c:@S@AIS_ColoredDrawer@F@HasOwnColor#1
 // Source: c:@S@AIS_ColoredDrawer@F@HasOwnMaterial#1
 // Source: c:@S@AIS_ColoredDrawer@F@HasOwnTransparency#1
@@ -131,6 +151,7 @@
 // Source: c:@S@AIS_ColoredDrawer@F@UnsetOwnWidth#
 // Source: c:@S@AIS_ColoredShape@F@AIS_ColoredShape#&1$@N@opencascade@S@handle>#$@S@AIS_Shape#
 // Source: c:@S@AIS_ColoredShape@F@ClearCustomAspects#
+// Source: c:@S@AIS_ColoredShape@F@DynamicType#1
 // Source: c:@S@AIS_ColoredShape@F@SetTransparency#d#
 // Source: c:@S@AIS_ColoredShape@F@SetWidth#d#
 // Source: c:@S@AIS_ColoredShape@F@UnsetTransparency#
@@ -140,7 +161,9 @@
 // Source: c:@S@AIS_ConnectedInteractive@F@AcceptShapeDecomposition#1
 // Source: c:@S@AIS_ConnectedInteractive@F@Connect#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#
 // Source: c:@S@AIS_ConnectedInteractive@F@Connect#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#&1$@N@opencascade@S@handle>#$@S@TopLoc_Datum3D#
+// Source: c:@S@AIS_ConnectedInteractive@F@ConnectedTo#1
 // Source: c:@S@AIS_ConnectedInteractive@F@Disconnect#
+// Source: c:@S@AIS_ConnectedInteractive@F@DynamicType#1
 // Source: c:@S@AIS_ConnectedInteractive@F@HasConnection#1
 // Source: c:@S@AIS_ConnectedInteractive@F@Signature#1
 // Source: c:@S@AIS_ConnectedInteractive@F@Type#1
@@ -150,6 +173,7 @@
 // Source: c:@S@AIS_ExclusionFilter@F@Add#$@E@AIS_KindOfInteractive#
 // Source: c:@S@AIS_ExclusionFilter@F@Add#$@E@AIS_KindOfInteractive#I#
 // Source: c:@S@AIS_ExclusionFilter@F@Clear#
+// Source: c:@S@AIS_ExclusionFilter@F@DynamicType#1
 // Source: c:@S@AIS_ExclusionFilter@F@IsExclusionFlagOn#1
 // Source: c:@S@AIS_ExclusionFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@AIS_ExclusionFilter@F@IsStored#$@E@AIS_KindOfInteractive#1
@@ -160,6 +184,8 @@
 // Source: c:@S@AIS_GlobalStatus@F@AddSelectionMode#I#
 // Source: c:@S@AIS_GlobalStatus@F@ClearSelectionModes#
 // Source: c:@S@AIS_GlobalStatus@F@DisplayMode#1
+// Source: c:@S@AIS_GlobalStatus@F@DynamicType#1
+// Source: c:@S@AIS_GlobalStatus@F@HilightStyle#1
 // Source: c:@S@AIS_GlobalStatus@F@IsHilighted#1
 // Source: c:@S@AIS_GlobalStatus@F@IsSModeIn#I#1
 // Source: c:@S@AIS_GlobalStatus@F@IsSubIntensityOn#1
@@ -186,13 +212,16 @@
 // Source: c:@S@AIS_InteractiveContext@F@ClearPrs#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#I#b#
 // Source: c:@S@AIS_InteractiveContext@F@ClearSelected#b#
 // Source: c:@S@AIS_InteractiveContext@F@Current#1
+// Source: c:@S@AIS_InteractiveContext@F@CurrentViewer#1
 // Source: c:@S@AIS_InteractiveContext@F@Deactivate#
 // Source: c:@S@AIS_InteractiveContext@F@Deactivate#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#
 // Source: c:@S@AIS_InteractiveContext@F@Deactivate#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#I#
 // Source: c:@S@AIS_InteractiveContext@F@Deactivate#I#
+// Source: c:@S@AIS_InteractiveContext@F@DefaultDrawer#1
 // Source: c:@S@AIS_InteractiveContext@F@DetectedCurrentObject#1
 // Source: c:@S@AIS_InteractiveContext@F@DetectedCurrentOwner#1
 // Source: c:@S@AIS_InteractiveContext@F@DetectedInteractive#1
+// Source: c:@S@AIS_InteractiveContext@F@DetectedOwner#1
 // Source: c:@S@AIS_InteractiveContext@F@DeviationAngle#1
 // Source: c:@S@AIS_InteractiveContext@F@DeviationCoefficient#1
 // Source: c:@S@AIS_InteractiveContext@F@DisableDrawHiddenLine#1
@@ -208,6 +237,7 @@
 // Source: c:@S@AIS_InteractiveContext@F@DisplaySelected#b#
 // Source: c:@S@AIS_InteractiveContext@F@DisplayStatus#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#1
 // Source: c:@S@AIS_InteractiveContext@F@DrawHiddenLine#1
+// Source: c:@S@AIS_InteractiveContext@F@DynamicType#1
 // Source: c:@S@AIS_InteractiveContext@F@EnableDrawHiddenLine#1
 // Source: c:@S@AIS_InteractiveContext@F@EndImmediateDraw#
 // Source: c:@S@AIS_InteractiveContext@F@EndImmediateDraw#&1$@N@opencascade@S@handle>#$@S@V3d_View#
@@ -220,6 +250,7 @@
 // Source: c:@S@AIS_InteractiveContext@F@FitSelected#&1$@N@opencascade@S@handle>#$@S@V3d_View#d#b#
 // Source: c:@S@AIS_InteractiveContext@F@GetAutoActivateSelection#1
 // Source: c:@S@AIS_InteractiveContext@F@GetZLayer#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#1
+// Source: c:@S@AIS_InteractiveContext@F@GlobalFilter#1
 // Source: c:@S@AIS_InteractiveContext@F@GravityPoint#&1$@N@opencascade@S@handle>#$@S@V3d_View#1
 // Source: c:@S@AIS_InteractiveContext@F@HasApplicative#1
 // Source: c:@S@AIS_InteractiveContext@F@HasColor#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#1
@@ -229,6 +260,9 @@
 // Source: c:@S@AIS_InteractiveContext@F@HasNextDetected#1
 // Source: c:@S@AIS_InteractiveContext@F@HasPolygonOffsets#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#1
 // Source: c:@S@AIS_InteractiveContext@F@HasSelectedShape#1
+// Source: c:@S@AIS_InteractiveContext@F@HiddenLineAspect#1
+// Source: c:@S@AIS_InteractiveContext@F@HighlightStyle#$@E@Prs3d_TypeOfHighlight#1
+// Source: c:@S@AIS_InteractiveContext@F@HighlightStyle#1
 // Source: c:@S@AIS_InteractiveContext@F@Hilight#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#b#
 // Source: c:@S@AIS_InteractiveContext@F@HilightCurrents#b#
 // Source: c:@S@AIS_InteractiveContext@F@HilightNextDetected#&1$@N@opencascade@S@handle>#$@S@V3d_View#b#
@@ -256,6 +290,7 @@
 // Source: c:@S@AIS_InteractiveContext@F@LastActiveView#1
 // Source: c:@S@AIS_InteractiveContext@F@Load#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#I#
 // Source: c:@S@AIS_InteractiveContext@F@Load#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#I#b#
+// Source: c:@S@AIS_InteractiveContext@F@MainPrsMgr#1
 // Source: c:@S@AIS_InteractiveContext@F@MoreCurrent#1
 // Source: c:@S@AIS_InteractiveContext@F@MoreDetected#1
 // Source: c:@S@AIS_InteractiveContext@F@MoreSelected#1
@@ -283,6 +318,9 @@
 // Source: c:@S@AIS_InteractiveContext@F@SelectDetected#$@E@AIS_SelectionScheme#
 // Source: c:@S@AIS_InteractiveContext@F@SelectedInteractive#1
 // Source: c:@S@AIS_InteractiveContext@F@SelectedOwner#1
+// Source: c:@S@AIS_InteractiveContext@F@Selection#1
+// Source: c:@S@AIS_InteractiveContext@F@SelectionManager#1
+// Source: c:@S@AIS_InteractiveContext@F@SelectionStyle#1
 // Source: c:@S@AIS_InteractiveContext@F@SetAngleAndDeviation#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#d#b#
 // Source: c:@S@AIS_InteractiveContext@F@SetAutoActivateSelection#b#
 // Source: c:@S@AIS_InteractiveContext@F@SetAutomaticHilight#b#
@@ -307,6 +345,7 @@
 // Source: c:@S@AIS_InteractiveContext@F@SetPixelTolerance#I#
 // Source: c:@S@AIS_InteractiveContext@F@SetPlaneSize#d#b#
 // Source: c:@S@AIS_InteractiveContext@F@SetPlaneSize#d#d#b#
+// Source: c:@S@AIS_InteractiveContext@F@SetPolygonOffsets#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#I#f#f#b#
 // Source: c:@S@AIS_InteractiveContext@F@SetSelected#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#b#
 // Source: c:@S@AIS_InteractiveContext@F@SetSelected#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#b#
 // Source: c:@S@AIS_InteractiveContext@F@SetSelectedAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_BasicAspect#b#
@@ -343,7 +382,9 @@
 // Source: c:@S@AIS_InteractiveContext@F@UpdateSelected#b#
 // Source: c:@S@AIS_InteractiveContext@F@Width#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#1
 // Source: c:@S@AIS_InteractiveObject@F@ClearOwner#
+// Source: c:@S@AIS_InteractiveObject@F@DynamicType#1
 // Source: c:@S@AIS_InteractiveObject@F@GetContext#1
+// Source: c:@S@AIS_InteractiveObject@F@GetOwner#1
 // Source: c:@S@AIS_InteractiveObject@F@HasInteractiveContext#1
 // Source: c:@S@AIS_InteractiveObject@F@HasOwner#1
 // Source: c:@S@AIS_InteractiveObject@F@HasPresentation#1
@@ -355,7 +396,10 @@
 // Source: c:@S@AIS_InteractiveObject@F@Type#1
 // Source: c:@S@AIS_LightSource@F@AIS_LightSource#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#
 // Source: c:@S@AIS_LightSource@F@ArcSize#1
+// Source: c:@S@AIS_LightSource@F@DynamicType#1
 // Source: c:@S@AIS_LightSource@F@IsZoomable#1
+// Source: c:@S@AIS_LightSource@F@Light#1
+// Source: c:@S@AIS_LightSource@F@MarkerImage#b#1
 // Source: c:@S@AIS_LightSource@F@MarkerType#b#1
 // Source: c:@S@AIS_LightSource@F@NbArrows#1
 // Source: c:@S@AIS_LightSource@F@NbSplitsArrow#1
@@ -379,14 +423,19 @@
 // Source: c:@S@AIS_LightSource@F@ToSwitchOnClick#1
 // Source: c:@S@AIS_LightSource@F@Type#1
 // Source: c:@S@AIS_LightSourceOwner@F@AIS_LightSourceOwner#&1$@N@opencascade@S@handle>#$@S@AIS_LightSource#I#
+// Source: c:@S@AIS_LightSourceOwner@F@DynamicType#1
 // Source: c:@S@AIS_LightSourceOwner@F@HilightWithColor#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#I#
 // Source: c:@S@AIS_LightSourceOwner@F@IsForcedHilight#1
 // Source: c:@S@AIS_Line@F@AIS_Line#&1$@N@opencascade@S@handle>#$@S@Geom_Line#
 // Source: c:@S@AIS_Line@F@AIS_Line#&1$@N@opencascade@S@handle>#$@S@Geom_Point#S0_#
+// Source: c:@S@AIS_Line@F@DynamicType#1
+// Source: c:@S@AIS_Line@F@EndPoint#1
+// Source: c:@S@AIS_Line@F@Line#1
 // Source: c:@S@AIS_Line@F@SetLine#&1$@N@opencascade@S@handle>#$@S@Geom_Line#
 // Source: c:@S@AIS_Line@F@SetPoints#&1$@N@opencascade@S@handle>#$@S@Geom_Point#S0_#
 // Source: c:@S@AIS_Line@F@SetWidth#d#
 // Source: c:@S@AIS_Line@F@Signature#1
+// Source: c:@S@AIS_Line@F@StartPoint#1
 // Source: c:@S@AIS_Line@F@Type#1
 // Source: c:@S@AIS_Line@F@UnsetColor#
 // Source: c:@S@AIS_Line@F@UnsetWidth#
@@ -397,6 +446,7 @@
 // Source: c:@S@AIS_Manipulator@F@ComputeSelection#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Selection#I#
 // Source: c:@S@AIS_Manipulator@F@DeactivateCurrentMode#
 // Source: c:@S@AIS_Manipulator@F@Detach#
+// Source: c:@S@AIS_Manipulator@F@DynamicType#1
 // Source: c:@S@AIS_Manipulator@F@EnableMode#$@E@AIS_ManipulatorMode#
 // Source: c:@S@AIS_Manipulator@F@HasActiveMode#1
 // Source: c:@S@AIS_Manipulator@F@HasActiveTransformation#
@@ -414,11 +464,13 @@
 // Source: c:@S@AIS_Manipulator@F@SetSkinMode#$@S@AIS_Manipulator@E@ManipulatorSkin#
 // Source: c:@S@AIS_Manipulator@F@SetTransformPersistence#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TransformPers#
 // Source: c:@S@AIS_Manipulator@F@SetZoomPersistence#b#
+// Source: c:@S@AIS_Manipulator@F@Size#1
 // Source: c:@S@AIS_Manipulator@F@SkinMode#1
 // Source: c:@S@AIS_Manipulator@F@StartTransform#I#I#&1$@N@opencascade@S@handle>#$@S@V3d_View#
 // Source: c:@S@AIS_Manipulator@F@StopTransform#b#
 // Source: c:@S@AIS_Manipulator@F@ZoomPersistence#1
 // Source: c:@S@AIS_ManipulatorOwner@F@AIS_ManipulatorOwner#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#$@E@AIS_ManipulatorMode#I#
+// Source: c:@S@AIS_ManipulatorOwner@F@DynamicType#1
 // Source: c:@S@AIS_ManipulatorOwner@F@HilightWithColor#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#I#
 // Source: c:@S@AIS_ManipulatorOwner@F@Index#1
 // Source: c:@S@AIS_ManipulatorOwner@F@IsHilighted#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#1
@@ -426,7 +478,9 @@
 // Source: c:@S@AIS_ManipulatorOwner@F@Unhilight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@AIS_MediaPlayer@F@AIS_MediaPlayer#
 // Source: c:@S@AIS_MediaPlayer@F@Duration#1
+// Source: c:@S@AIS_MediaPlayer@F@DynamicType#1
 // Source: c:@S@AIS_MediaPlayer@F@PlayPause#
+// Source: c:@S@AIS_MediaPlayer@F@PlayerContext#1
 // Source: c:@S@AIS_MediaPlayer@F@SetClosePlayer#
 // Source: c:@S@AIS_MultipleConnectedInteractive@F@AIS_MultipleConnectedInteractive#
 // Source: c:@S@AIS_MultipleConnectedInteractive@F@AcceptShapeDecomposition#1
@@ -434,6 +488,8 @@
 // Source: c:@S@AIS_MultipleConnectedInteractive@F@Connect#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#&1$@N@opencascade@S@handle>#$@S@TopLoc_Datum3D#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TransformPers#
 // Source: c:@S@AIS_MultipleConnectedInteractive@F@Disconnect#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#
 // Source: c:@S@AIS_MultipleConnectedInteractive@F@DisconnectAll#
+// Source: c:@S@AIS_MultipleConnectedInteractive@F@DynamicType#1
+// Source: c:@S@AIS_MultipleConnectedInteractive@F@GetAssemblyOwner#1
 // Source: c:@S@AIS_MultipleConnectedInteractive@F@GlobalSelOwner#1
 // Source: c:@S@AIS_MultipleConnectedInteractive@F@HasConnection#1
 // Source: c:@S@AIS_MultipleConnectedInteractive@F@SetContext#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#
@@ -445,8 +501,11 @@
 // Source: c:@S@AIS_Plane@F@AIS_Plane#&1$@N@opencascade@S@handle>#$@S@Geom_Plane#b#
 // Source: c:@S@AIS_Plane@F@AcceptDisplayMode#I#1
 // Source: c:@S@AIS_Plane@F@Axis2Placement#
+// Source: c:@S@AIS_Plane@F@Center#1
+// Source: c:@S@AIS_Plane@F@Component#
 // Source: c:@S@AIS_Plane@F@ComputeSelection#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Selection#I#
 // Source: c:@S@AIS_Plane@F@CurrentMode#
+// Source: c:@S@AIS_Plane@F@DynamicType#1
 // Source: c:@S@AIS_Plane@F@HasMinimumSize#1
 // Source: c:@S@AIS_Plane@F@HasOwnSize#1
 // Source: c:@S@AIS_Plane@F@IsXYZPlane#
@@ -470,6 +529,7 @@
 // Source: c:@S@AIS_PlaneTrihedron@F@AIS_PlaneTrihedron#&1$@N@opencascade@S@handle>#$@S@Geom_Plane#
 // Source: c:@S@AIS_PlaneTrihedron@F@AcceptDisplayMode#I#1
 // Source: c:@S@AIS_PlaneTrihedron@F@Component#
+// Source: c:@S@AIS_PlaneTrihedron@F@DynamicType#1
 // Source: c:@S@AIS_PlaneTrihedron@F@GetLength#1
 // Source: c:@S@AIS_PlaneTrihedron@F@Position#1
 // Source: c:@S@AIS_PlaneTrihedron@F@SetComponent#&1$@N@opencascade@S@handle>#$@S@Geom_Plane#
@@ -481,6 +541,7 @@
 // Source: c:@S@AIS_Point@F@AIS_Point#&1$@N@opencascade@S@handle>#$@S@Geom_Point#
 // Source: c:@S@AIS_Point@F@AcceptDisplayMode#I#1
 // Source: c:@S@AIS_Point@F@Component#
+// Source: c:@S@AIS_Point@F@DynamicType#1
 // Source: c:@S@AIS_Point@F@HasMarker#1
 // Source: c:@S@AIS_Point@F@SetComponent#&1$@N@opencascade@S@handle>#$@S@Geom_Point#
 // Source: c:@S@AIS_Point@F@SetMarker#$@E@Aspect_TypeOfMarker#
@@ -489,17 +550,22 @@
 // Source: c:@S@AIS_Point@F@UnsetColor#
 // Source: c:@S@AIS_Point@F@UnsetMarker#
 // Source: c:@S@AIS_PointCloud@F@AIS_PointCloud#
+// Source: c:@S@AIS_PointCloud@F@DynamicType#1
 // Source: c:@S@AIS_PointCloud@F@GetPoints#1
 // Source: c:@S@AIS_PointCloud@F@SetPoints#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ArrayOfPoints#
 // Source: c:@S@AIS_PointCloud@F@UnsetColor#
 // Source: c:@S@AIS_PointCloud@F@UnsetMaterial#
 // Source: c:@S@AIS_PointCloudOwner@F@AIS_PointCloudOwner#&1$@N@opencascade@S@handle>#$@S@AIS_PointCloud#
 // Source: c:@S@AIS_PointCloudOwner@F@Clear#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
+// Source: c:@S@AIS_PointCloudOwner@F@DetectedPoints#1
+// Source: c:@S@AIS_PointCloudOwner@F@DynamicType#1
 // Source: c:@S@AIS_PointCloudOwner@F@HilightWithColor#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#I#
 // Source: c:@S@AIS_PointCloudOwner@F@IsForcedHilight#1
+// Source: c:@S@AIS_PointCloudOwner@F@SelectedPoints#1
 // Source: c:@S@AIS_PointCloudOwner@F@Unhilight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@AIS_RubberBand@F@AIS_RubberBand#
 // Source: c:@S@AIS_RubberBand@F@ClearPoints#
+// Source: c:@S@AIS_RubberBand@F@DynamicType#1
 // Source: c:@S@AIS_RubberBand@F@FillTransparency#1
 // Source: c:@S@AIS_RubberBand@F@IsFilling#1
 // Source: c:@S@AIS_RubberBand@F@IsPolygonClosed#1
@@ -516,6 +582,7 @@
 // Source: c:@S@AIS_Selection@F@AddSelect#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#
 // Source: c:@S@AIS_Selection@F@Clear#
 // Source: c:@S@AIS_Selection@F@ClearAndSelect#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Filter#b#
+// Source: c:@S@AIS_Selection@F@DynamicType#1
 // Source: c:@S@AIS_Selection@F@Extent#1
 // Source: c:@S@AIS_Selection@F@Init#
 // Source: c:@S@AIS_Selection@F@IsEmpty#1
@@ -523,8 +590,10 @@
 // Source: c:@S@AIS_Selection@F@More#1
 // Source: c:@S@AIS_Selection@F@Next#
 // Source: c:@S@AIS_Selection@F@Select#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Filter#$@E@AIS_SelectionScheme#b#
+// Source: c:@S@AIS_Selection@F@Value#1
 // Source: c:@S@AIS_Shape@F@AcceptDisplayMode#I#1
 // Source: c:@S@AIS_Shape@F@AcceptShapeDecomposition#1
+// Source: c:@S@AIS_Shape@F@DynamicType#1
 // Source: c:@S@AIS_Shape@F@Material#1
 // Source: c:@S@AIS_Shape@F@SetAngleAndDeviation#d#
 // Source: c:@S@AIS_Shape@F@SetOwnDeviationAngle#
@@ -544,13 +613,16 @@
 // Source: c:@S@AIS_Shape@F@UnsetWidth#
 // Source: c:@S@AIS_Shape@F@UserAngle#1
 // Source: c:@S@AIS_SignatureFilter@F@AIS_SignatureFilter#$@E@AIS_KindOfInteractive#I#
+// Source: c:@S@AIS_SignatureFilter@F@DynamicType#1
 // Source: c:@S@AIS_SignatureFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@AIS_TextLabel@F@AIS_TextLabel#
 // Source: c:@S@AIS_TextLabel@F@AcceptDisplayMode#I#1
+// Source: c:@S@AIS_TextLabel@F@DynamicType#1
 // Source: c:@S@AIS_TextLabel@F@FontAspect#1
 // Source: c:@S@AIS_TextLabel@F@HasFlipping#1
 // Source: c:@S@AIS_TextLabel@F@HasOrientation3D#1
 // Source: c:@S@AIS_TextLabel@F@HasOwnAnchorPoint#1
+// Source: c:@S@AIS_TextLabel@F@Position#1
 // Source: c:@S@AIS_TextLabel@F@SetAngle#d#
 // Source: c:@S@AIS_TextLabel@F@SetDisplayType#$@E@Aspect_TypeOfDisplayText#
 // Source: c:@S@AIS_TextLabel@F@SetFlipping#b#
@@ -563,10 +635,12 @@
 // Source: c:@S@AIS_TextLabel@F@SetTransparency#d#
 // Source: c:@S@AIS_TextLabel@F@SetVJustification#$@E@Graphic3d_VerticalTextAlignment#
 // Source: c:@S@AIS_TextLabel@F@SetZoomable#b#
+// Source: c:@S@AIS_TextLabel@F@TextFormatter#1
 // Source: c:@S@AIS_TextLabel@F@UnsetOrientation3D#
 // Source: c:@S@AIS_TextLabel@F@UnsetTransparency#
 // Source: c:@S@AIS_TexturedShape@F@AcceptDisplayMode#I#1
 // Source: c:@S@AIS_TexturedShape@F@DisableTextureModulate#
+// Source: c:@S@AIS_TexturedShape@F@DynamicType#1
 // Source: c:@S@AIS_TexturedShape@F@EnableTextureModulate#
 // Source: c:@S@AIS_TexturedShape@F@SetTextureMapOff#
 // Source: c:@S@AIS_TexturedShape@F@SetTextureMapOn#
@@ -579,6 +653,7 @@
 // Source: c:@S@AIS_TexturedShape@F@TextureMapState#1
 // Source: c:@S@AIS_TexturedShape@F@TextureModulate#1
 // Source: c:@S@AIS_TexturedShape@F@TextureOrigin#1
+// Source: c:@S@AIS_TexturedShape@F@TexturePixMap#1
 // Source: c:@S@AIS_TexturedShape@F@TextureRepeat#1
 // Source: c:@S@AIS_TexturedShape@F@TextureScale#1
 // Source: c:@S@AIS_TexturedShape@F@TextureScaleU#1
@@ -591,6 +666,7 @@
 // Source: c:@S@AIS_TexturedShape@F@UpdateAttributes#
 // Source: c:@S@AIS_TexturedShape@F@VRepeat#1
 // Source: c:@S@AIS_Triangulation@F@AIS_Triangulation#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#
+// Source: c:@S@AIS_Triangulation@F@DynamicType#1
 // Source: c:@S@AIS_Triangulation@F@GetTriangulation#1
 // Source: c:@S@AIS_Triangulation@F@HasVertexColors#1
 // Source: c:@S@AIS_Triangulation@F@SetTransparency#d#
@@ -599,7 +675,9 @@
 // Source: c:@S@AIS_Trihedron@F@AIS_Trihedron#&1$@N@opencascade@S@handle>#$@S@Geom_Axis2Placement#
 // Source: c:@S@AIS_Trihedron@F@AcceptDisplayMode#I#1
 // Source: c:@S@AIS_Trihedron@F@ClearSelected#
+// Source: c:@S@AIS_Trihedron@F@Component#1
 // Source: c:@S@AIS_Trihedron@F@DatumDisplayMode#1
+// Source: c:@S@AIS_Trihedron@F@DynamicType#1
 // Source: c:@S@AIS_Trihedron@F@HasArrowColor#1
 // Source: c:@S@AIS_Trihedron@F@HasOwnSize#1
 // Source: c:@S@AIS_Trihedron@F@HasTextColor#1
@@ -618,10 +696,12 @@
 // Source: c:@S@AIS_Trihedron@F@UnsetSize#
 // Source: c:@S@AIS_TrihedronOwner@F@AIS_TrihedronOwner#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#$@E@Prs3d_DatumParts#I#
 // Source: c:@S@AIS_TrihedronOwner@F@DatumPart#1
+// Source: c:@S@AIS_TrihedronOwner@F@DynamicType#1
 // Source: c:@S@AIS_TrihedronOwner@F@HilightWithColor#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#I#
 // Source: c:@S@AIS_TrihedronOwner@F@IsHilighted#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#1
 // Source: c:@S@AIS_TrihedronOwner@F@Unhilight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@AIS_TypeFilter@F@AIS_TypeFilter#$@E@AIS_KindOfInteractive#
+// Source: c:@S@AIS_TypeFilter@F@DynamicType#1
 // Source: c:@S@AIS_TypeFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@AIS_ViewCube@F@AIS_ViewCube#
 // Source: c:@S@AIS_ViewCube@F@AcceptDisplayMode#I#1
@@ -630,13 +710,17 @@
 // Source: c:@S@AIS_ViewCube@F@AxesRadius#1
 // Source: c:@S@AIS_ViewCube@F@AxesSphereRadius#1
 // Source: c:@S@AIS_ViewCube@F@BoxCornerMinSize#1
+// Source: c:@S@AIS_ViewCube@F@BoxCornerStyle#1
 // Source: c:@S@AIS_ViewCube@F@BoxEdgeGap#1
 // Source: c:@S@AIS_ViewCube@F@BoxEdgeMinSize#1
+// Source: c:@S@AIS_ViewCube@F@BoxEdgeStyle#1
 // Source: c:@S@AIS_ViewCube@F@BoxFacetExtension#1
+// Source: c:@S@AIS_ViewCube@F@BoxSideStyle#1
 // Source: c:@S@AIS_ViewCube@F@BoxTransparency#1
 // Source: c:@S@AIS_ViewCube@F@ClearSelected#
 // Source: c:@S@AIS_ViewCube@F@ComputeSelection#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Selection#I#
 // Source: c:@S@AIS_ViewCube@F@Duration#1
+// Source: c:@S@AIS_ViewCube@F@DynamicType#1
 // Source: c:@S@AIS_ViewCube@F@FontHeight#1
 // Source: c:@S@AIS_ViewCube@F@GlobalSelOwner#1
 // Source: c:@S@AIS_ViewCube@F@HandleClick#&1$@N@opencascade@S@handle>#$@S@AIS_ViewCubeOwner#
@@ -684,17 +768,26 @@
 // Source: c:@S@AIS_ViewCube@F@UnsetMaterial#
 // Source: c:@S@AIS_ViewCube@F@UnsetTransparency#
 // Source: c:@S@AIS_ViewCube@F@UpdateAnimation#b#
+// Source: c:@S@AIS_ViewCube@F@ViewAnimation#1
 // Source: c:@S@AIS_ViewCubeOwner@F@AIS_ViewCubeOwner#&1$@N@opencascade@S@handle>#$@S@AIS_ViewCube#$@E@V3d_TypeOfOrientation#I#
+// Source: c:@S@AIS_ViewCubeOwner@F@DynamicType#1
 // Source: c:@S@AIS_ViewCubeOwner@F@IsForcedHilight#1
 // Source: c:@S@AIS_ViewCubeOwner@F@MainOrientation#1
 // Source: c:@S@AIS_ViewCubeSensitive@F@AIS_ViewCubeSensitive#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ArrayOfTriangles#
+// Source: c:@S@AIS_ViewCubeSensitive@F@DynamicType#1
 // Source: c:@S@AIS_XRTrackedDevice@F@AIS_XRTrackedDevice#
 // Source: c:@S@AIS_XRTrackedDevice@F@AIS_XRTrackedDevice#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ArrayOfTriangles#&1$@N@opencascade@S@handle>#$@S@Image_Texture#
+// Source: c:@S@AIS_XRTrackedDevice@F@DynamicType#1
+// Source: c:@S@AIS_XRTrackedDevice@F@LaserLength#1
 // Source: c:@S@AIS_XRTrackedDevice@F@Role#1
+// Source: c:@S@AIS_XRTrackedDevice@F@SetLaserLength#f#
 // Source: c:@S@AIS_XRTrackedDevice@F@SetRole#$@E@Aspect_XRTrackedDeviceRole#
+// Source: c:@S@AIS_XRTrackedDevice@F@SetUnitFactor#f#
+// Source: c:@S@AIS_XRTrackedDevice@F@UnitFactor#1
 // Source: c:@S@Aspect_CircularGrid@F@AngleEnd#1
 // Source: c:@S@Aspect_CircularGrid@F@AngleStart#1
 // Source: c:@S@Aspect_CircularGrid@F@DivisionNumber#1
+// Source: c:@S@Aspect_CircularGrid@F@DynamicType#1
 // Source: c:@S@Aspect_CircularGrid@F@Init#
 // Source: c:@S@Aspect_CircularGrid@F@IsArc#1
 // Source: c:@S@Aspect_CircularGrid@F@Radius#1
@@ -707,10 +800,13 @@
 // Source: c:@S@Aspect_CircularGrid@F@SetZOffset#d#
 // Source: c:@S@Aspect_CircularGrid@F@ZOffset#1
 // Source: c:@S@Aspect_DisplayConnection@F@Aspect_DisplayConnection#
+// Source: c:@S@Aspect_DisplayConnection@F@DynamicType#1
+// Source: c:@S@Aspect_DisplayConnection@F@GetAtom#$@E@Aspect_XAtom#1
 // Source: c:@S@Aspect_DisplayConnection@F@IsOwnDisplay#1
 // Source: c:@S@Aspect_Grid@F@Activate#
 // Source: c:@S@Aspect_Grid@F@Deactivate#
 // Source: c:@S@Aspect_Grid@F@DrawMode#1
+// Source: c:@S@Aspect_Grid@F@DynamicType#1
 // Source: c:@S@Aspect_Grid@F@IsActive#1
 // Source: c:@S@Aspect_Grid@F@Rotate#d#
 // Source: c:@S@Aspect_Grid@F@RotationAngle#1
@@ -724,6 +820,7 @@
 // Source: c:@S@Aspect_NeutralWindow@F@Aspect_NeutralWindow#
 // Source: c:@S@Aspect_NeutralWindow@F@DoMapping#1
 // Source: c:@S@Aspect_NeutralWindow@F@DoResize#
+// Source: c:@S@Aspect_NeutralWindow@F@DynamicType#1
 // Source: c:@S@Aspect_NeutralWindow@F@IsMapped#1
 // Source: c:@S@Aspect_NeutralWindow@F@Map#1
 // Source: c:@S@Aspect_NeutralWindow@F@Ratio#1
@@ -733,6 +830,7 @@
 // Source: c:@S@Aspect_NeutralWindow@F@Unmap#1
 // Source: c:@S@Aspect_OpenVRSession@F@Aspect_OpenVRSession#
 // Source: c:@S@Aspect_OpenVRSession@F@Close#
+// Source: c:@S@Aspect_OpenVRSession@F@DynamicType#1
 // Source: c:@S@Aspect_OpenVRSession@F@HasProjectionFrustums#1
 // Source: c:@S@Aspect_OpenVRSession@F@IsOpen#1
 // Source: c:@S@Aspect_OpenVRSession@F@NamedTrackedDevice#$@E@Aspect_XRTrackedDeviceRole#1
@@ -740,6 +838,7 @@
 // Source: c:@S@Aspect_OpenVRSession@F@ProcessEvents#
 // Source: c:@S@Aspect_OpenVRSession@F@SetTrackingOrigin#$@S@Aspect_XRSession@E@TrackingUniverseOrigin#
 // Source: c:@S@Aspect_OpenVRSession@F@WaitPoses#
+// Source: c:@S@Aspect_RectangularGrid@F@DynamicType#1
 // Source: c:@S@Aspect_RectangularGrid@F@FirstAngle#1
 // Source: c:@S@Aspect_RectangularGrid@F@Init#
 // Source: c:@S@Aspect_RectangularGrid@F@SecondAngle#1
@@ -756,18 +855,38 @@
 // Source: c:@S@Aspect_RectangularGrid@F@YStep#1
 // Source: c:@S@Aspect_RectangularGrid@F@ZOffset#1
 // Source: c:@S@Aspect_VKeySet@F@Aspect_VKeySet#
+// Source: c:@S@Aspect_VKeySet@F@DownTime#i#1
+// Source: c:@S@Aspect_VKeySet@F@DynamicType#1
+// Source: c:@S@Aspect_VKeySet@F@IsFreeKey#i#1
+// Source: c:@S@Aspect_VKeySet@F@IsKeyDown#i#1
+// Source: c:@S@Aspect_VKeySet@F@KeyDown#i#d#d#
+// Source: c:@S@Aspect_VKeySet@F@KeyFromAxis#i#i#d#d#
+// Source: c:@S@Aspect_VKeySet@F@KeyUp#i#d#
+// Source: c:@S@Aspect_VKeySet@F@Modifiers#1
 // Source: c:@S@Aspect_VKeySet@F@Reset#
+// Source: c:@S@Aspect_VKeySet@F@TimeUp#i#1
 // Source: c:@S@Aspect_Window@F@BackgroundFillMethod#1
 // Source: c:@S@Aspect_Window@F@DevicePixelRatio#1
+// Source: c:@S@Aspect_Window@F@DisplayConnection#1
+// Source: c:@S@Aspect_Window@F@DynamicType#1
 // Source: c:@S@Aspect_Window@F@InvalidateContent#&1$@N@opencascade@S@handle>#$@S@Aspect_DisplayConnection#
 // Source: c:@S@Aspect_Window@F@IsVirtual#1
 // Source: c:@S@Aspect_Window@F@SetVirtual#b#
+// Source: c:@S@Aspect_XRAction@F@DynamicType#1
 // Source: c:@S@Aspect_XRAction@F@IsValid#1
+// Source: c:@S@Aspect_XRAction@F@RawHandle#1
+// Source: c:@S@Aspect_XRAction@F@SetRawHandle#k#
 // Source: c:@S@Aspect_XRAction@F@Type#1
 // Source: c:@S@Aspect_XRActionSet@F@AddAction#&1$@N@opencascade@S@handle>#$@S@Aspect_XRAction#
+// Source: c:@S@Aspect_XRActionSet@F@DynamicType#1
+// Source: c:@S@Aspect_XRActionSet@F@RawHandle#1
+// Source: c:@S@Aspect_XRActionSet@F@SetRawHandle#k#
 // Source: c:@S@Aspect_XRSession@F@AbortHapticVibrationAction#&1$@N@opencascade@S@handle>#$@S@Aspect_XRAction#
 // Source: c:@S@Aspect_XRSession@F@Aspect#1
+// Source: c:@S@Aspect_XRSession@F@DisplayFrequency#1
+// Source: c:@S@Aspect_XRSession@F@DynamicType#1
 // Source: c:@S@Aspect_XRSession@F@FieldOfView#1
+// Source: c:@S@Aspect_XRSession@F@GenericAction#$@E@Aspect_XRTrackedDeviceRole#$@E@Aspect_XRGenericAction#1
 // Source: c:@S@Aspect_XRSession@F@HasTrackedPose#I#1
 // Source: c:@S@Aspect_XRSession@F@IOD#1
 // Source: c:@S@Aspect_XRSession@F@SetTrackingOrigin#$@S@Aspect_XRSession@E@TrackingUniverseOrigin#
@@ -776,6 +895,7 @@
 // Source: c:@S@Aspect_XRSession@F@UnitFactor#1
 // Source: c:@S@Cocoa_Window@F@DoMapping#1
 // Source: c:@S@Cocoa_Window@F@DoResize#
+// Source: c:@S@Cocoa_Window@F@DynamicType#1
 // Source: c:@S@Cocoa_Window@F@InvalidateContent#&1$@N@opencascade@S@handle>#$@S@Aspect_DisplayConnection#
 // Source: c:@S@Cocoa_Window@F@IsMapped#1
 // Source: c:@S@Cocoa_Window@F@Map#1
@@ -784,6 +904,7 @@
 // Source: c:@S@D3DHost_FrameBuffer@F@BindBuffer#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@D3DHost_FrameBuffer@F@D3DHost_FrameBuffer#
 // Source: c:@S@D3DHost_FrameBuffer@F@D3dFallback#1
+// Source: c:@S@D3DHost_FrameBuffer@F@DynamicType#1
 // Source: c:@S@D3DHost_FrameBuffer@F@IsSRGBReady#1
 // Source: c:@S@D3DHost_FrameBuffer@F@LockSurface#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@D3DHost_FrameBuffer@F@SetSRGBReady#b#
@@ -791,25 +912,40 @@
 // Source: c:@S@D3DHost_FrameBuffer@F@registerD3dBuffer#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@D3DHost_GraphicDriver@F@CreateView#&1$@N@opencascade@S@handle>#$@S@Graphic3d_StructureManager#
 // Source: c:@S@D3DHost_GraphicDriver@F@D3DHost_GraphicDriver#
+// Source: c:@S@D3DHost_GraphicDriver@F@DynamicType#1
 // Source: c:@S@D3DHost_GraphicDriverFactory@F@CreateDriver#&1$@N@opencascade@S@handle>#$@S@Aspect_DisplayConnection#
 // Source: c:@S@D3DHost_GraphicDriverFactory@F@D3DHost_GraphicDriverFactory#
+// Source: c:@S@D3DHost_GraphicDriverFactory@F@DynamicType#1
+// Source: c:@S@D3DHost_View@F@D3dWglBuffer#1
+// Source: c:@S@D3DHost_View@F@DynamicType#1
 // Source: c:@S@D3DHost_View@F@Redraw#
 // Source: c:@S@D3DHost_View@F@RedrawImmediate#
 // Source: c:@S@D3DHost_View@F@ReleaseGlResources#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@D3DHost_View@F@Resized#
 // Source: c:@S@D3DHost_View@F@isD3dEx#1
+// Source: c:@S@Font_FTFont@F@Ascender#1
+// Source: c:@S@Font_FTFont@F@Descender#1
+// Source: c:@S@Font_FTFont@F@DynamicType#1
 // Source: c:@S@Font_FTFont@F@Font_FTFont#&1$@N@opencascade@S@handle>#$@S@Font_FTLibrary#
+// Source: c:@S@Font_FTFont@F@GlyphMaxSizeX#b#1
+// Source: c:@S@Font_FTFont@F@GlyphMaxSizeY#b#1
 // Source: c:@S@Font_FTFont@F@GlyphsNumber#b#1
 // Source: c:@S@Font_FTFont@F@IsSingleStrokeFont#1
 // Source: c:@S@Font_FTFont@F@IsValid#1
+// Source: c:@S@Font_FTFont@F@LineSpacing#1
+// Source: c:@S@Font_FTFont@F@PointSize#1
 // Source: c:@S@Font_FTFont@F@Release#
 // Source: c:@S@Font_FTFont@F@SetSingleStrokeFont#b#
 // Source: c:@S@Font_FTFont@F@SetUseUnicodeSubsetFallback#b#
+// Source: c:@S@Font_FTFont@F@SetWidthScaling#f#
 // Source: c:@S@Font_FTFont@F@ToSynthesizeItalic#1
 // Source: c:@S@Font_FTFont@F@ToUseUnicodeSubsetFallback#1
+// Source: c:@S@Font_FTFont@F@WidthScaling#1
+// Source: c:@S@Font_FTLibrary@F@DynamicType#1
 // Source: c:@S@Font_FTLibrary@F@Font_FTLibrary#
 // Source: c:@S@Font_FTLibrary@F@IsValid#1
 // Source: c:@S@Font_FontMgr@F@ClearFontDataBase#
+// Source: c:@S@Font_FontMgr@F@DynamicType#1
 // Source: c:@S@Font_FontMgr@F@FindFallbackFont#$@E@Font_UnicodeSubset#$@E@Font_FontAspect#1
 // Source: c:@S@Font_FontMgr@F@GetFont#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#$@E@Font_FontAspect#I#1
 // Source: c:@S@Font_FontMgr@F@InitFontDataBase#
@@ -818,28 +954,41 @@
 // Source: c:@S@Font_FontMgr@F@SetTraceAliases#b#
 // Source: c:@S@Font_FontMgr@F@ToPrintErrors#1
 // Source: c:@S@Font_FontMgr@F@ToTraceAliases#1
+// Source: c:@S@Font_SystemFont@F@DynamicType#1
 // Source: c:@S@Font_SystemFont@F@FontFaceId#$@E@Font_FontAspect#1
 // Source: c:@S@Font_SystemFont@F@HasFontAspect#$@E@Font_FontAspect#1
 // Source: c:@S@Font_SystemFont@F@IsEqual#&1$@N@opencascade@S@handle>#$@S@Font_SystemFont#1
 // Source: c:@S@Font_SystemFont@F@IsSingleStrokeFont#1
 // Source: c:@S@Font_SystemFont@F@SetSingleStrokeFont#b#
+// Source: c:@S@Font_TextFormatter@F@DynamicType#1
+// Source: c:@S@Font_TextFormatter@F@FirstPosition#1
 // Source: c:@S@Font_TextFormatter@F@Font_TextFormatter#
 // Source: c:@S@Font_TextFormatter@F@Format#
 // Source: c:@S@Font_TextFormatter@F@HasWrapping#1
 // Source: c:@S@Font_TextFormatter@F@HorizontalTextAlignment#1
 // Source: c:@S@Font_TextFormatter@F@IsLFSymbol#I#1
+// Source: c:@S@Font_TextFormatter@F@LineHeight#I#1
 // Source: c:@S@Font_TextFormatter@F@LineIndex#I#1
 // Source: c:@S@Font_TextFormatter@F@LinePositionIndex#I#1
+// Source: c:@S@Font_TextFormatter@F@LineWidth#I#1
+// Source: c:@S@Font_TextFormatter@F@MaximumSymbolWidth#1
 // Source: c:@S@Font_TextFormatter@F@Reset#
+// Source: c:@S@Font_TextFormatter@F@ResultHeight#1
+// Source: c:@S@Font_TextFormatter@F@ResultWidth#1
 // Source: c:@S@Font_TextFormatter@F@SetWordWrapping#b#
+// Source: c:@S@Font_TextFormatter@F@SetWrapping#f#
 // Source: c:@S@Font_TextFormatter@F@SetupAlignment#$@E@Graphic3d_HorizontalTextAlignment#$@E@Graphic3d_VerticalTextAlignment#
 // Source: c:@S@Font_TextFormatter@F@TabSize#1
 // Source: c:@S@Font_TextFormatter@F@VerticalTextAlignment#1
 // Source: c:@S@Font_TextFormatter@F@WordWrapping#1
+// Source: c:@S@Font_TextFormatter@F@Wrapping#1
+// Source: c:@S@Graphic3d_ArrayOfPoints@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfPoints@F@Graphic3d_ArrayOfPoints#I#I#
 // Source: c:@S@Graphic3d_ArrayOfPoints@F@Graphic3d_ArrayOfPoints#I#b#b#
+// Source: c:@S@Graphic3d_ArrayOfPolygons@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfPolygons@F@Graphic3d_ArrayOfPolygons#I#I#I#I#
 // Source: c:@S@Graphic3d_ArrayOfPolygons@F@Graphic3d_ArrayOfPolygons#I#I#I#b#b#b#b#
+// Source: c:@S@Graphic3d_ArrayOfPolylines@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfPolylines@F@Graphic3d_ArrayOfPolylines#I#I#I#I#
 // Source: c:@S@Graphic3d_ArrayOfPolylines@F@Graphic3d_ArrayOfPolylines#I#I#I#b#b#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddBound#I#
@@ -861,9 +1010,16 @@
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#d#d#d#d#d#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#d#d#d#d#d#d#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#d#d#d#d#d#d#d#d#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#f#f#f#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#f#f#f#f#f#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#f#f#f#f#f#f#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#f#f#f#f#f#f#f#f#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@Attributes#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@Bound#I#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@BoundNumber#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@BoundNumberAllocated#1
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@Bounds#1
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@Edge#I#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@EdgeNumber#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@EdgeNumberAllocated#1
@@ -871,6 +1027,7 @@
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@HasVertexColors#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@HasVertexNormals#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@HasVertexTexels#1
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@Indices#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@IsValid#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@ItemNumber#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetBoundColor#I#d#d#d#
@@ -879,34 +1036,51 @@
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertexNormal#I#d#d#d#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertexTexel#I#d#d#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertice#I#&1$@S@gp_Pnt#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertice#I#f#f#f#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@Type#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@VertexNumber#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@VertexNumberAllocated#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@Vertice#I#1
+// Source: c:@S@Graphic3d_ArrayOfQuadrangleStrips@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfQuadrangleStrips@F@Graphic3d_ArrayOfQuadrangleStrips#I#I#I#
 // Source: c:@S@Graphic3d_ArrayOfQuadrangleStrips@F@Graphic3d_ArrayOfQuadrangleStrips#I#I#b#b#b#b#
+// Source: c:@S@Graphic3d_ArrayOfQuadrangles@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfQuadrangles@F@Graphic3d_ArrayOfQuadrangles#I#I#I#
 // Source: c:@S@Graphic3d_ArrayOfQuadrangles@F@Graphic3d_ArrayOfQuadrangles#I#I#b#b#b#
+// Source: c:@S@Graphic3d_ArrayOfSegments@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfSegments@F@Graphic3d_ArrayOfSegments#I#I#I#
 // Source: c:@S@Graphic3d_ArrayOfSegments@F@Graphic3d_ArrayOfSegments#I#I#b#
+// Source: c:@S@Graphic3d_ArrayOfTriangleFans@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfTriangleFans@F@Graphic3d_ArrayOfTriangleFans#I#I#I#
 // Source: c:@S@Graphic3d_ArrayOfTriangleFans@F@Graphic3d_ArrayOfTriangleFans#I#I#b#b#b#b#
+// Source: c:@S@Graphic3d_ArrayOfTriangleStrips@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfTriangleStrips@F@Graphic3d_ArrayOfTriangleStrips#I#I#I#
 // Source: c:@S@Graphic3d_ArrayOfTriangleStrips@F@Graphic3d_ArrayOfTriangleStrips#I#I#b#b#b#b#
+// Source: c:@S@Graphic3d_ArrayOfTriangles@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfTriangles@F@Graphic3d_ArrayOfTriangles#I#I#I#
 // Source: c:@S@Graphic3d_ArrayOfTriangles@F@Graphic3d_ArrayOfTriangles#I#I#b#b#b#
+// Source: c:@S@Graphic3d_AspectFillArea3d@F@DynamicType#1
 // Source: c:@S@Graphic3d_AspectFillArea3d@F@Edge#1
 // Source: c:@S@Graphic3d_AspectFillArea3d@F@Graphic3d_AspectFillArea3d#
+// Source: c:@S@Graphic3d_AspectLine3d@F@DynamicType#1
 // Source: c:@S@Graphic3d_AspectLine3d@F@Graphic3d_AspectLine3d#
 // Source: c:@S@Graphic3d_AspectLine3d@F@SetType#$@E@Aspect_TypeOfLine#
 // Source: c:@S@Graphic3d_AspectLine3d@F@SetWidth#d#
+// Source: c:@S@Graphic3d_AspectLine3d@F@SetWidth#f#
 // Source: c:@S@Graphic3d_AspectLine3d@F@Type#1
+// Source: c:@S@Graphic3d_AspectLine3d@F@Width#1
+// Source: c:@S@Graphic3d_AspectMarker3d@F@DynamicType#1
+// Source: c:@S@Graphic3d_AspectMarker3d@F@GetMarkerImage#1
 // Source: c:@S@Graphic3d_AspectMarker3d@F@Graphic3d_AspectMarker3d#
 // Source: c:@S@Graphic3d_AspectMarker3d@F@Graphic3d_AspectMarker3d#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
+// Source: c:@S@Graphic3d_AspectMarker3d@F@Scale#1
 // Source: c:@S@Graphic3d_AspectMarker3d@F@SetScale#d#
+// Source: c:@S@Graphic3d_AspectMarker3d@F@SetScale#f#
 // Source: c:@S@Graphic3d_AspectMarker3d@F@SetType#$@E@Aspect_TypeOfMarker#
 // Source: c:@S@Graphic3d_AspectMarker3d@F@Type#1
 // Source: c:@S@Graphic3d_AspectText3d@F@DisplayType#1
+// Source: c:@S@Graphic3d_AspectText3d@F@DynamicType#1
+// Source: c:@S@Graphic3d_AspectText3d@F@GetTextAngle#1
 // Source: c:@S@Graphic3d_AspectText3d@F@GetTextFontAspect#1
 // Source: c:@S@Graphic3d_AspectText3d@F@GetTextZoomable#1
 // Source: c:@S@Graphic3d_AspectText3d@F@Graphic3d_AspectText3d#
@@ -915,16 +1089,25 @@
 // Source: c:@S@Graphic3d_AspectText3d@F@SetTextAngle#d#
 // Source: c:@S@Graphic3d_AspectText3d@F@Style#1
 // Source: c:@S@Graphic3d_Aspects@F@AllowBackFace#
+// Source: c:@S@Graphic3d_Aspects@F@AlphaCutoff#1
 // Source: c:@S@Graphic3d_Aspects@F@AlphaMode#1
 // Source: c:@S@Graphic3d_Aspects@F@BackFace#1
 // Source: c:@S@Graphic3d_Aspects@F@Distinguish#1
+// Source: c:@S@Graphic3d_Aspects@F@DynamicType#1
 // Source: c:@S@Graphic3d_Aspects@F@EdgeLineType#1
+// Source: c:@S@Graphic3d_Aspects@F@EdgeWidth#1
 // Source: c:@S@Graphic3d_Aspects@F@FaceCulling#1
 // Source: c:@S@Graphic3d_Aspects@F@Graphic3d_Aspects#
+// Source: c:@S@Graphic3d_Aspects@F@HatchStyle#1
 // Source: c:@S@Graphic3d_Aspects@F@InteriorStyle#1
 // Source: c:@S@Graphic3d_Aspects@F@IsMarkerSprite#1
 // Source: c:@S@Graphic3d_Aspects@F@IsTextZoomable#1
+// Source: c:@S@Graphic3d_Aspects@F@LinePattern#1
+// Source: c:@S@Graphic3d_Aspects@F@LineStippleFactor#1
 // Source: c:@S@Graphic3d_Aspects@F@LineType#1
+// Source: c:@S@Graphic3d_Aspects@F@LineWidth#1
+// Source: c:@S@Graphic3d_Aspects@F@MarkerImage#1
+// Source: c:@S@Graphic3d_Aspects@F@MarkerScale#1
 // Source: c:@S@Graphic3d_Aspects@F@MarkerType#1
 // Source: c:@S@Graphic3d_Aspects@F@SetDistinguish#b#
 // Source: c:@S@Graphic3d_Aspects@F@SetDistinguishOff#
@@ -939,13 +1122,19 @@
 // Source: c:@S@Graphic3d_Aspects@F@SetHatchStyle#$@E@Aspect_HatchStyle#
 // Source: c:@S@Graphic3d_Aspects@F@SetHatchStyle#&1$@N@opencascade@S@handle>#$@S@Graphic3d_HatchStyle#
 // Source: c:@S@Graphic3d_Aspects@F@SetInteriorStyle#$@E@Aspect_InteriorStyle#
+// Source: c:@S@Graphic3d_Aspects@F@SetLinePattern#s#
+// Source: c:@S@Graphic3d_Aspects@F@SetLineStippleFactor#s#
 // Source: c:@S@Graphic3d_Aspects@F@SetLineType#$@E@Aspect_TypeOfLine#
+// Source: c:@S@Graphic3d_Aspects@F@SetLineWidth#f#
 // Source: c:@S@Graphic3d_Aspects@F@SetMarkerImage#&1$@N@opencascade@S@handle>#$@S@Graphic3d_MarkerImage#
+// Source: c:@S@Graphic3d_Aspects@F@SetMarkerScale#f#
 // Source: c:@S@Graphic3d_Aspects@F@SetMarkerType#$@E@Aspect_TypeOfMarker#
+// Source: c:@S@Graphic3d_Aspects@F@SetPolygonOffsets#I#f#f#
 // Source: c:@S@Graphic3d_Aspects@F@SetShaderProgram#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ShaderProgram#
 // Source: c:@S@Graphic3d_Aspects@F@SetShadingModel#$@E@Graphic3d_TypeOfShadingModel#
 // Source: c:@S@Graphic3d_Aspects@F@SetSkipFirstEdge#b#
 // Source: c:@S@Graphic3d_Aspects@F@SetSuppressBackFaces#b#
+// Source: c:@S@Graphic3d_Aspects@F@SetTextAngle#f#
 // Source: c:@S@Graphic3d_Aspects@F@SetTextDisplayType#$@E@Aspect_TypeOfDisplayText#
 // Source: c:@S@Graphic3d_Aspects@F@SetTextFont#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#
 // Source: c:@S@Graphic3d_Aspects@F@SetTextFontAspect#$@E@Font_FontAspect#
@@ -957,19 +1146,24 @@
 // Source: c:@S@Graphic3d_Aspects@F@SetTextureMapOn#b#
 // Source: c:@S@Graphic3d_Aspects@F@SetTextureSet#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureSet#
 // Source: c:@S@Graphic3d_Aspects@F@SetUseVertexColorForBackFaces#b#
+// Source: c:@S@Graphic3d_Aspects@F@ShaderProgram#1
 // Source: c:@S@Graphic3d_Aspects@F@ShadingModel#1
 // Source: c:@S@Graphic3d_Aspects@F@SuppressBackFace#
+// Source: c:@S@Graphic3d_Aspects@F@TextAngle#1
 // Source: c:@S@Graphic3d_Aspects@F@TextDisplayType#1
+// Source: c:@S@Graphic3d_Aspects@F@TextFont#1
 // Source: c:@S@Graphic3d_Aspects@F@TextFontAspect#1
 // Source: c:@S@Graphic3d_Aspects@F@TextStyle#1
 // Source: c:@S@Graphic3d_Aspects@F@TextureMap#1
 // Source: c:@S@Graphic3d_Aspects@F@TextureMapState#1
+// Source: c:@S@Graphic3d_Aspects@F@TextureSet#1
 // Source: c:@S@Graphic3d_Aspects@F@ToDrawEdges#1
 // Source: c:@S@Graphic3d_Aspects@F@ToDrawSilhouette#1
 // Source: c:@S@Graphic3d_Aspects@F@ToMapTexture#1
 // Source: c:@S@Graphic3d_Aspects@F@ToSkipFirstEdge#1
 // Source: c:@S@Graphic3d_Aspects@F@ToSuppressBackFaces#1
 // Source: c:@S@Graphic3d_Aspects@F@ToUseVertexColorForBackFaces#1
+// Source: c:@S@Graphic3d_AttribBuffer@F@DynamicType#1
 // Source: c:@S@Graphic3d_AttribBuffer@F@Graphic3d_AttribBuffer#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#
 // Source: c:@S@Graphic3d_AttribBuffer@F@Invalidate#
 // Source: c:@S@Graphic3d_AttribBuffer@F@Invalidate#I#
@@ -980,9 +1174,11 @@
 // Source: c:@S@Graphic3d_AttribBuffer@F@SetInterleaved#b#
 // Source: c:@S@Graphic3d_AttribBuffer@F@SetMutable#b#
 // Source: c:@S@Graphic3d_AttribBuffer@F@Validate#
+// Source: c:@S@Graphic3d_BoundBuffer@F@DynamicType#1
 // Source: c:@S@Graphic3d_BoundBuffer@F@Graphic3d_BoundBuffer#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#
 // Source: c:@S@Graphic3d_BoundBuffer@F@Init#I#b#
 // Source: c:@S@Graphic3d_Buffer@F@AttributeOffset#I#1
+// Source: c:@S@Graphic3d_Buffer@F@DynamicType#1
 // Source: c:@S@Graphic3d_Buffer@F@FindAttribute#$@E@Graphic3d_TypeOfAttribute#1
 // Source: c:@S@Graphic3d_Buffer@F@Graphic3d_Buffer#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#
 // Source: c:@S@Graphic3d_Buffer@F@Invalidate#
@@ -992,11 +1188,14 @@
 // Source: c:@S@Graphic3d_Buffer@F@Validate#
 // Source: c:@S@Graphic3d_Buffer@F@release#
 // Source: c:@S@Graphic3d_CLight@F@CopyFrom#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#
+// Source: c:@S@Graphic3d_CLight@F@DisplayPosition#1
+// Source: c:@S@Graphic3d_CLight@F@DynamicType#1
 // Source: c:@S@Graphic3d_CLight@F@Graphic3d_CLight#$@E@Graphic3d_TypeOfLightSource#
 // Source: c:@S@Graphic3d_CLight@F@HasRange#1
 // Source: c:@S@Graphic3d_CLight@F@Headlight#1
 // Source: c:@S@Graphic3d_CLight@F@IsEnabled#1
 // Source: c:@S@Graphic3d_CLight@F@IsHeadlight#1
+// Source: c:@S@Graphic3d_CLight@F@Revision#1
 // Source: c:@S@Graphic3d_CLight@F@SetCastShadows#b#
 // Source: c:@S@Graphic3d_CLight@F@SetDirection#d#d#d#
 // Source: c:@S@Graphic3d_CLight@F@SetDisplayPosition#&1$@S@gp_Pnt#
@@ -1004,11 +1203,18 @@
 // Source: c:@S@Graphic3d_CLight@F@SetHeadlight#b#
 // Source: c:@S@Graphic3d_CLight@F@SetPosition#&1$@S@gp_Pnt#
 // Source: c:@S@Graphic3d_CLight@F@SetPosition#d#d#d#
+// Source: c:@S@Graphic3d_CLight@F@SetSmoothAngle#f#
+// Source: c:@S@Graphic3d_CLight@F@SetSmoothRadius#f#
+// Source: c:@S@Graphic3d_CLight@F@Smoothness#1
 // Source: c:@S@Graphic3d_CLight@F@ToCastShadows#1
 // Source: c:@S@Graphic3d_CLight@F@Type#1
 // Source: c:@S@Graphic3d_CStructure@F@BndBoxClipCheck#1
+// Source: c:@S@Graphic3d_CStructure@F@ClipPlanes#1
+// Source: c:@S@Graphic3d_CStructure@F@DynamicType#1
+// Source: c:@S@Graphic3d_CStructure@F@GraphicDriver#1
 // Source: c:@S@Graphic3d_CStructure@F@HasGroupFlipping#1
 // Source: c:@S@Graphic3d_CStructure@F@HasGroupTransformPersistence#1
+// Source: c:@S@Graphic3d_CStructure@F@HighlightStyle#1
 // Source: c:@S@Graphic3d_CStructure@F@Identification#1
 // Source: c:@S@Graphic3d_CStructure@F@IsAlwaysRendered#1
 // Source: c:@S@Graphic3d_CStructure@F@IsCulled#1
@@ -1027,19 +1233,27 @@
 // Source: c:@S@Graphic3d_CStructure@F@SetTransformPersistence#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TransformPers#
 // Source: c:@S@Graphic3d_CStructure@F@SetTransformation#&1$@N@opencascade@S@handle>#$@S@TopLoc_Datum3D#
 // Source: c:@S@Graphic3d_CStructure@F@SetZLayer#I#
+// Source: c:@S@Graphic3d_CStructure@F@TransformPersistence#1
+// Source: c:@S@Graphic3d_CStructure@F@Transformation#1
 // Source: c:@S@Graphic3d_CStructure@F@ZLayer#1
 // Source: c:@S@Graphic3d_CStructure@F@updateLayerTransformation#
 // Source: c:@S@Graphic3d_CView@F@Activate#
 // Source: c:@S@Graphic3d_CView@F@AddSubview#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CView#
 // Source: c:@S@Graphic3d_CView@F@BackfacingModel#1
+// Source: c:@S@Graphic3d_CView@F@BackgroundCubeMap#1
+// Source: c:@S@Graphic3d_CView@F@BackgroundImage#
 // Source: c:@S@Graphic3d_CView@F@BackgroundType#1
+// Source: c:@S@Graphic3d_CView@F@BaseXRCamera#1
+// Source: c:@S@Graphic3d_CView@F@Camera#1
 // Source: c:@S@Graphic3d_CView@F@Compute#
 // Source: c:@S@Graphic3d_CView@F@ComputedMode#1
 // Source: c:@S@Graphic3d_CView@F@ConsiderZoomPersistenceObjects#
 // Source: c:@S@Graphic3d_CView@F@CopySettings#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CView#
 // Source: c:@S@Graphic3d_CView@F@Deactivate#
+// Source: c:@S@Graphic3d_CView@F@DynamicType#1
 // Source: c:@S@Graphic3d_CView@F@GraduatedTrihedronErase#
 // Source: c:@S@Graphic3d_CView@F@GridErase#
+// Source: c:@S@Graphic3d_CView@F@IBLCubeMap#1
 // Source: c:@S@Graphic3d_CView@F@Identification#1
 // Source: c:@S@Graphic3d_CView@F@InitXR#
 // Source: c:@S@Graphic3d_CView@F@InvalidateZLayerBoundingBox#I#
@@ -1050,6 +1264,7 @@
 // Source: c:@S@Graphic3d_CView@F@IsSubview#1
 // Source: c:@S@Graphic3d_CView@F@IsSubviewComposer#1
 // Source: c:@S@Graphic3d_CView@F@NumberOfDisplayedStructures#1
+// Source: c:@S@Graphic3d_CView@F@PosedXRCamera#1
 // Source: c:@S@Graphic3d_CView@F@ProcessXRInput#
 // Source: c:@S@Graphic3d_CView@F@ReCompute#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
 // Source: c:@S@Graphic3d_CView@F@ReleaseXR#
@@ -1071,15 +1286,18 @@
 // Source: c:@S@Graphic3d_CView@F@SetZLayerTarget#I#
 // Source: c:@S@Graphic3d_CView@F@SetupXRPosedCamera#
 // Source: c:@S@Graphic3d_CView@F@ShadingModel#1
+// Source: c:@S@Graphic3d_CView@F@StructureManager#1
 // Source: c:@S@Graphic3d_CView@F@SubviewCorner#1
 // Source: c:@S@Graphic3d_CView@F@SubviewResized#&1$@N@opencascade@S@handle>#$@S@Aspect_NeutralWindow#
 // Source: c:@S@Graphic3d_CView@F@SynchronizeXRBaseToPosedCamera#
 // Source: c:@S@Graphic3d_CView@F@SynchronizeXRPosedToBaseCamera#
+// Source: c:@S@Graphic3d_CView@F@TextureEnv#1
 // Source: c:@S@Graphic3d_CView@F@ToFlipOutput#1
 // Source: c:@S@Graphic3d_CView@F@UnitFactor#1
 // Source: c:@S@Graphic3d_CView@F@UnsetXRPosedCamera#
 // Source: c:@S@Graphic3d_CView@F@Update#I#
 // Source: c:@S@Graphic3d_CView@F@VisualizationType#1
+// Source: c:@S@Graphic3d_CView@F@XRSession#1
 // Source: c:@S@Graphic3d_CView@F@ZLayerRedrawMode#1
 // Source: c:@S@Graphic3d_CView@F@ZLayerTarget#1
 // Source: c:@S@Graphic3d_Camera@F@Aspect#1
@@ -1092,6 +1310,7 @@
 // Source: c:@S@Graphic3d_Camera@F@CopyMappingData#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@Graphic3d_Camera@F@CopyOrientationData#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@Graphic3d_Camera@F@Distance#1
+// Source: c:@S@Graphic3d_Camera@F@DynamicType#1
 // Source: c:@S@Graphic3d_Camera@F@FOV2d#1
 // Source: c:@S@Graphic3d_Camera@F@FOVx#1
 // Source: c:@S@Graphic3d_Camera@F@FOVy#1
@@ -1112,6 +1331,7 @@
 // Source: c:@S@Graphic3d_Camera@F@NDC2dOffsetY#1
 // Source: c:@S@Graphic3d_Camera@F@OrthogonalizeUp#
 // Source: c:@S@Graphic3d_Camera@F@Project#&1$@S@gp_Pnt#1
+// Source: c:@S@Graphic3d_Camera@F@ProjectionState#1
 // Source: c:@S@Graphic3d_Camera@F@ProjectionType#1
 // Source: c:@S@Graphic3d_Camera@F@ResetCustomProjection#
 // Source: c:@S@Graphic3d_Camera@F@Scale#1
@@ -1130,19 +1350,26 @@
 // Source: c:@S@Graphic3d_Camera@F@SetZRange#d#d#
 // Source: c:@S@Graphic3d_Camera@F@SetZeroToOneDepth#b#
 // Source: c:@S@Graphic3d_Camera@F@UnProject#&1$@S@gp_Pnt#1
+// Source: c:@S@Graphic3d_Camera@F@WorldViewState#1
 // Source: c:@S@Graphic3d_Camera@F@ZFar#1
 // Source: c:@S@Graphic3d_Camera@F@ZFocus#1
 // Source: c:@S@Graphic3d_Camera@F@ZFocusType#1
 // Source: c:@S@Graphic3d_Camera@F@ZNear#1
+// Source: c:@S@Graphic3d_ClipPlane@F@CappingAspect#1
+// Source: c:@S@Graphic3d_ClipPlane@F@CappingCustomHatch#1
 // Source: c:@S@Graphic3d_ClipPlane@F@CappingHatch#1
 // Source: c:@S@Graphic3d_ClipPlane@F@CappingTexture#1
+// Source: c:@S@Graphic3d_ClipPlane@F@ChainNextPlane#1
 // Source: c:@S@Graphic3d_ClipPlane@F@ChainPreviousPlane#1
 // Source: c:@S@Graphic3d_ClipPlane@F@Clone#1
+// Source: c:@S@Graphic3d_ClipPlane@F@DynamicType#1
 // Source: c:@S@Graphic3d_ClipPlane@F@Graphic3d_ClipPlane#
 // Source: c:@S@Graphic3d_ClipPlane@F@IsCapping#1
 // Source: c:@S@Graphic3d_ClipPlane@F@IsChain#1
 // Source: c:@S@Graphic3d_ClipPlane@F@IsHatchOn#1
 // Source: c:@S@Graphic3d_ClipPlane@F@IsOn#1
+// Source: c:@S@Graphic3d_ClipPlane@F@MCountAspect#1
+// Source: c:@S@Graphic3d_ClipPlane@F@MCountEquation#1
 // Source: c:@S@Graphic3d_ClipPlane@F@NbChainNextPlanes#1
 // Source: c:@S@Graphic3d_ClipPlane@F@SetCapping#b#
 // Source: c:@S@Graphic3d_ClipPlane@F@SetCappingAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_AspectFillArea3d#
@@ -1161,6 +1388,7 @@
 // Source: c:@S@Graphic3d_ClipPlane@F@ToUseObjectShader#1
 // Source: c:@S@Graphic3d_ClipPlane@F@ToUseObjectTexture#1
 // Source: c:@S@Graphic3d_CubeMap@F@CurrentSide#1
+// Source: c:@S@Graphic3d_CubeMap@F@DynamicType#1
 // Source: c:@S@Graphic3d_CubeMap@F@HasMipmaps#1
 // Source: c:@S@Graphic3d_CubeMap@F@More#1
 // Source: c:@S@Graphic3d_CubeMap@F@Next#
@@ -1168,11 +1396,17 @@
 // Source: c:@S@Graphic3d_CubeMap@F@SetZInversion#b#
 // Source: c:@S@Graphic3d_CubeMap@F@ZIsInverted#1
 // Source: c:@S@Graphic3d_CubeMapPacked@F@CompressedValue#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
+// Source: c:@S@Graphic3d_CubeMapPacked@F@DynamicType#1
 // Source: c:@S@Graphic3d_CubeMapPacked@F@Value#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
 // Source: c:@S@Graphic3d_CubeMapSeparate@F@CompressedValue#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
+// Source: c:@S@Graphic3d_CubeMapSeparate@F@DynamicType#1
 // Source: c:@S@Graphic3d_CubeMapSeparate@F@GetImage#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
 // Source: c:@S@Graphic3d_CubeMapSeparate@F@IsDone#1
 // Source: c:@S@Graphic3d_CubeMapSeparate@F@Value#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
+// Source: c:@S@Graphic3d_DataStructureManager@F@DynamicType#1
+// Source: c:@S@Graphic3d_Flipper@F@DynamicType#1
+// Source: c:@S@Graphic3d_FrameStats@F@CounterValue#$@E@Graphic3d_FrameStatsCounter#1
+// Source: c:@S@Graphic3d_FrameStats@F@DynamicType#1
 // Source: c:@S@Graphic3d_FrameStats@F@FrameDuration#1
 // Source: c:@S@Graphic3d_FrameStats@F@FrameEnd#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CView#b#
 // Source: c:@S@Graphic3d_FrameStats@F@FrameRate#1
@@ -1186,15 +1420,20 @@
 // Source: c:@S@Graphic3d_FrameStats@F@SetUpdateInterval#d#
 // Source: c:@S@Graphic3d_FrameStats@F@TimerValue#$@E@Graphic3d_FrameStatsTimer#1
 // Source: c:@S@Graphic3d_FrameStats@F@UpdateInterval#1
+// Source: c:@S@Graphic3d_GraphicDriver@F@DynamicType#1
+// Source: c:@S@Graphic3d_GraphicDriver@F@GetDisplayConnection#1
 // Source: c:@S@Graphic3d_GraphicDriver@F@InquireLightLimit#1
 // Source: c:@S@Graphic3d_GraphicDriver@F@InquirePlaneLimit#1
 // Source: c:@S@Graphic3d_GraphicDriver@F@InquireViewLimit#1
 // Source: c:@S@Graphic3d_GraphicDriver@F@NewIdentification#
 // Source: c:@S@Graphic3d_GraphicDriver@F@RemoveIdentification#I#
+// Source: c:@S@Graphic3d_GraphicDriverFactory@F@DynamicType#1
 // Source: c:@S@Graphic3d_Group@F@AddPrimitiveArray#$@E@Graphic3d_TypeOfPrimitiveArray#&1$@N@opencascade@S@handle>#$@S@Graphic3d_IndexBuffer#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Buffer#&1$@N@opencascade@S@handle>#$@S@Graphic3d_BoundBuffer#b#
 // Source: c:@S@Graphic3d_Group@F@AddPrimitiveArray#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ArrayOfPrimitives#b#
 // Source: c:@S@Graphic3d_Group@F@AddText#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Text#b#
 // Source: c:@S@Graphic3d_Group@F@Clear#b#
+// Source: c:@S@Graphic3d_Group@F@DynamicType#1
+// Source: c:@S@Graphic3d_Group@F@Flipper#1
 // Source: c:@S@Graphic3d_Group@F@IsClosed#1
 // Source: c:@S@Graphic3d_Group@F@IsDeleted#1
 // Source: c:@S@Graphic3d_Group@F@IsEmpty#1
@@ -1203,13 +1442,17 @@
 // Source: c:@S@Graphic3d_Group@F@SetMinMaxValues#d#d#d#d#d#d#
 // Source: c:@S@Graphic3d_Group@F@SetTransformPersistence#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TransformPers#
 // Source: c:@S@Graphic3d_Group@F@Structure#1
+// Source: c:@S@Graphic3d_Group@F@TransformPersistence#1
+// Source: c:@S@Graphic3d_HatchStyle@F@DynamicType#1
 // Source: c:@S@Graphic3d_HatchStyle@F@Graphic3d_HatchStyle#$@E@Aspect_HatchStyle#
 // Source: c:@S@Graphic3d_HatchStyle@F@Graphic3d_HatchStyle#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
 // Source: c:@S@Graphic3d_HatchStyle@F@HatchType#1
+// Source: c:@S@Graphic3d_IndexBuffer@F@DynamicType#1
 // Source: c:@S@Graphic3d_IndexBuffer@F@Graphic3d_IndexBuffer#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#
 // Source: c:@S@Graphic3d_IndexBuffer@F@Index#I#1
 // Source: c:@S@Graphic3d_IndexBuffer@F@InitInt32#I#
 // Source: c:@S@Graphic3d_IndexBuffer@F@SetIndex#I#I#
+// Source: c:@S@Graphic3d_Layer@F@DynamicType#1
 // Source: c:@S@Graphic3d_Layer@F@InvalidateBVHData#
 // Source: c:@S@Graphic3d_Layer@F@InvalidateBoundingBox#1
 // Source: c:@S@Graphic3d_Layer@F@IsCulled#1
@@ -1222,6 +1465,7 @@
 // Source: c:@S@Graphic3d_Layer@F@considerZoomPersistenceObjects#I#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#I#I#1
 // Source: c:@S@Graphic3d_LightSet@F@Add#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#
 // Source: c:@S@Graphic3d_LightSet@F@Contains#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#1
+// Source: c:@S@Graphic3d_LightSet@F@DynamicType#1
 // Source: c:@S@Graphic3d_LightSet@F@Extent#1
 // Source: c:@S@Graphic3d_LightSet@F@Graphic3d_LightSet#
 // Source: c:@S@Graphic3d_LightSet@F@IsEmpty#1
@@ -1231,42 +1475,61 @@
 // Source: c:@S@Graphic3d_LightSet@F@NbEnabledLightsOfType#$@E@Graphic3d_TypeOfLightSource#1
 // Source: c:@S@Graphic3d_LightSet@F@NbLightsOfType#$@E@Graphic3d_TypeOfLightSource#1
 // Source: c:@S@Graphic3d_LightSet@F@Remove#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#
+// Source: c:@S@Graphic3d_LightSet@F@Revision#1
+// Source: c:@S@Graphic3d_LightSet@F@UpdateRevision#
 // Source: c:@S@Graphic3d_LightSet@F@Upper#1
+// Source: c:@S@Graphic3d_LightSet@F@Value#I#1
+// Source: c:@S@Graphic3d_MarkerImage@F@DynamicType#1
+// Source: c:@S@Graphic3d_MarkerImage@F@GetImage#
+// Source: c:@S@Graphic3d_MarkerImage@F@GetImageAlpha#
 // Source: c:@S@Graphic3d_MarkerImage@F@Graphic3d_MarkerImage#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#S0_#
 // Source: c:@S@Graphic3d_MarkerImage@F@IsColoredImage#1
+// Source: c:@S@Graphic3d_MediaTexture@F@DynamicType#1
+// Source: c:@S@Graphic3d_MediaTexture@F@Frame#1
 // Source: c:@S@Graphic3d_MediaTexture@F@GenerateNewId#
 // Source: c:@S@Graphic3d_MediaTexture@F@GetImage#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
 // Source: c:@S@Graphic3d_MediaTexture@F@SetFrame#&1$@N@opencascade@S@handle>#$@S@Media_Frame#
 // Source: c:@S@Graphic3d_MediaTextureSet@F@Duration#1
+// Source: c:@S@Graphic3d_MediaTextureSet@F@DynamicType#1
 // Source: c:@S@Graphic3d_MediaTextureSet@F@Graphic3d_MediaTextureSet#
 // Source: c:@S@Graphic3d_MediaTextureSet@F@IsFullRangeYUV#1
 // Source: c:@S@Graphic3d_MediaTextureSet@F@IsPlanarYUV#1
 // Source: c:@S@Graphic3d_MediaTextureSet@F@Notify#
+// Source: c:@S@Graphic3d_MediaTextureSet@F@PlayerContext#1
 // Source: c:@S@Graphic3d_MediaTextureSet@F@Progress#1
 // Source: c:@S@Graphic3d_MediaTextureSet@F@ShaderProgram#1
 // Source: c:@S@Graphic3d_MediaTextureSet@F@SwapFrames#
+// Source: c:@S@Graphic3d_MutableIndexBuffer@F@DynamicType#1
 // Source: c:@S@Graphic3d_MutableIndexBuffer@F@Graphic3d_MutableIndexBuffer#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#
 // Source: c:@S@Graphic3d_MutableIndexBuffer@F@Invalidate#
 // Source: c:@S@Graphic3d_MutableIndexBuffer@F@Invalidate#I#I#
 // Source: c:@S@Graphic3d_MutableIndexBuffer@F@IsMutable#1
 // Source: c:@S@Graphic3d_MutableIndexBuffer@F@Validate#
+// Source: c:@S@Graphic3d_PresentationAttributes@F@BasicFillAreaAspect#1
 // Source: c:@S@Graphic3d_PresentationAttributes@F@DisplayMode#1
+// Source: c:@S@Graphic3d_PresentationAttributes@F@DynamicType#1
 // Source: c:@S@Graphic3d_PresentationAttributes@F@Graphic3d_PresentationAttributes#
 // Source: c:@S@Graphic3d_PresentationAttributes@F@Method#1
 // Source: c:@S@Graphic3d_PresentationAttributes@F@SetBasicFillAreaAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_AspectFillArea3d#
 // Source: c:@S@Graphic3d_PresentationAttributes@F@SetDisplayMode#I#
 // Source: c:@S@Graphic3d_PresentationAttributes@F@SetMethod#$@E@Aspect_TypeOfHighlightMethod#
+// Source: c:@S@Graphic3d_PresentationAttributes@F@SetTransparency#f#
 // Source: c:@S@Graphic3d_PresentationAttributes@F@SetZLayer#I#
+// Source: c:@S@Graphic3d_PresentationAttributes@F@Transparency#1
 // Source: c:@S@Graphic3d_PresentationAttributes@F@ZLayer#1
 // Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@Append#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ClipPlane#
 // Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@Clear#
+// Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@DynamicType#1
+// Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@First#1
 // Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@Graphic3d_SequenceOfHClipPlane#
 // Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@IsEmpty#1
 // Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@Remove#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ClipPlane#
 // Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@SetOverrideGlobal#b#
 // Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@Size#1
 // Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@ToOverrideGlobal#1
+// Source: c:@S@Graphic3d_ShaderAttribute@F@DynamicType#1
 // Source: c:@S@Graphic3d_ShaderAttribute@F@Location#1
+// Source: c:@S@Graphic3d_ShaderManager@F@DynamicType#1
 // Source: c:@S@Graphic3d_ShaderManager@F@EnableGlslExtension#$@E@Graphic3d_GlslExtension#b#
 // Source: c:@S@Graphic3d_ShaderManager@F@GapiVersionMajor#1
 // Source: c:@S@Graphic3d_ShaderManager@F@GapiVersionMinor#1
@@ -1281,11 +1544,13 @@
 // Source: c:@S@Graphic3d_ShaderManager@F@ToEmulateDepthClamp#1
 // Source: c:@S@Graphic3d_ShaderManager@F@ToReverseDFdxSign#1
 // Source: c:@S@Graphic3d_ShaderManager@F@UseRedAlpha#1
+// Source: c:@S@Graphic3d_ShaderObject@F@DynamicType#1
 // Source: c:@S@Graphic3d_ShaderObject@F@IsDone#1
 // Source: c:@S@Graphic3d_ShaderObject@F@Type#1
 // Source: c:@S@Graphic3d_ShaderProgram@F@AttachShader#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ShaderObject#
 // Source: c:@S@Graphic3d_ShaderProgram@F@ClearVariables#
 // Source: c:@S@Graphic3d_ShaderProgram@F@DetachShader#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ShaderObject#
+// Source: c:@S@Graphic3d_ShaderProgram@F@DynamicType#1
 // Source: c:@S@Graphic3d_ShaderProgram@F@Graphic3d_ShaderProgram#
 // Source: c:@S@Graphic3d_ShaderProgram@F@HasAlphaTest#1
 // Source: c:@S@Graphic3d_ShaderProgram@F@HasDefaultSampler#1
@@ -1306,9 +1571,12 @@
 // Source: c:@S@Graphic3d_ShaderProgram@F@SetPBR#b#
 // Source: c:@S@Graphic3d_ShaderProgram@F@SetTextureSetBits#I#
 // Source: c:@S@Graphic3d_ShaderProgram@F@TextureSetBits#1
+// Source: c:@S@Graphic3d_ShaderVariable@F@DynamicType#1
 // Source: c:@S@Graphic3d_ShaderVariable@F@IsDone#1
+// Source: c:@S@Graphic3d_Structure@F@CStructure#1
 // Source: c:@S@Graphic3d_Structure@F@CalculateBoundBox#
 // Source: c:@S@Graphic3d_Structure@F@Clear#b#
+// Source: c:@S@Graphic3d_Structure@F@ClipPlanes#1
 // Source: c:@S@Graphic3d_Structure@F@Compute#
 // Source: c:@S@Graphic3d_Structure@F@ComputeVisual#1
 // Source: c:@S@Graphic3d_Structure@F@Connect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
@@ -1316,6 +1584,7 @@
 // Source: c:@S@Graphic3d_Structure@F@DisconnectAll#$@E@Graphic3d_TypeOfConnection#
 // Source: c:@S@Graphic3d_Structure@F@Display#
 // Source: c:@S@Graphic3d_Structure@F@DisplayPriority#1
+// Source: c:@S@Graphic3d_Structure@F@DynamicType#1
 // Source: c:@S@Graphic3d_Structure@F@Erase#
 // Source: c:@S@Graphic3d_Structure@F@GetZLayer#1
 // Source: c:@S@Graphic3d_Structure@F@Graphic3d_Structure#&1$@N@opencascade@S@handle>#$@S@Graphic3d_StructureManager#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
@@ -1325,6 +1594,7 @@
 // Source: c:@S@Graphic3d_Structure@F@GraphicTransform#&1$@N@opencascade@S@handle>#$@S@TopLoc_Datum3D#
 // Source: c:@S@Graphic3d_Structure@F@HLRValidation#1
 // Source: c:@S@Graphic3d_Structure@F@Highlight#&1$@N@opencascade@S@handle>#$@S@Graphic3d_PresentationAttributes#b#
+// Source: c:@S@Graphic3d_Structure@F@HighlightStyle#1
 // Source: c:@S@Graphic3d_Structure@F@Identification#1
 // Source: c:@S@Graphic3d_Structure@F@IsDeleted#1
 // Source: c:@S@Graphic3d_Structure@F@IsDisplayed#1
@@ -1357,18 +1627,23 @@
 // Source: c:@S@Graphic3d_Structure@F@SetVisual#$@E@Graphic3d_TypeOfStructure#
 // Source: c:@S@Graphic3d_Structure@F@SetZLayer#I#
 // Source: c:@S@Graphic3d_Structure@F@SetZoomLimit#d#d#
+// Source: c:@S@Graphic3d_Structure@F@TransformPersistence#1
+// Source: c:@S@Graphic3d_Structure@F@Transformation#1
 // Source: c:@S@Graphic3d_Structure@F@UnHighlight#
 // Source: c:@S@Graphic3d_Structure@F@Visual#1
 // Source: c:@S@Graphic3d_StructureManager@F@ChangeDisplayPriority#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#$@E@Graphic3d_DisplayPriority#S3_#
 // Source: c:@S@Graphic3d_StructureManager@F@ChangeZLayer#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#I#
 // Source: c:@S@Graphic3d_StructureManager@F@Display#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
+// Source: c:@S@Graphic3d_StructureManager@F@DynamicType#1
 // Source: c:@S@Graphic3d_StructureManager@F@Erase#
 // Source: c:@S@Graphic3d_StructureManager@F@Erase#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
 // Source: c:@S@Graphic3d_StructureManager@F@Graphic3d_StructureManager#&1$@N@opencascade@S@handle>#$@S@Graphic3d_GraphicDriver#
+// Source: c:@S@Graphic3d_StructureManager@F@GraphicDriver#1
 // Source: c:@S@Graphic3d_StructureManager@F@Highlight#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
 // Source: c:@S@Graphic3d_StructureManager@F@Identification#I#1
 // Source: c:@S@Graphic3d_StructureManager@F@IsDeviceLost#1
 // Source: c:@S@Graphic3d_StructureManager@F@MaxNumOfViews#1
+// Source: c:@S@Graphic3d_StructureManager@F@ObjectAffinity#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1
 // Source: c:@S@Graphic3d_StructureManager@F@ReCompute#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
 // Source: c:@S@Graphic3d_StructureManager@F@ReCompute#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#&1$@N@opencascade@S@handle>#$@S@Graphic3d_DataStructureManager#
 // Source: c:@S@Graphic3d_StructureManager@F@RecomputeStructures#
@@ -1380,32 +1655,51 @@
 // Source: c:@S@Graphic3d_StructureManager@F@UnHighlight#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
 // Source: c:@S@Graphic3d_StructureManager@F@UnregisterObject#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#
 // Source: c:@S@Graphic3d_StructureManager@F@Update#I#1
+// Source: c:@S@Graphic3d_Text@F@DynamicType#1
+// Source: c:@S@Graphic3d_Text@F@Graphic3d_Text#f#
 // Source: c:@S@Graphic3d_Text@F@HasOwnAnchorPoint#1
 // Source: c:@S@Graphic3d_Text@F@HasPlane#1
+// Source: c:@S@Graphic3d_Text@F@Height#1
 // Source: c:@S@Graphic3d_Text@F@HorizontalAlignment#1
+// Source: c:@S@Graphic3d_Text@F@Position#1
 // Source: c:@S@Graphic3d_Text@F@ResetOrientation#
+// Source: c:@S@Graphic3d_Text@F@SetHeight#f#
 // Source: c:@S@Graphic3d_Text@F@SetHorizontalAlignment#$@E@Graphic3d_HorizontalTextAlignment#
 // Source: c:@S@Graphic3d_Text@F@SetOwnAnchorPoint#b#
 // Source: c:@S@Graphic3d_Text@F@SetPosition#&1$@S@gp_Pnt#
 // Source: c:@S@Graphic3d_Text@F@SetTextFormatter#&1$@N@opencascade@S@handle>#$@S@Font_TextFormatter#
 // Source: c:@S@Graphic3d_Text@F@SetVerticalAlignment#$@E@Graphic3d_VerticalTextAlignment#
+// Source: c:@S@Graphic3d_Text@F@TextFormatter#1
 // Source: c:@S@Graphic3d_Text@F@VerticalAlignment#1
+// Source: c:@S@Graphic3d_Texture1D@F@DynamicType#1
 // Source: c:@S@Graphic3d_Texture1D@F@Name#1
+// Source: c:@S@Graphic3d_Texture1Dmanual@F@DynamicType#1
 // Source: c:@S@Graphic3d_Texture1Dmanual@F@Graphic3d_Texture1Dmanual#$@E@Graphic3d_NameOfTexture1D#
 // Source: c:@S@Graphic3d_Texture1Dmanual@F@Graphic3d_Texture1Dmanual#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
+// Source: c:@S@Graphic3d_Texture1Dsegment@F@DynamicType#1
 // Source: c:@S@Graphic3d_Texture1Dsegment@F@Graphic3d_Texture1Dsegment#$@E@Graphic3d_NameOfTexture1D#
 // Source: c:@S@Graphic3d_Texture1Dsegment@F@Graphic3d_Texture1Dsegment#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
+// Source: c:@S@Graphic3d_Texture1Dsegment@F@SetSegment#f#f#f#f#f#f#
+// Source: c:@S@Graphic3d_Texture2D@F@DynamicType#1
 // Source: c:@S@Graphic3d_Texture2D@F@Graphic3d_Texture2D#$@E@Graphic3d_NameOfTexture2D#
 // Source: c:@S@Graphic3d_Texture2D@F@Graphic3d_Texture2D#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
 // Source: c:@S@Graphic3d_Texture2D@F@Name#1
 // Source: c:@S@Graphic3d_Texture2D@F@SetImage#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
+// Source: c:@S@Graphic3d_Texture2Dplane@F@DynamicType#1
 // Source: c:@S@Graphic3d_Texture2Dplane@F@Graphic3d_Texture2Dplane#$@E@Graphic3d_NameOfTexture2D#
 // Source: c:@S@Graphic3d_Texture2Dplane@F@Graphic3d_Texture2Dplane#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
 // Source: c:@S@Graphic3d_Texture2Dplane@F@Plane#1
 // Source: c:@S@Graphic3d_Texture2Dplane@F@SetPlane#$@E@Graphic3d_NameOfTexturePlane#
+// Source: c:@S@Graphic3d_Texture2Dplane@F@SetRotation#f#
+// Source: c:@S@Graphic3d_Texture2Dplane@F@SetScaleS#f#
+// Source: c:@S@Graphic3d_Texture2Dplane@F@SetScaleT#f#
+// Source: c:@S@Graphic3d_Texture2Dplane@F@SetTranslateS#f#
+// Source: c:@S@Graphic3d_Texture2Dplane@F@SetTranslateT#f#
+// Source: c:@S@Graphic3d_Texture3D@F@DynamicType#1
 // Source: c:@S@Graphic3d_Texture3D@F@GetImage#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
 // Source: c:@S@Graphic3d_Texture3D@F@Graphic3d_Texture3D#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
 // Source: c:@S@Graphic3d_Texture3D@F@SetImage#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
+// Source: c:@S@Graphic3d_TextureEnv@F@DynamicType#1
 // Source: c:@S@Graphic3d_TextureEnv@F@Graphic3d_TextureEnv#$@E@Graphic3d_NameOfTextureEnv#
 // Source: c:@S@Graphic3d_TextureEnv@F@Graphic3d_TextureEnv#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
 // Source: c:@S@Graphic3d_TextureEnv@F@Name#1
@@ -1413,6 +1707,7 @@
 // Source: c:@S@Graphic3d_TextureMap@F@DisableModulate#
 // Source: c:@S@Graphic3d_TextureMap@F@DisableRepeat#
 // Source: c:@S@Graphic3d_TextureMap@F@DisableSmooth#
+// Source: c:@S@Graphic3d_TextureMap@F@DynamicType#1
 // Source: c:@S@Graphic3d_TextureMap@F@EnableModulate#
 // Source: c:@S@Graphic3d_TextureMap@F@EnableRepeat#
 // Source: c:@S@Graphic3d_TextureMap@F@EnableSmooth#
@@ -1422,12 +1717,15 @@
 // Source: c:@S@Graphic3d_TextureMap@F@SetAnisoFilter#$@E@Graphic3d_LevelOfTextureAnisotropy#
 // Source: c:@S@Graphic3d_TextureParams@F@AnisoFilter#1
 // Source: c:@S@Graphic3d_TextureParams@F@BaseLevel#1
+// Source: c:@S@Graphic3d_TextureParams@F@DynamicType#1
 // Source: c:@S@Graphic3d_TextureParams@F@Filter#1
 // Source: c:@S@Graphic3d_TextureParams@F@GenMode#1
 // Source: c:@S@Graphic3d_TextureParams@F@Graphic3d_TextureParams#
 // Source: c:@S@Graphic3d_TextureParams@F@IsModulate#1
 // Source: c:@S@Graphic3d_TextureParams@F@IsRepeat#1
 // Source: c:@S@Graphic3d_TextureParams@F@MaxLevel#1
+// Source: c:@S@Graphic3d_TextureParams@F@Rotation#1
+// Source: c:@S@Graphic3d_TextureParams@F@SamplerRevision#1
 // Source: c:@S@Graphic3d_TextureParams@F@SetAnisoFilter#$@E@Graphic3d_LevelOfTextureAnisotropy#
 // Source: c:@S@Graphic3d_TextureParams@F@SetFilter#$@E@Graphic3d_TypeOfTextureFilter#
 // Source: c:@S@Graphic3d_TextureParams@F@SetLevelsRange#I#I#
@@ -1435,16 +1733,21 @@
 // Source: c:@S@Graphic3d_TextureParams@F@SetRepeat#b#
 // Source: c:@S@Graphic3d_TextureParams@F@SetTextureUnit#$@E@Graphic3d_TextureUnit#
 // Source: c:@S@Graphic3d_TextureParams@F@TextureUnit#1
+// Source: c:@S@Graphic3d_TextureRoot@F@DynamicType#1
 // Source: c:@S@Graphic3d_TextureRoot@F@GetCompressedImage#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
 // Source: c:@S@Graphic3d_TextureRoot@F@GetImage#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
+// Source: c:@S@Graphic3d_TextureRoot@F@GetParams#1
 // Source: c:@S@Graphic3d_TextureRoot@F@HasMipmaps#1
 // Source: c:@S@Graphic3d_TextureRoot@F@IsColorMap#1
 // Source: c:@S@Graphic3d_TextureRoot@F@IsDone#1
 // Source: c:@S@Graphic3d_TextureRoot@F@IsTopDown#1
+// Source: c:@S@Graphic3d_TextureRoot@F@Revision#1
 // Source: c:@S@Graphic3d_TextureRoot@F@SetColorMap#b#
 // Source: c:@S@Graphic3d_TextureRoot@F@SetMipmapsGeneration#b#
 // Source: c:@S@Graphic3d_TextureRoot@F@Type#1
 // Source: c:@S@Graphic3d_TextureRoot@F@UpdateRevision#
+// Source: c:@S@Graphic3d_TextureSet@F@DynamicType#1
+// Source: c:@S@Graphic3d_TextureSet@F@First#1
 // Source: c:@S@Graphic3d_TextureSet@F@Graphic3d_TextureSet#
 // Source: c:@S@Graphic3d_TextureSet@F@Graphic3d_TextureSet#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureMap#
 // Source: c:@S@Graphic3d_TextureSet@F@Graphic3d_TextureSet#I#
@@ -1454,8 +1757,10 @@
 // Source: c:@S@Graphic3d_TextureSet@F@SetValue#I#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureMap#
 // Source: c:@S@Graphic3d_TextureSet@F@Size#1
 // Source: c:@S@Graphic3d_TextureSet@F@Upper#1
+// Source: c:@S@Graphic3d_TextureSet@F@Value#I#1
 // Source: c:@S@Graphic3d_TransformPers@F@AnchorPoint#1
 // Source: c:@S@Graphic3d_TransformPers@F@Corner2d#1
+// Source: c:@S@Graphic3d_TransformPers@F@DynamicType#1
 // Source: c:@S@Graphic3d_TransformPers@F@Flags#1
 // Source: c:@S@Graphic3d_TransformPers@F@Graphic3d_TransformPers#$@E@Graphic3d_TransModeFlags#
 // Source: c:@S@Graphic3d_TransformPers@F@Graphic3d_TransformPers#$@E@Graphic3d_TransModeFlags#&1$@S@gp_Pnt#
@@ -1468,17 +1773,24 @@
 // Source: c:@S@Graphic3d_TransformPers@F@SetCorner2d#$@E@Aspect_TypeOfTriedronPosition#
 // Source: c:@S@Graphic3d_TransformPers@F@SetPersistence#$@E@Graphic3d_TransModeFlags#&1$@S@gp_Pnt#
 // Source: c:@S@Graphic3d_TransformPers@F@persistentScale#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#I#I#1
+// Source: c:@S@Graphic3d_TransformPersScaledAbove@F@DynamicType#1
 // Source: c:@S@Graphic3d_TransformPersScaledAbove@F@Graphic3d_TransformPersScaledAbove#d#&1$@S@gp_Pnt#
 // Source: c:@S@Graphic3d_TransformPersScaledAbove@F@persistentScale#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#I#I#1
+// Source: c:@S@Graphic3d_ViewAffinity@F@DynamicType#1
 // Source: c:@S@Graphic3d_ViewAffinity@F@Graphic3d_ViewAffinity#
 // Source: c:@S@Graphic3d_ViewAffinity@F@IsVisible#I#1
 // Source: c:@S@Graphic3d_ViewAffinity@F@SetVisible#I#b#
 // Source: c:@S@Graphic3d_ViewAffinity@F@SetVisible#b#
 // Source: c:@S@Image_AlienPixMap@F@AdjustGamma#d#
 // Source: c:@S@Image_AlienPixMap@F@Clear#
+// Source: c:@S@Image_AlienPixMap@F@DynamicType#1
 // Source: c:@S@Image_AlienPixMap@F@Image_AlienPixMap#
+// Source: c:@S@Image_AlienPixMap@F@InitTrash#$@E@Image_Format#k#k#k#
 // Source: c:@S@Image_CompressedPixMap@F@BaseFormat#1
 // Source: c:@S@Image_CompressedPixMap@F@CompressedFormat#1
+// Source: c:@S@Image_CompressedPixMap@F@DynamicType#1
+// Source: c:@S@Image_CompressedPixMap@F@FaceBytes#1
+// Source: c:@S@Image_CompressedPixMap@F@FaceData#1
 // Source: c:@S@Image_CompressedPixMap@F@Image_CompressedPixMap#
 // Source: c:@S@Image_CompressedPixMap@F@IsCompleteMipMapSet#1
 // Source: c:@S@Image_CompressedPixMap@F@IsTopDown#1
@@ -1486,6 +1798,7 @@
 // Source: c:@S@Image_CompressedPixMap@F@SetBaseFormat#$@E@Image_Format#
 // Source: c:@S@Image_CompressedPixMap@F@SetCompleteMipMapSet#b#
 // Source: c:@S@Image_CompressedPixMap@F@SetCompressedFormat#$@E@Image_CompressedFormat#
+// Source: c:@S@Image_CompressedPixMap@F@SetFaceBytes#k#
 // Source: c:@S@Image_CompressedPixMap@F@SetFaceData#&1$@N@opencascade@S@handle>#$@S@NCollection_Buffer#
 // Source: c:@S@Image_CompressedPixMap@F@SetNbFaces#I#
 // Source: c:@S@Image_CompressedPixMap@F@SetSize#I#I#
@@ -1493,40 +1806,65 @@
 // Source: c:@S@Image_CompressedPixMap@F@SizeY#1
 // Source: c:@S@Image_Diff@F@ColorTolerance#1
 // Source: c:@S@Image_Diff@F@Compare#
+// Source: c:@S@Image_Diff@F@DynamicType#1
 // Source: c:@S@Image_Diff@F@Image_Diff#
 // Source: c:@S@Image_Diff@F@Init#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#S0_#b#
 // Source: c:@S@Image_Diff@F@IsBorderFilterOn#1
 // Source: c:@S@Image_Diff@F@SetBorderFilterOn#b#
 // Source: c:@S@Image_Diff@F@SetColorTolerance#d#
 // Source: c:@S@Image_PixMap@F@Clear#
+// Source: c:@S@Image_PixMap@F@Depth#1
+// Source: c:@S@Image_PixMap@F@DynamicType#1
 // Source: c:@S@Image_PixMap@F@Format#1
+// Source: c:@S@Image_PixMap@F@Height#1
 // Source: c:@S@Image_PixMap@F@Image_PixMap#
+// Source: c:@S@Image_PixMap@F@InitZero#$@E@Image_Format#k#k#k#c#
 // Source: c:@S@Image_PixMap@F@IsEmpty#1
 // Source: c:@S@Image_PixMap@F@IsTopDown#1
+// Source: c:@S@Image_PixMap@F@MaxRowAligmentBytes#1
 // Source: c:@S@Image_PixMap@F@Ratio#1
+// Source: c:@S@Image_PixMap@F@RowExtraBytes#1
 // Source: c:@S@Image_PixMap@F@SetFormat#$@E@Image_Format#
 // Source: c:@S@Image_PixMap@F@SetTopDown#b#
+// Source: c:@S@Image_PixMap@F@SizeBytes#1
+// Source: c:@S@Image_PixMap@F@SizePixelBytes#1
+// Source: c:@S@Image_PixMap@F@SizeRowBytes#1
+// Source: c:@S@Image_PixMap@F@SizeSliceBytes#1
+// Source: c:@S@Image_PixMap@F@SizeZ#1
+// Source: c:@S@Image_PixMap@F@TopDownInc#1
+// Source: c:@S@Image_PixMap@F@Width#1
+// Source: c:@S@Image_PixMapData@F@DynamicType#1
 // Source: c:@S@Image_PixMapData@F@Image_PixMapData#
+// Source: c:@S@Image_PixMapData@F@MaxRowAligmentBytes#1
 // Source: c:@S@Image_PixMapData@F@SetTopDown#b#
 // Source: c:@S@Image_PixMapData@F@ZeroData#
 // Source: c:@S@Image_SupportedFormats@F@Add#$@E@Image_CompressedFormat#
 // Source: c:@S@Image_SupportedFormats@F@Add#$@E@Image_Format#
 // Source: c:@S@Image_SupportedFormats@F@Clear#
+// Source: c:@S@Image_SupportedFormats@F@DynamicType#1
 // Source: c:@S@Image_SupportedFormats@F@HasCompressed#1
 // Source: c:@S@Image_SupportedFormats@F@Image_SupportedFormats#
 // Source: c:@S@Image_SupportedFormats@F@IsSupported#$@E@Image_CompressedFormat#1
 // Source: c:@S@Image_SupportedFormats@F@IsSupported#$@E@Image_Format#1
+// Source: c:@S@Image_Texture@F@DataBuffer#1
+// Source: c:@S@Image_Texture@F@DynamicType#1
+// Source: c:@S@Image_Texture@F@FileLength#1
+// Source: c:@S@Image_Texture@F@FileOffset#1
 // Source: c:@S@Image_Texture@F@ReadCompressedImage#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#1
 // Source: c:@S@Image_Texture@F@ReadImage#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#1
 // Source: c:@S@Image_VideoRecorder@F@Close#
+// Source: c:@S@Image_VideoRecorder@F@DynamicType#1
+// Source: c:@S@Image_VideoRecorder@F@FrameCount#1
 // Source: c:@S@Image_VideoRecorder@F@Image_VideoRecorder#
 // Source: c:@S@Image_VideoRecorder@F@PushFrame#
 // Source: c:@S@Media_BufferPool@F@BufferSize#1
+// Source: c:@S@Media_BufferPool@F@DynamicType#1
 // Source: c:@S@Media_BufferPool@F@Init#I#
 // Source: c:@S@Media_BufferPool@F@Media_BufferPool#
 // Source: c:@S@Media_BufferPool@F@Release#
 // Source: c:@S@Media_CodecContext@F@CanProcessPacket#&1$@N@opencascade@S@handle>#$@S@Media_Packet#1
 // Source: c:@S@Media_CodecContext@F@Close#
+// Source: c:@S@Media_CodecContext@F@DynamicType#1
 // Source: c:@S@Media_CodecContext@F@Flush#
 // Source: c:@S@Media_CodecContext@F@Media_CodecContext#
 // Source: c:@S@Media_CodecContext@F@ReceiveFrame#&1$@N@opencascade@S@handle>#$@S@Media_Frame#
@@ -1536,10 +1874,15 @@
 // Source: c:@S@Media_CodecContext@F@StreamIndex#1
 // Source: c:@S@Media_FormatContext@F@Close#
 // Source: c:@S@Media_FormatContext@F@Duration#1
+// Source: c:@S@Media_FormatContext@F@DynamicType#1
 // Source: c:@S@Media_FormatContext@F@Media_FormatContext#
+// Source: c:@S@Media_FormatContext@F@NbSteams#1
 // Source: c:@S@Media_FormatContext@F@PtsStartBase#1
 // Source: c:@S@Media_FormatContext@F@ReadPacket#&1$@N@opencascade@S@handle>#$@S@Media_Packet#
 // Source: c:@S@Media_FormatContext@F@Seek#d#b#
+// Source: c:@S@Media_FormatContext@F@SeekStream#i#d#b#
+// Source: c:@S@Media_Frame@F@BestEffortTimestamp#1
+// Source: c:@S@Media_Frame@F@DynamicType#1
 // Source: c:@S@Media_Frame@F@Format#1
 // Source: c:@S@Media_Frame@F@InitWrapper#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
 // Source: c:@S@Media_Frame@F@IsEmpty#1
@@ -1547,29 +1890,38 @@
 // Source: c:@S@Media_Frame@F@IsLocked#1
 // Source: c:@S@Media_Frame@F@LineSize#I#1
 // Source: c:@S@Media_Frame@F@Media_Frame#
+// Source: c:@S@Media_Frame@F@PixelAspectRatio#1
 // Source: c:@S@Media_Frame@F@Pts#1
 // Source: c:@S@Media_Frame@F@SetLocked#b#
+// Source: c:@S@Media_Frame@F@SetPixelAspectRatio#f#
 // Source: c:@S@Media_Frame@F@SetPts#d#
 // Source: c:@S@Media_Frame@F@SizeX#1
 // Source: c:@S@Media_Frame@F@SizeY#1
 // Source: c:@S@Media_Frame@F@Unref#
+// Source: c:@S@Media_Packet@F@Dts#1
+// Source: c:@S@Media_Packet@F@Duration#1
 // Source: c:@S@Media_Packet@F@DurationSeconds#1
+// Source: c:@S@Media_Packet@F@DynamicType#1
 // Source: c:@S@Media_Packet@F@IsKeyFrame#1
 // Source: c:@S@Media_Packet@F@Media_Packet#
+// Source: c:@S@Media_Packet@F@Pts#1
 // Source: c:@S@Media_Packet@F@SetDurationSeconds#d#
 // Source: c:@S@Media_Packet@F@SetKeyFrame#
 // Source: c:@S@Media_Packet@F@Size#1
 // Source: c:@S@Media_Packet@F@StreamIndex#1
 // Source: c:@S@Media_Packet@F@Unref#
+// Source: c:@S@Media_PlayerContext@F@DynamicType#1
 // Source: c:@S@Media_PlayerContext@F@Pause#
 // Source: c:@S@Media_PlayerContext@F@Resume#
 // Source: c:@S@Media_PlayerContext@F@Seek#d#
 // Source: c:@S@Media_PlayerContext@F@SetForceRgb#b#
 // Source: c:@S@Media_PlayerContext@F@ToForceRgb#1
 // Source: c:@S@Media_Scaler@F@Convert#&1$@N@opencascade@S@handle>#$@S@Media_Frame#S0_#
+// Source: c:@S@Media_Scaler@F@DynamicType#1
 // Source: c:@S@Media_Scaler@F@IsValid#1
 // Source: c:@S@Media_Scaler@F@Media_Scaler#
 // Source: c:@S@Media_Scaler@F@Release#
+// Source: c:@S@Media_Timer@F@DynamicType#1
 // Source: c:@S@Media_Timer@F@ElapsedTime#1
 // Source: c:@S@Media_Timer@F@IsStarted#1
 // Source: c:@S@Media_Timer@F@Media_Timer#
@@ -1581,18 +1933,23 @@
 // Source: c:@S@Media_Timer@F@Stop#
 // Source: c:@S@MeshVS_CommonSensitiveEntity@F@Center#I#I#1
 // Source: c:@S@MeshVS_CommonSensitiveEntity@F@CenterOfGeometry#1
+// Source: c:@S@MeshVS_CommonSensitiveEntity@F@DynamicType#1
 // Source: c:@S@MeshVS_CommonSensitiveEntity@F@GetConnected#
 // Source: c:@S@MeshVS_CommonSensitiveEntity@F@MeshVS_CommonSensitiveEntity#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@N@opencascade@S@handle>#$@S@MeshVS_Mesh#$@E@MeshVS_MeshSelectionMethod#
 // Source: c:@S@MeshVS_CommonSensitiveEntity@F@NbSubElements#1
 // Source: c:@S@MeshVS_CommonSensitiveEntity@F@Size#1
 // Source: c:@S@MeshVS_CommonSensitiveEntity@F@Swap#I#I#
+// Source: c:@S@MeshVS_DataSource3D@F@DynamicType#1
+// Source: c:@S@MeshVS_DataSource@F@DynamicType#1
 // Source: c:@S@MeshVS_DataSource@F@IsAdvancedSelectionEnabled#1
+// Source: c:@S@MeshVS_DeformedDataSource@F@DynamicType#1
 // Source: c:@S@MeshVS_DeformedDataSource@F@GetMagnify#1
 // Source: c:@S@MeshVS_DeformedDataSource@F@GetNonDeformedDataSource#1
 // Source: c:@S@MeshVS_DeformedDataSource@F@MeshVS_DeformedDataSource#&1$@N@opencascade@S@handle>#$@S@MeshVS_DataSource#d#
 // Source: c:@S@MeshVS_DeformedDataSource@F@SetMagnify#d#
 // Source: c:@S@MeshVS_DeformedDataSource@F@SetNonDeformedDataSource#&1$@N@opencascade@S@handle>#$@S@MeshVS_DataSource#
 // Source: c:@S@MeshVS_Drawer@F@Assign#&1$@N@opencascade@S@handle>#$@S@MeshVS_Drawer#
+// Source: c:@S@MeshVS_Drawer@F@DynamicType#1
 // Source: c:@S@MeshVS_Drawer@F@RemoveAsciiString#I#
 // Source: c:@S@MeshVS_Drawer@F@RemoveBoolean#I#
 // Source: c:@S@MeshVS_Drawer@F@RemoveColor#I#
@@ -1605,10 +1962,12 @@
 // Source: c:@S@MeshVS_DummySensitiveEntity@F@BVH#
 // Source: c:@S@MeshVS_DummySensitiveEntity@F@CenterOfGeometry#1
 // Source: c:@S@MeshVS_DummySensitiveEntity@F@Clear#
+// Source: c:@S@MeshVS_DummySensitiveEntity@F@DynamicType#1
 // Source: c:@S@MeshVS_DummySensitiveEntity@F@HasInitLocation#1
 // Source: c:@S@MeshVS_DummySensitiveEntity@F@MeshVS_DummySensitiveEntity#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#
 // Source: c:@S@MeshVS_DummySensitiveEntity@F@NbSubElements#1
 // Source: c:@S@MeshVS_DummySensitiveEntity@F@ToBuildBVH#1
+// Source: c:@S@MeshVS_ElementalColorPrsBuilder@F@DynamicType#1
 // Source: c:@S@MeshVS_ElementalColorPrsBuilder@F@HasColors1#1
 // Source: c:@S@MeshVS_ElementalColorPrsBuilder@F@HasColors2#1
 // Source: c:@S@MeshVS_ElementalColorPrsBuilder@F@MeshVS_ElementalColorPrsBuilder#&1$@N@opencascade@S@handle>#$@S@MeshVS_Mesh#&1I#&1$@N@opencascade@S@handle>#$@S@MeshVS_DataSource#I#S3_#
@@ -1616,6 +1975,7 @@
 // Source: c:@S@MeshVS_Mesh@F@AddBuilder#&1$@N@opencascade@S@handle>#$@S@MeshVS_PrsBuilder#b#
 // Source: c:@S@MeshVS_Mesh@F@ClearSelected#
 // Source: c:@S@MeshVS_Mesh@F@ComputeSelection#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Selection#I#
+// Source: c:@S@MeshVS_Mesh@F@DynamicType#1
 // Source: c:@S@MeshVS_Mesh@F@FindBuilder#&1$@N@opencascade@S@handle>#$@S@Standard_Type#1
 // Source: c:@S@MeshVS_Mesh@F@GetBuilder#I#1
 // Source: c:@S@MeshVS_Mesh@F@GetBuilderById#I#1
@@ -1623,8 +1983,11 @@
 // Source: c:@S@MeshVS_Mesh@F@GetDataSource#1
 // Source: c:@S@MeshVS_Mesh@F@GetDrawer#1
 // Source: c:@S@MeshVS_Mesh@F@GetFreeId#1
+// Source: c:@S@MeshVS_Mesh@F@GetHiddenElems#1
+// Source: c:@S@MeshVS_Mesh@F@GetHiddenNodes#1
 // Source: c:@S@MeshVS_Mesh@F@GetHilighter#1
 // Source: c:@S@MeshVS_Mesh@F@GetMeshSelMethod#1
+// Source: c:@S@MeshVS_Mesh@F@GetSelectableNodes#1
 // Source: c:@S@MeshVS_Mesh@F@HilightOwnerWithColor#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#
 // Source: c:@S@MeshVS_Mesh@F@IsHiddenElem#I#1
 // Source: c:@S@MeshVS_Mesh@F@IsHiddenNode#I#1
@@ -1645,6 +2008,7 @@
 // Source: c:@S@MeshVS_Mesh@F@SetSelectableNodes#&1$@N@opencascade@S@handle>#$@S@TColStd_HPackedMapOfInteger#
 // Source: c:@S@MeshVS_Mesh@F@UpdateSelectableNodes#
 // Source: c:@S@MeshVS_MeshEntityOwner@F@Clear#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
+// Source: c:@S@MeshVS_MeshEntityOwner@F@DynamicType#1
 // Source: c:@S@MeshVS_MeshEntityOwner@F@HilightWithColor#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#I#
 // Source: c:@S@MeshVS_MeshEntityOwner@F@ID#1
 // Source: c:@S@MeshVS_MeshEntityOwner@F@IsGroup#1
@@ -1653,11 +2017,19 @@
 // Source: c:@S@MeshVS_MeshEntityOwner@F@Unhilight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@MeshVS_MeshOwner@F@AddSelectedEntities#&1$@N@opencascade@S@handle>#$@S@TColStd_HPackedMapOfInteger#S0_#
 // Source: c:@S@MeshVS_MeshOwner@F@ClearSelectedEntities#
+// Source: c:@S@MeshVS_MeshOwner@F@DynamicType#1
+// Source: c:@S@MeshVS_MeshOwner@F@GetDataSource#1
+// Source: c:@S@MeshVS_MeshOwner@F@GetDetectedElements#1
+// Source: c:@S@MeshVS_MeshOwner@F@GetDetectedNodes#1
+// Source: c:@S@MeshVS_MeshOwner@F@GetSelectedElements#1
+// Source: c:@S@MeshVS_MeshOwner@F@GetSelectedNodes#1
 // Source: c:@S@MeshVS_MeshOwner@F@HilightWithColor#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#I#
 // Source: c:@S@MeshVS_MeshOwner@F@IsForcedHilight#1
 // Source: c:@S@MeshVS_MeshOwner@F@SetDetectedEntities#&1$@N@opencascade@S@handle>#$@S@TColStd_HPackedMapOfInteger#S0_#
 // Source: c:@S@MeshVS_MeshOwner@F@Unhilight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
+// Source: c:@S@MeshVS_MeshPrsBuilder@F@DynamicType#1
 // Source: c:@S@MeshVS_MeshPrsBuilder@F@MeshVS_MeshPrsBuilder#&1$@N@opencascade@S@handle>#$@S@MeshVS_Mesh#&1I#&1$@N@opencascade@S@handle>#$@S@MeshVS_DataSource#I#S3_#
+// Source: c:@S@MeshVS_NodalColorPrsBuilder@F@DynamicType#1
 // Source: c:@S@MeshVS_NodalColorPrsBuilder@F@GetTextureCoord#I#
 // Source: c:@S@MeshVS_NodalColorPrsBuilder@F@HasColors#1
 // Source: c:@S@MeshVS_NodalColorPrsBuilder@F@IsUseTexture#1
@@ -1665,6 +2037,7 @@
 // Source: c:@S@MeshVS_NodalColorPrsBuilder@F@SetTextureCoord#I#d#
 // Source: c:@S@MeshVS_NodalColorPrsBuilder@F@UseTexture#b#
 // Source: c:@S@MeshVS_PrsBuilder@F@CustomSensitiveEntity#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#I#1
+// Source: c:@S@MeshVS_PrsBuilder@F@DynamicType#1
 // Source: c:@S@MeshVS_PrsBuilder@F@GetDataSource#1
 // Source: c:@S@MeshVS_PrsBuilder@F@GetDrawer#1
 // Source: c:@S@MeshVS_PrsBuilder@F@GetFlags#1
@@ -1677,50 +2050,73 @@
 // Source: c:@S@MeshVS_PrsBuilder@F@SetExcluding#b#
 // Source: c:@S@MeshVS_PrsBuilder@F@SetPresentationManager#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#
 // Source: c:@S@MeshVS_PrsBuilder@F@TestFlags#I#1
+// Source: c:@S@MeshVS_SensitiveFace@F@DynamicType#1
 // Source: c:@S@MeshVS_SensitiveMesh@F@CenterOfGeometry#1
+// Source: c:@S@MeshVS_SensitiveMesh@F@DynamicType#1
 // Source: c:@S@MeshVS_SensitiveMesh@F@GetConnected#
 // Source: c:@S@MeshVS_SensitiveMesh@F@GetMode#1
 // Source: c:@S@MeshVS_SensitiveMesh@F@MeshVS_SensitiveMesh#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#I#
 // Source: c:@S@MeshVS_SensitiveMesh@F@NbSubElements#1
 // Source: c:@S@MeshVS_SensitivePolyhedron@F@CenterOfGeometry#1
+// Source: c:@S@MeshVS_SensitivePolyhedron@F@DynamicType#1
 // Source: c:@S@MeshVS_SensitivePolyhedron@F@GetConnected#
 // Source: c:@S@MeshVS_SensitivePolyhedron@F@NbSubElements#1
 // Source: c:@S@MeshVS_SensitiveQuad@F@CenterOfGeometry#1
+// Source: c:@S@MeshVS_SensitiveQuad@F@DynamicType#1
 // Source: c:@S@MeshVS_SensitiveQuad@F@GetConnected#
 // Source: c:@S@MeshVS_SensitiveQuad@F@MeshVS_SensitiveQuad#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@S@gp_Pnt#S3_#S3_#S3_#
 // Source: c:@S@MeshVS_SensitiveQuad@F@NbSubElements#1
+// Source: c:@S@MeshVS_SensitiveSegment@F@DynamicType#1
 // Source: c:@S@MeshVS_SensitiveSegment@F@MeshVS_SensitiveSegment#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@S@gp_Pnt#S3_#
+// Source: c:@S@MeshVS_TextPrsBuilder@F@DynamicType#1
 // Source: c:@S@MeshVS_TextPrsBuilder@F@HasTexts#b#1
+// Source: c:@S@MeshVS_VectorPrsBuilder@F@DynamicType#1
 // Source: c:@S@MeshVS_VectorPrsBuilder@F@HasVectors#b#1
 // Source: c:@S@MeshVS_VectorPrsBuilder@F@SetSimplePrsMode#b#
 // Source: c:@S@MeshVS_VectorPrsBuilder@F@SetSimplePrsParams#d#d#d#
 // Source: c:@S@OpenGl_Buffer@F@Bind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#1
 // Source: c:@S@OpenGl_Buffer@F@Create#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_Buffer@F@DynamicType#1
+// Source: c:@S@OpenGl_Buffer@F@EstimatedDataSize#1
+// Source: c:@S@OpenGl_Buffer@F@GetComponentsNb#1
+// Source: c:@S@OpenGl_Buffer@F@GetDataType#1
 // Source: c:@S@OpenGl_Buffer@F@GetElemsNb#1
 // Source: c:@S@OpenGl_Buffer@F@IsValid#1
 // Source: c:@S@OpenGl_Buffer@F@IsVirtual#1
 // Source: c:@S@OpenGl_Buffer@F@SetElemsNb#I#
 // Source: c:@S@OpenGl_Buffer@F@Unbind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#1
+// Source: c:@S@OpenGl_CappingPlaneResource@F@DynamicType#1
+// Source: c:@S@OpenGl_CappingPlaneResource@F@EstimatedDataSize#1
 // Source: c:@S@OpenGl_CappingPlaneResource@F@OpenGl_CappingPlaneResource#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ClipPlane#
+// Source: c:@S@OpenGl_CappingPlaneResource@F@Plane#1
 // Source: c:@S@OpenGl_CappingPlaneResource@F@Update#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Aspects#
+// Source: c:@S@OpenGl_Caps@F@DynamicType#1
 // Source: c:@S@OpenGl_Caps@F@OpenGl_Caps#
+// Source: c:@S@OpenGl_Context@F@ActiveProgram#1
+// Source: c:@S@OpenGl_Context@F@ActiveTextures#1
 // Source: c:@S@OpenGl_Context@F@AllowSampleAlphaToCoverage#1
 // Source: c:@S@OpenGl_Context@F@ApplyModelViewMatrix#
 // Source: c:@S@OpenGl_Context@F@ApplyModelWorldMatrix#
 // Source: c:@S@OpenGl_Context@F@ApplyProjectionMatrix#
 // Source: c:@S@OpenGl_Context@F@ApplyWorldViewMatrix#
+// Source: c:@S@OpenGl_Context@F@AvailableMemory#1
 // Source: c:@S@OpenGl_Context@F@BindDefaultVao#
 // Source: c:@S@OpenGl_Context@F@BindProgram#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderProgram#
 // Source: c:@S@OpenGl_Context@F@BindTextures#&1$@N@opencascade@S@handle>#$@S@OpenGl_TextureSet#
 // Source: c:@S@OpenGl_Context@F@BindTextures#&1$@N@opencascade@S@handle>#$@S@OpenGl_TextureSet#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderProgram#
+// Source: c:@S@OpenGl_Context@F@Camera#1
 // Source: c:@S@OpenGl_Context@F@ColorMask#1
+// Source: c:@S@OpenGl_Context@F@DefaultFrameBuffer#1
 // Source: c:@S@OpenGl_Context@F@DepthPeelingDepthTexUnit#1
 // Source: c:@S@OpenGl_Context@F@DepthPeelingFrontColorTexUnit#1
 // Source: c:@S@OpenGl_Context@F@DisableFeatures#1
 // Source: c:@S@OpenGl_Context@F@DrawBuffer#I#1
+// Source: c:@S@OpenGl_Context@F@DynamicType#1
 // Source: c:@S@OpenGl_Context@F@EnableFeatures#1
+// Source: c:@S@OpenGl_Context@F@ExcludeMessage#i#i#
 // Source: c:@S@OpenGl_Context@F@FaceCulling#1
 // Source: c:@S@OpenGl_Context@F@FetchState#
+// Source: c:@S@OpenGl_Context@F@FrameStats#1
 // Source: c:@S@OpenGl_Context@F@GraphicsLibrary#1
 // Source: c:@S@OpenGl_Context@F@HasPBR#1
 // Source: c:@S@OpenGl_Context@F@HasRayTracing#1
@@ -1732,6 +2128,7 @@
 // Source: c:@S@OpenGl_Context@F@HasStereoBuffers#1
 // Source: c:@S@OpenGl_Context@F@HasTextureBaseLevel#1
 // Source: c:@S@OpenGl_Context@F@HasTextureMultisampling#1
+// Source: c:@S@OpenGl_Context@F@IncludeMessage#i#i#
 // Source: c:@S@OpenGl_Context@F@Init#b#
 // Source: c:@S@OpenGl_Context@F@IsCurrent#1
 // Source: c:@S@OpenGl_Context@F@IsDebugContext#1
@@ -1744,6 +2141,8 @@
 // Source: c:@S@OpenGl_Context@F@IsValid#1
 // Source: c:@S@OpenGl_Context@F@IsWindowDeepColor#1
 // Source: c:@S@OpenGl_Context@F@IsWindowSRGB#1
+// Source: c:@S@OpenGl_Context@F@LineFeather#1
+// Source: c:@S@OpenGl_Context@F@LineWidthScale#1
 // Source: c:@S@OpenGl_Context@F@MakeCurrent#
 // Source: c:@S@OpenGl_Context@F@MaxClipPlanes#1
 // Source: c:@S@OpenGl_Context@F@MaxColorAttachments#1
@@ -1755,6 +2154,7 @@
 // Source: c:@S@OpenGl_Context@F@MaxMsaaSamples#1
 // Source: c:@S@OpenGl_Context@F@MaxTextureSize#1
 // Source: c:@S@OpenGl_Context@F@MaxTextureUnitsFFP#1
+// Source: c:@S@OpenGl_Context@F@Messenger#1
 // Source: c:@S@OpenGl_Context@F@OpenGl_Context#&1$@N@opencascade@S@handle>#$@S@OpenGl_Caps#
 // Source: c:@S@OpenGl_Context@F@PBRDiffIBLMapSHTexUnit#1
 // Source: c:@S@OpenGl_Context@F@PBREnvLUTTexUnit#1
@@ -1763,7 +2163,11 @@
 // Source: c:@S@OpenGl_Context@F@PolygonMode#1
 // Source: c:@S@OpenGl_Context@F@ReadBuffer#
 // Source: c:@S@OpenGl_Context@F@ReleaseDelayed#
+// Source: c:@S@OpenGl_Context@F@RenderScale#1
+// Source: c:@S@OpenGl_Context@F@RenderScaleInv#1
 // Source: c:@S@OpenGl_Context@F@ResetErrors#b#
+// Source: c:@S@OpenGl_Context@F@Resolution#1
+// Source: c:@S@OpenGl_Context@F@ResolutionRatio#1
 // Source: c:@S@OpenGl_Context@F@SampleAlphaToCoverage#1
 // Source: c:@S@OpenGl_Context@F@SetAllowSampleAlphaToCoverage#b#
 // Source: c:@S@OpenGl_Context@F@SetCamera#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
@@ -1775,20 +2179,30 @@
 // Source: c:@S@OpenGl_Context@F@SetFrameBufferSRGB#b#b#
 // Source: c:@S@OpenGl_Context@F@SetFrameStats#&1$@N@opencascade@S@handle>#$@S@OpenGl_FrameStats#
 // Source: c:@S@OpenGl_Context@F@SetGlNormalizeEnabled#b#
+// Source: c:@S@OpenGl_Context@F@SetLineFeather#f#
+// Source: c:@S@OpenGl_Context@F@SetLineStipple#f#s#
+// Source: c:@S@OpenGl_Context@F@SetLineStipple#s#
+// Source: c:@S@OpenGl_Context@F@SetLineWidth#f#
+// Source: c:@S@OpenGl_Context@F@SetPointSize#f#
 // Source: c:@S@OpenGl_Context@F@SetPointSpriteOrigin#
 // Source: c:@S@OpenGl_Context@F@SetPolygonHatchEnabled#b#
 // Source: c:@S@OpenGl_Context@F@SetPolygonHatchStyle#&1$@N@opencascade@S@handle>#$@S@Graphic3d_HatchStyle#
 // Source: c:@S@OpenGl_Context@F@SetPolygonMode#I#
 // Source: c:@S@OpenGl_Context@F@SetReadBuffer#I#
 // Source: c:@S@OpenGl_Context@F@SetReadDrawBuffer#I#
+// Source: c:@S@OpenGl_Context@F@SetResolution#i#f#f#
+// Source: c:@S@OpenGl_Context@F@SetResolutionRatio#f#
 // Source: c:@S@OpenGl_Context@F@SetSampleAlphaToCoverage#b#
 // Source: c:@S@OpenGl_Context@F@SetShadeModel#$@E@Graphic3d_TypeOfShadingModel#
 // Source: c:@S@OpenGl_Context@F@SetSwapInterval#I#
 // Source: c:@S@OpenGl_Context@F@SetTextureMatrix#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureParams#b#
+// Source: c:@S@OpenGl_Context@F@SetTypeOfLine#$@E@Aspect_TypeOfLine#f#
 // Source: c:@S@OpenGl_Context@F@SetWindowSRGB#b#
+// Source: c:@S@OpenGl_Context@F@ShaderManager#1
 // Source: c:@S@OpenGl_Context@F@ShadowMapTexUnit#1
 // Source: c:@S@OpenGl_Context@F@Share#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_Context@F@SpriteTextureUnit#1
+// Source: c:@S@OpenGl_Context@F@SupportedTextureFormats#1
 // Source: c:@S@OpenGl_Context@F@SwapBuffers#
 // Source: c:@S@OpenGl_Context@F@TextureWrapClamp#1
 // Source: c:@S@OpenGl_Context@F@ToCullBackFaces#1
@@ -1798,15 +2212,30 @@
 // Source: c:@S@OpenGl_Context@F@VersionMinor#1
 // Source: c:@S@OpenGl_Context@F@forcedRelease#
 // Source: c:@S@OpenGl_DepthPeeling@F@AttachDepthTexture#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#&1$@N@opencascade@S@handle>#$@S@OpenGl_Texture#
+// Source: c:@S@OpenGl_DepthPeeling@F@BlendBackFboOit#1
 // Source: c:@S@OpenGl_DepthPeeling@F@DetachDepthTexture#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_DepthPeeling@F@DynamicType#1
+// Source: c:@S@OpenGl_DepthPeeling@F@EstimatedDataSize#1
 // Source: c:@S@OpenGl_DepthPeeling@F@OpenGl_DepthPeeling#
+// Source: c:@S@OpenGl_Font@F@Ascender#1
+// Source: c:@S@OpenGl_Font@F@Descender#1
+// Source: c:@S@OpenGl_Font@F@DynamicType#1
+// Source: c:@S@OpenGl_Font@F@EstimatedDataSize#1
+// Source: c:@S@OpenGl_Font@F@FTFont#1
 // Source: c:@S@OpenGl_Font@F@Init#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_Font@F@IsValid#1
+// Source: c:@S@OpenGl_Font@F@Texture#1
 // Source: c:@S@OpenGl_Font@F@WasInitialized#1
 // Source: c:@S@OpenGl_FrameBuffer@F@BindBuffer#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_FrameBuffer@F@BindDrawBuffer#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_FrameBuffer@F@BindReadBuffer#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_FrameBuffer@F@ChangeViewport#I#I#
+// Source: c:@S@OpenGl_FrameBuffer@F@ColorRenderBuffer#1
+// Source: c:@S@OpenGl_FrameBuffer@F@ColorTexture#I#1
+// Source: c:@S@OpenGl_FrameBuffer@F@DepthStencilRenderBuffer#1
+// Source: c:@S@OpenGl_FrameBuffer@F@DepthStencilTexture#1
+// Source: c:@S@OpenGl_FrameBuffer@F@DynamicType#1
+// Source: c:@S@OpenGl_FrameBuffer@F@EstimatedDataSize#1
 // Source: c:@S@OpenGl_FrameBuffer@F@GetInitVPSizeX#1
 // Source: c:@S@OpenGl_FrameBuffer@F@GetInitVPSizeY#1
 // Source: c:@S@OpenGl_FrameBuffer@F@GetSizeX#1
@@ -1817,6 +2246,7 @@
 // Source: c:@S@OpenGl_FrameBuffer@F@HasDepth#1
 // Source: c:@S@OpenGl_FrameBuffer@F@Init#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#I#I#I#I#I#
 // Source: c:@S@OpenGl_FrameBuffer@F@InitLazy#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#I#I#I#I#I#
+// Source: c:@S@OpenGl_FrameBuffer@F@InitWithRB#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#I#I#I#I#i#
 // Source: c:@S@OpenGl_FrameBuffer@F@InitWrapper#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_FrameBuffer@F@IsColorRenderBuffer#1
 // Source: c:@S@OpenGl_FrameBuffer@F@IsDepthStencilRenderBuffer#1
@@ -1825,10 +2255,14 @@
 // Source: c:@S@OpenGl_FrameBuffer@F@NbSamples#1
 // Source: c:@S@OpenGl_FrameBuffer@F@SetupViewport#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_FrameBuffer@F@UnbindBuffer#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_FrameStats@F@DynamicType#1
 // Source: c:@S@OpenGl_FrameStats@F@OpenGl_FrameStats#
 // Source: c:@S@OpenGl_GraphicDriver@F@CreateStructure#&1$@N@opencascade@S@handle>#$@S@Graphic3d_StructureManager#
 // Source: c:@S@OpenGl_GraphicDriver@F@CreateView#&1$@N@opencascade@S@handle>#$@S@Graphic3d_StructureManager#
+// Source: c:@S@OpenGl_GraphicDriver@F@DefaultTextHeight#1
+// Source: c:@S@OpenGl_GraphicDriver@F@DynamicType#1
 // Source: c:@S@OpenGl_GraphicDriver@F@EnableVBO#b#
+// Source: c:@S@OpenGl_GraphicDriver@F@GetNextPrimitiveArrayUID#1
 // Source: c:@S@OpenGl_GraphicDriver@F@InitContext#
 // Source: c:@S@OpenGl_GraphicDriver@F@InquireLimit#$@E@Graphic3d_TypeOfLimit#1
 // Source: c:@S@OpenGl_GraphicDriver@F@IsVerticalSync#1
@@ -1840,12 +2274,15 @@
 // Source: c:@S@OpenGl_GraphicDriver@F@SetVerticalSync#b#
 // Source: c:@S@OpenGl_GraphicDriver@F@setDeviceLost#
 // Source: c:@S@OpenGl_GraphicDriverFactory@F@CreateDriver#&1$@N@opencascade@S@handle>#$@S@Aspect_DisplayConnection#
+// Source: c:@S@OpenGl_GraphicDriverFactory@F@DefaultOptions#1
+// Source: c:@S@OpenGl_GraphicDriverFactory@F@DynamicType#1
 // Source: c:@S@OpenGl_GraphicDriverFactory@F@OpenGl_GraphicDriverFactory#
 // Source: c:@S@OpenGl_GraphicDriverFactory@F@SetDefaultOptions#&1$@N@opencascade@S@handle>#$@S@OpenGl_Caps#
 // Source: c:@S@OpenGl_Group@F@AddPrimitiveArray#$@E@Graphic3d_TypeOfPrimitiveArray#&1$@N@opencascade@S@handle>#$@S@Graphic3d_IndexBuffer#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Buffer#&1$@N@opencascade@S@handle>#$@S@Graphic3d_BoundBuffer#b#
 // Source: c:@S@OpenGl_Group@F@AddText#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Text#b#
 // Source: c:@S@OpenGl_Group@F@Aspects#1
 // Source: c:@S@OpenGl_Group@F@Clear#b#
+// Source: c:@S@OpenGl_Group@F@DynamicType#1
 // Source: c:@S@OpenGl_Group@F@HasPersistence#1
 // Source: c:@S@OpenGl_Group@F@IsRaytracable#1
 // Source: c:@S@OpenGl_Group@F@OpenGl_Group#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
@@ -1855,28 +2292,49 @@
 // Source: c:@S@OpenGl_Group@F@SetPrimitivesAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Aspects#
 // Source: c:@S@OpenGl_Group@F@SetStencilTestOptions#b#
 // Source: c:@S@OpenGl_Group@F@SynchronizeAspects#
+// Source: c:@S@OpenGl_IndexBuffer@F@DynamicType#1
+// Source: c:@S@OpenGl_IndexBuffer@F@GetTarget#1
 // Source: c:@S@OpenGl_IndexBuffer@F@OpenGl_IndexBuffer#
+// Source: c:@S@OpenGl_LineAttributes@F@DynamicType#1
+// Source: c:@S@OpenGl_LineAttributes@F@EstimatedDataSize#1
 // Source: c:@S@OpenGl_LineAttributes@F@OpenGl_LineAttributes#
+// Source: c:@S@OpenGl_NamedResource@F@DynamicType#1
+// Source: c:@S@OpenGl_PBREnvironment@F@Bake#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#&1$@N@opencascade@S@handle>#$@S@OpenGl_Texture#b#b#k#k#f#
 // Source: c:@S@OpenGl_PBREnvironment@F@Bind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_PBREnvironment@F@DynamicType#1
+// Source: c:@S@OpenGl_PBREnvironment@F@EstimatedDataSize#1
 // Source: c:@S@OpenGl_PBREnvironment@F@IsComplete#1
 // Source: c:@S@OpenGl_PBREnvironment@F@IsNeededToBeBound#1
+// Source: c:@S@OpenGl_PBREnvironment@F@Pow2Size#1
+// Source: c:@S@OpenGl_PBREnvironment@F@SizesAreDifferent#i#i#1
+// Source: c:@S@OpenGl_PBREnvironment@F@SpecMapLevelsNumber#1
 // Source: c:@S@OpenGl_PBREnvironment@F@Unbind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_PointSprite@F@DrawBitmap#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#1
+// Source: c:@S@OpenGl_PointSprite@F@DynamicType#1
 // Source: c:@S@OpenGl_PointSprite@F@IsDisplayList#1
 // Source: c:@S@OpenGl_PointSprite@F@IsPointSprite#1
 // Source: c:@S@OpenGl_PointSprite@F@IsValid#1
+// Source: c:@S@OpenGl_PointSprite@F@SetDisplayList#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#i#
+// Source: c:@S@OpenGl_Resource@F@DynamicType#1
 // Source: c:@S@OpenGl_Sampler@F@Bind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_Sampler@F@Bind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#$@E@Graphic3d_TextureUnit#
 // Source: c:@S@OpenGl_Sampler@F@Create#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_Sampler@F@DynamicType#1
+// Source: c:@S@OpenGl_Sampler@F@EstimatedDataSize#1
 // Source: c:@S@OpenGl_Sampler@F@IsImmutable#1
 // Source: c:@S@OpenGl_Sampler@F@IsValid#1
 // Source: c:@S@OpenGl_Sampler@F@OpenGl_Sampler#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureParams#
+// Source: c:@S@OpenGl_Sampler@F@Parameters#
+// Source: c:@S@OpenGl_Sampler@F@SamplerID#1
 // Source: c:@S@OpenGl_Sampler@F@SetImmutable#
+// Source: c:@S@OpenGl_Sampler@F@SetParameter#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#i#i#I#
 // Source: c:@S@OpenGl_Sampler@F@SetParameters#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureParams#
 // Source: c:@S@OpenGl_Sampler@F@ToUpdateParameters#1
 // Source: c:@S@OpenGl_Sampler@F@Unbind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_Sampler@F@Unbind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#$@E@Graphic3d_TextureUnit#
+// Source: c:@S@OpenGl_SetOfPrograms@F@DynamicType#1
 // Source: c:@S@OpenGl_SetOfPrograms@F@OpenGl_SetOfPrograms#
+// Source: c:@S@OpenGl_SetOfShaderPrograms@F@DynamicType#1
 // Source: c:@S@OpenGl_SetOfShaderPrograms@F@OpenGl_SetOfShaderPrograms#
 // Source: c:@S@OpenGl_SetOfShaderPrograms@F@OpenGl_SetOfShaderPrograms#&1$@N@opencascade@S@handle>#$@S@OpenGl_SetOfPrograms#
 // Source: c:@S@OpenGl_ShaderManager@F@BindBoundBoxProgram#
@@ -1892,9 +2350,14 @@
 // Source: c:@S@OpenGl_ShaderManager@F@BindOutlineProgram#
 // Source: c:@S@OpenGl_ShaderManager@F@BindPBREnvBakingProgram#I#
 // Source: c:@S@OpenGl_ShaderManager@F@BindStereoProgram#$@E@Graphic3d_StereoMode#
+// Source: c:@S@OpenGl_ShaderManager@F@BoundBoxVertBuffer#1
 // Source: c:@S@OpenGl_ShaderManager@F@ChooseFaceShadingModel#$@E@Graphic3d_TypeOfShadingModel#b#1
 // Source: c:@S@OpenGl_ShaderManager@F@ChooseLineShadingModel#$@E@Graphic3d_TypeOfShadingModel#b#1
 // Source: c:@S@OpenGl_ShaderManager@F@ChooseMarkerShadingModel#$@E@Graphic3d_TypeOfShadingModel#b#1
+// Source: c:@S@OpenGl_ShaderManager@F@DynamicType#1
+// Source: c:@S@OpenGl_ShaderManager@F@GetBgCubeMapProgram#
+// Source: c:@S@OpenGl_ShaderManager@F@GetBgSkydomeProgram#
+// Source: c:@S@OpenGl_ShaderManager@F@GetColoredQuadProgram#
 // Source: c:@S@OpenGl_ShaderManager@F@IsEmpty#1
 // Source: c:@S@OpenGl_ShaderManager@F@PushClippingState#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderProgram#1
 // Source: c:@S@OpenGl_ShaderManager@F@PushInteriorState#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderProgram#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Aspects#1
@@ -1910,6 +2373,7 @@
 // Source: c:@S@OpenGl_ShaderManager@F@SetCastShadows#b#
 // Source: c:@S@OpenGl_ShaderManager@F@SetOitState#$@E@Graphic3d_RenderTransparentMethod#
 // Source: c:@S@OpenGl_ShaderManager@F@SetShadingModel#$@E@Graphic3d_TypeOfShadingModel#
+// Source: c:@S@OpenGl_ShaderManager@F@SetWeighedOitState#f#
 // Source: c:@S@OpenGl_ShaderManager@F@ShadingModel#1
 // Source: c:@S@OpenGl_ShaderManager@F@UpdateClippingState#
 // Source: c:@S@OpenGl_ShaderManager@F@UpdateLightSourceState#
@@ -1926,10 +2390,16 @@
 // Source: c:@S@OpenGl_ShaderManager@F@pushWorldViewState#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderProgram#1
 // Source: c:@S@OpenGl_ShaderObject@F@Compile#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_ShaderObject@F@Create#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_ShaderObject@F@DynamicType#1
+// Source: c:@S@OpenGl_ShaderObject@F@EstimatedDataSize#1
+// Source: c:@S@OpenGl_ShaderObject@F@OpenGl_ShaderObject#i#
+// Source: c:@S@OpenGl_ShaderObject@F@Type#1
 // Source: c:@S@OpenGl_ShaderProgram@F@ApplyVariables#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_ShaderProgram@F@AttachShader#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderObject#
 // Source: c:@S@OpenGl_ShaderProgram@F@Create#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_ShaderProgram@F@DetachShader#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderObject#
+// Source: c:@S@OpenGl_ShaderProgram@F@DynamicType#1
+// Source: c:@S@OpenGl_ShaderProgram@F@EstimatedDataSize#1
 // Source: c:@S@OpenGl_ShaderProgram@F@HasAlphaTest#1
 // Source: c:@S@OpenGl_ShaderProgram@F@HasTessellationStage#1
 // Source: c:@S@OpenGl_ShaderProgram@F@IsValid#1
@@ -1939,17 +2409,32 @@
 // Source: c:@S@OpenGl_ShaderProgram@F@NbLightsMax#1
 // Source: c:@S@OpenGl_ShaderProgram@F@NbShadowMaps#1
 // Source: c:@S@OpenGl_ShaderProgram@F@OitOutput#1
+// Source: c:@S@OpenGl_ShaderProgram@F@ProgramId#1
+// Source: c:@S@OpenGl_ShaderProgram@F@Proxy#1
+// Source: c:@S@OpenGl_ShaderProgram@F@SetAttribute#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#I#f#
 // Source: c:@S@OpenGl_ShaderProgram@F@SetSampler#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#I#$@E@Graphic3d_TextureUnit#
 // Source: c:@S@OpenGl_ShaderProgram@F@SetUniform#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#I#I#
+// Source: c:@S@OpenGl_ShaderProgram@F@SetUniform#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#I#f#
 // Source: c:@S@OpenGl_ShaderProgram@F@TextureSetBits#1
+// Source: c:@S@OpenGl_ShadowMap@F@Camera#1
+// Source: c:@S@OpenGl_ShadowMap@F@DynamicType#1
+// Source: c:@S@OpenGl_ShadowMap@F@EstimatedDataSize#1
+// Source: c:@S@OpenGl_ShadowMap@F@FrameBuffer#1
 // Source: c:@S@OpenGl_ShadowMap@F@IsValid#1
+// Source: c:@S@OpenGl_ShadowMap@F@LightSource#1
 // Source: c:@S@OpenGl_ShadowMap@F@SetLightSource#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#
+// Source: c:@S@OpenGl_ShadowMap@F@SetShadowMapBias#f#
+// Source: c:@S@OpenGl_ShadowMap@F@ShadowMapBias#1
+// Source: c:@S@OpenGl_ShadowMap@F@Texture#1
+// Source: c:@S@OpenGl_ShadowMapArray@F@EstimatedDataSize#1
 // Source: c:@S@OpenGl_ShadowMapArray@F@IsValid#1
 // Source: c:@S@OpenGl_ShadowMapArray@F@OpenGl_ShadowMapArray#
 // Source: c:@S@OpenGl_Structure@F@Clear#
 // Source: c:@S@OpenGl_Structure@F@Clear#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_Structure@F@DynamicType#1
 // Source: c:@S@OpenGl_Structure@F@GraphicHighlight#&1$@N@opencascade@S@handle>#$@S@Graphic3d_PresentationAttributes#
 // Source: c:@S@OpenGl_Structure@F@GraphicUnhighlight#
+// Source: c:@S@OpenGl_Structure@F@ModificationState#1
 // Source: c:@S@OpenGl_Structure@F@NewGroup#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
 // Source: c:@S@OpenGl_Structure@F@OnVisibilityChanged#
 // Source: c:@S@OpenGl_Structure@F@OpenGl_Structure#&1$@N@opencascade@S@handle>#$@S@Graphic3d_StructureManager#
@@ -1963,14 +2448,20 @@
 // Source: c:@S@OpenGl_Structure@F@SetZLayer#I#
 // Source: c:@S@OpenGl_Structure@F@ShadowLink#&1$@N@opencascade@S@handle>#$@S@Graphic3d_StructureManager#1
 // Source: c:@S@OpenGl_Structure@F@updateLayerTransformation#
+// Source: c:@S@OpenGl_StructureShadow@F@DynamicType#1
 // Source: c:@S@OpenGl_StructureShadow@F@OpenGl_StructureShadow#&1$@N@opencascade@S@handle>#$@S@Graphic3d_StructureManager#&1$@N@opencascade@S@handle>#$@S@OpenGl_Structure#
 // Source: c:@S@OpenGl_Texture@F@Bind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#$@E@Graphic3d_TextureUnit#1
 // Source: c:@S@OpenGl_Texture@F@Bind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#1
 // Source: c:@S@OpenGl_Texture@F@Create#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_Texture@F@DynamicType#1
+// Source: c:@S@OpenGl_Texture@F@EstimatedDataSize#1
 // Source: c:@S@OpenGl_Texture@F@GenerateMipmaps#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_Texture@F@GetFormat#1
+// Source: c:@S@OpenGl_Texture@F@GetTarget#1
 // Source: c:@S@OpenGl_Texture@F@HasMipmaps#1
 // Source: c:@S@OpenGl_Texture@F@Init#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureRoot#
 // Source: c:@S@OpenGl_Texture@F@Init2DMultisample#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#I#I#I#I#
+// Source: c:@S@OpenGl_Texture@F@InitCubeMap#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CubeMap#k#$@E@Image_Format#b#b#
 // Source: c:@S@OpenGl_Texture@F@InitSamplerObject#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_Texture@F@IsAlpha#1
 // Source: c:@S@OpenGl_Texture@F@IsPointSprite#1
@@ -1978,26 +2469,37 @@
 // Source: c:@S@OpenGl_Texture@F@IsValid#1
 // Source: c:@S@OpenGl_Texture@F@MaxMipmapLevel#1
 // Source: c:@S@OpenGl_Texture@F@NbSamples#1
+// Source: c:@S@OpenGl_Texture@F@Revision#1
+// Source: c:@S@OpenGl_Texture@F@Sampler#1
 // Source: c:@S@OpenGl_Texture@F@SetAlpha#b#
+// Source: c:@S@OpenGl_Texture@F@SetRevision#k#
 // Source: c:@S@OpenGl_Texture@F@SetSampler#&1$@N@opencascade@S@handle>#$@S@OpenGl_Sampler#
 // Source: c:@S@OpenGl_Texture@F@SetTopDown#b#
 // Source: c:@S@OpenGl_Texture@F@SizeX#1
 // Source: c:@S@OpenGl_Texture@F@SizeY#1
 // Source: c:@S@OpenGl_Texture@F@SizeZ#1
 // Source: c:@S@OpenGl_Texture@F@SizedFormat#1
+// Source: c:@S@OpenGl_Texture@F@TextureId#1
 // Source: c:@S@OpenGl_Texture@F@Unbind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#$@E@Graphic3d_TextureUnit#1
 // Source: c:@S@OpenGl_Texture@F@Unbind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#1
 // Source: c:@S@OpenGl_TextureBuffer@F@BindTexture#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#$@E@Graphic3d_TextureUnit#1
 // Source: c:@S@OpenGl_TextureBuffer@F@Create#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_TextureBuffer@F@DynamicType#1
+// Source: c:@S@OpenGl_TextureBuffer@F@GetTarget#1
 // Source: c:@S@OpenGl_TextureBuffer@F@IsValid#1
 // Source: c:@S@OpenGl_TextureBuffer@F@OpenGl_TextureBuffer#
+// Source: c:@S@OpenGl_TextureBuffer@F@TextureFormat#1
+// Source: c:@S@OpenGl_TextureBuffer@F@TextureId#1
 // Source: c:@S@OpenGl_TextureBuffer@F@UnbindTexture#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#$@E@Graphic3d_TextureUnit#1
+// Source: c:@S@OpenGl_TextureSet@F@DynamicType#1
+// Source: c:@S@OpenGl_TextureSet@F@First#1
 // Source: c:@S@OpenGl_TextureSet@F@FirstUnit#1
 // Source: c:@S@OpenGl_TextureSet@F@HasNonPointSprite#1
 // Source: c:@S@OpenGl_TextureSet@F@HasPointSprite#1
 // Source: c:@S@OpenGl_TextureSet@F@InitZero#
 // Source: c:@S@OpenGl_TextureSet@F@IsEmpty#1
 // Source: c:@S@OpenGl_TextureSet@F@IsModulate#1
+// Source: c:@S@OpenGl_TextureSet@F@Last#1
 // Source: c:@S@OpenGl_TextureSet@F@LastUnit#1
 // Source: c:@S@OpenGl_TextureSet@F@Lower#1
 // Source: c:@S@OpenGl_TextureSet@F@OpenGl_TextureSet#
@@ -2006,19 +2508,31 @@
 // Source: c:@S@OpenGl_TextureSet@F@Size#1
 // Source: c:@S@OpenGl_TextureSet@F@TextureSetBits#1
 // Source: c:@S@OpenGl_TextureSet@F@Upper#1
+// Source: c:@S@OpenGl_TextureSet@F@Value#I#1
+// Source: c:@S@OpenGl_UniformBuffer@F@DynamicType#1
+// Source: c:@S@OpenGl_UniformBuffer@F@GetTarget#1
 // Source: c:@S@OpenGl_UniformBuffer@F@OpenGl_UniformBuffer#
 // Source: c:@S@OpenGl_VertexBuffer@F@BindAllAttributes#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#1
 // Source: c:@S@OpenGl_VertexBuffer@F@BindAttribute#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#$@E@Graphic3d_TypeOfAttribute#1
 // Source: c:@S@OpenGl_VertexBuffer@F@BindPositionAttribute#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#1
+// Source: c:@S@OpenGl_VertexBuffer@F@BindVertexAttrib#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#i#1
+// Source: c:@S@OpenGl_VertexBuffer@F@DynamicType#1
+// Source: c:@S@OpenGl_VertexBuffer@F@GetTarget#1
 // Source: c:@S@OpenGl_VertexBuffer@F@HasColorAttribute#1
 // Source: c:@S@OpenGl_VertexBuffer@F@HasNormalAttribute#1
 // Source: c:@S@OpenGl_VertexBuffer@F@OpenGl_VertexBuffer#
 // Source: c:@S@OpenGl_VertexBuffer@F@UnbindAllAttributes#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#1
 // Source: c:@S@OpenGl_VertexBuffer@F@UnbindAttribute#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#$@E@Graphic3d_TypeOfAttribute#1
+// Source: c:@S@OpenGl_VertexBuffer@F@UnbindVertexAttrib#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#i#1
 // Source: c:@S@OpenGl_View@F@BackgroundImageStyle#1
+// Source: c:@S@OpenGl_View@F@ClipPlanes#1
+// Source: c:@S@OpenGl_View@F@DepthPeelingFbos#1
+// Source: c:@S@OpenGl_View@F@DynamicType#1
 // Source: c:@S@OpenGl_View@F@FBO#1
 // Source: c:@S@OpenGl_View@F@FBOChangeViewport#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#I#I#
 // Source: c:@S@OpenGl_View@F@FBOCreate#I#I#
+// Source: c:@S@OpenGl_View@F@GlTextureEnv#1
+// Source: c:@S@OpenGl_View@F@GlWindow#1
 // Source: c:@S@OpenGl_View@F@GraduatedTrihedronErase#
 // Source: c:@S@OpenGl_View@F@GridErase#
 // Source: c:@S@OpenGl_View@F@HasImmediateStructures#1
@@ -2027,6 +2541,7 @@
 // Source: c:@S@OpenGl_View@F@IsDefined#1
 // Source: c:@S@OpenGl_View@F@IsInvalidated#
 // Source: c:@S@OpenGl_View@F@Layer#I#1
+// Source: c:@S@OpenGl_View@F@Lights#1
 // Source: c:@S@OpenGl_View@F@Redraw#
 // Source: c:@S@OpenGl_View@F@RedrawImmediate#
 // Source: c:@S@OpenGl_View@F@ReleaseGlResources#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
@@ -2042,18 +2557,27 @@
 // Source: c:@S@OpenGl_View@F@SetLights#&1$@N@opencascade@S@handle>#$@S@Graphic3d_LightSet#
 // Source: c:@S@OpenGl_View@F@SetTextureEnv#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureEnv#
 // Source: c:@S@OpenGl_View@F@SetToFlipOutput#b#
+// Source: c:@S@OpenGl_View@F@SpecIBLMapLevels#1
 // Source: c:@S@OpenGl_View@F@ToFlipOutput#1
 // Source: c:@S@OpenGl_View@F@Window#1
 // Source: c:@S@OpenGl_View@F@ZLayerMax#1
 // Source: c:@S@OpenGl_Window@F@Activate#
+// Source: c:@S@OpenGl_Window@F@DynamicType#1
+// Source: c:@S@OpenGl_Window@F@GetGlContext#1
 // Source: c:@S@OpenGl_Window@F@Height#1
 // Source: c:@S@OpenGl_Window@F@OpenGl_Window#
+// Source: c:@S@OpenGl_Window@F@PlatformWindow#
 // Source: c:@S@OpenGl_Window@F@Resize#
 // Source: c:@S@OpenGl_Window@F@SetSwapInterval#b#
+// Source: c:@S@OpenGl_Window@F@SizeWindow#
 // Source: c:@S@OpenGl_Window@F@Width#1
 // Source: c:@S@OpenGl_Workspace@F@Activate#
+// Source: c:@S@OpenGl_Workspace@F@DynamicType#1
+// Source: c:@S@OpenGl_Workspace@F@EnvironmentTexture#1
 // Source: c:@S@OpenGl_Workspace@F@FBOCreate#I#I#
+// Source: c:@S@OpenGl_Workspace@F@GetGlContext#
 // Source: c:@S@OpenGl_Workspace@F@Height#1
+// Source: c:@S@OpenGl_Workspace@F@HighlightStyle#1
 // Source: c:@S@OpenGl_Workspace@F@NbSkippedTransparentElements#
 // Source: c:@S@OpenGl_Workspace@F@RenderFilter#1
 // Source: c:@S@OpenGl_Workspace@F@ResetSkippedCounter#
@@ -2062,10 +2586,13 @@
 // Source: c:@S@OpenGl_Workspace@F@SetHighlightStyle#&1$@N@opencascade@S@handle>#$@S@Graphic3d_PresentationAttributes#
 // Source: c:@S@OpenGl_Workspace@F@SetRenderFilter#I#
 // Source: c:@S@OpenGl_Workspace@F@SetUseZBuffer#b#
+// Source: c:@S@OpenGl_Workspace@F@TextureSet#1
 // Source: c:@S@OpenGl_Workspace@F@ToAllowFaceCulling#1
 // Source: c:@S@OpenGl_Workspace@F@ToHighlight#1
 // Source: c:@S@OpenGl_Workspace@F@Width#1
 // Source: c:@S@Prs3d_ArrowAspect@F@Angle#1
+// Source: c:@S@Prs3d_ArrowAspect@F@Aspect#1
+// Source: c:@S@Prs3d_ArrowAspect@F@DynamicType#1
 // Source: c:@S@Prs3d_ArrowAspect@F@IsZoomable#1
 // Source: c:@S@Prs3d_ArrowAspect@F@Length#1
 // Source: c:@S@Prs3d_ArrowAspect@F@Prs3d_ArrowAspect#
@@ -2075,11 +2602,16 @@
 // Source: c:@S@Prs3d_ArrowAspect@F@SetAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_AspectLine3d#
 // Source: c:@S@Prs3d_ArrowAspect@F@SetLength#d#
 // Source: c:@S@Prs3d_ArrowAspect@F@SetZoomable#b#
+// Source: c:@S@Prs3d_BasicAspect@F@DynamicType#1
+// Source: c:@S@Prs3d_DatumAspect@F@ArrowAspect#1
 // Source: c:@S@Prs3d_DatumAspect@F@Attribute#$@E@Prs3d_DatumAttribute#1
 // Source: c:@S@Prs3d_DatumAspect@F@AxisLength#$@E@Prs3d_DatumParts#1
 // Source: c:@S@Prs3d_DatumAspect@F@CopyAspectsFrom#&1$@N@opencascade@S@handle>#$@S@Prs3d_DatumAspect#
 // Source: c:@S@Prs3d_DatumAspect@F@DatumAxes#1
 // Source: c:@S@Prs3d_DatumAspect@F@DrawDatumPart#$@E@Prs3d_DatumParts#1
+// Source: c:@S@Prs3d_DatumAspect@F@DynamicType#1
+// Source: c:@S@Prs3d_DatumAspect@F@LineAspect#$@E@Prs3d_DatumParts#1
+// Source: c:@S@Prs3d_DatumAspect@F@PointAspect#1
 // Source: c:@S@Prs3d_DatumAspect@F@Prs3d_DatumAspect#
 // Source: c:@S@Prs3d_DatumAspect@F@SetArrowAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_ArrowAspect#
 // Source: c:@S@Prs3d_DatumAspect@F@SetAttribute#$@E@Prs3d_DatumAttribute#d#
@@ -2090,15 +2622,21 @@
 // Source: c:@S@Prs3d_DatumAspect@F@SetPointAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_PointAspect#
 // Source: c:@S@Prs3d_DatumAspect@F@SetTextAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_TextAspect#
 // Source: c:@S@Prs3d_DatumAspect@F@SetToDrawLabels#b#
+// Source: c:@S@Prs3d_DatumAspect@F@ShadingAspect#$@E@Prs3d_DatumParts#1
+// Source: c:@S@Prs3d_DatumAspect@F@TextAspect#$@E@Prs3d_DatumParts#1
+// Source: c:@S@Prs3d_DatumAspect@F@TextAspect#1
 // Source: c:@S@Prs3d_DatumAspect@F@ToDrawArrows#1
 // Source: c:@S@Prs3d_DatumAspect@F@ToDrawLabels#1
+// Source: c:@S@Prs3d_DimensionAspect@F@ArrowAspect#1
 // Source: c:@S@Prs3d_DimensionAspect@F@ArrowOrientation#1
 // Source: c:@S@Prs3d_DimensionAspect@F@ArrowTailSize#1
+// Source: c:@S@Prs3d_DimensionAspect@F@DynamicType#1
 // Source: c:@S@Prs3d_DimensionAspect@F@ExtensionSize#1
 // Source: c:@S@Prs3d_DimensionAspect@F@IsArrows3d#1
 // Source: c:@S@Prs3d_DimensionAspect@F@IsText3d#1
 // Source: c:@S@Prs3d_DimensionAspect@F@IsTextShaded#1
 // Source: c:@S@Prs3d_DimensionAspect@F@IsUnitsDisplayed#1
+// Source: c:@S@Prs3d_DimensionAspect@F@LineAspect#1
 // Source: c:@S@Prs3d_DimensionAspect@F@MakeArrows3d#b#
 // Source: c:@S@Prs3d_DimensionAspect@F@MakeText3d#b#
 // Source: c:@S@Prs3d_DimensionAspect@F@MakeTextShaded#b#
@@ -2112,17 +2650,24 @@
 // Source: c:@S@Prs3d_DimensionAspect@F@SetTextAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_TextAspect#
 // Source: c:@S@Prs3d_DimensionAspect@F@SetTextHorizontalPosition#$@E@Prs3d_DimensionTextHorizontalPosition#
 // Source: c:@S@Prs3d_DimensionAspect@F@SetTextVerticalPosition#$@E@Prs3d_DimensionTextVerticalPosition#
+// Source: c:@S@Prs3d_DimensionAspect@F@TextAspect#1
 // Source: c:@S@Prs3d_DimensionAspect@F@TextHorizontalPosition#1
 // Source: c:@S@Prs3d_DimensionAspect@F@TextVerticalPosition#1
+// Source: c:@S@Prs3d_Drawer@F@ArrowAspect#1
 // Source: c:@S@Prs3d_Drawer@F@ClearLocalAttributes#
+// Source: c:@S@Prs3d_Drawer@F@DatumAspect#1
 // Source: c:@S@Prs3d_Drawer@F@DeviationAngle#1
 // Source: c:@S@Prs3d_Drawer@F@DeviationCoefficient#1
+// Source: c:@S@Prs3d_Drawer@F@DimensionAspect#1
 // Source: c:@S@Prs3d_Drawer@F@DisableDrawHiddenLine#
 // Source: c:@S@Prs3d_Drawer@F@Discretisation#1
 // Source: c:@S@Prs3d_Drawer@F@DrawHiddenLine#1
+// Source: c:@S@Prs3d_Drawer@F@DynamicType#1
 // Source: c:@S@Prs3d_Drawer@F@EnableDrawHiddenLine#
+// Source: c:@S@Prs3d_Drawer@F@FaceBoundaryAspect#1
 // Source: c:@S@Prs3d_Drawer@F@FaceBoundaryDraw#1
 // Source: c:@S@Prs3d_Drawer@F@FaceBoundaryUpperContinuity#1
+// Source: c:@S@Prs3d_Drawer@F@FreeBoundaryAspect#1
 // Source: c:@S@Prs3d_Drawer@F@FreeBoundaryDraw#1
 // Source: c:@S@Prs3d_Drawer@F@HLRAngle#1
 // Source: c:@S@Prs3d_Drawer@F@HasLink#1
@@ -2167,17 +2712,24 @@
 // Source: c:@S@Prs3d_Drawer@F@HasOwnVertexDrawMode#1
 // Source: c:@S@Prs3d_Drawer@F@HasOwnWireAspect#1
 // Source: c:@S@Prs3d_Drawer@F@HasOwnWireDraw#1
+// Source: c:@S@Prs3d_Drawer@F@HiddenLineAspect#1
 // Source: c:@S@Prs3d_Drawer@F@IsAutoTriangulation#1
 // Source: c:@S@Prs3d_Drawer@F@IsoOnPlane#1
 // Source: c:@S@Prs3d_Drawer@F@IsoOnTriangulation#1
 // Source: c:@S@Prs3d_Drawer@F@LineArrowDraw#1
+// Source: c:@S@Prs3d_Drawer@F@LineAspect#1
 // Source: c:@S@Prs3d_Drawer@F@Link#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#
+// Source: c:@S@Prs3d_Drawer@F@Link#1
 // Source: c:@S@Prs3d_Drawer@F@MaximalChordialDeviation#1
 // Source: c:@S@Prs3d_Drawer@F@MaximalParameterValue#1
+// Source: c:@S@Prs3d_Drawer@F@PlaneAspect#1
+// Source: c:@S@Prs3d_Drawer@F@PointAspect#1
 // Source: c:@S@Prs3d_Drawer@F@PreviousDeviationAngle#1
 // Source: c:@S@Prs3d_Drawer@F@PreviousDeviationCoefficient#1
 // Source: c:@S@Prs3d_Drawer@F@PreviousHLRDeviationAngle#1
 // Source: c:@S@Prs3d_Drawer@F@Prs3d_Drawer#
+// Source: c:@S@Prs3d_Drawer@F@SectionAspect#1
+// Source: c:@S@Prs3d_Drawer@F@SeenLineAspect#1
 // Source: c:@S@Prs3d_Drawer@F@SetArrowAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_ArrowAspect#
 // Source: c:@S@Prs3d_Drawer@F@SetAutoTriangulation#b#
 // Source: c:@S@Prs3d_Drawer@F@SetDatumAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_DatumAspect#
@@ -2226,8 +2778,11 @@
 // Source: c:@S@Prs3d_Drawer@F@SetupOwnFaceBoundaryAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#
 // Source: c:@S@Prs3d_Drawer@F@SetupOwnPointAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#
 // Source: c:@S@Prs3d_Drawer@F@SetupOwnShadingAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#
+// Source: c:@S@Prs3d_Drawer@F@TextAspect#1
 // Source: c:@S@Prs3d_Drawer@F@TypeOfDeflection#1
 // Source: c:@S@Prs3d_Drawer@F@TypeOfHLR#1
+// Source: c:@S@Prs3d_Drawer@F@UIsoAspect#1
+// Source: c:@S@Prs3d_Drawer@F@UnFreeBoundaryAspect#1
 // Source: c:@S@Prs3d_Drawer@F@UnFreeBoundaryDraw#1
 // Source: c:@S@Prs3d_Drawer@F@UnsetFaceBoundaryUpperContinuity#
 // Source: c:@S@Prs3d_Drawer@F@UnsetOwnDimAngleDisplayUnits#
@@ -2249,14 +2804,21 @@
 // Source: c:@S@Prs3d_Drawer@F@UnsetOwnWireDraw#
 // Source: c:@S@Prs3d_Drawer@F@UpdatePreviousDeviationAngle#
 // Source: c:@S@Prs3d_Drawer@F@UpdatePreviousDeviationCoefficient#
+// Source: c:@S@Prs3d_Drawer@F@VIsoAspect#1
+// Source: c:@S@Prs3d_Drawer@F@VectorAspect#1
 // Source: c:@S@Prs3d_Drawer@F@VertexDrawMode#1
+// Source: c:@S@Prs3d_Drawer@F@WireAspect#1
 // Source: c:@S@Prs3d_Drawer@F@WireDraw#1
+// Source: c:@S@Prs3d_IsoAspect@F@DynamicType#1
 // Source: c:@S@Prs3d_IsoAspect@F@Number#1
 // Source: c:@S@Prs3d_IsoAspect@F@SetNumber#I#
+// Source: c:@S@Prs3d_LineAspect@F@Aspect#1
+// Source: c:@S@Prs3d_LineAspect@F@DynamicType#1
 // Source: c:@S@Prs3d_LineAspect@F@Prs3d_LineAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_AspectLine3d#
 // Source: c:@S@Prs3d_LineAspect@F@SetAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_AspectLine3d#
 // Source: c:@S@Prs3d_LineAspect@F@SetTypeOfLine#$@E@Aspect_TypeOfLine#
 // Source: c:@S@Prs3d_LineAspect@F@SetWidth#d#
+// Source: c:@S@Prs3d_PlaneAspect@F@ArrowAspect#1
 // Source: c:@S@Prs3d_PlaneAspect@F@ArrowsAngle#1
 // Source: c:@S@Prs3d_PlaneAspect@F@ArrowsLength#1
 // Source: c:@S@Prs3d_PlaneAspect@F@ArrowsSize#1
@@ -2264,6 +2826,9 @@
 // Source: c:@S@Prs3d_PlaneAspect@F@DisplayEdges#1
 // Source: c:@S@Prs3d_PlaneAspect@F@DisplayEdgesArrows#1
 // Source: c:@S@Prs3d_PlaneAspect@F@DisplayIso#1
+// Source: c:@S@Prs3d_PlaneAspect@F@DynamicType#1
+// Source: c:@S@Prs3d_PlaneAspect@F@EdgesAspect#1
+// Source: c:@S@Prs3d_PlaneAspect@F@IsoAspect#1
 // Source: c:@S@Prs3d_PlaneAspect@F@IsoDistance#1
 // Source: c:@S@Prs3d_PlaneAspect@F@PlaneXLength#1
 // Source: c:@S@Prs3d_PlaneAspect@F@PlaneYLength#1
@@ -2277,13 +2842,19 @@
 // Source: c:@S@Prs3d_PlaneAspect@F@SetDisplayIso#b#
 // Source: c:@S@Prs3d_PlaneAspect@F@SetIsoDistance#d#
 // Source: c:@S@Prs3d_PlaneAspect@F@SetPlaneLength#d#d#
+// Source: c:@S@Prs3d_PointAspect@F@Aspect#1
+// Source: c:@S@Prs3d_PointAspect@F@DynamicType#1
+// Source: c:@S@Prs3d_PointAspect@F@GetTexture#1
 // Source: c:@S@Prs3d_PointAspect@F@Prs3d_PointAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_AspectMarker3d#
 // Source: c:@S@Prs3d_PointAspect@F@SetAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_AspectMarker3d#
 // Source: c:@S@Prs3d_PointAspect@F@SetScale#d#
 // Source: c:@S@Prs3d_PointAspect@F@SetTypeOfMarker#$@E@Aspect_TypeOfMarker#
 // Source: c:@S@Prs3d_PresentationShadow@F@CalculateBoundBox#
+// Source: c:@S@Prs3d_PresentationShadow@F@DynamicType#1
+// Source: c:@S@Prs3d_PresentationShadow@F@ParentAffinity#1
 // Source: c:@S@Prs3d_PresentationShadow@F@ParentId#1
 // Source: c:@S@Prs3d_PresentationShadow@F@Prs3d_PresentationShadow#&1$@N@opencascade@S@handle>#$@S@Graphic3d_StructureManager#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
+// Source: c:@S@Prs3d_ShadingAspect@F@DynamicType#1
 // Source: c:@S@Prs3d_ShadingAspect@F@Prs3d_ShadingAspect#
 // Source: c:@S@Prs3d_ShadingAspect@F@Prs3d_ShadingAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_AspectFillArea3d#
 // Source: c:@S@Prs3d_ShadingAspect@F@SetAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_AspectFillArea3d#
@@ -2292,6 +2863,8 @@
 // Source: c:@S@Prs3d_ShadingAspect@F@ToUseVertexColorForBackFaces#1
 // Source: c:@S@Prs3d_ShadingAspect@F@Transparency#$@E@Aspect_TypeOfFacingModel#1
 // Source: c:@S@Prs3d_TextAspect@F@Angle#1
+// Source: c:@S@Prs3d_TextAspect@F@Aspect#1
+// Source: c:@S@Prs3d_TextAspect@F@DynamicType#1
 // Source: c:@S@Prs3d_TextAspect@F@Height#1
 // Source: c:@S@Prs3d_TextAspect@F@HorizontalJustification#1
 // Source: c:@S@Prs3d_TextAspect@F@Orientation#1
@@ -2304,24 +2877,33 @@
 // Source: c:@S@Prs3d_TextAspect@F@SetOrientation#$@E@Graphic3d_TextPath#
 // Source: c:@S@Prs3d_TextAspect@F@SetVerticalJustification#$@E@Graphic3d_VerticalTextAlignment#
 // Source: c:@S@Prs3d_TextAspect@F@VerticalJustification#1
+// Source: c:@S@PrsDim_AngleDimension@F@CenterPoint#1
+// Source: c:@S@PrsDim_AngleDimension@F@DynamicType#1
+// Source: c:@S@PrsDim_AngleDimension@F@FirstPoint#1
 // Source: c:@S@PrsDim_AngleDimension@F@GetArrowsVisibility#1
 // Source: c:@S@PrsDim_AngleDimension@F@GetTextPosition#1
 // Source: c:@S@PrsDim_AngleDimension@F@GetType#1
 // Source: c:@S@PrsDim_AngleDimension@F@PrsDim_AngleDimension#&1$@S@gp_Pnt#S0_#S0_#
+// Source: c:@S@PrsDim_AngleDimension@F@SecondPoint#1
 // Source: c:@S@PrsDim_AngleDimension@F@SetArrowsVisibility#&1$@E@PrsDim_TypeOfAngleArrowVisibility#
 // Source: c:@S@PrsDim_AngleDimension@F@SetMeasuredGeometry#&1$@S@gp_Pnt#S0_#S0_#
 // Source: c:@S@PrsDim_AngleDimension@F@SetTextPosition#&1$@S@gp_Pnt#
 // Source: c:@S@PrsDim_AngleDimension@F@SetType#$@E@PrsDim_TypeOfAngle#
+// Source: c:@S@PrsDim_Chamf2dDimension@F@DynamicType#1
 // Source: c:@S@PrsDim_Chamf2dDimension@F@IsMovable#1
 // Source: c:@S@PrsDim_Chamf2dDimension@F@KindOfDimension#1
+// Source: c:@S@PrsDim_Chamf3dDimension@F@DynamicType#1
 // Source: c:@S@PrsDim_Chamf3dDimension@F@IsMovable#1
 // Source: c:@S@PrsDim_Chamf3dDimension@F@KindOfDimension#1
+// Source: c:@S@PrsDim_ConcentricRelation@F@DynamicType#1
 // Source: c:@S@PrsDim_DiameterDimension@F@AnchorPoint#
+// Source: c:@S@PrsDim_DiameterDimension@F@DynamicType#1
 // Source: c:@S@PrsDim_DiameterDimension@F@GetTextPosition#1
 // Source: c:@S@PrsDim_DiameterDimension@F@SetTextPosition#&1$@S@gp_Pnt#
 // Source: c:@S@PrsDim_Dimension@F@AcceptDisplayMode#I#1
 // Source: c:@S@PrsDim_Dimension@F@DimensionAspect#1
 // Source: c:@S@PrsDim_Dimension@F@DisplaySpecialSymbol#1
+// Source: c:@S@PrsDim_Dimension@F@DynamicType#1
 // Source: c:@S@PrsDim_Dimension@F@GetFlyout#1
 // Source: c:@S@PrsDim_Dimension@F@GetGeometryType#1
 // Source: c:@S@PrsDim_Dimension@F@GetTextPosition#1
@@ -2340,34 +2922,54 @@
 // Source: c:@S@PrsDim_Dimension@F@Type#1
 // Source: c:@S@PrsDim_Dimension@F@UnsetCustomPlane#
 // Source: c:@S@PrsDim_Dimension@F@UnsetFixedTextPosition#
+// Source: c:@S@PrsDim_DimensionOwner@F@DynamicType#1
 // Source: c:@S@PrsDim_DimensionOwner@F@HilightWithColor#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#I#
 // Source: c:@S@PrsDim_DimensionOwner@F@IsHilighted#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#1
 // Source: c:@S@PrsDim_DimensionOwner@F@PrsDim_DimensionOwner#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#$@E@PrsDim_DimensionSelectionMode#I#
 // Source: c:@S@PrsDim_DimensionOwner@F@SelectionMode#1
 // Source: c:@S@PrsDim_DimensionOwner@F@Unhilight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@PrsDim_EllipseRadiusDimension@F@ComputeGeometry#
+// Source: c:@S@PrsDim_EllipseRadiusDimension@F@DynamicType#1
 // Source: c:@S@PrsDim_EllipseRadiusDimension@F@IsMovable#1
 // Source: c:@S@PrsDim_EllipseRadiusDimension@F@KindOfDimension#1
+// Source: c:@S@PrsDim_EqualDistanceRelation@F@DynamicType#1
+// Source: c:@S@PrsDim_EqualRadiusRelation@F@DynamicType#1
+// Source: c:@S@PrsDim_FixRelation@F@DynamicType#1
 // Source: c:@S@PrsDim_FixRelation@F@IsMovable#1
 // Source: c:@S@PrsDim_IdenticRelation@F@AddUser#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#
 // Source: c:@S@PrsDim_IdenticRelation@F@ClearUsers#
+// Source: c:@S@PrsDim_IdenticRelation@F@DynamicType#1
 // Source: c:@S@PrsDim_IdenticRelation@F@HasUsers#1
 // Source: c:@S@PrsDim_IdenticRelation@F@IsMovable#1
+// Source: c:@S@PrsDim_LengthDimension@F@DynamicType#1
+// Source: c:@S@PrsDim_LengthDimension@F@FirstPoint#1
 // Source: c:@S@PrsDim_LengthDimension@F@GetTextPosition#1
 // Source: c:@S@PrsDim_LengthDimension@F@PrsDim_LengthDimension#
+// Source: c:@S@PrsDim_LengthDimension@F@SecondPoint#1
 // Source: c:@S@PrsDim_LengthDimension@F@SetTextPosition#&1$@S@gp_Pnt#
+// Source: c:@S@PrsDim_MaxRadiusDimension@F@DynamicType#1
+// Source: c:@S@PrsDim_MidPointRelation@F@DynamicType#1
 // Source: c:@S@PrsDim_MidPointRelation@F@IsMovable#1
+// Source: c:@S@PrsDim_MinRadiusDimension@F@DynamicType#1
+// Source: c:@S@PrsDim_OffsetDimension@F@DynamicType#1
 // Source: c:@S@PrsDim_OffsetDimension@F@IsMovable#1
 // Source: c:@S@PrsDim_OffsetDimension@F@KindOfDimension#1
+// Source: c:@S@PrsDim_ParallelRelation@F@DynamicType#1
 // Source: c:@S@PrsDim_ParallelRelation@F@IsMovable#1
+// Source: c:@S@PrsDim_PerpendicularRelation@F@DynamicType#1
+// Source: c:@S@PrsDim_RadiusDimension@F@AnchorPoint#1
+// Source: c:@S@PrsDim_RadiusDimension@F@DynamicType#1
 // Source: c:@S@PrsDim_RadiusDimension@F@GetTextPosition#1
 // Source: c:@S@PrsDim_RadiusDimension@F@SetTextPosition#&1$@S@gp_Pnt#
 // Source: c:@S@PrsDim_Relation@F@AcceptDisplayMode#I#1
 // Source: c:@S@PrsDim_Relation@F@ArrowSize#1
 // Source: c:@S@PrsDim_Relation@F@AutomaticPosition#1
+// Source: c:@S@PrsDim_Relation@F@DynamicType#1
 // Source: c:@S@PrsDim_Relation@F@ExtShape#1
 // Source: c:@S@PrsDim_Relation@F@IsMovable#1
 // Source: c:@S@PrsDim_Relation@F@KindOfDimension#1
+// Source: c:@S@PrsDim_Relation@F@Plane#1
+// Source: c:@S@PrsDim_Relation@F@Position#1
 // Source: c:@S@PrsDim_Relation@F@SetArrowSize#d#
 // Source: c:@S@PrsDim_Relation@F@SetAutomaticPosition#b#
 // Source: c:@S@PrsDim_Relation@F@SetBndBox#d#d#d#d#d#d#
@@ -2381,17 +2983,23 @@
 // Source: c:@S@PrsDim_Relation@F@UnsetBndBox#
 // Source: c:@S@PrsDim_Relation@F@UnsetColor#
 // Source: c:@S@PrsDim_Relation@F@Value#1
+// Source: c:@S@PrsDim_SymmetricRelation@F@DynamicType#1
 // Source: c:@S@PrsDim_SymmetricRelation@F@IsMovable#1
+// Source: c:@S@PrsDim_TangentRelation@F@DynamicType#1
 // Source: c:@S@PrsDim_TangentRelation@F@ExternRef#
 // Source: c:@S@PrsDim_TangentRelation@F@SetExternRef#I#
 // Source: c:@S@PrsMgr_PresentableObject@F@AcceptDisplayMode#I#1
 // Source: c:@S@PrsMgr_PresentableObject@F@AddChild#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#
 // Source: c:@S@PrsMgr_PresentableObject@F@AddChildWithCurrentTransformation#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#
 // Source: c:@S@PrsMgr_PresentableObject@F@AddClipPlane#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ClipPlane#
+// Source: c:@S@PrsMgr_PresentableObject@F@ClipPlanes#1
+// Source: c:@S@PrsMgr_PresentableObject@F@CombinedParentTransformation#1
 // Source: c:@S@PrsMgr_PresentableObject@F@CurrentFacingModel#1
 // Source: c:@S@PrsMgr_PresentableObject@F@DefaultDisplayMode#1
 // Source: c:@S@PrsMgr_PresentableObject@F@DisplayMode#1
 // Source: c:@S@PrsMgr_PresentableObject@F@DisplayStatus#1
+// Source: c:@S@PrsMgr_PresentableObject@F@DynamicHilightAttributes#1
+// Source: c:@S@PrsMgr_PresentableObject@F@DynamicType#1
 // Source: c:@S@PrsMgr_PresentableObject@F@HasColor#1
 // Source: c:@S@PrsMgr_PresentableObject@F@HasDisplayMode#1
 // Source: c:@S@PrsMgr_PresentableObject@F@HasHilightMode#1
@@ -2400,10 +3008,12 @@
 // Source: c:@S@PrsMgr_PresentableObject@F@HasPolygonOffsets#1
 // Source: c:@S@PrsMgr_PresentableObject@F@HasTransformation#1
 // Source: c:@S@PrsMgr_PresentableObject@F@HasWidth#1
+// Source: c:@S@PrsMgr_PresentableObject@F@HilightAttributes#1
 // Source: c:@S@PrsMgr_PresentableObject@F@HilightMode#1
 // Source: c:@S@PrsMgr_PresentableObject@F@IsInfinite#1
 // Source: c:@S@PrsMgr_PresentableObject@F@IsMutable#1
 // Source: c:@S@PrsMgr_PresentableObject@F@IsTransparent#1
+// Source: c:@S@PrsMgr_PresentableObject@F@LocalTransformationGeom#1
 // Source: c:@S@PrsMgr_PresentableObject@F@Material#1
 // Source: c:@S@PrsMgr_PresentableObject@F@RecomputeTransformation#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@PrsMgr_PresentableObject@F@RemoveChild#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#
@@ -2421,6 +3031,7 @@
 // Source: c:@S@PrsMgr_PresentableObject@F@SetIsoOnTriangulation#b#
 // Source: c:@S@PrsMgr_PresentableObject@F@SetLocalTransformation#&1$@N@opencascade@S@handle>#$@S@TopLoc_Datum3D#
 // Source: c:@S@PrsMgr_PresentableObject@F@SetMutable#b#
+// Source: c:@S@PrsMgr_PresentableObject@F@SetPolygonOffsets#I#f#f#
 // Source: c:@S@PrsMgr_PresentableObject@F@SetPropagateVisualState#b#
 // Source: c:@S@PrsMgr_PresentableObject@F@SetToUpdate#
 // Source: c:@S@PrsMgr_PresentableObject@F@SetToUpdate#I#
@@ -2432,6 +3043,8 @@
 // Source: c:@S@PrsMgr_PresentableObject@F@SynchronizeAspects#
 // Source: c:@S@PrsMgr_PresentableObject@F@ToBeUpdated#b#1
 // Source: c:@S@PrsMgr_PresentableObject@F@ToPropagateVisualState#1
+// Source: c:@S@PrsMgr_PresentableObject@F@TransformPersistence#1
+// Source: c:@S@PrsMgr_PresentableObject@F@TransformationGeom#1
 // Source: c:@S@PrsMgr_PresentableObject@F@Transparency#1
 // Source: c:@S@PrsMgr_PresentableObject@F@TypeOfPresentation3d#1
 // Source: c:@S@PrsMgr_PresentableObject@F@UnsetAttributes#
@@ -2443,16 +3056,19 @@
 // Source: c:@S@PrsMgr_PresentableObject@F@UnsetTransparency#
 // Source: c:@S@PrsMgr_PresentableObject@F@UnsetWidth#
 // Source: c:@S@PrsMgr_PresentableObject@F@UpdateTransformation#
+// Source: c:@S@PrsMgr_PresentableObject@F@ViewAffinity#1
 // Source: c:@S@PrsMgr_PresentableObject@F@Width#1
 // Source: c:@S@PrsMgr_PresentableObject@F@ZLayer#1
 // Source: c:@S@PrsMgr_Presentation@F@Clear#b#
 // Source: c:@S@PrsMgr_Presentation@F@Compute#
 // Source: c:@S@PrsMgr_Presentation@F@Display#
+// Source: c:@S@PrsMgr_Presentation@F@DynamicType#1
 // Source: c:@S@PrsMgr_Presentation@F@Erase#
 // Source: c:@S@PrsMgr_Presentation@F@Highlight#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#
 // Source: c:@S@PrsMgr_Presentation@F@IsDisplayed#1
 // Source: c:@S@PrsMgr_Presentation@F@Mode#1
 // Source: c:@S@PrsMgr_Presentation@F@MustBeUpdated#1
+// Source: c:@S@PrsMgr_Presentation@F@PresentationManager#1
 // Source: c:@S@PrsMgr_Presentation@F@SetUpdateStatus#b#
 // Source: c:@S@PrsMgr_Presentation@F@Unhighlight#
 // Source: c:@S@PrsMgr_PresentationManager@F@BeginImmediateDraw#
@@ -2462,6 +3078,7 @@
 // Source: c:@S@PrsMgr_PresentationManager@F@Connect#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#S0_#I#I#
 // Source: c:@S@PrsMgr_PresentationManager@F@Display#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#I#
 // Source: c:@S@PrsMgr_PresentationManager@F@DisplayPriority#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#I#1
+// Source: c:@S@PrsMgr_PresentationManager@F@DynamicType#1
 // Source: c:@S@PrsMgr_PresentationManager@F@EndImmediateDraw#&1$@N@opencascade@S@handle>#$@S@V3d_Viewer#
 // Source: c:@S@PrsMgr_PresentationManager@F@Erase#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#I#
 // Source: c:@S@PrsMgr_PresentationManager@F@GetZLayer#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#1
@@ -2475,10 +3092,12 @@
 // Source: c:@S@PrsMgr_PresentationManager@F@SetDisplayPriority#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#I#$@E@Graphic3d_DisplayPriority#1
 // Source: c:@S@PrsMgr_PresentationManager@F@SetVisibility#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#I#b#
 // Source: c:@S@PrsMgr_PresentationManager@F@SetZLayer#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#I#
+// Source: c:@S@PrsMgr_PresentationManager@F@StructureManager#1
 // Source: c:@S@PrsMgr_PresentationManager@F@Transform#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#&1$@N@opencascade@S@handle>#$@S@TopLoc_Datum3D#I#
 // Source: c:@S@PrsMgr_PresentationManager@F@Unhighlight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#
 // Source: c:@S@PrsMgr_PresentationManager@F@Update#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#I#1
 // Source: c:@S@PrsMgr_PresentationManager@F@UpdateHighlightTrsf#&1$@N@opencascade@S@handle>#$@S@V3d_Viewer#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#I#S3_#
+// Source: c:@S@Select3D_BVHIndexBuffer@F@DynamicType#1
 // Source: c:@S@Select3D_BVHIndexBuffer@F@HasPatches#1
 // Source: c:@S@Select3D_BVHIndexBuffer@F@Index#I#1
 // Source: c:@S@Select3D_BVHIndexBuffer@F@Init#I#b#
@@ -2488,23 +3107,28 @@
 // Source: c:@S@Select3D_BVHIndexBuffer@F@SetIndex#I#I#I#
 // Source: c:@S@Select3D_InteriorSensitivePointSet@F@Center#I#I#1
 // Source: c:@S@Select3D_InteriorSensitivePointSet@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_InteriorSensitivePointSet@F@DynamicType#1
 // Source: c:@S@Select3D_InteriorSensitivePointSet@F@NbSubElements#1
 // Source: c:@S@Select3D_InteriorSensitivePointSet@F@Size#1
 // Source: c:@S@Select3D_InteriorSensitivePointSet@F@Swap#I#I#
 // Source: c:@S@Select3D_SensitiveBox@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveBox@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveBox@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveBox@F@NbSubElements#1
 // Source: c:@S@Select3D_SensitiveBox@F@Select3D_SensitiveBox#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#d#d#d#d#d#d#
 // Source: c:@S@Select3D_SensitiveBox@F@ToBuildBVH#1
 // Source: c:@S@Select3D_SensitiveCircle@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveCircle@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveCircle@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveCircle@F@NbSubElements#1
 // Source: c:@S@Select3D_SensitiveCircle@F@Radius#1
 // Source: c:@S@Select3D_SensitiveCircle@F@ToBuildBVH#1
+// Source: c:@S@Select3D_SensitiveCurve@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveCurve@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveCurve@F@Select3D_SensitiveCurve#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#I#
 // Source: c:@S@Select3D_SensitiveCylinder@F@BottomRadius#1
 // Source: c:@S@Select3D_SensitiveCylinder@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveCylinder@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveCylinder@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveCylinder@F@Height#1
 // Source: c:@S@Select3D_SensitiveCylinder@F@IsHollow#1
@@ -2513,15 +3137,20 @@
 // Source: c:@S@Select3D_SensitiveCylinder@F@TopRadius#1
 // Source: c:@S@Select3D_SensitiveEntity@F@BVH#
 // Source: c:@S@Select3D_SensitiveEntity@F@Clear#
+// Source: c:@S@Select3D_SensitiveEntity@F@DynamicType#1
+// Source: c:@S@Select3D_SensitiveEntity@F@Flipper#1
 // Source: c:@S@Select3D_SensitiveEntity@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveEntity@F@HasInitLocation#1
+// Source: c:@S@Select3D_SensitiveEntity@F@OwnerId#1
 // Source: c:@S@Select3D_SensitiveEntity@F@SensitivityFactor#1
 // Source: c:@S@Select3D_SensitiveEntity@F@Set#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#
 // Source: c:@S@Select3D_SensitiveEntity@F@SetSensitivityFactor#I#
 // Source: c:@S@Select3D_SensitiveEntity@F@SetTransformPersistence#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TransformPers#
 // Source: c:@S@Select3D_SensitiveEntity@F@ToBuildBVH#1
+// Source: c:@S@Select3D_SensitiveEntity@F@TransformPersistence#1
 // Source: c:@S@Select3D_SensitiveFace@F@BVH#
 // Source: c:@S@Select3D_SensitiveFace@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveFace@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveFace@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveFace@F@NbSubElements#1
 // Source: c:@S@Select3D_SensitiveFace@F@ToBuildBVH#1
@@ -2529,6 +3158,7 @@
 // Source: c:@S@Select3D_SensitiveGroup@F@Center#I#I#1
 // Source: c:@S@Select3D_SensitiveGroup@F@CenterOfGeometry#1
 // Source: c:@S@Select3D_SensitiveGroup@F@Clear#
+// Source: c:@S@Select3D_SensitiveGroup@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveGroup@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveGroup@F@IsIn#&1$@N@opencascade@S@handle>#$@S@Select3D_SensitiveEntity#1
 // Source: c:@S@Select3D_SensitiveGroup@F@LastDetectedEntity#1
@@ -2541,15 +3171,19 @@
 // Source: c:@S@Select3D_SensitiveGroup@F@SetCheckOverlapAll#b#
 // Source: c:@S@Select3D_SensitiveGroup@F@SetMatchType#b#
 // Source: c:@S@Select3D_SensitiveGroup@F@Size#1
+// Source: c:@S@Select3D_SensitiveGroup@F@SubEntity#I#1
 // Source: c:@S@Select3D_SensitiveGroup@F@Swap#I#I#
 // Source: c:@S@Select3D_SensitiveGroup@F@ToCheckOverlapAll#1
 // Source: c:@S@Select3D_SensitivePoint@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitivePoint@F@DynamicType#1
 // Source: c:@S@Select3D_SensitivePoint@F@GetConnected#
 // Source: c:@S@Select3D_SensitivePoint@F@NbSubElements#1
+// Source: c:@S@Select3D_SensitivePoint@F@Point#1
 // Source: c:@S@Select3D_SensitivePoint@F@Select3D_SensitivePoint#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@S@gp_Pnt#
 // Source: c:@S@Select3D_SensitivePoint@F@ToBuildBVH#1
 // Source: c:@S@Select3D_SensitivePoly@F@Center#I#I#1
 // Source: c:@S@Select3D_SensitivePoly@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitivePoly@F@DynamicType#1
 // Source: c:@S@Select3D_SensitivePoly@F@GetPoint3d#I#1
 // Source: c:@S@Select3D_SensitivePoly@F@NbSubElements#1
 // Source: c:@S@Select3D_SensitivePoly@F@Select3D_SensitivePoly#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#b#I#
@@ -2558,13 +3192,17 @@
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@BVH#
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@Center#I#I#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitivePrimitiveArray@F@DynamicType#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@GetConnected#
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@HasInitLocation#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@LastDetectedEdgeNode1#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@LastDetectedEdgeNode2#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@LastDetectedElement#1
+// Source: c:@S@Select3D_SensitivePrimitiveArray@F@LastDetectedElementMap#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@LastDetectedNode#1
+// Source: c:@S@Select3D_SensitivePrimitiveArray@F@LastDetectedNodeMap#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@NbSubElements#1
+// Source: c:@S@Select3D_SensitivePrimitiveArray@F@PatchDistance#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@PatchSizeMax#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@Select3D_SensitivePrimitiveArray#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@Set#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#
@@ -2574,6 +3212,7 @@
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@SetDetectNodeMap#b#
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@SetDetectNodes#b#
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@SetMinMax#d#d#d#d#d#d#
+// Source: c:@S@Select3D_SensitivePrimitiveArray@F@SetPatchDistance#f#
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@SetPatchSizeMax#I#
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@Size#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@Swap#I#I#
@@ -2583,22 +3222,28 @@
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@ToDetectNodeMap#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@ToDetectNodes#1
 // Source: c:@S@Select3D_SensitiveSegment@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveSegment@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveSegment@F@EndPoint#&1$@S@gp_Pnt#
+// Source: c:@S@Select3D_SensitiveSegment@F@EndPoint#1
 // Source: c:@S@Select3D_SensitiveSegment@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveSegment@F@NbSubElements#1
 // Source: c:@S@Select3D_SensitiveSegment@F@Select3D_SensitiveSegment#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@S@gp_Pnt#S3_#
 // Source: c:@S@Select3D_SensitiveSegment@F@SetEndPoint#&1$@S@gp_Pnt#
 // Source: c:@S@Select3D_SensitiveSegment@F@SetStartPoint#&1$@S@gp_Pnt#
 // Source: c:@S@Select3D_SensitiveSegment@F@StartPoint#&1$@S@gp_Pnt#
+// Source: c:@S@Select3D_SensitiveSegment@F@StartPoint#1
 // Source: c:@S@Select3D_SensitiveSegment@F@ToBuildBVH#1
 // Source: c:@S@Select3D_SensitiveSet@F@BVH#
 // Source: c:@S@Select3D_SensitiveSet@F@CenterOfGeometry#1
 // Source: c:@S@Select3D_SensitiveSet@F@Clear#
+// Source: c:@S@Select3D_SensitiveSet@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveSet@F@GetLeafNodeSize#1
 // Source: c:@S@Select3D_SensitiveSet@F@MarkDirty#
 // Source: c:@S@Select3D_SensitiveSet@F@ToBuildBVH#1
 // Source: c:@S@Select3D_SensitiveSphere@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveSphere@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveSphere@F@GetConnected#
+// Source: c:@S@Select3D_SensitiveSphere@F@LastDetectedPoint#1
 // Source: c:@S@Select3D_SensitiveSphere@F@NbSubElements#1
 // Source: c:@S@Select3D_SensitiveSphere@F@Radius#1
 // Source: c:@S@Select3D_SensitiveSphere@F@ResetLastDetectedPoint#
@@ -2606,21 +3251,25 @@
 // Source: c:@S@Select3D_SensitiveSphere@F@ToBuildBVH#1
 // Source: c:@S@Select3D_SensitiveTriangle@F@Center3D#1
 // Source: c:@S@Select3D_SensitiveTriangle@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveTriangle@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveTriangle@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveTriangle@F@NbSubElements#1
 // Source: c:@S@Select3D_SensitiveTriangle@F@Select3D_SensitiveTriangle#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@S@gp_Pnt#S3_#S3_#$@E@Select3D_TypeOfSensitivity#
 // Source: c:@S@Select3D_SensitiveTriangle@F@ToBuildBVH#1
 // Source: c:@S@Select3D_SensitiveTriangulation@F@Center#I#I#1
 // Source: c:@S@Select3D_SensitiveTriangulation@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveTriangulation@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveTriangulation@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveTriangulation@F@HasInitLocation#1
 // Source: c:@S@Select3D_SensitiveTriangulation@F@LastDetectedTriangleIndex#1
 // Source: c:@S@Select3D_SensitiveTriangulation@F@NbSubElements#1
 // Source: c:@S@Select3D_SensitiveTriangulation@F@Size#1
 // Source: c:@S@Select3D_SensitiveTriangulation@F@Swap#I#I#
+// Source: c:@S@Select3D_SensitiveTriangulation@F@Triangulation#1
 // Source: c:@S@Select3D_SensitiveWire@F@Add#&1$@N@opencascade@S@handle>#$@S@Select3D_SensitiveEntity#
 // Source: c:@S@Select3D_SensitiveWire@F@Center#I#I#1
 // Source: c:@S@Select3D_SensitiveWire@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveWire@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveWire@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveWire@F@GetLastDetected#1
 // Source: c:@S@Select3D_SensitiveWire@F@NbSubElements#1
@@ -2628,8 +3277,10 @@
 // Source: c:@S@Select3D_SensitiveWire@F@Set#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#
 // Source: c:@S@Select3D_SensitiveWire@F@Size#1
 // Source: c:@S@Select3D_SensitiveWire@F@Swap#I#I#
+// Source: c:@S@SelectMgr_AndFilter@F@DynamicType#1
 // Source: c:@S@SelectMgr_AndFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@SelectMgr_AndFilter@F@SelectMgr_AndFilter#
+// Source: c:@S@SelectMgr_AndOrFilter@F@DynamicType#1
 // Source: c:@S@SelectMgr_AndOrFilter@F@FilterType#1
 // Source: c:@S@SelectMgr_AndOrFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@SelectMgr_AndOrFilter@F@SelectMgr_AndOrFilter#$@E@SelectMgr_FilterType#
@@ -2638,21 +3289,29 @@
 // Source: c:@S@SelectMgr_AxisIntersector@F@CopyWithBuilder#&1$@N@opencascade@S@handle>#$@S@SelectMgr_FrustumBuilder#1
 // Source: c:@S@SelectMgr_AxisIntersector@F@DetectedPoint#d#1
 // Source: c:@S@SelectMgr_AxisIntersector@F@DistToGeometryCenter#&1$@S@gp_Pnt#1
+// Source: c:@S@SelectMgr_AxisIntersector@F@GetFarPnt#1
+// Source: c:@S@SelectMgr_AxisIntersector@F@GetNearPnt#1
 // Source: c:@S@SelectMgr_AxisIntersector@F@IsScalable#1
 // Source: c:@S@SelectMgr_AxisIntersector@F@OverlapsPoint#&1$@S@gp_Pnt#1
 // Source: c:@S@SelectMgr_AxisIntersector@F@SelectMgr_AxisIntersector#
 // Source: c:@S@SelectMgr_AxisIntersector@F@SetCamera#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@SelectMgr_BVHThreadPool@F@AddEntity#&1$@N@opencascade@S@handle>#$@S@Select3D_SensitiveEntity#
+// Source: c:@S@SelectMgr_BVHThreadPool@F@DynamicType#1
 // Source: c:@S@SelectMgr_BVHThreadPool@F@SelectMgr_BVHThreadPool#I#
 // Source: c:@S@SelectMgr_BVHThreadPool@F@StopThreads#
 // Source: c:@S@SelectMgr_BVHThreadPool@F@WaitThreads#
+// Source: c:@S@SelectMgr_BaseFrustum@F@DynamicType#1
 // Source: c:@S@SelectMgr_BaseFrustum@F@SetBuilder#&1$@N@opencascade@S@handle>#$@S@SelectMgr_FrustumBuilder#
 // Source: c:@S@SelectMgr_BaseFrustum@F@SetCamera#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@SelectMgr_BaseFrustum@F@SetPixelTolerance#I#
 // Source: c:@S@SelectMgr_BaseFrustum@F@SetViewport#d#d#d#d#
 // Source: c:@S@SelectMgr_BaseFrustum@F@SetWindowSize#I#I#
+// Source: c:@S@SelectMgr_BaseIntersector@F@Camera#1
 // Source: c:@S@SelectMgr_BaseIntersector@F@DetectedPoint#d#1
 // Source: c:@S@SelectMgr_BaseIntersector@F@DistToGeometryCenter#&1$@S@gp_Pnt#1
+// Source: c:@S@SelectMgr_BaseIntersector@F@DynamicType#1
+// Source: c:@S@SelectMgr_BaseIntersector@F@GetFarPnt#1
+// Source: c:@S@SelectMgr_BaseIntersector@F@GetNearPnt#1
 // Source: c:@S@SelectMgr_BaseIntersector@F@GetSelectionType#1
 // Source: c:@S@SelectMgr_BaseIntersector@F@SetCamera#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@SelectMgr_BaseIntersector@F@SetPixelTolerance#I#
@@ -2661,11 +3320,13 @@
 // Source: c:@S@SelectMgr_CompositionFilter@F@ActsOn#$@E@TopAbs_ShapeEnum#1
 // Source: c:@S@SelectMgr_CompositionFilter@F@Add#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Filter#
 // Source: c:@S@SelectMgr_CompositionFilter@F@Clear#
+// Source: c:@S@SelectMgr_CompositionFilter@F@DynamicType#1
 // Source: c:@S@SelectMgr_CompositionFilter@F@IsEmpty#1
 // Source: c:@S@SelectMgr_CompositionFilter@F@IsIn#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Filter#1
 // Source: c:@S@SelectMgr_CompositionFilter@F@Remove#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Filter#
 // Source: c:@S@SelectMgr_EntityOwner@F@Clear#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@SelectMgr_EntityOwner@F@ComesFromDecomposition#1
+// Source: c:@S@SelectMgr_EntityOwner@F@DynamicType#1
 // Source: c:@S@SelectMgr_EntityOwner@F@HasLocation#1
 // Source: c:@S@SelectMgr_EntityOwner@F@HasSelectable#1
 // Source: c:@S@SelectMgr_EntityOwner@F@HilightWithColor#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#I#
@@ -2692,12 +3353,16 @@
 // Source: c:@S@SelectMgr_EntityOwner@F@Unhilight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@SelectMgr_EntityOwner@F@UpdateHighlightTrsf#&1$@N@opencascade@S@handle>#$@S@V3d_Viewer#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@SelectMgr_Filter@F@ActsOn#$@E@TopAbs_ShapeEnum#1
+// Source: c:@S@SelectMgr_Filter@F@DynamicType#1
+// Source: c:@S@SelectMgr_FrustumBuilder@F@Camera#1
+// Source: c:@S@SelectMgr_FrustumBuilder@F@DynamicType#1
 // Source: c:@S@SelectMgr_FrustumBuilder@F@InvalidateViewport#
 // Source: c:@S@SelectMgr_FrustumBuilder@F@ProjectPntOnViewPlane#&1d#S0_#S0_#1
 // Source: c:@S@SelectMgr_FrustumBuilder@F@SelectMgr_FrustumBuilder#
 // Source: c:@S@SelectMgr_FrustumBuilder@F@SetCamera#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@SelectMgr_FrustumBuilder@F@SetViewport#d#d#d#d#
 // Source: c:@S@SelectMgr_FrustumBuilder@F@SetWindowSize#I#I#
+// Source: c:@S@SelectMgr_OrFilter@F@DynamicType#1
 // Source: c:@S@SelectMgr_OrFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@SelectMgr_OrFilter@F@SelectMgr_OrFilter#
 // Source: c:@S@SelectMgr_SelectableObject@F@AcceptShapeDecomposition#1
@@ -2705,7 +3370,9 @@
 // Source: c:@S@SelectMgr_SelectableObject@F@ClearDynamicHighlight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#
 // Source: c:@S@SelectMgr_SelectableObject@F@ClearSelected#
 // Source: c:@S@SelectMgr_SelectableObject@F@ClearSelections#b#
+// Source: c:@S@SelectMgr_SelectableObject@F@DynamicType#1
 // Source: c:@S@SelectMgr_SelectableObject@F@ErasePresentations#b#
+// Source: c:@S@SelectMgr_SelectableObject@F@GetAssemblyOwner#1
 // Source: c:@S@SelectMgr_SelectableObject@F@GlobalSelOwner#1
 // Source: c:@S@SelectMgr_SelectableObject@F@GlobalSelectionMode#1
 // Source: c:@S@SelectMgr_SelectableObject@F@HasSelection#I#1
@@ -2714,6 +3381,7 @@
 // Source: c:@S@SelectMgr_SelectableObject@F@RecomputePrimitives#
 // Source: c:@S@SelectMgr_SelectableObject@F@RecomputePrimitives#I#
 // Source: c:@S@SelectMgr_SelectableObject@F@ResetTransformation#
+// Source: c:@S@SelectMgr_SelectableObject@F@Selection#I#1
 // Source: c:@S@SelectMgr_SelectableObject@F@SetAssemblyOwner#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#I#
 // Source: c:@S@SelectMgr_SelectableObject@F@SetAutoHilight#b#
 // Source: c:@S@SelectMgr_SelectableObject@F@SetZLayer#I#
@@ -2724,6 +3392,7 @@
 // Source: c:@S@SelectMgr_Selection@F@BVHUpdateStatus#1
 // Source: c:@S@SelectMgr_Selection@F@Clear#
 // Source: c:@S@SelectMgr_Selection@F@Destroy#
+// Source: c:@S@SelectMgr_Selection@F@DynamicType#1
 // Source: c:@S@SelectMgr_Selection@F@GetSelectionState#1
 // Source: c:@S@SelectMgr_Selection@F@IsEmpty#1
 // Source: c:@S@SelectMgr_Selection@F@Mode#1
@@ -2739,18 +3408,22 @@
 // Source: c:@S@SelectMgr_SelectionManager@F@ClearSelectionStructures#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#
 // Source: c:@S@SelectMgr_SelectionManager@F@Contains#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#1
 // Source: c:@S@SelectMgr_SelectionManager@F@Deactivate#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#
+// Source: c:@S@SelectMgr_SelectionManager@F@DynamicType#1
 // Source: c:@S@SelectMgr_SelectionManager@F@IsActivated#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#1
 // Source: c:@S@SelectMgr_SelectionManager@F@Load#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#
 // Source: c:@S@SelectMgr_SelectionManager@F@RecomputeSelection#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#b#I#
 // Source: c:@S@SelectMgr_SelectionManager@F@Remove#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#
 // Source: c:@S@SelectMgr_SelectionManager@F@RestoreSelectionStructures#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#
 // Source: c:@S@SelectMgr_SelectionManager@F@SelectMgr_SelectionManager#&1$@N@opencascade@S@handle>#$@S@SelectMgr_ViewerSelector#
+// Source: c:@S@SelectMgr_SelectionManager@F@Selector#1
 // Source: c:@S@SelectMgr_SelectionManager@F@SetSelectionSensitivity#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#I#
 // Source: c:@S@SelectMgr_SelectionManager@F@SetUpdateMode#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#$@E@SelectMgr_TypeOfUpdate#
 // Source: c:@S@SelectMgr_SelectionManager@F@SetUpdateMode#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#$@E@SelectMgr_TypeOfUpdate#
 // Source: c:@S@SelectMgr_SelectionManager@F@Update#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#b#
 // Source: c:@S@SelectMgr_SelectionManager@F@UpdateSelection#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#
+// Source: c:@S@SelectMgr_SensitiveEntity@F@BaseSensitive#1
 // Source: c:@S@SelectMgr_SensitiveEntity@F@Clear#
+// Source: c:@S@SelectMgr_SensitiveEntity@F@DynamicType#1
 // Source: c:@S@SelectMgr_SensitiveEntity@F@IsActiveForSelection#1
 // Source: c:@S@SelectMgr_SensitiveEntity@F@ResetSelectionActiveStatus#1
 // Source: c:@S@SelectMgr_SensitiveEntity@F@SelectMgr_SensitiveEntity#&1$@N@opencascade@S@handle>#$@S@Select3D_SensitiveEntity#
@@ -2772,6 +3445,7 @@
 // Source: c:@S@SelectMgr_ViewerSelector@F@DepthTolerance#1
 // Source: c:@S@SelectMgr_ViewerSelector@F@DepthToleranceType#1
 // Source: c:@S@SelectMgr_ViewerSelector@F@DisplaySensitive#&1$@N@opencascade@S@handle>#$@S@V3d_View#
+// Source: c:@S@SelectMgr_ViewerSelector@F@DynamicType#1
 // Source: c:@S@SelectMgr_ViewerSelector@F@IsActive#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#1
 // Source: c:@S@SelectMgr_ViewerSelector@F@IsInside#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#1
 // Source: c:@S@SelectMgr_ViewerSelector@F@MoveSelectableObject#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#
@@ -2780,6 +3454,7 @@
 // Source: c:@S@SelectMgr_ViewerSelector@F@Pick#I#I#&1$@N@opencascade@S@handle>#$@S@V3d_View#
 // Source: c:@S@SelectMgr_ViewerSelector@F@Pick#I#I#I#I#&1$@N@opencascade@S@handle>#$@S@V3d_View#
 // Source: c:@S@SelectMgr_ViewerSelector@F@Picked#I#1
+// Source: c:@S@SelectMgr_ViewerSelector@F@PickedEntity#I#1
 // Source: c:@S@SelectMgr_ViewerSelector@F@PickedPoint#I#1
 // Source: c:@S@SelectMgr_ViewerSelector@F@PixelTolerance#1
 // Source: c:@S@SelectMgr_ViewerSelector@F@QueueBVHBuild#&1$@N@opencascade@S@handle>#$@S@Select3D_SensitiveEntity#
@@ -2802,13 +3477,20 @@
 // Source: c:@S@SelectMgr_ViewerSelector@F@WaitForBVHBuild#
 // Source: c:@S@StdPrs_BRepFont@F@Ascender#1
 // Source: c:@S@StdPrs_BRepFont@F@Descender#1
+// Source: c:@S@StdPrs_BRepFont@F@DynamicType#1
+// Source: c:@S@StdPrs_BRepFont@F@FTFont#1
 // Source: c:@S@StdPrs_BRepFont@F@LineSpacing#1
 // Source: c:@S@StdPrs_BRepFont@F@PointSize#1
 // Source: c:@S@StdPrs_BRepFont@F@Release#
 // Source: c:@S@StdPrs_BRepFont@F@Scale#1
 // Source: c:@S@StdPrs_BRepFont@F@SetCompositeCurveMode#b#
+// Source: c:@S@StdPrs_BRepFont@F@SetWidthScaling#f#
 // Source: c:@S@StdPrs_BRepFont@F@StdPrs_BRepFont#
+// Source: c:@S@StdPrs_HLRPolyShape@F@DynamicType#1
+// Source: c:@S@StdPrs_HLRShape@F@DynamicType#1
+// Source: c:@S@StdPrs_HLRShapeI@F@DynamicType#1
 // Source: c:@S@StdSelect_BRepOwner@F@Clear#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
+// Source: c:@S@StdSelect_BRepOwner@F@DynamicType#1
 // Source: c:@S@StdSelect_BRepOwner@F@HasHilightMode#1
 // Source: c:@S@StdSelect_BRepOwner@F@HasShape#1
 // Source: c:@S@StdSelect_BRepOwner@F@HilightMode#1
@@ -2820,16 +3502,20 @@
 // Source: c:@S@StdSelect_BRepOwner@F@Unhilight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@StdSelect_BRepOwner@F@UpdateHighlightTrsf#&1$@N@opencascade@S@handle>#$@S@V3d_Viewer#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@StdSelect_EdgeFilter@F@ActsOn#$@E@TopAbs_ShapeEnum#1
+// Source: c:@S@StdSelect_EdgeFilter@F@DynamicType#1
 // Source: c:@S@StdSelect_EdgeFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@StdSelect_EdgeFilter@F@SetType#$@E@StdSelect_TypeOfEdge#
 // Source: c:@S@StdSelect_EdgeFilter@F@StdSelect_EdgeFilter#$@E@StdSelect_TypeOfEdge#
 // Source: c:@S@StdSelect_EdgeFilter@F@Type#1
 // Source: c:@S@StdSelect_FaceFilter@F@ActsOn#$@E@TopAbs_ShapeEnum#1
+// Source: c:@S@StdSelect_FaceFilter@F@DynamicType#1
 // Source: c:@S@StdSelect_FaceFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@StdSelect_FaceFilter@F@SetType#$@E@StdSelect_TypeOfFace#
 // Source: c:@S@StdSelect_FaceFilter@F@StdSelect_FaceFilter#$@E@StdSelect_TypeOfFace#
 // Source: c:@S@StdSelect_FaceFilter@F@Type#1
+// Source: c:@S@StdSelect_Shape@F@DynamicType#1
 // Source: c:@S@StdSelect_ShapeTypeFilter@F@ActsOn#$@E@TopAbs_ShapeEnum#1
+// Source: c:@S@StdSelect_ShapeTypeFilter@F@DynamicType#1
 // Source: c:@S@StdSelect_ShapeTypeFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@StdSelect_ShapeTypeFilter@F@StdSelect_ShapeTypeFilter#$@E@TopAbs_ShapeEnum#
 // Source: c:@S@StdSelect_ShapeTypeFilter@F@Type#1
@@ -2843,6 +3529,7 @@
 // Source: c:@S@TPrsStd_AISPresentation@F@BeforeUndo#&1$@N@opencascade@S@handle>#$@S@TDF_AttributeDelta#b#
 // Source: c:@S@TPrsStd_AISPresentation@F@Color#1
 // Source: c:@S@TPrsStd_AISPresentation@F@Display#b#
+// Source: c:@S@TPrsStd_AISPresentation@F@DynamicType#1
 // Source: c:@S@TPrsStd_AISPresentation@F@Erase#b#
 // Source: c:@S@TPrsStd_AISPresentation@F@GetAIS#1
 // Source: c:@S@TPrsStd_AISPresentation@F@GetNbSelectionModes#1
@@ -2876,6 +3563,7 @@
 // Source: c:@S@TPrsStd_AISPresentation@F@UnsetWidth#
 // Source: c:@S@TPrsStd_AISPresentation@F@Update#
 // Source: c:@S@TPrsStd_AISPresentation@F@Width#1
+// Source: c:@S@TPrsStd_AISViewer@F@DynamicType#1
 // Source: c:@S@TPrsStd_AISViewer@F@GetInteractiveContext#1
 // Source: c:@S@TPrsStd_AISViewer@F@NewEmpty#1
 // Source: c:@S@TPrsStd_AISViewer@F@Paste#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#&1$@N@opencascade@S@handle>#$@S@TDF_RelocationTable#1
@@ -2883,34 +3571,55 @@
 // Source: c:@S@TPrsStd_AISViewer@F@SetInteractiveContext#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#
 // Source: c:@S@TPrsStd_AISViewer@F@TPrsStd_AISViewer#
 // Source: c:@S@TPrsStd_AISViewer@F@Update#1
+// Source: c:@S@TPrsStd_AxisDriver@F@DynamicType#1
 // Source: c:@S@TPrsStd_AxisDriver@F@TPrsStd_AxisDriver#
+// Source: c:@S@TPrsStd_ConstraintDriver@F@DynamicType#1
 // Source: c:@S@TPrsStd_ConstraintDriver@F@TPrsStd_ConstraintDriver#
+// Source: c:@S@TPrsStd_Driver@F@DynamicType#1
 // Source: c:@S@TPrsStd_DriverTable@F@Clear#
+// Source: c:@S@TPrsStd_DriverTable@F@DynamicType#1
 // Source: c:@S@TPrsStd_DriverTable@F@InitStandardDrivers#
 // Source: c:@S@TPrsStd_DriverTable@F@TPrsStd_DriverTable#
+// Source: c:@S@TPrsStd_GeometryDriver@F@DynamicType#1
 // Source: c:@S@TPrsStd_GeometryDriver@F@TPrsStd_GeometryDriver#
+// Source: c:@S@TPrsStd_NamedShapeDriver@F@DynamicType#1
 // Source: c:@S@TPrsStd_NamedShapeDriver@F@TPrsStd_NamedShapeDriver#
+// Source: c:@S@TPrsStd_PlaneDriver@F@DynamicType#1
 // Source: c:@S@TPrsStd_PlaneDriver@F@TPrsStd_PlaneDriver#
+// Source: c:@S@TPrsStd_PointDriver@F@DynamicType#1
 // Source: c:@S@TPrsStd_PointDriver@F@TPrsStd_PointDriver#
+// Source: c:@S@V3d_AmbientLight@F@DynamicType#1
 // Source: c:@S@V3d_CircularGrid@F@Display#
+// Source: c:@S@V3d_CircularGrid@F@DynamicType#1
 // Source: c:@S@V3d_CircularGrid@F@Erase#1
 // Source: c:@S@V3d_CircularGrid@F@IsDisplayed#1
 // Source: c:@S@V3d_CircularGrid@F@SetGraphicValues#d#d#
+// Source: c:@S@V3d_DirectionalLight@F@DynamicType#1
 // Source: c:@S@V3d_DirectionalLight@F@SetDirection#$@E@V3d_TypeOfOrientation#
+// Source: c:@S@V3d_Plane@F@ClipPlane#1
+// Source: c:@S@V3d_Plane@F@DynamicType#1
 // Source: c:@S@V3d_Plane@F@Erase#
 // Source: c:@S@V3d_Plane@F@IsDisplayed#1
 // Source: c:@S@V3d_Plane@F@SetPlane#d#d#d#d#
 // Source: c:@S@V3d_Plane@F@V3d_Plane#d#d#d#d#
+// Source: c:@S@V3d_PositionLight@F@DynamicType#1
+// Source: c:@S@V3d_PositionalLight@F@DynamicType#1
 // Source: c:@S@V3d_RectangularGrid@F@Display#
+// Source: c:@S@V3d_RectangularGrid@F@DynamicType#1
 // Source: c:@S@V3d_RectangularGrid@F@Erase#1
 // Source: c:@S@V3d_RectangularGrid@F@IsDisplayed#1
 // Source: c:@S@V3d_RectangularGrid@F@SetGraphicValues#d#d#d#
+// Source: c:@S@V3d_SpotLight@F@DynamicType#1
 // Source: c:@S@V3d_SpotLight@F@SetDirection#$@E@V3d_TypeOfOrientation#
+// Source: c:@S@V3d_Trihedron@F@ArrowAspect#$@E@V3d_TypeOfAxe#1
 // Source: c:@S@V3d_Trihedron@F@ArrowDiameter#1
 // Source: c:@S@V3d_Trihedron@F@Display#&1$@N@opencascade@S@handle>#$@S@V3d_View#
+// Source: c:@S@V3d_Trihedron@F@DynamicType#1
 // Source: c:@S@V3d_Trihedron@F@Erase#
 // Source: c:@S@V3d_Trihedron@F@IsWireframe#1
+// Source: c:@S@V3d_Trihedron@F@LabelAspect#$@E@V3d_TypeOfAxe#1
 // Source: c:@S@V3d_Trihedron@F@NbFacets#1
+// Source: c:@S@V3d_Trihedron@F@OriginAspect#1
 // Source: c:@S@V3d_Trihedron@F@Scale#1
 // Source: c:@S@V3d_Trihedron@F@SetArrowDiameter#d#
 // Source: c:@S@V3d_Trihedron@F@SetNbFacets#I#
@@ -2929,12 +3638,15 @@
 // Source: c:@S@V3d_View@F@AxialScale#I#I#$@E@V3d_TypeOfAxe#
 // Source: c:@S@V3d_View@F@BackFacingModel#1
 // Source: c:@S@V3d_View@F@ClearPBREnvironment#b#
+// Source: c:@S@V3d_View@F@ClipPlanes#1
 // Source: c:@S@V3d_View@F@ComputedMode#1
 // Source: c:@S@V3d_View@F@Convert#I#1
 // Source: c:@S@V3d_View@F@Convert#d#1
+// Source: c:@S@V3d_View@F@DefaultCamera#1
 // Source: c:@S@V3d_View@F@Depth#1
 // Source: c:@S@V3d_View@F@DepthFitAll#d#d#
 // Source: c:@S@V3d_View@F@DoMapping#
+// Source: c:@S@V3d_View@F@DynamicType#1
 // Source: c:@S@V3d_View@F@FitAll#d#b#
 // Source: c:@S@V3d_View@F@FitAll#d#d#d#d#
 // Source: c:@S@V3d_View@F@Focale#1
@@ -3027,6 +3739,7 @@
 // Source: c:@S@V3d_View@F@Translate#d#b#
 // Source: c:@S@V3d_View@F@Translate#d#d#d#b#
 // Source: c:@S@V3d_View@F@TriedronErase#
+// Source: c:@S@V3d_View@F@Trihedron#b#
 // Source: c:@S@V3d_View@F@Turn#$@E@V3d_TypeOfAxe#d#b#
 // Source: c:@S@V3d_View@F@Turn#d#b#
 // Source: c:@S@V3d_View@F@Turn#d#d#d#b#
@@ -3038,6 +3751,7 @@
 // Source: c:@S@V3d_View@F@V3d_View#&1$@N@opencascade@S@handle>#$@S@V3d_Viewer#&1$@N@opencascade@S@handle>#$@S@V3d_View#
 // Source: c:@S@V3d_View@F@Viewer#1
 // Source: c:@S@V3d_View@F@Visualization#1
+// Source: c:@S@V3d_View@F@Window#1
 // Source: c:@S@V3d_View@F@WindowFit#I#I#I#I#
 // Source: c:@S@V3d_View@F@WindowFitAll#I#I#I#I#
 // Source: c:@S@V3d_View@F@ZFitAll#d#1
@@ -3045,6 +3759,7 @@
 // Source: c:@S@V3d_View@F@Zoom#I#I#I#I#
 // Source: c:@S@V3d_View@F@ZoomAtPoint#I#I#I#I#
 // Source: c:@S@V3d_Viewer@F@ActivateGrid#$@E@Aspect_GridType#$@E@Aspect_GridDrawMode#
+// Source: c:@S@V3d_Viewer@F@ActiveView#1
 // Source: c:@S@V3d_Viewer@F@ComputedMode#1
 // Source: c:@S@V3d_Viewer@F@CreateView#
 // Source: c:@S@V3d_Viewer@F@DeactivateGrid#
@@ -3054,7 +3769,10 @@
 // Source: c:@S@V3d_Viewer@F@DefaultViewProj#1
 // Source: c:@S@V3d_Viewer@F@DefaultViewSize#1
 // Source: c:@S@V3d_Viewer@F@DefaultVisualization#1
+// Source: c:@S@V3d_Viewer@F@DefinedView#1
 // Source: c:@S@V3d_Viewer@F@DisplayPrivilegedPlane#b#d#
+// Source: c:@S@V3d_Viewer@F@Driver#1
+// Source: c:@S@V3d_Viewer@F@DynamicType#1
 // Source: c:@S@V3d_Viewer@F@Erase#1
 // Source: c:@S@V3d_Viewer@F@Grid#$@E@Aspect_GridType#b#
 // Source: c:@S@V3d_Viewer@F@Grid#b#
@@ -3108,18 +3826,22 @@
 // Source: c:@S@V3d_Viewer@F@Update#
 // Source: c:@S@V3d_Viewer@F@UpdateLights#
 // Source: c:@S@V3d_Viewer@F@V3d_Viewer#&1$@N@opencascade@S@handle>#$@S@Graphic3d_GraphicDriver#
+// Source: c:@S@WNT_WClass@F@DynamicType#1
 // Source: c:@S@WNT_Window@F@DoMapping#1
 // Source: c:@S@WNT_Window@F@DoResize#
+// Source: c:@S@WNT_Window@F@DynamicType#1
 // Source: c:@S@WNT_Window@F@InvalidateContent#&1$@N@opencascade@S@handle>#$@S@Aspect_DisplayConnection#
 // Source: c:@S@WNT_Window@F@IsMapped#1
 // Source: c:@S@WNT_Window@F@Map#1
 // Source: c:@S@WNT_Window@F@Map#I#1
 // Source: c:@S@WNT_Window@F@Ratio#1
+// Source: c:@S@WNT_Window@F@RegisterRawInputDevices#i#
 // Source: c:@S@WNT_Window@F@SetPos#I#I#I#I#
 // Source: c:@S@WNT_Window@F@Unmap#1
 // Source: c:@S@Wasm_Window@F@DevicePixelRatio#1
 // Source: c:@S@Wasm_Window@F@DoMapping#1
 // Source: c:@S@Wasm_Window@F@DoResize#
+// Source: c:@S@Wasm_Window@F@DynamicType#1
 // Source: c:@S@Wasm_Window@F@InvalidateContent#&1$@N@opencascade@S@handle>#$@S@Aspect_DisplayConnection#
 // Source: c:@S@Wasm_Window@F@IsMapped#1
 // Source: c:@S@Wasm_Window@F@Map#1
@@ -3128,6 +3850,7 @@
 // Source: c:@S@Wasm_Window@F@Unmap#1
 // Source: c:@S@Xw_Window@F@DoMapping#1
 // Source: c:@S@Xw_Window@F@DoResize#
+// Source: c:@S@Xw_Window@F@DynamicType#1
 // Source: c:@S@Xw_Window@F@InvalidateContent#&1$@N@opencascade@S@handle>#$@S@Aspect_DisplayConnection#
 // Source: c:@S@Xw_Window@F@IsMapped#1
 // Source: c:@S@Xw_Window@F@Map#1
@@ -3311,6 +4034,7 @@
 #include <MeshVS_SensitiveSegment.hxx>
 #include <MeshVS_TextPrsBuilder.hxx>
 #include <MeshVS_VectorPrsBuilder.hxx>
+#include <Message_Messenger.hxx>
 #include <NCollection_BaseAllocator.hxx>
 #include <NCollection_Buffer.hxx>
 #include <OpenGl_Buffer.hxx>
@@ -3820,6 +4544,8 @@ OcctSharp_MeshVSTextPrsBuilderHandle* AllocateMeshVSTextPrsBuilder(opencascade::
 const OcctSharp_MeshVSTextPrsBuilderHandle* ValidateMeshVSTextPrsBuilder(const OcctSharp_MeshVSTextPrsBuilderHandle* handle);
 OcctSharp_MeshVSVectorPrsBuilderHandle* AllocateMeshVSVectorPrsBuilder(opencascade::handle<MeshVS_VectorPrsBuilder> value);
 const OcctSharp_MeshVSVectorPrsBuilderHandle* ValidateMeshVSVectorPrsBuilder(const OcctSharp_MeshVSVectorPrsBuilderHandle* handle);
+OcctSharp_MessageMessengerHandle* AllocateMessageMessenger(opencascade::handle<Message_Messenger> value);
+const OcctSharp_MessageMessengerHandle* ValidateMessageMessenger(const OcctSharp_MessageMessengerHandle* handle);
 OcctSharp_NCollectionBaseAllocatorHandle* AllocateNCollectionBaseAllocator(opencascade::handle<NCollection_BaseAllocator> value);
 const OcctSharp_NCollectionBaseAllocatorHandle* ValidateNCollectionBaseAllocator(const OcctSharp_NCollectionBaseAllocatorHandle* handle);
 OcctSharp_NCollectionBufferHandle* AllocateNCollectionBuffer(opencascade::handle<NCollection_Buffer> value);
@@ -13456,6 +14182,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_animation_method_duratio
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_animation_method_dynamic_type_0(
+  const OcctSharp_AISAnimationHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_Animation*>(ValidateAISAnimation(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_animation_method_elapsed_time_0(
   const OcctSharp_AISAnimationHandle* handle,
   double* out_value)
@@ -13614,6 +14353,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_animation_method_stop_0(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_animation_method_timer_0(
+  const OcctSharp_AISAnimationHandle* handle,
+  OcctSharp_MediaTimerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Media_Timer> returnedHandle = static_cast<const AIS_Animation*>(ValidateAISAnimation(handle)->Value.get())->Timer();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateMediaTimer(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_animation_method_update_0(
   const OcctSharp_AISAnimationHandle* handle,
   double thePts,
@@ -13694,6 +14446,19 @@ void OCCTSHARP_CALL occtsharp_generated_ais_animation_release(OcctSharp_AISAnima
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_animation_axis_rotation_method_dynamic_type_0(
+  const OcctSharp_AISAnimationAxisRotationHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_AnimationAxisRotation*>(ValidateAISAnimationAxisRotation(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_animation_axis_rotation_clone(
   const OcctSharp_AISAnimationAxisRotationHandle* source,
   OcctSharp_AISAnimationAxisRotationHandle** out_handle)
@@ -13740,6 +14505,45 @@ void OCCTSHARP_CALL occtsharp_generated_ais_animation_axis_rotation_release(Occt
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_animation_camera_method_camera_end_0(
+  const OcctSharp_AISAnimationCameraHandle* handle,
+  OcctSharp_Graphic3dCameraHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_Camera> returnedHandle = static_cast<const AIS_AnimationCamera*>(ValidateAISAnimationCamera(handle)->Value.get())->CameraEnd();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dCamera(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_animation_camera_method_camera_start_0(
+  const OcctSharp_AISAnimationCameraHandle* handle,
+  OcctSharp_Graphic3dCameraHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_Camera> returnedHandle = static_cast<const AIS_AnimationCamera*>(ValidateAISAnimationCamera(handle)->Value.get())->CameraStart();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dCamera(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_animation_camera_method_dynamic_type_0(
+  const OcctSharp_AISAnimationCameraHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_AnimationCamera*>(ValidateAISAnimationCamera(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_animation_camera_method_set_camera_end_0(
   const OcctSharp_AISAnimationCameraHandle* handle,
   const OcctSharp_Graphic3dCameraHandle* theCameraEnd)
@@ -13767,6 +14571,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_animation_camera_method_
   return GeneratedGuard([&]
   {
     ValidateAISAnimationCamera(handle)->Value->SetView((theView == nullptr ? opencascade::handle<V3d_View>() : ValidateV3dView(theView)->Value));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_animation_camera_method_view_0(
+  const OcctSharp_AISAnimationCameraHandle* handle,
+  OcctSharp_V3dViewHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<V3d_View> returnedHandle = static_cast<const AIS_AnimationCamera*>(ValidateAISAnimationCamera(handle)->Value.get())->View();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateV3dView(std::move(returnedHandle));
   });
 }
 
@@ -13814,6 +14631,19 @@ void OCCTSHARP_CALL occtsharp_generated_ais_animation_camera_release(OcctSharp_A
   bool removed = false;
   { std::lock_guard<std::mutex> lock(AISAnimationCameraMutex); removed = LiveAISAnimationCameraHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_animation_object_method_dynamic_type_0(
+  const OcctSharp_AISAnimationObjectHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_AnimationObject*>(ValidateAISAnimationObject(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_animation_object_clone(
@@ -13897,6 +14727,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_attribute_filter_create_
   {
     opencascade::handle<AIS_AttributeFilter> createdHandle = new AIS_AttributeFilter(aWidth);
     *out_handle = AllocateAISAttributeFilter(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_attribute_filter_method_dynamic_type_0(
+  const OcctSharp_AISAttributeFilterHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_AttributeFilter*>(ValidateAISAttributeFilter(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -14071,6 +14914,45 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_axis_method_accept_displ
   return GeneratedGuard([&]
   {
     *out_value = ValidateAISAxis(handle)->Value->AcceptDisplayMode(aMode) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_axis_method_axis2_placement_0(
+  const OcctSharp_AISAxisHandle* handle,
+  OcctSharp_GeomAxis2PlacementHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Geom_Axis2Placement> returnedHandle = static_cast<const AIS_Axis*>(ValidateAISAxis(handle)->Value.get())->Axis2Placement();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGeomAxis2Placement(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_axis_method_component_0(
+  const OcctSharp_AISAxisHandle* handle,
+  OcctSharp_GeomLineHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Geom_Line> returnedHandle = static_cast<const AIS_Axis*>(ValidateAISAxis(handle)->Value.get())->Component();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGeomLine(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_axis_method_dynamic_type_0(
+  const OcctSharp_AISAxisHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_Axis*>(ValidateAISAxis(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -14272,6 +15154,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_bad_edge_filter_method_a
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_bad_edge_filter_method_dynamic_type_0(
+  const OcctSharp_AISBadEdgeFilterHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_BadEdgeFilter*>(ValidateAISBadEdgeFilter(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_bad_edge_filter_method_is_ok_0(
   const OcctSharp_AISBadEdgeFilterHandle* handle,
   const OcctSharp_SelectMgrEntityOwnerHandle* eO,
@@ -14351,6 +15246,19 @@ void OCCTSHARP_CALL occtsharp_generated_ais_bad_edge_filter_release(OcctSharp_AI
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_base_animation_object_method_dynamic_type_0(
+  const OcctSharp_AISBaseAnimationObjectHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_BaseAnimationObject*>(ValidateAISBaseAnimationObject(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_base_animation_object_clone(
   const OcctSharp_AISBaseAnimationObjectHandle* source,
   OcctSharp_AISBaseAnimationObjectHandle** out_handle)
@@ -14407,6 +15315,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_c0_regularity_filter_met
   return GeneratedGuard([&]
   {
     *out_value = ValidateAISC0RegularityFilter(handle)->Value->ActsOn(static_cast<const TopAbs_ShapeEnum>(aType)) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_c0_regularity_filter_method_dynamic_type_0(
+  const OcctSharp_AISC0RegularityFilterHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_C0RegularityFilter*>(ValidateAISC0RegularityFilter(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -14491,6 +15412,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_camera_frustum_method_ac
   return GeneratedGuard([&]
   {
     *out_value = ValidateAISCameraFrustum(handle)->Value->AcceptDisplayMode(theMode) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_camera_frustum_method_dynamic_type_0(
+  const OcctSharp_AISCameraFrustumHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_CameraFrustum*>(ValidateAISCameraFrustum(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -14594,6 +15528,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_circle_create_1(
   {
     opencascade::handle<AIS_Circle> createdHandle = new AIS_Circle((theCircle == nullptr ? opencascade::handle<Geom_Circle>() : ValidateGeomCircle(theCircle)->Value), theUStart, theUEnd, (theIsFilledCircleSens != 0));
     *out_handle = AllocateAISCircle(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_circle_method_circle_0(
+  const OcctSharp_AISCircleHandle* handle,
+  OcctSharp_GeomCircleHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Geom_Circle> returnedHandle = static_cast<const AIS_Circle*>(ValidateAISCircle(handle)->Value.get())->Circle();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGeomCircle(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_circle_method_dynamic_type_0(
+  const OcctSharp_AISCircleHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_Circle*>(ValidateAISCircle(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -14780,6 +15740,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_color_scale_method_compu
   return GeneratedGuard([&]
   {
     ValidateAISColorScale(handle)->Value->ComputeSelection((value0 == nullptr ? opencascade::handle<SelectMgr_Selection>() : ValidateSelectMgrSelection(value0)->Value), value1);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_color_scale_method_dynamic_type_0(
+  const OcctSharp_AISColorScaleHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_ColorScale*>(ValidateAISColorScale(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -15274,6 +16247,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_colored_drawer_create_0(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_colored_drawer_method_dynamic_type_0(
+  const OcctSharp_AISColoredDrawerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_ColoredDrawer*>(ValidateAISColoredDrawer(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_colored_drawer_method_has_own_color_0(
   const OcctSharp_AISColoredDrawerHandle* handle,
   int32_t* out_value)
@@ -15477,6 +16463,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_colored_shape_method_cle
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_colored_shape_method_dynamic_type_0(
+  const OcctSharp_AISColoredShapeHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_ColoredShape*>(ValidateAISColoredShape(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_colored_shape_method_set_transparency_0(
   const OcctSharp_AISColoredShapeHandle* handle,
   double theValue)
@@ -15620,12 +16619,38 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_connected_interactive_me
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_connected_interactive_method_connected_to_0(
+  const OcctSharp_AISConnectedInteractiveHandle* handle,
+  OcctSharp_AISInteractiveObjectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<AIS_InteractiveObject> returnedHandle = static_cast<const AIS_ConnectedInteractive*>(ValidateAISConnectedInteractive(handle)->Value.get())->ConnectedTo();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateAISInteractiveObject(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_connected_interactive_method_disconnect_0(
   const OcctSharp_AISConnectedInteractiveHandle* handle)
 {
   return GeneratedGuard([&]
   {
     ValidateAISConnectedInteractive(handle)->Value->Disconnect();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_connected_interactive_method_dynamic_type_0(
+  const OcctSharp_AISConnectedInteractiveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_ConnectedInteractive*>(ValidateAISConnectedInteractive(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -15786,6 +16811,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_exclusion_filter_method_
   return GeneratedGuard([&]
   {
     ValidateAISExclusionFilter(handle)->Value->Clear();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_exclusion_filter_method_dynamic_type_0(
+  const OcctSharp_AISExclusionFilterHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_ExclusionFilter*>(ValidateAISExclusionFilter(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -15953,6 +16991,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_global_status_method_dis
   return GeneratedGuard([&]
   {
     *out_value = ValidateAISGlobalStatus(handle)->Value->DisplayMode();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_global_status_method_dynamic_type_0(
+  const OcctSharp_AISGlobalStatusHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_GlobalStatus*>(ValidateAISGlobalStatus(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_global_status_method_hilight_style_0(
+  const OcctSharp_AISGlobalStatusHandle* handle,
+  OcctSharp_Prs3dDrawerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_Drawer> returnedHandle = static_cast<const AIS_GlobalStatus*>(ValidateAISGlobalStatus(handle)->Value.get())->HilightStyle();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dDrawer(std::move(returnedHandle));
   });
 }
 
@@ -16302,6 +17366,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_meth
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_method_current_viewer_0(
+  const OcctSharp_AISInteractiveContextHandle* handle,
+  OcctSharp_V3dViewerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<V3d_Viewer> returnedHandle = static_cast<const AIS_InteractiveContext*>(ValidateAISInteractiveContext(handle)->Value.get())->CurrentViewer();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateV3dViewer(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_method_deactivate_0(
   const OcctSharp_AISInteractiveContextHandle* handle)
 {
@@ -16342,6 +17419,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_meth
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_method_default_drawer_0(
+  const OcctSharp_AISInteractiveContextHandle* handle,
+  OcctSharp_Prs3dDrawerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_Drawer> returnedHandle = static_cast<const AIS_InteractiveContext*>(ValidateAISInteractiveContext(handle)->Value.get())->DefaultDrawer();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dDrawer(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_method_detected_current_object_0(
   const OcctSharp_AISInteractiveContextHandle* handle,
   OcctSharp_AISInteractiveObjectHandle** out_handle)
@@ -16378,6 +17468,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_meth
   {
     opencascade::handle<AIS_InteractiveObject> returnedHandle = ValidateAISInteractiveContext(handle)->Value->DetectedInteractive();
     if (!returnedHandle.IsNull()) *out_handle = AllocateAISInteractiveObject(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_method_detected_owner_0(
+  const OcctSharp_AISInteractiveContextHandle* handle,
+  OcctSharp_SelectMgrEntityOwnerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<SelectMgr_EntityOwner> returnedHandle = static_cast<const AIS_InteractiveContext*>(ValidateAISInteractiveContext(handle)->Value.get())->DetectedOwner();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateSelectMgrEntityOwner(std::move(returnedHandle));
   });
 }
 
@@ -16556,6 +17659,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_meth
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_method_dynamic_type_0(
+  const OcctSharp_AISInteractiveContextHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_InteractiveContext*>(ValidateAISInteractiveContext(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_method_enable_draw_hidden_line_0(
   const OcctSharp_AISInteractiveContextHandle* handle)
 {
@@ -16693,6 +17809,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_meth
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_method_global_filter_0(
+  const OcctSharp_AISInteractiveContextHandle* handle,
+  OcctSharp_SelectMgrAndOrFilterHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<SelectMgr_AndOrFilter> returnedHandle = static_cast<const AIS_InteractiveContext*>(ValidateAISInteractiveContext(handle)->Value.get())->GlobalFilter();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateSelectMgrAndOrFilter(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_method_gravity_point_0(
   const OcctSharp_AISInteractiveContextHandle* handle,
   const OcctSharp_V3dViewHandle* theView,
@@ -16803,6 +17932,46 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_meth
   return GeneratedGuard([&]
   {
     *out_value = ValidateAISInteractiveContext(handle)->Value->HasSelectedShape() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_method_hidden_line_aspect_0(
+  const OcctSharp_AISInteractiveContextHandle* handle,
+  OcctSharp_Prs3dLineAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_LineAspect> returnedHandle = static_cast<const AIS_InteractiveContext*>(ValidateAISInteractiveContext(handle)->Value.get())->HiddenLineAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dLineAspect(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_method_highlight_style_0(
+  const OcctSharp_AISInteractiveContextHandle* handle,
+  OcctSharp_Prs3dDrawerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_Drawer> returnedHandle = static_cast<const AIS_InteractiveContext*>(ValidateAISInteractiveContext(handle)->Value.get())->HighlightStyle();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dDrawer(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_method_highlight_style_1(
+  const OcctSharp_AISInteractiveContextHandle* handle,
+  int32_t theStyleType,
+  OcctSharp_Prs3dDrawerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_Drawer> returnedHandle = static_cast<const AIS_InteractiveContext*>(ValidateAISInteractiveContext(handle)->Value.get())->HighlightStyle(static_cast<const Prs3d_TypeOfHighlight>(theStyleType));
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dDrawer(std::move(returnedHandle));
   });
 }
 
@@ -17126,6 +18295,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_meth
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_method_main_prs_mgr_0(
+  const OcctSharp_AISInteractiveContextHandle* handle,
+  OcctSharp_PrsMgrPresentationManagerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<PrsMgr_PresentationManager> returnedHandle = static_cast<const AIS_InteractiveContext*>(ValidateAISInteractiveContext(handle)->Value.get())->MainPrsMgr();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrsMgrPresentationManager(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_method_more_current_0(
   const OcctSharp_AISInteractiveContextHandle* handle,
   int32_t* out_value)
@@ -17438,6 +18620,45 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_meth
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_method_selection_0(
+  const OcctSharp_AISInteractiveContextHandle* handle,
+  OcctSharp_AISSelectionHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<AIS_Selection> returnedHandle = static_cast<const AIS_InteractiveContext*>(ValidateAISInteractiveContext(handle)->Value.get())->Selection();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateAISSelection(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_method_selection_manager_0(
+  const OcctSharp_AISInteractiveContextHandle* handle,
+  OcctSharp_SelectMgrSelectionManagerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<SelectMgr_SelectionManager> returnedHandle = static_cast<const AIS_InteractiveContext*>(ValidateAISInteractiveContext(handle)->Value.get())->SelectionManager();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateSelectMgrSelectionManager(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_method_selection_style_0(
+  const OcctSharp_AISInteractiveContextHandle* handle,
+  OcctSharp_Prs3dDrawerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_Drawer> returnedHandle = static_cast<const AIS_InteractiveContext*>(ValidateAISInteractiveContext(handle)->Value.get())->SelectionStyle();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dDrawer(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_method_set_angle_and_deviation_0(
   const OcctSharp_AISInteractiveContextHandle* handle,
   const OcctSharp_AISInteractiveObjectHandle* theIObj,
@@ -17695,6 +18916,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_meth
   return GeneratedGuard([&]
   {
     ValidateAISInteractiveContext(handle)->Value->SetPlaneSize(theSizeX, theSizeY, (theToUpdateViewer != 0));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_method_set_polygon_offsets_0(
+  const OcctSharp_AISInteractiveContextHandle* handle,
+  const OcctSharp_AISInteractiveObjectHandle* theIObj,
+  int32_t theMode,
+  float theFactor,
+  float theUnits,
+  int32_t theToUpdateViewer)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateAISInteractiveContext(handle)->Value->SetPolygonOffsets((theIObj == nullptr ? opencascade::handle<AIS_InteractiveObject>() : ValidateAISInteractiveObject(theIObj)->Value), theMode, static_cast<const float>(theFactor), static_cast<const float>(theUnits), (theToUpdateViewer != 0));
   });
 }
 
@@ -18151,6 +19386,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_object_metho
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_object_method_dynamic_type_0(
+  const OcctSharp_AISInteractiveObjectHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_InteractiveObject*>(ValidateAISInteractiveObject(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_object_method_get_context_0(
   const OcctSharp_AISInteractiveObjectHandle* handle,
   OcctSharp_AISInteractiveContextHandle** out_handle)
@@ -18161,6 +19409,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_object_metho
   {
     opencascade::handle<AIS_InteractiveContext> returnedHandle = ValidateAISInteractiveObject(handle)->Value->GetContext();
     if (!returnedHandle.IsNull()) *out_handle = AllocateAISInteractiveContext(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_object_method_get_owner_0(
+  const OcctSharp_AISInteractiveObjectHandle* handle,
+  OcctSharp_StandardTransientHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Transient> returnedHandle = static_cast<const AIS_InteractiveObject*>(ValidateAISInteractiveObject(handle)->Value.get())->GetOwner();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardTransient(std::move(returnedHandle));
   });
 }
 
@@ -18335,6 +19596,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_light_source_method_arc_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_light_source_method_dynamic_type_0(
+  const OcctSharp_AISLightSourceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_LightSource*>(ValidateAISLightSource(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_light_source_method_is_zoomable_0(
   const OcctSharp_AISLightSourceHandle* handle,
   int32_t* out_value)
@@ -18344,6 +19618,33 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_light_source_method_is_z
   return GeneratedGuard([&]
   {
     *out_value = ValidateAISLightSource(handle)->Value->IsZoomable() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_light_source_method_light_0(
+  const OcctSharp_AISLightSourceHandle* handle,
+  OcctSharp_Graphic3dCLightHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_CLight> returnedHandle = static_cast<const AIS_LightSource*>(ValidateAISLightSource(handle)->Value.get())->Light();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dCLight(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_light_source_method_marker_image_0(
+  const OcctSharp_AISLightSourceHandle* handle,
+  int32_t theIsEnabled,
+  OcctSharp_Graphic3dMarkerImageHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_MarkerImage> returnedHandle = static_cast<const AIS_LightSource*>(ValidateAISLightSource(handle)->Value.get())->MarkerImage((theIsEnabled != 0));
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dMarkerImage(std::move(returnedHandle));
   });
 }
 
@@ -18648,6 +19949,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_light_source_owner_creat
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_light_source_owner_method_dynamic_type_0(
+  const OcctSharp_AISLightSourceOwnerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_LightSourceOwner*>(ValidateAISLightSourceOwner(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_light_source_owner_method_hilight_with_color_0(
   const OcctSharp_AISLightSourceOwnerHandle* handle,
   const OcctSharp_PrsMgrPresentationManagerHandle* thePrsMgr,
@@ -18745,6 +20059,45 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_line_create_1(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_line_method_dynamic_type_0(
+  const OcctSharp_AISLineHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_Line*>(ValidateAISLine(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_line_method_end_point_0(
+  const OcctSharp_AISLineHandle* handle,
+  OcctSharp_GeomPointHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Geom_Point> returnedHandle = static_cast<const AIS_Line*>(ValidateAISLine(handle)->Value.get())->EndPoint();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGeomPoint(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_line_method_line_0(
+  const OcctSharp_AISLineHandle* handle,
+  OcctSharp_GeomLineHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Geom_Line> returnedHandle = static_cast<const AIS_Line*>(ValidateAISLine(handle)->Value.get())->Line();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGeomLine(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_line_method_set_line_0(
   const OcctSharp_AISLineHandle* handle,
   const OcctSharp_GeomLineHandle* theLine)
@@ -18785,6 +20138,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_line_method_signature_0(
   return GeneratedGuard([&]
   {
     *out_value = ValidateAISLine(handle)->Value->Signature();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_line_method_start_point_0(
+  const OcctSharp_AISLineHandle* handle,
+  OcctSharp_GeomPointHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Geom_Point> returnedHandle = static_cast<const AIS_Line*>(ValidateAISLine(handle)->Value.get())->StartPoint();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGeomPoint(std::move(returnedHandle));
   });
 }
 
@@ -18935,6 +20301,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_manipulator_method_detac
   return GeneratedGuard([&]
   {
     ValidateAISManipulator(handle)->Value->Detach();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_manipulator_method_dynamic_type_0(
+  const OcctSharp_AISManipulatorHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_Manipulator*>(ValidateAISManipulator(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -19130,6 +20509,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_manipulator_method_set_z
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_manipulator_method_size_0(
+  const OcctSharp_AISManipulatorHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const AIS_Manipulator*>(ValidateAISManipulator(handle)->Value.get())->Size();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_manipulator_method_skin_mode_0(
   const OcctSharp_AISManipulatorHandle* handle,
   int32_t* out_value)
@@ -19235,6 +20626,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_manipulator_owner_create
   {
     opencascade::handle<AIS_ManipulatorOwner> createdHandle = new AIS_ManipulatorOwner((theSelObject == nullptr ? opencascade::handle<SelectMgr_SelectableObject>() : ValidateSelectMgrSelectableObject(theSelObject)->Value), theIndex, static_cast<const AIS_ManipulatorMode>(theMode), thePriority);
     *out_handle = AllocateAISManipulatorOwner(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_manipulator_owner_method_dynamic_type_0(
+  const OcctSharp_AISManipulatorOwnerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_ManipulatorOwner*>(ValidateAISManipulatorOwner(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -19369,12 +20773,38 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_media_player_method_dura
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_media_player_method_dynamic_type_0(
+  const OcctSharp_AISMediaPlayerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_MediaPlayer*>(ValidateAISMediaPlayer(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_media_player_method_play_pause_0(
   const OcctSharp_AISMediaPlayerHandle* handle)
 {
   return GeneratedGuard([&]
   {
     ValidateAISMediaPlayer(handle)->Value->PlayPause();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_media_player_method_player_context_0(
+  const OcctSharp_AISMediaPlayerHandle* handle,
+  OcctSharp_MediaPlayerContextHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Media_PlayerContext> returnedHandle = static_cast<const AIS_MediaPlayer*>(ValidateAISMediaPlayer(handle)->Value.get())->PlayerContext();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateMediaPlayerContext(std::move(returnedHandle));
   });
 }
 
@@ -19503,6 +20933,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_multiple_connected_inter
   return GeneratedGuard([&]
   {
     ValidateAISMultipleConnectedInteractive(handle)->Value->DisconnectAll();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_multiple_connected_interactive_method_dynamic_type_0(
+  const OcctSharp_AISMultipleConnectedInteractiveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_MultipleConnectedInteractive*>(ValidateAISMultipleConnectedInteractive(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_multiple_connected_interactive_method_get_assembly_owner_0(
+  const OcctSharp_AISMultipleConnectedInteractiveHandle* handle,
+  OcctSharp_SelectMgrEntityOwnerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<SelectMgr_EntityOwner> returnedHandle = static_cast<const AIS_MultipleConnectedInteractive*>(ValidateAISMultipleConnectedInteractive(handle)->Value.get())->GetAssemblyOwner();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateSelectMgrEntityOwner(std::move(returnedHandle));
   });
 }
 
@@ -19698,6 +21154,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_plane_method_axis2_place
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_plane_method_center_0(
+  const OcctSharp_AISPlaneHandle* handle,
+  OcctSharp_Point3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    const gp_Pnt nativeValue = static_cast<const AIS_Plane*>(ValidateAISPlane(handle)->Value.get())->Center();
+    *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_plane_method_component_0(
+  const OcctSharp_AISPlaneHandle* handle,
+  OcctSharp_GeomPlaneHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Geom_Plane> returnedHandle = ValidateAISPlane(handle)->Value->Component();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGeomPlane(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_plane_method_compute_selection_0(
   const OcctSharp_AISPlaneHandle* handle,
   const OcctSharp_SelectMgrSelectionHandle* theSelection,
@@ -19718,6 +21200,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_plane_method_current_mod
   return GeneratedGuard([&]
   {
     *out_value = ValidateAISPlane(handle)->Value->CurrentMode() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_plane_method_dynamic_type_0(
+  const OcctSharp_AISPlaneHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_Plane*>(ValidateAISPlane(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -20022,6 +21517,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_plane_trihedron_method_c
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_plane_trihedron_method_dynamic_type_0(
+  const OcctSharp_AISPlaneTrihedronHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_PlaneTrihedron*>(ValidateAISPlaneTrihedron(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_plane_trihedron_method_get_length_0(
   const OcctSharp_AISPlaneTrihedronHandle* handle,
   double* out_value)
@@ -20202,6 +21710,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_point_method_component_0
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_point_method_dynamic_type_0(
+  const OcctSharp_AISPointHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_Point*>(ValidateAISPoint(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_point_method_has_marker_0(
   const OcctSharp_AISPointHandle* handle,
   int32_t* out_value)
@@ -20334,6 +21855,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_point_cloud_create_0(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_point_cloud_method_dynamic_type_0(
+  const OcctSharp_AISPointCloudHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_PointCloud*>(ValidateAISPointCloud(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_point_cloud_method_get_points_0(
   const OcctSharp_AISPointCloudHandle* handle,
   OcctSharp_Graphic3dArrayOfPointsHandle** out_handle)
@@ -20445,6 +21979,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_point_cloud_owner_method
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_point_cloud_owner_method_detected_points_0(
+  const OcctSharp_AISPointCloudOwnerHandle* handle,
+  OcctSharp_TColStdHPackedMapOfIntegerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<TColStd_HPackedMapOfInteger> returnedHandle = static_cast<const AIS_PointCloudOwner*>(ValidateAISPointCloudOwner(handle)->Value.get())->DetectedPoints();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateTColStdHPackedMapOfInteger(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_point_cloud_owner_method_dynamic_type_0(
+  const OcctSharp_AISPointCloudOwnerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_PointCloudOwner*>(ValidateAISPointCloudOwner(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_point_cloud_owner_method_hilight_with_color_0(
   const OcctSharp_AISPointCloudOwnerHandle* handle,
   const OcctSharp_PrsMgrPresentationManagerHandle* thePrsMgr,
@@ -20466,6 +22026,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_point_cloud_owner_method
   return GeneratedGuard([&]
   {
     *out_value = ValidateAISPointCloudOwner(handle)->Value->IsForcedHilight() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_point_cloud_owner_method_selected_points_0(
+  const OcctSharp_AISPointCloudOwnerHandle* handle,
+  OcctSharp_TColStdHPackedMapOfIntegerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<TColStd_HPackedMapOfInteger> returnedHandle = static_cast<const AIS_PointCloudOwner*>(ValidateAISPointCloudOwner(handle)->Value.get())->SelectedPoints();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateTColStdHPackedMapOfInteger(std::move(returnedHandle));
   });
 }
 
@@ -20544,6 +22117,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_rubber_band_method_clear
   return GeneratedGuard([&]
   {
     ValidateAISRubberBand(handle)->Value->ClearPoints();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_rubber_band_method_dynamic_type_0(
+  const OcctSharp_AISRubberBandHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_RubberBand*>(ValidateAISRubberBand(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -20771,6 +22357,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_selection_method_clear_a
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_selection_method_dynamic_type_0(
+  const OcctSharp_AISSelectionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_Selection*>(ValidateAISSelection(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_selection_method_extent_0(
   const OcctSharp_AISSelectionHandle* handle,
   int32_t* out_value)
@@ -20854,6 +22453,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_selection_method_select_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_selection_method_value_0(
+  const OcctSharp_AISSelectionHandle* handle,
+  OcctSharp_SelectMgrEntityOwnerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<SelectMgr_EntityOwner> returnedHandle = static_cast<const AIS_Selection*>(ValidateAISSelection(handle)->Value.get())->Value();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateSelectMgrEntityOwner(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_selection_clone(
   const OcctSharp_AISSelectionHandle* source,
   OcctSharp_AISSelectionHandle** out_handle)
@@ -20922,6 +22534,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_shape_method_accept_shap
   return GeneratedGuard([&]
   {
     *out_value = ValidateAISShape(handle)->Value->AcceptShapeDecomposition() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_shape_method_dynamic_type_0(
+  const OcctSharp_AISShapeHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_Shape*>(ValidateAISShape(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -21177,6 +22802,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_signature_filter_create_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_signature_filter_method_dynamic_type_0(
+  const OcctSharp_AISSignatureFilterHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_SignatureFilter*>(ValidateAISSignatureFilter(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_signature_filter_method_is_ok_0(
   const OcctSharp_AISSignatureFilterHandle* handle,
   const OcctSharp_SelectMgrEntityOwnerHandle* anobj,
@@ -21261,6 +22899,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_text_label_method_accept
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_text_label_method_dynamic_type_0(
+  const OcctSharp_AISTextLabelHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_TextLabel*>(ValidateAISTextLabel(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_text_label_method_font_aspect_0(
   const OcctSharp_AISTextLabelHandle* handle,
   int32_t* out_value)
@@ -21306,6 +22957,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_text_label_method_has_ow
   return GeneratedGuard([&]
   {
     *out_value = ValidateAISTextLabel(handle)->Value->HasOwnAnchorPoint() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_text_label_method_position_0(
+  const OcctSharp_AISTextLabelHandle* handle,
+  OcctSharp_Point3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    const gp_Pnt nativeValue = static_cast<const AIS_TextLabel*>(ValidateAISTextLabel(handle)->Value.get())->Position();
+    *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
   });
 }
 
@@ -21429,6 +23093,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_text_label_method_set_zo
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_text_label_method_text_formatter_0(
+  const OcctSharp_AISTextLabelHandle* handle,
+  OcctSharp_FontTextFormatterHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Font_TextFormatter> returnedHandle = static_cast<const AIS_TextLabel*>(ValidateAISTextLabel(handle)->Value.get())->TextFormatter();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateFontTextFormatter(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_text_label_method_unset_orientation3_d_0(
   const OcctSharp_AISTextLabelHandle* handle)
 {
@@ -21512,6 +23189,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_textured_shape_method_di
   return GeneratedGuard([&]
   {
     ValidateAISTexturedShape(handle)->Value->DisableTextureModulate();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_textured_shape_method_dynamic_type_0(
+  const OcctSharp_AISTexturedShapeHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_TexturedShape*>(ValidateAISTexturedShape(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -21643,6 +23333,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_textured_shape_method_te
   return GeneratedGuard([&]
   {
     *out_value = ValidateAISTexturedShape(handle)->Value->TextureOrigin() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_textured_shape_method_texture_pix_map_0(
+  const OcctSharp_AISTexturedShapeHandle* handle,
+  OcctSharp_ImagePixMapHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Image_PixMap> returnedHandle = static_cast<const AIS_TexturedShape*>(ValidateAISTexturedShape(handle)->Value.get())->TexturePixMap();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateImagePixMap(std::move(returnedHandle));
   });
 }
 
@@ -21828,6 +23531,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_triangulation_create_0(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_triangulation_method_dynamic_type_0(
+  const OcctSharp_AISTriangulationHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_Triangulation*>(ValidateAISTriangulation(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_triangulation_method_get_triangulation_0(
   const OcctSharp_AISTriangulationHandle* handle,
   OcctSharp_PolyTriangulationHandle** out_handle)
@@ -21963,6 +23679,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_trihedron_method_clear_s
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_trihedron_method_component_0(
+  const OcctSharp_AISTrihedronHandle* handle,
+  OcctSharp_GeomAxis2PlacementHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Geom_Axis2Placement> returnedHandle = static_cast<const AIS_Trihedron*>(ValidateAISTrihedron(handle)->Value.get())->Component();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGeomAxis2Placement(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_trihedron_method_datum_display_mode_0(
   const OcctSharp_AISTrihedronHandle* handle,
   int32_t* out_value)
@@ -21972,6 +23701,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_trihedron_method_datum_d
   return GeneratedGuard([&]
   {
     *out_value = static_cast<int32_t>(ValidateAISTrihedron(handle)->Value->DatumDisplayMode());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_trihedron_method_dynamic_type_0(
+  const OcctSharp_AISTrihedronHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_Trihedron*>(ValidateAISTrihedron(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -22226,6 +23968,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_trihedron_owner_method_d
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_trihedron_owner_method_dynamic_type_0(
+  const OcctSharp_AISTrihedronOwnerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_TrihedronOwner*>(ValidateAISTrihedronOwner(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_trihedron_owner_method_hilight_with_color_0(
   const OcctSharp_AISTrihedronOwnerHandle* handle,
   const OcctSharp_PrsMgrPresentationManagerHandle* thePM,
@@ -22319,6 +24074,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_type_filter_create_0(
   {
     opencascade::handle<AIS_TypeFilter> createdHandle = new AIS_TypeFilter(static_cast<const AIS_KindOfInteractive>(aGivenKind));
     *out_handle = AllocateAISTypeFilter(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_type_filter_method_dynamic_type_0(
+  const OcctSharp_AISTypeFilterHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_TypeFilter*>(ValidateAISTypeFilter(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -22466,6 +24234,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_view_cube_method_box_cor
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_view_cube_method_box_corner_style_0(
+  const OcctSharp_AISViewCubeHandle* handle,
+  OcctSharp_Prs3dShadingAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_ShadingAspect> returnedHandle = static_cast<const AIS_ViewCube*>(ValidateAISViewCube(handle)->Value.get())->BoxCornerStyle();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dShadingAspect(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_view_cube_method_box_edge_gap_0(
   const OcctSharp_AISViewCubeHandle* handle,
   double* out_value)
@@ -22490,6 +24271,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_view_cube_method_box_edg
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_view_cube_method_box_edge_style_0(
+  const OcctSharp_AISViewCubeHandle* handle,
+  OcctSharp_Prs3dShadingAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_ShadingAspect> returnedHandle = static_cast<const AIS_ViewCube*>(ValidateAISViewCube(handle)->Value.get())->BoxEdgeStyle();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dShadingAspect(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_view_cube_method_box_facet_extension_0(
   const OcctSharp_AISViewCubeHandle* handle,
   double* out_value)
@@ -22499,6 +24293,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_view_cube_method_box_fac
   return GeneratedGuard([&]
   {
     *out_value = ValidateAISViewCube(handle)->Value->BoxFacetExtension();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_view_cube_method_box_side_style_0(
+  const OcctSharp_AISViewCubeHandle* handle,
+  OcctSharp_Prs3dShadingAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_ShadingAspect> returnedHandle = static_cast<const AIS_ViewCube*>(ValidateAISViewCube(handle)->Value.get())->BoxSideStyle();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dShadingAspect(std::move(returnedHandle));
   });
 }
 
@@ -22543,6 +24350,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_view_cube_method_duratio
   return GeneratedGuard([&]
   {
     *out_value = ValidateAISViewCube(handle)->Value->Duration();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_view_cube_method_dynamic_type_0(
+  const OcctSharp_AISViewCubeHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_ViewCube*>(ValidateAISViewCube(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -23046,6 +24866,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_view_cube_method_update_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_view_cube_method_view_animation_0(
+  const OcctSharp_AISViewCubeHandle* handle,
+  OcctSharp_AISAnimationCameraHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<AIS_AnimationCamera> returnedHandle = static_cast<const AIS_ViewCube*>(ValidateAISViewCube(handle)->Value.get())->ViewAnimation();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateAISAnimationCamera(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_view_cube_clone(
   const OcctSharp_AISViewCubeHandle* source,
   OcctSharp_AISViewCubeHandle** out_handle)
@@ -23104,6 +24937,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_view_cube_owner_create_0
   {
     opencascade::handle<AIS_ViewCubeOwner> createdHandle = new AIS_ViewCubeOwner((theObject == nullptr ? opencascade::handle<AIS_ViewCube>() : ValidateAISViewCube(theObject)->Value), static_cast<V3d_TypeOfOrientation>(theOrient), thePriority);
     *out_handle = AllocateAISViewCubeOwner(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_view_cube_owner_method_dynamic_type_0(
+  const OcctSharp_AISViewCubeOwnerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_ViewCubeOwner*>(ValidateAISViewCubeOwner(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -23191,6 +25037,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_view_cube_sensitive_crea
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_view_cube_sensitive_method_dynamic_type_0(
+  const OcctSharp_AISViewCubeSensitiveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_ViewCubeSensitive*>(ValidateAISViewCubeSensitive(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_view_cube_sensitive_clone(
   const OcctSharp_AISViewCubeSensitiveHandle* source,
   OcctSharp_AISViewCubeSensitiveHandle** out_handle)
@@ -23263,6 +25122,31 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_xrtracked_device_create_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_xrtracked_device_method_dynamic_type_0(
+  const OcctSharp_AISXRTrackedDeviceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const AIS_XRTrackedDevice*>(ValidateAISXRTrackedDevice(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_xrtracked_device_method_laser_length_0(
+  const OcctSharp_AISXRTrackedDeviceHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const AIS_XRTrackedDevice*>(ValidateAISXRTrackedDevice(handle)->Value.get())->LaserLength();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_xrtracked_device_method_role_0(
   const OcctSharp_AISXRTrackedDeviceHandle* handle,
   int32_t* out_value)
@@ -23275,6 +25159,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_xrtracked_device_method_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_xrtracked_device_method_set_laser_length_0(
+  const OcctSharp_AISXRTrackedDeviceHandle* handle,
+  float theLength)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateAISXRTrackedDevice(handle)->Value->SetLaserLength(static_cast<float>(theLength));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_xrtracked_device_method_set_role_0(
   const OcctSharp_AISXRTrackedDeviceHandle* handle,
   int32_t theRole)
@@ -23282,6 +25176,28 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_xrtracked_device_method_
   return GeneratedGuard([&]
   {
     ValidateAISXRTrackedDevice(handle)->Value->SetRole(static_cast<Aspect_XRTrackedDeviceRole>(theRole));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_xrtracked_device_method_set_unit_factor_0(
+  const OcctSharp_AISXRTrackedDeviceHandle* handle,
+  float theFactor)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateAISXRTrackedDevice(handle)->Value->SetUnitFactor(static_cast<float>(theFactor));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_xrtracked_device_method_unit_factor_0(
+  const OcctSharp_AISXRTrackedDeviceHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const AIS_XRTrackedDevice*>(ValidateAISXRTrackedDevice(handle)->Value.get())->UnitFactor();
   });
 }
 
@@ -23364,6 +25280,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_circular_grid_method_
   return GeneratedGuard([&]
   {
     *out_value = ValidateAspectCircularGrid(handle)->Value->DivisionNumber();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_circular_grid_method_dynamic_type_0(
+  const OcctSharp_AspectCircularGridHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Aspect_CircularGrid*>(ValidateAspectCircularGrid(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -23547,6 +25476,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_display_connection_cr
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_display_connection_method_dynamic_type_0(
+  const OcctSharp_AspectDisplayConnectionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Aspect_DisplayConnection*>(ValidateAspectDisplayConnection(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_display_connection_method_get_atom_0(
+  const OcctSharp_AspectDisplayConnectionHandle* handle,
+  int32_t theAtom,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Aspect_DisplayConnection*>(ValidateAspectDisplayConnection(handle)->Value.get())->GetAtom(static_cast<const Aspect_XAtom>(theAtom));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_display_connection_method_is_own_display_0(
   const OcctSharp_AspectDisplayConnectionHandle* handle,
   int32_t* out_value)
@@ -23632,6 +25587,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_grid_method_draw_mode
   return GeneratedGuard([&]
   {
     *out_value = static_cast<int32_t>(ValidateAspectGrid(handle)->Value->DrawMode());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_grid_method_dynamic_type_0(
+  const OcctSharp_AspectGridHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Aspect_Grid*>(ValidateAspectGrid(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -23826,6 +25794,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_neutral_window_method
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_neutral_window_method_dynamic_type_0(
+  const OcctSharp_AspectNeutralWindowHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Aspect_NeutralWindow*>(ValidateAspectNeutralWindow(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_neutral_window_method_is_mapped_0(
   const OcctSharp_AspectNeutralWindowHandle* handle,
   int32_t* out_value)
@@ -23979,6 +25960,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_open_vrsession_method
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_open_vrsession_method_dynamic_type_0(
+  const OcctSharp_AspectOpenVRSessionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Aspect_OpenVRSession*>(ValidateAspectOpenVRSession(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_open_vrsession_method_has_projection_frustums_0(
   const OcctSharp_AspectOpenVRSessionHandle* handle,
   int32_t* out_value)
@@ -24103,6 +26097,19 @@ void OCCTSHARP_CALL occtsharp_generated_aspect_open_vrsession_release(OcctSharp_
   bool removed = false;
   { std::lock_guard<std::mutex> lock(AspectOpenVRSessionMutex); removed = LiveAspectOpenVRSessionHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_rectangular_grid_method_dynamic_type_0(
+  const OcctSharp_AspectRectangularGridHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Aspect_RectangularGrid*>(ValidateAspectRectangularGrid(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_rectangular_grid_method_first_angle_0(
@@ -24331,12 +26338,125 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_vkey_set_create_0(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_vkey_set_method_down_time_0(
+  const OcctSharp_AspectVKeySetHandle* handle,
+  uint32_t theKey,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Aspect_VKeySet*>(ValidateAspectVKeySet(handle)->Value.get())->DownTime(static_cast<unsigned int>(theKey));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_vkey_set_method_dynamic_type_0(
+  const OcctSharp_AspectVKeySetHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Aspect_VKeySet*>(ValidateAspectVKeySet(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_vkey_set_method_is_free_key_0(
+  const OcctSharp_AspectVKeySetHandle* handle,
+  uint32_t theKey,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Aspect_VKeySet*>(ValidateAspectVKeySet(handle)->Value.get())->IsFreeKey(static_cast<unsigned int>(theKey)) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_vkey_set_method_is_key_down_0(
+  const OcctSharp_AspectVKeySetHandle* handle,
+  uint32_t theKey,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Aspect_VKeySet*>(ValidateAspectVKeySet(handle)->Value.get())->IsKeyDown(static_cast<unsigned int>(theKey)) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_vkey_set_method_key_down_0(
+  const OcctSharp_AspectVKeySetHandle* handle,
+  uint32_t theKey,
+  double theTime,
+  double thePressure)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateAspectVKeySet(handle)->Value->KeyDown(static_cast<unsigned int>(theKey), theTime, thePressure);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_vkey_set_method_key_from_axis_0(
+  const OcctSharp_AspectVKeySetHandle* handle,
+  uint32_t theNegative,
+  uint32_t thePositive,
+  double theTime,
+  double thePressure)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateAspectVKeySet(handle)->Value->KeyFromAxis(static_cast<unsigned int>(theNegative), static_cast<unsigned int>(thePositive), theTime, thePressure);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_vkey_set_method_key_up_0(
+  const OcctSharp_AspectVKeySetHandle* handle,
+  uint32_t theKey,
+  double theTime)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateAspectVKeySet(handle)->Value->KeyUp(static_cast<unsigned int>(theKey), theTime);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_vkey_set_method_modifiers_0(
+  const OcctSharp_AspectVKeySetHandle* handle,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Aspect_VKeySet*>(ValidateAspectVKeySet(handle)->Value.get())->Modifiers();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_vkey_set_method_reset_0(
   const OcctSharp_AspectVKeySetHandle* handle)
 {
   return GeneratedGuard([&]
   {
     ValidateAspectVKeySet(handle)->Value->Reset();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_vkey_set_method_time_up_0(
+  const OcctSharp_AspectVKeySetHandle* handle,
+  uint32_t theKey,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Aspect_VKeySet*>(ValidateAspectVKeySet(handle)->Value.get())->TimeUp(static_cast<unsigned int>(theKey));
   });
 }
 
@@ -24407,6 +26527,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_window_method_device_
   return GeneratedGuard([&]
   {
     *out_value = ValidateAspectWindow(handle)->Value->DevicePixelRatio();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_window_method_display_connection_0(
+  const OcctSharp_AspectWindowHandle* handle,
+  OcctSharp_AspectDisplayConnectionHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Aspect_DisplayConnection> returnedHandle = static_cast<const Aspect_Window*>(ValidateAspectWindow(handle)->Value.get())->DisplayConnection();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateAspectDisplayConnection(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_window_method_dynamic_type_0(
+  const OcctSharp_AspectWindowHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Aspect_Window*>(ValidateAspectWindow(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -24488,6 +26634,19 @@ void OCCTSHARP_CALL occtsharp_generated_aspect_window_release(OcctSharp_AspectWi
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_xraction_method_dynamic_type_0(
+  const OcctSharp_AspectXRActionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Aspect_XRAction*>(ValidateAspectXRAction(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_xraction_method_is_valid_0(
   const OcctSharp_AspectXRActionHandle* handle,
   int32_t* out_value)
@@ -24497,6 +26656,28 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_xraction_method_is_va
   return GeneratedGuard([&]
   {
     *out_value = ValidateAspectXRAction(handle)->Value->IsValid() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_xraction_method_raw_handle_0(
+  const OcctSharp_AspectXRActionHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Aspect_XRAction*>(ValidateAspectXRAction(handle)->Value.get())->RawHandle();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_xraction_method_set_raw_handle_0(
+  const OcctSharp_AspectXRActionHandle* handle,
+  uint64_t theHande)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateAspectXRAction(handle)->Value->SetRawHandle(static_cast<unsigned long long>(theHande));
   });
 }
 
@@ -24568,6 +26749,41 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_xraction_set_method_a
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_xraction_set_method_dynamic_type_0(
+  const OcctSharp_AspectXRActionSetHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Aspect_XRActionSet*>(ValidateAspectXRActionSet(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_xraction_set_method_raw_handle_0(
+  const OcctSharp_AspectXRActionSetHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Aspect_XRActionSet*>(ValidateAspectXRActionSet(handle)->Value.get())->RawHandle();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_xraction_set_method_set_raw_handle_0(
+  const OcctSharp_AspectXRActionSetHandle* handle,
+  uint64_t theHande)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateAspectXRActionSet(handle)->Value->SetRawHandle(static_cast<unsigned long long>(theHande));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_xraction_set_clone(
   const OcctSharp_AspectXRActionSetHandle* source,
   OcctSharp_AspectXRActionSetHandle** out_handle)
@@ -24636,6 +26852,31 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_xrsession_method_aspe
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_xrsession_method_display_frequency_0(
+  const OcctSharp_AspectXRSessionHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Aspect_XRSession*>(ValidateAspectXRSession(handle)->Value.get())->DisplayFrequency();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_xrsession_method_dynamic_type_0(
+  const OcctSharp_AspectXRSessionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Aspect_XRSession*>(ValidateAspectXRSession(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_xrsession_method_field_of_view_0(
   const OcctSharp_AspectXRSessionHandle* handle,
   double* out_value)
@@ -24645,6 +26886,21 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_xrsession_method_fiel
   return GeneratedGuard([&]
   {
     *out_value = ValidateAspectXRSession(handle)->Value->FieldOfView();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_aspect_xrsession_method_generic_action_0(
+  const OcctSharp_AspectXRSessionHandle* handle,
+  int32_t theDevice,
+  int32_t theAction,
+  OcctSharp_AspectXRActionHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Aspect_XRAction> returnedHandle = static_cast<const Aspect_XRSession*>(ValidateAspectXRSession(handle)->Value.get())->GenericAction(static_cast<Aspect_XRTrackedDeviceRole>(theDevice), static_cast<Aspect_XRGenericAction>(theAction));
+    if (!returnedHandle.IsNull()) *out_handle = AllocateAspectXRAction(std::move(returnedHandle));
   });
 }
 
@@ -24787,6 +27043,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_cocoa_window_method_do_resiz
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_cocoa_window_method_dynamic_type_0(
+  const OcctSharp_CocoaWindowHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Cocoa_Window*>(ValidateCocoaWindow(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_cocoa_window_method_invalidate_content_0(
   const OcctSharp_CocoaWindowHandle* handle,
   const OcctSharp_AspectDisplayConnectionHandle* theDisp)
@@ -24919,6 +27188,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_d3_dhost_frame_buffer_method
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_d3_dhost_frame_buffer_method_dynamic_type_0(
+  const OcctSharp_D3DHostFrameBufferHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const D3DHost_FrameBuffer*>(ValidateD3DHostFrameBuffer(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_d3_dhost_frame_buffer_method_is_srgbready_0(
   const OcctSharp_D3DHostFrameBufferHandle* handle,
   int32_t* out_value)
@@ -25046,6 +27328,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_d3_dhost_graphic_driver_meth
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_d3_dhost_graphic_driver_method_dynamic_type_0(
+  const OcctSharp_D3DHostGraphicDriverHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const D3DHost_GraphicDriver*>(ValidateD3DHostGraphicDriver(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_d3_dhost_graphic_driver_clone(
   const OcctSharp_D3DHostGraphicDriverHandle* source,
   OcctSharp_D3DHostGraphicDriverHandle** out_handle)
@@ -25118,6 +27413,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_d3_dhost_graphic_driver_fact
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_d3_dhost_graphic_driver_factory_method_dynamic_type_0(
+  const OcctSharp_D3DHostGraphicDriverFactoryHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const D3DHost_GraphicDriverFactory*>(ValidateD3DHostGraphicDriverFactory(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_d3_dhost_graphic_driver_factory_clone(
   const OcctSharp_D3DHostGraphicDriverFactoryHandle* source,
   OcctSharp_D3DHostGraphicDriverFactoryHandle** out_handle)
@@ -25162,6 +27470,32 @@ void OCCTSHARP_CALL occtsharp_generated_d3_dhost_graphic_driver_factory_release(
   bool removed = false;
   { std::lock_guard<std::mutex> lock(D3DHostGraphicDriverFactoryMutex); removed = LiveD3DHostGraphicDriverFactoryHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_d3_dhost_view_method_d3d_wgl_buffer_0(
+  const OcctSharp_D3DHostViewHandle* handle,
+  OcctSharp_D3DHostFrameBufferHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<D3DHost_FrameBuffer> returnedHandle = static_cast<const D3DHost_View*>(ValidateD3DHostView(handle)->Value.get())->D3dWglBuffer();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateD3DHostFrameBuffer(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_d3_dhost_view_method_dynamic_type_0(
+  const OcctSharp_D3DHostViewHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const D3DHost_View*>(ValidateD3DHostView(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_d3_dhost_view_method_is_d3d_ex_0(
@@ -25272,6 +27606,69 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_ftfont_create_0(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_ftfont_method_ascender_0(
+  const OcctSharp_FontFTFontHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Font_FTFont*>(ValidateFontFTFont(handle)->Value.get())->Ascender();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_ftfont_method_descender_0(
+  const OcctSharp_FontFTFontHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Font_FTFont*>(ValidateFontFTFont(handle)->Value.get())->Descender();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_ftfont_method_dynamic_type_0(
+  const OcctSharp_FontFTFontHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Font_FTFont*>(ValidateFontFTFont(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_ftfont_method_glyph_max_size_x_0(
+  const OcctSharp_FontFTFontHandle* handle,
+  int32_t theToIncludeFallback,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Font_FTFont*>(ValidateFontFTFont(handle)->Value.get())->GlyphMaxSizeX((theToIncludeFallback != 0));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_ftfont_method_glyph_max_size_y_0(
+  const OcctSharp_FontFTFontHandle* handle,
+  int32_t theToIncludeFallback,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Font_FTFont*>(ValidateFontFTFont(handle)->Value.get())->GlyphMaxSizeY((theToIncludeFallback != 0));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_ftfont_method_glyphs_number_0(
   const OcctSharp_FontFTFontHandle* handle,
   int32_t theToIncludeFallback,
@@ -25309,6 +27706,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_ftfont_method_is_valid_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_ftfont_method_line_spacing_0(
+  const OcctSharp_FontFTFontHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Font_FTFont*>(ValidateFontFTFont(handle)->Value.get())->LineSpacing();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_ftfont_method_point_size_0(
+  const OcctSharp_FontFTFontHandle* handle,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Font_FTFont*>(ValidateFontFTFont(handle)->Value.get())->PointSize();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_ftfont_method_release_0(
   const OcctSharp_FontFTFontHandle* handle)
 {
@@ -25338,6 +27759,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_ftfont_method_set_use_u
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_ftfont_method_set_width_scaling_0(
+  const OcctSharp_FontFTFontHandle* handle,
+  float theScaleFactor)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateFontFTFont(handle)->Value->SetWidthScaling(static_cast<const float>(theScaleFactor));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_ftfont_method_to_synthesize_italic_0(
   const OcctSharp_FontFTFontHandle* handle,
   int32_t* out_value)
@@ -25359,6 +27790,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_ftfont_method_to_use_un
   return GeneratedGuard([&]
   {
     *out_value = ValidateFontFTFont(handle)->Value->ToUseUnicodeSubsetFallback() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_ftfont_method_width_scaling_0(
+  const OcctSharp_FontFTFontHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Font_FTFont*>(ValidateFontFTFont(handle)->Value.get())->WidthScaling();
   });
 }
 
@@ -25417,6 +27860,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_ftlibrary_create_0(
   {
     opencascade::handle<Font_FTLibrary> createdHandle = new Font_FTLibrary();
     *out_handle = AllocateFontFTLibrary(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_ftlibrary_method_dynamic_type_0(
+  const OcctSharp_FontFTLibraryHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Font_FTLibrary*>(ValidateFontFTLibrary(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -25484,6 +27940,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_font_mgr_method_clear_f
   return GeneratedGuard([&]
   {
     ValidateFontFontMgr(handle)->Value->ClearFontDataBase();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_font_mgr_method_dynamic_type_0(
+  const OcctSharp_FontFontMgrHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Font_FontMgr*>(ValidateFontFontMgr(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -25631,6 +28100,19 @@ void OCCTSHARP_CALL occtsharp_generated_font_font_mgr_release(OcctSharp_FontFont
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_system_font_method_dynamic_type_0(
+  const OcctSharp_FontSystemFontHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Font_SystemFont*>(ValidateFontSystemFont(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_system_font_method_font_face_id_0(
   const OcctSharp_FontSystemFontHandle* handle,
   int32_t theAspect,
@@ -25750,6 +28232,31 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_text_formatter_create_0
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_text_formatter_method_dynamic_type_0(
+  const OcctSharp_FontTextFormatterHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Font_TextFormatter*>(ValidateFontTextFormatter(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_text_formatter_method_first_position_0(
+  const OcctSharp_FontTextFormatterHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Font_TextFormatter*>(ValidateFontTextFormatter(handle)->Value.get())->FirstPosition();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_text_formatter_method_format_0(
   const OcctSharp_FontTextFormatterHandle* handle)
 {
@@ -25796,6 +28303,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_text_formatter_method_i
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_text_formatter_method_line_height_0(
+  const OcctSharp_FontTextFormatterHandle* handle,
+  int32_t theIndex,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Font_TextFormatter*>(ValidateFontTextFormatter(handle)->Value.get())->LineHeight(theIndex);
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_text_formatter_method_line_index_0(
   const OcctSharp_FontTextFormatterHandle* handle,
   int32_t theIndex,
@@ -25822,12 +28342,61 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_text_formatter_method_l
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_text_formatter_method_line_width_0(
+  const OcctSharp_FontTextFormatterHandle* handle,
+  int32_t theIndex,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Font_TextFormatter*>(ValidateFontTextFormatter(handle)->Value.get())->LineWidth(theIndex);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_text_formatter_method_maximum_symbol_width_0(
+  const OcctSharp_FontTextFormatterHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Font_TextFormatter*>(ValidateFontTextFormatter(handle)->Value.get())->MaximumSymbolWidth();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_text_formatter_method_reset_0(
   const OcctSharp_FontTextFormatterHandle* handle)
 {
   return GeneratedGuard([&]
   {
     ValidateFontTextFormatter(handle)->Value->Reset();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_text_formatter_method_result_height_0(
+  const OcctSharp_FontTextFormatterHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Font_TextFormatter*>(ValidateFontTextFormatter(handle)->Value.get())->ResultHeight();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_text_formatter_method_result_width_0(
+  const OcctSharp_FontTextFormatterHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Font_TextFormatter*>(ValidateFontTextFormatter(handle)->Value.get())->ResultWidth();
   });
 }
 
@@ -25838,6 +28407,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_text_formatter_method_s
   return GeneratedGuard([&]
   {
     ValidateFontTextFormatter(handle)->Value->SetWordWrapping((theIsWordWrapping != 0));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_text_formatter_method_set_wrapping_0(
+  const OcctSharp_FontTextFormatterHandle* handle,
+  float theWidth)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateFontTextFormatter(handle)->Value->SetWrapping(static_cast<const float>(theWidth));
   });
 }
 
@@ -25885,6 +28464,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_text_formatter_method_w
   return GeneratedGuard([&]
   {
     *out_value = ValidateFontTextFormatter(handle)->Value->WordWrapping() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_font_text_formatter_method_wrapping_0(
+  const OcctSharp_FontTextFormatterHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Font_TextFormatter*>(ValidateFontTextFormatter(handle)->Value.get())->Wrapping();
   });
 }
 
@@ -25960,6 +28551,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_points_cr
   {
     opencascade::handle<Graphic3d_ArrayOfPoints> createdHandle = new Graphic3d_ArrayOfPoints(theMaxVertexs, (theHasVColors != 0), (theHasVNormals != 0));
     *out_handle = AllocateGraphic3dArrayOfPoints(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_points_method_dynamic_type_0(
+  const OcctSharp_Graphic3dArrayOfPointsHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_ArrayOfPoints*>(ValidateGraphic3dArrayOfPoints(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -26044,6 +28648,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_polygons_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_polygons_method_dynamic_type_0(
+  const OcctSharp_Graphic3dArrayOfPolygonsHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_ArrayOfPolygons*>(ValidateGraphic3dArrayOfPolygons(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_polygons_clone(
   const OcctSharp_Graphic3dArrayOfPolygonsHandle* source,
   OcctSharp_Graphic3dArrayOfPolygonsHandle** out_handle)
@@ -26120,6 +28737,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_polylines
   {
     opencascade::handle<Graphic3d_ArrayOfPolylines> createdHandle = new Graphic3d_ArrayOfPolylines(theMaxVertexs, theMaxBounds, theMaxEdges, (theHasVColors != 0), (theHasBColors != 0));
     *out_handle = AllocateGraphic3dArrayOfPolylines(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_polylines_method_dynamic_type_0(
+  const OcctSharp_Graphic3dArrayOfPolylinesHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_ArrayOfPolylines*>(ValidateGraphic3dArrayOfPolylines(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -26449,6 +29079,89 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitive
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitives_method_add_vertex_6(
+  const OcctSharp_Graphic3dArrayOfPrimitivesHandle* handle,
+  float theX,
+  float theY,
+  float theZ,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateGraphic3dArrayOfPrimitives(handle)->Value->AddVertex(static_cast<const float>(theX), static_cast<const float>(theY), static_cast<const float>(theZ));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitives_method_add_vertex_7(
+  const OcctSharp_Graphic3dArrayOfPrimitivesHandle* handle,
+  float theX,
+  float theY,
+  float theZ,
+  float theTX,
+  float theTY,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateGraphic3dArrayOfPrimitives(handle)->Value->AddVertex(static_cast<const float>(theX), static_cast<const float>(theY), static_cast<const float>(theZ), static_cast<const float>(theTX), static_cast<const float>(theTY));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitives_method_add_vertex_8(
+  const OcctSharp_Graphic3dArrayOfPrimitivesHandle* handle,
+  float theX,
+  float theY,
+  float theZ,
+  float theNX,
+  float theNY,
+  float theNZ,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateGraphic3dArrayOfPrimitives(handle)->Value->AddVertex(static_cast<const float>(theX), static_cast<const float>(theY), static_cast<const float>(theZ), static_cast<const float>(theNX), static_cast<const float>(theNY), static_cast<const float>(theNZ));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitives_method_add_vertex_9(
+  const OcctSharp_Graphic3dArrayOfPrimitivesHandle* handle,
+  float theX,
+  float theY,
+  float theZ,
+  float theNX,
+  float theNY,
+  float theNZ,
+  float theTX,
+  float theTY,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateGraphic3dArrayOfPrimitives(handle)->Value->AddVertex(static_cast<const float>(theX), static_cast<const float>(theY), static_cast<const float>(theZ), static_cast<const float>(theNX), static_cast<const float>(theNY), static_cast<const float>(theNZ), static_cast<const float>(theTX), static_cast<const float>(theTY));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitives_method_attributes_0(
+  const OcctSharp_Graphic3dArrayOfPrimitivesHandle* handle,
+  OcctSharp_Graphic3dBufferHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_Buffer> returnedHandle = static_cast<const Graphic3d_ArrayOfPrimitives*>(ValidateGraphic3dArrayOfPrimitives(handle)->Value.get())->Attributes();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dBuffer(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitives_method_bound_0(
   const OcctSharp_Graphic3dArrayOfPrimitivesHandle* handle,
   int32_t theRank,
@@ -26483,6 +29196,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitive
   return GeneratedGuard([&]
   {
     *out_value = ValidateGraphic3dArrayOfPrimitives(handle)->Value->BoundNumberAllocated();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitives_method_bounds_0(
+  const OcctSharp_Graphic3dArrayOfPrimitivesHandle* handle,
+  OcctSharp_Graphic3dBoundBufferHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_BoundBuffer> returnedHandle = static_cast<const Graphic3d_ArrayOfPrimitives*>(ValidateGraphic3dArrayOfPrimitives(handle)->Value.get())->Bounds();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dBoundBuffer(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitives_method_dynamic_type_0(
+  const OcctSharp_Graphic3dArrayOfPrimitivesHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_ArrayOfPrimitives*>(ValidateGraphic3dArrayOfPrimitives(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -26568,6 +29307,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitive
   return GeneratedGuard([&]
   {
     *out_value = ValidateGraphic3dArrayOfPrimitives(handle)->Value->HasVertexTexels() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitives_method_indices_0(
+  const OcctSharp_Graphic3dArrayOfPrimitivesHandle* handle,
+  OcctSharp_Graphic3dIndexBufferHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_IndexBuffer> returnedHandle = static_cast<const Graphic3d_ArrayOfPrimitives*>(ValidateGraphic3dArrayOfPrimitives(handle)->Value.get())->Indices();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dIndexBuffer(std::move(returnedHandle));
   });
 }
 
@@ -26665,6 +29417,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitive
   return GeneratedGuard([&]
   {
     ValidateGraphic3dArrayOfPrimitives(handle)->Value->SetVertice(theIndex, gp_Pnt(theVertex.x, theVertex.y, theVertex.z));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitives_method_set_vertice_1(
+  const OcctSharp_Graphic3dArrayOfPrimitivesHandle* handle,
+  int32_t theIndex,
+  float theX,
+  float theY,
+  float theZ)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGraphic3dArrayOfPrimitives(handle)->Value->SetVertice(theIndex, static_cast<const float>(theX), static_cast<const float>(theY), static_cast<const float>(theZ));
   });
 }
 
@@ -26797,6 +29562,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_quadrangl
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_quadrangle_strips_method_dynamic_type_0(
+  const OcctSharp_Graphic3dArrayOfQuadrangleStripsHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_ArrayOfQuadrangleStrips*>(ValidateGraphic3dArrayOfQuadrangleStrips(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_quadrangle_strips_clone(
   const OcctSharp_Graphic3dArrayOfQuadrangleStripsHandle* source,
   OcctSharp_Graphic3dArrayOfQuadrangleStripsHandle** out_handle)
@@ -26875,6 +29653,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_quadrangl
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_quadrangles_method_dynamic_type_0(
+  const OcctSharp_Graphic3dArrayOfQuadranglesHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_ArrayOfQuadrangles*>(ValidateGraphic3dArrayOfQuadrangles(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_quadrangles_clone(
   const OcctSharp_Graphic3dArrayOfQuadranglesHandle* source,
   OcctSharp_Graphic3dArrayOfQuadranglesHandle** out_handle)
@@ -26948,6 +29739,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_segments_
   {
     opencascade::handle<Graphic3d_ArrayOfSegments> createdHandle = new Graphic3d_ArrayOfSegments(theMaxVertexs, theMaxEdges, (theHasVColors != 0));
     *out_handle = AllocateGraphic3dArrayOfSegments(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_segments_method_dynamic_type_0(
+  const OcctSharp_Graphic3dArrayOfSegmentsHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_ArrayOfSegments*>(ValidateGraphic3dArrayOfSegments(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -27030,6 +29834,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_triangle_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_triangle_fans_method_dynamic_type_0(
+  const OcctSharp_Graphic3dArrayOfTriangleFansHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_ArrayOfTriangleFans*>(ValidateGraphic3dArrayOfTriangleFans(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_triangle_fans_clone(
   const OcctSharp_Graphic3dArrayOfTriangleFansHandle* source,
   OcctSharp_Graphic3dArrayOfTriangleFansHandle** out_handle)
@@ -27106,6 +29923,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_triangle_
   {
     opencascade::handle<Graphic3d_ArrayOfTriangleStrips> createdHandle = new Graphic3d_ArrayOfTriangleStrips(theMaxVertexs, theMaxStrips, (theHasVNormals != 0), (theHasVColors != 0), (theHasBColors != 0), (theHasVTexels != 0));
     *out_handle = AllocateGraphic3dArrayOfTriangleStrips(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_triangle_strips_method_dynamic_type_0(
+  const OcctSharp_Graphic3dArrayOfTriangleStripsHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_ArrayOfTriangleStrips*>(ValidateGraphic3dArrayOfTriangleStrips(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -27187,6 +30017,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_triangles
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_triangles_method_dynamic_type_0(
+  const OcctSharp_Graphic3dArrayOfTrianglesHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_ArrayOfTriangles*>(ValidateGraphic3dArrayOfTriangles(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_triangles_clone(
   const OcctSharp_Graphic3dArrayOfTrianglesHandle* source,
   OcctSharp_Graphic3dArrayOfTrianglesHandle** out_handle)
@@ -27242,6 +30085,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspect_fill_area3d
   {
     opencascade::handle<Graphic3d_AspectFillArea3d> createdHandle = new Graphic3d_AspectFillArea3d();
     *out_handle = AllocateGraphic3dAspectFillArea3d(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspect_fill_area3d_method_dynamic_type_0(
+  const OcctSharp_Graphic3dAspectFillArea3dHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_AspectFillArea3d*>(ValidateGraphic3dAspectFillArea3d(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -27315,6 +30171,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspect_line3d_crea
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspect_line3d_method_dynamic_type_0(
+  const OcctSharp_Graphic3dAspectLine3dHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_AspectLine3d*>(ValidateGraphic3dAspectLine3d(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspect_line3d_method_set_type_0(
   const OcctSharp_Graphic3dAspectLine3dHandle* handle,
   int32_t theType)
@@ -27335,6 +30204,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspect_line3d_meth
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspect_line3d_method_set_width_1(
+  const OcctSharp_Graphic3dAspectLine3dHandle* handle,
+  float theWidth)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGraphic3dAspectLine3d(handle)->Value->SetWidth(static_cast<float>(theWidth));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspect_line3d_method_type_0(
   const OcctSharp_Graphic3dAspectLine3dHandle* handle,
   int32_t* out_value)
@@ -27344,6 +30223,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspect_line3d_meth
   return GeneratedGuard([&]
   {
     *out_value = static_cast<int32_t>(ValidateGraphic3dAspectLine3d(handle)->Value->Type());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspect_line3d_method_width_0(
+  const OcctSharp_Graphic3dAspectLine3dHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Graphic3d_AspectLine3d*>(ValidateGraphic3dAspectLine3d(handle)->Value.get())->Width();
   });
 }
 
@@ -27418,6 +30309,44 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspect_marker3d_cr
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspect_marker3d_method_dynamic_type_0(
+  const OcctSharp_Graphic3dAspectMarker3dHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_AspectMarker3d*>(ValidateGraphic3dAspectMarker3d(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspect_marker3d_method_get_marker_image_0(
+  const OcctSharp_Graphic3dAspectMarker3dHandle* handle,
+  OcctSharp_Graphic3dMarkerImageHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_MarkerImage> returnedHandle = static_cast<const Graphic3d_AspectMarker3d*>(ValidateGraphic3dAspectMarker3d(handle)->Value.get())->GetMarkerImage();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dMarkerImage(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspect_marker3d_method_scale_0(
+  const OcctSharp_Graphic3dAspectMarker3dHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Graphic3d_AspectMarker3d*>(ValidateGraphic3dAspectMarker3d(handle)->Value.get())->Scale();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspect_marker3d_method_set_scale_0(
   const OcctSharp_Graphic3dAspectMarker3dHandle* handle,
   double theScale)
@@ -27425,6 +30354,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspect_marker3d_me
   return GeneratedGuard([&]
   {
     ValidateGraphic3dAspectMarker3d(handle)->Value->SetScale(theScale);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspect_marker3d_method_set_scale_1(
+  const OcctSharp_Graphic3dAspectMarker3dHandle* handle,
+  float theScale)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGraphic3dAspectMarker3d(handle)->Value->SetScale(static_cast<const float>(theScale));
   });
 }
 
@@ -27517,6 +30456,31 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspect_text3d_meth
   return GeneratedGuard([&]
   {
     *out_value = static_cast<int32_t>(ValidateGraphic3dAspectText3d(handle)->Value->DisplayType());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspect_text3d_method_dynamic_type_0(
+  const OcctSharp_Graphic3dAspectText3dHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_AspectText3d*>(ValidateGraphic3dAspectText3d(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspect_text3d_method_get_text_angle_0(
+  const OcctSharp_Graphic3dAspectText3dHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Graphic3d_AspectText3d*>(ValidateGraphic3dAspectText3d(handle)->Value.get())->GetTextAngle();
   });
 }
 
@@ -27653,6 +30617,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_all
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_alpha_cutoff_0(
+  const OcctSharp_Graphic3dAspectsHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Graphic3d_Aspects*>(ValidateGraphic3dAspects(handle)->Value.get())->AlphaCutoff();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_alpha_mode_0(
   const OcctSharp_Graphic3dAspectsHandle* handle,
   int32_t* out_value)
@@ -27689,6 +30665,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_dis
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_dynamic_type_0(
+  const OcctSharp_Graphic3dAspectsHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_Aspects*>(ValidateGraphic3dAspects(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_edge_line_type_0(
   const OcctSharp_Graphic3dAspectsHandle* handle,
   int32_t* out_value)
@@ -27701,6 +30690,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_edg
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_edge_width_0(
+  const OcctSharp_Graphic3dAspectsHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Graphic3d_Aspects*>(ValidateGraphic3dAspects(handle)->Value.get())->EdgeWidth();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_face_culling_0(
   const OcctSharp_Graphic3dAspectsHandle* handle,
   int32_t* out_value)
@@ -27710,6 +30711,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_fac
   return GeneratedGuard([&]
   {
     *out_value = static_cast<int32_t>(ValidateGraphic3dAspects(handle)->Value->FaceCulling());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_hatch_style_0(
+  const OcctSharp_Graphic3dAspectsHandle* handle,
+  OcctSharp_Graphic3dHatchStyleHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_HatchStyle> returnedHandle = static_cast<const Graphic3d_Aspects*>(ValidateGraphic3dAspects(handle)->Value.get())->HatchStyle();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dHatchStyle(std::move(returnedHandle));
   });
 }
 
@@ -27749,6 +30763,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_is_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_line_pattern_0(
+  const OcctSharp_Graphic3dAspectsHandle* handle,
+  uint16_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Graphic3d_Aspects*>(ValidateGraphic3dAspects(handle)->Value.get())->LinePattern();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_line_stipple_factor_0(
+  const OcctSharp_Graphic3dAspectsHandle* handle,
+  uint16_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Graphic3d_Aspects*>(ValidateGraphic3dAspects(handle)->Value.get())->LineStippleFactor();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_line_type_0(
   const OcctSharp_Graphic3dAspectsHandle* handle,
   int32_t* out_value)
@@ -27758,6 +30796,43 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_lin
   return GeneratedGuard([&]
   {
     *out_value = static_cast<int32_t>(ValidateGraphic3dAspects(handle)->Value->LineType());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_line_width_0(
+  const OcctSharp_Graphic3dAspectsHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Graphic3d_Aspects*>(ValidateGraphic3dAspects(handle)->Value.get())->LineWidth();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_marker_image_0(
+  const OcctSharp_Graphic3dAspectsHandle* handle,
+  OcctSharp_Graphic3dMarkerImageHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_MarkerImage> returnedHandle = static_cast<const Graphic3d_Aspects*>(ValidateGraphic3dAspects(handle)->Value.get())->MarkerImage();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dMarkerImage(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_marker_scale_0(
+  const OcctSharp_Graphic3dAspectsHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Graphic3d_Aspects*>(ValidateGraphic3dAspects(handle)->Value.get())->MarkerScale();
   });
 }
 
@@ -27899,6 +30974,26 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_set
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_set_line_pattern_0(
+  const OcctSharp_Graphic3dAspectsHandle* handle,
+  uint16_t thePattern)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGraphic3dAspects(handle)->Value->SetLinePattern(static_cast<unsigned short>(thePattern));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_set_line_stipple_factor_0(
+  const OcctSharp_Graphic3dAspectsHandle* handle,
+  uint16_t theFactor)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGraphic3dAspects(handle)->Value->SetLineStippleFactor(static_cast<unsigned short>(theFactor));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_set_line_type_0(
   const OcctSharp_Graphic3dAspectsHandle* handle,
   int32_t theType)
@@ -27906,6 +31001,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_set
   return GeneratedGuard([&]
   {
     ValidateGraphic3dAspects(handle)->Value->SetLineType(static_cast<Aspect_TypeOfLine>(theType));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_set_line_width_0(
+  const OcctSharp_Graphic3dAspectsHandle* handle,
+  float theWidth)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGraphic3dAspects(handle)->Value->SetLineWidth(static_cast<float>(theWidth));
   });
 }
 
@@ -27919,6 +31024,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_set
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_set_marker_scale_0(
+  const OcctSharp_Graphic3dAspectsHandle* handle,
+  float theScale)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGraphic3dAspects(handle)->Value->SetMarkerScale(static_cast<const float>(theScale));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_set_marker_type_0(
   const OcctSharp_Graphic3dAspectsHandle* handle,
   int32_t theType)
@@ -27926,6 +31041,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_set
   return GeneratedGuard([&]
   {
     ValidateGraphic3dAspects(handle)->Value->SetMarkerType(static_cast<Aspect_TypeOfMarker>(theType));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_set_polygon_offsets_0(
+  const OcctSharp_Graphic3dAspectsHandle* handle,
+  int32_t theMode,
+  float theFactor,
+  float theUnits)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGraphic3dAspects(handle)->Value->SetPolygonOffsets(theMode, static_cast<const float>(theFactor), static_cast<const float>(theUnits));
   });
 }
 
@@ -27966,6 +31093,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_set
   return GeneratedGuard([&]
   {
     ValidateGraphic3dAspects(handle)->Value->SetSuppressBackFaces((theToSuppress != 0));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_set_text_angle_0(
+  const OcctSharp_Graphic3dAspectsHandle* handle,
+  float theAngle)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGraphic3dAspects(handle)->Value->SetTextAngle(static_cast<float>(theAngle));
   });
 }
 
@@ -28077,6 +31214,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_set
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_shader_program_0(
+  const OcctSharp_Graphic3dAspectsHandle* handle,
+  OcctSharp_Graphic3dShaderProgramHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_ShaderProgram> returnedHandle = static_cast<const Graphic3d_Aspects*>(ValidateGraphic3dAspects(handle)->Value.get())->ShaderProgram();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dShaderProgram(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_shading_model_0(
   const OcctSharp_Graphic3dAspectsHandle* handle,
   int32_t* out_value)
@@ -28098,6 +31248,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_sup
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_text_angle_0(
+  const OcctSharp_Graphic3dAspectsHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Graphic3d_Aspects*>(ValidateGraphic3dAspects(handle)->Value.get())->TextAngle();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_text_display_type_0(
   const OcctSharp_Graphic3dAspectsHandle* handle,
   int32_t* out_value)
@@ -28107,6 +31269,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_tex
   return GeneratedGuard([&]
   {
     *out_value = static_cast<int32_t>(ValidateGraphic3dAspects(handle)->Value->TextDisplayType());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_text_font_0(
+  const OcctSharp_Graphic3dAspectsHandle* handle,
+  OcctSharp_TCollectionHAsciiStringHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<TCollection_HAsciiString> returnedHandle = static_cast<const Graphic3d_Aspects*>(ValidateGraphic3dAspects(handle)->Value.get())->TextFont();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateTCollectionHAsciiString(std::move(returnedHandle));
   });
 }
 
@@ -28156,6 +31331,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_tex
   return GeneratedGuard([&]
   {
     *out_value = ValidateGraphic3dAspects(handle)->Value->TextureMapState() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_method_texture_set_0(
+  const OcctSharp_Graphic3dAspectsHandle* handle,
+  OcctSharp_Graphic3dTextureSetHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_TextureSet> returnedHandle = static_cast<const Graphic3d_Aspects*>(ValidateGraphic3dAspects(handle)->Value.get())->TextureSet();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dTextureSet(std::move(returnedHandle));
   });
 }
 
@@ -28287,6 +31475,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_attrib_buffer_crea
   {
     opencascade::handle<Graphic3d_AttribBuffer> createdHandle = new Graphic3d_AttribBuffer((theAlloc == nullptr ? opencascade::handle<NCollection_BaseAllocator>() : ValidateNCollectionBaseAllocator(theAlloc)->Value));
     *out_handle = AllocateGraphic3dAttribBuffer(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_attrib_buffer_method_dynamic_type_0(
+  const OcctSharp_Graphic3dAttribBufferHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_AttribBuffer*>(ValidateGraphic3dAttribBuffer(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -28444,6 +31645,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_bound_buffer_creat
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_bound_buffer_method_dynamic_type_0(
+  const OcctSharp_Graphic3dBoundBufferHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_BoundBuffer*>(ValidateGraphic3dBoundBuffer(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_bound_buffer_method_init_0(
   const OcctSharp_Graphic3dBoundBufferHandle* handle,
   int32_t theNbBounds,
@@ -28527,6 +31741,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_buffer_method_attr
   return GeneratedGuard([&]
   {
     *out_value = ValidateGraphic3dBuffer(handle)->Value->AttributeOffset(theAttribIndex);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_buffer_method_dynamic_type_0(
+  const OcctSharp_Graphic3dBufferHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_Buffer*>(ValidateGraphic3dBuffer(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -28675,6 +31902,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_clight_method_copy
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_clight_method_display_position_0(
+  const OcctSharp_Graphic3dCLightHandle* handle,
+  OcctSharp_Point3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    const gp_Pnt nativeValue = static_cast<const Graphic3d_CLight*>(ValidateGraphic3dCLight(handle)->Value.get())->DisplayPosition();
+    *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_clight_method_dynamic_type_0(
+  const OcctSharp_Graphic3dCLightHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_CLight*>(ValidateGraphic3dCLight(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_clight_method_has_range_0(
   const OcctSharp_Graphic3dCLightHandle* handle,
   int32_t* out_value)
@@ -28720,6 +31973,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_clight_method_is_h
   return GeneratedGuard([&]
   {
     *out_value = ValidateGraphic3dCLight(handle)->Value->IsHeadlight() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_clight_method_revision_0(
+  const OcctSharp_Graphic3dCLightHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Graphic3d_CLight*>(ValidateGraphic3dCLight(handle)->Value.get())->Revision();
   });
 }
 
@@ -28794,6 +32059,38 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_clight_method_set_
   return GeneratedGuard([&]
   {
     ValidateGraphic3dCLight(handle)->Value->SetPosition(theX, theY, theZ);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_clight_method_set_smooth_angle_0(
+  const OcctSharp_Graphic3dCLightHandle* handle,
+  float theValue)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGraphic3dCLight(handle)->Value->SetSmoothAngle(static_cast<float>(theValue));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_clight_method_set_smooth_radius_0(
+  const OcctSharp_Graphic3dCLightHandle* handle,
+  float theValue)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGraphic3dCLight(handle)->Value->SetSmoothRadius(static_cast<float>(theValue));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_clight_method_smoothness_0(
+  const OcctSharp_Graphic3dCLightHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Graphic3d_CLight*>(ValidateGraphic3dCLight(handle)->Value.get())->Smoothness();
   });
 }
 
@@ -28879,6 +32176,45 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cstructure_method_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cstructure_method_clip_planes_0(
+  const OcctSharp_Graphic3dCStructureHandle* handle,
+  OcctSharp_Graphic3dSequenceOfHClipPlaneHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_SequenceOfHClipPlane> returnedHandle = static_cast<const Graphic3d_CStructure*>(ValidateGraphic3dCStructure(handle)->Value.get())->ClipPlanes();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dSequenceOfHClipPlane(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cstructure_method_dynamic_type_0(
+  const OcctSharp_Graphic3dCStructureHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_CStructure*>(ValidateGraphic3dCStructure(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cstructure_method_graphic_driver_0(
+  const OcctSharp_Graphic3dCStructureHandle* handle,
+  OcctSharp_Graphic3dGraphicDriverHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_GraphicDriver> returnedHandle = static_cast<const Graphic3d_CStructure*>(ValidateGraphic3dCStructure(handle)->Value.get())->GraphicDriver();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dGraphicDriver(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cstructure_method_has_group_flipping_0(
   const OcctSharp_Graphic3dCStructureHandle* handle,
   int32_t* out_value)
@@ -28900,6 +32236,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cstructure_method_
   return GeneratedGuard([&]
   {
     *out_value = ValidateGraphic3dCStructure(handle)->Value->HasGroupTransformPersistence() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cstructure_method_highlight_style_0(
+  const OcctSharp_Graphic3dCStructureHandle* handle,
+  OcctSharp_Graphic3dPresentationAttributesHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_PresentationAttributes> returnedHandle = static_cast<const Graphic3d_CStructure*>(ValidateGraphic3dCStructure(handle)->Value.get())->HighlightStyle();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dPresentationAttributes(std::move(returnedHandle));
   });
 }
 
@@ -29097,6 +32446,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cstructure_method_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cstructure_method_transform_persistence_0(
+  const OcctSharp_Graphic3dCStructureHandle* handle,
+  OcctSharp_Graphic3dTransformPersHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_TransformPers> returnedHandle = static_cast<const Graphic3d_CStructure*>(ValidateGraphic3dCStructure(handle)->Value.get())->TransformPersistence();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dTransformPers(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cstructure_method_transformation_0(
+  const OcctSharp_Graphic3dCStructureHandle* handle,
+  OcctSharp_TopLocDatum3DHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<TopLoc_Datum3D> returnedHandle = static_cast<const Graphic3d_CStructure*>(ValidateGraphic3dCStructure(handle)->Value.get())->Transformation();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateTopLocDatum3D(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cstructure_method_update_layer_transformation_0(
   const OcctSharp_Graphic3dCStructureHandle* handle)
 {
@@ -29195,6 +32570,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cview_method_backf
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cview_method_background_cube_map_0(
+  const OcctSharp_Graphic3dCViewHandle* handle,
+  OcctSharp_Graphic3dCubeMapHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_CubeMap> returnedHandle = static_cast<const Graphic3d_CView*>(ValidateGraphic3dCView(handle)->Value.get())->BackgroundCubeMap();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dCubeMap(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cview_method_background_image_0(
+  const OcctSharp_Graphic3dCViewHandle* handle,
+  OcctSharp_Graphic3dTextureMapHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_TextureMap> returnedHandle = ValidateGraphic3dCView(handle)->Value->BackgroundImage();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dTextureMap(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cview_method_background_type_0(
   const OcctSharp_Graphic3dCViewHandle* handle,
   int32_t* out_value)
@@ -29204,6 +32605,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cview_method_backg
   return GeneratedGuard([&]
   {
     *out_value = static_cast<int32_t>(ValidateGraphic3dCView(handle)->Value->BackgroundType());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cview_method_base_xrcamera_0(
+  const OcctSharp_Graphic3dCViewHandle* handle,
+  OcctSharp_Graphic3dCameraHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_Camera> returnedHandle = static_cast<const Graphic3d_CView*>(ValidateGraphic3dCView(handle)->Value.get())->BaseXRCamera();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dCamera(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cview_method_camera_0(
+  const OcctSharp_Graphic3dCViewHandle* handle,
+  OcctSharp_Graphic3dCameraHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_Camera> returnedHandle = static_cast<const Graphic3d_CView*>(ValidateGraphic3dCView(handle)->Value.get())->Camera();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dCamera(std::move(returnedHandle));
   });
 }
 
@@ -29259,6 +32686,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cview_method_deact
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cview_method_dynamic_type_0(
+  const OcctSharp_Graphic3dCViewHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_CView*>(ValidateGraphic3dCView(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cview_method_graduated_trihedron_erase_0(
   const OcctSharp_Graphic3dCViewHandle* handle)
 {
@@ -29274,6 +32714,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cview_method_grid_
   return GeneratedGuard([&]
   {
     ValidateGraphic3dCView(handle)->Value->GridErase();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cview_method_iblcube_map_0(
+  const OcctSharp_Graphic3dCViewHandle* handle,
+  OcctSharp_Graphic3dCubeMapHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_CubeMap> returnedHandle = static_cast<const Graphic3d_CView*>(ValidateGraphic3dCView(handle)->Value.get())->IBLCubeMap();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dCubeMap(std::move(returnedHandle));
   });
 }
 
@@ -29392,6 +32845,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cview_method_numbe
   return GeneratedGuard([&]
   {
     *out_value = ValidateGraphic3dCView(handle)->Value->NumberOfDisplayedStructures();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cview_method_posed_xrcamera_0(
+  const OcctSharp_Graphic3dCViewHandle* handle,
+  OcctSharp_Graphic3dCameraHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_Camera> returnedHandle = static_cast<const Graphic3d_CView*>(ValidateGraphic3dCView(handle)->Value.get())->PosedXRCamera();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dCamera(std::move(returnedHandle));
   });
 }
 
@@ -29603,6 +33069,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cview_method_shadi
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cview_method_structure_manager_0(
+  const OcctSharp_Graphic3dCViewHandle* handle,
+  OcctSharp_Graphic3dStructureManagerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_StructureManager> returnedHandle = static_cast<const Graphic3d_CView*>(ValidateGraphic3dCView(handle)->Value.get())->StructureManager();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dStructureManager(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cview_method_subview_corner_0(
   const OcctSharp_Graphic3dCViewHandle* handle,
   int32_t* out_value)
@@ -29640,6 +33119,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cview_method_synch
   return GeneratedGuard([&]
   {
     ValidateGraphic3dCView(handle)->Value->SynchronizeXRPosedToBaseCamera();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cview_method_texture_env_0(
+  const OcctSharp_Graphic3dCViewHandle* handle,
+  OcctSharp_Graphic3dTextureEnvHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_TextureEnv> returnedHandle = static_cast<const Graphic3d_CView*>(ValidateGraphic3dCView(handle)->Value.get())->TextureEnv();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dTextureEnv(std::move(returnedHandle));
   });
 }
 
@@ -29695,6 +33187,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cview_method_visua
   return GeneratedGuard([&]
   {
     *out_value = static_cast<int32_t>(ValidateGraphic3dCView(handle)->Value->VisualizationType());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cview_method_xrsession_0(
+  const OcctSharp_Graphic3dCViewHandle* handle,
+  OcctSharp_AspectXRSessionHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Aspect_XRSession> returnedHandle = static_cast<const Graphic3d_CView*>(ValidateGraphic3dCView(handle)->Value.get())->XRSession();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateAspectXRSession(std::move(returnedHandle));
   });
 }
 
@@ -29916,6 +33421,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_camera_method_dist
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_camera_method_dynamic_type_0(
+  const OcctSharp_Graphic3dCameraHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_Camera*>(ValidateGraphic3dCamera(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_camera_method_fov2d_0(
   const OcctSharp_Graphic3dCameraHandle* handle,
   double* out_value)
@@ -30123,6 +33641,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_camera_method_proj
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_camera_method_projection_state_0(
+  const OcctSharp_Graphic3dCameraHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Graphic3d_Camera*>(ValidateGraphic3dCamera(handle)->Value.get())->ProjectionState();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_camera_method_projection_type_0(
   const OcctSharp_Graphic3dCameraHandle* handle,
   int32_t* out_value)
@@ -30313,6 +33843,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_camera_method_un_p
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_camera_method_world_view_state_0(
+  const OcctSharp_Graphic3dCameraHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Graphic3d_Camera*>(ValidateGraphic3dCamera(handle)->Value.get())->WorldViewState();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_camera_method_zfar_0(
   const OcctSharp_Graphic3dCameraHandle* handle,
   double* out_value)
@@ -30419,6 +33961,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_clip_plane_create_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_clip_plane_method_capping_aspect_0(
+  const OcctSharp_Graphic3dClipPlaneHandle* handle,
+  OcctSharp_Graphic3dAspectFillArea3dHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_AspectFillArea3d> returnedHandle = static_cast<const Graphic3d_ClipPlane*>(ValidateGraphic3dClipPlane(handle)->Value.get())->CappingAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dAspectFillArea3d(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_clip_plane_method_capping_custom_hatch_0(
+  const OcctSharp_Graphic3dClipPlaneHandle* handle,
+  OcctSharp_Graphic3dHatchStyleHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_HatchStyle> returnedHandle = static_cast<const Graphic3d_ClipPlane*>(ValidateGraphic3dClipPlane(handle)->Value.get())->CappingCustomHatch();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dHatchStyle(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_clip_plane_method_capping_hatch_0(
   const OcctSharp_Graphic3dClipPlaneHandle* handle,
   int32_t* out_value)
@@ -30441,6 +34009,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_clip_plane_method_
   {
     opencascade::handle<Graphic3d_TextureMap> returnedHandle = ValidateGraphic3dClipPlane(handle)->Value->CappingTexture();
     if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dTextureMap(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_clip_plane_method_chain_next_plane_0(
+  const OcctSharp_Graphic3dClipPlaneHandle* handle,
+  OcctSharp_Graphic3dClipPlaneHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_ClipPlane> returnedHandle = static_cast<const Graphic3d_ClipPlane*>(ValidateGraphic3dClipPlane(handle)->Value.get())->ChainNextPlane();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dClipPlane(std::move(returnedHandle));
   });
 }
 
@@ -30467,6 +34048,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_clip_plane_method_
   {
     opencascade::handle<Graphic3d_ClipPlane> returnedHandle = ValidateGraphic3dClipPlane(handle)->Value->Clone();
     if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dClipPlane(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_clip_plane_method_dynamic_type_0(
+  const OcctSharp_Graphic3dClipPlaneHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_ClipPlane*>(ValidateGraphic3dClipPlane(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -30515,6 +34109,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_clip_plane_method_
   return GeneratedGuard([&]
   {
     *out_value = ValidateGraphic3dClipPlane(handle)->Value->IsOn() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_clip_plane_method_mcount_aspect_0(
+  const OcctSharp_Graphic3dClipPlaneHandle* handle,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Graphic3d_ClipPlane*>(ValidateGraphic3dClipPlane(handle)->Value.get())->MCountAspect();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_clip_plane_method_mcount_equation_0(
+  const OcctSharp_Graphic3dClipPlaneHandle* handle,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Graphic3d_ClipPlane*>(ValidateGraphic3dClipPlane(handle)->Value.get())->MCountEquation();
   });
 }
 
@@ -30754,6 +34372,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cube_map_method_cu
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cube_map_method_dynamic_type_0(
+  const OcctSharp_Graphic3dCubeMapHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_CubeMap*>(ValidateGraphic3dCubeMap(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cube_map_method_has_mipmaps_0(
   const OcctSharp_Graphic3dCubeMapHandle* handle,
   int32_t* out_value)
@@ -30879,6 +34510,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cube_map_packed_me
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cube_map_packed_method_dynamic_type_0(
+  const OcctSharp_Graphic3dCubeMapPackedHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_CubeMapPacked*>(ValidateGraphic3dCubeMapPacked(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cube_map_packed_method_value_0(
   const OcctSharp_Graphic3dCubeMapPackedHandle* handle,
   const OcctSharp_ImageSupportedFormatsHandle* theSupported,
@@ -30950,6 +34594,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cube_map_separate_
   {
     opencascade::handle<Image_CompressedPixMap> returnedHandle = ValidateGraphic3dCubeMapSeparate(handle)->Value->CompressedValue((theSupported == nullptr ? opencascade::handle<Image_SupportedFormats>() : ValidateImageSupportedFormats(theSupported)->Value));
     if (!returnedHandle.IsNull()) *out_handle = AllocateImageCompressedPixMap(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_cube_map_separate_method_dynamic_type_0(
+  const OcctSharp_Graphic3dCubeMapSeparateHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_CubeMapSeparate*>(ValidateGraphic3dCubeMapSeparate(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -31039,6 +34696,19 @@ void OCCTSHARP_CALL occtsharp_generated_graphic3d_cube_map_separate_release(Occt
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_data_structure_manager_method_dynamic_type_0(
+  const OcctSharp_Graphic3dDataStructureManagerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_DataStructureManager*>(ValidateGraphic3dDataStructureManager(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_data_structure_manager_clone(
   const OcctSharp_Graphic3dDataStructureManagerHandle* source,
   OcctSharp_Graphic3dDataStructureManagerHandle** out_handle)
@@ -31085,6 +34755,19 @@ void OCCTSHARP_CALL occtsharp_generated_graphic3d_data_structure_manager_release
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_flipper_method_dynamic_type_0(
+  const OcctSharp_Graphic3dFlipperHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_Flipper*>(ValidateGraphic3dFlipper(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_flipper_clone(
   const OcctSharp_Graphic3dFlipperHandle* source,
   OcctSharp_Graphic3dFlipperHandle** out_handle)
@@ -31129,6 +34812,32 @@ void OCCTSHARP_CALL occtsharp_generated_graphic3d_flipper_release(OcctSharp_Grap
   bool removed = false;
   { std::lock_guard<std::mutex> lock(Graphic3dFlipperMutex); removed = LiveGraphic3dFlipperHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_frame_stats_method_counter_value_0(
+  const OcctSharp_Graphic3dFrameStatsHandle* handle,
+  int32_t theCounter,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Graphic3d_FrameStats*>(ValidateGraphic3dFrameStats(handle)->Value.get())->CounterValue(static_cast<Graphic3d_FrameStatsCounter>(theCounter));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_frame_stats_method_dynamic_type_0(
+  const OcctSharp_Graphic3dFrameStatsHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_FrameStats*>(ValidateGraphic3dFrameStats(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_frame_stats_method_frame_duration_0(
@@ -31328,6 +35037,32 @@ void OCCTSHARP_CALL occtsharp_generated_graphic3d_frame_stats_release(OcctSharp_
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_graphic_driver_method_dynamic_type_0(
+  const OcctSharp_Graphic3dGraphicDriverHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_GraphicDriver*>(ValidateGraphic3dGraphicDriver(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_graphic_driver_method_get_display_connection_0(
+  const OcctSharp_Graphic3dGraphicDriverHandle* handle,
+  OcctSharp_AspectDisplayConnectionHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Aspect_DisplayConnection> returnedHandle = static_cast<const Graphic3d_GraphicDriver*>(ValidateGraphic3dGraphicDriver(handle)->Value.get())->GetDisplayConnection();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateAspectDisplayConnection(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_graphic_driver_method_inquire_light_limit_0(
   const OcctSharp_Graphic3dGraphicDriverHandle* handle,
   int32_t* out_value)
@@ -31432,6 +35167,19 @@ void OCCTSHARP_CALL occtsharp_generated_graphic3d_graphic_driver_release(OcctSha
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_graphic_driver_factory_method_dynamic_type_0(
+  const OcctSharp_Graphic3dGraphicDriverFactoryHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_GraphicDriverFactory*>(ValidateGraphic3dGraphicDriverFactory(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_graphic_driver_factory_clone(
   const OcctSharp_Graphic3dGraphicDriverFactoryHandle* source,
   OcctSharp_Graphic3dGraphicDriverFactoryHandle** out_handle)
@@ -31521,6 +35269,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_group_method_clear
   return GeneratedGuard([&]
   {
     ValidateGraphic3dGroup(handle)->Value->Clear((theUpdateStructureMgr != 0));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_group_method_dynamic_type_0(
+  const OcctSharp_Graphic3dGroupHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_Group*>(ValidateGraphic3dGroup(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_group_method_flipper_0(
+  const OcctSharp_Graphic3dGroupHandle* handle,
+  OcctSharp_Graphic3dFlipperHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_Flipper> returnedHandle = static_cast<const Graphic3d_Group*>(ValidateGraphic3dGroup(handle)->Value.get())->Flipper();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dFlipper(std::move(returnedHandle));
   });
 }
 
@@ -31617,6 +35391,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_group_method_struc
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_group_method_transform_persistence_0(
+  const OcctSharp_Graphic3dGroupHandle* handle,
+  OcctSharp_Graphic3dTransformPersHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_TransformPers> returnedHandle = static_cast<const Graphic3d_Group*>(ValidateGraphic3dGroup(handle)->Value.get())->TransformPersistence();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dTransformPers(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_group_clone(
   const OcctSharp_Graphic3dGroupHandle* source,
   OcctSharp_Graphic3dGroupHandle** out_handle)
@@ -31689,6 +35476,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_hatch_style_create
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_hatch_style_method_dynamic_type_0(
+  const OcctSharp_Graphic3dHatchStyleHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_HatchStyle*>(ValidateGraphic3dHatchStyle(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_hatch_style_method_hatch_type_0(
   const OcctSharp_Graphic3dHatchStyleHandle* handle,
   int32_t* out_value)
@@ -31757,6 +35557,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_index_buffer_creat
   {
     opencascade::handle<Graphic3d_IndexBuffer> createdHandle = new Graphic3d_IndexBuffer((theAlloc == nullptr ? opencascade::handle<NCollection_BaseAllocator>() : ValidateNCollectionBaseAllocator(theAlloc)->Value));
     *out_handle = AllocateGraphic3dIndexBuffer(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_index_buffer_method_dynamic_type_0(
+  const OcctSharp_Graphic3dIndexBufferHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_IndexBuffer*>(ValidateGraphic3dIndexBuffer(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -31856,6 +35669,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_layer_method_consi
   return GeneratedGuard([&]
   {
     *out_value = ValidateGraphic3dLayer(handle)->Value->considerZoomPersistenceObjects(theViewId, (theCamera == nullptr ? opencascade::handle<Graphic3d_Camera>() : ValidateGraphic3dCamera(theCamera)->Value), theWindowWidth, theWindowHeight);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_layer_method_dynamic_type_0(
+  const OcctSharp_Graphic3dLayerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_Layer*>(ValidateGraphic3dLayer(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -32045,6 +35871,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_light_set_method_c
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_light_set_method_dynamic_type_0(
+  const OcctSharp_Graphic3dLightSetHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_LightSet*>(ValidateGraphic3dLightSet(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_light_set_method_extent_0(
   const OcctSharp_Graphic3dLightSetHandle* handle,
   int32_t* out_value)
@@ -32144,6 +35983,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_light_set_method_r
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_light_set_method_revision_0(
+  const OcctSharp_Graphic3dLightSetHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Graphic3d_LightSet*>(ValidateGraphic3dLightSet(handle)->Value.get())->Revision();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_light_set_method_update_revision_0(
+  const OcctSharp_Graphic3dLightSetHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateGraphic3dLightSet(handle)->Value->UpdateRevision();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_light_set_method_upper_0(
   const OcctSharp_Graphic3dLightSetHandle* handle,
   int32_t* out_value)
@@ -32153,6 +36016,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_light_set_method_u
   return GeneratedGuard([&]
   {
     *out_value = ValidateGraphic3dLightSet(handle)->Value->Upper();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_light_set_method_value_0(
+  const OcctSharp_Graphic3dLightSetHandle* handle,
+  int32_t theIndex,
+  OcctSharp_Graphic3dCLightHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_CLight> returnedHandle = static_cast<const Graphic3d_LightSet*>(ValidateGraphic3dLightSet(handle)->Value.get())->Value(theIndex);
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dCLight(std::move(returnedHandle));
   });
 }
 
@@ -32216,6 +36093,45 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_marker_image_creat
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_marker_image_method_dynamic_type_0(
+  const OcctSharp_Graphic3dMarkerImageHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_MarkerImage*>(ValidateGraphic3dMarkerImage(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_marker_image_method_get_image_0(
+  const OcctSharp_Graphic3dMarkerImageHandle* handle,
+  OcctSharp_ImagePixMapHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Image_PixMap> returnedHandle = ValidateGraphic3dMarkerImage(handle)->Value->GetImage();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateImagePixMap(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_marker_image_method_get_image_alpha_0(
+  const OcctSharp_Graphic3dMarkerImageHandle* handle,
+  OcctSharp_ImagePixMapHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Image_PixMap> returnedHandle = ValidateGraphic3dMarkerImage(handle)->Value->GetImageAlpha();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateImagePixMap(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_marker_image_method_is_colored_image_0(
   const OcctSharp_Graphic3dMarkerImageHandle* handle,
   int32_t* out_value)
@@ -32272,6 +36188,32 @@ void OCCTSHARP_CALL occtsharp_generated_graphic3d_marker_image_release(OcctSharp
   bool removed = false;
   { std::lock_guard<std::mutex> lock(Graphic3dMarkerImageMutex); removed = LiveGraphic3dMarkerImageHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_media_texture_method_dynamic_type_0(
+  const OcctSharp_Graphic3dMediaTextureHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_MediaTexture*>(ValidateGraphic3dMediaTexture(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_media_texture_method_frame_0(
+  const OcctSharp_Graphic3dMediaTextureHandle* handle,
+  OcctSharp_MediaFrameHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Media_Frame> returnedHandle = static_cast<const Graphic3d_MediaTexture*>(ValidateGraphic3dMediaTexture(handle)->Value.get())->Frame();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateMediaFrame(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_media_texture_method_generate_new_id_0(
@@ -32377,6 +36319,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_media_texture_set_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_media_texture_set_method_dynamic_type_0(
+  const OcctSharp_Graphic3dMediaTextureSetHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_MediaTextureSet*>(ValidateGraphic3dMediaTextureSet(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_media_texture_set_method_is_full_range_yuv_0(
   const OcctSharp_Graphic3dMediaTextureSetHandle* handle,
   int32_t* out_value)
@@ -32407,6 +36362,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_media_texture_set_
   return GeneratedGuard([&]
   {
     ValidateGraphic3dMediaTextureSet(handle)->Value->Notify();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_media_texture_set_method_player_context_0(
+  const OcctSharp_Graphic3dMediaTextureSetHandle* handle,
+  OcctSharp_MediaPlayerContextHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Media_PlayerContext> returnedHandle = static_cast<const Graphic3d_MediaTextureSet*>(ValidateGraphic3dMediaTextureSet(handle)->Value.get())->PlayerContext();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateMediaPlayerContext(std::move(returnedHandle));
   });
 }
 
@@ -32503,6 +36471,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_mutable_index_buff
   {
     opencascade::handle<Graphic3d_MutableIndexBuffer> createdHandle = new Graphic3d_MutableIndexBuffer((theAlloc == nullptr ? opencascade::handle<NCollection_BaseAllocator>() : ValidateNCollectionBaseAllocator(theAlloc)->Value));
     *out_handle = AllocateGraphic3dMutableIndexBuffer(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_mutable_index_buffer_method_dynamic_type_0(
+  const OcctSharp_Graphic3dMutableIndexBufferHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_MutableIndexBuffer*>(ValidateGraphic3dMutableIndexBuffer(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -32605,6 +36586,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_presentation_attri
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_presentation_attributes_method_basic_fill_area_aspect_0(
+  const OcctSharp_Graphic3dPresentationAttributesHandle* handle,
+  OcctSharp_Graphic3dAspectFillArea3dHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_AspectFillArea3d> returnedHandle = static_cast<const Graphic3d_PresentationAttributes*>(ValidateGraphic3dPresentationAttributes(handle)->Value.get())->BasicFillAreaAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dAspectFillArea3d(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_presentation_attributes_method_display_mode_0(
   const OcctSharp_Graphic3dPresentationAttributesHandle* handle,
   int32_t* out_value)
@@ -32614,6 +36608,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_presentation_attri
   return GeneratedGuard([&]
   {
     *out_value = ValidateGraphic3dPresentationAttributes(handle)->Value->DisplayMode();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_presentation_attributes_method_dynamic_type_0(
+  const OcctSharp_Graphic3dPresentationAttributesHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_PresentationAttributes*>(ValidateGraphic3dPresentationAttributes(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -32659,6 +36666,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_presentation_attri
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_presentation_attributes_method_set_transparency_0(
+  const OcctSharp_Graphic3dPresentationAttributesHandle* handle,
+  float theTranspCoef)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGraphic3dPresentationAttributes(handle)->Value->SetTransparency(static_cast<const float>(theTranspCoef));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_presentation_attributes_method_set_zlayer_0(
   const OcctSharp_Graphic3dPresentationAttributesHandle* handle,
   int32_t theLayer)
@@ -32666,6 +36683,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_presentation_attri
   return GeneratedGuard([&]
   {
     ValidateGraphic3dPresentationAttributes(handle)->Value->SetZLayer(theLayer);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_presentation_attributes_method_transparency_0(
+  const OcctSharp_Graphic3dPresentationAttributesHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Graphic3d_PresentationAttributes*>(ValidateGraphic3dPresentationAttributes(handle)->Value.get())->Transparency();
   });
 }
 
@@ -32758,6 +36787,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_sequence_of_hclip_
   return GeneratedGuard([&]
   {
     ValidateGraphic3dSequenceOfHClipPlane(handle)->Value->Clear();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_sequence_of_hclip_plane_method_dynamic_type_0(
+  const OcctSharp_Graphic3dSequenceOfHClipPlaneHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_SequenceOfHClipPlane*>(ValidateGraphic3dSequenceOfHClipPlane(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_sequence_of_hclip_plane_method_first_0(
+  const OcctSharp_Graphic3dSequenceOfHClipPlaneHandle* handle,
+  OcctSharp_Graphic3dClipPlaneHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_ClipPlane> returnedHandle = static_cast<const Graphic3d_SequenceOfHClipPlane*>(ValidateGraphic3dSequenceOfHClipPlane(handle)->Value.get())->First();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dClipPlane(std::move(returnedHandle));
   });
 }
 
@@ -32866,6 +36921,19 @@ void OCCTSHARP_CALL occtsharp_generated_graphic3d_sequence_of_hclip_plane_releas
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_shader_attribute_method_dynamic_type_0(
+  const OcctSharp_Graphic3dShaderAttributeHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_ShaderAttribute*>(ValidateGraphic3dShaderAttribute(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_shader_attribute_method_location_0(
   const OcctSharp_Graphic3dShaderAttributeHandle* handle,
   int32_t* out_value)
@@ -32934,6 +37002,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_shader_manager_cre
   {
     opencascade::handle<Graphic3d_ShaderManager> createdHandle = new Graphic3d_ShaderManager(static_cast<Aspect_GraphicsLibrary>(theGapi));
     *out_handle = AllocateGraphic3dShaderManager(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_shader_manager_method_dynamic_type_0(
+  const OcctSharp_Graphic3dShaderManagerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_ShaderManager*>(ValidateGraphic3dShaderManager(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -33135,6 +37216,19 @@ void OCCTSHARP_CALL occtsharp_generated_graphic3d_shader_manager_release(OcctSha
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_shader_object_method_dynamic_type_0(
+  const OcctSharp_Graphic3dShaderObjectHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_ShaderObject*>(ValidateGraphic3dShaderObject(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_shader_object_method_is_done_0(
   const OcctSharp_Graphic3dShaderObjectHandle* handle,
   int32_t* out_value)
@@ -33249,6 +37343,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_shader_program_met
   return GeneratedGuard([&]
   {
     *out_value = ValidateGraphic3dShaderProgram(handle)->Value->DetachShader((theShader == nullptr ? opencascade::handle<Graphic3d_ShaderObject>() : ValidateGraphic3dShaderObject(theShader)->Value)) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_shader_program_method_dynamic_type_0(
+  const OcctSharp_Graphic3dShaderProgramHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_ShaderProgram*>(ValidateGraphic3dShaderProgram(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -33508,6 +37615,19 @@ void OCCTSHARP_CALL occtsharp_generated_graphic3d_shader_program_release(OcctSha
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_shader_variable_method_dynamic_type_0(
+  const OcctSharp_Graphic3dShaderVariableHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_ShaderVariable*>(ValidateGraphic3dShaderVariable(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_shader_variable_method_is_done_0(
   const OcctSharp_Graphic3dShaderVariableHandle* handle,
   int32_t* out_value)
@@ -33599,6 +37719,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_structure_method_c
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_structure_method_clip_planes_0(
+  const OcctSharp_Graphic3dStructureHandle* handle,
+  OcctSharp_Graphic3dSequenceOfHClipPlaneHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_SequenceOfHClipPlane> returnedHandle = static_cast<const Graphic3d_Structure*>(ValidateGraphic3dStructure(handle)->Value.get())->ClipPlanes();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dSequenceOfHClipPlane(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_structure_method_compute_0(
   const OcctSharp_Graphic3dStructureHandle* handle)
 {
@@ -33627,6 +37760,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_structure_method_c
   return GeneratedGuard([&]
   {
     ValidateGraphic3dStructure(handle)->Value->Connect((thePrs == nullptr ? opencascade::handle<Graphic3d_Structure>() : ValidateGraphic3dStructure(thePrs)->Value));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_structure_method_cstructure_0(
+  const OcctSharp_Graphic3dStructureHandle* handle,
+  OcctSharp_Graphic3dCStructureHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_CStructure> returnedHandle = static_cast<const Graphic3d_Structure*>(ValidateGraphic3dStructure(handle)->Value.get())->CStructure();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dCStructure(std::move(returnedHandle));
   });
 }
 
@@ -33671,6 +37817,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_structure_method_d
   return GeneratedGuard([&]
   {
     *out_value = static_cast<int32_t>(ValidateGraphic3dStructure(handle)->Value->DisplayPriority());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_structure_method_dynamic_type_0(
+  const OcctSharp_Graphic3dStructureHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_Structure*>(ValidateGraphic3dStructure(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -33743,6 +37902,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_structure_method_h
   return GeneratedGuard([&]
   {
     ValidateGraphic3dStructure(handle)->Value->Highlight((theStyle == nullptr ? opencascade::handle<Graphic3d_PresentationAttributes>() : ValidateGraphic3dPresentationAttributes(theStyle)->Value), (theToUpdateMgr != 0));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_structure_method_highlight_style_0(
+  const OcctSharp_Graphic3dStructureHandle* handle,
+  OcctSharp_Graphic3dPresentationAttributesHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_PresentationAttributes> returnedHandle = static_cast<const Graphic3d_Structure*>(ValidateGraphic3dStructure(handle)->Value.get())->HighlightStyle();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dPresentationAttributes(std::move(returnedHandle));
   });
 }
 
@@ -34098,6 +38270,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_structure_method_s
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_structure_method_transform_persistence_0(
+  const OcctSharp_Graphic3dStructureHandle* handle,
+  OcctSharp_Graphic3dTransformPersHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_TransformPers> returnedHandle = static_cast<const Graphic3d_Structure*>(ValidateGraphic3dStructure(handle)->Value.get())->TransformPersistence();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dTransformPers(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_structure_method_transformation_0(
+  const OcctSharp_Graphic3dStructureHandle* handle,
+  OcctSharp_TopLocDatum3DHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<TopLoc_Datum3D> returnedHandle = static_cast<const Graphic3d_Structure*>(ValidateGraphic3dStructure(handle)->Value.get())->Transformation();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateTopLocDatum3D(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_structure_method_un_highlight_0(
   const OcctSharp_Graphic3dStructureHandle* handle)
 {
@@ -34211,6 +38409,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_structure_manager_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_structure_manager_method_dynamic_type_0(
+  const OcctSharp_Graphic3dStructureManagerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_StructureManager*>(ValidateGraphic3dStructureManager(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_structure_manager_method_erase_0(
   const OcctSharp_Graphic3dStructureManagerHandle* handle)
 {
@@ -34227,6 +38438,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_structure_manager_
   return GeneratedGuard([&]
   {
     ValidateGraphic3dStructureManager(handle)->Value->Erase((theStructure == nullptr ? opencascade::handle<Graphic3d_Structure>() : ValidateGraphic3dStructure(theStructure)->Value));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_structure_manager_method_graphic_driver_0(
+  const OcctSharp_Graphic3dStructureManagerHandle* handle,
+  OcctSharp_Graphic3dGraphicDriverHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_GraphicDriver> returnedHandle = static_cast<const Graphic3d_StructureManager*>(ValidateGraphic3dStructureManager(handle)->Value.get())->GraphicDriver();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dGraphicDriver(std::move(returnedHandle));
   });
 }
 
@@ -34275,6 +38499,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_structure_manager_
   return GeneratedGuard([&]
   {
     *out_value = ValidateGraphic3dStructureManager(handle)->Value->MaxNumOfViews();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_structure_manager_method_object_affinity_0(
+  const OcctSharp_Graphic3dStructureManagerHandle* handle,
+  const OcctSharp_StandardTransientHandle* theObject,
+  OcctSharp_Graphic3dViewAffinityHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_ViewAffinity> returnedHandle = static_cast<const Graphic3d_StructureManager*>(ValidateGraphic3dStructureManager(handle)->Value.get())->ObjectAffinity((theObject == nullptr ? opencascade::handle<Standard_Transient>() : ValidateStandardTransient(theObject)->Value));
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dViewAffinity(std::move(returnedHandle));
   });
 }
 
@@ -34433,6 +38671,32 @@ void OCCTSHARP_CALL occtsharp_generated_graphic3d_structure_manager_release(Occt
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_text_create_0(
+  float theHeight,
+  OcctSharp_Graphic3dTextHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_Text> createdHandle = new Graphic3d_Text(static_cast<const float>(theHeight));
+    *out_handle = AllocateGraphic3dText(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_text_method_dynamic_type_0(
+  const OcctSharp_Graphic3dTextHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_Text*>(ValidateGraphic3dText(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_text_method_has_own_anchor_point_0(
   const OcctSharp_Graphic3dTextHandle* handle,
   int32_t* out_value)
@@ -34457,6 +38721,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_text_method_has_pl
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_text_method_height_0(
+  const OcctSharp_Graphic3dTextHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Graphic3d_Text*>(ValidateGraphic3dText(handle)->Value.get())->Height();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_text_method_horizontal_alignment_0(
   const OcctSharp_Graphic3dTextHandle* handle,
   int32_t* out_value)
@@ -34469,12 +38745,35 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_text_method_horizo
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_text_method_position_0(
+  const OcctSharp_Graphic3dTextHandle* handle,
+  OcctSharp_Point3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    const gp_Pnt nativeValue = static_cast<const Graphic3d_Text*>(ValidateGraphic3dText(handle)->Value.get())->Position();
+    *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_text_method_reset_orientation_0(
   const OcctSharp_Graphic3dTextHandle* handle)
 {
   return GeneratedGuard([&]
   {
     ValidateGraphic3dText(handle)->Value->ResetOrientation();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_text_method_set_height_0(
+  const OcctSharp_Graphic3dTextHandle* handle,
+  float theHeight)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGraphic3dText(handle)->Value->SetHeight(static_cast<const float>(theHeight));
   });
 }
 
@@ -34525,6 +38824,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_text_method_set_ve
   return GeneratedGuard([&]
   {
     ValidateGraphic3dText(handle)->Value->SetVerticalAlignment(static_cast<const Graphic3d_VerticalTextAlignment>(theJustification));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_text_method_text_formatter_0(
+  const OcctSharp_Graphic3dTextHandle* handle,
+  OcctSharp_FontTextFormatterHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Font_TextFormatter> returnedHandle = static_cast<const Graphic3d_Text*>(ValidateGraphic3dText(handle)->Value.get())->TextFormatter();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateFontTextFormatter(std::move(returnedHandle));
   });
 }
 
@@ -34584,6 +38896,19 @@ void OCCTSHARP_CALL occtsharp_generated_graphic3d_text_release(OcctSharp_Graphic
   bool removed = false;
   { std::lock_guard<std::mutex> lock(Graphic3dTextMutex); removed = LiveGraphic3dTextHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture1_d_method_dynamic_type_0(
+  const OcctSharp_Graphic3dTexture1DHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_Texture1D*>(ValidateGraphic3dTexture1D(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture1_d_method_name_0(
@@ -34670,6 +38995,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture1_dmanual_c
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture1_dmanual_method_dynamic_type_0(
+  const OcctSharp_Graphic3dTexture1DmanualHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_Texture1Dmanual*>(ValidateGraphic3dTexture1Dmanual(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture1_dmanual_clone(
   const OcctSharp_Graphic3dTexture1DmanualHandle* source,
   OcctSharp_Graphic3dTexture1DmanualHandle** out_handle)
@@ -34742,6 +39080,34 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture1_dsegment_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture1_dsegment_method_dynamic_type_0(
+  const OcctSharp_Graphic3dTexture1DsegmentHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_Texture1Dsegment*>(ValidateGraphic3dTexture1Dsegment(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture1_dsegment_method_set_segment_0(
+  const OcctSharp_Graphic3dTexture1DsegmentHandle* handle,
+  float theX1,
+  float theY1,
+  float theZ1,
+  float theX2,
+  float theY2,
+  float theZ2)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGraphic3dTexture1Dsegment(handle)->Value->SetSegment(static_cast<const float>(theX1), static_cast<const float>(theY1), static_cast<const float>(theZ1), static_cast<const float>(theX2), static_cast<const float>(theY2), static_cast<const float>(theZ2));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture1_dsegment_clone(
   const OcctSharp_Graphic3dTexture1DsegmentHandle* source,
   OcctSharp_Graphic3dTexture1DsegmentHandle** out_handle)
@@ -34811,6 +39177,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture2_d_create_
   {
     opencascade::handle<Graphic3d_Texture2D> createdHandle = new Graphic3d_Texture2D((thePixMap == nullptr ? opencascade::handle<Image_PixMap>() : ValidateImagePixMap(thePixMap)->Value));
     *out_handle = AllocateGraphic3dTexture2D(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture2_d_method_dynamic_type_0(
+  const OcctSharp_Graphic3dTexture2DHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_Texture2D*>(ValidateGraphic3dTexture2D(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -34908,6 +39287,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture2_dplane_cr
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture2_dplane_method_dynamic_type_0(
+  const OcctSharp_Graphic3dTexture2DplaneHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_Texture2Dplane*>(ValidateGraphic3dTexture2Dplane(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture2_dplane_method_plane_0(
   const OcctSharp_Graphic3dTexture2DplaneHandle* handle,
   int32_t* out_value)
@@ -34927,6 +39319,56 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture2_dplane_me
   return GeneratedGuard([&]
   {
     ValidateGraphic3dTexture2Dplane(handle)->Value->SetPlane(static_cast<const Graphic3d_NameOfTexturePlane>(thePlane));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture2_dplane_method_set_rotation_0(
+  const OcctSharp_Graphic3dTexture2DplaneHandle* handle,
+  float theVal)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGraphic3dTexture2Dplane(handle)->Value->SetRotation(static_cast<const float>(theVal));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture2_dplane_method_set_scale_s_0(
+  const OcctSharp_Graphic3dTexture2DplaneHandle* handle,
+  float theVal)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGraphic3dTexture2Dplane(handle)->Value->SetScaleS(static_cast<const float>(theVal));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture2_dplane_method_set_scale_t_0(
+  const OcctSharp_Graphic3dTexture2DplaneHandle* handle,
+  float theVal)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGraphic3dTexture2Dplane(handle)->Value->SetScaleT(static_cast<const float>(theVal));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture2_dplane_method_set_translate_s_0(
+  const OcctSharp_Graphic3dTexture2DplaneHandle* handle,
+  float theVal)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGraphic3dTexture2Dplane(handle)->Value->SetTranslateS(static_cast<const float>(theVal));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture2_dplane_method_set_translate_t_0(
+  const OcctSharp_Graphic3dTexture2DplaneHandle* handle,
+  float theVal)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGraphic3dTexture2Dplane(handle)->Value->SetTranslateT(static_cast<const float>(theVal));
   });
 }
 
@@ -34986,6 +39428,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture3_d_create_
   {
     opencascade::handle<Graphic3d_Texture3D> createdHandle = new Graphic3d_Texture3D((thePixMap == nullptr ? opencascade::handle<Image_PixMap>() : ValidateImagePixMap(thePixMap)->Value));
     *out_handle = AllocateGraphic3dTexture3D(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture3_d_method_dynamic_type_0(
+  const OcctSharp_Graphic3dTexture3DHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_Texture3D*>(ValidateGraphic3dTexture3D(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -35085,6 +39540,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture_env_create
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture_env_method_dynamic_type_0(
+  const OcctSharp_Graphic3dTextureEnvHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_TextureEnv*>(ValidateGraphic3dTextureEnv(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture_env_method_name_0(
   const OcctSharp_Graphic3dTextureEnvHandle* handle,
   int32_t* out_value)
@@ -35179,6 +39647,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture_map_method
   return GeneratedGuard([&]
   {
     ValidateGraphic3dTextureMap(handle)->Value->DisableSmooth();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture_map_method_dynamic_type_0(
+  const OcctSharp_Graphic3dTextureMapHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_TextureMap*>(ValidateGraphic3dTextureMap(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -35337,6 +39818,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture_params_met
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture_params_method_dynamic_type_0(
+  const OcctSharp_Graphic3dTextureParamsHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_TextureParams*>(ValidateGraphic3dTextureParams(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture_params_method_filter_0(
   const OcctSharp_Graphic3dTextureParamsHandle* handle,
   int32_t* out_value)
@@ -35394,6 +39888,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture_params_met
   return GeneratedGuard([&]
   {
     *out_value = ValidateGraphic3dTextureParams(handle)->Value->MaxLevel();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture_params_method_rotation_0(
+  const OcctSharp_Graphic3dTextureParamsHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Graphic3d_TextureParams*>(ValidateGraphic3dTextureParams(handle)->Value.get())->Rotation();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture_params_method_sampler_revision_0(
+  const OcctSharp_Graphic3dTextureParamsHandle* handle,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Graphic3d_TextureParams*>(ValidateGraphic3dTextureParams(handle)->Value.get())->SamplerRevision();
   });
 }
 
@@ -35516,6 +40034,19 @@ void OCCTSHARP_CALL occtsharp_generated_graphic3d_texture_params_release(OcctSha
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture_root_method_dynamic_type_0(
+  const OcctSharp_Graphic3dTextureRootHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_TextureRoot*>(ValidateGraphic3dTextureRoot(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture_root_method_get_compressed_image_0(
   const OcctSharp_Graphic3dTextureRootHandle* handle,
   const OcctSharp_ImageSupportedFormatsHandle* theSupported,
@@ -35541,6 +40072,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture_root_metho
   {
     opencascade::handle<Image_PixMap> returnedHandle = ValidateGraphic3dTextureRoot(handle)->Value->GetImage((theSupported == nullptr ? opencascade::handle<Image_SupportedFormats>() : ValidateImageSupportedFormats(theSupported)->Value));
     if (!returnedHandle.IsNull()) *out_handle = AllocateImagePixMap(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture_root_method_get_params_0(
+  const OcctSharp_Graphic3dTextureRootHandle* handle,
+  OcctSharp_Graphic3dTextureParamsHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_TextureParams> returnedHandle = static_cast<const Graphic3d_TextureRoot*>(ValidateGraphic3dTextureRoot(handle)->Value.get())->GetParams();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dTextureParams(std::move(returnedHandle));
   });
 }
 
@@ -35589,6 +40133,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture_root_metho
   return GeneratedGuard([&]
   {
     *out_value = ValidateGraphic3dTextureRoot(handle)->Value->IsTopDown() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture_root_method_revision_0(
+  const OcctSharp_Graphic3dTextureRootHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Graphic3d_TextureRoot*>(ValidateGraphic3dTextureRoot(handle)->Value.get())->Revision();
   });
 }
 
@@ -35717,6 +40273,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture_set_create
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture_set_method_dynamic_type_0(
+  const OcctSharp_Graphic3dTextureSetHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_TextureSet*>(ValidateGraphic3dTextureSet(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture_set_method_first_0(
+  const OcctSharp_Graphic3dTextureSetHandle* handle,
+  OcctSharp_Graphic3dTextureMapHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_TextureMap> returnedHandle = static_cast<const Graphic3d_TextureSet*>(ValidateGraphic3dTextureSet(handle)->Value.get())->First();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dTextureMap(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture_set_method_is_empty_0(
   const OcctSharp_Graphic3dTextureSetHandle* handle,
   int32_t* out_value)
@@ -35783,6 +40365,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture_set_method
   return GeneratedGuard([&]
   {
     *out_value = ValidateGraphic3dTextureSet(handle)->Value->Upper();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_texture_set_method_value_0(
+  const OcctSharp_Graphic3dTextureSetHandle* handle,
+  int32_t theIndex,
+  OcctSharp_Graphic3dTextureMapHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_TextureMap> returnedHandle = static_cast<const Graphic3d_TextureSet*>(ValidateGraphic3dTextureSet(handle)->Value.get())->Value(theIndex);
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dTextureMap(std::move(returnedHandle));
   });
 }
 
@@ -35881,6 +40477,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_transform_pers_met
   return GeneratedGuard([&]
   {
     *out_value = static_cast<int32_t>(ValidateGraphic3dTransformPers(handle)->Value->Corner2d());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_transform_pers_method_dynamic_type_0(
+  const OcctSharp_Graphic3dTransformPersHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_TransformPers*>(ValidateGraphic3dTransformPers(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -36062,6 +40671,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_transform_pers_sca
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_transform_pers_scaled_above_method_dynamic_type_0(
+  const OcctSharp_Graphic3dTransformPersScaledAboveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_TransformPersScaledAbove*>(ValidateGraphic3dTransformPersScaledAbove(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_transform_pers_scaled_above_method_persistent_scale_0(
   const OcctSharp_Graphic3dTransformPersScaledAboveHandle* handle,
   const OcctSharp_Graphic3dCameraHandle* theCamera,
@@ -36132,6 +40754,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_view_affinity_crea
   {
     opencascade::handle<Graphic3d_ViewAffinity> createdHandle = new Graphic3d_ViewAffinity();
     *out_handle = AllocateGraphic3dViewAffinity(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_view_affinity_method_dynamic_type_0(
+  const OcctSharp_Graphic3dViewAffinityHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Graphic3d_ViewAffinity*>(ValidateGraphic3dViewAffinity(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -36249,6 +40884,35 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_alien_pix_map_method_c
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_alien_pix_map_method_dynamic_type_0(
+  const OcctSharp_ImageAlienPixMapHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Image_AlienPixMap*>(ValidateImageAlienPixMap(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_alien_pix_map_method_init_trash_0(
+  const OcctSharp_ImageAlienPixMapHandle* handle,
+  int32_t thePixelFormat,
+  uint64_t theSizeX,
+  uint64_t theSizeY,
+  uint64_t theSizeRowBytes,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateImageAlienPixMap(handle)->Value->InitTrash(static_cast<Image_Format>(thePixelFormat), static_cast<const unsigned long long>(theSizeX), static_cast<const unsigned long long>(theSizeY), static_cast<const unsigned long long>(theSizeRowBytes)) ? 1 : 0;
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_alien_pix_map_clone(
   const OcctSharp_ImageAlienPixMapHandle* source,
   OcctSharp_ImageAlienPixMapHandle** out_handle)
@@ -36331,6 +40995,44 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_compressed_pix_map_met
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_compressed_pix_map_method_dynamic_type_0(
+  const OcctSharp_ImageCompressedPixMapHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Image_CompressedPixMap*>(ValidateImageCompressedPixMap(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_compressed_pix_map_method_face_bytes_0(
+  const OcctSharp_ImageCompressedPixMapHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Image_CompressedPixMap*>(ValidateImageCompressedPixMap(handle)->Value.get())->FaceBytes();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_compressed_pix_map_method_face_data_0(
+  const OcctSharp_ImageCompressedPixMapHandle* handle,
+  OcctSharp_NCollectionBufferHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<NCollection_Buffer> returnedHandle = static_cast<const Image_CompressedPixMap*>(ValidateImageCompressedPixMap(handle)->Value.get())->FaceData();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateNCollectionBuffer(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_compressed_pix_map_method_is_complete_mip_map_set_0(
   const OcctSharp_ImageCompressedPixMapHandle* handle,
   int32_t* out_value)
@@ -36394,6 +41096,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_compressed_pix_map_met
   return GeneratedGuard([&]
   {
     ValidateImageCompressedPixMap(handle)->Value->SetCompressedFormat(static_cast<Image_CompressedFormat>(theFormat));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_compressed_pix_map_method_set_face_bytes_0(
+  const OcctSharp_ImageCompressedPixMapHandle* handle,
+  uint64_t theSize)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateImageCompressedPixMap(handle)->Value->SetFaceBytes(static_cast<unsigned long long>(theSize));
   });
 }
 
@@ -36534,6 +41246,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_diff_method_compare_0(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_diff_method_dynamic_type_0(
+  const OcctSharp_ImageDiffHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Image_Diff*>(ValidateImageDiff(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_diff_method_init_0(
   const OcctSharp_ImageDiffHandle* handle,
   const OcctSharp_ImagePixMapHandle* theImageRef,
@@ -36648,6 +41373,31 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_method_clear_0
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_method_depth_0(
+  const OcctSharp_ImagePixMapHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Image_PixMap*>(ValidateImagePixMap(handle)->Value.get())->Depth();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_method_dynamic_type_0(
+  const OcctSharp_ImagePixMapHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Image_PixMap*>(ValidateImagePixMap(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_method_format_0(
   const OcctSharp_ImagePixMapHandle* handle,
   int32_t* out_value)
@@ -36657,6 +41407,35 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_method_format_
   return GeneratedGuard([&]
   {
     *out_value = static_cast<int32_t>(ValidateImagePixMap(handle)->Value->Format());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_method_height_0(
+  const OcctSharp_ImagePixMapHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Image_PixMap*>(ValidateImagePixMap(handle)->Value.get())->Height();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_method_init_zero_0(
+  const OcctSharp_ImagePixMapHandle* handle,
+  int32_t thePixelFormat,
+  uint64_t theSizeX,
+  uint64_t theSizeY,
+  uint64_t theSizeRowBytes,
+  uint8_t theValue,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateImagePixMap(handle)->Value->InitZero(static_cast<Image_Format>(thePixelFormat), static_cast<const unsigned long long>(theSizeX), static_cast<const unsigned long long>(theSizeY), static_cast<const unsigned long long>(theSizeRowBytes), static_cast<const unsigned char>(theValue)) ? 1 : 0;
   });
 }
 
@@ -36684,6 +41463,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_method_is_top_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_method_max_row_aligment_bytes_0(
+  const OcctSharp_ImagePixMapHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Image_PixMap*>(ValidateImagePixMap(handle)->Value.get())->MaxRowAligmentBytes();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_method_ratio_0(
   const OcctSharp_ImagePixMapHandle* handle,
   double* out_value)
@@ -36693,6 +41484,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_method_ratio_0
   return GeneratedGuard([&]
   {
     *out_value = ValidateImagePixMap(handle)->Value->Ratio();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_method_row_extra_bytes_0(
+  const OcctSharp_ImagePixMapHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Image_PixMap*>(ValidateImagePixMap(handle)->Value.get())->RowExtraBytes();
   });
 }
 
@@ -36713,6 +41516,90 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_method_set_top
   return GeneratedGuard([&]
   {
     ValidateImagePixMap(handle)->Value->SetTopDown((theIsTopDown != 0));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_method_size_bytes_0(
+  const OcctSharp_ImagePixMapHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Image_PixMap*>(ValidateImagePixMap(handle)->Value.get())->SizeBytes();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_method_size_pixel_bytes_0(
+  const OcctSharp_ImagePixMapHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Image_PixMap*>(ValidateImagePixMap(handle)->Value.get())->SizePixelBytes();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_method_size_row_bytes_0(
+  const OcctSharp_ImagePixMapHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Image_PixMap*>(ValidateImagePixMap(handle)->Value.get())->SizeRowBytes();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_method_size_slice_bytes_0(
+  const OcctSharp_ImagePixMapHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Image_PixMap*>(ValidateImagePixMap(handle)->Value.get())->SizeSliceBytes();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_method_size_z_0(
+  const OcctSharp_ImagePixMapHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Image_PixMap*>(ValidateImagePixMap(handle)->Value.get())->SizeZ();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_method_top_down_inc_0(
+  const OcctSharp_ImagePixMapHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Image_PixMap*>(ValidateImagePixMap(handle)->Value.get())->TopDownInc();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_method_width_0(
+  const OcctSharp_ImagePixMapHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Image_PixMap*>(ValidateImagePixMap(handle)->Value.get())->Width();
   });
 }
 
@@ -36771,6 +41658,31 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_data_create_0(
   {
     opencascade::handle<Image_PixMapData> createdHandle = new Image_PixMapData();
     *out_handle = AllocateImagePixMapData(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_data_method_dynamic_type_0(
+  const OcctSharp_ImagePixMapDataHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Image_PixMapData*>(ValidateImagePixMapData(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_data_method_max_row_aligment_bytes_0(
+  const OcctSharp_ImagePixMapDataHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Image_PixMapData*>(ValidateImagePixMapData(handle)->Value.get())->MaxRowAligmentBytes();
   });
 }
 
@@ -36880,6 +41792,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_supported_formats_meth
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_supported_formats_method_dynamic_type_0(
+  const OcctSharp_ImageSupportedFormatsHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Image_SupportedFormats*>(ValidateImageSupportedFormats(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_supported_formats_method_has_compressed_0(
   const OcctSharp_ImageSupportedFormatsHandle* handle,
   int32_t* out_value)
@@ -36962,6 +41887,56 @@ void OCCTSHARP_CALL occtsharp_generated_image_supported_formats_release(OcctShar
   bool removed = false;
   { std::lock_guard<std::mutex> lock(ImageSupportedFormatsMutex); removed = LiveImageSupportedFormatsHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_texture_method_data_buffer_0(
+  const OcctSharp_ImageTextureHandle* handle,
+  OcctSharp_NCollectionBufferHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<NCollection_Buffer> returnedHandle = static_cast<const Image_Texture*>(ValidateImageTexture(handle)->Value.get())->DataBuffer();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateNCollectionBuffer(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_texture_method_dynamic_type_0(
+  const OcctSharp_ImageTextureHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Image_Texture*>(ValidateImageTexture(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_texture_method_file_length_0(
+  const OcctSharp_ImageTextureHandle* handle,
+  int64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Image_Texture*>(ValidateImageTexture(handle)->Value.get())->FileLength();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_texture_method_file_offset_0(
+  const OcctSharp_ImageTextureHandle* handle,
+  int64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Image_Texture*>(ValidateImageTexture(handle)->Value.get())->FileOffset();
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_texture_method_read_compressed_image_0(
@@ -37059,6 +42034,31 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_video_recorder_method_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_video_recorder_method_dynamic_type_0(
+  const OcctSharp_ImageVideoRecorderHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Image_VideoRecorder*>(ValidateImageVideoRecorder(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_video_recorder_method_frame_count_0(
+  const OcctSharp_ImageVideoRecorderHandle* handle,
+  int64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Image_VideoRecorder*>(ValidateImageVideoRecorder(handle)->Value.get())->FrameCount();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_video_recorder_method_push_frame_0(
   const OcctSharp_ImageVideoRecorderHandle* handle,
   int32_t* out_value)
@@ -37138,6 +42138,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_buffer_pool_method_buf
   return GeneratedGuard([&]
   {
     *out_value = ValidateMediaBufferPool(handle)->Value->BufferSize();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_buffer_pool_method_dynamic_type_0(
+  const OcctSharp_MediaBufferPoolHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Media_BufferPool*>(ValidateMediaBufferPool(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -37240,6 +42253,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_codec_context_method_c
   return GeneratedGuard([&]
   {
     ValidateMediaCodecContext(handle)->Value->Close();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_codec_context_method_dynamic_type_0(
+  const OcctSharp_MediaCodecContextHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Media_CodecContext*>(ValidateMediaCodecContext(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -37393,6 +42419,31 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_format_context_method_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_format_context_method_dynamic_type_0(
+  const OcctSharp_MediaFormatContextHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Media_FormatContext*>(ValidateMediaFormatContext(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_format_context_method_nb_steams_0(
+  const OcctSharp_MediaFormatContextHandle* handle,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Media_FormatContext*>(ValidateMediaFormatContext(handle)->Value.get())->NbSteams();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_format_context_method_pts_start_base_0(
   const OcctSharp_MediaFormatContextHandle* handle,
   double* out_value)
@@ -37429,6 +42480,21 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_format_context_method_
   return GeneratedGuard([&]
   {
     *out_value = ValidateMediaFormatContext(handle)->Value->Seek(theSeekPts, (toSeekBack != 0)) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_format_context_method_seek_stream_0(
+  const OcctSharp_MediaFormatContextHandle* handle,
+  uint32_t theStreamId,
+  double theSeekPts,
+  int32_t toSeekBack,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateMediaFormatContext(handle)->Value->SeekStream(static_cast<unsigned int>(theStreamId), theSeekPts, (toSeekBack != 0)) ? 1 : 0;
   });
 }
 
@@ -37487,6 +42553,31 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_frame_create_0(
   {
     opencascade::handle<Media_Frame> createdHandle = new Media_Frame();
     *out_handle = AllocateMediaFrame(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_frame_method_best_effort_timestamp_0(
+  const OcctSharp_MediaFrameHandle* handle,
+  int64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Media_Frame*>(ValidateMediaFrame(handle)->Value.get())->BestEffortTimestamp();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_frame_method_dynamic_type_0(
+  const OcctSharp_MediaFrameHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Media_Frame*>(ValidateMediaFrame(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -37564,6 +42655,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_frame_method_line_size
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_frame_method_pixel_aspect_ratio_0(
+  const OcctSharp_MediaFrameHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Media_Frame*>(ValidateMediaFrame(handle)->Value.get())->PixelAspectRatio();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_frame_method_pts_0(
   const OcctSharp_MediaFrameHandle* handle,
   double* out_value)
@@ -37583,6 +42686,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_frame_method_set_locke
   return GeneratedGuard([&]
   {
     ValidateMediaFrame(handle)->Value->SetLocked((theToLock != 0));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_frame_method_set_pixel_aspect_ratio_0(
+  const OcctSharp_MediaFrameHandle* handle,
+  float theRatio)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateMediaFrame(handle)->Value->SetPixelAspectRatio(static_cast<float>(theRatio));
   });
 }
 
@@ -37687,6 +42800,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_packet_create_0(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_packet_method_dts_0(
+  const OcctSharp_MediaPacketHandle* handle,
+  int64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Media_Packet*>(ValidateMediaPacket(handle)->Value.get())->Dts();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_packet_method_duration_0(
+  const OcctSharp_MediaPacketHandle* handle,
+  int64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Media_Packet*>(ValidateMediaPacket(handle)->Value.get())->Duration();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_packet_method_duration_seconds_0(
   const OcctSharp_MediaPacketHandle* handle,
   double* out_value)
@@ -37699,6 +42836,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_packet_method_duration
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_packet_method_dynamic_type_0(
+  const OcctSharp_MediaPacketHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Media_Packet*>(ValidateMediaPacket(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_packet_method_is_key_frame_0(
   const OcctSharp_MediaPacketHandle* handle,
   int32_t* out_value)
@@ -37708,6 +42858,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_packet_method_is_key_f
   return GeneratedGuard([&]
   {
     *out_value = ValidateMediaPacket(handle)->Value->IsKeyFrame() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_packet_method_pts_0(
+  const OcctSharp_MediaPacketHandle* handle,
+  int64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Media_Packet*>(ValidateMediaPacket(handle)->Value.get())->Pts();
   });
 }
 
@@ -37807,6 +42969,19 @@ void OCCTSHARP_CALL occtsharp_generated_media_packet_release(OcctSharp_MediaPack
   bool removed = false;
   { std::lock_guard<std::mutex> lock(MediaPacketMutex); removed = LiveMediaPacketHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_player_context_method_dynamic_type_0(
+  const OcctSharp_MediaPlayerContextHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Media_PlayerContext*>(ValidateMediaPlayerContext(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_player_context_method_pause_0(
@@ -37931,6 +43106,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_scaler_method_convert_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_scaler_method_dynamic_type_0(
+  const OcctSharp_MediaScalerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Media_Scaler*>(ValidateMediaScaler(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_scaler_method_is_valid_0(
   const OcctSharp_MediaScalerHandle* handle,
   int32_t* out_value)
@@ -38007,6 +43195,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_timer_create_0(
   {
     opencascade::handle<Media_Timer> createdHandle = new Media_Timer();
     *out_handle = AllocateMediaTimer(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_timer_method_dynamic_type_0(
+  const OcctSharp_MediaTimerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Media_Timer*>(ValidateMediaTimer(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -38181,6 +43382,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_common_sensitive_ent
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_common_sensitive_entity_method_dynamic_type_0(
+  const OcctSharp_MeshVSCommonSensitiveEntityHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const MeshVS_CommonSensitiveEntity*>(ValidateMeshVSCommonSensitiveEntity(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_common_sensitive_entity_method_get_connected_0(
   const OcctSharp_MeshVSCommonSensitiveEntityHandle* handle,
   OcctSharp_Select3DSensitiveEntityHandle** out_handle)
@@ -38275,6 +43489,19 @@ void OCCTSHARP_CALL occtsharp_generated_mesh_vs_common_sensitive_entity_release(
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_data_source_method_dynamic_type_0(
+  const OcctSharp_MeshVSDataSourceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const MeshVS_DataSource*>(ValidateMeshVSDataSource(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_data_source_method_is_advanced_selection_enabled_0(
   const OcctSharp_MeshVSDataSourceHandle* handle,
   int32_t* out_value)
@@ -38331,6 +43558,19 @@ void OCCTSHARP_CALL occtsharp_generated_mesh_vs_data_source_release(OcctSharp_Me
   bool removed = false;
   { std::lock_guard<std::mutex> lock(MeshVSDataSourceMutex); removed = LiveMeshVSDataSourceHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_data_source3_d_method_dynamic_type_0(
+  const OcctSharp_MeshVSDataSource3DHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const MeshVS_DataSource3D*>(ValidateMeshVSDataSource3D(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_data_source3_d_clone(
@@ -38390,6 +43630,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_deformed_data_source
   {
     opencascade::handle<MeshVS_DeformedDataSource> createdHandle = new MeshVS_DeformedDataSource((theNonDeformDS == nullptr ? opencascade::handle<MeshVS_DataSource>() : ValidateMeshVSDataSource(theNonDeformDS)->Value), theMagnify);
     *out_handle = AllocateMeshVSDeformedDataSource(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_deformed_data_source_method_dynamic_type_0(
+  const OcctSharp_MeshVSDeformedDataSourceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const MeshVS_DeformedDataSource*>(ValidateMeshVSDeformedDataSource(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -38491,6 +43744,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_drawer_method_assign
   return GeneratedGuard([&]
   {
     ValidateMeshVSDrawer(handle)->Value->Assign((aDrawer == nullptr ? opencascade::handle<MeshVS_Drawer>() : ValidateMeshVSDrawer(aDrawer)->Value));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_drawer_method_dynamic_type_0(
+  const OcctSharp_MeshVSDrawerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const MeshVS_Drawer*>(ValidateMeshVSDrawer(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -38695,6 +43961,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_dummy_sensitive_enti
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_dummy_sensitive_entity_method_dynamic_type_0(
+  const OcctSharp_MeshVSDummySensitiveEntityHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const MeshVS_DummySensitiveEntity*>(ValidateMeshVSDummySensitiveEntity(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_dummy_sensitive_entity_method_has_init_location_0(
   const OcctSharp_MeshVSDummySensitiveEntityHandle* handle,
   int32_t* out_value)
@@ -38791,6 +44070,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_elemental_color_prs_
   {
     opencascade::handle<MeshVS_ElementalColorPrsBuilder> createdHandle = new MeshVS_ElementalColorPrsBuilder((parent == nullptr ? opencascade::handle<MeshVS_Mesh>() : ValidateMeshVSMesh(parent)->Value), flags, (dS == nullptr ? opencascade::handle<MeshVS_DataSource>() : ValidateMeshVSDataSource(dS)->Value), id, priority);
     *out_handle = AllocateMeshVSElementalColorPrsBuilder(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_elemental_color_prs_builder_method_dynamic_type_0(
+  const OcctSharp_MeshVSElementalColorPrsBuilderHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const MeshVS_ElementalColorPrsBuilder*>(ValidateMeshVSElementalColorPrsBuilder(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -38921,6 +44213,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_mesh_method_compute_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_mesh_method_dynamic_type_0(
+  const OcctSharp_MeshVSMeshHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const MeshVS_Mesh*>(ValidateMeshVSMesh(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_mesh_method_find_builder_0(
   const OcctSharp_MeshVSMeshHandle* handle,
   const OcctSharp_StandardTypeHandle* typeString,
@@ -39013,6 +44318,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_mesh_method_get_free
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_mesh_method_get_hidden_elems_0(
+  const OcctSharp_MeshVSMeshHandle* handle,
+  OcctSharp_TColStdHPackedMapOfIntegerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<TColStd_HPackedMapOfInteger> returnedHandle = static_cast<const MeshVS_Mesh*>(ValidateMeshVSMesh(handle)->Value.get())->GetHiddenElems();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateTColStdHPackedMapOfInteger(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_mesh_method_get_hidden_nodes_0(
+  const OcctSharp_MeshVSMeshHandle* handle,
+  OcctSharp_TColStdHPackedMapOfIntegerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<TColStd_HPackedMapOfInteger> returnedHandle = static_cast<const MeshVS_Mesh*>(ValidateMeshVSMesh(handle)->Value.get())->GetHiddenNodes();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateTColStdHPackedMapOfInteger(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_mesh_method_get_hilighter_0(
   const OcctSharp_MeshVSMeshHandle* handle,
   OcctSharp_MeshVSPrsBuilderHandle** out_handle)
@@ -39035,6 +44366,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_mesh_method_get_mesh
   return GeneratedGuard([&]
   {
     *out_value = static_cast<int32_t>(ValidateMeshVSMesh(handle)->Value->GetMeshSelMethod());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_mesh_method_get_selectable_nodes_0(
+  const OcctSharp_MeshVSMeshHandle* handle,
+  OcctSharp_TColStdHPackedMapOfIntegerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<TColStd_HPackedMapOfInteger> returnedHandle = static_cast<const MeshVS_Mesh*>(ValidateMeshVSMesh(handle)->Value.get())->GetSelectableNodes();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateTColStdHPackedMapOfInteger(std::move(returnedHandle));
   });
 }
 
@@ -39297,6 +44641,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_mesh_entity_owner_me
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_mesh_entity_owner_method_dynamic_type_0(
+  const OcctSharp_MeshVSMeshEntityOwnerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const MeshVS_MeshEntityOwner*>(ValidateMeshVSMeshEntityOwner(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_mesh_entity_owner_method_hilight_with_color_0(
   const OcctSharp_MeshVSMeshEntityOwnerHandle* handle,
   const OcctSharp_PrsMgrPresentationManagerHandle* thePM,
@@ -39436,6 +44793,84 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_mesh_owner_method_cl
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_mesh_owner_method_dynamic_type_0(
+  const OcctSharp_MeshVSMeshOwnerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const MeshVS_MeshOwner*>(ValidateMeshVSMeshOwner(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_mesh_owner_method_get_data_source_0(
+  const OcctSharp_MeshVSMeshOwnerHandle* handle,
+  OcctSharp_MeshVSDataSourceHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<MeshVS_DataSource> returnedHandle = static_cast<const MeshVS_MeshOwner*>(ValidateMeshVSMeshOwner(handle)->Value.get())->GetDataSource();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateMeshVSDataSource(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_mesh_owner_method_get_detected_elements_0(
+  const OcctSharp_MeshVSMeshOwnerHandle* handle,
+  OcctSharp_TColStdHPackedMapOfIntegerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<TColStd_HPackedMapOfInteger> returnedHandle = static_cast<const MeshVS_MeshOwner*>(ValidateMeshVSMeshOwner(handle)->Value.get())->GetDetectedElements();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateTColStdHPackedMapOfInteger(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_mesh_owner_method_get_detected_nodes_0(
+  const OcctSharp_MeshVSMeshOwnerHandle* handle,
+  OcctSharp_TColStdHPackedMapOfIntegerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<TColStd_HPackedMapOfInteger> returnedHandle = static_cast<const MeshVS_MeshOwner*>(ValidateMeshVSMeshOwner(handle)->Value.get())->GetDetectedNodes();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateTColStdHPackedMapOfInteger(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_mesh_owner_method_get_selected_elements_0(
+  const OcctSharp_MeshVSMeshOwnerHandle* handle,
+  OcctSharp_TColStdHPackedMapOfIntegerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<TColStd_HPackedMapOfInteger> returnedHandle = static_cast<const MeshVS_MeshOwner*>(ValidateMeshVSMeshOwner(handle)->Value.get())->GetSelectedElements();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateTColStdHPackedMapOfInteger(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_mesh_owner_method_get_selected_nodes_0(
+  const OcctSharp_MeshVSMeshOwnerHandle* handle,
+  OcctSharp_TColStdHPackedMapOfIntegerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<TColStd_HPackedMapOfInteger> returnedHandle = static_cast<const MeshVS_MeshOwner*>(ValidateMeshVSMeshOwner(handle)->Value.get())->GetSelectedNodes();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateTColStdHPackedMapOfInteger(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_mesh_owner_method_hilight_with_color_0(
   const OcctSharp_MeshVSMeshOwnerHandle* handle,
   const OcctSharp_PrsMgrPresentationManagerHandle* thePM,
@@ -39545,6 +44980,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_mesh_prs_builder_cre
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_mesh_prs_builder_method_dynamic_type_0(
+  const OcctSharp_MeshVSMeshPrsBuilderHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const MeshVS_MeshPrsBuilder*>(ValidateMeshVSMeshPrsBuilder(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_mesh_prs_builder_clone(
   const OcctSharp_MeshVSMeshPrsBuilderHandle* source,
   OcctSharp_MeshVSMeshPrsBuilderHandle** out_handle)
@@ -39605,6 +45053,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_nodal_color_prs_buil
   {
     opencascade::handle<MeshVS_NodalColorPrsBuilder> createdHandle = new MeshVS_NodalColorPrsBuilder((parent == nullptr ? opencascade::handle<MeshVS_Mesh>() : ValidateMeshVSMesh(parent)->Value), flags, (dS == nullptr ? opencascade::handle<MeshVS_DataSource>() : ValidateMeshVSDataSource(dS)->Value), id, priority);
     *out_handle = AllocateMeshVSNodalColorPrsBuilder(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_nodal_color_prs_builder_method_dynamic_type_0(
+  const OcctSharp_MeshVSNodalColorPrsBuilderHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const MeshVS_NodalColorPrsBuilder*>(ValidateMeshVSNodalColorPrsBuilder(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -39724,6 +45185,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_prs_builder_method_c
   {
     opencascade::handle<Select3D_SensitiveEntity> returnedHandle = ValidateMeshVSPrsBuilder(handle)->Value->CustomSensitiveEntity((owner == nullptr ? opencascade::handle<SelectMgr_EntityOwner>() : ValidateSelectMgrEntityOwner(owner)->Value), selectMode);
     if (!returnedHandle.IsNull()) *out_handle = AllocateSelect3DSensitiveEntity(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_prs_builder_method_dynamic_type_0(
+  const OcctSharp_MeshVSPrsBuilderHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const MeshVS_PrsBuilder*>(ValidateMeshVSPrsBuilder(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -39913,6 +45387,19 @@ void OCCTSHARP_CALL occtsharp_generated_mesh_vs_prs_builder_release(OcctSharp_Me
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_sensitive_face_method_dynamic_type_0(
+  const OcctSharp_MeshVSSensitiveFaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const MeshVS_SensitiveFace*>(ValidateMeshVSSensitiveFace(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_sensitive_face_clone(
   const OcctSharp_MeshVSSensitiveFaceHandle* source,
   OcctSharp_MeshVSSensitiveFaceHandle** out_handle)
@@ -39983,6 +45470,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_sensitive_mesh_metho
   {
     const gp_Pnt nativeValue = ValidateMeshVSSensitiveMesh(handle)->Value->CenterOfGeometry();
     *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_sensitive_mesh_method_dynamic_type_0(
+  const OcctSharp_MeshVSSensitiveMeshHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const MeshVS_SensitiveMesh*>(ValidateMeshVSSensitiveMesh(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -40079,6 +45579,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_sensitive_polyhedron
   {
     const gp_Pnt nativeValue = ValidateMeshVSSensitivePolyhedron(handle)->Value->CenterOfGeometry();
     *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_sensitive_polyhedron_method_dynamic_type_0(
+  const OcctSharp_MeshVSSensitivePolyhedronHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const MeshVS_SensitivePolyhedron*>(ValidateMeshVSSensitivePolyhedron(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -40183,6 +45696,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_sensitive_quad_metho
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_sensitive_quad_method_dynamic_type_0(
+  const OcctSharp_MeshVSSensitiveQuadHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const MeshVS_SensitiveQuad*>(ValidateMeshVSSensitiveQuad(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_sensitive_quad_method_get_connected_0(
   const OcctSharp_MeshVSSensitiveQuadHandle* handle,
   OcctSharp_Select3DSensitiveEntityHandle** out_handle)
@@ -40269,6 +45795,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_sensitive_segment_cr
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_sensitive_segment_method_dynamic_type_0(
+  const OcctSharp_MeshVSSensitiveSegmentHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const MeshVS_SensitiveSegment*>(ValidateMeshVSSensitiveSegment(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_sensitive_segment_clone(
   const OcctSharp_MeshVSSensitiveSegmentHandle* source,
   OcctSharp_MeshVSSensitiveSegmentHandle** out_handle)
@@ -40313,6 +45852,19 @@ void OCCTSHARP_CALL occtsharp_generated_mesh_vs_sensitive_segment_release(OcctSh
   bool removed = false;
   { std::lock_guard<std::mutex> lock(MeshVSSensitiveSegmentMutex); removed = LiveMeshVSSensitiveSegmentHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_text_prs_builder_method_dynamic_type_0(
+  const OcctSharp_MeshVSTextPrsBuilderHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const MeshVS_TextPrsBuilder*>(ValidateMeshVSTextPrsBuilder(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_text_prs_builder_method_has_texts_0(
@@ -40372,6 +45924,19 @@ void OCCTSHARP_CALL occtsharp_generated_mesh_vs_text_prs_builder_release(OcctSha
   bool removed = false;
   { std::lock_guard<std::mutex> lock(MeshVSTextPrsBuilderMutex); removed = LiveMeshVSTextPrsBuilderHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_vector_prs_builder_method_dynamic_type_0(
+  const OcctSharp_MeshVSVectorPrsBuilderHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const MeshVS_VectorPrsBuilder*>(ValidateMeshVSVectorPrsBuilder(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_vector_prs_builder_method_has_vectors_0(
@@ -40475,6 +46040,55 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_buffer_method_create
   return GeneratedGuard([&]
   {
     *out_value = ValidateOpenGlBuffer(handle)->Value->Create((theGlCtx == nullptr ? opencascade::handle<OpenGl_Context>() : ValidateOpenGlContext(theGlCtx)->Value)) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_buffer_method_dynamic_type_0(
+  const OcctSharp_OpenGlBufferHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_Buffer*>(ValidateOpenGlBuffer(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_buffer_method_estimated_data_size_0(
+  const OcctSharp_OpenGlBufferHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_Buffer*>(ValidateOpenGlBuffer(handle)->Value.get())->EstimatedDataSize();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_buffer_method_get_components_nb_0(
+  const OcctSharp_OpenGlBufferHandle* handle,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_Buffer*>(ValidateOpenGlBuffer(handle)->Value.get())->GetComponentsNb();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_buffer_method_get_data_type_0(
+  const OcctSharp_OpenGlBufferHandle* handle,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_Buffer*>(ValidateOpenGlBuffer(handle)->Value.get())->GetDataType();
   });
 }
 
@@ -40593,6 +46207,44 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_capping_plane_resour
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_capping_plane_resource_method_dynamic_type_0(
+  const OcctSharp_OpenGlCappingPlaneResourceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_CappingPlaneResource*>(ValidateOpenGlCappingPlaneResource(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_capping_plane_resource_method_estimated_data_size_0(
+  const OcctSharp_OpenGlCappingPlaneResourceHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_CappingPlaneResource*>(ValidateOpenGlCappingPlaneResource(handle)->Value.get())->EstimatedDataSize();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_capping_plane_resource_method_plane_0(
+  const OcctSharp_OpenGlCappingPlaneResourceHandle* handle,
+  OcctSharp_Graphic3dClipPlaneHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_ClipPlane> returnedHandle = static_cast<const OpenGl_CappingPlaneResource*>(ValidateOpenGlCappingPlaneResource(handle)->Value.get())->Plane();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dClipPlane(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_capping_plane_resource_method_update_0(
   const OcctSharp_OpenGlCappingPlaneResourceHandle* handle,
   const OcctSharp_OpenGlContextHandle* theContext,
@@ -40662,6 +46314,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_caps_create_0(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_caps_method_dynamic_type_0(
+  const OcctSharp_OpenGlCapsHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_Caps*>(ValidateOpenGlCaps(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_caps_clone(
   const OcctSharp_OpenGlCapsHandle* source,
   OcctSharp_OpenGlCapsHandle** out_handle)
@@ -40721,6 +46386,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_create_0(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_active_program_0(
+  const OcctSharp_OpenGlContextHandle* handle,
+  OcctSharp_OpenGlShaderProgramHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<OpenGl_ShaderProgram> returnedHandle = static_cast<const OpenGl_Context*>(ValidateOpenGlContext(handle)->Value.get())->ActiveProgram();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateOpenGlShaderProgram(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_active_textures_0(
+  const OcctSharp_OpenGlContextHandle* handle,
+  OcctSharp_OpenGlTextureSetHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<OpenGl_TextureSet> returnedHandle = static_cast<const OpenGl_Context*>(ValidateOpenGlContext(handle)->Value.get())->ActiveTextures();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateOpenGlTextureSet(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_allow_sample_alpha_to_coverage_0(
   const OcctSharp_OpenGlContextHandle* handle,
   int32_t* out_value)
@@ -40766,6 +46457,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_apply
   return GeneratedGuard([&]
   {
     ValidateOpenGlContext(handle)->Value->ApplyWorldViewMatrix();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_available_memory_0(
+  const OcctSharp_OpenGlContextHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_Context*>(ValidateOpenGlContext(handle)->Value.get())->AvailableMemory();
   });
 }
 
@@ -40820,6 +46523,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_bind_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_camera_0(
+  const OcctSharp_OpenGlContextHandle* handle,
+  OcctSharp_Graphic3dCameraHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_Camera> returnedHandle = static_cast<const OpenGl_Context*>(ValidateOpenGlContext(handle)->Value.get())->Camera();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dCamera(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_color_mask_0(
   const OcctSharp_OpenGlContextHandle* handle,
   int32_t* out_value)
@@ -40829,6 +46545,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_color
   return GeneratedGuard([&]
   {
     *out_value = ValidateOpenGlContext(handle)->Value->ColorMask() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_default_frame_buffer_0(
+  const OcctSharp_OpenGlContextHandle* handle,
+  OcctSharp_OpenGlFrameBufferHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<OpenGl_FrameBuffer> returnedHandle = static_cast<const OpenGl_Context*>(ValidateOpenGlContext(handle)->Value.get())->DefaultFrameBuffer();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateOpenGlFrameBuffer(std::move(returnedHandle));
   });
 }
 
@@ -40878,12 +46607,39 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_draw_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_dynamic_type_0(
+  const OcctSharp_OpenGlContextHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_Context*>(ValidateOpenGlContext(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_enable_features_0(
   const OcctSharp_OpenGlContextHandle* handle)
 {
   return GeneratedGuard([&]
   {
     ValidateOpenGlContext(handle)->Value->EnableFeatures();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_exclude_message_0(
+  const OcctSharp_OpenGlContextHandle* handle,
+  uint32_t theSource,
+  uint32_t theId,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateOpenGlContext(handle)->Value->ExcludeMessage(static_cast<const unsigned int>(theSource), static_cast<const unsigned int>(theId)) ? 1 : 0;
   });
 }
 
@@ -40914,6 +46670,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_force
   return GeneratedGuard([&]
   {
     ValidateOpenGlContext(handle)->Value->forcedRelease();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_frame_stats_0(
+  const OcctSharp_OpenGlContextHandle* handle,
+  OcctSharp_OpenGlFrameStatsHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<OpenGl_FrameStats> returnedHandle = static_cast<const OpenGl_Context*>(ValidateOpenGlContext(handle)->Value.get())->FrameStats();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateOpenGlFrameStats(std::move(returnedHandle));
   });
 }
 
@@ -41046,6 +46815,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_has_t
   return GeneratedGuard([&]
   {
     *out_value = ValidateOpenGlContext(handle)->Value->HasTextureMultisampling() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_include_message_0(
+  const OcctSharp_OpenGlContextHandle* handle,
+  uint32_t theSource,
+  uint32_t theId,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateOpenGlContext(handle)->Value->IncludeMessage(static_cast<const unsigned int>(theSource), static_cast<const unsigned int>(theId)) ? 1 : 0;
   });
 }
 
@@ -41196,6 +46979,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_is_wi
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_line_feather_0(
+  const OcctSharp_OpenGlContextHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_Context*>(ValidateOpenGlContext(handle)->Value.get())->LineFeather();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_line_width_scale_0(
+  const OcctSharp_OpenGlContextHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_Context*>(ValidateOpenGlContext(handle)->Value.get())->LineWidthScale();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_make_current_0(
   const OcctSharp_OpenGlContextHandle* handle,
   int32_t* out_value)
@@ -41328,6 +47135,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_max_t
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_messenger_0(
+  const OcctSharp_OpenGlContextHandle* handle,
+  OcctSharp_MessageMessengerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Message_Messenger> returnedHandle = static_cast<const OpenGl_Context*>(ValidateOpenGlContext(handle)->Value.get())->Messenger();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateMessageMessenger(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_pbrdiff_iblmap_shtex_unit_0(
   const OcctSharp_OpenGlContextHandle* handle,
   int32_t* out_value)
@@ -41409,6 +47229,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_relea
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_render_scale_0(
+  const OcctSharp_OpenGlContextHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_Context*>(ValidateOpenGlContext(handle)->Value.get())->RenderScale();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_render_scale_inv_0(
+  const OcctSharp_OpenGlContextHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_Context*>(ValidateOpenGlContext(handle)->Value.get())->RenderScaleInv();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_reset_errors_0(
   const OcctSharp_OpenGlContextHandle* handle,
   int32_t theToPrintErrors,
@@ -41419,6 +47263,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_reset
   return GeneratedGuard([&]
   {
     *out_value = ValidateOpenGlContext(handle)->Value->ResetErrors((theToPrintErrors != 0)) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_resolution_0(
+  const OcctSharp_OpenGlContextHandle* handle,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_Context*>(ValidateOpenGlContext(handle)->Value.get())->Resolution();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_resolution_ratio_0(
+  const OcctSharp_OpenGlContextHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_Context*>(ValidateOpenGlContext(handle)->Value.get())->ResolutionRatio();
   });
 }
 
@@ -41545,6 +47413,57 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_set_g
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_set_line_feather_0(
+  const OcctSharp_OpenGlContextHandle* handle,
+  float theValue)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateOpenGlContext(handle)->Value->SetLineFeather(static_cast<float>(theValue));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_set_line_stipple_0(
+  const OcctSharp_OpenGlContextHandle* handle,
+  float theFactor,
+  uint16_t thePattern)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateOpenGlContext(handle)->Value->SetLineStipple(static_cast<const float>(theFactor), static_cast<const unsigned short>(thePattern));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_set_line_stipple_1(
+  const OcctSharp_OpenGlContextHandle* handle,
+  uint16_t thePattern)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateOpenGlContext(handle)->Value->SetLineStipple(static_cast<const unsigned short>(thePattern));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_set_line_width_0(
+  const OcctSharp_OpenGlContextHandle* handle,
+  float theWidth)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateOpenGlContext(handle)->Value->SetLineWidth(static_cast<const float>(theWidth));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_set_point_size_0(
+  const OcctSharp_OpenGlContextHandle* handle,
+  float theSize)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateOpenGlContext(handle)->Value->SetPointSize(static_cast<const float>(theSize));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_set_point_sprite_origin_0(
   const OcctSharp_OpenGlContextHandle* handle)
 {
@@ -41613,6 +47532,28 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_set_r
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_set_resolution_0(
+  const OcctSharp_OpenGlContextHandle* handle,
+  uint32_t theResolution,
+  float theRatio,
+  float theScale)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateOpenGlContext(handle)->Value->SetResolution(static_cast<unsigned int>(theResolution), static_cast<float>(theRatio), static_cast<float>(theScale));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_set_resolution_ratio_0(
+  const OcctSharp_OpenGlContextHandle* handle,
+  float theRatio)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateOpenGlContext(handle)->Value->SetResolutionRatio(static_cast<const float>(theRatio));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_set_sample_alpha_to_coverage_0(
   const OcctSharp_OpenGlContextHandle* handle,
   int32_t theToEnable,
@@ -41660,6 +47601,17 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_set_t
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_set_type_of_line_0(
+  const OcctSharp_OpenGlContextHandle* handle,
+  int32_t theType,
+  float theFactor)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateOpenGlContext(handle)->Value->SetTypeOfLine(static_cast<const Aspect_TypeOfLine>(theType), static_cast<const float>(theFactor));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_set_window_srgb_0(
   const OcctSharp_OpenGlContextHandle* handle,
   int32_t theIsSRgb)
@@ -41667,6 +47619,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_set_w
   return GeneratedGuard([&]
   {
     ValidateOpenGlContext(handle)->Value->SetWindowSRGB((theIsSRgb != 0));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_shader_manager_0(
+  const OcctSharp_OpenGlContextHandle* handle,
+  OcctSharp_OpenGlShaderManagerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<OpenGl_ShaderManager> returnedHandle = static_cast<const OpenGl_Context*>(ValidateOpenGlContext(handle)->Value.get())->ShaderManager();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateOpenGlShaderManager(std::move(returnedHandle));
   });
 }
 
@@ -41701,6 +47666,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_sprit
   return GeneratedGuard([&]
   {
     *out_value = static_cast<int32_t>(ValidateOpenGlContext(handle)->Value->SpriteTextureUnit());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_context_method_supported_texture_formats_0(
+  const OcctSharp_OpenGlContextHandle* handle,
+  OcctSharp_ImageSupportedFormatsHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Image_SupportedFormats> returnedHandle = static_cast<const OpenGl_Context*>(ValidateOpenGlContext(handle)->Value.get())->SupportedTextureFormats();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateImageSupportedFormats(std::move(returnedHandle));
   });
 }
 
@@ -41854,6 +47832,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_depth_peeling_method
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_depth_peeling_method_blend_back_fbo_oit_0(
+  const OcctSharp_OpenGlDepthPeelingHandle* handle,
+  OcctSharp_OpenGlFrameBufferHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<OpenGl_FrameBuffer> returnedHandle = static_cast<const OpenGl_DepthPeeling*>(ValidateOpenGlDepthPeeling(handle)->Value.get())->BlendBackFboOit();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateOpenGlFrameBuffer(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_depth_peeling_method_detach_depth_texture_0(
   const OcctSharp_OpenGlDepthPeelingHandle* handle,
   const OcctSharp_OpenGlContextHandle* theCtx)
@@ -41861,6 +47852,31 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_depth_peeling_method
   return GeneratedGuard([&]
   {
     ValidateOpenGlDepthPeeling(handle)->Value->DetachDepthTexture((theCtx == nullptr ? opencascade::handle<OpenGl_Context>() : ValidateOpenGlContext(theCtx)->Value));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_depth_peeling_method_dynamic_type_0(
+  const OcctSharp_OpenGlDepthPeelingHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_DepthPeeling*>(ValidateOpenGlDepthPeeling(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_depth_peeling_method_estimated_data_size_0(
+  const OcctSharp_OpenGlDepthPeelingHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_DepthPeeling*>(ValidateOpenGlDepthPeeling(handle)->Value.get())->EstimatedDataSize();
   });
 }
 
@@ -41910,6 +47926,68 @@ void OCCTSHARP_CALL occtsharp_generated_open_gl_depth_peeling_release(OcctSharp_
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_font_method_ascender_0(
+  const OcctSharp_OpenGlFontHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_Font*>(ValidateOpenGlFont(handle)->Value.get())->Ascender();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_font_method_descender_0(
+  const OcctSharp_OpenGlFontHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_Font*>(ValidateOpenGlFont(handle)->Value.get())->Descender();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_font_method_dynamic_type_0(
+  const OcctSharp_OpenGlFontHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_Font*>(ValidateOpenGlFont(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_font_method_estimated_data_size_0(
+  const OcctSharp_OpenGlFontHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_Font*>(ValidateOpenGlFont(handle)->Value.get())->EstimatedDataSize();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_font_method_ftfont_0(
+  const OcctSharp_OpenGlFontHandle* handle,
+  OcctSharp_FontFTFontHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Font_FTFont> returnedHandle = static_cast<const OpenGl_Font*>(ValidateOpenGlFont(handle)->Value.get())->FTFont();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateFontFTFont(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_font_method_init_0(
   const OcctSharp_OpenGlFontHandle* handle,
   const OcctSharp_OpenGlContextHandle* theCtx,
@@ -41932,6 +48010,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_font_method_is_valid
   return GeneratedGuard([&]
   {
     *out_value = ValidateOpenGlFont(handle)->Value->IsValid() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_font_method_texture_0(
+  const OcctSharp_OpenGlFontHandle* handle,
+  OcctSharp_OpenGlTextureHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<OpenGl_Texture> returnedHandle = static_cast<const OpenGl_Font*>(ValidateOpenGlFont(handle)->Value.get())->Texture();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateOpenGlTexture(std::move(returnedHandle));
   });
 }
 
@@ -42031,6 +48122,82 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_frame_buffer_method_
   return GeneratedGuard([&]
   {
     ValidateOpenGlFrameBuffer(handle)->Value->ChangeViewport(theVPSizeX, theVPSizeY);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_frame_buffer_method_color_render_buffer_0(
+  const OcctSharp_OpenGlFrameBufferHandle* handle,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_FrameBuffer*>(ValidateOpenGlFrameBuffer(handle)->Value.get())->ColorRenderBuffer();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_frame_buffer_method_color_texture_0(
+  const OcctSharp_OpenGlFrameBufferHandle* handle,
+  int32_t theColorBufferIndex,
+  OcctSharp_OpenGlTextureHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<OpenGl_Texture> returnedHandle = static_cast<const OpenGl_FrameBuffer*>(ValidateOpenGlFrameBuffer(handle)->Value.get())->ColorTexture(theColorBufferIndex);
+    if (!returnedHandle.IsNull()) *out_handle = AllocateOpenGlTexture(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_frame_buffer_method_depth_stencil_render_buffer_0(
+  const OcctSharp_OpenGlFrameBufferHandle* handle,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_FrameBuffer*>(ValidateOpenGlFrameBuffer(handle)->Value.get())->DepthStencilRenderBuffer();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_frame_buffer_method_depth_stencil_texture_0(
+  const OcctSharp_OpenGlFrameBufferHandle* handle,
+  OcctSharp_OpenGlTextureHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<OpenGl_Texture> returnedHandle = static_cast<const OpenGl_FrameBuffer*>(ValidateOpenGlFrameBuffer(handle)->Value.get())->DepthStencilTexture();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateOpenGlTexture(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_frame_buffer_method_dynamic_type_0(
+  const OcctSharp_OpenGlFrameBufferHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_FrameBuffer*>(ValidateOpenGlFrameBuffer(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_frame_buffer_method_estimated_data_size_0(
+  const OcctSharp_OpenGlFrameBufferHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_FrameBuffer*>(ValidateOpenGlFrameBuffer(handle)->Value.get())->EstimatedDataSize();
   });
 }
 
@@ -42163,6 +48330,24 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_frame_buffer_method_
   return GeneratedGuard([&]
   {
     *out_value = ValidateOpenGlFrameBuffer(handle)->Value->InitLazy((theGlCtx == nullptr ? opencascade::handle<OpenGl_Context>() : ValidateOpenGlContext(theGlCtx)->Value), theViewportSizeX, theViewportSizeY, theColorFormat, theDepthFormat, theNbSamples) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_frame_buffer_method_init_with_rb_0(
+  const OcctSharp_OpenGlFrameBufferHandle* handle,
+  const OcctSharp_OpenGlContextHandle* theGlCtx,
+  int32_t theSizeX,
+  int32_t theSizeY,
+  int32_t theColorFormat,
+  int32_t theDepthFormat,
+  uint32_t theColorRBufferFromWindow,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateOpenGlFrameBuffer(handle)->Value->InitWithRB((theGlCtx == nullptr ? opencascade::handle<OpenGl_Context>() : ValidateOpenGlContext(theGlCtx)->Value), theSizeX, theSizeY, theColorFormat, theDepthFormat, static_cast<const unsigned int>(theColorRBufferFromWindow)) ? 1 : 0;
   });
 }
 
@@ -42317,6 +48502,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_frame_stats_create_0
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_frame_stats_method_dynamic_type_0(
+  const OcctSharp_OpenGlFrameStatsHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_FrameStats*>(ValidateOpenGlFrameStats(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_frame_stats_clone(
   const OcctSharp_OpenGlFrameStatsHandle* source,
   OcctSharp_OpenGlFrameStatsHandle** out_handle)
@@ -42405,6 +48603,31 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_graphic_driver_metho
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_graphic_driver_method_default_text_height_0(
+  const OcctSharp_OpenGlGraphicDriverHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_GraphicDriver*>(ValidateOpenGlGraphicDriver(handle)->Value.get())->DefaultTextHeight();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_graphic_driver_method_dynamic_type_0(
+  const OcctSharp_OpenGlGraphicDriverHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_GraphicDriver*>(ValidateOpenGlGraphicDriver(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_graphic_driver_method_enable_vbo_0(
   const OcctSharp_OpenGlGraphicDriverHandle* handle,
   int32_t theToTurnOn)
@@ -42412,6 +48635,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_graphic_driver_metho
   return GeneratedGuard([&]
   {
     ValidateOpenGlGraphicDriver(handle)->Value->EnableVBO((theToTurnOn != 0));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_graphic_driver_method_get_next_primitive_array_uid_0(
+  const OcctSharp_OpenGlGraphicDriverHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_GraphicDriver*>(ValidateOpenGlGraphicDriver(handle)->Value.get())->GetNextPrimitiveArrayUID();
   });
 }
 
@@ -42582,6 +48817,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_graphic_driver_facto
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_graphic_driver_factory_method_default_options_0(
+  const OcctSharp_OpenGlGraphicDriverFactoryHandle* handle,
+  OcctSharp_OpenGlCapsHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<OpenGl_Caps> returnedHandle = static_cast<const OpenGl_GraphicDriverFactory*>(ValidateOpenGlGraphicDriverFactory(handle)->Value.get())->DefaultOptions();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateOpenGlCaps(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_graphic_driver_factory_method_dynamic_type_0(
+  const OcctSharp_OpenGlGraphicDriverFactoryHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_GraphicDriverFactory*>(ValidateOpenGlGraphicDriverFactory(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_graphic_driver_factory_method_set_default_options_0(
   const OcctSharp_OpenGlGraphicDriverFactoryHandle* handle,
   const OcctSharp_OpenGlCapsHandle* theOptions)
@@ -42696,6 +48957,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_group_method_clear_0
   return GeneratedGuard([&]
   {
     ValidateOpenGlGroup(handle)->Value->Clear((theToUpdateStructureMgr != 0));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_group_method_dynamic_type_0(
+  const OcctSharp_OpenGlGroupHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_Group*>(ValidateOpenGlGroup(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -42840,6 +49114,31 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_index_buffer_create_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_index_buffer_method_dynamic_type_0(
+  const OcctSharp_OpenGlIndexBufferHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_IndexBuffer*>(ValidateOpenGlIndexBuffer(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_index_buffer_method_get_target_0(
+  const OcctSharp_OpenGlIndexBufferHandle* handle,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_IndexBuffer*>(ValidateOpenGlIndexBuffer(handle)->Value.get())->GetTarget();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_index_buffer_clone(
   const OcctSharp_OpenGlIndexBufferHandle* source,
   OcctSharp_OpenGlIndexBufferHandle** out_handle)
@@ -42898,6 +49197,31 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_line_attributes_crea
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_line_attributes_method_dynamic_type_0(
+  const OcctSharp_OpenGlLineAttributesHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_LineAttributes*>(ValidateOpenGlLineAttributes(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_line_attributes_method_estimated_data_size_0(
+  const OcctSharp_OpenGlLineAttributesHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_LineAttributes*>(ValidateOpenGlLineAttributes(handle)->Value.get())->EstimatedDataSize();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_line_attributes_clone(
   const OcctSharp_OpenGlLineAttributesHandle* source,
   OcctSharp_OpenGlLineAttributesHandle** out_handle)
@@ -42942,6 +49266,19 @@ void OCCTSHARP_CALL occtsharp_generated_open_gl_line_attributes_release(OcctShar
   bool removed = false;
   { std::lock_guard<std::mutex> lock(OpenGlLineAttributesMutex); removed = LiveOpenGlLineAttributesHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_named_resource_method_dynamic_type_0(
+  const OcctSharp_OpenGlNamedResourceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_NamedResource*>(ValidateOpenGlNamedResource(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_named_resource_clone(
@@ -42990,6 +49327,22 @@ void OCCTSHARP_CALL occtsharp_generated_open_gl_named_resource_release(OcctSharp
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_pbrenvironment_method_bake_0(
+  const OcctSharp_OpenGlPBREnvironmentHandle* handle,
+  const OcctSharp_OpenGlContextHandle* theCtx,
+  const OcctSharp_OpenGlTextureHandle* theEnvMap,
+  int32_t theZIsInverted,
+  int32_t theIsTopDown,
+  uint64_t theDiffMapNbSamples,
+  uint64_t theSpecMapNbSamples,
+  float theProbability)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateOpenGlPBREnvironment(handle)->Value->Bake((theCtx == nullptr ? opencascade::handle<OpenGl_Context>() : ValidateOpenGlContext(theCtx)->Value), (theEnvMap == nullptr ? opencascade::handle<OpenGl_Texture>() : ValidateOpenGlTexture(theEnvMap)->Value), (theZIsInverted != 0), (theIsTopDown != 0), static_cast<unsigned long long>(theDiffMapNbSamples), static_cast<unsigned long long>(theSpecMapNbSamples), static_cast<float>(theProbability));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_pbrenvironment_method_bind_0(
   const OcctSharp_OpenGlPBREnvironmentHandle* handle,
   const OcctSharp_OpenGlContextHandle* theCtx)
@@ -42997,6 +49350,31 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_pbrenvironment_metho
   return GeneratedGuard([&]
   {
     ValidateOpenGlPBREnvironment(handle)->Value->Bind((theCtx == nullptr ? opencascade::handle<OpenGl_Context>() : ValidateOpenGlContext(theCtx)->Value));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_pbrenvironment_method_dynamic_type_0(
+  const OcctSharp_OpenGlPBREnvironmentHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_PBREnvironment*>(ValidateOpenGlPBREnvironment(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_pbrenvironment_method_estimated_data_size_0(
+  const OcctSharp_OpenGlPBREnvironmentHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_PBREnvironment*>(ValidateOpenGlPBREnvironment(handle)->Value.get())->EstimatedDataSize();
   });
 }
 
@@ -43021,6 +49399,44 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_pbrenvironment_metho
   return GeneratedGuard([&]
   {
     *out_value = ValidateOpenGlPBREnvironment(handle)->Value->IsNeededToBeBound() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_pbrenvironment_method_pow2_size_0(
+  const OcctSharp_OpenGlPBREnvironmentHandle* handle,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_PBREnvironment*>(ValidateOpenGlPBREnvironment(handle)->Value.get())->Pow2Size();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_pbrenvironment_method_sizes_are_different_0(
+  const OcctSharp_OpenGlPBREnvironmentHandle* handle,
+  uint32_t thePow2Size,
+  uint32_t theSpecMapLevelsNumber,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_PBREnvironment*>(ValidateOpenGlPBREnvironment(handle)->Value.get())->SizesAreDifferent(static_cast<unsigned int>(thePow2Size), static_cast<unsigned int>(theSpecMapLevelsNumber)) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_pbrenvironment_method_spec_map_levels_number_0(
+  const OcctSharp_OpenGlPBREnvironmentHandle* handle,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_PBREnvironment*>(ValidateOpenGlPBREnvironment(handle)->Value.get())->SpecMapLevelsNumber();
   });
 }
 
@@ -43090,6 +49506,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_point_sprite_method_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_point_sprite_method_dynamic_type_0(
+  const OcctSharp_OpenGlPointSpriteHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_PointSprite*>(ValidateOpenGlPointSprite(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_point_sprite_method_is_display_list_0(
   const OcctSharp_OpenGlPointSpriteHandle* handle,
   int32_t* out_value)
@@ -43123,6 +49552,17 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_point_sprite_method_
   return GeneratedGuard([&]
   {
     *out_value = ValidateOpenGlPointSprite(handle)->Value->IsValid() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_point_sprite_method_set_display_list_0(
+  const OcctSharp_OpenGlPointSpriteHandle* handle,
+  const OcctSharp_OpenGlContextHandle* theCtx,
+  uint32_t theBitmapList)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateOpenGlPointSprite(handle)->Value->SetDisplayList((theCtx == nullptr ? opencascade::handle<OpenGl_Context>() : ValidateOpenGlContext(theCtx)->Value), static_cast<const unsigned int>(theBitmapList));
   });
 }
 
@@ -43170,6 +49610,19 @@ void OCCTSHARP_CALL occtsharp_generated_open_gl_point_sprite_release(OcctSharp_O
   bool removed = false;
   { std::lock_guard<std::mutex> lock(OpenGlPointSpriteMutex); removed = LiveOpenGlPointSpriteHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_resource_method_dynamic_type_0(
+  const OcctSharp_OpenGlResourceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_Resource*>(ValidateOpenGlResource(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_resource_clone(
@@ -43265,6 +49718,31 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_sampler_method_creat
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_sampler_method_dynamic_type_0(
+  const OcctSharp_OpenGlSamplerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_Sampler*>(ValidateOpenGlSampler(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_sampler_method_estimated_data_size_0(
+  const OcctSharp_OpenGlSamplerHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_Sampler*>(ValidateOpenGlSampler(handle)->Value.get())->EstimatedDataSize();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_sampler_method_is_immutable_0(
   const OcctSharp_OpenGlSamplerHandle* handle,
   int32_t* out_value)
@@ -43289,12 +49767,50 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_sampler_method_is_va
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_sampler_method_parameters_0(
+  const OcctSharp_OpenGlSamplerHandle* handle,
+  OcctSharp_Graphic3dTextureParamsHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_TextureParams> returnedHandle = ValidateOpenGlSampler(handle)->Value->Parameters();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dTextureParams(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_sampler_method_sampler_id_0(
+  const OcctSharp_OpenGlSamplerHandle* handle,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_Sampler*>(ValidateOpenGlSampler(handle)->Value.get())->SamplerID();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_sampler_method_set_immutable_0(
   const OcctSharp_OpenGlSamplerHandle* handle)
 {
   return GeneratedGuard([&]
   {
     ValidateOpenGlSampler(handle)->Value->SetImmutable();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_sampler_method_set_parameter_0(
+  const OcctSharp_OpenGlSamplerHandle* handle,
+  const OcctSharp_OpenGlContextHandle* theCtx,
+  uint32_t theTarget,
+  uint32_t theParam,
+  int32_t theValue)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateOpenGlSampler(handle)->Value->SetParameter((theCtx == nullptr ? opencascade::handle<OpenGl_Context>() : ValidateOpenGlContext(theCtx)->Value), static_cast<unsigned int>(theTarget), static_cast<unsigned int>(theParam), theValue);
   });
 }
 
@@ -43399,6 +49915,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_set_of_programs_crea
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_set_of_programs_method_dynamic_type_0(
+  const OcctSharp_OpenGlSetOfProgramsHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_SetOfPrograms*>(ValidateOpenGlSetOfPrograms(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_set_of_programs_clone(
   const OcctSharp_OpenGlSetOfProgramsHandle* source,
   OcctSharp_OpenGlSetOfProgramsHandle** out_handle)
@@ -43467,6 +49996,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_set_of_shader_progra
   {
     opencascade::handle<OpenGl_SetOfShaderPrograms> createdHandle = new OpenGl_SetOfShaderPrograms((thePrograms == nullptr ? opencascade::handle<OpenGl_SetOfPrograms>() : ValidateOpenGlSetOfPrograms(thePrograms)->Value));
     *out_handle = AllocateOpenGlSetOfShaderPrograms(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_set_of_shader_programs_method_dynamic_type_0(
+  const OcctSharp_OpenGlSetOfShaderProgramsHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_SetOfShaderPrograms*>(ValidateOpenGlSetOfShaderPrograms(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -43705,6 +50247,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_manager_metho
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_manager_method_bound_box_vert_buffer_0(
+  const OcctSharp_OpenGlShaderManagerHandle* handle,
+  OcctSharp_OpenGlVertexBufferHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<OpenGl_VertexBuffer> returnedHandle = static_cast<const OpenGl_ShaderManager*>(ValidateOpenGlShaderManager(handle)->Value.get())->BoundBoxVertBuffer();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateOpenGlVertexBuffer(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_manager_method_choose_face_shading_model_0(
   const OcctSharp_OpenGlShaderManagerHandle* handle,
   int32_t theCustomModel,
@@ -43753,6 +50308,58 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_manager_metho
   return GeneratedGuard([&]
   {
     ValidateOpenGlShaderManager(handle)->Value->clear();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_manager_method_dynamic_type_0(
+  const OcctSharp_OpenGlShaderManagerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_ShaderManager*>(ValidateOpenGlShaderManager(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_manager_method_get_bg_cube_map_program_0(
+  const OcctSharp_OpenGlShaderManagerHandle* handle,
+  OcctSharp_Graphic3dShaderProgramHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_ShaderProgram> returnedHandle = ValidateOpenGlShaderManager(handle)->Value->GetBgCubeMapProgram();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dShaderProgram(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_manager_method_get_bg_skydome_program_0(
+  const OcctSharp_OpenGlShaderManagerHandle* handle,
+  OcctSharp_Graphic3dShaderProgramHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_ShaderProgram> returnedHandle = ValidateOpenGlShaderManager(handle)->Value->GetBgSkydomeProgram();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dShaderProgram(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_manager_method_get_colored_quad_program_0(
+  const OcctSharp_OpenGlShaderManagerHandle* handle,
+  OcctSharp_Graphic3dShaderProgramHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_ShaderProgram> returnedHandle = ValidateOpenGlShaderManager(handle)->Value->GetColoredQuadProgram();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dShaderProgram(std::move(returnedHandle));
   });
 }
 
@@ -43981,6 +50588,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_manager_metho
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_manager_method_set_weighed_oit_state_0(
+  const OcctSharp_OpenGlShaderManagerHandle* handle,
+  float theDepthFactor)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateOpenGlShaderManager(handle)->Value->SetWeighedOitState(static_cast<float>(theDepthFactor));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_manager_method_shading_model_0(
   const OcctSharp_OpenGlShaderManagerHandle* handle,
   int32_t* out_value)
@@ -44087,6 +50704,19 @@ void OCCTSHARP_CALL occtsharp_generated_open_gl_shader_manager_release(OcctSharp
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_object_create_0(
+  uint32_t theType,
+  OcctSharp_OpenGlShaderObjectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<OpenGl_ShaderObject> createdHandle = new OpenGl_ShaderObject(static_cast<unsigned int>(theType));
+    *out_handle = AllocateOpenGlShaderObject(std::move(createdHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_object_method_compile_0(
   const OcctSharp_OpenGlShaderObjectHandle* handle,
   const OcctSharp_OpenGlContextHandle* theCtx,
@@ -44110,6 +50740,43 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_object_method
   return GeneratedGuard([&]
   {
     *out_value = ValidateOpenGlShaderObject(handle)->Value->Create((theCtx == nullptr ? opencascade::handle<OpenGl_Context>() : ValidateOpenGlContext(theCtx)->Value)) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_object_method_dynamic_type_0(
+  const OcctSharp_OpenGlShaderObjectHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_ShaderObject*>(ValidateOpenGlShaderObject(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_object_method_estimated_data_size_0(
+  const OcctSharp_OpenGlShaderObjectHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_ShaderObject*>(ValidateOpenGlShaderObject(handle)->Value.get())->EstimatedDataSize();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_object_method_type_0(
+  const OcctSharp_OpenGlShaderObjectHandle* handle,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_ShaderObject*>(ValidateOpenGlShaderObject(handle)->Value.get())->Type();
   });
 }
 
@@ -44210,6 +50877,31 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_program_metho
   return GeneratedGuard([&]
   {
     *out_value = ValidateOpenGlShaderProgram(handle)->Value->DetachShader((theCtx == nullptr ? opencascade::handle<OpenGl_Context>() : ValidateOpenGlContext(theCtx)->Value), (theShader == nullptr ? opencascade::handle<OpenGl_ShaderObject>() : ValidateOpenGlShaderObject(theShader)->Value)) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_program_method_dynamic_type_0(
+  const OcctSharp_OpenGlShaderProgramHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_ShaderProgram*>(ValidateOpenGlShaderProgram(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_program_method_estimated_data_size_0(
+  const OcctSharp_OpenGlShaderProgramHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_ShaderProgram*>(ValidateOpenGlShaderProgram(handle)->Value.get())->EstimatedDataSize();
   });
 }
 
@@ -44323,6 +51015,46 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_program_metho
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_program_method_program_id_0(
+  const OcctSharp_OpenGlShaderProgramHandle* handle,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_ShaderProgram*>(ValidateOpenGlShaderProgram(handle)->Value.get())->ProgramId();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_program_method_proxy_0(
+  const OcctSharp_OpenGlShaderProgramHandle* handle,
+  OcctSharp_Graphic3dShaderProgramHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_ShaderProgram> returnedHandle = static_cast<const OpenGl_ShaderProgram*>(ValidateOpenGlShaderProgram(handle)->Value.get())->Proxy();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dShaderProgram(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_program_method_set_attribute_0(
+  const OcctSharp_OpenGlShaderProgramHandle* handle,
+  const OcctSharp_OpenGlContextHandle* theCtx,
+  int32_t theIndex,
+  float theValue,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateOpenGlShaderProgram(handle)->Value->SetAttribute((theCtx == nullptr ? opencascade::handle<OpenGl_Context>() : ValidateOpenGlContext(theCtx)->Value), theIndex, static_cast<float>(theValue)) ? 1 : 0;
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_program_method_set_sampler_0(
   const OcctSharp_OpenGlShaderProgramHandle* handle,
   const OcctSharp_OpenGlContextHandle* theCtx,
@@ -44350,6 +51082,21 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_program_metho
   return GeneratedGuard([&]
   {
     *out_value = ValidateOpenGlShaderProgram(handle)->Value->SetUniform((theCtx == nullptr ? opencascade::handle<OpenGl_Context>() : ValidateOpenGlContext(theCtx)->Value), theLocation, theValue) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_program_method_set_uniform_1(
+  const OcctSharp_OpenGlShaderProgramHandle* handle,
+  const OcctSharp_OpenGlContextHandle* theCtx,
+  int32_t theLocation,
+  float theValue,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateOpenGlShaderProgram(handle)->Value->SetUniform((theCtx == nullptr ? opencascade::handle<OpenGl_Context>() : ValidateOpenGlContext(theCtx)->Value), theLocation, static_cast<float>(theValue)) ? 1 : 0;
   });
 }
 
@@ -44411,6 +51158,57 @@ void OCCTSHARP_CALL occtsharp_generated_open_gl_shader_program_release(OcctSharp
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shadow_map_method_camera_0(
+  const OcctSharp_OpenGlShadowMapHandle* handle,
+  OcctSharp_Graphic3dCameraHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_Camera> returnedHandle = static_cast<const OpenGl_ShadowMap*>(ValidateOpenGlShadowMap(handle)->Value.get())->Camera();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dCamera(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shadow_map_method_dynamic_type_0(
+  const OcctSharp_OpenGlShadowMapHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_ShadowMap*>(ValidateOpenGlShadowMap(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shadow_map_method_estimated_data_size_0(
+  const OcctSharp_OpenGlShadowMapHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_ShadowMap*>(ValidateOpenGlShadowMap(handle)->Value.get())->EstimatedDataSize();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shadow_map_method_frame_buffer_0(
+  const OcctSharp_OpenGlShadowMapHandle* handle,
+  OcctSharp_OpenGlFrameBufferHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<OpenGl_FrameBuffer> returnedHandle = static_cast<const OpenGl_ShadowMap*>(ValidateOpenGlShadowMap(handle)->Value.get())->FrameBuffer();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateOpenGlFrameBuffer(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shadow_map_method_is_valid_0(
   const OcctSharp_OpenGlShadowMapHandle* handle,
   int32_t* out_value)
@@ -44423,6 +51221,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shadow_map_method_is
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shadow_map_method_light_source_0(
+  const OcctSharp_OpenGlShadowMapHandle* handle,
+  OcctSharp_Graphic3dCLightHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_CLight> returnedHandle = static_cast<const OpenGl_ShadowMap*>(ValidateOpenGlShadowMap(handle)->Value.get())->LightSource();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dCLight(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shadow_map_method_set_light_source_0(
   const OcctSharp_OpenGlShadowMapHandle* handle,
   const OcctSharp_Graphic3dCLightHandle* theLight)
@@ -44430,6 +51241,41 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shadow_map_method_se
   return GeneratedGuard([&]
   {
     ValidateOpenGlShadowMap(handle)->Value->SetLightSource((theLight == nullptr ? opencascade::handle<Graphic3d_CLight>() : ValidateGraphic3dCLight(theLight)->Value));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shadow_map_method_set_shadow_map_bias_0(
+  const OcctSharp_OpenGlShadowMapHandle* handle,
+  float theBias)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateOpenGlShadowMap(handle)->Value->SetShadowMapBias(static_cast<float>(theBias));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shadow_map_method_shadow_map_bias_0(
+  const OcctSharp_OpenGlShadowMapHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_ShadowMap*>(ValidateOpenGlShadowMap(handle)->Value.get())->ShadowMapBias();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shadow_map_method_texture_0(
+  const OcctSharp_OpenGlShadowMapHandle* handle,
+  OcctSharp_OpenGlTextureHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<OpenGl_Texture> returnedHandle = static_cast<const OpenGl_ShadowMap*>(ValidateOpenGlShadowMap(handle)->Value.get())->Texture();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateOpenGlTexture(std::move(returnedHandle));
   });
 }
 
@@ -44488,6 +51334,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shadow_map_array_cre
   {
     opencascade::handle<OpenGl_ShadowMapArray> createdHandle = new OpenGl_ShadowMapArray();
     *out_handle = AllocateOpenGlShadowMapArray(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shadow_map_array_method_estimated_data_size_0(
+  const OcctSharp_OpenGlShadowMapArrayHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_ShadowMapArray*>(ValidateOpenGlShadowMapArray(handle)->Value.get())->EstimatedDataSize();
   });
 }
 
@@ -44581,6 +51439,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_structure_method_cle
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_structure_method_dynamic_type_0(
+  const OcctSharp_OpenGlStructureHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_Structure*>(ValidateOpenGlStructure(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_structure_method_graphic_highlight_0(
   const OcctSharp_OpenGlStructureHandle* handle,
   const OcctSharp_Graphic3dPresentationAttributesHandle* theStyle)
@@ -44597,6 +51468,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_structure_method_gra
   return GeneratedGuard([&]
   {
     ValidateOpenGlStructure(handle)->Value->GraphicUnhighlight();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_structure_method_modification_state_0(
+  const OcctSharp_OpenGlStructureHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_Structure*>(ValidateOpenGlStructure(handle)->Value.get())->ModificationState();
   });
 }
 
@@ -44785,6 +51668,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_structure_shadow_cre
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_structure_shadow_method_dynamic_type_0(
+  const OcctSharp_OpenGlStructureShadowHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_StructureShadow*>(ValidateOpenGlStructureShadow(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_structure_shadow_clone(
   const OcctSharp_OpenGlStructureShadowHandle* source,
   OcctSharp_OpenGlStructureShadowHandle** out_handle)
@@ -44865,6 +51761,31 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_method_creat
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_method_dynamic_type_0(
+  const OcctSharp_OpenGlTextureHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_Texture*>(ValidateOpenGlTexture(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_method_estimated_data_size_0(
+  const OcctSharp_OpenGlTextureHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_Texture*>(ValidateOpenGlTexture(handle)->Value.get())->EstimatedDataSize();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_method_generate_mipmaps_0(
   const OcctSharp_OpenGlTextureHandle* handle,
   const OcctSharp_OpenGlContextHandle* theCtx,
@@ -44875,6 +51796,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_method_gener
   return GeneratedGuard([&]
   {
     *out_value = ValidateOpenGlTexture(handle)->Value->GenerateMipmaps((theCtx == nullptr ? opencascade::handle<OpenGl_Context>() : ValidateOpenGlContext(theCtx)->Value)) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_method_get_format_0(
+  const OcctSharp_OpenGlTextureHandle* handle,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_Texture*>(ValidateOpenGlTexture(handle)->Value.get())->GetFormat();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_method_get_target_0(
+  const OcctSharp_OpenGlTextureHandle* handle,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_Texture*>(ValidateOpenGlTexture(handle)->Value.get())->GetTarget();
   });
 }
 
@@ -44918,6 +51863,24 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_method_init2
   return GeneratedGuard([&]
   {
     *out_value = ValidateOpenGlTexture(handle)->Value->Init2DMultisample((theCtx == nullptr ? opencascade::handle<OpenGl_Context>() : ValidateOpenGlContext(theCtx)->Value), theNbSamples, theTextFormat, theSizeX, theSizeY) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_method_init_cube_map_0(
+  const OcctSharp_OpenGlTextureHandle* handle,
+  const OcctSharp_OpenGlContextHandle* theCtx,
+  const OcctSharp_Graphic3dCubeMapHandle* theCubeMap,
+  uint64_t theSize,
+  int32_t theFormat,
+  int32_t theToGenMipmap,
+  int32_t theIsColorMap,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateOpenGlTexture(handle)->Value->InitCubeMap((theCtx == nullptr ? opencascade::handle<OpenGl_Context>() : ValidateOpenGlContext(theCtx)->Value), (theCubeMap == nullptr ? opencascade::handle<Graphic3d_CubeMap>() : ValidateGraphic3dCubeMap(theCubeMap)->Value), static_cast<unsigned long long>(theSize), static_cast<Image_Format>(theFormat), (theToGenMipmap != 0), (theIsColorMap != 0)) ? 1 : 0;
   });
 }
 
@@ -45006,6 +51969,31 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_method_nb_sa
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_method_revision_0(
+  const OcctSharp_OpenGlTextureHandle* handle,
+  uint64_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_Texture*>(ValidateOpenGlTexture(handle)->Value.get())->Revision();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_method_sampler_0(
+  const OcctSharp_OpenGlTextureHandle* handle,
+  OcctSharp_OpenGlSamplerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<OpenGl_Sampler> returnedHandle = static_cast<const OpenGl_Texture*>(ValidateOpenGlTexture(handle)->Value.get())->Sampler();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateOpenGlSampler(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_method_set_alpha_0(
   const OcctSharp_OpenGlTextureHandle* handle,
   int32_t theValue)
@@ -45013,6 +52001,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_method_set_a
   return GeneratedGuard([&]
   {
     ValidateOpenGlTexture(handle)->Value->SetAlpha((theValue != 0));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_method_set_revision_0(
+  const OcctSharp_OpenGlTextureHandle* handle,
+  uint64_t theRevision)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateOpenGlTexture(handle)->Value->SetRevision(static_cast<const unsigned long long>(theRevision));
   });
 }
 
@@ -45081,6 +52079,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_method_sized
   return GeneratedGuard([&]
   {
     *out_value = ValidateOpenGlTexture(handle)->Value->SizedFormat();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_method_texture_id_0(
+  const OcctSharp_OpenGlTextureHandle* handle,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_Texture*>(ValidateOpenGlTexture(handle)->Value.get())->TextureId();
   });
 }
 
@@ -45187,6 +52197,31 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_buffer_metho
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_buffer_method_dynamic_type_0(
+  const OcctSharp_OpenGlTextureBufferHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_TextureBuffer*>(ValidateOpenGlTextureBuffer(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_buffer_method_get_target_0(
+  const OcctSharp_OpenGlTextureBufferHandle* handle,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_TextureBuffer*>(ValidateOpenGlTextureBuffer(handle)->Value.get())->GetTarget();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_buffer_method_is_valid_0(
   const OcctSharp_OpenGlTextureBufferHandle* handle,
   int32_t* out_value)
@@ -45196,6 +52231,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_buffer_metho
   return GeneratedGuard([&]
   {
     *out_value = ValidateOpenGlTextureBuffer(handle)->Value->IsValid() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_buffer_method_texture_format_0(
+  const OcctSharp_OpenGlTextureBufferHandle* handle,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_TextureBuffer*>(ValidateOpenGlTextureBuffer(handle)->Value.get())->TextureFormat();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_buffer_method_texture_id_0(
+  const OcctSharp_OpenGlTextureBufferHandle* handle,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_TextureBuffer*>(ValidateOpenGlTextureBuffer(handle)->Value.get())->TextureId();
   });
 }
 
@@ -45294,6 +52353,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_set_create_2
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_set_method_dynamic_type_0(
+  const OcctSharp_OpenGlTextureSetHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_TextureSet*>(ValidateOpenGlTextureSet(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_set_method_first_0(
+  const OcctSharp_OpenGlTextureSetHandle* handle,
+  OcctSharp_OpenGlTextureHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<OpenGl_Texture> returnedHandle = static_cast<const OpenGl_TextureSet*>(ValidateOpenGlTextureSet(handle)->Value.get())->First();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateOpenGlTexture(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_set_method_first_unit_0(
   const OcctSharp_OpenGlTextureSetHandle* handle,
   int32_t* out_value)
@@ -45363,6 +52448,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_set_method_i
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_set_method_last_0(
+  const OcctSharp_OpenGlTextureSetHandle* handle,
+  OcctSharp_OpenGlTextureHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<OpenGl_Texture> returnedHandle = static_cast<const OpenGl_TextureSet*>(ValidateOpenGlTextureSet(handle)->Value.get())->Last();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateOpenGlTexture(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_set_method_last_unit_0(
   const OcctSharp_OpenGlTextureSetHandle* handle,
   int32_t* out_value)
@@ -45423,6 +52521,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_set_method_u
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_set_method_value_0(
+  const OcctSharp_OpenGlTextureSetHandle* handle,
+  int32_t theIndex,
+  OcctSharp_OpenGlTextureHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<OpenGl_Texture> returnedHandle = static_cast<const OpenGl_TextureSet*>(ValidateOpenGlTextureSet(handle)->Value.get())->Value(theIndex);
+    if (!returnedHandle.IsNull()) *out_handle = AllocateOpenGlTexture(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_set_clone(
   const OcctSharp_OpenGlTextureSetHandle* source,
   OcctSharp_OpenGlTextureSetHandle** out_handle)
@@ -45478,6 +52590,31 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_uniform_buffer_creat
   {
     opencascade::handle<OpenGl_UniformBuffer> createdHandle = new OpenGl_UniformBuffer();
     *out_handle = AllocateOpenGlUniformBuffer(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_uniform_buffer_method_dynamic_type_0(
+  const OcctSharp_OpenGlUniformBufferHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_UniformBuffer*>(ValidateOpenGlUniformBuffer(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_uniform_buffer_method_get_target_0(
+  const OcctSharp_OpenGlUniformBufferHandle* handle,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_UniformBuffer*>(ValidateOpenGlUniformBuffer(handle)->Value.get())->GetTarget();
   });
 }
 
@@ -45570,6 +52707,42 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_vertex_buffer_method
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_vertex_buffer_method_bind_vertex_attrib_0(
+  const OcctSharp_OpenGlVertexBufferHandle* handle,
+  const OcctSharp_OpenGlContextHandle* theGlCtx,
+  uint32_t theAttribLoc)
+{
+  return GeneratedGuard([&]
+  {
+    static_cast<const OpenGl_VertexBuffer*>(ValidateOpenGlVertexBuffer(handle)->Value.get())->BindVertexAttrib((theGlCtx == nullptr ? opencascade::handle<OpenGl_Context>() : ValidateOpenGlContext(theGlCtx)->Value), static_cast<const unsigned int>(theAttribLoc));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_vertex_buffer_method_dynamic_type_0(
+  const OcctSharp_OpenGlVertexBufferHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_VertexBuffer*>(ValidateOpenGlVertexBuffer(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_vertex_buffer_method_get_target_0(
+  const OcctSharp_OpenGlVertexBufferHandle* handle,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_VertexBuffer*>(ValidateOpenGlVertexBuffer(handle)->Value.get())->GetTarget();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_vertex_buffer_method_has_color_attribute_0(
   const OcctSharp_OpenGlVertexBufferHandle* handle,
   int32_t* out_value)
@@ -45612,6 +52785,17 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_vertex_buffer_method
   return GeneratedGuard([&]
   {
     ValidateOpenGlVertexBuffer(handle)->Value->UnbindAttribute((theCtx == nullptr ? opencascade::handle<OpenGl_Context>() : ValidateOpenGlContext(theCtx)->Value), static_cast<const Graphic3d_TypeOfAttribute>(theMode));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_vertex_buffer_method_unbind_vertex_attrib_0(
+  const OcctSharp_OpenGlVertexBufferHandle* handle,
+  const OcctSharp_OpenGlContextHandle* theGlCtx,
+  uint32_t theAttribLoc)
+{
+  return GeneratedGuard([&]
+  {
+    static_cast<const OpenGl_VertexBuffer*>(ValidateOpenGlVertexBuffer(handle)->Value.get())->UnbindVertexAttrib((theGlCtx == nullptr ? opencascade::handle<OpenGl_Context>() : ValidateOpenGlContext(theGlCtx)->Value), static_cast<const unsigned int>(theAttribLoc));
   });
 }
 
@@ -45673,6 +52857,45 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_view_method_backgrou
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_view_method_clip_planes_0(
+  const OcctSharp_OpenGlViewHandle* handle,
+  OcctSharp_Graphic3dSequenceOfHClipPlaneHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_SequenceOfHClipPlane> returnedHandle = static_cast<const OpenGl_View*>(ValidateOpenGlView(handle)->Value.get())->ClipPlanes();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dSequenceOfHClipPlane(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_view_method_depth_peeling_fbos_0(
+  const OcctSharp_OpenGlViewHandle* handle,
+  OcctSharp_OpenGlDepthPeelingHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<OpenGl_DepthPeeling> returnedHandle = static_cast<const OpenGl_View*>(ValidateOpenGlView(handle)->Value.get())->DepthPeelingFbos();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateOpenGlDepthPeeling(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_view_method_dynamic_type_0(
+  const OcctSharp_OpenGlViewHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_View*>(ValidateOpenGlView(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_view_method_fbo_0(
   const OcctSharp_OpenGlViewHandle* handle,
   OcctSharp_StandardTransientHandle** out_handle)
@@ -45710,6 +52933,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_view_method_fbocreat
   {
     opencascade::handle<Standard_Transient> returnedHandle = ValidateOpenGlView(handle)->Value->FBOCreate(theWidth, theHeight);
     if (!returnedHandle.IsNull()) *out_handle = AllocateStandardTransient(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_view_method_gl_texture_env_0(
+  const OcctSharp_OpenGlViewHandle* handle,
+  OcctSharp_OpenGlTextureSetHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<OpenGl_TextureSet> returnedHandle = static_cast<const OpenGl_View*>(ValidateOpenGlView(handle)->Value.get())->GlTextureEnv();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateOpenGlTextureSet(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_view_method_gl_window_0(
+  const OcctSharp_OpenGlViewHandle* handle,
+  OcctSharp_OpenGlWindowHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<OpenGl_Window> returnedHandle = static_cast<const OpenGl_View*>(ValidateOpenGlView(handle)->Value.get())->GlWindow();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateOpenGlWindow(std::move(returnedHandle));
   });
 }
 
@@ -45797,6 +53046,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_view_method_layer_0(
   {
     opencascade::handle<Graphic3d_Layer> returnedHandle = ValidateOpenGlView(handle)->Value->Layer(theLayerId);
     if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dLayer(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_view_method_lights_0(
+  const OcctSharp_OpenGlViewHandle* handle,
+  OcctSharp_Graphic3dLightSetHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_LightSet> returnedHandle = static_cast<const OpenGl_View*>(ValidateOpenGlView(handle)->Value.get())->Lights();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dLightSet(std::move(returnedHandle));
   });
 }
 
@@ -45950,6 +53212,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_view_method_set_to_f
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_view_method_spec_iblmap_levels_0(
+  const OcctSharp_OpenGlViewHandle* handle,
+  uint32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const OpenGl_View*>(ValidateOpenGlView(handle)->Value.get())->SpecIBLMapLevels();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_view_method_to_flip_output_0(
   const OcctSharp_OpenGlViewHandle* handle,
   int32_t* out_value)
@@ -46057,6 +53331,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_window_method_activa
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_window_method_dynamic_type_0(
+  const OcctSharp_OpenGlWindowHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_Window*>(ValidateOpenGlWindow(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_window_method_get_gl_context_0(
+  const OcctSharp_OpenGlWindowHandle* handle,
+  OcctSharp_OpenGlContextHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<OpenGl_Context> returnedHandle = static_cast<const OpenGl_Window*>(ValidateOpenGlWindow(handle)->Value.get())->GetGlContext();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateOpenGlContext(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_window_method_height_0(
   const OcctSharp_OpenGlWindowHandle* handle,
   int32_t* out_value)
@@ -46066,6 +53366,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_window_method_height
   return GeneratedGuard([&]
   {
     *out_value = ValidateOpenGlWindow(handle)->Value->Height();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_window_method_platform_window_0(
+  const OcctSharp_OpenGlWindowHandle* handle,
+  OcctSharp_AspectWindowHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Aspect_Window> returnedHandle = ValidateOpenGlWindow(handle)->Value->PlatformWindow();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateAspectWindow(std::move(returnedHandle));
   });
 }
 
@@ -46085,6 +53398,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_window_method_set_sw
   return GeneratedGuard([&]
   {
     ValidateOpenGlWindow(handle)->Value->SetSwapInterval((theToForceNoSync != 0));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_window_method_size_window_0(
+  const OcctSharp_OpenGlWindowHandle* handle,
+  OcctSharp_AspectWindowHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Aspect_Window> returnedHandle = ValidateOpenGlWindow(handle)->Value->SizeWindow();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateAspectWindow(std::move(returnedHandle));
   });
 }
 
@@ -46158,6 +53484,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_workspace_method_act
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_workspace_method_dynamic_type_0(
+  const OcctSharp_OpenGlWorkspaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const OpenGl_Workspace*>(ValidateOpenGlWorkspace(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_workspace_method_environment_texture_0(
+  const OcctSharp_OpenGlWorkspaceHandle* handle,
+  OcctSharp_OpenGlTextureSetHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<OpenGl_TextureSet> returnedHandle = static_cast<const OpenGl_Workspace*>(ValidateOpenGlWorkspace(handle)->Value.get())->EnvironmentTexture();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateOpenGlTextureSet(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_workspace_method_fbocreate_0(
   const OcctSharp_OpenGlWorkspaceHandle* handle,
   int32_t theWidth,
@@ -46173,6 +53525,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_workspace_method_fbo
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_workspace_method_get_gl_context_0(
+  const OcctSharp_OpenGlWorkspaceHandle* handle,
+  OcctSharp_OpenGlContextHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<OpenGl_Context> returnedHandle = ValidateOpenGlWorkspace(handle)->Value->GetGlContext();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateOpenGlContext(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_workspace_method_height_0(
   const OcctSharp_OpenGlWorkspaceHandle* handle,
   int32_t* out_value)
@@ -46182,6 +53547,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_workspace_method_hei
   return GeneratedGuard([&]
   {
     *out_value = ValidateOpenGlWorkspace(handle)->Value->Height();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_workspace_method_highlight_style_0(
+  const OcctSharp_OpenGlWorkspaceHandle* handle,
+  OcctSharp_Graphic3dPresentationAttributesHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_PresentationAttributes> returnedHandle = static_cast<const OpenGl_Workspace*>(ValidateOpenGlWorkspace(handle)->Value.get())->HighlightStyle();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dPresentationAttributes(std::move(returnedHandle));
   });
 }
 
@@ -46271,6 +53649,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_workspace_method_set
   return GeneratedGuard([&]
   {
     *out_value = ValidateOpenGlWorkspace(handle)->Value->SetUseZBuffer((theToUse != 0)) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_workspace_method_texture_set_0(
+  const OcctSharp_OpenGlWorkspaceHandle* handle,
+  OcctSharp_OpenGlTextureSetHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<OpenGl_TextureSet> returnedHandle = static_cast<const OpenGl_Workspace*>(ValidateOpenGlWorkspace(handle)->Value.get())->TextureSet();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateOpenGlTextureSet(std::move(returnedHandle));
   });
 }
 
@@ -46407,6 +53798,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_arrow_aspect_method_an
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_arrow_aspect_method_aspect_0(
+  const OcctSharp_Prs3dArrowAspectHandle* handle,
+  OcctSharp_Graphic3dAspectLine3dHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_AspectLine3d> returnedHandle = static_cast<const Prs3d_ArrowAspect*>(ValidatePrs3dArrowAspect(handle)->Value.get())->Aspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dAspectLine3d(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_arrow_aspect_method_dynamic_type_0(
+  const OcctSharp_Prs3dArrowAspectHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Prs3d_ArrowAspect*>(ValidatePrs3dArrowAspect(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_arrow_aspect_method_is_zoomable_0(
   const OcctSharp_Prs3dArrowAspectHandle* handle,
   int32_t* out_value)
@@ -46517,6 +53934,19 @@ void OCCTSHARP_CALL occtsharp_generated_prs3d_arrow_aspect_release(OcctSharp_Prs
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_basic_aspect_method_dynamic_type_0(
+  const OcctSharp_Prs3dBasicAspectHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Prs3d_BasicAspect*>(ValidatePrs3dBasicAspect(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_basic_aspect_clone(
   const OcctSharp_Prs3dBasicAspectHandle* source,
   OcctSharp_Prs3dBasicAspectHandle** out_handle)
@@ -46572,6 +54002,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_datum_aspect_create_0(
   {
     opencascade::handle<Prs3d_DatumAspect> createdHandle = new Prs3d_DatumAspect();
     *out_handle = AllocatePrs3dDatumAspect(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_datum_aspect_method_arrow_aspect_0(
+  const OcctSharp_Prs3dDatumAspectHandle* handle,
+  OcctSharp_Prs3dArrowAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_ArrowAspect> returnedHandle = static_cast<const Prs3d_DatumAspect*>(ValidatePrs3dDatumAspect(handle)->Value.get())->ArrowAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dArrowAspect(std::move(returnedHandle));
   });
 }
 
@@ -46633,6 +54076,46 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_datum_aspect_method_dr
   return GeneratedGuard([&]
   {
     *out_value = ValidatePrs3dDatumAspect(handle)->Value->DrawDatumPart(static_cast<Prs3d_DatumParts>(thePart)) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_datum_aspect_method_dynamic_type_0(
+  const OcctSharp_Prs3dDatumAspectHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Prs3d_DatumAspect*>(ValidatePrs3dDatumAspect(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_datum_aspect_method_line_aspect_0(
+  const OcctSharp_Prs3dDatumAspectHandle* handle,
+  int32_t thePart,
+  OcctSharp_Prs3dLineAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_LineAspect> returnedHandle = static_cast<const Prs3d_DatumAspect*>(ValidatePrs3dDatumAspect(handle)->Value.get())->LineAspect(static_cast<Prs3d_DatumParts>(thePart));
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dLineAspect(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_datum_aspect_method_point_aspect_0(
+  const OcctSharp_Prs3dDatumAspectHandle* handle,
+  OcctSharp_Prs3dPointAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_PointAspect> returnedHandle = static_cast<const Prs3d_DatumAspect*>(ValidatePrs3dDatumAspect(handle)->Value.get())->PointAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dPointAspect(std::move(returnedHandle));
   });
 }
 
@@ -46729,6 +54212,47 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_datum_aspect_method_se
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_datum_aspect_method_shading_aspect_0(
+  const OcctSharp_Prs3dDatumAspectHandle* handle,
+  int32_t thePart,
+  OcctSharp_Prs3dShadingAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_ShadingAspect> returnedHandle = static_cast<const Prs3d_DatumAspect*>(ValidatePrs3dDatumAspect(handle)->Value.get())->ShadingAspect(static_cast<Prs3d_DatumParts>(thePart));
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dShadingAspect(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_datum_aspect_method_text_aspect_0(
+  const OcctSharp_Prs3dDatumAspectHandle* handle,
+  OcctSharp_Prs3dTextAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_TextAspect> returnedHandle = static_cast<const Prs3d_DatumAspect*>(ValidatePrs3dDatumAspect(handle)->Value.get())->TextAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dTextAspect(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_datum_aspect_method_text_aspect_1(
+  const OcctSharp_Prs3dDatumAspectHandle* handle,
+  int32_t thePart,
+  OcctSharp_Prs3dTextAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_TextAspect> returnedHandle = static_cast<const Prs3d_DatumAspect*>(ValidatePrs3dDatumAspect(handle)->Value.get())->TextAspect(static_cast<Prs3d_DatumParts>(thePart));
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dTextAspect(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_datum_aspect_method_to_draw_arrows_0(
   const OcctSharp_Prs3dDatumAspectHandle* handle,
   int32_t* out_value)
@@ -46811,6 +54335,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_dimension_aspect_creat
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_dimension_aspect_method_arrow_aspect_0(
+  const OcctSharp_Prs3dDimensionAspectHandle* handle,
+  OcctSharp_Prs3dArrowAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_ArrowAspect> returnedHandle = static_cast<const Prs3d_DimensionAspect*>(ValidatePrs3dDimensionAspect(handle)->Value.get())->ArrowAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dArrowAspect(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_dimension_aspect_method_arrow_orientation_0(
   const OcctSharp_Prs3dDimensionAspectHandle* handle,
   int32_t* out_value)
@@ -46832,6 +54369,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_dimension_aspect_metho
   return GeneratedGuard([&]
   {
     *out_value = ValidatePrs3dDimensionAspect(handle)->Value->ArrowTailSize();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_dimension_aspect_method_dynamic_type_0(
+  const OcctSharp_Prs3dDimensionAspectHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Prs3d_DimensionAspect*>(ValidatePrs3dDimensionAspect(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -46892,6 +54442,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_dimension_aspect_metho
   return GeneratedGuard([&]
   {
     *out_value = ValidatePrs3dDimensionAspect(handle)->Value->IsUnitsDisplayed() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_dimension_aspect_method_line_aspect_0(
+  const OcctSharp_Prs3dDimensionAspectHandle* handle,
+  OcctSharp_Prs3dLineAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_LineAspect> returnedHandle = static_cast<const Prs3d_DimensionAspect*>(ValidatePrs3dDimensionAspect(handle)->Value.get())->LineAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dLineAspect(std::move(returnedHandle));
   });
 }
 
@@ -47015,6 +54578,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_dimension_aspect_metho
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_dimension_aspect_method_text_aspect_0(
+  const OcctSharp_Prs3dDimensionAspectHandle* handle,
+  OcctSharp_Prs3dTextAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_TextAspect> returnedHandle = static_cast<const Prs3d_DimensionAspect*>(ValidatePrs3dDimensionAspect(handle)->Value.get())->TextAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dTextAspect(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_dimension_aspect_method_text_horizontal_position_0(
   const OcctSharp_Prs3dDimensionAspectHandle* handle,
   int32_t* out_value)
@@ -47097,12 +54673,38 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_create_0(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_arrow_aspect_0(
+  const OcctSharp_Prs3dDrawerHandle* handle,
+  OcctSharp_Prs3dArrowAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_ArrowAspect> returnedHandle = static_cast<const Prs3d_Drawer*>(ValidatePrs3dDrawer(handle)->Value.get())->ArrowAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dArrowAspect(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_clear_local_attributes_0(
   const OcctSharp_Prs3dDrawerHandle* handle)
 {
   return GeneratedGuard([&]
   {
     ValidatePrs3dDrawer(handle)->Value->ClearLocalAttributes();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_datum_aspect_0(
+  const OcctSharp_Prs3dDrawerHandle* handle,
+  OcctSharp_Prs3dDatumAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_DatumAspect> returnedHandle = static_cast<const Prs3d_Drawer*>(ValidatePrs3dDrawer(handle)->Value.get())->DatumAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dDatumAspect(std::move(returnedHandle));
   });
 }
 
@@ -47127,6 +54729,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_deviatio
   return GeneratedGuard([&]
   {
     *out_value = ValidatePrs3dDrawer(handle)->Value->DeviationCoefficient();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_dimension_aspect_0(
+  const OcctSharp_Prs3dDrawerHandle* handle,
+  OcctSharp_Prs3dDimensionAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_DimensionAspect> returnedHandle = static_cast<const Prs3d_Drawer*>(ValidatePrs3dDrawer(handle)->Value.get())->DimensionAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dDimensionAspect(std::move(returnedHandle));
   });
 }
 
@@ -47163,12 +54778,38 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_draw_hid
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_dynamic_type_0(
+  const OcctSharp_Prs3dDrawerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Prs3d_Drawer*>(ValidatePrs3dDrawer(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_enable_draw_hidden_line_0(
   const OcctSharp_Prs3dDrawerHandle* handle)
 {
   return GeneratedGuard([&]
   {
     ValidatePrs3dDrawer(handle)->Value->EnableDrawHiddenLine();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_face_boundary_aspect_0(
+  const OcctSharp_Prs3dDrawerHandle* handle,
+  OcctSharp_Prs3dLineAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_LineAspect> returnedHandle = static_cast<const Prs3d_Drawer*>(ValidatePrs3dDrawer(handle)->Value.get())->FaceBoundaryAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dLineAspect(std::move(returnedHandle));
   });
 }
 
@@ -47193,6 +54834,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_face_bou
   return GeneratedGuard([&]
   {
     *out_value = static_cast<int32_t>(ValidatePrs3dDrawer(handle)->Value->FaceBoundaryUpperContinuity());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_free_boundary_aspect_0(
+  const OcctSharp_Prs3dDrawerHandle* handle,
+  OcctSharp_Prs3dLineAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_LineAspect> returnedHandle = static_cast<const Prs3d_Drawer*>(ValidatePrs3dDrawer(handle)->Value.get())->FreeBoundaryAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dLineAspect(std::move(returnedHandle));
   });
 }
 
@@ -47712,6 +55366,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_has_own_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_hidden_line_aspect_0(
+  const OcctSharp_Prs3dDrawerHandle* handle,
+  OcctSharp_Prs3dLineAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_LineAspect> returnedHandle = static_cast<const Prs3d_Drawer*>(ValidatePrs3dDrawer(handle)->Value.get())->HiddenLineAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dLineAspect(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_hlrangle_0(
   const OcctSharp_Prs3dDrawerHandle* handle,
   double* out_value)
@@ -47772,6 +55439,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_line_arr
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_line_aspect_0(
+  const OcctSharp_Prs3dDrawerHandle* handle,
+  OcctSharp_Prs3dLineAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_LineAspect> returnedHandle = static_cast<const Prs3d_Drawer*>(ValidatePrs3dDrawer(handle)->Value.get())->LineAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dLineAspect(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_link_0(
   const OcctSharp_Prs3dDrawerHandle* handle,
   const OcctSharp_Prs3dDrawerHandle* theDrawer)
@@ -47779,6 +55459,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_link_0(
   return GeneratedGuard([&]
   {
     ValidatePrs3dDrawer(handle)->Value->Link((theDrawer == nullptr ? opencascade::handle<Prs3d_Drawer>() : ValidatePrs3dDrawer(theDrawer)->Value));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_link_1(
+  const OcctSharp_Prs3dDrawerHandle* handle,
+  OcctSharp_Prs3dDrawerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_Drawer> returnedHandle = static_cast<const Prs3d_Drawer*>(ValidatePrs3dDrawer(handle)->Value.get())->Link();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dDrawer(std::move(returnedHandle));
   });
 }
 
@@ -47803,6 +55496,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_maximal_
   return GeneratedGuard([&]
   {
     *out_value = ValidatePrs3dDrawer(handle)->Value->MaximalParameterValue();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_plane_aspect_0(
+  const OcctSharp_Prs3dDrawerHandle* handle,
+  OcctSharp_Prs3dPlaneAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_PlaneAspect> returnedHandle = static_cast<const Prs3d_Drawer*>(ValidatePrs3dDrawer(handle)->Value.get())->PlaneAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dPlaneAspect(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_point_aspect_0(
+  const OcctSharp_Prs3dDrawerHandle* handle,
+  OcctSharp_Prs3dPointAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_PointAspect> returnedHandle = static_cast<const Prs3d_Drawer*>(ValidatePrs3dDrawer(handle)->Value.get())->PointAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dPointAspect(std::move(returnedHandle));
   });
 }
 
@@ -47839,6 +55558,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_previous
   return GeneratedGuard([&]
   {
     *out_value = ValidatePrs3dDrawer(handle)->Value->PreviousHLRDeviationAngle();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_section_aspect_0(
+  const OcctSharp_Prs3dDrawerHandle* handle,
+  OcctSharp_Prs3dLineAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_LineAspect> returnedHandle = static_cast<const Prs3d_Drawer*>(ValidatePrs3dDrawer(handle)->Value.get())->SectionAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dLineAspect(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_seen_line_aspect_0(
+  const OcctSharp_Prs3dDrawerHandle* handle,
+  OcctSharp_Prs3dLineAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_LineAspect> returnedHandle = static_cast<const Prs3d_Drawer*>(ValidatePrs3dDrawer(handle)->Value.get())->SeenLineAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dLineAspect(std::move(returnedHandle));
   });
 }
 
@@ -48342,6 +56087,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_setup_ow
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_text_aspect_0(
+  const OcctSharp_Prs3dDrawerHandle* handle,
+  OcctSharp_Prs3dTextAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_TextAspect> returnedHandle = static_cast<const Prs3d_Drawer*>(ValidatePrs3dDrawer(handle)->Value.get())->TextAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dTextAspect(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_type_of_deflection_0(
   const OcctSharp_Prs3dDrawerHandle* handle,
   int32_t* out_value)
@@ -48363,6 +56121,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_type_of_
   return GeneratedGuard([&]
   {
     *out_value = static_cast<int32_t>(ValidatePrs3dDrawer(handle)->Value->TypeOfHLR());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_uiso_aspect_0(
+  const OcctSharp_Prs3dDrawerHandle* handle,
+  OcctSharp_Prs3dIsoAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_IsoAspect> returnedHandle = static_cast<const Prs3d_Drawer*>(ValidatePrs3dDrawer(handle)->Value.get())->UIsoAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dIsoAspect(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_un_free_boundary_aspect_0(
+  const OcctSharp_Prs3dDrawerHandle* handle,
+  OcctSharp_Prs3dLineAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_LineAspect> returnedHandle = static_cast<const Prs3d_Drawer*>(ValidatePrs3dDrawer(handle)->Value.get())->UnFreeBoundaryAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dLineAspect(std::move(returnedHandle));
   });
 }
 
@@ -48558,6 +56342,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_update_p
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_vector_aspect_0(
+  const OcctSharp_Prs3dDrawerHandle* handle,
+  OcctSharp_Prs3dLineAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_LineAspect> returnedHandle = static_cast<const Prs3d_Drawer*>(ValidatePrs3dDrawer(handle)->Value.get())->VectorAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dLineAspect(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_vertex_draw_mode_0(
   const OcctSharp_Prs3dDrawerHandle* handle,
   int32_t* out_value)
@@ -48567,6 +56364,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_vertex_d
   return GeneratedGuard([&]
   {
     *out_value = static_cast<int32_t>(ValidatePrs3dDrawer(handle)->Value->VertexDrawMode());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_viso_aspect_0(
+  const OcctSharp_Prs3dDrawerHandle* handle,
+  OcctSharp_Prs3dIsoAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_IsoAspect> returnedHandle = static_cast<const Prs3d_Drawer*>(ValidatePrs3dDrawer(handle)->Value.get())->VIsoAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dIsoAspect(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_method_wire_aspect_0(
+  const OcctSharp_Prs3dDrawerHandle* handle,
+  OcctSharp_Prs3dLineAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_LineAspect> returnedHandle = static_cast<const Prs3d_Drawer*>(ValidatePrs3dDrawer(handle)->Value.get())->WireAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dLineAspect(std::move(returnedHandle));
   });
 }
 
@@ -48626,6 +56449,19 @@ void OCCTSHARP_CALL occtsharp_generated_prs3d_drawer_release(OcctSharp_Prs3dDraw
   bool removed = false;
   { std::lock_guard<std::mutex> lock(Prs3dDrawerMutex); removed = LivePrs3dDrawerHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_iso_aspect_method_dynamic_type_0(
+  const OcctSharp_Prs3dIsoAspectHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Prs3d_IsoAspect*>(ValidatePrs3dIsoAspect(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_iso_aspect_method_number_0(
@@ -48706,6 +56542,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_line_aspect_create_0(
   {
     opencascade::handle<Prs3d_LineAspect> createdHandle = new Prs3d_LineAspect((theAspect == nullptr ? opencascade::handle<Graphic3d_AspectLine3d>() : ValidateGraphic3dAspectLine3d(theAspect)->Value));
     *out_handle = AllocatePrs3dLineAspect(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_line_aspect_method_aspect_0(
+  const OcctSharp_Prs3dLineAspectHandle* handle,
+  OcctSharp_Graphic3dAspectLine3dHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_AspectLine3d> returnedHandle = static_cast<const Prs3d_LineAspect*>(ValidatePrs3dLineAspect(handle)->Value.get())->Aspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dAspectLine3d(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_line_aspect_method_dynamic_type_0(
+  const OcctSharp_Prs3dLineAspectHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Prs3d_LineAspect*>(ValidatePrs3dLineAspect(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -48797,6 +56659,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_plane_aspect_create_0(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_plane_aspect_method_arrow_aspect_0(
+  const OcctSharp_Prs3dPlaneAspectHandle* handle,
+  OcctSharp_Prs3dLineAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_LineAspect> returnedHandle = static_cast<const Prs3d_PlaneAspect*>(ValidatePrs3dPlaneAspect(handle)->Value.get())->ArrowAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dLineAspect(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_plane_aspect_method_arrows_angle_0(
   const OcctSharp_Prs3dPlaneAspectHandle* handle,
   double* out_value)
@@ -48878,6 +56753,45 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_plane_aspect_method_di
   return GeneratedGuard([&]
   {
     *out_value = ValidatePrs3dPlaneAspect(handle)->Value->DisplayIso() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_plane_aspect_method_dynamic_type_0(
+  const OcctSharp_Prs3dPlaneAspectHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Prs3d_PlaneAspect*>(ValidatePrs3dPlaneAspect(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_plane_aspect_method_edges_aspect_0(
+  const OcctSharp_Prs3dPlaneAspectHandle* handle,
+  OcctSharp_Prs3dLineAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_LineAspect> returnedHandle = static_cast<const Prs3d_PlaneAspect*>(ValidatePrs3dPlaneAspect(handle)->Value.get())->EdgesAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dLineAspect(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_plane_aspect_method_iso_aspect_0(
+  const OcctSharp_Prs3dPlaneAspectHandle* handle,
+  OcctSharp_Prs3dLineAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_LineAspect> returnedHandle = static_cast<const Prs3d_PlaneAspect*>(ValidatePrs3dPlaneAspect(handle)->Value.get())->IsoAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dLineAspect(std::move(returnedHandle));
   });
 }
 
@@ -49067,6 +56981,45 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_point_aspect_create_0(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_point_aspect_method_aspect_0(
+  const OcctSharp_Prs3dPointAspectHandle* handle,
+  OcctSharp_Graphic3dAspectMarker3dHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_AspectMarker3d> returnedHandle = static_cast<const Prs3d_PointAspect*>(ValidatePrs3dPointAspect(handle)->Value.get())->Aspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dAspectMarker3d(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_point_aspect_method_dynamic_type_0(
+  const OcctSharp_Prs3dPointAspectHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Prs3d_PointAspect*>(ValidatePrs3dPointAspect(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_point_aspect_method_get_texture_0(
+  const OcctSharp_Prs3dPointAspectHandle* handle,
+  OcctSharp_Graphic3dMarkerImageHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_MarkerImage> returnedHandle = static_cast<const Prs3d_PointAspect*>(ValidatePrs3dPointAspect(handle)->Value.get())->GetTexture();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dMarkerImage(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_point_aspect_method_set_aspect_0(
   const OcctSharp_Prs3dPointAspectHandle* handle,
   const OcctSharp_Graphic3dAspectMarker3dHandle* theAspect)
@@ -49166,6 +57119,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_presentation_shadow_me
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_presentation_shadow_method_dynamic_type_0(
+  const OcctSharp_Prs3dPresentationShadowHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Prs3d_PresentationShadow*>(ValidatePrs3dPresentationShadow(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_presentation_shadow_method_parent_affinity_0(
+  const OcctSharp_Prs3dPresentationShadowHandle* handle,
+  OcctSharp_Graphic3dViewAffinityHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_ViewAffinity> returnedHandle = static_cast<const Prs3d_PresentationShadow*>(ValidatePrs3dPresentationShadow(handle)->Value.get())->ParentAffinity();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dViewAffinity(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_presentation_shadow_method_parent_id_0(
   const OcctSharp_Prs3dPresentationShadowHandle* handle,
   int32_t* out_value)
@@ -49246,6 +57225,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_shading_aspect_create_
   {
     opencascade::handle<Prs3d_ShadingAspect> createdHandle = new Prs3d_ShadingAspect((theAspect == nullptr ? opencascade::handle<Graphic3d_AspectFillArea3d>() : ValidateGraphic3dAspectFillArea3d(theAspect)->Value));
     *out_handle = AllocatePrs3dShadingAspect(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_shading_aspect_method_dynamic_type_0(
+  const OcctSharp_Prs3dShadingAspectHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Prs3d_ShadingAspect*>(ValidatePrs3dShadingAspect(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -49385,6 +57377,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_text_aspect_method_ang
   return GeneratedGuard([&]
   {
     *out_value = ValidatePrs3dTextAspect(handle)->Value->Angle();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_text_aspect_method_aspect_0(
+  const OcctSharp_Prs3dTextAspectHandle* handle,
+  OcctSharp_Graphic3dAspectText3dHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_AspectText3d> returnedHandle = static_cast<const Prs3d_TextAspect*>(ValidatePrs3dTextAspect(handle)->Value.get())->Aspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dAspectText3d(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs3d_text_aspect_method_dynamic_type_0(
+  const OcctSharp_Prs3dTextAspectHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Prs3d_TextAspect*>(ValidatePrs3dTextAspect(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -49557,6 +57575,45 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_angle_dimension_crea
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_angle_dimension_method_center_point_0(
+  const OcctSharp_PrsDimAngleDimensionHandle* handle,
+  OcctSharp_Point3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    const gp_Pnt nativeValue = static_cast<const PrsDim_AngleDimension*>(ValidatePrsDimAngleDimension(handle)->Value.get())->CenterPoint();
+    *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_angle_dimension_method_dynamic_type_0(
+  const OcctSharp_PrsDimAngleDimensionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const PrsDim_AngleDimension*>(ValidatePrsDimAngleDimension(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_angle_dimension_method_first_point_0(
+  const OcctSharp_PrsDimAngleDimensionHandle* handle,
+  OcctSharp_Point3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    const gp_Pnt nativeValue = static_cast<const PrsDim_AngleDimension*>(ValidatePrsDimAngleDimension(handle)->Value.get())->FirstPoint();
+    *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_angle_dimension_method_get_arrows_visibility_0(
   const OcctSharp_PrsDimAngleDimensionHandle* handle,
   int32_t* out_value)
@@ -49591,6 +57648,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_angle_dimension_meth
   return GeneratedGuard([&]
   {
     *out_value = static_cast<int32_t>(ValidatePrsDimAngleDimension(handle)->Value->GetType());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_angle_dimension_method_second_point_0(
+  const OcctSharp_PrsDimAngleDimensionHandle* handle,
+  OcctSharp_Point3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    const gp_Pnt nativeValue = static_cast<const PrsDim_AngleDimension*>(ValidatePrsDimAngleDimension(handle)->Value.get())->SecondPoint();
+    *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
   });
 }
 
@@ -49682,6 +57752,19 @@ void OCCTSHARP_CALL occtsharp_generated_prs_dim_angle_dimension_release(OcctShar
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_chamf2d_dimension_method_dynamic_type_0(
+  const OcctSharp_PrsDimChamf2dDimensionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const PrsDim_Chamf2dDimension*>(ValidatePrsDimChamf2dDimension(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_chamf2d_dimension_method_is_movable_0(
   const OcctSharp_PrsDimChamf2dDimensionHandle* handle,
   int32_t* out_value)
@@ -49750,6 +57833,19 @@ void OCCTSHARP_CALL occtsharp_generated_prs_dim_chamf2d_dimension_release(OcctSh
   bool removed = false;
   { std::lock_guard<std::mutex> lock(PrsDimChamf2dDimensionMutex); removed = LivePrsDimChamf2dDimensionHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_chamf3d_dimension_method_dynamic_type_0(
+  const OcctSharp_PrsDimChamf3dDimensionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const PrsDim_Chamf3dDimension*>(ValidatePrsDimChamf3dDimension(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_chamf3d_dimension_method_is_movable_0(
@@ -49822,6 +57918,19 @@ void OCCTSHARP_CALL occtsharp_generated_prs_dim_chamf3d_dimension_release(OcctSh
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_concentric_relation_method_dynamic_type_0(
+  const OcctSharp_PrsDimConcentricRelationHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const PrsDim_ConcentricRelation*>(ValidatePrsDimConcentricRelation(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_concentric_relation_clone(
   const OcctSharp_PrsDimConcentricRelationHandle* source,
   OcctSharp_PrsDimConcentricRelationHandle** out_handle)
@@ -49878,6 +57987,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_diameter_dimension_m
   {
     const gp_Pnt nativeValue = ValidatePrsDimDiameterDimension(handle)->Value->AnchorPoint();
     *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_diameter_dimension_method_dynamic_type_0(
+  const OcctSharp_PrsDimDiameterDimensionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const PrsDim_DiameterDimension*>(ValidatePrsDimDiameterDimension(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -49985,6 +58107,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_dimension_method_dis
   return GeneratedGuard([&]
   {
     *out_value = static_cast<int32_t>(ValidatePrsDimDimension(handle)->Value->DisplaySpecialSymbol());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_dimension_method_dynamic_type_0(
+  const OcctSharp_PrsDimDimensionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const PrsDim_Dimension*>(ValidatePrsDimDimension(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -50245,6 +58380,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_dimension_owner_crea
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_dimension_owner_method_dynamic_type_0(
+  const OcctSharp_PrsDimDimensionOwnerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const PrsDim_DimensionOwner*>(ValidatePrsDimDimensionOwner(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_dimension_owner_method_hilight_with_color_0(
   const OcctSharp_PrsDimDimensionOwnerHandle* handle,
   const OcctSharp_PrsMgrPresentationManagerHandle* thePM,
@@ -50349,6 +58497,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_ellipse_radius_dimen
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_ellipse_radius_dimension_method_dynamic_type_0(
+  const OcctSharp_PrsDimEllipseRadiusDimensionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const PrsDim_EllipseRadiusDimension*>(ValidatePrsDimEllipseRadiusDimension(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_ellipse_radius_dimension_method_is_movable_0(
   const OcctSharp_PrsDimEllipseRadiusDimensionHandle* handle,
   int32_t* out_value)
@@ -50419,6 +58580,19 @@ void OCCTSHARP_CALL occtsharp_generated_prs_dim_ellipse_radius_dimension_release
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_equal_distance_relation_method_dynamic_type_0(
+  const OcctSharp_PrsDimEqualDistanceRelationHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const PrsDim_EqualDistanceRelation*>(ValidatePrsDimEqualDistanceRelation(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_equal_distance_relation_clone(
   const OcctSharp_PrsDimEqualDistanceRelationHandle* source,
   OcctSharp_PrsDimEqualDistanceRelationHandle** out_handle)
@@ -50465,6 +58639,19 @@ void OCCTSHARP_CALL occtsharp_generated_prs_dim_equal_distance_relation_release(
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_equal_radius_relation_method_dynamic_type_0(
+  const OcctSharp_PrsDimEqualRadiusRelationHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const PrsDim_EqualRadiusRelation*>(ValidatePrsDimEqualRadiusRelation(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_equal_radius_relation_clone(
   const OcctSharp_PrsDimEqualRadiusRelationHandle* source,
   OcctSharp_PrsDimEqualRadiusRelationHandle** out_handle)
@@ -50509,6 +58696,19 @@ void OCCTSHARP_CALL occtsharp_generated_prs_dim_equal_radius_relation_release(Oc
   bool removed = false;
   { std::lock_guard<std::mutex> lock(PrsDimEqualRadiusRelationMutex); removed = LivePrsDimEqualRadiusRelationHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_fix_relation_method_dynamic_type_0(
+  const OcctSharp_PrsDimFixRelationHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const PrsDim_FixRelation*>(ValidatePrsDimFixRelation(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_fix_relation_method_is_movable_0(
@@ -50585,6 +58785,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_identic_relation_met
   return GeneratedGuard([&]
   {
     ValidatePrsDimIdenticRelation(handle)->Value->ClearUsers();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_identic_relation_method_dynamic_type_0(
+  const OcctSharp_PrsDimIdenticRelationHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const PrsDim_IdenticRelation*>(ValidatePrsDimIdenticRelation(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -50670,6 +58883,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_length_dimension_cre
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_length_dimension_method_dynamic_type_0(
+  const OcctSharp_PrsDimLengthDimensionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const PrsDim_LengthDimension*>(ValidatePrsDimLengthDimension(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_length_dimension_method_first_point_0(
+  const OcctSharp_PrsDimLengthDimensionHandle* handle,
+  OcctSharp_Point3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    const gp_Pnt nativeValue = static_cast<const PrsDim_LengthDimension*>(ValidatePrsDimLengthDimension(handle)->Value.get())->FirstPoint();
+    *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_length_dimension_method_get_text_position_0(
   const OcctSharp_PrsDimLengthDimensionHandle* handle,
   OcctSharp_Point3d* out_value)
@@ -50679,6 +58918,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_length_dimension_met
   return GeneratedGuard([&]
   {
     const gp_Pnt nativeValue = ValidatePrsDimLengthDimension(handle)->Value->GetTextPosition();
+    *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_length_dimension_method_second_point_0(
+  const OcctSharp_PrsDimLengthDimensionHandle* handle,
+  OcctSharp_Point3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    const gp_Pnt nativeValue = static_cast<const PrsDim_LengthDimension*>(ValidatePrsDimLengthDimension(handle)->Value.get())->SecondPoint();
     *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
   });
 }
@@ -50739,6 +58991,19 @@ void OCCTSHARP_CALL occtsharp_generated_prs_dim_length_dimension_release(OcctSha
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_max_radius_dimension_method_dynamic_type_0(
+  const OcctSharp_PrsDimMaxRadiusDimensionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const PrsDim_MaxRadiusDimension*>(ValidatePrsDimMaxRadiusDimension(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_max_radius_dimension_clone(
   const OcctSharp_PrsDimMaxRadiusDimensionHandle* source,
   OcctSharp_PrsDimMaxRadiusDimensionHandle** out_handle)
@@ -50783,6 +59048,19 @@ void OCCTSHARP_CALL occtsharp_generated_prs_dim_max_radius_dimension_release(Occ
   bool removed = false;
   { std::lock_guard<std::mutex> lock(PrsDimMaxRadiusDimensionMutex); removed = LivePrsDimMaxRadiusDimensionHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_mid_point_relation_method_dynamic_type_0(
+  const OcctSharp_PrsDimMidPointRelationHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const PrsDim_MidPointRelation*>(ValidatePrsDimMidPointRelation(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_mid_point_relation_method_is_movable_0(
@@ -50843,6 +59121,19 @@ void OCCTSHARP_CALL occtsharp_generated_prs_dim_mid_point_relation_release(OcctS
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_min_radius_dimension_method_dynamic_type_0(
+  const OcctSharp_PrsDimMinRadiusDimensionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const PrsDim_MinRadiusDimension*>(ValidatePrsDimMinRadiusDimension(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_min_radius_dimension_clone(
   const OcctSharp_PrsDimMinRadiusDimensionHandle* source,
   OcctSharp_PrsDimMinRadiusDimensionHandle** out_handle)
@@ -50887,6 +59178,19 @@ void OCCTSHARP_CALL occtsharp_generated_prs_dim_min_radius_dimension_release(Occ
   bool removed = false;
   { std::lock_guard<std::mutex> lock(PrsDimMinRadiusDimensionMutex); removed = LivePrsDimMinRadiusDimensionHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_offset_dimension_method_dynamic_type_0(
+  const OcctSharp_PrsDimOffsetDimensionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const PrsDim_OffsetDimension*>(ValidatePrsDimOffsetDimension(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_offset_dimension_method_is_movable_0(
@@ -50959,6 +59263,19 @@ void OCCTSHARP_CALL occtsharp_generated_prs_dim_offset_dimension_release(OcctSha
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_parallel_relation_method_dynamic_type_0(
+  const OcctSharp_PrsDimParallelRelationHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const PrsDim_ParallelRelation*>(ValidatePrsDimParallelRelation(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_parallel_relation_method_is_movable_0(
   const OcctSharp_PrsDimParallelRelationHandle* handle,
   int32_t* out_value)
@@ -51017,6 +59334,19 @@ void OCCTSHARP_CALL occtsharp_generated_prs_dim_parallel_relation_release(OcctSh
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_perpendicular_relation_method_dynamic_type_0(
+  const OcctSharp_PrsDimPerpendicularRelationHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const PrsDim_PerpendicularRelation*>(ValidatePrsDimPerpendicularRelation(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_perpendicular_relation_clone(
   const OcctSharp_PrsDimPerpendicularRelationHandle* source,
   OcctSharp_PrsDimPerpendicularRelationHandle** out_handle)
@@ -51061,6 +59391,32 @@ void OCCTSHARP_CALL occtsharp_generated_prs_dim_perpendicular_relation_release(O
   bool removed = false;
   { std::lock_guard<std::mutex> lock(PrsDimPerpendicularRelationMutex); removed = LivePrsDimPerpendicularRelationHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_radius_dimension_method_anchor_point_0(
+  const OcctSharp_PrsDimRadiusDimensionHandle* handle,
+  OcctSharp_Point3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    const gp_Pnt nativeValue = static_cast<const PrsDim_RadiusDimension*>(ValidatePrsDimRadiusDimension(handle)->Value.get())->AnchorPoint();
+    *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_radius_dimension_method_dynamic_type_0(
+  const OcctSharp_PrsDimRadiusDimensionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const PrsDim_RadiusDimension*>(ValidatePrsDimRadiusDimension(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_radius_dimension_method_get_text_position_0(
@@ -51169,6 +59525,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_relation_method_auto
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_relation_method_dynamic_type_0(
+  const OcctSharp_PrsDimRelationHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const PrsDim_Relation*>(ValidatePrsDimRelation(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_relation_method_ext_shape_0(
   const OcctSharp_PrsDimRelationHandle* handle,
   int32_t* out_value)
@@ -51202,6 +59571,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_relation_method_kind
   return GeneratedGuard([&]
   {
     *out_value = static_cast<int32_t>(ValidatePrsDimRelation(handle)->Value->KindOfDimension());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_relation_method_plane_0(
+  const OcctSharp_PrsDimRelationHandle* handle,
+  OcctSharp_GeomPlaneHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Geom_Plane> returnedHandle = static_cast<const PrsDim_Relation*>(ValidatePrsDimRelation(handle)->Value.get())->Plane();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGeomPlane(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_relation_method_position_0(
+  const OcctSharp_PrsDimRelationHandle* handle,
+  OcctSharp_Point3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    const gp_Pnt nativeValue = static_cast<const PrsDim_Relation*>(ValidatePrsDimRelation(handle)->Value.get())->Position();
+    *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
   });
 }
 
@@ -51390,6 +59785,19 @@ void OCCTSHARP_CALL occtsharp_generated_prs_dim_relation_release(OcctSharp_PrsDi
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_symmetric_relation_method_dynamic_type_0(
+  const OcctSharp_PrsDimSymmetricRelationHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const PrsDim_SymmetricRelation*>(ValidatePrsDimSymmetricRelation(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_symmetric_relation_method_is_movable_0(
   const OcctSharp_PrsDimSymmetricRelationHandle* handle,
   int32_t* out_value)
@@ -51446,6 +59854,19 @@ void OCCTSHARP_CALL occtsharp_generated_prs_dim_symmetric_relation_release(OcctS
   bool removed = false;
   { std::lock_guard<std::mutex> lock(PrsDimSymmetricRelationMutex); removed = LivePrsDimSymmetricRelationHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_tangent_relation_method_dynamic_type_0(
+  const OcctSharp_PrsDimTangentRelationHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const PrsDim_TangentRelation*>(ValidatePrsDimTangentRelation(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_tangent_relation_method_extern_ref_0(
@@ -51559,6 +59980,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentable_object_m
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentable_object_method_clip_planes_0(
+  const OcctSharp_PrsMgrPresentableObjectHandle* handle,
+  OcctSharp_Graphic3dSequenceOfHClipPlaneHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_SequenceOfHClipPlane> returnedHandle = static_cast<const PrsMgr_PresentableObject*>(ValidatePrsMgrPresentableObject(handle)->Value.get())->ClipPlanes();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dSequenceOfHClipPlane(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentable_object_method_combined_parent_transformation_0(
+  const OcctSharp_PrsMgrPresentableObjectHandle* handle,
+  OcctSharp_TopLocDatum3DHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<TopLoc_Datum3D> returnedHandle = static_cast<const PrsMgr_PresentableObject*>(ValidatePrsMgrPresentableObject(handle)->Value.get())->CombinedParentTransformation();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateTopLocDatum3D(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentable_object_method_current_facing_model_0(
   const OcctSharp_PrsMgrPresentableObjectHandle* handle,
   int32_t* out_value)
@@ -51604,6 +60051,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentable_object_m
   return GeneratedGuard([&]
   {
     *out_value = static_cast<int32_t>(ValidatePrsMgrPresentableObject(handle)->Value->DisplayStatus());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentable_object_method_dynamic_hilight_attributes_0(
+  const OcctSharp_PrsMgrPresentableObjectHandle* handle,
+  OcctSharp_Prs3dDrawerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_Drawer> returnedHandle = static_cast<const PrsMgr_PresentableObject*>(ValidatePrsMgrPresentableObject(handle)->Value.get())->DynamicHilightAttributes();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dDrawer(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentable_object_method_dynamic_type_0(
+  const OcctSharp_PrsMgrPresentableObjectHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const PrsMgr_PresentableObject*>(ValidatePrsMgrPresentableObject(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -51703,6 +60176,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentable_object_m
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentable_object_method_hilight_attributes_0(
+  const OcctSharp_PrsMgrPresentableObjectHandle* handle,
+  OcctSharp_Prs3dDrawerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_Drawer> returnedHandle = static_cast<const PrsMgr_PresentableObject*>(ValidatePrsMgrPresentableObject(handle)->Value.get())->HilightAttributes();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dDrawer(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentable_object_method_hilight_mode_0(
   const OcctSharp_PrsMgrPresentableObjectHandle* handle,
   int32_t* out_value)
@@ -51748,6 +60234,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentable_object_m
   return GeneratedGuard([&]
   {
     *out_value = ValidatePrsMgrPresentableObject(handle)->Value->IsTransparent() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentable_object_method_local_transformation_geom_0(
+  const OcctSharp_PrsMgrPresentableObjectHandle* handle,
+  OcctSharp_TopLocDatum3DHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<TopLoc_Datum3D> returnedHandle = static_cast<const PrsMgr_PresentableObject*>(ValidatePrsMgrPresentableObject(handle)->Value.get())->LocalTransformationGeom();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateTopLocDatum3D(std::move(returnedHandle));
   });
 }
 
@@ -51922,6 +60421,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentable_object_m
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentable_object_method_set_polygon_offsets_0(
+  const OcctSharp_PrsMgrPresentableObjectHandle* handle,
+  int32_t aMode,
+  float aFactor,
+  float aUnits)
+{
+  return GeneratedGuard([&]
+  {
+    ValidatePrsMgrPresentableObject(handle)->Value->SetPolygonOffsets(aMode, static_cast<const float>(aFactor), static_cast<const float>(aUnits));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentable_object_method_set_propagate_visual_state_0(
   const OcctSharp_PrsMgrPresentableObjectHandle* handle,
   int32_t theFlag)
@@ -52035,6 +60546,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentable_object_m
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentable_object_method_transform_persistence_0(
+  const OcctSharp_PrsMgrPresentableObjectHandle* handle,
+  OcctSharp_Graphic3dTransformPersHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_TransformPers> returnedHandle = static_cast<const PrsMgr_PresentableObject*>(ValidatePrsMgrPresentableObject(handle)->Value.get())->TransformPersistence();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dTransformPers(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentable_object_method_transformation_geom_0(
+  const OcctSharp_PrsMgrPresentableObjectHandle* handle,
+  OcctSharp_TopLocDatum3DHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<TopLoc_Datum3D> returnedHandle = static_cast<const PrsMgr_PresentableObject*>(ValidatePrsMgrPresentableObject(handle)->Value.get())->TransformationGeom();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateTopLocDatum3D(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentable_object_method_transparency_0(
   const OcctSharp_PrsMgrPresentableObjectHandle* handle,
   double* out_value)
@@ -52140,6 +60677,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentable_object_m
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentable_object_method_view_affinity_0(
+  const OcctSharp_PrsMgrPresentableObjectHandle* handle,
+  OcctSharp_Graphic3dViewAffinityHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_ViewAffinity> returnedHandle = static_cast<const PrsMgr_PresentableObject*>(ValidatePrsMgrPresentableObject(handle)->Value.get())->ViewAffinity();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dViewAffinity(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentable_object_method_width_0(
   const OcctSharp_PrsMgrPresentableObjectHandle* handle,
   double* out_value)
@@ -52238,6 +60788,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentation_method_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentation_method_dynamic_type_0(
+  const OcctSharp_PrsMgrPresentationHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const PrsMgr_Presentation*>(ValidatePrsMgrPresentation(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentation_method_erase_0(
   const OcctSharp_PrsMgrPresentationHandle* handle)
 {
@@ -52290,6 +60853,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentation_method_
   return GeneratedGuard([&]
   {
     *out_value = ValidatePrsMgrPresentation(handle)->Value->MustBeUpdated() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentation_method_presentation_manager_0(
+  const OcctSharp_PrsMgrPresentationHandle* handle,
+  OcctSharp_PrsMgrPresentationManagerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<PrsMgr_PresentationManager> returnedHandle = static_cast<const PrsMgr_Presentation*>(ValidatePrsMgrPresentation(handle)->Value.get())->PresentationManager();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrsMgrPresentationManager(std::move(returnedHandle));
   });
 }
 
@@ -52452,6 +61028,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentation_manager
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentation_manager_method_dynamic_type_0(
+  const OcctSharp_PrsMgrPresentationManagerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const PrsMgr_PresentationManager*>(ValidatePrsMgrPresentationManager(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentation_manager_method_end_immediate_draw_0(
   const OcctSharp_PrsMgrPresentationManagerHandle* handle,
   const OcctSharp_V3dViewerHandle* theViewer)
@@ -52602,6 +61191,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentation_manager
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentation_manager_method_structure_manager_0(
+  const OcctSharp_PrsMgrPresentationManagerHandle* handle,
+  OcctSharp_Graphic3dStructureManagerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_StructureManager> returnedHandle = static_cast<const PrsMgr_PresentationManager*>(ValidatePrsMgrPresentationManager(handle)->Value.get())->StructureManager();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dStructureManager(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_mgr_presentation_manager_method_transform_0(
   const OcctSharp_PrsMgrPresentationManagerHandle* handle,
   const OcctSharp_PrsMgrPresentableObjectHandle* thePrsObject,
@@ -52704,6 +61306,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_bvhindex_buffer_cr
   {
     opencascade::handle<Select3D_BVHIndexBuffer> createdHandle = new Select3D_BVHIndexBuffer((theAlloc == nullptr ? opencascade::handle<NCollection_BaseAllocator>() : ValidateNCollectionBaseAllocator(theAlloc)->Value));
     *out_handle = AllocateSelect3DBVHIndexBuffer(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_bvhindex_buffer_method_dynamic_type_0(
+  const OcctSharp_Select3DBVHIndexBufferHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Select3D_BVHIndexBuffer*>(ValidateSelect3DBVHIndexBuffer(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -52855,6 +61470,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_interior_sensitive
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_interior_sensitive_point_set_method_dynamic_type_0(
+  const OcctSharp_Select3DInteriorSensitivePointSetHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Select3D_InteriorSensitivePointSet*>(ValidateSelect3DInteriorSensitivePointSet(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_interior_sensitive_point_set_method_nb_sub_elements_0(
   const OcctSharp_Select3DInteriorSensitivePointSetHandle* handle,
   int32_t* out_value)
@@ -52968,6 +61596,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_box_meth
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_box_method_dynamic_type_0(
+  const OcctSharp_Select3DSensitiveBoxHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Select3D_SensitiveBox*>(ValidateSelect3DSensitiveBox(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_box_method_get_connected_0(
   const OcctSharp_Select3DSensitiveBoxHandle* handle,
   OcctSharp_Select3DSensitiveEntityHandle** out_handle)
@@ -53061,6 +61702,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_circle_m
   {
     const gp_Pnt nativeValue = ValidateSelect3DSensitiveCircle(handle)->Value->CenterOfGeometry();
     *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_circle_method_dynamic_type_0(
+  const OcctSharp_Select3DSensitiveCircleHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Select3D_SensitiveCircle*>(ValidateSelect3DSensitiveCircle(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -53174,6 +61828,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_curve_cr
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_curve_method_dynamic_type_0(
+  const OcctSharp_Select3DSensitiveCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Select3D_SensitiveCurve*>(ValidateSelect3DSensitiveCurve(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_curve_method_get_connected_0(
   const OcctSharp_Select3DSensitiveCurveHandle* handle,
   OcctSharp_Select3DSensitiveEntityHandle** out_handle)
@@ -53255,6 +61922,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_cylinder
   {
     const gp_Pnt nativeValue = ValidateSelect3DSensitiveCylinder(handle)->Value->CenterOfGeometry();
     *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_cylinder_method_dynamic_type_0(
+  const OcctSharp_Select3DSensitiveCylinderHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Select3D_SensitiveCylinder*>(ValidateSelect3DSensitiveCylinder(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -53395,6 +62075,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_entity_m
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_entity_method_dynamic_type_0(
+  const OcctSharp_Select3DSensitiveEntityHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Select3D_SensitiveEntity*>(ValidateSelect3DSensitiveEntity(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_entity_method_flipper_0(
+  const OcctSharp_Select3DSensitiveEntityHandle* handle,
+  OcctSharp_Graphic3dFlipperHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_Flipper> returnedHandle = static_cast<const Select3D_SensitiveEntity*>(ValidateSelect3DSensitiveEntity(handle)->Value.get())->Flipper();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dFlipper(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_entity_method_get_connected_0(
   const OcctSharp_Select3DSensitiveEntityHandle* handle,
   OcctSharp_Select3DSensitiveEntityHandle** out_handle)
@@ -53417,6 +62123,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_entity_m
   return GeneratedGuard([&]
   {
     *out_value = ValidateSelect3DSensitiveEntity(handle)->Value->HasInitLocation() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_entity_method_owner_id_0(
+  const OcctSharp_Select3DSensitiveEntityHandle* handle,
+  OcctSharp_SelectMgrEntityOwnerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<SelectMgr_EntityOwner> returnedHandle = static_cast<const Select3D_SensitiveEntity*>(ValidateSelect3DSensitiveEntity(handle)->Value.get())->OwnerId();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateSelectMgrEntityOwner(std::move(returnedHandle));
   });
 }
 
@@ -53471,6 +62190,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_entity_m
   return GeneratedGuard([&]
   {
     *out_value = ValidateSelect3DSensitiveEntity(handle)->Value->ToBuildBVH() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_entity_method_transform_persistence_0(
+  const OcctSharp_Select3DSensitiveEntityHandle* handle,
+  OcctSharp_Graphic3dTransformPersHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_TransformPers> returnedHandle = static_cast<const Select3D_SensitiveEntity*>(ValidateSelect3DSensitiveEntity(handle)->Value.get())->TransformPersistence();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dTransformPers(std::move(returnedHandle));
   });
 }
 
@@ -53539,6 +62271,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_face_met
   {
     const gp_Pnt nativeValue = ValidateSelect3DSensitiveFace(handle)->Value->CenterOfGeometry();
     *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_face_method_dynamic_type_0(
+  const OcctSharp_Select3DSensitiveFaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Select3D_SensitiveFace*>(ValidateSelect3DSensitiveFace(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -53685,6 +62430,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_group_me
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_group_method_dynamic_type_0(
+  const OcctSharp_Select3DSensitiveGroupHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Select3D_SensitiveGroup*>(ValidateSelect3DSensitiveGroup(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_group_method_get_connected_0(
   const OcctSharp_Select3DSensitiveGroupHandle* handle,
   OcctSharp_Select3DSensitiveEntityHandle** out_handle)
@@ -53812,6 +62570,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_group_me
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_group_method_sub_entity_0(
+  const OcctSharp_Select3DSensitiveGroupHandle* handle,
+  int32_t theIndex,
+  OcctSharp_Select3DSensitiveEntityHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Select3D_SensitiveEntity> returnedHandle = static_cast<const Select3D_SensitiveGroup*>(ValidateSelect3DSensitiveGroup(handle)->Value.get())->SubEntity(theIndex);
+    if (!returnedHandle.IsNull()) *out_handle = AllocateSelect3DSensitiveEntity(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_group_method_swap_0(
   const OcctSharp_Select3DSensitiveGroupHandle* handle,
   int32_t theIdx1,
@@ -53908,6 +62680,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_point_me
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_point_method_dynamic_type_0(
+  const OcctSharp_Select3DSensitivePointHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Select3D_SensitivePoint*>(ValidateSelect3DSensitivePoint(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_point_method_get_connected_0(
   const OcctSharp_Select3DSensitivePointHandle* handle,
   OcctSharp_Select3DSensitiveEntityHandle** out_handle)
@@ -53930,6 +62715,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_point_me
   return GeneratedGuard([&]
   {
     *out_value = ValidateSelect3DSensitivePoint(handle)->Value->NbSubElements();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_point_method_point_0(
+  const OcctSharp_Select3DSensitivePointHandle* handle,
+  OcctSharp_Point3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    const gp_Pnt nativeValue = static_cast<const Select3D_SensitivePoint*>(ValidateSelect3DSensitivePoint(handle)->Value.get())->Point();
+    *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
   });
 }
 
@@ -54030,6 +62828,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_poly_met
   {
     const gp_Pnt nativeValue = ValidateSelect3DSensitivePoly(handle)->Value->CenterOfGeometry();
     *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_poly_method_dynamic_type_0(
+  const OcctSharp_Select3DSensitivePolyHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Select3D_SensitivePoly*>(ValidateSelect3DSensitivePoly(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -54177,6 +62988,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_primitiv
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_primitive_array_method_dynamic_type_0(
+  const OcctSharp_Select3DSensitivePrimitiveArrayHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Select3D_SensitivePrimitiveArray*>(ValidateSelect3DSensitivePrimitiveArray(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_primitive_array_method_get_connected_0(
   const OcctSharp_Select3DSensitivePrimitiveArrayHandle* handle,
   OcctSharp_Select3DSensitiveEntityHandle** out_handle)
@@ -54238,6 +63062,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_primitiv
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_primitive_array_method_last_detected_element_map_0(
+  const OcctSharp_Select3DSensitivePrimitiveArrayHandle* handle,
+  OcctSharp_TColStdHPackedMapOfIntegerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<TColStd_HPackedMapOfInteger> returnedHandle = static_cast<const Select3D_SensitivePrimitiveArray*>(ValidateSelect3DSensitivePrimitiveArray(handle)->Value.get())->LastDetectedElementMap();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateTColStdHPackedMapOfInteger(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_primitive_array_method_last_detected_node_0(
   const OcctSharp_Select3DSensitivePrimitiveArrayHandle* handle,
   int32_t* out_value)
@@ -54250,6 +63087,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_primitiv
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_primitive_array_method_last_detected_node_map_0(
+  const OcctSharp_Select3DSensitivePrimitiveArrayHandle* handle,
+  OcctSharp_TColStdHPackedMapOfIntegerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<TColStd_HPackedMapOfInteger> returnedHandle = static_cast<const Select3D_SensitivePrimitiveArray*>(ValidateSelect3DSensitivePrimitiveArray(handle)->Value.get())->LastDetectedNodeMap();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateTColStdHPackedMapOfInteger(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_primitive_array_method_nb_sub_elements_0(
   const OcctSharp_Select3DSensitivePrimitiveArrayHandle* handle,
   int32_t* out_value)
@@ -54259,6 +63109,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_primitiv
   return GeneratedGuard([&]
   {
     *out_value = ValidateSelect3DSensitivePrimitiveArray(handle)->Value->NbSubElements();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_primitive_array_method_patch_distance_0(
+  const OcctSharp_Select3DSensitivePrimitiveArrayHandle* handle,
+  float* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Select3D_SensitivePrimitiveArray*>(ValidateSelect3DSensitivePrimitiveArray(handle)->Value.get())->PatchDistance();
   });
 }
 
@@ -54346,6 +63208,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_primitiv
   return GeneratedGuard([&]
   {
     ValidateSelect3DSensitivePrimitiveArray(handle)->Value->SetMinMax(theMinX, theMinY, theMinZ, theMaxX, theMaxY, theMaxZ);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_primitive_array_method_set_patch_distance_0(
+  const OcctSharp_Select3DSensitivePrimitiveArrayHandle* handle,
+  float thePatchDistMax)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateSelect3DSensitivePrimitiveArray(handle)->Value->SetPatchDistance(static_cast<const float>(thePatchDistMax));
   });
 }
 
@@ -54516,6 +63388,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_segment_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_segment_method_dynamic_type_0(
+  const OcctSharp_Select3DSensitiveSegmentHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Select3D_SensitiveSegment*>(ValidateSelect3DSensitiveSegment(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_segment_method_end_point_0(
   const OcctSharp_Select3DSensitiveSegmentHandle* handle,
   OcctSharp_Point3d thePnt)
@@ -54523,6 +63408,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_segment_
   return GeneratedGuard([&]
   {
     ValidateSelect3DSensitiveSegment(handle)->Value->EndPoint(gp_Pnt(thePnt.x, thePnt.y, thePnt.z));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_segment_method_end_point_1(
+  const OcctSharp_Select3DSensitiveSegmentHandle* handle,
+  OcctSharp_Point3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    const gp_Pnt nativeValue = static_cast<const Select3D_SensitiveSegment*>(ValidateSelect3DSensitiveSegment(handle)->Value.get())->EndPoint();
+    *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
   });
 }
 
@@ -54578,6 +63476,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_segment_
   return GeneratedGuard([&]
   {
     ValidateSelect3DSensitiveSegment(handle)->Value->StartPoint(gp_Pnt(thePnt.x, thePnt.y, thePnt.z));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_segment_method_start_point_1(
+  const OcctSharp_Select3DSensitiveSegmentHandle* handle,
+  OcctSharp_Point3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    const gp_Pnt nativeValue = static_cast<const Select3D_SensitiveSegment*>(ValidateSelect3DSensitiveSegment(handle)->Value.get())->StartPoint();
+    *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
   });
 }
 
@@ -54667,6 +63578,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_set_meth
   return GeneratedGuard([&]
   {
     ValidateSelect3DSensitiveSet(handle)->Value->Clear();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_set_method_dynamic_type_0(
+  const OcctSharp_Select3DSensitiveSetHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Select3D_SensitiveSet*>(ValidateSelect3DSensitiveSet(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -54777,6 +63701,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_sphere_m
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_sphere_method_dynamic_type_0(
+  const OcctSharp_Select3DSensitiveSphereHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Select3D_SensitiveSphere*>(ValidateSelect3DSensitiveSphere(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_sphere_method_get_connected_0(
   const OcctSharp_Select3DSensitiveSphereHandle* handle,
   OcctSharp_Select3DSensitiveEntityHandle** out_handle)
@@ -54787,6 +63724,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_sphere_m
   {
     opencascade::handle<Select3D_SensitiveEntity> returnedHandle = ValidateSelect3DSensitiveSphere(handle)->Value->GetConnected();
     if (!returnedHandle.IsNull()) *out_handle = AllocateSelect3DSensitiveEntity(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_sphere_method_last_detected_point_0(
+  const OcctSharp_Select3DSensitiveSphereHandle* handle,
+  OcctSharp_Point3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    const gp_Pnt nativeValue = static_cast<const Select3D_SensitiveSphere*>(ValidateSelect3DSensitiveSphere(handle)->Value.get())->LastDetectedPoint();
+    *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
   });
 }
 
@@ -54924,6 +63874,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_triangle
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_triangle_method_dynamic_type_0(
+  const OcctSharp_Select3DSensitiveTriangleHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Select3D_SensitiveTriangle*>(ValidateSelect3DSensitiveTriangle(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_triangle_method_get_connected_0(
   const OcctSharp_Select3DSensitiveTriangleHandle* handle,
   OcctSharp_Select3DSensitiveEntityHandle** out_handle)
@@ -55034,6 +63997,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_triangul
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_triangulation_method_dynamic_type_0(
+  const OcctSharp_Select3DSensitiveTriangulationHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Select3D_SensitiveTriangulation*>(ValidateSelect3DSensitiveTriangulation(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_triangulation_method_get_connected_0(
   const OcctSharp_Select3DSensitiveTriangulationHandle* handle,
   OcctSharp_Select3DSensitiveEntityHandle** out_handle)
@@ -55103,6 +64079,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_triangul
   return GeneratedGuard([&]
   {
     ValidateSelect3DSensitiveTriangulation(handle)->Value->Swap(theIdx1, theIdx2);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_triangulation_method_triangulation_0(
+  const OcctSharp_Select3DSensitiveTriangulationHandle* handle,
+  OcctSharp_PolyTriangulationHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Poly_Triangulation> returnedHandle = static_cast<const Select3D_SensitiveTriangulation*>(ValidateSelect3DSensitiveTriangulation(handle)->Value.get())->Triangulation();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePolyTriangulation(std::move(returnedHandle));
   });
 }
 
@@ -55199,6 +64188,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_wire_met
   {
     const gp_Pnt nativeValue = ValidateSelect3DSensitiveWire(handle)->Value->CenterOfGeometry();
     *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_wire_method_dynamic_type_0(
+  const OcctSharp_Select3DSensitiveWireHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Select3D_SensitiveWire*>(ValidateSelect3DSensitiveWire(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -55331,6 +64333,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_and_filter_create
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_and_filter_method_dynamic_type_0(
+  const OcctSharp_SelectMgrAndFilterHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const SelectMgr_AndFilter*>(ValidateSelectMgrAndFilter(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_and_filter_method_is_ok_0(
   const OcctSharp_SelectMgrAndFilterHandle* handle,
   const OcctSharp_SelectMgrEntityOwnerHandle* anobj,
@@ -55400,6 +64415,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_and_or_filter_cre
   {
     opencascade::handle<SelectMgr_AndOrFilter> createdHandle = new SelectMgr_AndOrFilter(static_cast<const SelectMgr_FilterType>(theFilterType));
     *out_handle = AllocateSelectMgrAndOrFilter(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_and_or_filter_method_dynamic_type_0(
+  const OcctSharp_SelectMgrAndOrFilterHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const SelectMgr_AndOrFilter*>(ValidateSelectMgrAndOrFilter(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -55546,6 +64574,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_axis_intersector_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_axis_intersector_method_get_far_pnt_0(
+  const OcctSharp_SelectMgrAxisIntersectorHandle* handle,
+  OcctSharp_Point3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    const gp_Pnt nativeValue = static_cast<const SelectMgr_AxisIntersector*>(ValidateSelectMgrAxisIntersector(handle)->Value.get())->GetFarPnt();
+    *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_axis_intersector_method_get_near_pnt_0(
+  const OcctSharp_SelectMgrAxisIntersectorHandle* handle,
+  OcctSharp_Point3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    const gp_Pnt nativeValue = static_cast<const SelectMgr_AxisIntersector*>(ValidateSelectMgrAxisIntersector(handle)->Value.get())->GetNearPnt();
+    *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_axis_intersector_method_is_scalable_0(
   const OcctSharp_SelectMgrAxisIntersectorHandle* handle,
   int32_t* out_value)
@@ -55650,6 +64704,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_bvhthread_pool_me
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_bvhthread_pool_method_dynamic_type_0(
+  const OcctSharp_SelectMgrBVHThreadPoolHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const SelectMgr_BVHThreadPool*>(ValidateSelectMgrBVHThreadPool(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_bvhthread_pool_method_stop_threads_0(
   const OcctSharp_SelectMgrBVHThreadPoolHandle* handle)
 {
@@ -55712,6 +64779,19 @@ void OCCTSHARP_CALL occtsharp_generated_select_mgr_bvhthread_pool_release(OcctSh
   bool removed = false;
   { std::lock_guard<std::mutex> lock(SelectMgrBVHThreadPoolMutex); removed = LiveSelectMgrBVHThreadPoolHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_base_frustum_method_dynamic_type_0(
+  const OcctSharp_SelectMgrBaseFrustumHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const SelectMgr_BaseFrustum*>(ValidateSelectMgrBaseFrustum(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_base_frustum_method_set_builder_0(
@@ -55814,6 +64894,19 @@ void OCCTSHARP_CALL occtsharp_generated_select_mgr_base_frustum_release(OcctShar
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_base_intersector_method_camera_0(
+  const OcctSharp_SelectMgrBaseIntersectorHandle* handle,
+  OcctSharp_Graphic3dCameraHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_Camera> returnedHandle = static_cast<const SelectMgr_BaseIntersector*>(ValidateSelectMgrBaseIntersector(handle)->Value.get())->Camera();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dCamera(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_base_intersector_method_detected_point_0(
   const OcctSharp_SelectMgrBaseIntersectorHandle* handle,
   double theDepth,
@@ -55838,6 +64931,45 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_base_intersector_
   return GeneratedGuard([&]
   {
     *out_value = ValidateSelectMgrBaseIntersector(handle)->Value->DistToGeometryCenter(gp_Pnt(theCOG.x, theCOG.y, theCOG.z));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_base_intersector_method_dynamic_type_0(
+  const OcctSharp_SelectMgrBaseIntersectorHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const SelectMgr_BaseIntersector*>(ValidateSelectMgrBaseIntersector(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_base_intersector_method_get_far_pnt_0(
+  const OcctSharp_SelectMgrBaseIntersectorHandle* handle,
+  OcctSharp_Point3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    const gp_Pnt nativeValue = static_cast<const SelectMgr_BaseIntersector*>(ValidateSelectMgrBaseIntersector(handle)->Value.get())->GetFarPnt();
+    *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_base_intersector_method_get_near_pnt_0(
+  const OcctSharp_SelectMgrBaseIntersectorHandle* handle,
+  OcctSharp_Point3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    const gp_Pnt nativeValue = static_cast<const SelectMgr_BaseIntersector*>(ValidateSelectMgrBaseIntersector(handle)->Value.get())->GetNearPnt();
+    *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
   });
 }
 
@@ -55972,6 +65104,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_composition_filte
   return GeneratedGuard([&]
   {
     ValidateSelectMgrCompositionFilter(handle)->Value->Clear();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_composition_filter_method_dynamic_type_0(
+  const OcctSharp_SelectMgrCompositionFilterHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const SelectMgr_CompositionFilter*>(ValidateSelectMgrCompositionFilter(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -56117,6 +65262,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_entity_owner_meth
   return GeneratedGuard([&]
   {
     *out_value = ValidateSelectMgrEntityOwner(handle)->Value->ComesFromDecomposition() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_entity_owner_method_dynamic_type_0(
+  const OcctSharp_SelectMgrEntityOwnerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const SelectMgr_EntityOwner*>(ValidateSelectMgrEntityOwner(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -56432,6 +65590,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_filter_method_act
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_filter_method_dynamic_type_0(
+  const OcctSharp_SelectMgrFilterHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const SelectMgr_Filter*>(ValidateSelectMgrFilter(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_filter_clone(
   const OcctSharp_SelectMgrFilterHandle* source,
   OcctSharp_SelectMgrFilterHandle** out_handle)
@@ -56487,6 +65658,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_frustum_builder_c
   {
     opencascade::handle<SelectMgr_FrustumBuilder> createdHandle = new SelectMgr_FrustumBuilder();
     *out_handle = AllocateSelectMgrFrustumBuilder(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_frustum_builder_method_camera_0(
+  const OcctSharp_SelectMgrFrustumBuilderHandle* handle,
+  OcctSharp_Graphic3dCameraHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_Camera> returnedHandle = static_cast<const SelectMgr_FrustumBuilder*>(ValidateSelectMgrFrustumBuilder(handle)->Value.get())->Camera();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dCamera(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_frustum_builder_method_dynamic_type_0(
+  const OcctSharp_SelectMgrFrustumBuilderHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const SelectMgr_FrustumBuilder*>(ValidateSelectMgrFrustumBuilder(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -56607,6 +65804,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_or_filter_create_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_or_filter_method_dynamic_type_0(
+  const OcctSharp_SelectMgrOrFilterHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const SelectMgr_OrFilter*>(ValidateSelectMgrOrFilter(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_or_filter_method_is_ok_0(
   const OcctSharp_SelectMgrOrFilterHandle* handle,
   const OcctSharp_SelectMgrEntityOwnerHandle* anobj,
@@ -56718,6 +65928,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_selectable_object
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_selectable_object_method_dynamic_type_0(
+  const OcctSharp_SelectMgrSelectableObjectHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const SelectMgr_SelectableObject*>(ValidateSelectMgrSelectableObject(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_selectable_object_method_erase_presentations_0(
   const OcctSharp_SelectMgrSelectableObjectHandle* handle,
   int32_t theToRemove)
@@ -56725,6 +65948,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_selectable_object
   return GeneratedGuard([&]
   {
     ValidateSelectMgrSelectableObject(handle)->Value->ErasePresentations((theToRemove != 0));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_selectable_object_method_get_assembly_owner_0(
+  const OcctSharp_SelectMgrSelectableObjectHandle* handle,
+  OcctSharp_SelectMgrEntityOwnerHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<SelectMgr_EntityOwner> returnedHandle = static_cast<const SelectMgr_SelectableObject*>(ValidateSelectMgrSelectableObject(handle)->Value.get())->GetAssemblyOwner();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateSelectMgrEntityOwner(std::move(returnedHandle));
   });
 }
 
@@ -56815,6 +66051,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_selectable_object
   return GeneratedGuard([&]
   {
     ValidateSelectMgrSelectableObject(handle)->Value->ResetTransformation();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_selectable_object_method_selection_0(
+  const OcctSharp_SelectMgrSelectableObjectHandle* handle,
+  int32_t theMode,
+  OcctSharp_SelectMgrSelectionHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<SelectMgr_Selection> returnedHandle = static_cast<const SelectMgr_SelectableObject*>(ValidateSelectMgrSelectableObject(handle)->Value.get())->Selection(theMode);
+    if (!returnedHandle.IsNull()) *out_handle = AllocateSelectMgrSelection(std::move(returnedHandle));
   });
 }
 
@@ -56974,6 +66224,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_selection_method_
   return GeneratedGuard([&]
   {
     ValidateSelectMgrSelection(handle)->Value->Destroy();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_selection_method_dynamic_type_0(
+  const OcctSharp_SelectMgrSelectionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const SelectMgr_Selection*>(ValidateSelectMgrSelection(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -57237,6 +66500,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_selection_manager
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_selection_manager_method_dynamic_type_0(
+  const OcctSharp_SelectMgrSelectionManagerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const SelectMgr_SelectionManager*>(ValidateSelectMgrSelectionManager(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_selection_manager_method_is_activated_0(
   const OcctSharp_SelectMgrSelectionManagerHandle* handle,
   const OcctSharp_SelectMgrSelectableObjectHandle* theObject,
@@ -57292,6 +66568,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_selection_manager
   return GeneratedGuard([&]
   {
     ValidateSelectMgrSelectionManager(handle)->Value->RestoreSelectionStructures((theObj == nullptr ? opencascade::handle<SelectMgr_SelectableObject>() : ValidateSelectMgrSelectableObject(theObj)->Value), theMode);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_selection_manager_method_selector_0(
+  const OcctSharp_SelectMgrSelectionManagerHandle* handle,
+  OcctSharp_SelectMgrViewerSelectorHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<SelectMgr_ViewerSelector> returnedHandle = static_cast<const SelectMgr_SelectionManager*>(ValidateSelectMgrSelectionManager(handle)->Value.get())->Selector();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateSelectMgrViewerSelector(std::move(returnedHandle));
   });
 }
 
@@ -57410,12 +66699,38 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_sensitive_entity_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_sensitive_entity_method_base_sensitive_0(
+  const OcctSharp_SelectMgrSensitiveEntityHandle* handle,
+  OcctSharp_Select3DSensitiveEntityHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Select3D_SensitiveEntity> returnedHandle = static_cast<const SelectMgr_SensitiveEntity*>(ValidateSelectMgrSensitiveEntity(handle)->Value.get())->BaseSensitive();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateSelect3DSensitiveEntity(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_sensitive_entity_method_clear_0(
   const OcctSharp_SelectMgrSensitiveEntityHandle* handle)
 {
   return GeneratedGuard([&]
   {
     ValidateSelectMgrSensitiveEntity(handle)->Value->Clear();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_sensitive_entity_method_dynamic_type_0(
+  const OcctSharp_SelectMgrSensitiveEntityHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const SelectMgr_SensitiveEntity*>(ValidateSelectMgrSensitiveEntity(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -57743,6 +67058,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_viewer_selector_m
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_viewer_selector_method_dynamic_type_0(
+  const OcctSharp_SelectMgrViewerSelectorHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const SelectMgr_ViewerSelector*>(ValidateSelectMgrViewerSelector(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_viewer_selector_method_is_active_0(
   const OcctSharp_SelectMgrViewerSelectorHandle* handle,
   const OcctSharp_SelectMgrSelectableObjectHandle* theSelectableObject,
@@ -57843,6 +67171,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_viewer_selector_m
   {
     opencascade::handle<SelectMgr_EntityOwner> returnedHandle = ValidateSelectMgrViewerSelector(handle)->Value->Picked(theRank);
     if (!returnedHandle.IsNull()) *out_handle = AllocateSelectMgrEntityOwner(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_viewer_selector_method_picked_entity_0(
+  const OcctSharp_SelectMgrViewerSelectorHandle* handle,
+  int32_t theRank,
+  OcctSharp_Select3DSensitiveEntityHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Select3D_SensitiveEntity> returnedHandle = static_cast<const SelectMgr_ViewerSelector*>(ValidateSelectMgrViewerSelector(handle)->Value.get())->PickedEntity(theRank);
+    if (!returnedHandle.IsNull()) *out_handle = AllocateSelect3DSensitiveEntity(std::move(returnedHandle));
   });
 }
 
@@ -58137,6 +67479,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_std_prs_brep_font_method_des
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_std_prs_brep_font_method_dynamic_type_0(
+  const OcctSharp_StdPrsBRepFontHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const StdPrs_BRepFont*>(ValidateStdPrsBRepFont(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_std_prs_brep_font_method_ftfont_0(
+  const OcctSharp_StdPrsBRepFontHandle* handle,
+  OcctSharp_FontFTFontHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Font_FTFont> returnedHandle = static_cast<const StdPrs_BRepFont*>(ValidateStdPrsBRepFont(handle)->Value.get())->FTFont();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateFontFTFont(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_std_prs_brep_font_method_line_spacing_0(
   const OcctSharp_StdPrsBRepFontHandle* handle,
   double* out_value)
@@ -58192,6 +67560,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_std_prs_brep_font_method_set
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_std_prs_brep_font_method_set_width_scaling_0(
+  const OcctSharp_StdPrsBRepFontHandle* handle,
+  float theScaleFactor)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateStdPrsBRepFont(handle)->Value->SetWidthScaling(static_cast<const float>(theScaleFactor));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_std_prs_brep_font_clone(
   const OcctSharp_StdPrsBRepFontHandle* source,
   OcctSharp_StdPrsBRepFontHandle** out_handle)
@@ -58236,6 +67614,19 @@ void OCCTSHARP_CALL occtsharp_generated_std_prs_brep_font_release(OcctSharp_StdP
   bool removed = false;
   { std::lock_guard<std::mutex> lock(StdPrsBRepFontMutex); removed = LiveStdPrsBRepFontHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_std_prs_hlrpoly_shape_method_dynamic_type_0(
+  const OcctSharp_StdPrsHLRPolyShapeHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const StdPrs_HLRPolyShape*>(ValidateStdPrsHLRPolyShape(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_std_prs_hlrpoly_shape_clone(
@@ -58284,6 +67675,19 @@ void OCCTSHARP_CALL occtsharp_generated_std_prs_hlrpoly_shape_release(OcctSharp_
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_std_prs_hlrshape_method_dynamic_type_0(
+  const OcctSharp_StdPrsHLRShapeHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const StdPrs_HLRShape*>(ValidateStdPrsHLRShape(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_std_prs_hlrshape_clone(
   const OcctSharp_StdPrsHLRShapeHandle* source,
   OcctSharp_StdPrsHLRShapeHandle** out_handle)
@@ -58328,6 +67732,19 @@ void OCCTSHARP_CALL occtsharp_generated_std_prs_hlrshape_release(OcctSharp_StdPr
   bool removed = false;
   { std::lock_guard<std::mutex> lock(StdPrsHLRShapeMutex); removed = LiveStdPrsHLRShapeHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_std_prs_hlrshape_i_method_dynamic_type_0(
+  const OcctSharp_StdPrsHLRShapeIHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const StdPrs_HLRShapeI*>(ValidateStdPrsHLRShapeI(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_std_prs_hlrshape_i_clone(
@@ -58397,6 +67814,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_std_select_brep_owner_method
   return GeneratedGuard([&]
   {
     ValidateStdSelectBRepOwner(handle)->Value->Clear((aPM == nullptr ? opencascade::handle<PrsMgr_PresentationManager>() : ValidatePrsMgrPresentationManager(aPM)->Value), aMode);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_std_select_brep_owner_method_dynamic_type_0(
+  const OcctSharp_StdSelectBRepOwnerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const StdSelect_BRepOwner*>(ValidateStdSelectBRepOwner(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -58576,6 +68006,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_std_select_edge_filter_metho
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_std_select_edge_filter_method_dynamic_type_0(
+  const OcctSharp_StdSelectEdgeFilterHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const StdSelect_EdgeFilter*>(ValidateStdSelectEdgeFilter(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_std_select_edge_filter_method_is_ok_0(
   const OcctSharp_StdSelectEdgeFilterHandle* handle,
   const OcctSharp_SelectMgrEntityOwnerHandle* anobj,
@@ -58683,6 +68126,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_std_select_face_filter_metho
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_std_select_face_filter_method_dynamic_type_0(
+  const OcctSharp_StdSelectFaceFilterHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const StdSelect_FaceFilter*>(ValidateStdSelectFaceFilter(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_std_select_face_filter_method_is_ok_0(
   const OcctSharp_StdSelectFaceFilterHandle* handle,
   const OcctSharp_SelectMgrEntityOwnerHandle* anobj,
@@ -58764,6 +68220,19 @@ void OCCTSHARP_CALL occtsharp_generated_std_select_face_filter_release(OcctSharp
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_std_select_shape_method_dynamic_type_0(
+  const OcctSharp_StdSelectShapeHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const StdSelect_Shape*>(ValidateStdSelectShape(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_std_select_shape_clone(
   const OcctSharp_StdSelectShapeHandle* source,
   OcctSharp_StdSelectShapeHandle** out_handle)
@@ -58833,6 +68302,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_std_select_shape_type_filter
   return GeneratedGuard([&]
   {
     *out_value = ValidateStdSelectShapeTypeFilter(handle)->Value->ActsOn(static_cast<const TopAbs_ShapeEnum>(aStandardMode)) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_std_select_shape_type_filter_method_dynamic_type_0(
+  const OcctSharp_StdSelectShapeTypeFilterHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const StdSelect_ShapeTypeFilter*>(ValidateStdSelectShapeTypeFilter(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -59026,6 +68508,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tprs_std_aispresentation_met
   return GeneratedGuard([&]
   {
     ValidateTPrsStdAISPresentation(handle)->Value->Display((update != 0));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tprs_std_aispresentation_method_dynamic_type_0(
+  const OcctSharp_TPrsStdAISPresentationHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const TPrsStd_AISPresentation*>(ValidateTPrsStdAISPresentation(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -59435,6 +68930,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tprs_std_aisviewer_create_0(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tprs_std_aisviewer_method_dynamic_type_0(
+  const OcctSharp_TPrsStdAISViewerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const TPrsStd_AISViewer*>(ValidateTPrsStdAISViewer(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tprs_std_aisviewer_method_get_interactive_context_0(
   const OcctSharp_TPrsStdAISViewerHandle* handle,
   OcctSharp_AISInteractiveContextHandle** out_handle)
@@ -59559,6 +69067,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tprs_std_axis_driver_create_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tprs_std_axis_driver_method_dynamic_type_0(
+  const OcctSharp_TPrsStdAxisDriverHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const TPrsStd_AxisDriver*>(ValidateTPrsStdAxisDriver(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tprs_std_axis_driver_clone(
   const OcctSharp_TPrsStdAxisDriverHandle* source,
   OcctSharp_TPrsStdAxisDriverHandle** out_handle)
@@ -59617,6 +69138,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tprs_std_constraint_driver_c
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tprs_std_constraint_driver_method_dynamic_type_0(
+  const OcctSharp_TPrsStdConstraintDriverHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const TPrsStd_ConstraintDriver*>(ValidateTPrsStdConstraintDriver(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tprs_std_constraint_driver_clone(
   const OcctSharp_TPrsStdConstraintDriverHandle* source,
   OcctSharp_TPrsStdConstraintDriverHandle** out_handle)
@@ -59661,6 +69195,19 @@ void OCCTSHARP_CALL occtsharp_generated_tprs_std_constraint_driver_release(OcctS
   bool removed = false;
   { std::lock_guard<std::mutex> lock(TPrsStdConstraintDriverMutex); removed = LiveTPrsStdConstraintDriverHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tprs_std_driver_method_dynamic_type_0(
+  const OcctSharp_TPrsStdDriverHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const TPrsStd_Driver*>(ValidateTPrsStdDriver(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tprs_std_driver_clone(
@@ -59727,6 +69274,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tprs_std_driver_table_method
   return GeneratedGuard([&]
   {
     ValidateTPrsStdDriverTable(handle)->Value->Clear();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tprs_std_driver_table_method_dynamic_type_0(
+  const OcctSharp_TPrsStdDriverTableHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const TPrsStd_DriverTable*>(ValidateTPrsStdDriverTable(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -59797,6 +69357,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tprs_std_geometry_driver_cre
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tprs_std_geometry_driver_method_dynamic_type_0(
+  const OcctSharp_TPrsStdGeometryDriverHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const TPrsStd_GeometryDriver*>(ValidateTPrsStdGeometryDriver(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tprs_std_geometry_driver_clone(
   const OcctSharp_TPrsStdGeometryDriverHandle* source,
   OcctSharp_TPrsStdGeometryDriverHandle** out_handle)
@@ -59852,6 +69425,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tprs_std_named_shape_driver_
   {
     opencascade::handle<TPrsStd_NamedShapeDriver> createdHandle = new TPrsStd_NamedShapeDriver();
     *out_handle = AllocateTPrsStdNamedShapeDriver(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tprs_std_named_shape_driver_method_dynamic_type_0(
+  const OcctSharp_TPrsStdNamedShapeDriverHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const TPrsStd_NamedShapeDriver*>(ValidateTPrsStdNamedShapeDriver(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -59913,6 +69499,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tprs_std_plane_driver_create
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tprs_std_plane_driver_method_dynamic_type_0(
+  const OcctSharp_TPrsStdPlaneDriverHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const TPrsStd_PlaneDriver*>(ValidateTPrsStdPlaneDriver(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tprs_std_plane_driver_clone(
   const OcctSharp_TPrsStdPlaneDriverHandle* source,
   OcctSharp_TPrsStdPlaneDriverHandle** out_handle)
@@ -59971,6 +69570,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tprs_std_point_driver_create
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tprs_std_point_driver_method_dynamic_type_0(
+  const OcctSharp_TPrsStdPointDriverHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const TPrsStd_PointDriver*>(ValidateTPrsStdPointDriver(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tprs_std_point_driver_clone(
   const OcctSharp_TPrsStdPointDriverHandle* source,
   OcctSharp_TPrsStdPointDriverHandle** out_handle)
@@ -60015,6 +69627,19 @@ void OCCTSHARP_CALL occtsharp_generated_tprs_std_point_driver_release(OcctSharp_
   bool removed = false;
   { std::lock_guard<std::mutex> lock(TPrsStdPointDriverMutex); removed = LiveTPrsStdPointDriverHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_ambient_light_method_dynamic_type_0(
+  const OcctSharp_V3dAmbientLightHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const V3d_AmbientLight*>(ValidateV3dAmbientLight(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_ambient_light_clone(
@@ -60069,6 +69694,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_circular_grid_method_dis
   return GeneratedGuard([&]
   {
     ValidateV3dCircularGrid(handle)->Value->Display();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_circular_grid_method_dynamic_type_0(
+  const OcctSharp_V3dCircularGridHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const V3d_CircularGrid*>(ValidateV3dCircularGrid(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -60150,6 +69788,19 @@ void OCCTSHARP_CALL occtsharp_generated_v3d_circular_grid_release(OcctSharp_V3dC
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_directional_light_method_dynamic_type_0(
+  const OcctSharp_V3dDirectionalLightHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const V3d_DirectionalLight*>(ValidateV3dDirectionalLight(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_directional_light_method_set_direction_0(
   const OcctSharp_V3dDirectionalLightHandle* handle,
   int32_t theDirection)
@@ -60219,6 +69870,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_plane_create_0(
   {
     opencascade::handle<V3d_Plane> createdHandle = new V3d_Plane(theA, theB, theC, theD);
     *out_handle = AllocateV3dPlane(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_plane_method_clip_plane_0(
+  const OcctSharp_V3dPlaneHandle* handle,
+  OcctSharp_Graphic3dClipPlaneHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_ClipPlane> returnedHandle = static_cast<const V3d_Plane*>(ValidateV3dPlane(handle)->Value.get())->ClipPlane();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dClipPlane(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_plane_method_dynamic_type_0(
+  const OcctSharp_V3dPlaneHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const V3d_Plane*>(ValidateV3dPlane(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -60302,6 +69979,19 @@ void OCCTSHARP_CALL occtsharp_generated_v3d_plane_release(OcctSharp_V3dPlaneHand
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_position_light_method_dynamic_type_0(
+  const OcctSharp_V3dPositionLightHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const V3d_PositionLight*>(ValidateV3dPositionLight(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_position_light_clone(
   const OcctSharp_V3dPositionLightHandle* source,
   OcctSharp_V3dPositionLightHandle** out_handle)
@@ -60346,6 +70036,19 @@ void OCCTSHARP_CALL occtsharp_generated_v3d_position_light_release(OcctSharp_V3d
   bool removed = false;
   { std::lock_guard<std::mutex> lock(V3dPositionLightMutex); removed = LiveV3dPositionLightHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_positional_light_method_dynamic_type_0(
+  const OcctSharp_V3dPositionalLightHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const V3d_PositionalLight*>(ValidateV3dPositionalLight(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_positional_light_clone(
@@ -60400,6 +70103,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_rectangular_grid_method_
   return GeneratedGuard([&]
   {
     ValidateV3dRectangularGrid(handle)->Value->Display();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_rectangular_grid_method_dynamic_type_0(
+  const OcctSharp_V3dRectangularGridHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const V3d_RectangularGrid*>(ValidateV3dRectangularGrid(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -60482,6 +70198,19 @@ void OCCTSHARP_CALL occtsharp_generated_v3d_rectangular_grid_release(OcctSharp_V
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_spot_light_method_dynamic_type_0(
+  const OcctSharp_V3dSpotLightHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const V3d_SpotLight*>(ValidateV3dSpotLight(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_spot_light_method_set_direction_0(
   const OcctSharp_V3dSpotLightHandle* handle,
   int32_t theOrientation)
@@ -60550,6 +70279,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_trihedron_create_0(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_trihedron_method_arrow_aspect_0(
+  const OcctSharp_V3dTrihedronHandle* handle,
+  int32_t theAxis,
+  OcctSharp_Prs3dShadingAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_ShadingAspect> returnedHandle = static_cast<const V3d_Trihedron*>(ValidateV3dTrihedron(handle)->Value.get())->ArrowAspect(static_cast<V3d_TypeOfAxe>(theAxis));
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dShadingAspect(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_trihedron_method_arrow_diameter_0(
   const OcctSharp_V3dTrihedronHandle* handle,
   double* out_value)
@@ -60569,6 +70312,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_trihedron_method_display
   return GeneratedGuard([&]
   {
     ValidateV3dTrihedron(handle)->Value->Display((theView == nullptr ? opencascade::handle<V3d_View>() : ValidateV3dView(theView)->Value));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_trihedron_method_dynamic_type_0(
+  const OcctSharp_V3dTrihedronHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const V3d_Trihedron*>(ValidateV3dTrihedron(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -60593,6 +70349,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_trihedron_method_is_wire
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_trihedron_method_label_aspect_0(
+  const OcctSharp_V3dTrihedronHandle* handle,
+  int32_t theAxis,
+  OcctSharp_Prs3dTextAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_TextAspect> returnedHandle = static_cast<const V3d_Trihedron*>(ValidateV3dTrihedron(handle)->Value.get())->LabelAspect(static_cast<V3d_TypeOfAxe>(theAxis));
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dTextAspect(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_trihedron_method_nb_facets_0(
   const OcctSharp_V3dTrihedronHandle* handle,
   int32_t* out_value)
@@ -60602,6 +70372,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_trihedron_method_nb_face
   return GeneratedGuard([&]
   {
     *out_value = ValidateV3dTrihedron(handle)->Value->NbFacets();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_trihedron_method_origin_aspect_0(
+  const OcctSharp_V3dTrihedronHandle* handle,
+  OcctSharp_Prs3dShadingAspectHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Prs3d_ShadingAspect> returnedHandle = static_cast<const V3d_Trihedron*>(ValidateV3dTrihedron(handle)->Value.get())->OriginAspect();
+    if (!returnedHandle.IsNull()) *out_handle = AllocatePrs3dShadingAspect(std::move(returnedHandle));
   });
 }
 
@@ -60863,6 +70646,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_view_method_clear_pbrenv
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_view_method_clip_planes_0(
+  const OcctSharp_V3dViewHandle* handle,
+  OcctSharp_Graphic3dSequenceOfHClipPlaneHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_SequenceOfHClipPlane> returnedHandle = static_cast<const V3d_View*>(ValidateV3dView(handle)->Value.get())->ClipPlanes();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dSequenceOfHClipPlane(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_view_method_computed_mode_0(
   const OcctSharp_V3dViewHandle* handle,
   int32_t* out_value)
@@ -60901,6 +70697,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_view_method_convert_1(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_view_method_default_camera_0(
+  const OcctSharp_V3dViewHandle* handle,
+  OcctSharp_Graphic3dCameraHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_Camera> returnedHandle = static_cast<const V3d_View*>(ValidateV3dView(handle)->Value.get())->DefaultCamera();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dCamera(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_view_method_depth_0(
   const OcctSharp_V3dViewHandle* handle,
   double* out_value)
@@ -60930,6 +70739,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_view_method_do_mapping_0
   return GeneratedGuard([&]
   {
     ValidateV3dView(handle)->Value->DoMapping();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_view_method_dynamic_type_0(
+  const OcctSharp_V3dViewHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const V3d_View*>(ValidateV3dView(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -61955,6 +71777,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_view_method_triedron_era
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_view_method_trihedron_0(
+  const OcctSharp_V3dViewHandle* handle,
+  int32_t theToCreate,
+  OcctSharp_V3dTrihedronHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<V3d_Trihedron> returnedHandle = ValidateV3dView(handle)->Value->Trihedron((theToCreate != 0));
+    if (!returnedHandle.IsNull()) *out_handle = AllocateV3dTrihedron(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_view_method_turn_0(
   const OcctSharp_V3dViewHandle* handle,
   int32_t axe,
@@ -62055,6 +71891,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_view_method_visualizatio
   return GeneratedGuard([&]
   {
     *out_value = static_cast<int32_t>(ValidateV3dView(handle)->Value->Visualization());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_view_method_window_0(
+  const OcctSharp_V3dViewHandle* handle,
+  OcctSharp_AspectWindowHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Aspect_Window> returnedHandle = static_cast<const V3d_View*>(ValidateV3dView(handle)->Value.get())->Window();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateAspectWindow(std::move(returnedHandle));
   });
 }
 
@@ -62202,6 +72051,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_viewer_method_activate_g
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_viewer_method_active_view_0(
+  const OcctSharp_V3dViewerHandle* handle,
+  OcctSharp_V3dViewHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<V3d_View> returnedHandle = static_cast<const V3d_Viewer*>(ValidateV3dViewer(handle)->Value.get())->ActiveView();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateV3dView(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_viewer_method_computed_mode_0(
   const OcctSharp_V3dViewerHandle* handle,
   int32_t* out_value)
@@ -62308,6 +72170,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_viewer_method_default_vi
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_viewer_method_defined_view_0(
+  const OcctSharp_V3dViewerHandle* handle,
+  OcctSharp_V3dViewHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<V3d_View> returnedHandle = static_cast<const V3d_Viewer*>(ValidateV3dViewer(handle)->Value.get())->DefinedView();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateV3dView(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_viewer_method_display_privileged_plane_0(
   const OcctSharp_V3dViewerHandle* handle,
   int32_t theOnOff,
@@ -62316,6 +72191,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_viewer_method_display_pr
   return GeneratedGuard([&]
   {
     ValidateV3dViewer(handle)->Value->DisplayPrivilegedPlane((theOnOff != 0), theSize);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_viewer_method_driver_0(
+  const OcctSharp_V3dViewerHandle* handle,
+  OcctSharp_Graphic3dGraphicDriverHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Graphic3d_GraphicDriver> returnedHandle = static_cast<const V3d_Viewer*>(ValidateV3dViewer(handle)->Value.get())->Driver();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGraphic3dGraphicDriver(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_viewer_method_dynamic_type_0(
+  const OcctSharp_V3dViewerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const V3d_Viewer*>(ValidateV3dViewer(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -62912,6 +72813,19 @@ void OCCTSHARP_CALL occtsharp_generated_v3d_viewer_release(OcctSharp_V3dViewerHa
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_wnt_wclass_method_dynamic_type_0(
+  const OcctSharp_WNTWClassHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const WNT_WClass*>(ValidateWNTWClass(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_wnt_wclass_clone(
   const OcctSharp_WNTWClassHandle* source,
   OcctSharp_WNTWClassHandle** out_handle)
@@ -62982,6 +72896,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_wnt_window_method_do_resize_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_wnt_window_method_dynamic_type_0(
+  const OcctSharp_WNTWindowHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const WNT_Window*>(ValidateWNTWindow(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_wnt_window_method_invalidate_content_0(
   const OcctSharp_WNTWindowHandle* handle,
   const OcctSharp_AspectDisplayConnectionHandle* theDisp)
@@ -63032,6 +72959,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_wnt_window_method_ratio_0(
   return GeneratedGuard([&]
   {
     *out_value = ValidateWNTWindow(handle)->Value->Ratio();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_wnt_window_method_register_raw_input_devices_0(
+  const OcctSharp_WNTWindowHandle* handle,
+  uint32_t theRawDeviceMask,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateWNTWindow(handle)->Value->RegisterRawInputDevices(static_cast<unsigned int>(theRawDeviceMask));
   });
 }
 
@@ -63136,6 +73076,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_wasm_window_method_do_resize
   return GeneratedGuard([&]
   {
     *out_value = static_cast<int32_t>(ValidateWasmWindow(handle)->Value->DoResize());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_wasm_window_method_dynamic_type_0(
+  const OcctSharp_WasmWindowHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Wasm_Window*>(ValidateWasmWindow(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -63268,6 +73221,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xw_window_method_do_resize_0
   return GeneratedGuard([&]
   {
     *out_value = static_cast<int32_t>(ValidateXwWindow(handle)->Value->DoResize());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xw_window_method_dynamic_type_0(
+  const OcctSharp_XwWindowHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const Xw_Window*>(ValidateXwWindow(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 

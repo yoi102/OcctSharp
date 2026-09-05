@@ -6,9 +6,14 @@
 // Source: c:@S@AIS_ViewCube@F@IsBoxEdge#$@E@V3d_TypeOfOrientation#S
 // Source: c:@S@AIS_ViewCube@F@IsBoxSide#$@E@V3d_TypeOfOrientation#S
 // Source: c:@S@Aspect_OpenVRSession@F@IsHmdPresent#S
+// Source: c:@S@Graphic3d_Aspects@F@DefaultLinePatternForType#$@E@Aspect_TypeOfLine#S
+// Source: c:@S@Graphic3d_Aspects@F@DefaultLineTypeForPattern#s#S
 // Source: c:@S@Graphic3d_Attribute@F@Stride#$@E@Graphic3d_TypeOfData#S
 // Source: c:@S@Graphic3d_MaterialAspect@F@MaterialType#I#S
 // Source: c:@S@Graphic3d_MaterialAspect@F@NumberOfMaterials#S
+// Source: c:@S@Graphic3d_PBRMaterial@F@MinRoughness#S
+// Source: c:@S@Graphic3d_PBRMaterial@F@Roughness#f#S
+// Source: c:@S@Graphic3d_PBRMaterial@F@SpecIBLMapSamplesFactor#f#f#S
 // Source: c:@S@Graphic3d_Texture1D@F@NumberOfTextures#S
 // Source: c:@S@Graphic3d_Texture2D@F@NumberOfTextures#S
 // Source: c:@S@Graphic3d_TextureEnv@F@NumberOfTextures#S
@@ -28,27 +33,56 @@
 // Source: c:@S@Image_ColorRGBAF@F@Length#S
 // Source: c:@S@Image_ColorRGBF@F@Length#S
 // Source: c:@S@Image_ColorRGF@F@Length#S
+// Source: c:@S@Image_PixMap@F@ConvertFromHalfFloat#s#S
+// Source: c:@S@Image_PixMap@F@ConvertToHalfFloat#f#S
 // Source: c:@S@Image_PixMap@F@IsBigEndianHost#S
+// Source: c:@S@Image_PixMap@F@SizePixelBytes#$@E@Image_Format#S
+// Source: c:@S@Media_FormatContext@F@FormatUnitsToSeconds#K#S
+// Source: c:@S@Media_FormatContext@F@SecondsToUnits#d#S
 // Source: c:@S@Media_Frame@F@FormatFFmpeg2Occt#I#S
 // Source: c:@S@Media_Frame@F@FormatOcct2FFmpeg#$@E@Image_Format#S
+// Source: c:@S@OpenGl_Buffer@F@sizeOfGlType#i#S
 // Source: c:@S@OpenGl_Context@F@GetPowerOfTwo#I#I#S
+// Source: c:@S@OpenGl_HaltonSampler@F@get_num_dimensions#S
 // Source: c:@S@OpenGl_Material@F@NbOfVec4Common#S
 // Source: c:@S@OpenGl_Material@F@NbOfVec4Pbr#S
 // Source: c:@S@OpenGl_ShaderManager@F@PBRShadingModelFallback#$@E@Graphic3d_TypeOfShadingModel#b#S
+// Source: c:@S@OpenGl_Texture@F@PixelSizeOfPixelFormat#I#S
 // Source: c:@S@Prs3d_DatumAspect@F@ArrowPartForAxis#$@E@Prs3d_DatumParts#S
 // Source: c:@S@Prs3d_ToolQuadric@F@TrianglesNb#I#I#S
 // Source: c:@S@Prs3d_ToolQuadric@F@VerticesNb#I#I#b#S
 // Source: c:@S@PrsDim@F@InDomain#d#d#d#S
 // Source: c:@S@SelectBasics@F@MaxOwnerPriority#S
 // Source: c:@S@SelectBasics@F@MinOwnerPriority#S
+// Source: c:@S@WNT_HIDSpaceMouse@F@IsKnownProduct#l#S
+// Source: c:@S@WNT_Window@F@MouseButtonsAsync#S
+// Source: c:@S@WNT_Window@F@MouseButtonsFromEvent#k#S
+// Source: c:@S@WNT_Window@F@MouseKeyFlagsAsync#S
+// Source: c:@S@WNT_Window@F@MouseKeyFlagsFromEvent#k#S
+// Source: c:@S@WNT_Window@F@VirtualKeyFromNative#I#S
+// Source: c:@S@Wasm_Window@F@MouseButtonsFromNative#s#S
+// Source: c:@S@Wasm_Window@F@VirtualKeyFromNative#I#S
+// Source: c:@S@Xw_Window@F@VirtualKeyFromNative#l#S
 #include "OcctSharp.Visualization.Values.Generated.h"
+#include <climits>
+#include <cstdint>
+#include <limits>
+static_assert(CHAR_BIT == 8 && sizeof(short) == 2 && sizeof(int) == 4);
+static_assert(sizeof(long) == 4 && sizeof(long long) == 8 && sizeof(size_t) == 8);
+static_assert(sizeof(float) == 4 && std::numeric_limits<float>::is_iec559);
+static_assert(sizeof(double) == 8 && std::numeric_limits<double>::is_iec559);
+#include <Standard_Failure.hxx>
+#include <exception>
+#include "../../include/OcctSharp.Native.Internal.hxx"
 
 #include <AIS_ColorScale.hxx>
 #include <AIS_Shape.hxx>
 #include <AIS_ViewCube.hxx>
 #include <Aspect_OpenVRSession.hxx>
+#include <Graphic3d_Aspects.hxx>
 #include <Graphic3d_Buffer.hxx>
 #include <Graphic3d_MaterialAspect.hxx>
+#include <Graphic3d_PBRMaterial.hxx>
 #include <Graphic3d_Texture1D.hxx>
 #include <Graphic3d_Texture2D.hxx>
 #include <Graphic3d_TextureEnv.hxx>
@@ -56,14 +90,22 @@
 #include <Image_AlienPixMap.hxx>
 #include <Image_Color.hxx>
 #include <Image_PixMap.hxx>
+#include <Media_FormatContext.hxx>
 #include <Media_Frame.hxx>
+#include <OpenGl_Buffer.hxx>
 #include <OpenGl_Context.hxx>
+#include <OpenGl_HaltonSampler.hxx>
 #include <OpenGl_Material.hxx>
 #include <OpenGl_ShaderManager.hxx>
+#include <OpenGl_Texture.hxx>
 #include <Prs3d_DatumAspect.hxx>
 #include <Prs3d_ToolQuadric.hxx>
 #include <PrsDim.hxx>
 #include <SelectBasics.hxx>
+#include <WNT_HIDSpaceMouse.hxx>
+#include <WNT_Window.hxx>
+#include <Wasm_Window.hxx>
+#include <Xw_Window.hxx>
 
 double OCCTSHARP_CALL occtsharp_generated_ais_color_scale_hue_to_valid_range_static_hue_to_valid_range_0(
   const double theHue)
@@ -106,6 +148,36 @@ int32_t OCCTSHARP_CALL occtsharp_generated_aspect_open_vrsession_is_hmd_present_
   return Aspect_OpenVRSession::IsHmdPresent() ? 1 : 0;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_default_line_pattern_for_type_static_default_line_pattern_for_type_0(int32_t theType, uint16_t* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = Graphic3d_Aspects::DefaultLinePatternForType(static_cast<Aspect_TypeOfLine>(theType));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_default_line_type_for_pattern_static_default_line_type_for_pattern_0(uint16_t thePattern, int32_t* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = static_cast<int32_t>(Graphic3d_Aspects::DefaultLineTypeForPattern(static_cast<unsigned short>(thePattern)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
 int32_t OCCTSHARP_CALL occtsharp_generated_graphic3d_attribute_stride_static_stride_0(
   const int32_t theType)
 {
@@ -121,6 +193,51 @@ int32_t OCCTSHARP_CALL occtsharp_generated_graphic3d_material_aspect_material_ty
 int32_t OCCTSHARP_CALL occtsharp_generated_graphic3d_material_aspect_number_of_materials_static_number_of_materials_0(void)
 {
   return Graphic3d_MaterialAspect::NumberOfMaterials();
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_pbrmaterial_min_roughness_static_min_roughness_0(float* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = Graphic3d_PBRMaterial::MinRoughness();
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_pbrmaterial_roughness_static_roughness_0(float theNormalizedRoughness, float* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = Graphic3d_PBRMaterial::Roughness(static_cast<float>(theNormalizedRoughness));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_pbrmaterial_spec_iblmap_samples_factor_static_spec_ibl_map_samples_factor_0(float theProbability, float theRoughness, float* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = Graphic3d_PBRMaterial::SpecIBLMapSamplesFactor(static_cast<float>(theProbability), static_cast<float>(theRoughness));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
 }
 
 int32_t OCCTSHARP_CALL occtsharp_generated_graphic3d_texture1_d_number_of_textures_static_number_of_textures_0(void)
@@ -222,9 +339,84 @@ int32_t OCCTSHARP_CALL occtsharp_generated_image_color_rgf_length_static_length_
   return Image_ColorRGF::Length();
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_convert_from_half_float_static_convert_from_half_float_0(uint16_t theHalf, float* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = Image_PixMap::ConvertFromHalfFloat(static_cast<const unsigned short>(theHalf));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_convert_to_half_float_static_convert_to_half_float_0(float theFloat, uint16_t* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = Image_PixMap::ConvertToHalfFloat(static_cast<const float>(theFloat));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
 int32_t OCCTSHARP_CALL occtsharp_generated_image_pix_map_is_big_endian_host_static_is_big_endian_host_0(void)
 {
   return Image_PixMap::IsBigEndianHost() ? 1 : 0;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_size_pixel_bytes_static_size_pixel_bytes_0(int32_t thePixelFormat, uint64_t* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = Image_PixMap::SizePixelBytes(static_cast<const Image_Format>(thePixelFormat));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_format_context_format_units_to_seconds_static_format_units_to_seconds_0(int64_t theTimeUnits, double* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = Media_FormatContext::FormatUnitsToSeconds(static_cast<long long>(theTimeUnits));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_format_context_seconds_to_units_static_seconds_to_units_0(double theTimeSeconds, int64_t* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = Media_FormatContext::SecondsToUnits(theTimeSeconds);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
 }
 
 int32_t OCCTSHARP_CALL occtsharp_generated_media_frame_format_ffmpeg2_occt_static_format_f_fmpeg2_occt_0(
@@ -239,11 +431,41 @@ int32_t OCCTSHARP_CALL occtsharp_generated_media_frame_format_occt2_ffmpeg_stati
   return Media_Frame::FormatOcct2FFmpeg(static_cast<Image_Format>(theFormat));
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_buffer_size_of_gl_type_static_size_of_gl_type_0(uint32_t theType, uint64_t* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OpenGl_Buffer::sizeOfGlType(static_cast<unsigned int>(theType));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
 int32_t OCCTSHARP_CALL occtsharp_generated_open_gl_context_get_power_of_two_static_get_power_of_two_0(
   const int32_t theNumber,
   const int32_t theThreshold)
 {
   return OpenGl_Context::GetPowerOfTwo(theNumber, theThreshold);
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_halton_sampler_get_num_dimensions_static_get_num_dimensions_0(uint32_t* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OpenGl_HaltonSampler::get_num_dimensions();
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
 }
 
 int32_t OCCTSHARP_CALL occtsharp_generated_open_gl_material_nb_of_vec4_common_static_nb_of_vec4_common_0(void)
@@ -261,6 +483,21 @@ int32_t OCCTSHARP_CALL occtsharp_generated_open_gl_shader_manager_pbrshading_mod
   const int32_t theIsPbrAllowed)
 {
   return static_cast<int32_t>(OpenGl_ShaderManager::PBRShadingModelFallback(static_cast<Graphic3d_TypeOfShadingModel>(theShadingModel), (theIsPbrAllowed != 0)));
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_pixel_size_of_pixel_format_static_pixel_size_of_pixel_format_0(int32_t theInternalFormat, uint64_t* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OpenGl_Texture::PixelSizeOfPixelFormat(theInternalFormat);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
 }
 
 int32_t OCCTSHARP_CALL occtsharp_generated_prs3d_datum_aspect_arrow_part_for_axis_static_arrow_part_for_axis_0(
@@ -300,4 +537,139 @@ int32_t OCCTSHARP_CALL occtsharp_generated_select_basics_max_owner_priority_stat
 int32_t OCCTSHARP_CALL occtsharp_generated_select_basics_min_owner_priority_static_min_owner_priority_0(void)
 {
   return SelectBasics::MinOwnerPriority();
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_wnt_hidspace_mouse_is_known_product_static_is_known_product_0(uint32_t theProductId, int32_t* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = WNT_HIDSpaceMouse::IsKnownProduct(static_cast<unsigned long>(theProductId)) ? 1 : 0;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_wnt_window_mouse_buttons_async_static_mouse_buttons_async_0(uint32_t* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = WNT_Window::MouseButtonsAsync();
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_wnt_window_mouse_buttons_from_event_static_mouse_buttons_from_event_0(uint64_t theKeys, uint32_t* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = WNT_Window::MouseButtonsFromEvent(static_cast<unsigned long long>(theKeys));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_wnt_window_mouse_key_flags_async_static_mouse_key_flags_async_0(uint32_t* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = WNT_Window::MouseKeyFlagsAsync();
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_wnt_window_mouse_key_flags_from_event_static_mouse_key_flags_from_event_0(uint64_t theKeys, uint32_t* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = WNT_Window::MouseKeyFlagsFromEvent(static_cast<unsigned long long>(theKeys));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_wnt_window_virtual_key_from_native_static_virtual_key_from_native_0(int32_t theKey, uint32_t* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = WNT_Window::VirtualKeyFromNative(theKey);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_wasm_window_mouse_buttons_from_native_static_mouse_buttons_from_native_0(uint16_t theButtons, uint32_t* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = Wasm_Window::MouseButtonsFromNative(static_cast<unsigned short>(theButtons));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_wasm_window_virtual_key_from_native_static_virtual_key_from_native_0(int32_t theKey, uint32_t* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = Wasm_Window::VirtualKeyFromNative(theKey);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xw_window_virtual_key_from_native_static_virtual_key_from_native_0(uint32_t theKey, uint32_t* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = Xw_Window::VirtualKeyFromNative(static_cast<unsigned long>(theKey));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
 }

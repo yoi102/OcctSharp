@@ -6,6 +6,25 @@ namespace OcctSharp.Generator.Tests;
 public sealed class ConfiguredExclusionPassTests
 {
     [Fact]
+    public void GlobalStaticExclusionPreservesUnrelatedOverload()
+    {
+        BindingDeclaration missing = Declaration("static-int") with { IsStatic = true };
+        BindingDeclaration available = Declaration("static-double") with { IsStatic = true };
+        BindingModel result = ConfiguredExclusionPass.Apply(
+            new BindingModel([missing, available]),
+            new Dictionary<string, BindingSkipReason>(StringComparer.Ordinal)
+            {
+                [missing.StableId] = new("SK008", "ArtifactUnavailable", "Exact static export absent."),
+            });
+
+        BindingDeclaration excluded = Assert.Single(result.Declarations, item => item.StableId == missing.StableId);
+        BindingDeclaration retained = Assert.Single(result.Declarations, item => item.StableId == available.StableId);
+        Assert.Equal(BindingSupportState.Skipped, excluded.SupportState);
+        Assert.Equal("SK008", excluded.SkipReason?.Code);
+        Assert.Equal(BindingSupportState.Supported, retained.SupportState);
+    }
+
+    [Fact]
     public void AppliesNarrowArtifactUnavailableDisposition()
     {
         BindingDeclaration available = Declaration("available");

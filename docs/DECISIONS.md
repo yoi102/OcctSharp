@@ -7,6 +7,7 @@ Superseded ADRs remain available and point to their replacements.
 
 | ADR | Decision | Status |
 |---|---|---|
+| [ADR-0092](adr/0092-generated-numeric-and-copied-reference-expansion.md) | Broad generated numeric and copied-reference expansion with stable overload identities | Accepted |
 | [ADR-0001](adr/0001-repository-layout.md) | Separate root documentation from the inner code workspace | Accepted |
 | [ADR-0002](adr/0002-native-c-abi.md) | Use a versioned native C ABI boundary | Accepted |
 | [ADR-0003](adr/0003-canonical-binding-model.md) | Normalize AST facts through a canonical binding model | Accepted |

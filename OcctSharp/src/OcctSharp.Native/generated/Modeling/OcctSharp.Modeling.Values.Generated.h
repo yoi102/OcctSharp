@@ -15,6 +15,9 @@
 // Source: c:@S@BRepBuilderAPI@F@Precision#d#S
 // Source: c:@S@BRepGraph_Layer@F@KindBit#$@S@BRepGraph_NodeId@E@Kind#S
 // Source: c:@S@BRepGraph_Layer@F@RefKindBit#$@S@BRepGraph_RefId@E@Kind#S
+// Source: c:@S@BRepGraph_LayerParametric@F@GenerationMask#$@S@BRepGraph_LayerParametric@E@GenerationFlag#S
+// Source: c:@S@BRepGraph_LayerParametric@F@HasGenerationFlag#i#$@S@BRepGraph_LayerParametric@E@GenerationFlag#S
+// Source: c:@S@BRepGraph_LayerParametric@F@MeshQualityValue#$@S@BRepGraph_LayerParametric@E@MeshQuality#i#i#i#i#i#S
 // Source: c:@S@BRepGraph_NodeId@F@IsAssemblyKind#$@S@BRepGraph_NodeId@E@Kind#S
 // Source: c:@S@BRepGraph_NodeId@F@IsTopologyKind#$@S@BRepGraph_NodeId@E@Kind#S
 // Source: c:@S@BRepGraph_NodeId@F@IsValidKind#$@S@BRepGraph_NodeId@E@Kind#S
@@ -106,6 +109,12 @@ OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_brep_graph_layer_kind_b
 
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_brep_graph_layer_ref_kind_bit_static_ref_kind_bit_0(
   int32_t theKind);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_graph_layer_parametric_generation_mask_static_generation_mask_0(int32_t theFlag, uint32_t* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_graph_layer_parametric_has_generation_flag_static_has_generation_flag_0(uint32_t theFlags, int32_t theFlag, int32_t* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_graph_layer_parametric_mesh_quality_value_static_mesh_quality_value_0(int32_t theQuality, uint32_t theVeryCoarse, uint32_t theCoarse, uint32_t theMedium, uint32_t theFine, uint32_t theVeryFine, uint32_t* generatedResult);
 
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_brep_graph_node_id_is_assembly_kind_static_is_assembly_kind_0(
   int32_t theKind);

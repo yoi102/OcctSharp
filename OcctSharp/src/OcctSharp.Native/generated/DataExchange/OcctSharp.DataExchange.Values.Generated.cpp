@@ -45,6 +45,16 @@
 // Source: c:@S@XSControl_FuncShape@F@Init#S
 // Source: c:@S@XSControl_Functions@F@Init#S
 #include "OcctSharp.DataExchange.Values.Generated.h"
+#include <climits>
+#include <cstdint>
+#include <limits>
+static_assert(CHAR_BIT == 8 && sizeof(short) == 2 && sizeof(int) == 4);
+static_assert(sizeof(long) == 4 && sizeof(long long) == 8 && sizeof(size_t) == 8);
+static_assert(sizeof(float) == 4 && std::numeric_limits<float>::is_iec559);
+static_assert(sizeof(double) == 8 && std::numeric_limits<double>::is_iec559);
+#include <Standard_Failure.hxx>
+#include <exception>
+#include "../../include/OcctSharp.Native.Internal.hxx"
 
 #include <IFSelect_Functions.hxx>
 #include <IGESAppli.hxx>

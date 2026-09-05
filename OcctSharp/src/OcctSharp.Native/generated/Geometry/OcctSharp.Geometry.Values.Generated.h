@@ -16,6 +16,7 @@
 // Source: c:@S@PLib@F@Bin#I#I#S
 // Source: c:@S@PLib@F@ConstraintOrder#I#S
 // Source: c:@S@PLib@F@NivConstr#$@E@GeomAbs_Shape#S
+// Source: c:@S@gp@F@Origin#S
 // Source: c:@S@gp@F@Resolution#S
 // Source: c:@S@gp_Pnt@F@gp_Pnt#
 // Source: c:@S@gp_Pnt@F@gp_Pnt#&1$@S@gp_Pnt#
@@ -97,6 +98,8 @@ OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_plib_static_constraint_
 
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_plib_static_niv_constr_0(
   int32_t ConstraintOrder);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gp_static_origin_0(OcctSharp_Point3d* generatedResult);
 
 OCCTSHARP_API double OCCTSHARP_CALL occtsharp_generated_gp_static_resolution_0(void);
 

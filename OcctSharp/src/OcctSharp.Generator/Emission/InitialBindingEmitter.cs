@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Text;
 using OcctSharp.Generator.Discovery;
 using OcctSharp.Generator.Model;
@@ -207,7 +208,8 @@ public static class InitialBindingEmitter
                 .GroupBy(static declaration => declaration.NativeName, StringComparer.Ordinal)
                 .OrderBy(static group => group.Key, StringComparer.Ordinal)
                 .SelectMany(group => group
-                    .OrderBy(static declaration => declaration.NativeSignature, StringComparer.Ordinal)
+                    .OrderBy(GeneratedBindingEpoch.Order)
+                    .ThenBy(static declaration => declaration.NativeSignature, StringComparer.Ordinal)
                     .ThenBy(static declaration => declaration.StableId, StringComparer.Ordinal)
                     .Select((declaration, overloadIndex) => CreateStaticMethod(
                         declaration,
@@ -330,6 +332,10 @@ public static class InitialBindingEmitter
             ? GetPointSourceDeclarations(pointConstructor, pointDefaultConstructor, pointCopyConstructor, methods)
             : methods.Select(static method => method.Declaration));
         builder.AppendLine("#include \"" + nativeFileName + ".h\"");
+        NumericProjectionAssertions.AppendTo(builder);
+        builder.AppendLine("#include <Standard_Failure.hxx>");
+        builder.AppendLine("#include <exception>");
+        builder.AppendLine("#include \"../../include/OcctSharp.Native.Internal.hxx\"");
         builder.AppendLine();
         if (includePoint || methods.Any(static method =>
             method.ReturnProjection.RuleId == "TM005"
@@ -464,6 +470,11 @@ public static class InitialBindingEmitter
         builder.AppendLine("{");
         foreach (GeneratedStaticMethod method in methods)
         {
+            if (GeneratedBindingEpoch.Order(method.Declaration) != 0)
+            {
+                AppendCheckedManagedStatic(builder, method);
+                continue;
+            }
             builder.AppendLine();
             builder.AppendLine("    [LibraryImport(LibraryName, EntryPoint = \"" + method.ExportName + "\")]");
             builder.AppendLine("    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]");
@@ -483,6 +494,11 @@ public static class InitialBindingEmitter
 
     private static void AppendNativeDeclaration(StringBuilder builder, GeneratedStaticMethod method)
     {
+        if (GeneratedBindingEpoch.Order(method.Declaration) != 0)
+        {
+            builder.AppendLine("OCCTSHARP_API " + CheckedNativeSignature(method) + ";");
+            return;
+        }
         builder.Append("OCCTSHARP_API ");
         builder.Append(method.ReturnProjection.AbiType);
         builder.Append(" OCCTSHARP_CALL ");
@@ -507,6 +523,11 @@ public static class InitialBindingEmitter
 
     private static void AppendNativeDefinition(StringBuilder builder, GeneratedStaticMethod method)
     {
+        if (GeneratedBindingEpoch.Order(method.Declaration) != 0)
+        {
+            AppendCheckedNativeStatic(builder, method);
+            return;
+        }
         builder.Append(method.ReturnProjection.AbiType);
         builder.Append(" OCCTSHARP_CALL ");
         builder.Append(method.ExportName);
@@ -537,11 +558,76 @@ public static class InitialBindingEmitter
         builder.AppendLine("}");
     }
 
+    private static string ResultName(GeneratedStaticMethod method)
+    {
+        string name = "generatedResult";
+        while (method.Parameters.Any(parameter => parameter.Name == name)) name += "_";
+        return name;
+    }
+
+    private static string CheckedNativeSignature(GeneratedStaticMethod method)
+    {
+        List<string> parameters = method.Parameters.Select(parameter => $"{parameter.Projection.AbiType} {parameter.Name}").ToList();
+        if (method.ReturnProjection.RuleId != "TM000") parameters.Add($"{method.ReturnProjection.AbiType}* {ResultName(method)}");
+        return $"OcctSharp_Status OCCTSHARP_CALL {method.ExportName}({(parameters.Count == 0 ? "void" : string.Join(", ", parameters))})";
+    }
+
+    private static void AppendCheckedNativeStatic(StringBuilder builder, GeneratedStaticMethod method)
+    {
+        string result = ResultName(method);
+        string invocation = $"{method.Declaration.NativeName}({string.Join(", ", method.Parameters.Select(RenderNativeArgument))})";
+        builder.AppendLine(CheckedNativeSignature(method));
+        builder.AppendLine("{");
+        if (method.ReturnProjection.RuleId != "TM000")
+        {
+            builder.AppendLine(CultureInfo.InvariantCulture, $"  if ({result} == nullptr) {{ OcctSharp_Internal_SetLastError(\"Generated scalar output is null.\"); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }}");
+            builder.AppendLine(CultureInfo.InvariantCulture, $"  *{result} = {{}};");
+        }
+        builder.AppendLine("  OcctSharp_Internal_SetLastError(\"\");");
+        builder.AppendLine("  try");
+        builder.AppendLine("  {");
+        if (method.ReturnProjection.RuleId == "TM005")
+        {
+            builder.AppendLine(CultureInfo.InvariantCulture, $"    const gp_Pnt copiedPoint = {invocation};");
+            builder.AppendLine(CultureInfo.InvariantCulture, $"    *{result} = {{copiedPoint.X(), copiedPoint.Y(), copiedPoint.Z()}};");
+        }
+        else if (method.ReturnProjection.RuleId == "TM000") builder.AppendLine(CultureInfo.InvariantCulture, $"    {invocation};");
+        else builder.AppendLine(CultureInfo.InvariantCulture, $"    *{result} = {RenderNativeReturn(invocation, method.ReturnProjection)};");
+        builder.AppendLine("    return OCCTSHARP_STATUS_SUCCESS;");
+        builder.AppendLine("  }");
+        builder.AppendLine("  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }");
+        builder.AppendLine("  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }");
+        builder.AppendLine("  catch (...) { OcctSharp_Internal_SetLastError(\"Unknown C++ exception in generated scalar binding.\"); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }");
+        builder.AppendLine("}");
+    }
+
+    private static void AppendCheckedManagedStatic(StringBuilder builder, GeneratedStaticMethod method)
+    {
+        string result = ResultName(method);
+        string parameterList = string.Join(", ", method.Parameters.Select(parameter => $"{parameter.Projection.ManagedRawType} {parameter.Name}"));
+        List<string> rawParameters = method.Parameters.Select(parameter => $"{parameter.Projection.ManagedRawType} {parameter.Name}").ToList();
+        List<string> arguments = method.Parameters.Select(parameter => parameter.Name).ToList();
+        if (method.ReturnProjection.RuleId != "TM000")
+        {
+            rawParameters.Add($"out {method.ReturnProjection.ManagedRawType} {result}");
+            arguments.Add($"out {method.ReturnProjection.ManagedRawType} {result}");
+        }
+        builder.AppendLine(CultureInfo.InvariantCulture, $"    [LibraryImport(LibraryName, EntryPoint = \"{method.ExportName}\")]");
+        builder.AppendLine("    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]");
+        builder.AppendLine(CultureInfo.InvariantCulture, $"    private static partial global::OcctSharp.Interop.NativeStatus {method.ManagedName}Checked({string.Join(", ", rawParameters)});");
+        builder.AppendLine(CultureInfo.InvariantCulture, $"    internal static {method.ReturnProjection.ManagedRawType} {method.ManagedName}({parameterList})");
+        builder.AppendLine("    {");
+        builder.AppendLine(CultureInfo.InvariantCulture, $"        global::OcctSharp.Interop.NativeError.ThrowIfFailed({method.ManagedName}Checked({string.Join(", ", arguments)}), \"{method.ExportName}\");");
+        if (method.ReturnProjection.RuleId != "TM000") builder.AppendLine(CultureInfo.InvariantCulture, $"        return {result};");
+        builder.AppendLine("    }");
+    }
+
     private static string RenderNativeArgument(GeneratedParameter parameter) => parameter.Projection.RuleId switch
     {
         "TM003" => $"({parameter.Name} != 0)",
         "TM004" => $"static_cast<{parameter.Type.BaseCanonicalSpelling}>({parameter.Name})",
         "TM005" => $"gp_Pnt({parameter.Name}.x, {parameter.Name}.y, {parameter.Name}.z)",
+        "TM008" => $"static_cast<{parameter.Type.BaseCanonicalSpelling}>({parameter.Name})",
         _ => parameter.Name,
     };
 
@@ -629,7 +715,7 @@ public static class InitialBindingEmitter
         return typeMap.TryMap(type, usage, out projection)
             && projection is not null
             && projection.Ownership == "ValueCopy"
-            && projection.RuleId is "TM001" or "TM002" or "TM003" or "TM004";
+            && projection.RuleId is "TM001" or "TM002" or "TM003" or "TM004" or "TM008";
     }
 
     private static bool TryGetStaticProjection(
@@ -641,7 +727,7 @@ public static class InitialBindingEmitter
         return typeMap.TryMap(type, usage, out projection)
             && projection is not null
             && ((projection.Ownership == "ValueCopy"
-                    && projection.RuleId is "TM001" or "TM002" or "TM003" or "TM004" or "TM005")
+                    && projection.RuleId is "TM001" or "TM002" or "TM003" or "TM004" or "TM005" or "TM008")
                 || (usage == BindingTypeUsage.ReturnValue && projection.RuleId == "TM000"));
     }
 

@@ -1,5 +1,19 @@
 # Native ABI
 
+## ABI 1.67 / Preview.23 (Batch X)
+
+Bridge 0.75.0 adds generated fixed-width numeric and copied/retained-reference calls
+under ADR-0092. Existing Preview.22 overload ordinals, native signatures and bodies are
+preserved. New static/value functions return status and write initialized caller-owned
+outputs; null output returns InvalidArgument, exceptions remain inside C++, and failures
+use the existing thread-local diagnostic channel. The managed internal wrapper checks
+status before exposing a value. New shared calls retain the existing checked receiver,
+registry and matching release path. Final export and runtime evidence is in STATUS.
+
+TM008 asserts Windows x64 integer widths and IEEE representations at compilation. It
+does not reinterpret C++ objects or introduce borrowed addresses; const gp_Pnt results
+copy X/Y/Z, and const intrusive-handle results acquire their own registered owner.
+
 ## ABI 1.66 / Preview.22 (Batch W)
 
 Bridge 0.74.0 adds sixteen fixed C calls in OcctSharp.Native.Rendering.h: capabilities,

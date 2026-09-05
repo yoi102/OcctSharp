@@ -16,6 +16,7 @@
 // Source: c:@S@PLib@F@Bin#I#I#S
 // Source: c:@S@PLib@F@ConstraintOrder#I#S
 // Source: c:@S@PLib@F@NivConstr#$@E@GeomAbs_Shape#S
+// Source: c:@S@gp@F@Origin#S
 // Source: c:@S@gp@F@Resolution#S
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
@@ -92,6 +93,14 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_plib_static_niv_constr_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial int PLibStaticNivConstr0(int ConstraintOrder);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gp_static_origin_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus GpStaticOrigin0Checked(out Point3dRaw generatedResult);
+    internal static Point3dRaw GpStaticOrigin0()
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(GpStaticOrigin0Checked(out Point3dRaw generatedResult), "occtsharp_generated_gp_static_origin_0");
+        return generatedResult;
+    }
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gp_static_resolution_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

@@ -1,5 +1,31 @@
 # Type Mapping
 
+## Batch X numeric and copied-reference rules (ADR-0092)
+
+TM008 extends canonical numeric values and const-reference inputs with fixed ABI copies:
+float -> float; signed/unsigned char -> int8_t/uint8_t; short -> int16_t/uint16_t;
+unsigned int -> uint32_t; Windows long -> int32_t/uint32_t; long long and size_t aliases
+-> int64_t/uint64_t as dictated by their canonical types. Managed types preserve width
+and signedness. Generated compilation asserts byte/integer widths, Windows 64-bit size_t
+and IEEE float/double; argument casts preserve the exact native overload. Plain char,
+long double, pointers, mutable/out references and rvalue references remain unmapped.
+
+TM001-TM005/TM008 may copy const-reference return values; TM006 may retain a selected
+const-reference intrusive handle into a new wrapper. Scalars/enums are copied inside
+the call, gp_Pnt through coordinates, and handles by reference-counted value construction.
+No reference address escapes. TopoDS reference returns are not added by this rule.
+New const member calls use a const native receiver to avoid dispatching a mutable overload.
+New static bindings use status/output C ABI calls, zero outputs on failure and contain
+all C++ exceptions; managed raw helpers translate status through the common error path.
+Preview.22 direct-return static ABIs and overload identities are preserved.
+
+An individual const scalar reference can describe a sequence start in OCCT. SC-061
+keeps BSplCLib::FlatBezierKnots Blocked/BL209 until a sized array contract exists; its
+header explicitly describes the whole flat-knot array. Type-map acceptance alone is
+not declaration acceptance. The original selected-surface reference audit found this
+exception among 35 non-handle reference returns. Current validation belongs in STATUS.
+Historical initial-rule descriptions below predate this additive expansion.
+
 ## Policy
 
 Native-to-ABI and ABI-to-managed mappings are centralized, versioned generator rules.

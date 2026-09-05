@@ -5037,6 +5037,12 @@
   ],
   "excludedBindings": [
     {
+      "stableId": "c:@S@Cocoa_Window@F@VirtualKeyFromNative#I#S",
+      "code": "SK008",
+      "category": "ArtifactUnavailable",
+      "detail": "Batch X link audit: Cocoa_Window::VirtualKeyFromNative(int) is absent from the pinned Windows x64 libraries; exact Release DLL export scan has zero matches. This macOS backend entry is not supplied by the Windows artifact."
+    },
+    {
       "stableId": "c:@S@Standard_Transient@F@Standard_Transient#",
       "code": "SK007",
       "category": "SuppressedConstruction",

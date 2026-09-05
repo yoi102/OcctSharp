@@ -3,6 +3,7 @@
 // Source: c:@S@AIS_Animation@F@Clear#
 // Source: c:@S@AIS_Animation@F@CopyFrom#&1$@N@opencascade@S@handle>#$@S@AIS_Animation#
 // Source: c:@S@AIS_Animation@F@Duration#1
+// Source: c:@S@AIS_Animation@F@DynamicType#1
 // Source: c:@S@AIS_Animation@F@ElapsedTime#1
 // Source: c:@S@AIS_Animation@F@HasOwnDuration#1
 // Source: c:@S@AIS_Animation@F@IsStopped#
@@ -17,15 +18,23 @@
 // Source: c:@S@AIS_Animation@F@StartPts#1
 // Source: c:@S@AIS_Animation@F@StartTimer#d#d#b#b#
 // Source: c:@S@AIS_Animation@F@Stop#
+// Source: c:@S@AIS_Animation@F@Timer#1
 // Source: c:@S@AIS_Animation@F@Update#d#
 // Source: c:@S@AIS_Animation@F@UpdateTimer#
 // Source: c:@S@AIS_Animation@F@UpdateTotalDuration#
+// Source: c:@S@AIS_AnimationAxisRotation@F@DynamicType#1
+// Source: c:@S@AIS_AnimationCamera@F@CameraEnd#1
+// Source: c:@S@AIS_AnimationCamera@F@CameraStart#1
+// Source: c:@S@AIS_AnimationCamera@F@DynamicType#1
 // Source: c:@S@AIS_AnimationCamera@F@SetCameraEnd#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@AIS_AnimationCamera@F@SetCameraStart#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@AIS_AnimationCamera@F@SetView#&1$@N@opencascade@S@handle>#$@S@V3d_View#
+// Source: c:@S@AIS_AnimationCamera@F@View#1
+// Source: c:@S@AIS_AnimationObject@F@DynamicType#1
 // Source: c:@S@AIS_AttributeFilter@F@AIS_AttributeFilter#
 // Source: c:@S@AIS_AttributeFilter@F@AIS_AttributeFilter#$@E@Quantity_NameOfColor#
 // Source: c:@S@AIS_AttributeFilter@F@AIS_AttributeFilter#d#
+// Source: c:@S@AIS_AttributeFilter@F@DynamicType#1
 // Source: c:@S@AIS_AttributeFilter@F@HasColor#1
 // Source: c:@S@AIS_AttributeFilter@F@HasWidth#1
 // Source: c:@S@AIS_AttributeFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
@@ -37,6 +46,9 @@
 // Source: c:@S@AIS_Axis@F@AIS_Axis#&1$@N@opencascade@S@handle>#$@S@Geom_Axis2Placement#$@E@AIS_TypeOfAxis#
 // Source: c:@S@AIS_Axis@F@AIS_Axis#&1$@N@opencascade@S@handle>#$@S@Geom_Line#
 // Source: c:@S@AIS_Axis@F@AcceptDisplayMode#I#1
+// Source: c:@S@AIS_Axis@F@Axis2Placement#1
+// Source: c:@S@AIS_Axis@F@Component#1
+// Source: c:@S@AIS_Axis@F@DynamicType#1
 // Source: c:@S@AIS_Axis@F@IsXYZAxis#1
 // Source: c:@S@AIS_Axis@F@SetAxis1Placement#&1$@N@opencascade@S@handle>#$@S@Geom_Axis1Placement#
 // Source: c:@S@AIS_Axis@F@SetAxis2Placement#&1$@N@opencascade@S@handle>#$@S@Geom_Axis2Placement#$@E@AIS_TypeOfAxis#
@@ -51,18 +63,24 @@
 // Source: c:@S@AIS_Axis@F@UnsetWidth#
 // Source: c:@S@AIS_BadEdgeFilter@F@AIS_BadEdgeFilter#
 // Source: c:@S@AIS_BadEdgeFilter@F@ActsOn#$@E@TopAbs_ShapeEnum#1
+// Source: c:@S@AIS_BadEdgeFilter@F@DynamicType#1
 // Source: c:@S@AIS_BadEdgeFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@AIS_BadEdgeFilter@F@RemoveEdges#I#
 // Source: c:@S@AIS_BadEdgeFilter@F@SetContour#I#
+// Source: c:@S@AIS_BaseAnimationObject@F@DynamicType#1
 // Source: c:@S@AIS_C0RegularityFilter@F@ActsOn#$@E@TopAbs_ShapeEnum#1
+// Source: c:@S@AIS_C0RegularityFilter@F@DynamicType#1
 // Source: c:@S@AIS_C0RegularityFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@AIS_CameraFrustum@F@AIS_CameraFrustum#
 // Source: c:@S@AIS_CameraFrustum@F@AcceptDisplayMode#I#1
+// Source: c:@S@AIS_CameraFrustum@F@DynamicType#1
 // Source: c:@S@AIS_CameraFrustum@F@SetCameraFrustum#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@AIS_CameraFrustum@F@UnsetColor#
 // Source: c:@S@AIS_CameraFrustum@F@UnsetTransparency#
 // Source: c:@S@AIS_Circle@F@AIS_Circle#&1$@N@opencascade@S@handle>#$@S@Geom_Circle#
 // Source: c:@S@AIS_Circle@F@AIS_Circle#&1$@N@opencascade@S@handle>#$@S@Geom_Circle#d#d#b#
+// Source: c:@S@AIS_Circle@F@Circle#1
+// Source: c:@S@AIS_Circle@F@DynamicType#1
 // Source: c:@S@AIS_Circle@F@IsFilledCircleSens#1
 // Source: c:@S@AIS_Circle@F@SetCircle#&1$@N@opencascade@S@handle>#$@S@Geom_Circle#
 // Source: c:@S@AIS_Circle@F@SetFilledCircleSens#b#
@@ -76,6 +94,7 @@
 // Source: c:@S@AIS_ColorScale@F@AIS_ColorScale#
 // Source: c:@S@AIS_ColorScale@F@AcceptDisplayMode#I#1
 // Source: c:@S@AIS_ColorScale@F@ComputeSelection#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Selection#I#
+// Source: c:@S@AIS_ColorScale@F@DynamicType#1
 // Source: c:@S@AIS_ColorScale@F@GetBreadth#1
 // Source: c:@S@AIS_ColorScale@F@GetColorType#1
 // Source: c:@S@AIS_ColorScale@F@GetHeight#1
@@ -116,6 +135,7 @@
 // Source: c:@S@AIS_ColorScale@F@SetXPosition#I#
 // Source: c:@S@AIS_ColorScale@F@SetYPosition#I#
 // Source: c:@S@AIS_ColoredDrawer@F@AIS_ColoredDrawer#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#
+// Source: c:@S@AIS_ColoredDrawer@F@DynamicType#1
 // Source: c:@S@AIS_ColoredDrawer@F@HasOwnColor#1
 // Source: c:@S@AIS_ColoredDrawer@F@HasOwnMaterial#1
 // Source: c:@S@AIS_ColoredDrawer@F@HasOwnTransparency#1
@@ -131,6 +151,7 @@
 // Source: c:@S@AIS_ColoredDrawer@F@UnsetOwnWidth#
 // Source: c:@S@AIS_ColoredShape@F@AIS_ColoredShape#&1$@N@opencascade@S@handle>#$@S@AIS_Shape#
 // Source: c:@S@AIS_ColoredShape@F@ClearCustomAspects#
+// Source: c:@S@AIS_ColoredShape@F@DynamicType#1
 // Source: c:@S@AIS_ColoredShape@F@SetTransparency#d#
 // Source: c:@S@AIS_ColoredShape@F@SetWidth#d#
 // Source: c:@S@AIS_ColoredShape@F@UnsetTransparency#
@@ -140,7 +161,9 @@
 // Source: c:@S@AIS_ConnectedInteractive@F@AcceptShapeDecomposition#1
 // Source: c:@S@AIS_ConnectedInteractive@F@Connect#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#
 // Source: c:@S@AIS_ConnectedInteractive@F@Connect#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#&1$@N@opencascade@S@handle>#$@S@TopLoc_Datum3D#
+// Source: c:@S@AIS_ConnectedInteractive@F@ConnectedTo#1
 // Source: c:@S@AIS_ConnectedInteractive@F@Disconnect#
+// Source: c:@S@AIS_ConnectedInteractive@F@DynamicType#1
 // Source: c:@S@AIS_ConnectedInteractive@F@HasConnection#1
 // Source: c:@S@AIS_ConnectedInteractive@F@Signature#1
 // Source: c:@S@AIS_ConnectedInteractive@F@Type#1
@@ -150,6 +173,7 @@
 // Source: c:@S@AIS_ExclusionFilter@F@Add#$@E@AIS_KindOfInteractive#
 // Source: c:@S@AIS_ExclusionFilter@F@Add#$@E@AIS_KindOfInteractive#I#
 // Source: c:@S@AIS_ExclusionFilter@F@Clear#
+// Source: c:@S@AIS_ExclusionFilter@F@DynamicType#1
 // Source: c:@S@AIS_ExclusionFilter@F@IsExclusionFlagOn#1
 // Source: c:@S@AIS_ExclusionFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@AIS_ExclusionFilter@F@IsStored#$@E@AIS_KindOfInteractive#1
@@ -160,6 +184,8 @@
 // Source: c:@S@AIS_GlobalStatus@F@AddSelectionMode#I#
 // Source: c:@S@AIS_GlobalStatus@F@ClearSelectionModes#
 // Source: c:@S@AIS_GlobalStatus@F@DisplayMode#1
+// Source: c:@S@AIS_GlobalStatus@F@DynamicType#1
+// Source: c:@S@AIS_GlobalStatus@F@HilightStyle#1
 // Source: c:@S@AIS_GlobalStatus@F@IsHilighted#1
 // Source: c:@S@AIS_GlobalStatus@F@IsSModeIn#I#1
 // Source: c:@S@AIS_GlobalStatus@F@IsSubIntensityOn#1
@@ -186,13 +212,16 @@
 // Source: c:@S@AIS_InteractiveContext@F@ClearPrs#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#I#b#
 // Source: c:@S@AIS_InteractiveContext@F@ClearSelected#b#
 // Source: c:@S@AIS_InteractiveContext@F@Current#1
+// Source: c:@S@AIS_InteractiveContext@F@CurrentViewer#1
 // Source: c:@S@AIS_InteractiveContext@F@Deactivate#
 // Source: c:@S@AIS_InteractiveContext@F@Deactivate#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#
 // Source: c:@S@AIS_InteractiveContext@F@Deactivate#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#I#
 // Source: c:@S@AIS_InteractiveContext@F@Deactivate#I#
+// Source: c:@S@AIS_InteractiveContext@F@DefaultDrawer#1
 // Source: c:@S@AIS_InteractiveContext@F@DetectedCurrentObject#1
 // Source: c:@S@AIS_InteractiveContext@F@DetectedCurrentOwner#1
 // Source: c:@S@AIS_InteractiveContext@F@DetectedInteractive#1
+// Source: c:@S@AIS_InteractiveContext@F@DetectedOwner#1
 // Source: c:@S@AIS_InteractiveContext@F@DeviationAngle#1
 // Source: c:@S@AIS_InteractiveContext@F@DeviationCoefficient#1
 // Source: c:@S@AIS_InteractiveContext@F@DisableDrawHiddenLine#1
@@ -208,6 +237,7 @@
 // Source: c:@S@AIS_InteractiveContext@F@DisplaySelected#b#
 // Source: c:@S@AIS_InteractiveContext@F@DisplayStatus#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#1
 // Source: c:@S@AIS_InteractiveContext@F@DrawHiddenLine#1
+// Source: c:@S@AIS_InteractiveContext@F@DynamicType#1
 // Source: c:@S@AIS_InteractiveContext@F@EnableDrawHiddenLine#1
 // Source: c:@S@AIS_InteractiveContext@F@EndImmediateDraw#
 // Source: c:@S@AIS_InteractiveContext@F@EndImmediateDraw#&1$@N@opencascade@S@handle>#$@S@V3d_View#
@@ -220,6 +250,7 @@
 // Source: c:@S@AIS_InteractiveContext@F@FitSelected#&1$@N@opencascade@S@handle>#$@S@V3d_View#d#b#
 // Source: c:@S@AIS_InteractiveContext@F@GetAutoActivateSelection#1
 // Source: c:@S@AIS_InteractiveContext@F@GetZLayer#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#1
+// Source: c:@S@AIS_InteractiveContext@F@GlobalFilter#1
 // Source: c:@S@AIS_InteractiveContext@F@GravityPoint#&1$@N@opencascade@S@handle>#$@S@V3d_View#1
 // Source: c:@S@AIS_InteractiveContext@F@HasApplicative#1
 // Source: c:@S@AIS_InteractiveContext@F@HasColor#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#1
@@ -229,6 +260,9 @@
 // Source: c:@S@AIS_InteractiveContext@F@HasNextDetected#1
 // Source: c:@S@AIS_InteractiveContext@F@HasPolygonOffsets#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#1
 // Source: c:@S@AIS_InteractiveContext@F@HasSelectedShape#1
+// Source: c:@S@AIS_InteractiveContext@F@HiddenLineAspect#1
+// Source: c:@S@AIS_InteractiveContext@F@HighlightStyle#$@E@Prs3d_TypeOfHighlight#1
+// Source: c:@S@AIS_InteractiveContext@F@HighlightStyle#1
 // Source: c:@S@AIS_InteractiveContext@F@Hilight#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#b#
 // Source: c:@S@AIS_InteractiveContext@F@HilightCurrents#b#
 // Source: c:@S@AIS_InteractiveContext@F@HilightNextDetected#&1$@N@opencascade@S@handle>#$@S@V3d_View#b#
@@ -256,6 +290,7 @@
 // Source: c:@S@AIS_InteractiveContext@F@LastActiveView#1
 // Source: c:@S@AIS_InteractiveContext@F@Load#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#I#
 // Source: c:@S@AIS_InteractiveContext@F@Load#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#I#b#
+// Source: c:@S@AIS_InteractiveContext@F@MainPrsMgr#1
 // Source: c:@S@AIS_InteractiveContext@F@MoreCurrent#1
 // Source: c:@S@AIS_InteractiveContext@F@MoreDetected#1
 // Source: c:@S@AIS_InteractiveContext@F@MoreSelected#1
@@ -283,6 +318,9 @@
 // Source: c:@S@AIS_InteractiveContext@F@SelectDetected#$@E@AIS_SelectionScheme#
 // Source: c:@S@AIS_InteractiveContext@F@SelectedInteractive#1
 // Source: c:@S@AIS_InteractiveContext@F@SelectedOwner#1
+// Source: c:@S@AIS_InteractiveContext@F@Selection#1
+// Source: c:@S@AIS_InteractiveContext@F@SelectionManager#1
+// Source: c:@S@AIS_InteractiveContext@F@SelectionStyle#1
 // Source: c:@S@AIS_InteractiveContext@F@SetAngleAndDeviation#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#d#b#
 // Source: c:@S@AIS_InteractiveContext@F@SetAutoActivateSelection#b#
 // Source: c:@S@AIS_InteractiveContext@F@SetAutomaticHilight#b#
@@ -307,6 +345,7 @@
 // Source: c:@S@AIS_InteractiveContext@F@SetPixelTolerance#I#
 // Source: c:@S@AIS_InteractiveContext@F@SetPlaneSize#d#b#
 // Source: c:@S@AIS_InteractiveContext@F@SetPlaneSize#d#d#b#
+// Source: c:@S@AIS_InteractiveContext@F@SetPolygonOffsets#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#I#f#f#b#
 // Source: c:@S@AIS_InteractiveContext@F@SetSelected#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#b#
 // Source: c:@S@AIS_InteractiveContext@F@SetSelected#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#b#
 // Source: c:@S@AIS_InteractiveContext@F@SetSelectedAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_BasicAspect#b#
@@ -343,7 +382,9 @@
 // Source: c:@S@AIS_InteractiveContext@F@UpdateSelected#b#
 // Source: c:@S@AIS_InteractiveContext@F@Width#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#1
 // Source: c:@S@AIS_InteractiveObject@F@ClearOwner#
+// Source: c:@S@AIS_InteractiveObject@F@DynamicType#1
 // Source: c:@S@AIS_InteractiveObject@F@GetContext#1
+// Source: c:@S@AIS_InteractiveObject@F@GetOwner#1
 // Source: c:@S@AIS_InteractiveObject@F@HasInteractiveContext#1
 // Source: c:@S@AIS_InteractiveObject@F@HasOwner#1
 // Source: c:@S@AIS_InteractiveObject@F@HasPresentation#1
@@ -355,7 +396,10 @@
 // Source: c:@S@AIS_InteractiveObject@F@Type#1
 // Source: c:@S@AIS_LightSource@F@AIS_LightSource#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#
 // Source: c:@S@AIS_LightSource@F@ArcSize#1
+// Source: c:@S@AIS_LightSource@F@DynamicType#1
 // Source: c:@S@AIS_LightSource@F@IsZoomable#1
+// Source: c:@S@AIS_LightSource@F@Light#1
+// Source: c:@S@AIS_LightSource@F@MarkerImage#b#1
 // Source: c:@S@AIS_LightSource@F@MarkerType#b#1
 // Source: c:@S@AIS_LightSource@F@NbArrows#1
 // Source: c:@S@AIS_LightSource@F@NbSplitsArrow#1
@@ -379,14 +423,19 @@
 // Source: c:@S@AIS_LightSource@F@ToSwitchOnClick#1
 // Source: c:@S@AIS_LightSource@F@Type#1
 // Source: c:@S@AIS_LightSourceOwner@F@AIS_LightSourceOwner#&1$@N@opencascade@S@handle>#$@S@AIS_LightSource#I#
+// Source: c:@S@AIS_LightSourceOwner@F@DynamicType#1
 // Source: c:@S@AIS_LightSourceOwner@F@HilightWithColor#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#I#
 // Source: c:@S@AIS_LightSourceOwner@F@IsForcedHilight#1
 // Source: c:@S@AIS_Line@F@AIS_Line#&1$@N@opencascade@S@handle>#$@S@Geom_Line#
 // Source: c:@S@AIS_Line@F@AIS_Line#&1$@N@opencascade@S@handle>#$@S@Geom_Point#S0_#
+// Source: c:@S@AIS_Line@F@DynamicType#1
+// Source: c:@S@AIS_Line@F@EndPoint#1
+// Source: c:@S@AIS_Line@F@Line#1
 // Source: c:@S@AIS_Line@F@SetLine#&1$@N@opencascade@S@handle>#$@S@Geom_Line#
 // Source: c:@S@AIS_Line@F@SetPoints#&1$@N@opencascade@S@handle>#$@S@Geom_Point#S0_#
 // Source: c:@S@AIS_Line@F@SetWidth#d#
 // Source: c:@S@AIS_Line@F@Signature#1
+// Source: c:@S@AIS_Line@F@StartPoint#1
 // Source: c:@S@AIS_Line@F@Type#1
 // Source: c:@S@AIS_Line@F@UnsetColor#
 // Source: c:@S@AIS_Line@F@UnsetWidth#
@@ -397,6 +446,7 @@
 // Source: c:@S@AIS_Manipulator@F@ComputeSelection#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Selection#I#
 // Source: c:@S@AIS_Manipulator@F@DeactivateCurrentMode#
 // Source: c:@S@AIS_Manipulator@F@Detach#
+// Source: c:@S@AIS_Manipulator@F@DynamicType#1
 // Source: c:@S@AIS_Manipulator@F@EnableMode#$@E@AIS_ManipulatorMode#
 // Source: c:@S@AIS_Manipulator@F@HasActiveMode#1
 // Source: c:@S@AIS_Manipulator@F@HasActiveTransformation#
@@ -414,11 +464,13 @@
 // Source: c:@S@AIS_Manipulator@F@SetSkinMode#$@S@AIS_Manipulator@E@ManipulatorSkin#
 // Source: c:@S@AIS_Manipulator@F@SetTransformPersistence#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TransformPers#
 // Source: c:@S@AIS_Manipulator@F@SetZoomPersistence#b#
+// Source: c:@S@AIS_Manipulator@F@Size#1
 // Source: c:@S@AIS_Manipulator@F@SkinMode#1
 // Source: c:@S@AIS_Manipulator@F@StartTransform#I#I#&1$@N@opencascade@S@handle>#$@S@V3d_View#
 // Source: c:@S@AIS_Manipulator@F@StopTransform#b#
 // Source: c:@S@AIS_Manipulator@F@ZoomPersistence#1
 // Source: c:@S@AIS_ManipulatorOwner@F@AIS_ManipulatorOwner#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#$@E@AIS_ManipulatorMode#I#
+// Source: c:@S@AIS_ManipulatorOwner@F@DynamicType#1
 // Source: c:@S@AIS_ManipulatorOwner@F@HilightWithColor#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#I#
 // Source: c:@S@AIS_ManipulatorOwner@F@Index#1
 // Source: c:@S@AIS_ManipulatorOwner@F@IsHilighted#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#1
@@ -426,7 +478,9 @@
 // Source: c:@S@AIS_ManipulatorOwner@F@Unhilight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@AIS_MediaPlayer@F@AIS_MediaPlayer#
 // Source: c:@S@AIS_MediaPlayer@F@Duration#1
+// Source: c:@S@AIS_MediaPlayer@F@DynamicType#1
 // Source: c:@S@AIS_MediaPlayer@F@PlayPause#
+// Source: c:@S@AIS_MediaPlayer@F@PlayerContext#1
 // Source: c:@S@AIS_MediaPlayer@F@SetClosePlayer#
 // Source: c:@S@AIS_MultipleConnectedInteractive@F@AIS_MultipleConnectedInteractive#
 // Source: c:@S@AIS_MultipleConnectedInteractive@F@AcceptShapeDecomposition#1
@@ -434,6 +488,8 @@
 // Source: c:@S@AIS_MultipleConnectedInteractive@F@Connect#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#&1$@N@opencascade@S@handle>#$@S@TopLoc_Datum3D#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TransformPers#
 // Source: c:@S@AIS_MultipleConnectedInteractive@F@Disconnect#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#
 // Source: c:@S@AIS_MultipleConnectedInteractive@F@DisconnectAll#
+// Source: c:@S@AIS_MultipleConnectedInteractive@F@DynamicType#1
+// Source: c:@S@AIS_MultipleConnectedInteractive@F@GetAssemblyOwner#1
 // Source: c:@S@AIS_MultipleConnectedInteractive@F@GlobalSelOwner#1
 // Source: c:@S@AIS_MultipleConnectedInteractive@F@HasConnection#1
 // Source: c:@S@AIS_MultipleConnectedInteractive@F@SetContext#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#
@@ -445,8 +501,11 @@
 // Source: c:@S@AIS_Plane@F@AIS_Plane#&1$@N@opencascade@S@handle>#$@S@Geom_Plane#b#
 // Source: c:@S@AIS_Plane@F@AcceptDisplayMode#I#1
 // Source: c:@S@AIS_Plane@F@Axis2Placement#
+// Source: c:@S@AIS_Plane@F@Center#1
+// Source: c:@S@AIS_Plane@F@Component#
 // Source: c:@S@AIS_Plane@F@ComputeSelection#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Selection#I#
 // Source: c:@S@AIS_Plane@F@CurrentMode#
+// Source: c:@S@AIS_Plane@F@DynamicType#1
 // Source: c:@S@AIS_Plane@F@HasMinimumSize#1
 // Source: c:@S@AIS_Plane@F@HasOwnSize#1
 // Source: c:@S@AIS_Plane@F@IsXYZPlane#
@@ -470,6 +529,7 @@
 // Source: c:@S@AIS_PlaneTrihedron@F@AIS_PlaneTrihedron#&1$@N@opencascade@S@handle>#$@S@Geom_Plane#
 // Source: c:@S@AIS_PlaneTrihedron@F@AcceptDisplayMode#I#1
 // Source: c:@S@AIS_PlaneTrihedron@F@Component#
+// Source: c:@S@AIS_PlaneTrihedron@F@DynamicType#1
 // Source: c:@S@AIS_PlaneTrihedron@F@GetLength#1
 // Source: c:@S@AIS_PlaneTrihedron@F@Position#1
 // Source: c:@S@AIS_PlaneTrihedron@F@SetComponent#&1$@N@opencascade@S@handle>#$@S@Geom_Plane#
@@ -481,6 +541,7 @@
 // Source: c:@S@AIS_Point@F@AIS_Point#&1$@N@opencascade@S@handle>#$@S@Geom_Point#
 // Source: c:@S@AIS_Point@F@AcceptDisplayMode#I#1
 // Source: c:@S@AIS_Point@F@Component#
+// Source: c:@S@AIS_Point@F@DynamicType#1
 // Source: c:@S@AIS_Point@F@HasMarker#1
 // Source: c:@S@AIS_Point@F@SetComponent#&1$@N@opencascade@S@handle>#$@S@Geom_Point#
 // Source: c:@S@AIS_Point@F@SetMarker#$@E@Aspect_TypeOfMarker#
@@ -489,17 +550,22 @@
 // Source: c:@S@AIS_Point@F@UnsetColor#
 // Source: c:@S@AIS_Point@F@UnsetMarker#
 // Source: c:@S@AIS_PointCloud@F@AIS_PointCloud#
+// Source: c:@S@AIS_PointCloud@F@DynamicType#1
 // Source: c:@S@AIS_PointCloud@F@GetPoints#1
 // Source: c:@S@AIS_PointCloud@F@SetPoints#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ArrayOfPoints#
 // Source: c:@S@AIS_PointCloud@F@UnsetColor#
 // Source: c:@S@AIS_PointCloud@F@UnsetMaterial#
 // Source: c:@S@AIS_PointCloudOwner@F@AIS_PointCloudOwner#&1$@N@opencascade@S@handle>#$@S@AIS_PointCloud#
 // Source: c:@S@AIS_PointCloudOwner@F@Clear#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
+// Source: c:@S@AIS_PointCloudOwner@F@DetectedPoints#1
+// Source: c:@S@AIS_PointCloudOwner@F@DynamicType#1
 // Source: c:@S@AIS_PointCloudOwner@F@HilightWithColor#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#I#
 // Source: c:@S@AIS_PointCloudOwner@F@IsForcedHilight#1
+// Source: c:@S@AIS_PointCloudOwner@F@SelectedPoints#1
 // Source: c:@S@AIS_PointCloudOwner@F@Unhilight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@AIS_RubberBand@F@AIS_RubberBand#
 // Source: c:@S@AIS_RubberBand@F@ClearPoints#
+// Source: c:@S@AIS_RubberBand@F@DynamicType#1
 // Source: c:@S@AIS_RubberBand@F@FillTransparency#1
 // Source: c:@S@AIS_RubberBand@F@IsFilling#1
 // Source: c:@S@AIS_RubberBand@F@IsPolygonClosed#1
@@ -516,6 +582,7 @@
 // Source: c:@S@AIS_Selection@F@AddSelect#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#
 // Source: c:@S@AIS_Selection@F@Clear#
 // Source: c:@S@AIS_Selection@F@ClearAndSelect#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Filter#b#
+// Source: c:@S@AIS_Selection@F@DynamicType#1
 // Source: c:@S@AIS_Selection@F@Extent#1
 // Source: c:@S@AIS_Selection@F@Init#
 // Source: c:@S@AIS_Selection@F@IsEmpty#1
@@ -523,8 +590,10 @@
 // Source: c:@S@AIS_Selection@F@More#1
 // Source: c:@S@AIS_Selection@F@Next#
 // Source: c:@S@AIS_Selection@F@Select#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Filter#$@E@AIS_SelectionScheme#b#
+// Source: c:@S@AIS_Selection@F@Value#1
 // Source: c:@S@AIS_Shape@F@AcceptDisplayMode#I#1
 // Source: c:@S@AIS_Shape@F@AcceptShapeDecomposition#1
+// Source: c:@S@AIS_Shape@F@DynamicType#1
 // Source: c:@S@AIS_Shape@F@Material#1
 // Source: c:@S@AIS_Shape@F@SetAngleAndDeviation#d#
 // Source: c:@S@AIS_Shape@F@SetOwnDeviationAngle#
@@ -544,13 +613,16 @@
 // Source: c:@S@AIS_Shape@F@UnsetWidth#
 // Source: c:@S@AIS_Shape@F@UserAngle#1
 // Source: c:@S@AIS_SignatureFilter@F@AIS_SignatureFilter#$@E@AIS_KindOfInteractive#I#
+// Source: c:@S@AIS_SignatureFilter@F@DynamicType#1
 // Source: c:@S@AIS_SignatureFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@AIS_TextLabel@F@AIS_TextLabel#
 // Source: c:@S@AIS_TextLabel@F@AcceptDisplayMode#I#1
+// Source: c:@S@AIS_TextLabel@F@DynamicType#1
 // Source: c:@S@AIS_TextLabel@F@FontAspect#1
 // Source: c:@S@AIS_TextLabel@F@HasFlipping#1
 // Source: c:@S@AIS_TextLabel@F@HasOrientation3D#1
 // Source: c:@S@AIS_TextLabel@F@HasOwnAnchorPoint#1
+// Source: c:@S@AIS_TextLabel@F@Position#1
 // Source: c:@S@AIS_TextLabel@F@SetAngle#d#
 // Source: c:@S@AIS_TextLabel@F@SetDisplayType#$@E@Aspect_TypeOfDisplayText#
 // Source: c:@S@AIS_TextLabel@F@SetFlipping#b#
@@ -563,10 +635,12 @@
 // Source: c:@S@AIS_TextLabel@F@SetTransparency#d#
 // Source: c:@S@AIS_TextLabel@F@SetVJustification#$@E@Graphic3d_VerticalTextAlignment#
 // Source: c:@S@AIS_TextLabel@F@SetZoomable#b#
+// Source: c:@S@AIS_TextLabel@F@TextFormatter#1
 // Source: c:@S@AIS_TextLabel@F@UnsetOrientation3D#
 // Source: c:@S@AIS_TextLabel@F@UnsetTransparency#
 // Source: c:@S@AIS_TexturedShape@F@AcceptDisplayMode#I#1
 // Source: c:@S@AIS_TexturedShape@F@DisableTextureModulate#
+// Source: c:@S@AIS_TexturedShape@F@DynamicType#1
 // Source: c:@S@AIS_TexturedShape@F@EnableTextureModulate#
 // Source: c:@S@AIS_TexturedShape@F@SetTextureMapOff#
 // Source: c:@S@AIS_TexturedShape@F@SetTextureMapOn#
@@ -579,6 +653,7 @@
 // Source: c:@S@AIS_TexturedShape@F@TextureMapState#1
 // Source: c:@S@AIS_TexturedShape@F@TextureModulate#1
 // Source: c:@S@AIS_TexturedShape@F@TextureOrigin#1
+// Source: c:@S@AIS_TexturedShape@F@TexturePixMap#1
 // Source: c:@S@AIS_TexturedShape@F@TextureRepeat#1
 // Source: c:@S@AIS_TexturedShape@F@TextureScale#1
 // Source: c:@S@AIS_TexturedShape@F@TextureScaleU#1
@@ -591,6 +666,7 @@
 // Source: c:@S@AIS_TexturedShape@F@UpdateAttributes#
 // Source: c:@S@AIS_TexturedShape@F@VRepeat#1
 // Source: c:@S@AIS_Triangulation@F@AIS_Triangulation#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#
+// Source: c:@S@AIS_Triangulation@F@DynamicType#1
 // Source: c:@S@AIS_Triangulation@F@GetTriangulation#1
 // Source: c:@S@AIS_Triangulation@F@HasVertexColors#1
 // Source: c:@S@AIS_Triangulation@F@SetTransparency#d#
@@ -599,7 +675,9 @@
 // Source: c:@S@AIS_Trihedron@F@AIS_Trihedron#&1$@N@opencascade@S@handle>#$@S@Geom_Axis2Placement#
 // Source: c:@S@AIS_Trihedron@F@AcceptDisplayMode#I#1
 // Source: c:@S@AIS_Trihedron@F@ClearSelected#
+// Source: c:@S@AIS_Trihedron@F@Component#1
 // Source: c:@S@AIS_Trihedron@F@DatumDisplayMode#1
+// Source: c:@S@AIS_Trihedron@F@DynamicType#1
 // Source: c:@S@AIS_Trihedron@F@HasArrowColor#1
 // Source: c:@S@AIS_Trihedron@F@HasOwnSize#1
 // Source: c:@S@AIS_Trihedron@F@HasTextColor#1
@@ -618,10 +696,12 @@
 // Source: c:@S@AIS_Trihedron@F@UnsetSize#
 // Source: c:@S@AIS_TrihedronOwner@F@AIS_TrihedronOwner#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#$@E@Prs3d_DatumParts#I#
 // Source: c:@S@AIS_TrihedronOwner@F@DatumPart#1
+// Source: c:@S@AIS_TrihedronOwner@F@DynamicType#1
 // Source: c:@S@AIS_TrihedronOwner@F@HilightWithColor#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#I#
 // Source: c:@S@AIS_TrihedronOwner@F@IsHilighted#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#1
 // Source: c:@S@AIS_TrihedronOwner@F@Unhilight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@AIS_TypeFilter@F@AIS_TypeFilter#$@E@AIS_KindOfInteractive#
+// Source: c:@S@AIS_TypeFilter@F@DynamicType#1
 // Source: c:@S@AIS_TypeFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@AIS_ViewCube@F@AIS_ViewCube#
 // Source: c:@S@AIS_ViewCube@F@AcceptDisplayMode#I#1
@@ -630,13 +710,17 @@
 // Source: c:@S@AIS_ViewCube@F@AxesRadius#1
 // Source: c:@S@AIS_ViewCube@F@AxesSphereRadius#1
 // Source: c:@S@AIS_ViewCube@F@BoxCornerMinSize#1
+// Source: c:@S@AIS_ViewCube@F@BoxCornerStyle#1
 // Source: c:@S@AIS_ViewCube@F@BoxEdgeGap#1
 // Source: c:@S@AIS_ViewCube@F@BoxEdgeMinSize#1
+// Source: c:@S@AIS_ViewCube@F@BoxEdgeStyle#1
 // Source: c:@S@AIS_ViewCube@F@BoxFacetExtension#1
+// Source: c:@S@AIS_ViewCube@F@BoxSideStyle#1
 // Source: c:@S@AIS_ViewCube@F@BoxTransparency#1
 // Source: c:@S@AIS_ViewCube@F@ClearSelected#
 // Source: c:@S@AIS_ViewCube@F@ComputeSelection#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Selection#I#
 // Source: c:@S@AIS_ViewCube@F@Duration#1
+// Source: c:@S@AIS_ViewCube@F@DynamicType#1
 // Source: c:@S@AIS_ViewCube@F@FontHeight#1
 // Source: c:@S@AIS_ViewCube@F@GlobalSelOwner#1
 // Source: c:@S@AIS_ViewCube@F@HandleClick#&1$@N@opencascade@S@handle>#$@S@AIS_ViewCubeOwner#
@@ -684,17 +768,26 @@
 // Source: c:@S@AIS_ViewCube@F@UnsetMaterial#
 // Source: c:@S@AIS_ViewCube@F@UnsetTransparency#
 // Source: c:@S@AIS_ViewCube@F@UpdateAnimation#b#
+// Source: c:@S@AIS_ViewCube@F@ViewAnimation#1
 // Source: c:@S@AIS_ViewCubeOwner@F@AIS_ViewCubeOwner#&1$@N@opencascade@S@handle>#$@S@AIS_ViewCube#$@E@V3d_TypeOfOrientation#I#
+// Source: c:@S@AIS_ViewCubeOwner@F@DynamicType#1
 // Source: c:@S@AIS_ViewCubeOwner@F@IsForcedHilight#1
 // Source: c:@S@AIS_ViewCubeOwner@F@MainOrientation#1
 // Source: c:@S@AIS_ViewCubeSensitive@F@AIS_ViewCubeSensitive#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ArrayOfTriangles#
+// Source: c:@S@AIS_ViewCubeSensitive@F@DynamicType#1
 // Source: c:@S@AIS_XRTrackedDevice@F@AIS_XRTrackedDevice#
 // Source: c:@S@AIS_XRTrackedDevice@F@AIS_XRTrackedDevice#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ArrayOfTriangles#&1$@N@opencascade@S@handle>#$@S@Image_Texture#
+// Source: c:@S@AIS_XRTrackedDevice@F@DynamicType#1
+// Source: c:@S@AIS_XRTrackedDevice@F@LaserLength#1
 // Source: c:@S@AIS_XRTrackedDevice@F@Role#1
+// Source: c:@S@AIS_XRTrackedDevice@F@SetLaserLength#f#
 // Source: c:@S@AIS_XRTrackedDevice@F@SetRole#$@E@Aspect_XRTrackedDeviceRole#
+// Source: c:@S@AIS_XRTrackedDevice@F@SetUnitFactor#f#
+// Source: c:@S@AIS_XRTrackedDevice@F@UnitFactor#1
 // Source: c:@S@Aspect_CircularGrid@F@AngleEnd#1
 // Source: c:@S@Aspect_CircularGrid@F@AngleStart#1
 // Source: c:@S@Aspect_CircularGrid@F@DivisionNumber#1
+// Source: c:@S@Aspect_CircularGrid@F@DynamicType#1
 // Source: c:@S@Aspect_CircularGrid@F@Init#
 // Source: c:@S@Aspect_CircularGrid@F@IsArc#1
 // Source: c:@S@Aspect_CircularGrid@F@Radius#1
@@ -707,10 +800,13 @@
 // Source: c:@S@Aspect_CircularGrid@F@SetZOffset#d#
 // Source: c:@S@Aspect_CircularGrid@F@ZOffset#1
 // Source: c:@S@Aspect_DisplayConnection@F@Aspect_DisplayConnection#
+// Source: c:@S@Aspect_DisplayConnection@F@DynamicType#1
+// Source: c:@S@Aspect_DisplayConnection@F@GetAtom#$@E@Aspect_XAtom#1
 // Source: c:@S@Aspect_DisplayConnection@F@IsOwnDisplay#1
 // Source: c:@S@Aspect_Grid@F@Activate#
 // Source: c:@S@Aspect_Grid@F@Deactivate#
 // Source: c:@S@Aspect_Grid@F@DrawMode#1
+// Source: c:@S@Aspect_Grid@F@DynamicType#1
 // Source: c:@S@Aspect_Grid@F@IsActive#1
 // Source: c:@S@Aspect_Grid@F@Rotate#d#
 // Source: c:@S@Aspect_Grid@F@RotationAngle#1
@@ -724,6 +820,7 @@
 // Source: c:@S@Aspect_NeutralWindow@F@Aspect_NeutralWindow#
 // Source: c:@S@Aspect_NeutralWindow@F@DoMapping#1
 // Source: c:@S@Aspect_NeutralWindow@F@DoResize#
+// Source: c:@S@Aspect_NeutralWindow@F@DynamicType#1
 // Source: c:@S@Aspect_NeutralWindow@F@IsMapped#1
 // Source: c:@S@Aspect_NeutralWindow@F@Map#1
 // Source: c:@S@Aspect_NeutralWindow@F@Ratio#1
@@ -733,6 +830,7 @@
 // Source: c:@S@Aspect_NeutralWindow@F@Unmap#1
 // Source: c:@S@Aspect_OpenVRSession@F@Aspect_OpenVRSession#
 // Source: c:@S@Aspect_OpenVRSession@F@Close#
+// Source: c:@S@Aspect_OpenVRSession@F@DynamicType#1
 // Source: c:@S@Aspect_OpenVRSession@F@HasProjectionFrustums#1
 // Source: c:@S@Aspect_OpenVRSession@F@IsOpen#1
 // Source: c:@S@Aspect_OpenVRSession@F@NamedTrackedDevice#$@E@Aspect_XRTrackedDeviceRole#1
@@ -740,6 +838,7 @@
 // Source: c:@S@Aspect_OpenVRSession@F@ProcessEvents#
 // Source: c:@S@Aspect_OpenVRSession@F@SetTrackingOrigin#$@S@Aspect_XRSession@E@TrackingUniverseOrigin#
 // Source: c:@S@Aspect_OpenVRSession@F@WaitPoses#
+// Source: c:@S@Aspect_RectangularGrid@F@DynamicType#1
 // Source: c:@S@Aspect_RectangularGrid@F@FirstAngle#1
 // Source: c:@S@Aspect_RectangularGrid@F@Init#
 // Source: c:@S@Aspect_RectangularGrid@F@SecondAngle#1
@@ -756,18 +855,38 @@
 // Source: c:@S@Aspect_RectangularGrid@F@YStep#1
 // Source: c:@S@Aspect_RectangularGrid@F@ZOffset#1
 // Source: c:@S@Aspect_VKeySet@F@Aspect_VKeySet#
+// Source: c:@S@Aspect_VKeySet@F@DownTime#i#1
+// Source: c:@S@Aspect_VKeySet@F@DynamicType#1
+// Source: c:@S@Aspect_VKeySet@F@IsFreeKey#i#1
+// Source: c:@S@Aspect_VKeySet@F@IsKeyDown#i#1
+// Source: c:@S@Aspect_VKeySet@F@KeyDown#i#d#d#
+// Source: c:@S@Aspect_VKeySet@F@KeyFromAxis#i#i#d#d#
+// Source: c:@S@Aspect_VKeySet@F@KeyUp#i#d#
+// Source: c:@S@Aspect_VKeySet@F@Modifiers#1
 // Source: c:@S@Aspect_VKeySet@F@Reset#
+// Source: c:@S@Aspect_VKeySet@F@TimeUp#i#1
 // Source: c:@S@Aspect_Window@F@BackgroundFillMethod#1
 // Source: c:@S@Aspect_Window@F@DevicePixelRatio#1
+// Source: c:@S@Aspect_Window@F@DisplayConnection#1
+// Source: c:@S@Aspect_Window@F@DynamicType#1
 // Source: c:@S@Aspect_Window@F@InvalidateContent#&1$@N@opencascade@S@handle>#$@S@Aspect_DisplayConnection#
 // Source: c:@S@Aspect_Window@F@IsVirtual#1
 // Source: c:@S@Aspect_Window@F@SetVirtual#b#
+// Source: c:@S@Aspect_XRAction@F@DynamicType#1
 // Source: c:@S@Aspect_XRAction@F@IsValid#1
+// Source: c:@S@Aspect_XRAction@F@RawHandle#1
+// Source: c:@S@Aspect_XRAction@F@SetRawHandle#k#
 // Source: c:@S@Aspect_XRAction@F@Type#1
 // Source: c:@S@Aspect_XRActionSet@F@AddAction#&1$@N@opencascade@S@handle>#$@S@Aspect_XRAction#
+// Source: c:@S@Aspect_XRActionSet@F@DynamicType#1
+// Source: c:@S@Aspect_XRActionSet@F@RawHandle#1
+// Source: c:@S@Aspect_XRActionSet@F@SetRawHandle#k#
 // Source: c:@S@Aspect_XRSession@F@AbortHapticVibrationAction#&1$@N@opencascade@S@handle>#$@S@Aspect_XRAction#
 // Source: c:@S@Aspect_XRSession@F@Aspect#1
+// Source: c:@S@Aspect_XRSession@F@DisplayFrequency#1
+// Source: c:@S@Aspect_XRSession@F@DynamicType#1
 // Source: c:@S@Aspect_XRSession@F@FieldOfView#1
+// Source: c:@S@Aspect_XRSession@F@GenericAction#$@E@Aspect_XRTrackedDeviceRole#$@E@Aspect_XRGenericAction#1
 // Source: c:@S@Aspect_XRSession@F@HasTrackedPose#I#1
 // Source: c:@S@Aspect_XRSession@F@IOD#1
 // Source: c:@S@Aspect_XRSession@F@SetTrackingOrigin#$@S@Aspect_XRSession@E@TrackingUniverseOrigin#
@@ -776,6 +895,7 @@
 // Source: c:@S@Aspect_XRSession@F@UnitFactor#1
 // Source: c:@S@Cocoa_Window@F@DoMapping#1
 // Source: c:@S@Cocoa_Window@F@DoResize#
+// Source: c:@S@Cocoa_Window@F@DynamicType#1
 // Source: c:@S@Cocoa_Window@F@InvalidateContent#&1$@N@opencascade@S@handle>#$@S@Aspect_DisplayConnection#
 // Source: c:@S@Cocoa_Window@F@IsMapped#1
 // Source: c:@S@Cocoa_Window@F@Map#1
@@ -784,6 +904,7 @@
 // Source: c:@S@D3DHost_FrameBuffer@F@BindBuffer#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@D3DHost_FrameBuffer@F@D3DHost_FrameBuffer#
 // Source: c:@S@D3DHost_FrameBuffer@F@D3dFallback#1
+// Source: c:@S@D3DHost_FrameBuffer@F@DynamicType#1
 // Source: c:@S@D3DHost_FrameBuffer@F@IsSRGBReady#1
 // Source: c:@S@D3DHost_FrameBuffer@F@LockSurface#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@D3DHost_FrameBuffer@F@SetSRGBReady#b#
@@ -791,25 +912,40 @@
 // Source: c:@S@D3DHost_FrameBuffer@F@registerD3dBuffer#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@D3DHost_GraphicDriver@F@CreateView#&1$@N@opencascade@S@handle>#$@S@Graphic3d_StructureManager#
 // Source: c:@S@D3DHost_GraphicDriver@F@D3DHost_GraphicDriver#
+// Source: c:@S@D3DHost_GraphicDriver@F@DynamicType#1
 // Source: c:@S@D3DHost_GraphicDriverFactory@F@CreateDriver#&1$@N@opencascade@S@handle>#$@S@Aspect_DisplayConnection#
 // Source: c:@S@D3DHost_GraphicDriverFactory@F@D3DHost_GraphicDriverFactory#
+// Source: c:@S@D3DHost_GraphicDriverFactory@F@DynamicType#1
+// Source: c:@S@D3DHost_View@F@D3dWglBuffer#1
+// Source: c:@S@D3DHost_View@F@DynamicType#1
 // Source: c:@S@D3DHost_View@F@Redraw#
 // Source: c:@S@D3DHost_View@F@RedrawImmediate#
 // Source: c:@S@D3DHost_View@F@ReleaseGlResources#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@D3DHost_View@F@Resized#
 // Source: c:@S@D3DHost_View@F@isD3dEx#1
+// Source: c:@S@Font_FTFont@F@Ascender#1
+// Source: c:@S@Font_FTFont@F@Descender#1
+// Source: c:@S@Font_FTFont@F@DynamicType#1
 // Source: c:@S@Font_FTFont@F@Font_FTFont#&1$@N@opencascade@S@handle>#$@S@Font_FTLibrary#
+// Source: c:@S@Font_FTFont@F@GlyphMaxSizeX#b#1
+// Source: c:@S@Font_FTFont@F@GlyphMaxSizeY#b#1
 // Source: c:@S@Font_FTFont@F@GlyphsNumber#b#1
 // Source: c:@S@Font_FTFont@F@IsSingleStrokeFont#1
 // Source: c:@S@Font_FTFont@F@IsValid#1
+// Source: c:@S@Font_FTFont@F@LineSpacing#1
+// Source: c:@S@Font_FTFont@F@PointSize#1
 // Source: c:@S@Font_FTFont@F@Release#
 // Source: c:@S@Font_FTFont@F@SetSingleStrokeFont#b#
 // Source: c:@S@Font_FTFont@F@SetUseUnicodeSubsetFallback#b#
+// Source: c:@S@Font_FTFont@F@SetWidthScaling#f#
 // Source: c:@S@Font_FTFont@F@ToSynthesizeItalic#1
 // Source: c:@S@Font_FTFont@F@ToUseUnicodeSubsetFallback#1
+// Source: c:@S@Font_FTFont@F@WidthScaling#1
+// Source: c:@S@Font_FTLibrary@F@DynamicType#1
 // Source: c:@S@Font_FTLibrary@F@Font_FTLibrary#
 // Source: c:@S@Font_FTLibrary@F@IsValid#1
 // Source: c:@S@Font_FontMgr@F@ClearFontDataBase#
+// Source: c:@S@Font_FontMgr@F@DynamicType#1
 // Source: c:@S@Font_FontMgr@F@FindFallbackFont#$@E@Font_UnicodeSubset#$@E@Font_FontAspect#1
 // Source: c:@S@Font_FontMgr@F@GetFont#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#$@E@Font_FontAspect#I#1
 // Source: c:@S@Font_FontMgr@F@InitFontDataBase#
@@ -818,28 +954,41 @@
 // Source: c:@S@Font_FontMgr@F@SetTraceAliases#b#
 // Source: c:@S@Font_FontMgr@F@ToPrintErrors#1
 // Source: c:@S@Font_FontMgr@F@ToTraceAliases#1
+// Source: c:@S@Font_SystemFont@F@DynamicType#1
 // Source: c:@S@Font_SystemFont@F@FontFaceId#$@E@Font_FontAspect#1
 // Source: c:@S@Font_SystemFont@F@HasFontAspect#$@E@Font_FontAspect#1
 // Source: c:@S@Font_SystemFont@F@IsEqual#&1$@N@opencascade@S@handle>#$@S@Font_SystemFont#1
 // Source: c:@S@Font_SystemFont@F@IsSingleStrokeFont#1
 // Source: c:@S@Font_SystemFont@F@SetSingleStrokeFont#b#
+// Source: c:@S@Font_TextFormatter@F@DynamicType#1
+// Source: c:@S@Font_TextFormatter@F@FirstPosition#1
 // Source: c:@S@Font_TextFormatter@F@Font_TextFormatter#
 // Source: c:@S@Font_TextFormatter@F@Format#
 // Source: c:@S@Font_TextFormatter@F@HasWrapping#1
 // Source: c:@S@Font_TextFormatter@F@HorizontalTextAlignment#1
 // Source: c:@S@Font_TextFormatter@F@IsLFSymbol#I#1
+// Source: c:@S@Font_TextFormatter@F@LineHeight#I#1
 // Source: c:@S@Font_TextFormatter@F@LineIndex#I#1
 // Source: c:@S@Font_TextFormatter@F@LinePositionIndex#I#1
+// Source: c:@S@Font_TextFormatter@F@LineWidth#I#1
+// Source: c:@S@Font_TextFormatter@F@MaximumSymbolWidth#1
 // Source: c:@S@Font_TextFormatter@F@Reset#
+// Source: c:@S@Font_TextFormatter@F@ResultHeight#1
+// Source: c:@S@Font_TextFormatter@F@ResultWidth#1
 // Source: c:@S@Font_TextFormatter@F@SetWordWrapping#b#
+// Source: c:@S@Font_TextFormatter@F@SetWrapping#f#
 // Source: c:@S@Font_TextFormatter@F@SetupAlignment#$@E@Graphic3d_HorizontalTextAlignment#$@E@Graphic3d_VerticalTextAlignment#
 // Source: c:@S@Font_TextFormatter@F@TabSize#1
 // Source: c:@S@Font_TextFormatter@F@VerticalTextAlignment#1
 // Source: c:@S@Font_TextFormatter@F@WordWrapping#1
+// Source: c:@S@Font_TextFormatter@F@Wrapping#1
+// Source: c:@S@Graphic3d_ArrayOfPoints@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfPoints@F@Graphic3d_ArrayOfPoints#I#I#
 // Source: c:@S@Graphic3d_ArrayOfPoints@F@Graphic3d_ArrayOfPoints#I#b#b#
+// Source: c:@S@Graphic3d_ArrayOfPolygons@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfPolygons@F@Graphic3d_ArrayOfPolygons#I#I#I#I#
 // Source: c:@S@Graphic3d_ArrayOfPolygons@F@Graphic3d_ArrayOfPolygons#I#I#I#b#b#b#b#
+// Source: c:@S@Graphic3d_ArrayOfPolylines@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfPolylines@F@Graphic3d_ArrayOfPolylines#I#I#I#I#
 // Source: c:@S@Graphic3d_ArrayOfPolylines@F@Graphic3d_ArrayOfPolylines#I#I#I#b#b#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddBound#I#
@@ -861,9 +1010,16 @@
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#d#d#d#d#d#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#d#d#d#d#d#d#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#d#d#d#d#d#d#d#d#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#f#f#f#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#f#f#f#f#f#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#f#f#f#f#f#f#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#f#f#f#f#f#f#f#f#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@Attributes#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@Bound#I#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@BoundNumber#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@BoundNumberAllocated#1
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@Bounds#1
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@Edge#I#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@EdgeNumber#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@EdgeNumberAllocated#1
@@ -871,6 +1027,7 @@
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@HasVertexColors#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@HasVertexNormals#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@HasVertexTexels#1
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@Indices#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@IsValid#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@ItemNumber#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetBoundColor#I#d#d#d#
@@ -879,34 +1036,51 @@
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertexNormal#I#d#d#d#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertexTexel#I#d#d#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertice#I#&1$@S@gp_Pnt#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertice#I#f#f#f#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@Type#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@VertexNumber#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@VertexNumberAllocated#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@Vertice#I#1
+// Source: c:@S@Graphic3d_ArrayOfQuadrangleStrips@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfQuadrangleStrips@F@Graphic3d_ArrayOfQuadrangleStrips#I#I#I#
 // Source: c:@S@Graphic3d_ArrayOfQuadrangleStrips@F@Graphic3d_ArrayOfQuadrangleStrips#I#I#b#b#b#b#
+// Source: c:@S@Graphic3d_ArrayOfQuadrangles@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfQuadrangles@F@Graphic3d_ArrayOfQuadrangles#I#I#I#
 // Source: c:@S@Graphic3d_ArrayOfQuadrangles@F@Graphic3d_ArrayOfQuadrangles#I#I#b#b#b#
+// Source: c:@S@Graphic3d_ArrayOfSegments@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfSegments@F@Graphic3d_ArrayOfSegments#I#I#I#
 // Source: c:@S@Graphic3d_ArrayOfSegments@F@Graphic3d_ArrayOfSegments#I#I#b#
+// Source: c:@S@Graphic3d_ArrayOfTriangleFans@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfTriangleFans@F@Graphic3d_ArrayOfTriangleFans#I#I#I#
 // Source: c:@S@Graphic3d_ArrayOfTriangleFans@F@Graphic3d_ArrayOfTriangleFans#I#I#b#b#b#b#
+// Source: c:@S@Graphic3d_ArrayOfTriangleStrips@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfTriangleStrips@F@Graphic3d_ArrayOfTriangleStrips#I#I#I#
 // Source: c:@S@Graphic3d_ArrayOfTriangleStrips@F@Graphic3d_ArrayOfTriangleStrips#I#I#b#b#b#b#
+// Source: c:@S@Graphic3d_ArrayOfTriangles@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfTriangles@F@Graphic3d_ArrayOfTriangles#I#I#I#
 // Source: c:@S@Graphic3d_ArrayOfTriangles@F@Graphic3d_ArrayOfTriangles#I#I#b#b#b#
+// Source: c:@S@Graphic3d_AspectFillArea3d@F@DynamicType#1
 // Source: c:@S@Graphic3d_AspectFillArea3d@F@Edge#1
 // Source: c:@S@Graphic3d_AspectFillArea3d@F@Graphic3d_AspectFillArea3d#
+// Source: c:@S@Graphic3d_AspectLine3d@F@DynamicType#1
 // Source: c:@S@Graphic3d_AspectLine3d@F@Graphic3d_AspectLine3d#
 // Source: c:@S@Graphic3d_AspectLine3d@F@SetType#$@E@Aspect_TypeOfLine#
 // Source: c:@S@Graphic3d_AspectLine3d@F@SetWidth#d#
+// Source: c:@S@Graphic3d_AspectLine3d@F@SetWidth#f#
 // Source: c:@S@Graphic3d_AspectLine3d@F@Type#1
+// Source: c:@S@Graphic3d_AspectLine3d@F@Width#1
+// Source: c:@S@Graphic3d_AspectMarker3d@F@DynamicType#1
+// Source: c:@S@Graphic3d_AspectMarker3d@F@GetMarkerImage#1
 // Source: c:@S@Graphic3d_AspectMarker3d@F@Graphic3d_AspectMarker3d#
 // Source: c:@S@Graphic3d_AspectMarker3d@F@Graphic3d_AspectMarker3d#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
+// Source: c:@S@Graphic3d_AspectMarker3d@F@Scale#1
 // Source: c:@S@Graphic3d_AspectMarker3d@F@SetScale#d#
+// Source: c:@S@Graphic3d_AspectMarker3d@F@SetScale#f#
 // Source: c:@S@Graphic3d_AspectMarker3d@F@SetType#$@E@Aspect_TypeOfMarker#
 // Source: c:@S@Graphic3d_AspectMarker3d@F@Type#1
 // Source: c:@S@Graphic3d_AspectText3d@F@DisplayType#1
+// Source: c:@S@Graphic3d_AspectText3d@F@DynamicType#1
+// Source: c:@S@Graphic3d_AspectText3d@F@GetTextAngle#1
 // Source: c:@S@Graphic3d_AspectText3d@F@GetTextFontAspect#1
 // Source: c:@S@Graphic3d_AspectText3d@F@GetTextZoomable#1
 // Source: c:@S@Graphic3d_AspectText3d@F@Graphic3d_AspectText3d#
@@ -915,16 +1089,25 @@
 // Source: c:@S@Graphic3d_AspectText3d@F@SetTextAngle#d#
 // Source: c:@S@Graphic3d_AspectText3d@F@Style#1
 // Source: c:@S@Graphic3d_Aspects@F@AllowBackFace#
+// Source: c:@S@Graphic3d_Aspects@F@AlphaCutoff#1
 // Source: c:@S@Graphic3d_Aspects@F@AlphaMode#1
 // Source: c:@S@Graphic3d_Aspects@F@BackFace#1
 // Source: c:@S@Graphic3d_Aspects@F@Distinguish#1
+// Source: c:@S@Graphic3d_Aspects@F@DynamicType#1
 // Source: c:@S@Graphic3d_Aspects@F@EdgeLineType#1
+// Source: c:@S@Graphic3d_Aspects@F@EdgeWidth#1
 // Source: c:@S@Graphic3d_Aspects@F@FaceCulling#1
 // Source: c:@S@Graphic3d_Aspects@F@Graphic3d_Aspects#
+// Source: c:@S@Graphic3d_Aspects@F@HatchStyle#1
 // Source: c:@S@Graphic3d_Aspects@F@InteriorStyle#1
 // Source: c:@S@Graphic3d_Aspects@F@IsMarkerSprite#1
 // Source: c:@S@Graphic3d_Aspects@F@IsTextZoomable#1
+// Source: c:@S@Graphic3d_Aspects@F@LinePattern#1
+// Source: c:@S@Graphic3d_Aspects@F@LineStippleFactor#1
 // Source: c:@S@Graphic3d_Aspects@F@LineType#1
+// Source: c:@S@Graphic3d_Aspects@F@LineWidth#1
+// Source: c:@S@Graphic3d_Aspects@F@MarkerImage#1
+// Source: c:@S@Graphic3d_Aspects@F@MarkerScale#1
 // Source: c:@S@Graphic3d_Aspects@F@MarkerType#1
 // Source: c:@S@Graphic3d_Aspects@F@SetDistinguish#b#
 // Source: c:@S@Graphic3d_Aspects@F@SetDistinguishOff#
@@ -939,13 +1122,19 @@
 // Source: c:@S@Graphic3d_Aspects@F@SetHatchStyle#$@E@Aspect_HatchStyle#
 // Source: c:@S@Graphic3d_Aspects@F@SetHatchStyle#&1$@N@opencascade@S@handle>#$@S@Graphic3d_HatchStyle#
 // Source: c:@S@Graphic3d_Aspects@F@SetInteriorStyle#$@E@Aspect_InteriorStyle#
+// Source: c:@S@Graphic3d_Aspects@F@SetLinePattern#s#
+// Source: c:@S@Graphic3d_Aspects@F@SetLineStippleFactor#s#
 // Source: c:@S@Graphic3d_Aspects@F@SetLineType#$@E@Aspect_TypeOfLine#
+// Source: c:@S@Graphic3d_Aspects@F@SetLineWidth#f#
 // Source: c:@S@Graphic3d_Aspects@F@SetMarkerImage#&1$@N@opencascade@S@handle>#$@S@Graphic3d_MarkerImage#
+// Source: c:@S@Graphic3d_Aspects@F@SetMarkerScale#f#
 // Source: c:@S@Graphic3d_Aspects@F@SetMarkerType#$@E@Aspect_TypeOfMarker#
+// Source: c:@S@Graphic3d_Aspects@F@SetPolygonOffsets#I#f#f#
 // Source: c:@S@Graphic3d_Aspects@F@SetShaderProgram#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ShaderProgram#
 // Source: c:@S@Graphic3d_Aspects@F@SetShadingModel#$@E@Graphic3d_TypeOfShadingModel#
 // Source: c:@S@Graphic3d_Aspects@F@SetSkipFirstEdge#b#
 // Source: c:@S@Graphic3d_Aspects@F@SetSuppressBackFaces#b#
+// Source: c:@S@Graphic3d_Aspects@F@SetTextAngle#f#
 // Source: c:@S@Graphic3d_Aspects@F@SetTextDisplayType#$@E@Aspect_TypeOfDisplayText#
 // Source: c:@S@Graphic3d_Aspects@F@SetTextFont#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#
 // Source: c:@S@Graphic3d_Aspects@F@SetTextFontAspect#$@E@Font_FontAspect#
@@ -957,19 +1146,24 @@
 // Source: c:@S@Graphic3d_Aspects@F@SetTextureMapOn#b#
 // Source: c:@S@Graphic3d_Aspects@F@SetTextureSet#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureSet#
 // Source: c:@S@Graphic3d_Aspects@F@SetUseVertexColorForBackFaces#b#
+// Source: c:@S@Graphic3d_Aspects@F@ShaderProgram#1
 // Source: c:@S@Graphic3d_Aspects@F@ShadingModel#1
 // Source: c:@S@Graphic3d_Aspects@F@SuppressBackFace#
+// Source: c:@S@Graphic3d_Aspects@F@TextAngle#1
 // Source: c:@S@Graphic3d_Aspects@F@TextDisplayType#1
+// Source: c:@S@Graphic3d_Aspects@F@TextFont#1
 // Source: c:@S@Graphic3d_Aspects@F@TextFontAspect#1
 // Source: c:@S@Graphic3d_Aspects@F@TextStyle#1
 // Source: c:@S@Graphic3d_Aspects@F@TextureMap#1
 // Source: c:@S@Graphic3d_Aspects@F@TextureMapState#1
+// Source: c:@S@Graphic3d_Aspects@F@TextureSet#1
 // Source: c:@S@Graphic3d_Aspects@F@ToDrawEdges#1
 // Source: c:@S@Graphic3d_Aspects@F@ToDrawSilhouette#1
 // Source: c:@S@Graphic3d_Aspects@F@ToMapTexture#1
 // Source: c:@S@Graphic3d_Aspects@F@ToSkipFirstEdge#1
 // Source: c:@S@Graphic3d_Aspects@F@ToSuppressBackFaces#1
 // Source: c:@S@Graphic3d_Aspects@F@ToUseVertexColorForBackFaces#1
+// Source: c:@S@Graphic3d_AttribBuffer@F@DynamicType#1
 // Source: c:@S@Graphic3d_AttribBuffer@F@Graphic3d_AttribBuffer#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#
 // Source: c:@S@Graphic3d_AttribBuffer@F@Invalidate#
 // Source: c:@S@Graphic3d_AttribBuffer@F@Invalidate#I#
@@ -980,9 +1174,11 @@
 // Source: c:@S@Graphic3d_AttribBuffer@F@SetInterleaved#b#
 // Source: c:@S@Graphic3d_AttribBuffer@F@SetMutable#b#
 // Source: c:@S@Graphic3d_AttribBuffer@F@Validate#
+// Source: c:@S@Graphic3d_BoundBuffer@F@DynamicType#1
 // Source: c:@S@Graphic3d_BoundBuffer@F@Graphic3d_BoundBuffer#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#
 // Source: c:@S@Graphic3d_BoundBuffer@F@Init#I#b#
 // Source: c:@S@Graphic3d_Buffer@F@AttributeOffset#I#1
+// Source: c:@S@Graphic3d_Buffer@F@DynamicType#1
 // Source: c:@S@Graphic3d_Buffer@F@FindAttribute#$@E@Graphic3d_TypeOfAttribute#1
 // Source: c:@S@Graphic3d_Buffer@F@Graphic3d_Buffer#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#
 // Source: c:@S@Graphic3d_Buffer@F@Invalidate#
@@ -992,11 +1188,14 @@
 // Source: c:@S@Graphic3d_Buffer@F@Validate#
 // Source: c:@S@Graphic3d_Buffer@F@release#
 // Source: c:@S@Graphic3d_CLight@F@CopyFrom#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#
+// Source: c:@S@Graphic3d_CLight@F@DisplayPosition#1
+// Source: c:@S@Graphic3d_CLight@F@DynamicType#1
 // Source: c:@S@Graphic3d_CLight@F@Graphic3d_CLight#$@E@Graphic3d_TypeOfLightSource#
 // Source: c:@S@Graphic3d_CLight@F@HasRange#1
 // Source: c:@S@Graphic3d_CLight@F@Headlight#1
 // Source: c:@S@Graphic3d_CLight@F@IsEnabled#1
 // Source: c:@S@Graphic3d_CLight@F@IsHeadlight#1
+// Source: c:@S@Graphic3d_CLight@F@Revision#1
 // Source: c:@S@Graphic3d_CLight@F@SetCastShadows#b#
 // Source: c:@S@Graphic3d_CLight@F@SetDirection#d#d#d#
 // Source: c:@S@Graphic3d_CLight@F@SetDisplayPosition#&1$@S@gp_Pnt#
@@ -1004,11 +1203,18 @@
 // Source: c:@S@Graphic3d_CLight@F@SetHeadlight#b#
 // Source: c:@S@Graphic3d_CLight@F@SetPosition#&1$@S@gp_Pnt#
 // Source: c:@S@Graphic3d_CLight@F@SetPosition#d#d#d#
+// Source: c:@S@Graphic3d_CLight@F@SetSmoothAngle#f#
+// Source: c:@S@Graphic3d_CLight@F@SetSmoothRadius#f#
+// Source: c:@S@Graphic3d_CLight@F@Smoothness#1
 // Source: c:@S@Graphic3d_CLight@F@ToCastShadows#1
 // Source: c:@S@Graphic3d_CLight@F@Type#1
 // Source: c:@S@Graphic3d_CStructure@F@BndBoxClipCheck#1
+// Source: c:@S@Graphic3d_CStructure@F@ClipPlanes#1
+// Source: c:@S@Graphic3d_CStructure@F@DynamicType#1
+// Source: c:@S@Graphic3d_CStructure@F@GraphicDriver#1
 // Source: c:@S@Graphic3d_CStructure@F@HasGroupFlipping#1
 // Source: c:@S@Graphic3d_CStructure@F@HasGroupTransformPersistence#1
+// Source: c:@S@Graphic3d_CStructure@F@HighlightStyle#1
 // Source: c:@S@Graphic3d_CStructure@F@Identification#1
 // Source: c:@S@Graphic3d_CStructure@F@IsAlwaysRendered#1
 // Source: c:@S@Graphic3d_CStructure@F@IsCulled#1
@@ -1027,19 +1233,27 @@
 // Source: c:@S@Graphic3d_CStructure@F@SetTransformPersistence#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TransformPers#
 // Source: c:@S@Graphic3d_CStructure@F@SetTransformation#&1$@N@opencascade@S@handle>#$@S@TopLoc_Datum3D#
 // Source: c:@S@Graphic3d_CStructure@F@SetZLayer#I#
+// Source: c:@S@Graphic3d_CStructure@F@TransformPersistence#1
+// Source: c:@S@Graphic3d_CStructure@F@Transformation#1
 // Source: c:@S@Graphic3d_CStructure@F@ZLayer#1
 // Source: c:@S@Graphic3d_CStructure@F@updateLayerTransformation#
 // Source: c:@S@Graphic3d_CView@F@Activate#
 // Source: c:@S@Graphic3d_CView@F@AddSubview#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CView#
 // Source: c:@S@Graphic3d_CView@F@BackfacingModel#1
+// Source: c:@S@Graphic3d_CView@F@BackgroundCubeMap#1
+// Source: c:@S@Graphic3d_CView@F@BackgroundImage#
 // Source: c:@S@Graphic3d_CView@F@BackgroundType#1
+// Source: c:@S@Graphic3d_CView@F@BaseXRCamera#1
+// Source: c:@S@Graphic3d_CView@F@Camera#1
 // Source: c:@S@Graphic3d_CView@F@Compute#
 // Source: c:@S@Graphic3d_CView@F@ComputedMode#1
 // Source: c:@S@Graphic3d_CView@F@ConsiderZoomPersistenceObjects#
 // Source: c:@S@Graphic3d_CView@F@CopySettings#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CView#
 // Source: c:@S@Graphic3d_CView@F@Deactivate#
+// Source: c:@S@Graphic3d_CView@F@DynamicType#1
 // Source: c:@S@Graphic3d_CView@F@GraduatedTrihedronErase#
 // Source: c:@S@Graphic3d_CView@F@GridErase#
+// Source: c:@S@Graphic3d_CView@F@IBLCubeMap#1
 // Source: c:@S@Graphic3d_CView@F@Identification#1
 // Source: c:@S@Graphic3d_CView@F@InitXR#
 // Source: c:@S@Graphic3d_CView@F@InvalidateZLayerBoundingBox#I#
@@ -1050,6 +1264,7 @@
 // Source: c:@S@Graphic3d_CView@F@IsSubview#1
 // Source: c:@S@Graphic3d_CView@F@IsSubviewComposer#1
 // Source: c:@S@Graphic3d_CView@F@NumberOfDisplayedStructures#1
+// Source: c:@S@Graphic3d_CView@F@PosedXRCamera#1
 // Source: c:@S@Graphic3d_CView@F@ProcessXRInput#
 // Source: c:@S@Graphic3d_CView@F@ReCompute#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
 // Source: c:@S@Graphic3d_CView@F@ReleaseXR#
@@ -1071,15 +1286,18 @@
 // Source: c:@S@Graphic3d_CView@F@SetZLayerTarget#I#
 // Source: c:@S@Graphic3d_CView@F@SetupXRPosedCamera#
 // Source: c:@S@Graphic3d_CView@F@ShadingModel#1
+// Source: c:@S@Graphic3d_CView@F@StructureManager#1
 // Source: c:@S@Graphic3d_CView@F@SubviewCorner#1
 // Source: c:@S@Graphic3d_CView@F@SubviewResized#&1$@N@opencascade@S@handle>#$@S@Aspect_NeutralWindow#
 // Source: c:@S@Graphic3d_CView@F@SynchronizeXRBaseToPosedCamera#
 // Source: c:@S@Graphic3d_CView@F@SynchronizeXRPosedToBaseCamera#
+// Source: c:@S@Graphic3d_CView@F@TextureEnv#1
 // Source: c:@S@Graphic3d_CView@F@ToFlipOutput#1
 // Source: c:@S@Graphic3d_CView@F@UnitFactor#1
 // Source: c:@S@Graphic3d_CView@F@UnsetXRPosedCamera#
 // Source: c:@S@Graphic3d_CView@F@Update#I#
 // Source: c:@S@Graphic3d_CView@F@VisualizationType#1
+// Source: c:@S@Graphic3d_CView@F@XRSession#1
 // Source: c:@S@Graphic3d_CView@F@ZLayerRedrawMode#1
 // Source: c:@S@Graphic3d_CView@F@ZLayerTarget#1
 // Source: c:@S@Graphic3d_Camera@F@Aspect#1
@@ -1092,6 +1310,7 @@
 // Source: c:@S@Graphic3d_Camera@F@CopyMappingData#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@Graphic3d_Camera@F@CopyOrientationData#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@Graphic3d_Camera@F@Distance#1
+// Source: c:@S@Graphic3d_Camera@F@DynamicType#1
 // Source: c:@S@Graphic3d_Camera@F@FOV2d#1
 // Source: c:@S@Graphic3d_Camera@F@FOVx#1
 // Source: c:@S@Graphic3d_Camera@F@FOVy#1
@@ -1112,6 +1331,7 @@
 // Source: c:@S@Graphic3d_Camera@F@NDC2dOffsetY#1
 // Source: c:@S@Graphic3d_Camera@F@OrthogonalizeUp#
 // Source: c:@S@Graphic3d_Camera@F@Project#&1$@S@gp_Pnt#1
+// Source: c:@S@Graphic3d_Camera@F@ProjectionState#1
 // Source: c:@S@Graphic3d_Camera@F@ProjectionType#1
 // Source: c:@S@Graphic3d_Camera@F@ResetCustomProjection#
 // Source: c:@S@Graphic3d_Camera@F@Scale#1
@@ -1130,19 +1350,26 @@
 // Source: c:@S@Graphic3d_Camera@F@SetZRange#d#d#
 // Source: c:@S@Graphic3d_Camera@F@SetZeroToOneDepth#b#
 // Source: c:@S@Graphic3d_Camera@F@UnProject#&1$@S@gp_Pnt#1
+// Source: c:@S@Graphic3d_Camera@F@WorldViewState#1
 // Source: c:@S@Graphic3d_Camera@F@ZFar#1
 // Source: c:@S@Graphic3d_Camera@F@ZFocus#1
 // Source: c:@S@Graphic3d_Camera@F@ZFocusType#1
 // Source: c:@S@Graphic3d_Camera@F@ZNear#1
+// Source: c:@S@Graphic3d_ClipPlane@F@CappingAspect#1
+// Source: c:@S@Graphic3d_ClipPlane@F@CappingCustomHatch#1
 // Source: c:@S@Graphic3d_ClipPlane@F@CappingHatch#1
 // Source: c:@S@Graphic3d_ClipPlane@F@CappingTexture#1
+// Source: c:@S@Graphic3d_ClipPlane@F@ChainNextPlane#1
 // Source: c:@S@Graphic3d_ClipPlane@F@ChainPreviousPlane#1
 // Source: c:@S@Graphic3d_ClipPlane@F@Clone#1
+// Source: c:@S@Graphic3d_ClipPlane@F@DynamicType#1
 // Source: c:@S@Graphic3d_ClipPlane@F@Graphic3d_ClipPlane#
 // Source: c:@S@Graphic3d_ClipPlane@F@IsCapping#1
 // Source: c:@S@Graphic3d_ClipPlane@F@IsChain#1
 // Source: c:@S@Graphic3d_ClipPlane@F@IsHatchOn#1
 // Source: c:@S@Graphic3d_ClipPlane@F@IsOn#1
+// Source: c:@S@Graphic3d_ClipPlane@F@MCountAspect#1
+// Source: c:@S@Graphic3d_ClipPlane@F@MCountEquation#1
 // Source: c:@S@Graphic3d_ClipPlane@F@NbChainNextPlanes#1
 // Source: c:@S@Graphic3d_ClipPlane@F@SetCapping#b#
 // Source: c:@S@Graphic3d_ClipPlane@F@SetCappingAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_AspectFillArea3d#
@@ -1161,6 +1388,7 @@
 // Source: c:@S@Graphic3d_ClipPlane@F@ToUseObjectShader#1
 // Source: c:@S@Graphic3d_ClipPlane@F@ToUseObjectTexture#1
 // Source: c:@S@Graphic3d_CubeMap@F@CurrentSide#1
+// Source: c:@S@Graphic3d_CubeMap@F@DynamicType#1
 // Source: c:@S@Graphic3d_CubeMap@F@HasMipmaps#1
 // Source: c:@S@Graphic3d_CubeMap@F@More#1
 // Source: c:@S@Graphic3d_CubeMap@F@Next#
@@ -1168,11 +1396,17 @@
 // Source: c:@S@Graphic3d_CubeMap@F@SetZInversion#b#
 // Source: c:@S@Graphic3d_CubeMap@F@ZIsInverted#1
 // Source: c:@S@Graphic3d_CubeMapPacked@F@CompressedValue#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
+// Source: c:@S@Graphic3d_CubeMapPacked@F@DynamicType#1
 // Source: c:@S@Graphic3d_CubeMapPacked@F@Value#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
 // Source: c:@S@Graphic3d_CubeMapSeparate@F@CompressedValue#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
+// Source: c:@S@Graphic3d_CubeMapSeparate@F@DynamicType#1
 // Source: c:@S@Graphic3d_CubeMapSeparate@F@GetImage#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
 // Source: c:@S@Graphic3d_CubeMapSeparate@F@IsDone#1
 // Source: c:@S@Graphic3d_CubeMapSeparate@F@Value#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
+// Source: c:@S@Graphic3d_DataStructureManager@F@DynamicType#1
+// Source: c:@S@Graphic3d_Flipper@F@DynamicType#1
+// Source: c:@S@Graphic3d_FrameStats@F@CounterValue#$@E@Graphic3d_FrameStatsCounter#1
+// Source: c:@S@Graphic3d_FrameStats@F@DynamicType#1
 // Source: c:@S@Graphic3d_FrameStats@F@FrameDuration#1
 // Source: c:@S@Graphic3d_FrameStats@F@FrameEnd#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CView#b#
 // Source: c:@S@Graphic3d_FrameStats@F@FrameRate#1
@@ -1186,15 +1420,20 @@
 // Source: c:@S@Graphic3d_FrameStats@F@SetUpdateInterval#d#
 // Source: c:@S@Graphic3d_FrameStats@F@TimerValue#$@E@Graphic3d_FrameStatsTimer#1
 // Source: c:@S@Graphic3d_FrameStats@F@UpdateInterval#1
+// Source: c:@S@Graphic3d_GraphicDriver@F@DynamicType#1
+// Source: c:@S@Graphic3d_GraphicDriver@F@GetDisplayConnection#1
 // Source: c:@S@Graphic3d_GraphicDriver@F@InquireLightLimit#1
 // Source: c:@S@Graphic3d_GraphicDriver@F@InquirePlaneLimit#1
 // Source: c:@S@Graphic3d_GraphicDriver@F@InquireViewLimit#1
 // Source: c:@S@Graphic3d_GraphicDriver@F@NewIdentification#
 // Source: c:@S@Graphic3d_GraphicDriver@F@RemoveIdentification#I#
+// Source: c:@S@Graphic3d_GraphicDriverFactory@F@DynamicType#1
 // Source: c:@S@Graphic3d_Group@F@AddPrimitiveArray#$@E@Graphic3d_TypeOfPrimitiveArray#&1$@N@opencascade@S@handle>#$@S@Graphic3d_IndexBuffer#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Buffer#&1$@N@opencascade@S@handle>#$@S@Graphic3d_BoundBuffer#b#
 // Source: c:@S@Graphic3d_Group@F@AddPrimitiveArray#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ArrayOfPrimitives#b#
 // Source: c:@S@Graphic3d_Group@F@AddText#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Text#b#
 // Source: c:@S@Graphic3d_Group@F@Clear#b#
+// Source: c:@S@Graphic3d_Group@F@DynamicType#1
+// Source: c:@S@Graphic3d_Group@F@Flipper#1
 // Source: c:@S@Graphic3d_Group@F@IsClosed#1
 // Source: c:@S@Graphic3d_Group@F@IsDeleted#1
 // Source: c:@S@Graphic3d_Group@F@IsEmpty#1
@@ -1203,13 +1442,17 @@
 // Source: c:@S@Graphic3d_Group@F@SetMinMaxValues#d#d#d#d#d#d#
 // Source: c:@S@Graphic3d_Group@F@SetTransformPersistence#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TransformPers#
 // Source: c:@S@Graphic3d_Group@F@Structure#1
+// Source: c:@S@Graphic3d_Group@F@TransformPersistence#1
+// Source: c:@S@Graphic3d_HatchStyle@F@DynamicType#1
 // Source: c:@S@Graphic3d_HatchStyle@F@Graphic3d_HatchStyle#$@E@Aspect_HatchStyle#
 // Source: c:@S@Graphic3d_HatchStyle@F@Graphic3d_HatchStyle#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
 // Source: c:@S@Graphic3d_HatchStyle@F@HatchType#1
+// Source: c:@S@Graphic3d_IndexBuffer@F@DynamicType#1
 // Source: c:@S@Graphic3d_IndexBuffer@F@Graphic3d_IndexBuffer#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#
 // Source: c:@S@Graphic3d_IndexBuffer@F@Index#I#1
 // Source: c:@S@Graphic3d_IndexBuffer@F@InitInt32#I#
 // Source: c:@S@Graphic3d_IndexBuffer@F@SetIndex#I#I#
+// Source: c:@S@Graphic3d_Layer@F@DynamicType#1
 // Source: c:@S@Graphic3d_Layer@F@InvalidateBVHData#
 // Source: c:@S@Graphic3d_Layer@F@InvalidateBoundingBox#1
 // Source: c:@S@Graphic3d_Layer@F@IsCulled#1
@@ -1222,6 +1465,7 @@
 // Source: c:@S@Graphic3d_Layer@F@considerZoomPersistenceObjects#I#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#I#I#1
 // Source: c:@S@Graphic3d_LightSet@F@Add#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#
 // Source: c:@S@Graphic3d_LightSet@F@Contains#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#1
+// Source: c:@S@Graphic3d_LightSet@F@DynamicType#1
 // Source: c:@S@Graphic3d_LightSet@F@Extent#1
 // Source: c:@S@Graphic3d_LightSet@F@Graphic3d_LightSet#
 // Source: c:@S@Graphic3d_LightSet@F@IsEmpty#1
@@ -1231,42 +1475,61 @@
 // Source: c:@S@Graphic3d_LightSet@F@NbEnabledLightsOfType#$@E@Graphic3d_TypeOfLightSource#1
 // Source: c:@S@Graphic3d_LightSet@F@NbLightsOfType#$@E@Graphic3d_TypeOfLightSource#1
 // Source: c:@S@Graphic3d_LightSet@F@Remove#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#
+// Source: c:@S@Graphic3d_LightSet@F@Revision#1
+// Source: c:@S@Graphic3d_LightSet@F@UpdateRevision#
 // Source: c:@S@Graphic3d_LightSet@F@Upper#1
+// Source: c:@S@Graphic3d_LightSet@F@Value#I#1
+// Source: c:@S@Graphic3d_MarkerImage@F@DynamicType#1
+// Source: c:@S@Graphic3d_MarkerImage@F@GetImage#
+// Source: c:@S@Graphic3d_MarkerImage@F@GetImageAlpha#
 // Source: c:@S@Graphic3d_MarkerImage@F@Graphic3d_MarkerImage#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#S0_#
 // Source: c:@S@Graphic3d_MarkerImage@F@IsColoredImage#1
+// Source: c:@S@Graphic3d_MediaTexture@F@DynamicType#1
+// Source: c:@S@Graphic3d_MediaTexture@F@Frame#1
 // Source: c:@S@Graphic3d_MediaTexture@F@GenerateNewId#
 // Source: c:@S@Graphic3d_MediaTexture@F@GetImage#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
 // Source: c:@S@Graphic3d_MediaTexture@F@SetFrame#&1$@N@opencascade@S@handle>#$@S@Media_Frame#
 // Source: c:@S@Graphic3d_MediaTextureSet@F@Duration#1
+// Source: c:@S@Graphic3d_MediaTextureSet@F@DynamicType#1
 // Source: c:@S@Graphic3d_MediaTextureSet@F@Graphic3d_MediaTextureSet#
 // Source: c:@S@Graphic3d_MediaTextureSet@F@IsFullRangeYUV#1
 // Source: c:@S@Graphic3d_MediaTextureSet@F@IsPlanarYUV#1
 // Source: c:@S@Graphic3d_MediaTextureSet@F@Notify#
+// Source: c:@S@Graphic3d_MediaTextureSet@F@PlayerContext#1
 // Source: c:@S@Graphic3d_MediaTextureSet@F@Progress#1
 // Source: c:@S@Graphic3d_MediaTextureSet@F@ShaderProgram#1
 // Source: c:@S@Graphic3d_MediaTextureSet@F@SwapFrames#
+// Source: c:@S@Graphic3d_MutableIndexBuffer@F@DynamicType#1
 // Source: c:@S@Graphic3d_MutableIndexBuffer@F@Graphic3d_MutableIndexBuffer#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#
 // Source: c:@S@Graphic3d_MutableIndexBuffer@F@Invalidate#
 // Source: c:@S@Graphic3d_MutableIndexBuffer@F@Invalidate#I#I#
 // Source: c:@S@Graphic3d_MutableIndexBuffer@F@IsMutable#1
 // Source: c:@S@Graphic3d_MutableIndexBuffer@F@Validate#
+// Source: c:@S@Graphic3d_PresentationAttributes@F@BasicFillAreaAspect#1
 // Source: c:@S@Graphic3d_PresentationAttributes@F@DisplayMode#1
+// Source: c:@S@Graphic3d_PresentationAttributes@F@DynamicType#1
 // Source: c:@S@Graphic3d_PresentationAttributes@F@Graphic3d_PresentationAttributes#
 // Source: c:@S@Graphic3d_PresentationAttributes@F@Method#1
 // Source: c:@S@Graphic3d_PresentationAttributes@F@SetBasicFillAreaAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_AspectFillArea3d#
 // Source: c:@S@Graphic3d_PresentationAttributes@F@SetDisplayMode#I#
 // Source: c:@S@Graphic3d_PresentationAttributes@F@SetMethod#$@E@Aspect_TypeOfHighlightMethod#
+// Source: c:@S@Graphic3d_PresentationAttributes@F@SetTransparency#f#
 // Source: c:@S@Graphic3d_PresentationAttributes@F@SetZLayer#I#
+// Source: c:@S@Graphic3d_PresentationAttributes@F@Transparency#1
 // Source: c:@S@Graphic3d_PresentationAttributes@F@ZLayer#1
 // Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@Append#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ClipPlane#
 // Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@Clear#
+// Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@DynamicType#1
+// Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@First#1
 // Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@Graphic3d_SequenceOfHClipPlane#
 // Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@IsEmpty#1
 // Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@Remove#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ClipPlane#
 // Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@SetOverrideGlobal#b#
 // Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@Size#1
 // Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@ToOverrideGlobal#1
+// Source: c:@S@Graphic3d_ShaderAttribute@F@DynamicType#1
 // Source: c:@S@Graphic3d_ShaderAttribute@F@Location#1
+// Source: c:@S@Graphic3d_ShaderManager@F@DynamicType#1
 // Source: c:@S@Graphic3d_ShaderManager@F@EnableGlslExtension#$@E@Graphic3d_GlslExtension#b#
 // Source: c:@S@Graphic3d_ShaderManager@F@GapiVersionMajor#1
 // Source: c:@S@Graphic3d_ShaderManager@F@GapiVersionMinor#1
@@ -1281,11 +1544,13 @@
 // Source: c:@S@Graphic3d_ShaderManager@F@ToEmulateDepthClamp#1
 // Source: c:@S@Graphic3d_ShaderManager@F@ToReverseDFdxSign#1
 // Source: c:@S@Graphic3d_ShaderManager@F@UseRedAlpha#1
+// Source: c:@S@Graphic3d_ShaderObject@F@DynamicType#1
 // Source: c:@S@Graphic3d_ShaderObject@F@IsDone#1
 // Source: c:@S@Graphic3d_ShaderObject@F@Type#1
 // Source: c:@S@Graphic3d_ShaderProgram@F@AttachShader#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ShaderObject#
 // Source: c:@S@Graphic3d_ShaderProgram@F@ClearVariables#
 // Source: c:@S@Graphic3d_ShaderProgram@F@DetachShader#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ShaderObject#
+// Source: c:@S@Graphic3d_ShaderProgram@F@DynamicType#1
 // Source: c:@S@Graphic3d_ShaderProgram@F@Graphic3d_ShaderProgram#
 // Source: c:@S@Graphic3d_ShaderProgram@F@HasAlphaTest#1
 // Source: c:@S@Graphic3d_ShaderProgram@F@HasDefaultSampler#1
@@ -1306,9 +1571,12 @@
 // Source: c:@S@Graphic3d_ShaderProgram@F@SetPBR#b#
 // Source: c:@S@Graphic3d_ShaderProgram@F@SetTextureSetBits#I#
 // Source: c:@S@Graphic3d_ShaderProgram@F@TextureSetBits#1
+// Source: c:@S@Graphic3d_ShaderVariable@F@DynamicType#1
 // Source: c:@S@Graphic3d_ShaderVariable@F@IsDone#1
+// Source: c:@S@Graphic3d_Structure@F@CStructure#1
 // Source: c:@S@Graphic3d_Structure@F@CalculateBoundBox#
 // Source: c:@S@Graphic3d_Structure@F@Clear#b#
+// Source: c:@S@Graphic3d_Structure@F@ClipPlanes#1
 // Source: c:@S@Graphic3d_Structure@F@Compute#
 // Source: c:@S@Graphic3d_Structure@F@ComputeVisual#1
 // Source: c:@S@Graphic3d_Structure@F@Connect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
@@ -1316,6 +1584,7 @@
 // Source: c:@S@Graphic3d_Structure@F@DisconnectAll#$@E@Graphic3d_TypeOfConnection#
 // Source: c:@S@Graphic3d_Structure@F@Display#
 // Source: c:@S@Graphic3d_Structure@F@DisplayPriority#1
+// Source: c:@S@Graphic3d_Structure@F@DynamicType#1
 // Source: c:@S@Graphic3d_Structure@F@Erase#
 // Source: c:@S@Graphic3d_Structure@F@GetZLayer#1
 // Source: c:@S@Graphic3d_Structure@F@Graphic3d_Structure#&1$@N@opencascade@S@handle>#$@S@Graphic3d_StructureManager#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
@@ -1325,6 +1594,7 @@
 // Source: c:@S@Graphic3d_Structure@F@GraphicTransform#&1$@N@opencascade@S@handle>#$@S@TopLoc_Datum3D#
 // Source: c:@S@Graphic3d_Structure@F@HLRValidation#1
 // Source: c:@S@Graphic3d_Structure@F@Highlight#&1$@N@opencascade@S@handle>#$@S@Graphic3d_PresentationAttributes#b#
+// Source: c:@S@Graphic3d_Structure@F@HighlightStyle#1
 // Source: c:@S@Graphic3d_Structure@F@Identification#1
 // Source: c:@S@Graphic3d_Structure@F@IsDeleted#1
 // Source: c:@S@Graphic3d_Structure@F@IsDisplayed#1
@@ -1357,18 +1627,23 @@
 // Source: c:@S@Graphic3d_Structure@F@SetVisual#$@E@Graphic3d_TypeOfStructure#
 // Source: c:@S@Graphic3d_Structure@F@SetZLayer#I#
 // Source: c:@S@Graphic3d_Structure@F@SetZoomLimit#d#d#
+// Source: c:@S@Graphic3d_Structure@F@TransformPersistence#1
+// Source: c:@S@Graphic3d_Structure@F@Transformation#1
 // Source: c:@S@Graphic3d_Structure@F@UnHighlight#
 // Source: c:@S@Graphic3d_Structure@F@Visual#1
 // Source: c:@S@Graphic3d_StructureManager@F@ChangeDisplayPriority#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#$@E@Graphic3d_DisplayPriority#S3_#
 // Source: c:@S@Graphic3d_StructureManager@F@ChangeZLayer#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#I#
 // Source: c:@S@Graphic3d_StructureManager@F@Display#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
+// Source: c:@S@Graphic3d_StructureManager@F@DynamicType#1
 // Source: c:@S@Graphic3d_StructureManager@F@Erase#
 // Source: c:@S@Graphic3d_StructureManager@F@Erase#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
 // Source: c:@S@Graphic3d_StructureManager@F@Graphic3d_StructureManager#&1$@N@opencascade@S@handle>#$@S@Graphic3d_GraphicDriver#
+// Source: c:@S@Graphic3d_StructureManager@F@GraphicDriver#1
 // Source: c:@S@Graphic3d_StructureManager@F@Highlight#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
 // Source: c:@S@Graphic3d_StructureManager@F@Identification#I#1
 // Source: c:@S@Graphic3d_StructureManager@F@IsDeviceLost#1
 // Source: c:@S@Graphic3d_StructureManager@F@MaxNumOfViews#1
+// Source: c:@S@Graphic3d_StructureManager@F@ObjectAffinity#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1
 // Source: c:@S@Graphic3d_StructureManager@F@ReCompute#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
 // Source: c:@S@Graphic3d_StructureManager@F@ReCompute#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#&1$@N@opencascade@S@handle>#$@S@Graphic3d_DataStructureManager#
 // Source: c:@S@Graphic3d_StructureManager@F@RecomputeStructures#
@@ -1380,32 +1655,51 @@
 // Source: c:@S@Graphic3d_StructureManager@F@UnHighlight#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
 // Source: c:@S@Graphic3d_StructureManager@F@UnregisterObject#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#
 // Source: c:@S@Graphic3d_StructureManager@F@Update#I#1
+// Source: c:@S@Graphic3d_Text@F@DynamicType#1
+// Source: c:@S@Graphic3d_Text@F@Graphic3d_Text#f#
 // Source: c:@S@Graphic3d_Text@F@HasOwnAnchorPoint#1
 // Source: c:@S@Graphic3d_Text@F@HasPlane#1
+// Source: c:@S@Graphic3d_Text@F@Height#1
 // Source: c:@S@Graphic3d_Text@F@HorizontalAlignment#1
+// Source: c:@S@Graphic3d_Text@F@Position#1
 // Source: c:@S@Graphic3d_Text@F@ResetOrientation#
+// Source: c:@S@Graphic3d_Text@F@SetHeight#f#
 // Source: c:@S@Graphic3d_Text@F@SetHorizontalAlignment#$@E@Graphic3d_HorizontalTextAlignment#
 // Source: c:@S@Graphic3d_Text@F@SetOwnAnchorPoint#b#
 // Source: c:@S@Graphic3d_Text@F@SetPosition#&1$@S@gp_Pnt#
 // Source: c:@S@Graphic3d_Text@F@SetTextFormatter#&1$@N@opencascade@S@handle>#$@S@Font_TextFormatter#
 // Source: c:@S@Graphic3d_Text@F@SetVerticalAlignment#$@E@Graphic3d_VerticalTextAlignment#
+// Source: c:@S@Graphic3d_Text@F@TextFormatter#1
 // Source: c:@S@Graphic3d_Text@F@VerticalAlignment#1
+// Source: c:@S@Graphic3d_Texture1D@F@DynamicType#1
 // Source: c:@S@Graphic3d_Texture1D@F@Name#1
+// Source: c:@S@Graphic3d_Texture1Dmanual@F@DynamicType#1
 // Source: c:@S@Graphic3d_Texture1Dmanual@F@Graphic3d_Texture1Dmanual#$@E@Graphic3d_NameOfTexture1D#
 // Source: c:@S@Graphic3d_Texture1Dmanual@F@Graphic3d_Texture1Dmanual#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
+// Source: c:@S@Graphic3d_Texture1Dsegment@F@DynamicType#1
 // Source: c:@S@Graphic3d_Texture1Dsegment@F@Graphic3d_Texture1Dsegment#$@E@Graphic3d_NameOfTexture1D#
 // Source: c:@S@Graphic3d_Texture1Dsegment@F@Graphic3d_Texture1Dsegment#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
+// Source: c:@S@Graphic3d_Texture1Dsegment@F@SetSegment#f#f#f#f#f#f#
+// Source: c:@S@Graphic3d_Texture2D@F@DynamicType#1
 // Source: c:@S@Graphic3d_Texture2D@F@Graphic3d_Texture2D#$@E@Graphic3d_NameOfTexture2D#
 // Source: c:@S@Graphic3d_Texture2D@F@Graphic3d_Texture2D#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
 // Source: c:@S@Graphic3d_Texture2D@F@Name#1
 // Source: c:@S@Graphic3d_Texture2D@F@SetImage#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
+// Source: c:@S@Graphic3d_Texture2Dplane@F@DynamicType#1
 // Source: c:@S@Graphic3d_Texture2Dplane@F@Graphic3d_Texture2Dplane#$@E@Graphic3d_NameOfTexture2D#
 // Source: c:@S@Graphic3d_Texture2Dplane@F@Graphic3d_Texture2Dplane#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
 // Source: c:@S@Graphic3d_Texture2Dplane@F@Plane#1
 // Source: c:@S@Graphic3d_Texture2Dplane@F@SetPlane#$@E@Graphic3d_NameOfTexturePlane#
+// Source: c:@S@Graphic3d_Texture2Dplane@F@SetRotation#f#
+// Source: c:@S@Graphic3d_Texture2Dplane@F@SetScaleS#f#
+// Source: c:@S@Graphic3d_Texture2Dplane@F@SetScaleT#f#
+// Source: c:@S@Graphic3d_Texture2Dplane@F@SetTranslateS#f#
+// Source: c:@S@Graphic3d_Texture2Dplane@F@SetTranslateT#f#
+// Source: c:@S@Graphic3d_Texture3D@F@DynamicType#1
 // Source: c:@S@Graphic3d_Texture3D@F@GetImage#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
 // Source: c:@S@Graphic3d_Texture3D@F@Graphic3d_Texture3D#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
 // Source: c:@S@Graphic3d_Texture3D@F@SetImage#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
+// Source: c:@S@Graphic3d_TextureEnv@F@DynamicType#1
 // Source: c:@S@Graphic3d_TextureEnv@F@Graphic3d_TextureEnv#$@E@Graphic3d_NameOfTextureEnv#
 // Source: c:@S@Graphic3d_TextureEnv@F@Graphic3d_TextureEnv#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
 // Source: c:@S@Graphic3d_TextureEnv@F@Name#1
@@ -1413,6 +1707,7 @@
 // Source: c:@S@Graphic3d_TextureMap@F@DisableModulate#
 // Source: c:@S@Graphic3d_TextureMap@F@DisableRepeat#
 // Source: c:@S@Graphic3d_TextureMap@F@DisableSmooth#
+// Source: c:@S@Graphic3d_TextureMap@F@DynamicType#1
 // Source: c:@S@Graphic3d_TextureMap@F@EnableModulate#
 // Source: c:@S@Graphic3d_TextureMap@F@EnableRepeat#
 // Source: c:@S@Graphic3d_TextureMap@F@EnableSmooth#
@@ -1422,12 +1717,15 @@
 // Source: c:@S@Graphic3d_TextureMap@F@SetAnisoFilter#$@E@Graphic3d_LevelOfTextureAnisotropy#
 // Source: c:@S@Graphic3d_TextureParams@F@AnisoFilter#1
 // Source: c:@S@Graphic3d_TextureParams@F@BaseLevel#1
+// Source: c:@S@Graphic3d_TextureParams@F@DynamicType#1
 // Source: c:@S@Graphic3d_TextureParams@F@Filter#1
 // Source: c:@S@Graphic3d_TextureParams@F@GenMode#1
 // Source: c:@S@Graphic3d_TextureParams@F@Graphic3d_TextureParams#
 // Source: c:@S@Graphic3d_TextureParams@F@IsModulate#1
 // Source: c:@S@Graphic3d_TextureParams@F@IsRepeat#1
 // Source: c:@S@Graphic3d_TextureParams@F@MaxLevel#1
+// Source: c:@S@Graphic3d_TextureParams@F@Rotation#1
+// Source: c:@S@Graphic3d_TextureParams@F@SamplerRevision#1
 // Source: c:@S@Graphic3d_TextureParams@F@SetAnisoFilter#$@E@Graphic3d_LevelOfTextureAnisotropy#
 // Source: c:@S@Graphic3d_TextureParams@F@SetFilter#$@E@Graphic3d_TypeOfTextureFilter#
 // Source: c:@S@Graphic3d_TextureParams@F@SetLevelsRange#I#I#
@@ -1435,16 +1733,21 @@
 // Source: c:@S@Graphic3d_TextureParams@F@SetRepeat#b#
 // Source: c:@S@Graphic3d_TextureParams@F@SetTextureUnit#$@E@Graphic3d_TextureUnit#
 // Source: c:@S@Graphic3d_TextureParams@F@TextureUnit#1
+// Source: c:@S@Graphic3d_TextureRoot@F@DynamicType#1
 // Source: c:@S@Graphic3d_TextureRoot@F@GetCompressedImage#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
 // Source: c:@S@Graphic3d_TextureRoot@F@GetImage#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
+// Source: c:@S@Graphic3d_TextureRoot@F@GetParams#1
 // Source: c:@S@Graphic3d_TextureRoot@F@HasMipmaps#1
 // Source: c:@S@Graphic3d_TextureRoot@F@IsColorMap#1
 // Source: c:@S@Graphic3d_TextureRoot@F@IsDone#1
 // Source: c:@S@Graphic3d_TextureRoot@F@IsTopDown#1
+// Source: c:@S@Graphic3d_TextureRoot@F@Revision#1
 // Source: c:@S@Graphic3d_TextureRoot@F@SetColorMap#b#
 // Source: c:@S@Graphic3d_TextureRoot@F@SetMipmapsGeneration#b#
 // Source: c:@S@Graphic3d_TextureRoot@F@Type#1
 // Source: c:@S@Graphic3d_TextureRoot@F@UpdateRevision#
+// Source: c:@S@Graphic3d_TextureSet@F@DynamicType#1
+// Source: c:@S@Graphic3d_TextureSet@F@First#1
 // Source: c:@S@Graphic3d_TextureSet@F@Graphic3d_TextureSet#
 // Source: c:@S@Graphic3d_TextureSet@F@Graphic3d_TextureSet#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureMap#
 // Source: c:@S@Graphic3d_TextureSet@F@Graphic3d_TextureSet#I#
@@ -1454,8 +1757,10 @@
 // Source: c:@S@Graphic3d_TextureSet@F@SetValue#I#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureMap#
 // Source: c:@S@Graphic3d_TextureSet@F@Size#1
 // Source: c:@S@Graphic3d_TextureSet@F@Upper#1
+// Source: c:@S@Graphic3d_TextureSet@F@Value#I#1
 // Source: c:@S@Graphic3d_TransformPers@F@AnchorPoint#1
 // Source: c:@S@Graphic3d_TransformPers@F@Corner2d#1
+// Source: c:@S@Graphic3d_TransformPers@F@DynamicType#1
 // Source: c:@S@Graphic3d_TransformPers@F@Flags#1
 // Source: c:@S@Graphic3d_TransformPers@F@Graphic3d_TransformPers#$@E@Graphic3d_TransModeFlags#
 // Source: c:@S@Graphic3d_TransformPers@F@Graphic3d_TransformPers#$@E@Graphic3d_TransModeFlags#&1$@S@gp_Pnt#
@@ -1468,17 +1773,24 @@
 // Source: c:@S@Graphic3d_TransformPers@F@SetCorner2d#$@E@Aspect_TypeOfTriedronPosition#
 // Source: c:@S@Graphic3d_TransformPers@F@SetPersistence#$@E@Graphic3d_TransModeFlags#&1$@S@gp_Pnt#
 // Source: c:@S@Graphic3d_TransformPers@F@persistentScale#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#I#I#1
+// Source: c:@S@Graphic3d_TransformPersScaledAbove@F@DynamicType#1
 // Source: c:@S@Graphic3d_TransformPersScaledAbove@F@Graphic3d_TransformPersScaledAbove#d#&1$@S@gp_Pnt#
 // Source: c:@S@Graphic3d_TransformPersScaledAbove@F@persistentScale#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#I#I#1
+// Source: c:@S@Graphic3d_ViewAffinity@F@DynamicType#1
 // Source: c:@S@Graphic3d_ViewAffinity@F@Graphic3d_ViewAffinity#
 // Source: c:@S@Graphic3d_ViewAffinity@F@IsVisible#I#1
 // Source: c:@S@Graphic3d_ViewAffinity@F@SetVisible#I#b#
 // Source: c:@S@Graphic3d_ViewAffinity@F@SetVisible#b#
 // Source: c:@S@Image_AlienPixMap@F@AdjustGamma#d#
 // Source: c:@S@Image_AlienPixMap@F@Clear#
+// Source: c:@S@Image_AlienPixMap@F@DynamicType#1
 // Source: c:@S@Image_AlienPixMap@F@Image_AlienPixMap#
+// Source: c:@S@Image_AlienPixMap@F@InitTrash#$@E@Image_Format#k#k#k#
 // Source: c:@S@Image_CompressedPixMap@F@BaseFormat#1
 // Source: c:@S@Image_CompressedPixMap@F@CompressedFormat#1
+// Source: c:@S@Image_CompressedPixMap@F@DynamicType#1
+// Source: c:@S@Image_CompressedPixMap@F@FaceBytes#1
+// Source: c:@S@Image_CompressedPixMap@F@FaceData#1
 // Source: c:@S@Image_CompressedPixMap@F@Image_CompressedPixMap#
 // Source: c:@S@Image_CompressedPixMap@F@IsCompleteMipMapSet#1
 // Source: c:@S@Image_CompressedPixMap@F@IsTopDown#1
@@ -1486,6 +1798,7 @@
 // Source: c:@S@Image_CompressedPixMap@F@SetBaseFormat#$@E@Image_Format#
 // Source: c:@S@Image_CompressedPixMap@F@SetCompleteMipMapSet#b#
 // Source: c:@S@Image_CompressedPixMap@F@SetCompressedFormat#$@E@Image_CompressedFormat#
+// Source: c:@S@Image_CompressedPixMap@F@SetFaceBytes#k#
 // Source: c:@S@Image_CompressedPixMap@F@SetFaceData#&1$@N@opencascade@S@handle>#$@S@NCollection_Buffer#
 // Source: c:@S@Image_CompressedPixMap@F@SetNbFaces#I#
 // Source: c:@S@Image_CompressedPixMap@F@SetSize#I#I#
@@ -1493,40 +1806,65 @@
 // Source: c:@S@Image_CompressedPixMap@F@SizeY#1
 // Source: c:@S@Image_Diff@F@ColorTolerance#1
 // Source: c:@S@Image_Diff@F@Compare#
+// Source: c:@S@Image_Diff@F@DynamicType#1
 // Source: c:@S@Image_Diff@F@Image_Diff#
 // Source: c:@S@Image_Diff@F@Init#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#S0_#b#
 // Source: c:@S@Image_Diff@F@IsBorderFilterOn#1
 // Source: c:@S@Image_Diff@F@SetBorderFilterOn#b#
 // Source: c:@S@Image_Diff@F@SetColorTolerance#d#
 // Source: c:@S@Image_PixMap@F@Clear#
+// Source: c:@S@Image_PixMap@F@Depth#1
+// Source: c:@S@Image_PixMap@F@DynamicType#1
 // Source: c:@S@Image_PixMap@F@Format#1
+// Source: c:@S@Image_PixMap@F@Height#1
 // Source: c:@S@Image_PixMap@F@Image_PixMap#
+// Source: c:@S@Image_PixMap@F@InitZero#$@E@Image_Format#k#k#k#c#
 // Source: c:@S@Image_PixMap@F@IsEmpty#1
 // Source: c:@S@Image_PixMap@F@IsTopDown#1
+// Source: c:@S@Image_PixMap@F@MaxRowAligmentBytes#1
 // Source: c:@S@Image_PixMap@F@Ratio#1
+// Source: c:@S@Image_PixMap@F@RowExtraBytes#1
 // Source: c:@S@Image_PixMap@F@SetFormat#$@E@Image_Format#
 // Source: c:@S@Image_PixMap@F@SetTopDown#b#
+// Source: c:@S@Image_PixMap@F@SizeBytes#1
+// Source: c:@S@Image_PixMap@F@SizePixelBytes#1
+// Source: c:@S@Image_PixMap@F@SizeRowBytes#1
+// Source: c:@S@Image_PixMap@F@SizeSliceBytes#1
+// Source: c:@S@Image_PixMap@F@SizeZ#1
+// Source: c:@S@Image_PixMap@F@TopDownInc#1
+// Source: c:@S@Image_PixMap@F@Width#1
+// Source: c:@S@Image_PixMapData@F@DynamicType#1
 // Source: c:@S@Image_PixMapData@F@Image_PixMapData#
+// Source: c:@S@Image_PixMapData@F@MaxRowAligmentBytes#1
 // Source: c:@S@Image_PixMapData@F@SetTopDown#b#
 // Source: c:@S@Image_PixMapData@F@ZeroData#
 // Source: c:@S@Image_SupportedFormats@F@Add#$@E@Image_CompressedFormat#
 // Source: c:@S@Image_SupportedFormats@F@Add#$@E@Image_Format#
 // Source: c:@S@Image_SupportedFormats@F@Clear#
+// Source: c:@S@Image_SupportedFormats@F@DynamicType#1
 // Source: c:@S@Image_SupportedFormats@F@HasCompressed#1
 // Source: c:@S@Image_SupportedFormats@F@Image_SupportedFormats#
 // Source: c:@S@Image_SupportedFormats@F@IsSupported#$@E@Image_CompressedFormat#1
 // Source: c:@S@Image_SupportedFormats@F@IsSupported#$@E@Image_Format#1
+// Source: c:@S@Image_Texture@F@DataBuffer#1
+// Source: c:@S@Image_Texture@F@DynamicType#1
+// Source: c:@S@Image_Texture@F@FileLength#1
+// Source: c:@S@Image_Texture@F@FileOffset#1
 // Source: c:@S@Image_Texture@F@ReadCompressedImage#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#1
 // Source: c:@S@Image_Texture@F@ReadImage#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#1
 // Source: c:@S@Image_VideoRecorder@F@Close#
+// Source: c:@S@Image_VideoRecorder@F@DynamicType#1
+// Source: c:@S@Image_VideoRecorder@F@FrameCount#1
 // Source: c:@S@Image_VideoRecorder@F@Image_VideoRecorder#
 // Source: c:@S@Image_VideoRecorder@F@PushFrame#
 // Source: c:@S@Media_BufferPool@F@BufferSize#1
+// Source: c:@S@Media_BufferPool@F@DynamicType#1
 // Source: c:@S@Media_BufferPool@F@Init#I#
 // Source: c:@S@Media_BufferPool@F@Media_BufferPool#
 // Source: c:@S@Media_BufferPool@F@Release#
 // Source: c:@S@Media_CodecContext@F@CanProcessPacket#&1$@N@opencascade@S@handle>#$@S@Media_Packet#1
 // Source: c:@S@Media_CodecContext@F@Close#
+// Source: c:@S@Media_CodecContext@F@DynamicType#1
 // Source: c:@S@Media_CodecContext@F@Flush#
 // Source: c:@S@Media_CodecContext@F@Media_CodecContext#
 // Source: c:@S@Media_CodecContext@F@ReceiveFrame#&1$@N@opencascade@S@handle>#$@S@Media_Frame#
@@ -1536,10 +1874,15 @@
 // Source: c:@S@Media_CodecContext@F@StreamIndex#1
 // Source: c:@S@Media_FormatContext@F@Close#
 // Source: c:@S@Media_FormatContext@F@Duration#1
+// Source: c:@S@Media_FormatContext@F@DynamicType#1
 // Source: c:@S@Media_FormatContext@F@Media_FormatContext#
+// Source: c:@S@Media_FormatContext@F@NbSteams#1
 // Source: c:@S@Media_FormatContext@F@PtsStartBase#1
 // Source: c:@S@Media_FormatContext@F@ReadPacket#&1$@N@opencascade@S@handle>#$@S@Media_Packet#
 // Source: c:@S@Media_FormatContext@F@Seek#d#b#
+// Source: c:@S@Media_FormatContext@F@SeekStream#i#d#b#
+// Source: c:@S@Media_Frame@F@BestEffortTimestamp#1
+// Source: c:@S@Media_Frame@F@DynamicType#1
 // Source: c:@S@Media_Frame@F@Format#1
 // Source: c:@S@Media_Frame@F@InitWrapper#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
 // Source: c:@S@Media_Frame@F@IsEmpty#1
@@ -1547,29 +1890,38 @@
 // Source: c:@S@Media_Frame@F@IsLocked#1
 // Source: c:@S@Media_Frame@F@LineSize#I#1
 // Source: c:@S@Media_Frame@F@Media_Frame#
+// Source: c:@S@Media_Frame@F@PixelAspectRatio#1
 // Source: c:@S@Media_Frame@F@Pts#1
 // Source: c:@S@Media_Frame@F@SetLocked#b#
+// Source: c:@S@Media_Frame@F@SetPixelAspectRatio#f#
 // Source: c:@S@Media_Frame@F@SetPts#d#
 // Source: c:@S@Media_Frame@F@SizeX#1
 // Source: c:@S@Media_Frame@F@SizeY#1
 // Source: c:@S@Media_Frame@F@Unref#
+// Source: c:@S@Media_Packet@F@Dts#1
+// Source: c:@S@Media_Packet@F@Duration#1
 // Source: c:@S@Media_Packet@F@DurationSeconds#1
+// Source: c:@S@Media_Packet@F@DynamicType#1
 // Source: c:@S@Media_Packet@F@IsKeyFrame#1
 // Source: c:@S@Media_Packet@F@Media_Packet#
+// Source: c:@S@Media_Packet@F@Pts#1
 // Source: c:@S@Media_Packet@F@SetDurationSeconds#d#
 // Source: c:@S@Media_Packet@F@SetKeyFrame#
 // Source: c:@S@Media_Packet@F@Size#1
 // Source: c:@S@Media_Packet@F@StreamIndex#1
 // Source: c:@S@Media_Packet@F@Unref#
+// Source: c:@S@Media_PlayerContext@F@DynamicType#1
 // Source: c:@S@Media_PlayerContext@F@Pause#
 // Source: c:@S@Media_PlayerContext@F@Resume#
 // Source: c:@S@Media_PlayerContext@F@Seek#d#
 // Source: c:@S@Media_PlayerContext@F@SetForceRgb#b#
 // Source: c:@S@Media_PlayerContext@F@ToForceRgb#1
 // Source: c:@S@Media_Scaler@F@Convert#&1$@N@opencascade@S@handle>#$@S@Media_Frame#S0_#
+// Source: c:@S@Media_Scaler@F@DynamicType#1
 // Source: c:@S@Media_Scaler@F@IsValid#1
 // Source: c:@S@Media_Scaler@F@Media_Scaler#
 // Source: c:@S@Media_Scaler@F@Release#
+// Source: c:@S@Media_Timer@F@DynamicType#1
 // Source: c:@S@Media_Timer@F@ElapsedTime#1
 // Source: c:@S@Media_Timer@F@IsStarted#1
 // Source: c:@S@Media_Timer@F@Media_Timer#
@@ -1581,18 +1933,23 @@
 // Source: c:@S@Media_Timer@F@Stop#
 // Source: c:@S@MeshVS_CommonSensitiveEntity@F@Center#I#I#1
 // Source: c:@S@MeshVS_CommonSensitiveEntity@F@CenterOfGeometry#1
+// Source: c:@S@MeshVS_CommonSensitiveEntity@F@DynamicType#1
 // Source: c:@S@MeshVS_CommonSensitiveEntity@F@GetConnected#
 // Source: c:@S@MeshVS_CommonSensitiveEntity@F@MeshVS_CommonSensitiveEntity#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@N@opencascade@S@handle>#$@S@MeshVS_Mesh#$@E@MeshVS_MeshSelectionMethod#
 // Source: c:@S@MeshVS_CommonSensitiveEntity@F@NbSubElements#1
 // Source: c:@S@MeshVS_CommonSensitiveEntity@F@Size#1
 // Source: c:@S@MeshVS_CommonSensitiveEntity@F@Swap#I#I#
+// Source: c:@S@MeshVS_DataSource3D@F@DynamicType#1
+// Source: c:@S@MeshVS_DataSource@F@DynamicType#1
 // Source: c:@S@MeshVS_DataSource@F@IsAdvancedSelectionEnabled#1
+// Source: c:@S@MeshVS_DeformedDataSource@F@DynamicType#1
 // Source: c:@S@MeshVS_DeformedDataSource@F@GetMagnify#1
 // Source: c:@S@MeshVS_DeformedDataSource@F@GetNonDeformedDataSource#1
 // Source: c:@S@MeshVS_DeformedDataSource@F@MeshVS_DeformedDataSource#&1$@N@opencascade@S@handle>#$@S@MeshVS_DataSource#d#
 // Source: c:@S@MeshVS_DeformedDataSource@F@SetMagnify#d#
 // Source: c:@S@MeshVS_DeformedDataSource@F@SetNonDeformedDataSource#&1$@N@opencascade@S@handle>#$@S@MeshVS_DataSource#
 // Source: c:@S@MeshVS_Drawer@F@Assign#&1$@N@opencascade@S@handle>#$@S@MeshVS_Drawer#
+// Source: c:@S@MeshVS_Drawer@F@DynamicType#1
 // Source: c:@S@MeshVS_Drawer@F@RemoveAsciiString#I#
 // Source: c:@S@MeshVS_Drawer@F@RemoveBoolean#I#
 // Source: c:@S@MeshVS_Drawer@F@RemoveColor#I#
@@ -1605,10 +1962,12 @@
 // Source: c:@S@MeshVS_DummySensitiveEntity@F@BVH#
 // Source: c:@S@MeshVS_DummySensitiveEntity@F@CenterOfGeometry#1
 // Source: c:@S@MeshVS_DummySensitiveEntity@F@Clear#
+// Source: c:@S@MeshVS_DummySensitiveEntity@F@DynamicType#1
 // Source: c:@S@MeshVS_DummySensitiveEntity@F@HasInitLocation#1
 // Source: c:@S@MeshVS_DummySensitiveEntity@F@MeshVS_DummySensitiveEntity#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#
 // Source: c:@S@MeshVS_DummySensitiveEntity@F@NbSubElements#1
 // Source: c:@S@MeshVS_DummySensitiveEntity@F@ToBuildBVH#1
+// Source: c:@S@MeshVS_ElementalColorPrsBuilder@F@DynamicType#1
 // Source: c:@S@MeshVS_ElementalColorPrsBuilder@F@HasColors1#1
 // Source: c:@S@MeshVS_ElementalColorPrsBuilder@F@HasColors2#1
 // Source: c:@S@MeshVS_ElementalColorPrsBuilder@F@MeshVS_ElementalColorPrsBuilder#&1$@N@opencascade@S@handle>#$@S@MeshVS_Mesh#&1I#&1$@N@opencascade@S@handle>#$@S@MeshVS_DataSource#I#S3_#
@@ -1616,6 +1975,7 @@
 // Source: c:@S@MeshVS_Mesh@F@AddBuilder#&1$@N@opencascade@S@handle>#$@S@MeshVS_PrsBuilder#b#
 // Source: c:@S@MeshVS_Mesh@F@ClearSelected#
 // Source: c:@S@MeshVS_Mesh@F@ComputeSelection#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Selection#I#
+// Source: c:@S@MeshVS_Mesh@F@DynamicType#1
 // Source: c:@S@MeshVS_Mesh@F@FindBuilder#&1$@N@opencascade@S@handle>#$@S@Standard_Type#1
 // Source: c:@S@MeshVS_Mesh@F@GetBuilder#I#1
 // Source: c:@S@MeshVS_Mesh@F@GetBuilderById#I#1
@@ -1623,8 +1983,11 @@
 // Source: c:@S@MeshVS_Mesh@F@GetDataSource#1
 // Source: c:@S@MeshVS_Mesh@F@GetDrawer#1
 // Source: c:@S@MeshVS_Mesh@F@GetFreeId#1
+// Source: c:@S@MeshVS_Mesh@F@GetHiddenElems#1
+// Source: c:@S@MeshVS_Mesh@F@GetHiddenNodes#1
 // Source: c:@S@MeshVS_Mesh@F@GetHilighter#1
 // Source: c:@S@MeshVS_Mesh@F@GetMeshSelMethod#1
+// Source: c:@S@MeshVS_Mesh@F@GetSelectableNodes#1
 // Source: c:@S@MeshVS_Mesh@F@HilightOwnerWithColor#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#
 // Source: c:@S@MeshVS_Mesh@F@IsHiddenElem#I#1
 // Source: c:@S@MeshVS_Mesh@F@IsHiddenNode#I#1
@@ -1645,6 +2008,7 @@
 // Source: c:@S@MeshVS_Mesh@F@SetSelectableNodes#&1$@N@opencascade@S@handle>#$@S@TColStd_HPackedMapOfInteger#
 // Source: c:@S@MeshVS_Mesh@F@UpdateSelectableNodes#
 // Source: c:@S@MeshVS_MeshEntityOwner@F@Clear#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
+// Source: c:@S@MeshVS_MeshEntityOwner@F@DynamicType#1
 // Source: c:@S@MeshVS_MeshEntityOwner@F@HilightWithColor#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#I#
 // Source: c:@S@MeshVS_MeshEntityOwner@F@ID#1
 // Source: c:@S@MeshVS_MeshEntityOwner@F@IsGroup#1
@@ -1653,11 +2017,19 @@
 // Source: c:@S@MeshVS_MeshEntityOwner@F@Unhilight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@MeshVS_MeshOwner@F@AddSelectedEntities#&1$@N@opencascade@S@handle>#$@S@TColStd_HPackedMapOfInteger#S0_#
 // Source: c:@S@MeshVS_MeshOwner@F@ClearSelectedEntities#
+// Source: c:@S@MeshVS_MeshOwner@F@DynamicType#1
+// Source: c:@S@MeshVS_MeshOwner@F@GetDataSource#1
+// Source: c:@S@MeshVS_MeshOwner@F@GetDetectedElements#1
+// Source: c:@S@MeshVS_MeshOwner@F@GetDetectedNodes#1
+// Source: c:@S@MeshVS_MeshOwner@F@GetSelectedElements#1
+// Source: c:@S@MeshVS_MeshOwner@F@GetSelectedNodes#1
 // Source: c:@S@MeshVS_MeshOwner@F@HilightWithColor#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#I#
 // Source: c:@S@MeshVS_MeshOwner@F@IsForcedHilight#1
 // Source: c:@S@MeshVS_MeshOwner@F@SetDetectedEntities#&1$@N@opencascade@S@handle>#$@S@TColStd_HPackedMapOfInteger#S0_#
 // Source: c:@S@MeshVS_MeshOwner@F@Unhilight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
+// Source: c:@S@MeshVS_MeshPrsBuilder@F@DynamicType#1
 // Source: c:@S@MeshVS_MeshPrsBuilder@F@MeshVS_MeshPrsBuilder#&1$@N@opencascade@S@handle>#$@S@MeshVS_Mesh#&1I#&1$@N@opencascade@S@handle>#$@S@MeshVS_DataSource#I#S3_#
+// Source: c:@S@MeshVS_NodalColorPrsBuilder@F@DynamicType#1
 // Source: c:@S@MeshVS_NodalColorPrsBuilder@F@GetTextureCoord#I#
 // Source: c:@S@MeshVS_NodalColorPrsBuilder@F@HasColors#1
 // Source: c:@S@MeshVS_NodalColorPrsBuilder@F@IsUseTexture#1
@@ -1665,6 +2037,7 @@
 // Source: c:@S@MeshVS_NodalColorPrsBuilder@F@SetTextureCoord#I#d#
 // Source: c:@S@MeshVS_NodalColorPrsBuilder@F@UseTexture#b#
 // Source: c:@S@MeshVS_PrsBuilder@F@CustomSensitiveEntity#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#I#1
+// Source: c:@S@MeshVS_PrsBuilder@F@DynamicType#1
 // Source: c:@S@MeshVS_PrsBuilder@F@GetDataSource#1
 // Source: c:@S@MeshVS_PrsBuilder@F@GetDrawer#1
 // Source: c:@S@MeshVS_PrsBuilder@F@GetFlags#1
@@ -1677,50 +2050,73 @@
 // Source: c:@S@MeshVS_PrsBuilder@F@SetExcluding#b#
 // Source: c:@S@MeshVS_PrsBuilder@F@SetPresentationManager#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#
 // Source: c:@S@MeshVS_PrsBuilder@F@TestFlags#I#1
+// Source: c:@S@MeshVS_SensitiveFace@F@DynamicType#1
 // Source: c:@S@MeshVS_SensitiveMesh@F@CenterOfGeometry#1
+// Source: c:@S@MeshVS_SensitiveMesh@F@DynamicType#1
 // Source: c:@S@MeshVS_SensitiveMesh@F@GetConnected#
 // Source: c:@S@MeshVS_SensitiveMesh@F@GetMode#1
 // Source: c:@S@MeshVS_SensitiveMesh@F@MeshVS_SensitiveMesh#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#I#
 // Source: c:@S@MeshVS_SensitiveMesh@F@NbSubElements#1
 // Source: c:@S@MeshVS_SensitivePolyhedron@F@CenterOfGeometry#1
+// Source: c:@S@MeshVS_SensitivePolyhedron@F@DynamicType#1
 // Source: c:@S@MeshVS_SensitivePolyhedron@F@GetConnected#
 // Source: c:@S@MeshVS_SensitivePolyhedron@F@NbSubElements#1
 // Source: c:@S@MeshVS_SensitiveQuad@F@CenterOfGeometry#1
+// Source: c:@S@MeshVS_SensitiveQuad@F@DynamicType#1
 // Source: c:@S@MeshVS_SensitiveQuad@F@GetConnected#
 // Source: c:@S@MeshVS_SensitiveQuad@F@MeshVS_SensitiveQuad#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@S@gp_Pnt#S3_#S3_#S3_#
 // Source: c:@S@MeshVS_SensitiveQuad@F@NbSubElements#1
+// Source: c:@S@MeshVS_SensitiveSegment@F@DynamicType#1
 // Source: c:@S@MeshVS_SensitiveSegment@F@MeshVS_SensitiveSegment#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@S@gp_Pnt#S3_#
+// Source: c:@S@MeshVS_TextPrsBuilder@F@DynamicType#1
 // Source: c:@S@MeshVS_TextPrsBuilder@F@HasTexts#b#1
+// Source: c:@S@MeshVS_VectorPrsBuilder@F@DynamicType#1
 // Source: c:@S@MeshVS_VectorPrsBuilder@F@HasVectors#b#1
 // Source: c:@S@MeshVS_VectorPrsBuilder@F@SetSimplePrsMode#b#
 // Source: c:@S@MeshVS_VectorPrsBuilder@F@SetSimplePrsParams#d#d#d#
 // Source: c:@S@OpenGl_Buffer@F@Bind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#1
 // Source: c:@S@OpenGl_Buffer@F@Create#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_Buffer@F@DynamicType#1
+// Source: c:@S@OpenGl_Buffer@F@EstimatedDataSize#1
+// Source: c:@S@OpenGl_Buffer@F@GetComponentsNb#1
+// Source: c:@S@OpenGl_Buffer@F@GetDataType#1
 // Source: c:@S@OpenGl_Buffer@F@GetElemsNb#1
 // Source: c:@S@OpenGl_Buffer@F@IsValid#1
 // Source: c:@S@OpenGl_Buffer@F@IsVirtual#1
 // Source: c:@S@OpenGl_Buffer@F@SetElemsNb#I#
 // Source: c:@S@OpenGl_Buffer@F@Unbind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#1
+// Source: c:@S@OpenGl_CappingPlaneResource@F@DynamicType#1
+// Source: c:@S@OpenGl_CappingPlaneResource@F@EstimatedDataSize#1
 // Source: c:@S@OpenGl_CappingPlaneResource@F@OpenGl_CappingPlaneResource#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ClipPlane#
+// Source: c:@S@OpenGl_CappingPlaneResource@F@Plane#1
 // Source: c:@S@OpenGl_CappingPlaneResource@F@Update#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Aspects#
+// Source: c:@S@OpenGl_Caps@F@DynamicType#1
 // Source: c:@S@OpenGl_Caps@F@OpenGl_Caps#
+// Source: c:@S@OpenGl_Context@F@ActiveProgram#1
+// Source: c:@S@OpenGl_Context@F@ActiveTextures#1
 // Source: c:@S@OpenGl_Context@F@AllowSampleAlphaToCoverage#1
 // Source: c:@S@OpenGl_Context@F@ApplyModelViewMatrix#
 // Source: c:@S@OpenGl_Context@F@ApplyModelWorldMatrix#
 // Source: c:@S@OpenGl_Context@F@ApplyProjectionMatrix#
 // Source: c:@S@OpenGl_Context@F@ApplyWorldViewMatrix#
+// Source: c:@S@OpenGl_Context@F@AvailableMemory#1
 // Source: c:@S@OpenGl_Context@F@BindDefaultVao#
 // Source: c:@S@OpenGl_Context@F@BindProgram#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderProgram#
 // Source: c:@S@OpenGl_Context@F@BindTextures#&1$@N@opencascade@S@handle>#$@S@OpenGl_TextureSet#
 // Source: c:@S@OpenGl_Context@F@BindTextures#&1$@N@opencascade@S@handle>#$@S@OpenGl_TextureSet#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderProgram#
+// Source: c:@S@OpenGl_Context@F@Camera#1
 // Source: c:@S@OpenGl_Context@F@ColorMask#1
+// Source: c:@S@OpenGl_Context@F@DefaultFrameBuffer#1
 // Source: c:@S@OpenGl_Context@F@DepthPeelingDepthTexUnit#1
 // Source: c:@S@OpenGl_Context@F@DepthPeelingFrontColorTexUnit#1
 // Source: c:@S@OpenGl_Context@F@DisableFeatures#1
 // Source: c:@S@OpenGl_Context@F@DrawBuffer#I#1
+// Source: c:@S@OpenGl_Context@F@DynamicType#1
 // Source: c:@S@OpenGl_Context@F@EnableFeatures#1
+// Source: c:@S@OpenGl_Context@F@ExcludeMessage#i#i#
 // Source: c:@S@OpenGl_Context@F@FaceCulling#1
 // Source: c:@S@OpenGl_Context@F@FetchState#
+// Source: c:@S@OpenGl_Context@F@FrameStats#1
 // Source: c:@S@OpenGl_Context@F@GraphicsLibrary#1
 // Source: c:@S@OpenGl_Context@F@HasPBR#1
 // Source: c:@S@OpenGl_Context@F@HasRayTracing#1
@@ -1732,6 +2128,7 @@
 // Source: c:@S@OpenGl_Context@F@HasStereoBuffers#1
 // Source: c:@S@OpenGl_Context@F@HasTextureBaseLevel#1
 // Source: c:@S@OpenGl_Context@F@HasTextureMultisampling#1
+// Source: c:@S@OpenGl_Context@F@IncludeMessage#i#i#
 // Source: c:@S@OpenGl_Context@F@Init#b#
 // Source: c:@S@OpenGl_Context@F@IsCurrent#1
 // Source: c:@S@OpenGl_Context@F@IsDebugContext#1
@@ -1744,6 +2141,8 @@
 // Source: c:@S@OpenGl_Context@F@IsValid#1
 // Source: c:@S@OpenGl_Context@F@IsWindowDeepColor#1
 // Source: c:@S@OpenGl_Context@F@IsWindowSRGB#1
+// Source: c:@S@OpenGl_Context@F@LineFeather#1
+// Source: c:@S@OpenGl_Context@F@LineWidthScale#1
 // Source: c:@S@OpenGl_Context@F@MakeCurrent#
 // Source: c:@S@OpenGl_Context@F@MaxClipPlanes#1
 // Source: c:@S@OpenGl_Context@F@MaxColorAttachments#1
@@ -1755,6 +2154,7 @@
 // Source: c:@S@OpenGl_Context@F@MaxMsaaSamples#1
 // Source: c:@S@OpenGl_Context@F@MaxTextureSize#1
 // Source: c:@S@OpenGl_Context@F@MaxTextureUnitsFFP#1
+// Source: c:@S@OpenGl_Context@F@Messenger#1
 // Source: c:@S@OpenGl_Context@F@OpenGl_Context#&1$@N@opencascade@S@handle>#$@S@OpenGl_Caps#
 // Source: c:@S@OpenGl_Context@F@PBRDiffIBLMapSHTexUnit#1
 // Source: c:@S@OpenGl_Context@F@PBREnvLUTTexUnit#1
@@ -1763,7 +2163,11 @@
 // Source: c:@S@OpenGl_Context@F@PolygonMode#1
 // Source: c:@S@OpenGl_Context@F@ReadBuffer#
 // Source: c:@S@OpenGl_Context@F@ReleaseDelayed#
+// Source: c:@S@OpenGl_Context@F@RenderScale#1
+// Source: c:@S@OpenGl_Context@F@RenderScaleInv#1
 // Source: c:@S@OpenGl_Context@F@ResetErrors#b#
+// Source: c:@S@OpenGl_Context@F@Resolution#1
+// Source: c:@S@OpenGl_Context@F@ResolutionRatio#1
 // Source: c:@S@OpenGl_Context@F@SampleAlphaToCoverage#1
 // Source: c:@S@OpenGl_Context@F@SetAllowSampleAlphaToCoverage#b#
 // Source: c:@S@OpenGl_Context@F@SetCamera#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
@@ -1775,20 +2179,30 @@
 // Source: c:@S@OpenGl_Context@F@SetFrameBufferSRGB#b#b#
 // Source: c:@S@OpenGl_Context@F@SetFrameStats#&1$@N@opencascade@S@handle>#$@S@OpenGl_FrameStats#
 // Source: c:@S@OpenGl_Context@F@SetGlNormalizeEnabled#b#
+// Source: c:@S@OpenGl_Context@F@SetLineFeather#f#
+// Source: c:@S@OpenGl_Context@F@SetLineStipple#f#s#
+// Source: c:@S@OpenGl_Context@F@SetLineStipple#s#
+// Source: c:@S@OpenGl_Context@F@SetLineWidth#f#
+// Source: c:@S@OpenGl_Context@F@SetPointSize#f#
 // Source: c:@S@OpenGl_Context@F@SetPointSpriteOrigin#
 // Source: c:@S@OpenGl_Context@F@SetPolygonHatchEnabled#b#
 // Source: c:@S@OpenGl_Context@F@SetPolygonHatchStyle#&1$@N@opencascade@S@handle>#$@S@Graphic3d_HatchStyle#
 // Source: c:@S@OpenGl_Context@F@SetPolygonMode#I#
 // Source: c:@S@OpenGl_Context@F@SetReadBuffer#I#
 // Source: c:@S@OpenGl_Context@F@SetReadDrawBuffer#I#
+// Source: c:@S@OpenGl_Context@F@SetResolution#i#f#f#
+// Source: c:@S@OpenGl_Context@F@SetResolutionRatio#f#
 // Source: c:@S@OpenGl_Context@F@SetSampleAlphaToCoverage#b#
 // Source: c:@S@OpenGl_Context@F@SetShadeModel#$@E@Graphic3d_TypeOfShadingModel#
 // Source: c:@S@OpenGl_Context@F@SetSwapInterval#I#
 // Source: c:@S@OpenGl_Context@F@SetTextureMatrix#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureParams#b#
+// Source: c:@S@OpenGl_Context@F@SetTypeOfLine#$@E@Aspect_TypeOfLine#f#
 // Source: c:@S@OpenGl_Context@F@SetWindowSRGB#b#
+// Source: c:@S@OpenGl_Context@F@ShaderManager#1
 // Source: c:@S@OpenGl_Context@F@ShadowMapTexUnit#1
 // Source: c:@S@OpenGl_Context@F@Share#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_Context@F@SpriteTextureUnit#1
+// Source: c:@S@OpenGl_Context@F@SupportedTextureFormats#1
 // Source: c:@S@OpenGl_Context@F@SwapBuffers#
 // Source: c:@S@OpenGl_Context@F@TextureWrapClamp#1
 // Source: c:@S@OpenGl_Context@F@ToCullBackFaces#1
@@ -1798,15 +2212,30 @@
 // Source: c:@S@OpenGl_Context@F@VersionMinor#1
 // Source: c:@S@OpenGl_Context@F@forcedRelease#
 // Source: c:@S@OpenGl_DepthPeeling@F@AttachDepthTexture#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#&1$@N@opencascade@S@handle>#$@S@OpenGl_Texture#
+// Source: c:@S@OpenGl_DepthPeeling@F@BlendBackFboOit#1
 // Source: c:@S@OpenGl_DepthPeeling@F@DetachDepthTexture#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_DepthPeeling@F@DynamicType#1
+// Source: c:@S@OpenGl_DepthPeeling@F@EstimatedDataSize#1
 // Source: c:@S@OpenGl_DepthPeeling@F@OpenGl_DepthPeeling#
+// Source: c:@S@OpenGl_Font@F@Ascender#1
+// Source: c:@S@OpenGl_Font@F@Descender#1
+// Source: c:@S@OpenGl_Font@F@DynamicType#1
+// Source: c:@S@OpenGl_Font@F@EstimatedDataSize#1
+// Source: c:@S@OpenGl_Font@F@FTFont#1
 // Source: c:@S@OpenGl_Font@F@Init#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_Font@F@IsValid#1
+// Source: c:@S@OpenGl_Font@F@Texture#1
 // Source: c:@S@OpenGl_Font@F@WasInitialized#1
 // Source: c:@S@OpenGl_FrameBuffer@F@BindBuffer#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_FrameBuffer@F@BindDrawBuffer#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_FrameBuffer@F@BindReadBuffer#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_FrameBuffer@F@ChangeViewport#I#I#
+// Source: c:@S@OpenGl_FrameBuffer@F@ColorRenderBuffer#1
+// Source: c:@S@OpenGl_FrameBuffer@F@ColorTexture#I#1
+// Source: c:@S@OpenGl_FrameBuffer@F@DepthStencilRenderBuffer#1
+// Source: c:@S@OpenGl_FrameBuffer@F@DepthStencilTexture#1
+// Source: c:@S@OpenGl_FrameBuffer@F@DynamicType#1
+// Source: c:@S@OpenGl_FrameBuffer@F@EstimatedDataSize#1
 // Source: c:@S@OpenGl_FrameBuffer@F@GetInitVPSizeX#1
 // Source: c:@S@OpenGl_FrameBuffer@F@GetInitVPSizeY#1
 // Source: c:@S@OpenGl_FrameBuffer@F@GetSizeX#1
@@ -1817,6 +2246,7 @@
 // Source: c:@S@OpenGl_FrameBuffer@F@HasDepth#1
 // Source: c:@S@OpenGl_FrameBuffer@F@Init#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#I#I#I#I#I#
 // Source: c:@S@OpenGl_FrameBuffer@F@InitLazy#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#I#I#I#I#I#
+// Source: c:@S@OpenGl_FrameBuffer@F@InitWithRB#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#I#I#I#I#i#
 // Source: c:@S@OpenGl_FrameBuffer@F@InitWrapper#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_FrameBuffer@F@IsColorRenderBuffer#1
 // Source: c:@S@OpenGl_FrameBuffer@F@IsDepthStencilRenderBuffer#1
@@ -1825,10 +2255,14 @@
 // Source: c:@S@OpenGl_FrameBuffer@F@NbSamples#1
 // Source: c:@S@OpenGl_FrameBuffer@F@SetupViewport#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_FrameBuffer@F@UnbindBuffer#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_FrameStats@F@DynamicType#1
 // Source: c:@S@OpenGl_FrameStats@F@OpenGl_FrameStats#
 // Source: c:@S@OpenGl_GraphicDriver@F@CreateStructure#&1$@N@opencascade@S@handle>#$@S@Graphic3d_StructureManager#
 // Source: c:@S@OpenGl_GraphicDriver@F@CreateView#&1$@N@opencascade@S@handle>#$@S@Graphic3d_StructureManager#
+// Source: c:@S@OpenGl_GraphicDriver@F@DefaultTextHeight#1
+// Source: c:@S@OpenGl_GraphicDriver@F@DynamicType#1
 // Source: c:@S@OpenGl_GraphicDriver@F@EnableVBO#b#
+// Source: c:@S@OpenGl_GraphicDriver@F@GetNextPrimitiveArrayUID#1
 // Source: c:@S@OpenGl_GraphicDriver@F@InitContext#
 // Source: c:@S@OpenGl_GraphicDriver@F@InquireLimit#$@E@Graphic3d_TypeOfLimit#1
 // Source: c:@S@OpenGl_GraphicDriver@F@IsVerticalSync#1
@@ -1840,12 +2274,15 @@
 // Source: c:@S@OpenGl_GraphicDriver@F@SetVerticalSync#b#
 // Source: c:@S@OpenGl_GraphicDriver@F@setDeviceLost#
 // Source: c:@S@OpenGl_GraphicDriverFactory@F@CreateDriver#&1$@N@opencascade@S@handle>#$@S@Aspect_DisplayConnection#
+// Source: c:@S@OpenGl_GraphicDriverFactory@F@DefaultOptions#1
+// Source: c:@S@OpenGl_GraphicDriverFactory@F@DynamicType#1
 // Source: c:@S@OpenGl_GraphicDriverFactory@F@OpenGl_GraphicDriverFactory#
 // Source: c:@S@OpenGl_GraphicDriverFactory@F@SetDefaultOptions#&1$@N@opencascade@S@handle>#$@S@OpenGl_Caps#
 // Source: c:@S@OpenGl_Group@F@AddPrimitiveArray#$@E@Graphic3d_TypeOfPrimitiveArray#&1$@N@opencascade@S@handle>#$@S@Graphic3d_IndexBuffer#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Buffer#&1$@N@opencascade@S@handle>#$@S@Graphic3d_BoundBuffer#b#
 // Source: c:@S@OpenGl_Group@F@AddText#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Text#b#
 // Source: c:@S@OpenGl_Group@F@Aspects#1
 // Source: c:@S@OpenGl_Group@F@Clear#b#
+// Source: c:@S@OpenGl_Group@F@DynamicType#1
 // Source: c:@S@OpenGl_Group@F@HasPersistence#1
 // Source: c:@S@OpenGl_Group@F@IsRaytracable#1
 // Source: c:@S@OpenGl_Group@F@OpenGl_Group#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
@@ -1855,28 +2292,49 @@
 // Source: c:@S@OpenGl_Group@F@SetPrimitivesAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Aspects#
 // Source: c:@S@OpenGl_Group@F@SetStencilTestOptions#b#
 // Source: c:@S@OpenGl_Group@F@SynchronizeAspects#
+// Source: c:@S@OpenGl_IndexBuffer@F@DynamicType#1
+// Source: c:@S@OpenGl_IndexBuffer@F@GetTarget#1
 // Source: c:@S@OpenGl_IndexBuffer@F@OpenGl_IndexBuffer#
+// Source: c:@S@OpenGl_LineAttributes@F@DynamicType#1
+// Source: c:@S@OpenGl_LineAttributes@F@EstimatedDataSize#1
 // Source: c:@S@OpenGl_LineAttributes@F@OpenGl_LineAttributes#
+// Source: c:@S@OpenGl_NamedResource@F@DynamicType#1
+// Source: c:@S@OpenGl_PBREnvironment@F@Bake#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#&1$@N@opencascade@S@handle>#$@S@OpenGl_Texture#b#b#k#k#f#
 // Source: c:@S@OpenGl_PBREnvironment@F@Bind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_PBREnvironment@F@DynamicType#1
+// Source: c:@S@OpenGl_PBREnvironment@F@EstimatedDataSize#1
 // Source: c:@S@OpenGl_PBREnvironment@F@IsComplete#1
 // Source: c:@S@OpenGl_PBREnvironment@F@IsNeededToBeBound#1
+// Source: c:@S@OpenGl_PBREnvironment@F@Pow2Size#1
+// Source: c:@S@OpenGl_PBREnvironment@F@SizesAreDifferent#i#i#1
+// Source: c:@S@OpenGl_PBREnvironment@F@SpecMapLevelsNumber#1
 // Source: c:@S@OpenGl_PBREnvironment@F@Unbind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_PointSprite@F@DrawBitmap#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#1
+// Source: c:@S@OpenGl_PointSprite@F@DynamicType#1
 // Source: c:@S@OpenGl_PointSprite@F@IsDisplayList#1
 // Source: c:@S@OpenGl_PointSprite@F@IsPointSprite#1
 // Source: c:@S@OpenGl_PointSprite@F@IsValid#1
+// Source: c:@S@OpenGl_PointSprite@F@SetDisplayList#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#i#
+// Source: c:@S@OpenGl_Resource@F@DynamicType#1
 // Source: c:@S@OpenGl_Sampler@F@Bind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_Sampler@F@Bind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#$@E@Graphic3d_TextureUnit#
 // Source: c:@S@OpenGl_Sampler@F@Create#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_Sampler@F@DynamicType#1
+// Source: c:@S@OpenGl_Sampler@F@EstimatedDataSize#1
 // Source: c:@S@OpenGl_Sampler@F@IsImmutable#1
 // Source: c:@S@OpenGl_Sampler@F@IsValid#1
 // Source: c:@S@OpenGl_Sampler@F@OpenGl_Sampler#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureParams#
+// Source: c:@S@OpenGl_Sampler@F@Parameters#
+// Source: c:@S@OpenGl_Sampler@F@SamplerID#1
 // Source: c:@S@OpenGl_Sampler@F@SetImmutable#
+// Source: c:@S@OpenGl_Sampler@F@SetParameter#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#i#i#I#
 // Source: c:@S@OpenGl_Sampler@F@SetParameters#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureParams#
 // Source: c:@S@OpenGl_Sampler@F@ToUpdateParameters#1
 // Source: c:@S@OpenGl_Sampler@F@Unbind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_Sampler@F@Unbind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#$@E@Graphic3d_TextureUnit#
+// Source: c:@S@OpenGl_SetOfPrograms@F@DynamicType#1
 // Source: c:@S@OpenGl_SetOfPrograms@F@OpenGl_SetOfPrograms#
+// Source: c:@S@OpenGl_SetOfShaderPrograms@F@DynamicType#1
 // Source: c:@S@OpenGl_SetOfShaderPrograms@F@OpenGl_SetOfShaderPrograms#
 // Source: c:@S@OpenGl_SetOfShaderPrograms@F@OpenGl_SetOfShaderPrograms#&1$@N@opencascade@S@handle>#$@S@OpenGl_SetOfPrograms#
 // Source: c:@S@OpenGl_ShaderManager@F@BindBoundBoxProgram#
@@ -1892,9 +2350,14 @@
 // Source: c:@S@OpenGl_ShaderManager@F@BindOutlineProgram#
 // Source: c:@S@OpenGl_ShaderManager@F@BindPBREnvBakingProgram#I#
 // Source: c:@S@OpenGl_ShaderManager@F@BindStereoProgram#$@E@Graphic3d_StereoMode#
+// Source: c:@S@OpenGl_ShaderManager@F@BoundBoxVertBuffer#1
 // Source: c:@S@OpenGl_ShaderManager@F@ChooseFaceShadingModel#$@E@Graphic3d_TypeOfShadingModel#b#1
 // Source: c:@S@OpenGl_ShaderManager@F@ChooseLineShadingModel#$@E@Graphic3d_TypeOfShadingModel#b#1
 // Source: c:@S@OpenGl_ShaderManager@F@ChooseMarkerShadingModel#$@E@Graphic3d_TypeOfShadingModel#b#1
+// Source: c:@S@OpenGl_ShaderManager@F@DynamicType#1
+// Source: c:@S@OpenGl_ShaderManager@F@GetBgCubeMapProgram#
+// Source: c:@S@OpenGl_ShaderManager@F@GetBgSkydomeProgram#
+// Source: c:@S@OpenGl_ShaderManager@F@GetColoredQuadProgram#
 // Source: c:@S@OpenGl_ShaderManager@F@IsEmpty#1
 // Source: c:@S@OpenGl_ShaderManager@F@PushClippingState#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderProgram#1
 // Source: c:@S@OpenGl_ShaderManager@F@PushInteriorState#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderProgram#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Aspects#1
@@ -1910,6 +2373,7 @@
 // Source: c:@S@OpenGl_ShaderManager@F@SetCastShadows#b#
 // Source: c:@S@OpenGl_ShaderManager@F@SetOitState#$@E@Graphic3d_RenderTransparentMethod#
 // Source: c:@S@OpenGl_ShaderManager@F@SetShadingModel#$@E@Graphic3d_TypeOfShadingModel#
+// Source: c:@S@OpenGl_ShaderManager@F@SetWeighedOitState#f#
 // Source: c:@S@OpenGl_ShaderManager@F@ShadingModel#1
 // Source: c:@S@OpenGl_ShaderManager@F@UpdateClippingState#
 // Source: c:@S@OpenGl_ShaderManager@F@UpdateLightSourceState#
@@ -1926,10 +2390,16 @@
 // Source: c:@S@OpenGl_ShaderManager@F@pushWorldViewState#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderProgram#1
 // Source: c:@S@OpenGl_ShaderObject@F@Compile#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_ShaderObject@F@Create#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_ShaderObject@F@DynamicType#1
+// Source: c:@S@OpenGl_ShaderObject@F@EstimatedDataSize#1
+// Source: c:@S@OpenGl_ShaderObject@F@OpenGl_ShaderObject#i#
+// Source: c:@S@OpenGl_ShaderObject@F@Type#1
 // Source: c:@S@OpenGl_ShaderProgram@F@ApplyVariables#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_ShaderProgram@F@AttachShader#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderObject#
 // Source: c:@S@OpenGl_ShaderProgram@F@Create#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_ShaderProgram@F@DetachShader#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderObject#
+// Source: c:@S@OpenGl_ShaderProgram@F@DynamicType#1
+// Source: c:@S@OpenGl_ShaderProgram@F@EstimatedDataSize#1
 // Source: c:@S@OpenGl_ShaderProgram@F@HasAlphaTest#1
 // Source: c:@S@OpenGl_ShaderProgram@F@HasTessellationStage#1
 // Source: c:@S@OpenGl_ShaderProgram@F@IsValid#1
@@ -1939,17 +2409,32 @@
 // Source: c:@S@OpenGl_ShaderProgram@F@NbLightsMax#1
 // Source: c:@S@OpenGl_ShaderProgram@F@NbShadowMaps#1
 // Source: c:@S@OpenGl_ShaderProgram@F@OitOutput#1
+// Source: c:@S@OpenGl_ShaderProgram@F@ProgramId#1
+// Source: c:@S@OpenGl_ShaderProgram@F@Proxy#1
+// Source: c:@S@OpenGl_ShaderProgram@F@SetAttribute#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#I#f#
 // Source: c:@S@OpenGl_ShaderProgram@F@SetSampler#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#I#$@E@Graphic3d_TextureUnit#
 // Source: c:@S@OpenGl_ShaderProgram@F@SetUniform#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#I#I#
+// Source: c:@S@OpenGl_ShaderProgram@F@SetUniform#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#I#f#
 // Source: c:@S@OpenGl_ShaderProgram@F@TextureSetBits#1
+// Source: c:@S@OpenGl_ShadowMap@F@Camera#1
+// Source: c:@S@OpenGl_ShadowMap@F@DynamicType#1
+// Source: c:@S@OpenGl_ShadowMap@F@EstimatedDataSize#1
+// Source: c:@S@OpenGl_ShadowMap@F@FrameBuffer#1
 // Source: c:@S@OpenGl_ShadowMap@F@IsValid#1
+// Source: c:@S@OpenGl_ShadowMap@F@LightSource#1
 // Source: c:@S@OpenGl_ShadowMap@F@SetLightSource#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#
+// Source: c:@S@OpenGl_ShadowMap@F@SetShadowMapBias#f#
+// Source: c:@S@OpenGl_ShadowMap@F@ShadowMapBias#1
+// Source: c:@S@OpenGl_ShadowMap@F@Texture#1
+// Source: c:@S@OpenGl_ShadowMapArray@F@EstimatedDataSize#1
 // Source: c:@S@OpenGl_ShadowMapArray@F@IsValid#1
 // Source: c:@S@OpenGl_ShadowMapArray@F@OpenGl_ShadowMapArray#
 // Source: c:@S@OpenGl_Structure@F@Clear#
 // Source: c:@S@OpenGl_Structure@F@Clear#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_Structure@F@DynamicType#1
 // Source: c:@S@OpenGl_Structure@F@GraphicHighlight#&1$@N@opencascade@S@handle>#$@S@Graphic3d_PresentationAttributes#
 // Source: c:@S@OpenGl_Structure@F@GraphicUnhighlight#
+// Source: c:@S@OpenGl_Structure@F@ModificationState#1
 // Source: c:@S@OpenGl_Structure@F@NewGroup#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
 // Source: c:@S@OpenGl_Structure@F@OnVisibilityChanged#
 // Source: c:@S@OpenGl_Structure@F@OpenGl_Structure#&1$@N@opencascade@S@handle>#$@S@Graphic3d_StructureManager#
@@ -1963,14 +2448,20 @@
 // Source: c:@S@OpenGl_Structure@F@SetZLayer#I#
 // Source: c:@S@OpenGl_Structure@F@ShadowLink#&1$@N@opencascade@S@handle>#$@S@Graphic3d_StructureManager#1
 // Source: c:@S@OpenGl_Structure@F@updateLayerTransformation#
+// Source: c:@S@OpenGl_StructureShadow@F@DynamicType#1
 // Source: c:@S@OpenGl_StructureShadow@F@OpenGl_StructureShadow#&1$@N@opencascade@S@handle>#$@S@Graphic3d_StructureManager#&1$@N@opencascade@S@handle>#$@S@OpenGl_Structure#
 // Source: c:@S@OpenGl_Texture@F@Bind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#$@E@Graphic3d_TextureUnit#1
 // Source: c:@S@OpenGl_Texture@F@Bind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#1
 // Source: c:@S@OpenGl_Texture@F@Create#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_Texture@F@DynamicType#1
+// Source: c:@S@OpenGl_Texture@F@EstimatedDataSize#1
 // Source: c:@S@OpenGl_Texture@F@GenerateMipmaps#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_Texture@F@GetFormat#1
+// Source: c:@S@OpenGl_Texture@F@GetTarget#1
 // Source: c:@S@OpenGl_Texture@F@HasMipmaps#1
 // Source: c:@S@OpenGl_Texture@F@Init#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureRoot#
 // Source: c:@S@OpenGl_Texture@F@Init2DMultisample#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#I#I#I#I#
+// Source: c:@S@OpenGl_Texture@F@InitCubeMap#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CubeMap#k#$@E@Image_Format#b#b#
 // Source: c:@S@OpenGl_Texture@F@InitSamplerObject#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_Texture@F@IsAlpha#1
 // Source: c:@S@OpenGl_Texture@F@IsPointSprite#1
@@ -1978,26 +2469,37 @@
 // Source: c:@S@OpenGl_Texture@F@IsValid#1
 // Source: c:@S@OpenGl_Texture@F@MaxMipmapLevel#1
 // Source: c:@S@OpenGl_Texture@F@NbSamples#1
+// Source: c:@S@OpenGl_Texture@F@Revision#1
+// Source: c:@S@OpenGl_Texture@F@Sampler#1
 // Source: c:@S@OpenGl_Texture@F@SetAlpha#b#
+// Source: c:@S@OpenGl_Texture@F@SetRevision#k#
 // Source: c:@S@OpenGl_Texture@F@SetSampler#&1$@N@opencascade@S@handle>#$@S@OpenGl_Sampler#
 // Source: c:@S@OpenGl_Texture@F@SetTopDown#b#
 // Source: c:@S@OpenGl_Texture@F@SizeX#1
 // Source: c:@S@OpenGl_Texture@F@SizeY#1
 // Source: c:@S@OpenGl_Texture@F@SizeZ#1
 // Source: c:@S@OpenGl_Texture@F@SizedFormat#1
+// Source: c:@S@OpenGl_Texture@F@TextureId#1
 // Source: c:@S@OpenGl_Texture@F@Unbind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#$@E@Graphic3d_TextureUnit#1
 // Source: c:@S@OpenGl_Texture@F@Unbind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#1
 // Source: c:@S@OpenGl_TextureBuffer@F@BindTexture#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#$@E@Graphic3d_TextureUnit#1
 // Source: c:@S@OpenGl_TextureBuffer@F@Create#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_TextureBuffer@F@DynamicType#1
+// Source: c:@S@OpenGl_TextureBuffer@F@GetTarget#1
 // Source: c:@S@OpenGl_TextureBuffer@F@IsValid#1
 // Source: c:@S@OpenGl_TextureBuffer@F@OpenGl_TextureBuffer#
+// Source: c:@S@OpenGl_TextureBuffer@F@TextureFormat#1
+// Source: c:@S@OpenGl_TextureBuffer@F@TextureId#1
 // Source: c:@S@OpenGl_TextureBuffer@F@UnbindTexture#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#$@E@Graphic3d_TextureUnit#1
+// Source: c:@S@OpenGl_TextureSet@F@DynamicType#1
+// Source: c:@S@OpenGl_TextureSet@F@First#1
 // Source: c:@S@OpenGl_TextureSet@F@FirstUnit#1
 // Source: c:@S@OpenGl_TextureSet@F@HasNonPointSprite#1
 // Source: c:@S@OpenGl_TextureSet@F@HasPointSprite#1
 // Source: c:@S@OpenGl_TextureSet@F@InitZero#
 // Source: c:@S@OpenGl_TextureSet@F@IsEmpty#1
 // Source: c:@S@OpenGl_TextureSet@F@IsModulate#1
+// Source: c:@S@OpenGl_TextureSet@F@Last#1
 // Source: c:@S@OpenGl_TextureSet@F@LastUnit#1
 // Source: c:@S@OpenGl_TextureSet@F@Lower#1
 // Source: c:@S@OpenGl_TextureSet@F@OpenGl_TextureSet#
@@ -2006,19 +2508,31 @@
 // Source: c:@S@OpenGl_TextureSet@F@Size#1
 // Source: c:@S@OpenGl_TextureSet@F@TextureSetBits#1
 // Source: c:@S@OpenGl_TextureSet@F@Upper#1
+// Source: c:@S@OpenGl_TextureSet@F@Value#I#1
+// Source: c:@S@OpenGl_UniformBuffer@F@DynamicType#1
+// Source: c:@S@OpenGl_UniformBuffer@F@GetTarget#1
 // Source: c:@S@OpenGl_UniformBuffer@F@OpenGl_UniformBuffer#
 // Source: c:@S@OpenGl_VertexBuffer@F@BindAllAttributes#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#1
 // Source: c:@S@OpenGl_VertexBuffer@F@BindAttribute#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#$@E@Graphic3d_TypeOfAttribute#1
 // Source: c:@S@OpenGl_VertexBuffer@F@BindPositionAttribute#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#1
+// Source: c:@S@OpenGl_VertexBuffer@F@BindVertexAttrib#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#i#1
+// Source: c:@S@OpenGl_VertexBuffer@F@DynamicType#1
+// Source: c:@S@OpenGl_VertexBuffer@F@GetTarget#1
 // Source: c:@S@OpenGl_VertexBuffer@F@HasColorAttribute#1
 // Source: c:@S@OpenGl_VertexBuffer@F@HasNormalAttribute#1
 // Source: c:@S@OpenGl_VertexBuffer@F@OpenGl_VertexBuffer#
 // Source: c:@S@OpenGl_VertexBuffer@F@UnbindAllAttributes#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#1
 // Source: c:@S@OpenGl_VertexBuffer@F@UnbindAttribute#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#$@E@Graphic3d_TypeOfAttribute#1
+// Source: c:@S@OpenGl_VertexBuffer@F@UnbindVertexAttrib#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#i#1
 // Source: c:@S@OpenGl_View@F@BackgroundImageStyle#1
+// Source: c:@S@OpenGl_View@F@ClipPlanes#1
+// Source: c:@S@OpenGl_View@F@DepthPeelingFbos#1
+// Source: c:@S@OpenGl_View@F@DynamicType#1
 // Source: c:@S@OpenGl_View@F@FBO#1
 // Source: c:@S@OpenGl_View@F@FBOChangeViewport#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#I#I#
 // Source: c:@S@OpenGl_View@F@FBOCreate#I#I#
+// Source: c:@S@OpenGl_View@F@GlTextureEnv#1
+// Source: c:@S@OpenGl_View@F@GlWindow#1
 // Source: c:@S@OpenGl_View@F@GraduatedTrihedronErase#
 // Source: c:@S@OpenGl_View@F@GridErase#
 // Source: c:@S@OpenGl_View@F@HasImmediateStructures#1
@@ -2027,6 +2541,7 @@
 // Source: c:@S@OpenGl_View@F@IsDefined#1
 // Source: c:@S@OpenGl_View@F@IsInvalidated#
 // Source: c:@S@OpenGl_View@F@Layer#I#1
+// Source: c:@S@OpenGl_View@F@Lights#1
 // Source: c:@S@OpenGl_View@F@Redraw#
 // Source: c:@S@OpenGl_View@F@RedrawImmediate#
 // Source: c:@S@OpenGl_View@F@ReleaseGlResources#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
@@ -2042,18 +2557,27 @@
 // Source: c:@S@OpenGl_View@F@SetLights#&1$@N@opencascade@S@handle>#$@S@Graphic3d_LightSet#
 // Source: c:@S@OpenGl_View@F@SetTextureEnv#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureEnv#
 // Source: c:@S@OpenGl_View@F@SetToFlipOutput#b#
+// Source: c:@S@OpenGl_View@F@SpecIBLMapLevels#1
 // Source: c:@S@OpenGl_View@F@ToFlipOutput#1
 // Source: c:@S@OpenGl_View@F@Window#1
 // Source: c:@S@OpenGl_View@F@ZLayerMax#1
 // Source: c:@S@OpenGl_Window@F@Activate#
+// Source: c:@S@OpenGl_Window@F@DynamicType#1
+// Source: c:@S@OpenGl_Window@F@GetGlContext#1
 // Source: c:@S@OpenGl_Window@F@Height#1
 // Source: c:@S@OpenGl_Window@F@OpenGl_Window#
+// Source: c:@S@OpenGl_Window@F@PlatformWindow#
 // Source: c:@S@OpenGl_Window@F@Resize#
 // Source: c:@S@OpenGl_Window@F@SetSwapInterval#b#
+// Source: c:@S@OpenGl_Window@F@SizeWindow#
 // Source: c:@S@OpenGl_Window@F@Width#1
 // Source: c:@S@OpenGl_Workspace@F@Activate#
+// Source: c:@S@OpenGl_Workspace@F@DynamicType#1
+// Source: c:@S@OpenGl_Workspace@F@EnvironmentTexture#1
 // Source: c:@S@OpenGl_Workspace@F@FBOCreate#I#I#
+// Source: c:@S@OpenGl_Workspace@F@GetGlContext#
 // Source: c:@S@OpenGl_Workspace@F@Height#1
+// Source: c:@S@OpenGl_Workspace@F@HighlightStyle#1
 // Source: c:@S@OpenGl_Workspace@F@NbSkippedTransparentElements#
 // Source: c:@S@OpenGl_Workspace@F@RenderFilter#1
 // Source: c:@S@OpenGl_Workspace@F@ResetSkippedCounter#
@@ -2062,10 +2586,13 @@
 // Source: c:@S@OpenGl_Workspace@F@SetHighlightStyle#&1$@N@opencascade@S@handle>#$@S@Graphic3d_PresentationAttributes#
 // Source: c:@S@OpenGl_Workspace@F@SetRenderFilter#I#
 // Source: c:@S@OpenGl_Workspace@F@SetUseZBuffer#b#
+// Source: c:@S@OpenGl_Workspace@F@TextureSet#1
 // Source: c:@S@OpenGl_Workspace@F@ToAllowFaceCulling#1
 // Source: c:@S@OpenGl_Workspace@F@ToHighlight#1
 // Source: c:@S@OpenGl_Workspace@F@Width#1
 // Source: c:@S@Prs3d_ArrowAspect@F@Angle#1
+// Source: c:@S@Prs3d_ArrowAspect@F@Aspect#1
+// Source: c:@S@Prs3d_ArrowAspect@F@DynamicType#1
 // Source: c:@S@Prs3d_ArrowAspect@F@IsZoomable#1
 // Source: c:@S@Prs3d_ArrowAspect@F@Length#1
 // Source: c:@S@Prs3d_ArrowAspect@F@Prs3d_ArrowAspect#
@@ -2075,11 +2602,16 @@
 // Source: c:@S@Prs3d_ArrowAspect@F@SetAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_AspectLine3d#
 // Source: c:@S@Prs3d_ArrowAspect@F@SetLength#d#
 // Source: c:@S@Prs3d_ArrowAspect@F@SetZoomable#b#
+// Source: c:@S@Prs3d_BasicAspect@F@DynamicType#1
+// Source: c:@S@Prs3d_DatumAspect@F@ArrowAspect#1
 // Source: c:@S@Prs3d_DatumAspect@F@Attribute#$@E@Prs3d_DatumAttribute#1
 // Source: c:@S@Prs3d_DatumAspect@F@AxisLength#$@E@Prs3d_DatumParts#1
 // Source: c:@S@Prs3d_DatumAspect@F@CopyAspectsFrom#&1$@N@opencascade@S@handle>#$@S@Prs3d_DatumAspect#
 // Source: c:@S@Prs3d_DatumAspect@F@DatumAxes#1
 // Source: c:@S@Prs3d_DatumAspect@F@DrawDatumPart#$@E@Prs3d_DatumParts#1
+// Source: c:@S@Prs3d_DatumAspect@F@DynamicType#1
+// Source: c:@S@Prs3d_DatumAspect@F@LineAspect#$@E@Prs3d_DatumParts#1
+// Source: c:@S@Prs3d_DatumAspect@F@PointAspect#1
 // Source: c:@S@Prs3d_DatumAspect@F@Prs3d_DatumAspect#
 // Source: c:@S@Prs3d_DatumAspect@F@SetArrowAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_ArrowAspect#
 // Source: c:@S@Prs3d_DatumAspect@F@SetAttribute#$@E@Prs3d_DatumAttribute#d#
@@ -2090,15 +2622,21 @@
 // Source: c:@S@Prs3d_DatumAspect@F@SetPointAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_PointAspect#
 // Source: c:@S@Prs3d_DatumAspect@F@SetTextAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_TextAspect#
 // Source: c:@S@Prs3d_DatumAspect@F@SetToDrawLabels#b#
+// Source: c:@S@Prs3d_DatumAspect@F@ShadingAspect#$@E@Prs3d_DatumParts#1
+// Source: c:@S@Prs3d_DatumAspect@F@TextAspect#$@E@Prs3d_DatumParts#1
+// Source: c:@S@Prs3d_DatumAspect@F@TextAspect#1
 // Source: c:@S@Prs3d_DatumAspect@F@ToDrawArrows#1
 // Source: c:@S@Prs3d_DatumAspect@F@ToDrawLabels#1
+// Source: c:@S@Prs3d_DimensionAspect@F@ArrowAspect#1
 // Source: c:@S@Prs3d_DimensionAspect@F@ArrowOrientation#1
 // Source: c:@S@Prs3d_DimensionAspect@F@ArrowTailSize#1
+// Source: c:@S@Prs3d_DimensionAspect@F@DynamicType#1
 // Source: c:@S@Prs3d_DimensionAspect@F@ExtensionSize#1
 // Source: c:@S@Prs3d_DimensionAspect@F@IsArrows3d#1
 // Source: c:@S@Prs3d_DimensionAspect@F@IsText3d#1
 // Source: c:@S@Prs3d_DimensionAspect@F@IsTextShaded#1
 // Source: c:@S@Prs3d_DimensionAspect@F@IsUnitsDisplayed#1
+// Source: c:@S@Prs3d_DimensionAspect@F@LineAspect#1
 // Source: c:@S@Prs3d_DimensionAspect@F@MakeArrows3d#b#
 // Source: c:@S@Prs3d_DimensionAspect@F@MakeText3d#b#
 // Source: c:@S@Prs3d_DimensionAspect@F@MakeTextShaded#b#
@@ -2112,17 +2650,24 @@
 // Source: c:@S@Prs3d_DimensionAspect@F@SetTextAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_TextAspect#
 // Source: c:@S@Prs3d_DimensionAspect@F@SetTextHorizontalPosition#$@E@Prs3d_DimensionTextHorizontalPosition#
 // Source: c:@S@Prs3d_DimensionAspect@F@SetTextVerticalPosition#$@E@Prs3d_DimensionTextVerticalPosition#
+// Source: c:@S@Prs3d_DimensionAspect@F@TextAspect#1
 // Source: c:@S@Prs3d_DimensionAspect@F@TextHorizontalPosition#1
 // Source: c:@S@Prs3d_DimensionAspect@F@TextVerticalPosition#1
+// Source: c:@S@Prs3d_Drawer@F@ArrowAspect#1
 // Source: c:@S@Prs3d_Drawer@F@ClearLocalAttributes#
+// Source: c:@S@Prs3d_Drawer@F@DatumAspect#1
 // Source: c:@S@Prs3d_Drawer@F@DeviationAngle#1
 // Source: c:@S@Prs3d_Drawer@F@DeviationCoefficient#1
+// Source: c:@S@Prs3d_Drawer@F@DimensionAspect#1
 // Source: c:@S@Prs3d_Drawer@F@DisableDrawHiddenLine#
 // Source: c:@S@Prs3d_Drawer@F@Discretisation#1
 // Source: c:@S@Prs3d_Drawer@F@DrawHiddenLine#1
+// Source: c:@S@Prs3d_Drawer@F@DynamicType#1
 // Source: c:@S@Prs3d_Drawer@F@EnableDrawHiddenLine#
+// Source: c:@S@Prs3d_Drawer@F@FaceBoundaryAspect#1
 // Source: c:@S@Prs3d_Drawer@F@FaceBoundaryDraw#1
 // Source: c:@S@Prs3d_Drawer@F@FaceBoundaryUpperContinuity#1
+// Source: c:@S@Prs3d_Drawer@F@FreeBoundaryAspect#1
 // Source: c:@S@Prs3d_Drawer@F@FreeBoundaryDraw#1
 // Source: c:@S@Prs3d_Drawer@F@HLRAngle#1
 // Source: c:@S@Prs3d_Drawer@F@HasLink#1
@@ -2167,17 +2712,24 @@
 // Source: c:@S@Prs3d_Drawer@F@HasOwnVertexDrawMode#1
 // Source: c:@S@Prs3d_Drawer@F@HasOwnWireAspect#1
 // Source: c:@S@Prs3d_Drawer@F@HasOwnWireDraw#1
+// Source: c:@S@Prs3d_Drawer@F@HiddenLineAspect#1
 // Source: c:@S@Prs3d_Drawer@F@IsAutoTriangulation#1
 // Source: c:@S@Prs3d_Drawer@F@IsoOnPlane#1
 // Source: c:@S@Prs3d_Drawer@F@IsoOnTriangulation#1
 // Source: c:@S@Prs3d_Drawer@F@LineArrowDraw#1
+// Source: c:@S@Prs3d_Drawer@F@LineAspect#1
 // Source: c:@S@Prs3d_Drawer@F@Link#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#
+// Source: c:@S@Prs3d_Drawer@F@Link#1
 // Source: c:@S@Prs3d_Drawer@F@MaximalChordialDeviation#1
 // Source: c:@S@Prs3d_Drawer@F@MaximalParameterValue#1
+// Source: c:@S@Prs3d_Drawer@F@PlaneAspect#1
+// Source: c:@S@Prs3d_Drawer@F@PointAspect#1
 // Source: c:@S@Prs3d_Drawer@F@PreviousDeviationAngle#1
 // Source: c:@S@Prs3d_Drawer@F@PreviousDeviationCoefficient#1
 // Source: c:@S@Prs3d_Drawer@F@PreviousHLRDeviationAngle#1
 // Source: c:@S@Prs3d_Drawer@F@Prs3d_Drawer#
+// Source: c:@S@Prs3d_Drawer@F@SectionAspect#1
+// Source: c:@S@Prs3d_Drawer@F@SeenLineAspect#1
 // Source: c:@S@Prs3d_Drawer@F@SetArrowAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_ArrowAspect#
 // Source: c:@S@Prs3d_Drawer@F@SetAutoTriangulation#b#
 // Source: c:@S@Prs3d_Drawer@F@SetDatumAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_DatumAspect#
@@ -2226,8 +2778,11 @@
 // Source: c:@S@Prs3d_Drawer@F@SetupOwnFaceBoundaryAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#
 // Source: c:@S@Prs3d_Drawer@F@SetupOwnPointAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#
 // Source: c:@S@Prs3d_Drawer@F@SetupOwnShadingAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#
+// Source: c:@S@Prs3d_Drawer@F@TextAspect#1
 // Source: c:@S@Prs3d_Drawer@F@TypeOfDeflection#1
 // Source: c:@S@Prs3d_Drawer@F@TypeOfHLR#1
+// Source: c:@S@Prs3d_Drawer@F@UIsoAspect#1
+// Source: c:@S@Prs3d_Drawer@F@UnFreeBoundaryAspect#1
 // Source: c:@S@Prs3d_Drawer@F@UnFreeBoundaryDraw#1
 // Source: c:@S@Prs3d_Drawer@F@UnsetFaceBoundaryUpperContinuity#
 // Source: c:@S@Prs3d_Drawer@F@UnsetOwnDimAngleDisplayUnits#
@@ -2249,14 +2804,21 @@
 // Source: c:@S@Prs3d_Drawer@F@UnsetOwnWireDraw#
 // Source: c:@S@Prs3d_Drawer@F@UpdatePreviousDeviationAngle#
 // Source: c:@S@Prs3d_Drawer@F@UpdatePreviousDeviationCoefficient#
+// Source: c:@S@Prs3d_Drawer@F@VIsoAspect#1
+// Source: c:@S@Prs3d_Drawer@F@VectorAspect#1
 // Source: c:@S@Prs3d_Drawer@F@VertexDrawMode#1
+// Source: c:@S@Prs3d_Drawer@F@WireAspect#1
 // Source: c:@S@Prs3d_Drawer@F@WireDraw#1
+// Source: c:@S@Prs3d_IsoAspect@F@DynamicType#1
 // Source: c:@S@Prs3d_IsoAspect@F@Number#1
 // Source: c:@S@Prs3d_IsoAspect@F@SetNumber#I#
+// Source: c:@S@Prs3d_LineAspect@F@Aspect#1
+// Source: c:@S@Prs3d_LineAspect@F@DynamicType#1
 // Source: c:@S@Prs3d_LineAspect@F@Prs3d_LineAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_AspectLine3d#
 // Source: c:@S@Prs3d_LineAspect@F@SetAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_AspectLine3d#
 // Source: c:@S@Prs3d_LineAspect@F@SetTypeOfLine#$@E@Aspect_TypeOfLine#
 // Source: c:@S@Prs3d_LineAspect@F@SetWidth#d#
+// Source: c:@S@Prs3d_PlaneAspect@F@ArrowAspect#1
 // Source: c:@S@Prs3d_PlaneAspect@F@ArrowsAngle#1
 // Source: c:@S@Prs3d_PlaneAspect@F@ArrowsLength#1
 // Source: c:@S@Prs3d_PlaneAspect@F@ArrowsSize#1
@@ -2264,6 +2826,9 @@
 // Source: c:@S@Prs3d_PlaneAspect@F@DisplayEdges#1
 // Source: c:@S@Prs3d_PlaneAspect@F@DisplayEdgesArrows#1
 // Source: c:@S@Prs3d_PlaneAspect@F@DisplayIso#1
+// Source: c:@S@Prs3d_PlaneAspect@F@DynamicType#1
+// Source: c:@S@Prs3d_PlaneAspect@F@EdgesAspect#1
+// Source: c:@S@Prs3d_PlaneAspect@F@IsoAspect#1
 // Source: c:@S@Prs3d_PlaneAspect@F@IsoDistance#1
 // Source: c:@S@Prs3d_PlaneAspect@F@PlaneXLength#1
 // Source: c:@S@Prs3d_PlaneAspect@F@PlaneYLength#1
@@ -2277,13 +2842,19 @@
 // Source: c:@S@Prs3d_PlaneAspect@F@SetDisplayIso#b#
 // Source: c:@S@Prs3d_PlaneAspect@F@SetIsoDistance#d#
 // Source: c:@S@Prs3d_PlaneAspect@F@SetPlaneLength#d#d#
+// Source: c:@S@Prs3d_PointAspect@F@Aspect#1
+// Source: c:@S@Prs3d_PointAspect@F@DynamicType#1
+// Source: c:@S@Prs3d_PointAspect@F@GetTexture#1
 // Source: c:@S@Prs3d_PointAspect@F@Prs3d_PointAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_AspectMarker3d#
 // Source: c:@S@Prs3d_PointAspect@F@SetAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_AspectMarker3d#
 // Source: c:@S@Prs3d_PointAspect@F@SetScale#d#
 // Source: c:@S@Prs3d_PointAspect@F@SetTypeOfMarker#$@E@Aspect_TypeOfMarker#
 // Source: c:@S@Prs3d_PresentationShadow@F@CalculateBoundBox#
+// Source: c:@S@Prs3d_PresentationShadow@F@DynamicType#1
+// Source: c:@S@Prs3d_PresentationShadow@F@ParentAffinity#1
 // Source: c:@S@Prs3d_PresentationShadow@F@ParentId#1
 // Source: c:@S@Prs3d_PresentationShadow@F@Prs3d_PresentationShadow#&1$@N@opencascade@S@handle>#$@S@Graphic3d_StructureManager#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
+// Source: c:@S@Prs3d_ShadingAspect@F@DynamicType#1
 // Source: c:@S@Prs3d_ShadingAspect@F@Prs3d_ShadingAspect#
 // Source: c:@S@Prs3d_ShadingAspect@F@Prs3d_ShadingAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_AspectFillArea3d#
 // Source: c:@S@Prs3d_ShadingAspect@F@SetAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_AspectFillArea3d#
@@ -2292,6 +2863,8 @@
 // Source: c:@S@Prs3d_ShadingAspect@F@ToUseVertexColorForBackFaces#1
 // Source: c:@S@Prs3d_ShadingAspect@F@Transparency#$@E@Aspect_TypeOfFacingModel#1
 // Source: c:@S@Prs3d_TextAspect@F@Angle#1
+// Source: c:@S@Prs3d_TextAspect@F@Aspect#1
+// Source: c:@S@Prs3d_TextAspect@F@DynamicType#1
 // Source: c:@S@Prs3d_TextAspect@F@Height#1
 // Source: c:@S@Prs3d_TextAspect@F@HorizontalJustification#1
 // Source: c:@S@Prs3d_TextAspect@F@Orientation#1
@@ -2304,24 +2877,33 @@
 // Source: c:@S@Prs3d_TextAspect@F@SetOrientation#$@E@Graphic3d_TextPath#
 // Source: c:@S@Prs3d_TextAspect@F@SetVerticalJustification#$@E@Graphic3d_VerticalTextAlignment#
 // Source: c:@S@Prs3d_TextAspect@F@VerticalJustification#1
+// Source: c:@S@PrsDim_AngleDimension@F@CenterPoint#1
+// Source: c:@S@PrsDim_AngleDimension@F@DynamicType#1
+// Source: c:@S@PrsDim_AngleDimension@F@FirstPoint#1
 // Source: c:@S@PrsDim_AngleDimension@F@GetArrowsVisibility#1
 // Source: c:@S@PrsDim_AngleDimension@F@GetTextPosition#1
 // Source: c:@S@PrsDim_AngleDimension@F@GetType#1
 // Source: c:@S@PrsDim_AngleDimension@F@PrsDim_AngleDimension#&1$@S@gp_Pnt#S0_#S0_#
+// Source: c:@S@PrsDim_AngleDimension@F@SecondPoint#1
 // Source: c:@S@PrsDim_AngleDimension@F@SetArrowsVisibility#&1$@E@PrsDim_TypeOfAngleArrowVisibility#
 // Source: c:@S@PrsDim_AngleDimension@F@SetMeasuredGeometry#&1$@S@gp_Pnt#S0_#S0_#
 // Source: c:@S@PrsDim_AngleDimension@F@SetTextPosition#&1$@S@gp_Pnt#
 // Source: c:@S@PrsDim_AngleDimension@F@SetType#$@E@PrsDim_TypeOfAngle#
+// Source: c:@S@PrsDim_Chamf2dDimension@F@DynamicType#1
 // Source: c:@S@PrsDim_Chamf2dDimension@F@IsMovable#1
 // Source: c:@S@PrsDim_Chamf2dDimension@F@KindOfDimension#1
+// Source: c:@S@PrsDim_Chamf3dDimension@F@DynamicType#1
 // Source: c:@S@PrsDim_Chamf3dDimension@F@IsMovable#1
 // Source: c:@S@PrsDim_Chamf3dDimension@F@KindOfDimension#1
+// Source: c:@S@PrsDim_ConcentricRelation@F@DynamicType#1
 // Source: c:@S@PrsDim_DiameterDimension@F@AnchorPoint#
+// Source: c:@S@PrsDim_DiameterDimension@F@DynamicType#1
 // Source: c:@S@PrsDim_DiameterDimension@F@GetTextPosition#1
 // Source: c:@S@PrsDim_DiameterDimension@F@SetTextPosition#&1$@S@gp_Pnt#
 // Source: c:@S@PrsDim_Dimension@F@AcceptDisplayMode#I#1
 // Source: c:@S@PrsDim_Dimension@F@DimensionAspect#1
 // Source: c:@S@PrsDim_Dimension@F@DisplaySpecialSymbol#1
+// Source: c:@S@PrsDim_Dimension@F@DynamicType#1
 // Source: c:@S@PrsDim_Dimension@F@GetFlyout#1
 // Source: c:@S@PrsDim_Dimension@F@GetGeometryType#1
 // Source: c:@S@PrsDim_Dimension@F@GetTextPosition#1
@@ -2340,34 +2922,54 @@
 // Source: c:@S@PrsDim_Dimension@F@Type#1
 // Source: c:@S@PrsDim_Dimension@F@UnsetCustomPlane#
 // Source: c:@S@PrsDim_Dimension@F@UnsetFixedTextPosition#
+// Source: c:@S@PrsDim_DimensionOwner@F@DynamicType#1
 // Source: c:@S@PrsDim_DimensionOwner@F@HilightWithColor#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#I#
 // Source: c:@S@PrsDim_DimensionOwner@F@IsHilighted#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#1
 // Source: c:@S@PrsDim_DimensionOwner@F@PrsDim_DimensionOwner#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#$@E@PrsDim_DimensionSelectionMode#I#
 // Source: c:@S@PrsDim_DimensionOwner@F@SelectionMode#1
 // Source: c:@S@PrsDim_DimensionOwner@F@Unhilight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@PrsDim_EllipseRadiusDimension@F@ComputeGeometry#
+// Source: c:@S@PrsDim_EllipseRadiusDimension@F@DynamicType#1
 // Source: c:@S@PrsDim_EllipseRadiusDimension@F@IsMovable#1
 // Source: c:@S@PrsDim_EllipseRadiusDimension@F@KindOfDimension#1
+// Source: c:@S@PrsDim_EqualDistanceRelation@F@DynamicType#1
+// Source: c:@S@PrsDim_EqualRadiusRelation@F@DynamicType#1
+// Source: c:@S@PrsDim_FixRelation@F@DynamicType#1
 // Source: c:@S@PrsDim_FixRelation@F@IsMovable#1
 // Source: c:@S@PrsDim_IdenticRelation@F@AddUser#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#
 // Source: c:@S@PrsDim_IdenticRelation@F@ClearUsers#
+// Source: c:@S@PrsDim_IdenticRelation@F@DynamicType#1
 // Source: c:@S@PrsDim_IdenticRelation@F@HasUsers#1
 // Source: c:@S@PrsDim_IdenticRelation@F@IsMovable#1
+// Source: c:@S@PrsDim_LengthDimension@F@DynamicType#1
+// Source: c:@S@PrsDim_LengthDimension@F@FirstPoint#1
 // Source: c:@S@PrsDim_LengthDimension@F@GetTextPosition#1
 // Source: c:@S@PrsDim_LengthDimension@F@PrsDim_LengthDimension#
+// Source: c:@S@PrsDim_LengthDimension@F@SecondPoint#1
 // Source: c:@S@PrsDim_LengthDimension@F@SetTextPosition#&1$@S@gp_Pnt#
+// Source: c:@S@PrsDim_MaxRadiusDimension@F@DynamicType#1
+// Source: c:@S@PrsDim_MidPointRelation@F@DynamicType#1
 // Source: c:@S@PrsDim_MidPointRelation@F@IsMovable#1
+// Source: c:@S@PrsDim_MinRadiusDimension@F@DynamicType#1
+// Source: c:@S@PrsDim_OffsetDimension@F@DynamicType#1
 // Source: c:@S@PrsDim_OffsetDimension@F@IsMovable#1
 // Source: c:@S@PrsDim_OffsetDimension@F@KindOfDimension#1
+// Source: c:@S@PrsDim_ParallelRelation@F@DynamicType#1
 // Source: c:@S@PrsDim_ParallelRelation@F@IsMovable#1
+// Source: c:@S@PrsDim_PerpendicularRelation@F@DynamicType#1
+// Source: c:@S@PrsDim_RadiusDimension@F@AnchorPoint#1
+// Source: c:@S@PrsDim_RadiusDimension@F@DynamicType#1
 // Source: c:@S@PrsDim_RadiusDimension@F@GetTextPosition#1
 // Source: c:@S@PrsDim_RadiusDimension@F@SetTextPosition#&1$@S@gp_Pnt#
 // Source: c:@S@PrsDim_Relation@F@AcceptDisplayMode#I#1
 // Source: c:@S@PrsDim_Relation@F@ArrowSize#1
 // Source: c:@S@PrsDim_Relation@F@AutomaticPosition#1
+// Source: c:@S@PrsDim_Relation@F@DynamicType#1
 // Source: c:@S@PrsDim_Relation@F@ExtShape#1
 // Source: c:@S@PrsDim_Relation@F@IsMovable#1
 // Source: c:@S@PrsDim_Relation@F@KindOfDimension#1
+// Source: c:@S@PrsDim_Relation@F@Plane#1
+// Source: c:@S@PrsDim_Relation@F@Position#1
 // Source: c:@S@PrsDim_Relation@F@SetArrowSize#d#
 // Source: c:@S@PrsDim_Relation@F@SetAutomaticPosition#b#
 // Source: c:@S@PrsDim_Relation@F@SetBndBox#d#d#d#d#d#d#
@@ -2381,17 +2983,23 @@
 // Source: c:@S@PrsDim_Relation@F@UnsetBndBox#
 // Source: c:@S@PrsDim_Relation@F@UnsetColor#
 // Source: c:@S@PrsDim_Relation@F@Value#1
+// Source: c:@S@PrsDim_SymmetricRelation@F@DynamicType#1
 // Source: c:@S@PrsDim_SymmetricRelation@F@IsMovable#1
+// Source: c:@S@PrsDim_TangentRelation@F@DynamicType#1
 // Source: c:@S@PrsDim_TangentRelation@F@ExternRef#
 // Source: c:@S@PrsDim_TangentRelation@F@SetExternRef#I#
 // Source: c:@S@PrsMgr_PresentableObject@F@AcceptDisplayMode#I#1
 // Source: c:@S@PrsMgr_PresentableObject@F@AddChild#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#
 // Source: c:@S@PrsMgr_PresentableObject@F@AddChildWithCurrentTransformation#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#
 // Source: c:@S@PrsMgr_PresentableObject@F@AddClipPlane#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ClipPlane#
+// Source: c:@S@PrsMgr_PresentableObject@F@ClipPlanes#1
+// Source: c:@S@PrsMgr_PresentableObject@F@CombinedParentTransformation#1
 // Source: c:@S@PrsMgr_PresentableObject@F@CurrentFacingModel#1
 // Source: c:@S@PrsMgr_PresentableObject@F@DefaultDisplayMode#1
 // Source: c:@S@PrsMgr_PresentableObject@F@DisplayMode#1
 // Source: c:@S@PrsMgr_PresentableObject@F@DisplayStatus#1
+// Source: c:@S@PrsMgr_PresentableObject@F@DynamicHilightAttributes#1
+// Source: c:@S@PrsMgr_PresentableObject@F@DynamicType#1
 // Source: c:@S@PrsMgr_PresentableObject@F@HasColor#1
 // Source: c:@S@PrsMgr_PresentableObject@F@HasDisplayMode#1
 // Source: c:@S@PrsMgr_PresentableObject@F@HasHilightMode#1
@@ -2400,10 +3008,12 @@
 // Source: c:@S@PrsMgr_PresentableObject@F@HasPolygonOffsets#1
 // Source: c:@S@PrsMgr_PresentableObject@F@HasTransformation#1
 // Source: c:@S@PrsMgr_PresentableObject@F@HasWidth#1
+// Source: c:@S@PrsMgr_PresentableObject@F@HilightAttributes#1
 // Source: c:@S@PrsMgr_PresentableObject@F@HilightMode#1
 // Source: c:@S@PrsMgr_PresentableObject@F@IsInfinite#1
 // Source: c:@S@PrsMgr_PresentableObject@F@IsMutable#1
 // Source: c:@S@PrsMgr_PresentableObject@F@IsTransparent#1
+// Source: c:@S@PrsMgr_PresentableObject@F@LocalTransformationGeom#1
 // Source: c:@S@PrsMgr_PresentableObject@F@Material#1
 // Source: c:@S@PrsMgr_PresentableObject@F@RecomputeTransformation#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@PrsMgr_PresentableObject@F@RemoveChild#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#
@@ -2421,6 +3031,7 @@
 // Source: c:@S@PrsMgr_PresentableObject@F@SetIsoOnTriangulation#b#
 // Source: c:@S@PrsMgr_PresentableObject@F@SetLocalTransformation#&1$@N@opencascade@S@handle>#$@S@TopLoc_Datum3D#
 // Source: c:@S@PrsMgr_PresentableObject@F@SetMutable#b#
+// Source: c:@S@PrsMgr_PresentableObject@F@SetPolygonOffsets#I#f#f#
 // Source: c:@S@PrsMgr_PresentableObject@F@SetPropagateVisualState#b#
 // Source: c:@S@PrsMgr_PresentableObject@F@SetToUpdate#
 // Source: c:@S@PrsMgr_PresentableObject@F@SetToUpdate#I#
@@ -2432,6 +3043,8 @@
 // Source: c:@S@PrsMgr_PresentableObject@F@SynchronizeAspects#
 // Source: c:@S@PrsMgr_PresentableObject@F@ToBeUpdated#b#1
 // Source: c:@S@PrsMgr_PresentableObject@F@ToPropagateVisualState#1
+// Source: c:@S@PrsMgr_PresentableObject@F@TransformPersistence#1
+// Source: c:@S@PrsMgr_PresentableObject@F@TransformationGeom#1
 // Source: c:@S@PrsMgr_PresentableObject@F@Transparency#1
 // Source: c:@S@PrsMgr_PresentableObject@F@TypeOfPresentation3d#1
 // Source: c:@S@PrsMgr_PresentableObject@F@UnsetAttributes#
@@ -2443,16 +3056,19 @@
 // Source: c:@S@PrsMgr_PresentableObject@F@UnsetTransparency#
 // Source: c:@S@PrsMgr_PresentableObject@F@UnsetWidth#
 // Source: c:@S@PrsMgr_PresentableObject@F@UpdateTransformation#
+// Source: c:@S@PrsMgr_PresentableObject@F@ViewAffinity#1
 // Source: c:@S@PrsMgr_PresentableObject@F@Width#1
 // Source: c:@S@PrsMgr_PresentableObject@F@ZLayer#1
 // Source: c:@S@PrsMgr_Presentation@F@Clear#b#
 // Source: c:@S@PrsMgr_Presentation@F@Compute#
 // Source: c:@S@PrsMgr_Presentation@F@Display#
+// Source: c:@S@PrsMgr_Presentation@F@DynamicType#1
 // Source: c:@S@PrsMgr_Presentation@F@Erase#
 // Source: c:@S@PrsMgr_Presentation@F@Highlight#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#
 // Source: c:@S@PrsMgr_Presentation@F@IsDisplayed#1
 // Source: c:@S@PrsMgr_Presentation@F@Mode#1
 // Source: c:@S@PrsMgr_Presentation@F@MustBeUpdated#1
+// Source: c:@S@PrsMgr_Presentation@F@PresentationManager#1
 // Source: c:@S@PrsMgr_Presentation@F@SetUpdateStatus#b#
 // Source: c:@S@PrsMgr_Presentation@F@Unhighlight#
 // Source: c:@S@PrsMgr_PresentationManager@F@BeginImmediateDraw#
@@ -2462,6 +3078,7 @@
 // Source: c:@S@PrsMgr_PresentationManager@F@Connect#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#S0_#I#I#
 // Source: c:@S@PrsMgr_PresentationManager@F@Display#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#I#
 // Source: c:@S@PrsMgr_PresentationManager@F@DisplayPriority#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#I#1
+// Source: c:@S@PrsMgr_PresentationManager@F@DynamicType#1
 // Source: c:@S@PrsMgr_PresentationManager@F@EndImmediateDraw#&1$@N@opencascade@S@handle>#$@S@V3d_Viewer#
 // Source: c:@S@PrsMgr_PresentationManager@F@Erase#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#I#
 // Source: c:@S@PrsMgr_PresentationManager@F@GetZLayer#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#1
@@ -2475,10 +3092,12 @@
 // Source: c:@S@PrsMgr_PresentationManager@F@SetDisplayPriority#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#I#$@E@Graphic3d_DisplayPriority#1
 // Source: c:@S@PrsMgr_PresentationManager@F@SetVisibility#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#I#b#
 // Source: c:@S@PrsMgr_PresentationManager@F@SetZLayer#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#I#
+// Source: c:@S@PrsMgr_PresentationManager@F@StructureManager#1
 // Source: c:@S@PrsMgr_PresentationManager@F@Transform#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#&1$@N@opencascade@S@handle>#$@S@TopLoc_Datum3D#I#
 // Source: c:@S@PrsMgr_PresentationManager@F@Unhighlight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#
 // Source: c:@S@PrsMgr_PresentationManager@F@Update#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#I#1
 // Source: c:@S@PrsMgr_PresentationManager@F@UpdateHighlightTrsf#&1$@N@opencascade@S@handle>#$@S@V3d_Viewer#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#I#S3_#
+// Source: c:@S@Select3D_BVHIndexBuffer@F@DynamicType#1
 // Source: c:@S@Select3D_BVHIndexBuffer@F@HasPatches#1
 // Source: c:@S@Select3D_BVHIndexBuffer@F@Index#I#1
 // Source: c:@S@Select3D_BVHIndexBuffer@F@Init#I#b#
@@ -2488,23 +3107,28 @@
 // Source: c:@S@Select3D_BVHIndexBuffer@F@SetIndex#I#I#I#
 // Source: c:@S@Select3D_InteriorSensitivePointSet@F@Center#I#I#1
 // Source: c:@S@Select3D_InteriorSensitivePointSet@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_InteriorSensitivePointSet@F@DynamicType#1
 // Source: c:@S@Select3D_InteriorSensitivePointSet@F@NbSubElements#1
 // Source: c:@S@Select3D_InteriorSensitivePointSet@F@Size#1
 // Source: c:@S@Select3D_InteriorSensitivePointSet@F@Swap#I#I#
 // Source: c:@S@Select3D_SensitiveBox@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveBox@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveBox@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveBox@F@NbSubElements#1
 // Source: c:@S@Select3D_SensitiveBox@F@Select3D_SensitiveBox#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#d#d#d#d#d#d#
 // Source: c:@S@Select3D_SensitiveBox@F@ToBuildBVH#1
 // Source: c:@S@Select3D_SensitiveCircle@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveCircle@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveCircle@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveCircle@F@NbSubElements#1
 // Source: c:@S@Select3D_SensitiveCircle@F@Radius#1
 // Source: c:@S@Select3D_SensitiveCircle@F@ToBuildBVH#1
+// Source: c:@S@Select3D_SensitiveCurve@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveCurve@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveCurve@F@Select3D_SensitiveCurve#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#I#
 // Source: c:@S@Select3D_SensitiveCylinder@F@BottomRadius#1
 // Source: c:@S@Select3D_SensitiveCylinder@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveCylinder@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveCylinder@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveCylinder@F@Height#1
 // Source: c:@S@Select3D_SensitiveCylinder@F@IsHollow#1
@@ -2513,15 +3137,20 @@
 // Source: c:@S@Select3D_SensitiveCylinder@F@TopRadius#1
 // Source: c:@S@Select3D_SensitiveEntity@F@BVH#
 // Source: c:@S@Select3D_SensitiveEntity@F@Clear#
+// Source: c:@S@Select3D_SensitiveEntity@F@DynamicType#1
+// Source: c:@S@Select3D_SensitiveEntity@F@Flipper#1
 // Source: c:@S@Select3D_SensitiveEntity@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveEntity@F@HasInitLocation#1
+// Source: c:@S@Select3D_SensitiveEntity@F@OwnerId#1
 // Source: c:@S@Select3D_SensitiveEntity@F@SensitivityFactor#1
 // Source: c:@S@Select3D_SensitiveEntity@F@Set#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#
 // Source: c:@S@Select3D_SensitiveEntity@F@SetSensitivityFactor#I#
 // Source: c:@S@Select3D_SensitiveEntity@F@SetTransformPersistence#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TransformPers#
 // Source: c:@S@Select3D_SensitiveEntity@F@ToBuildBVH#1
+// Source: c:@S@Select3D_SensitiveEntity@F@TransformPersistence#1
 // Source: c:@S@Select3D_SensitiveFace@F@BVH#
 // Source: c:@S@Select3D_SensitiveFace@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveFace@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveFace@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveFace@F@NbSubElements#1
 // Source: c:@S@Select3D_SensitiveFace@F@ToBuildBVH#1
@@ -2529,6 +3158,7 @@
 // Source: c:@S@Select3D_SensitiveGroup@F@Center#I#I#1
 // Source: c:@S@Select3D_SensitiveGroup@F@CenterOfGeometry#1
 // Source: c:@S@Select3D_SensitiveGroup@F@Clear#
+// Source: c:@S@Select3D_SensitiveGroup@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveGroup@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveGroup@F@IsIn#&1$@N@opencascade@S@handle>#$@S@Select3D_SensitiveEntity#1
 // Source: c:@S@Select3D_SensitiveGroup@F@LastDetectedEntity#1
@@ -2541,15 +3171,19 @@
 // Source: c:@S@Select3D_SensitiveGroup@F@SetCheckOverlapAll#b#
 // Source: c:@S@Select3D_SensitiveGroup@F@SetMatchType#b#
 // Source: c:@S@Select3D_SensitiveGroup@F@Size#1
+// Source: c:@S@Select3D_SensitiveGroup@F@SubEntity#I#1
 // Source: c:@S@Select3D_SensitiveGroup@F@Swap#I#I#
 // Source: c:@S@Select3D_SensitiveGroup@F@ToCheckOverlapAll#1
 // Source: c:@S@Select3D_SensitivePoint@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitivePoint@F@DynamicType#1
 // Source: c:@S@Select3D_SensitivePoint@F@GetConnected#
 // Source: c:@S@Select3D_SensitivePoint@F@NbSubElements#1
+// Source: c:@S@Select3D_SensitivePoint@F@Point#1
 // Source: c:@S@Select3D_SensitivePoint@F@Select3D_SensitivePoint#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@S@gp_Pnt#
 // Source: c:@S@Select3D_SensitivePoint@F@ToBuildBVH#1
 // Source: c:@S@Select3D_SensitivePoly@F@Center#I#I#1
 // Source: c:@S@Select3D_SensitivePoly@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitivePoly@F@DynamicType#1
 // Source: c:@S@Select3D_SensitivePoly@F@GetPoint3d#I#1
 // Source: c:@S@Select3D_SensitivePoly@F@NbSubElements#1
 // Source: c:@S@Select3D_SensitivePoly@F@Select3D_SensitivePoly#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#b#I#
@@ -2558,13 +3192,17 @@
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@BVH#
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@Center#I#I#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitivePrimitiveArray@F@DynamicType#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@GetConnected#
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@HasInitLocation#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@LastDetectedEdgeNode1#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@LastDetectedEdgeNode2#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@LastDetectedElement#1
+// Source: c:@S@Select3D_SensitivePrimitiveArray@F@LastDetectedElementMap#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@LastDetectedNode#1
+// Source: c:@S@Select3D_SensitivePrimitiveArray@F@LastDetectedNodeMap#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@NbSubElements#1
+// Source: c:@S@Select3D_SensitivePrimitiveArray@F@PatchDistance#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@PatchSizeMax#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@Select3D_SensitivePrimitiveArray#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@Set#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#
@@ -2574,6 +3212,7 @@
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@SetDetectNodeMap#b#
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@SetDetectNodes#b#
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@SetMinMax#d#d#d#d#d#d#
+// Source: c:@S@Select3D_SensitivePrimitiveArray@F@SetPatchDistance#f#
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@SetPatchSizeMax#I#
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@Size#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@Swap#I#I#
@@ -2583,22 +3222,28 @@
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@ToDetectNodeMap#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@ToDetectNodes#1
 // Source: c:@S@Select3D_SensitiveSegment@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveSegment@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveSegment@F@EndPoint#&1$@S@gp_Pnt#
+// Source: c:@S@Select3D_SensitiveSegment@F@EndPoint#1
 // Source: c:@S@Select3D_SensitiveSegment@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveSegment@F@NbSubElements#1
 // Source: c:@S@Select3D_SensitiveSegment@F@Select3D_SensitiveSegment#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@S@gp_Pnt#S3_#
 // Source: c:@S@Select3D_SensitiveSegment@F@SetEndPoint#&1$@S@gp_Pnt#
 // Source: c:@S@Select3D_SensitiveSegment@F@SetStartPoint#&1$@S@gp_Pnt#
 // Source: c:@S@Select3D_SensitiveSegment@F@StartPoint#&1$@S@gp_Pnt#
+// Source: c:@S@Select3D_SensitiveSegment@F@StartPoint#1
 // Source: c:@S@Select3D_SensitiveSegment@F@ToBuildBVH#1
 // Source: c:@S@Select3D_SensitiveSet@F@BVH#
 // Source: c:@S@Select3D_SensitiveSet@F@CenterOfGeometry#1
 // Source: c:@S@Select3D_SensitiveSet@F@Clear#
+// Source: c:@S@Select3D_SensitiveSet@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveSet@F@GetLeafNodeSize#1
 // Source: c:@S@Select3D_SensitiveSet@F@MarkDirty#
 // Source: c:@S@Select3D_SensitiveSet@F@ToBuildBVH#1
 // Source: c:@S@Select3D_SensitiveSphere@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveSphere@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveSphere@F@GetConnected#
+// Source: c:@S@Select3D_SensitiveSphere@F@LastDetectedPoint#1
 // Source: c:@S@Select3D_SensitiveSphere@F@NbSubElements#1
 // Source: c:@S@Select3D_SensitiveSphere@F@Radius#1
 // Source: c:@S@Select3D_SensitiveSphere@F@ResetLastDetectedPoint#
@@ -2606,21 +3251,25 @@
 // Source: c:@S@Select3D_SensitiveSphere@F@ToBuildBVH#1
 // Source: c:@S@Select3D_SensitiveTriangle@F@Center3D#1
 // Source: c:@S@Select3D_SensitiveTriangle@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveTriangle@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveTriangle@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveTriangle@F@NbSubElements#1
 // Source: c:@S@Select3D_SensitiveTriangle@F@Select3D_SensitiveTriangle#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@S@gp_Pnt#S3_#S3_#$@E@Select3D_TypeOfSensitivity#
 // Source: c:@S@Select3D_SensitiveTriangle@F@ToBuildBVH#1
 // Source: c:@S@Select3D_SensitiveTriangulation@F@Center#I#I#1
 // Source: c:@S@Select3D_SensitiveTriangulation@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveTriangulation@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveTriangulation@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveTriangulation@F@HasInitLocation#1
 // Source: c:@S@Select3D_SensitiveTriangulation@F@LastDetectedTriangleIndex#1
 // Source: c:@S@Select3D_SensitiveTriangulation@F@NbSubElements#1
 // Source: c:@S@Select3D_SensitiveTriangulation@F@Size#1
 // Source: c:@S@Select3D_SensitiveTriangulation@F@Swap#I#I#
+// Source: c:@S@Select3D_SensitiveTriangulation@F@Triangulation#1
 // Source: c:@S@Select3D_SensitiveWire@F@Add#&1$@N@opencascade@S@handle>#$@S@Select3D_SensitiveEntity#
 // Source: c:@S@Select3D_SensitiveWire@F@Center#I#I#1
 // Source: c:@S@Select3D_SensitiveWire@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveWire@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveWire@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveWire@F@GetLastDetected#1
 // Source: c:@S@Select3D_SensitiveWire@F@NbSubElements#1
@@ -2628,8 +3277,10 @@
 // Source: c:@S@Select3D_SensitiveWire@F@Set#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#
 // Source: c:@S@Select3D_SensitiveWire@F@Size#1
 // Source: c:@S@Select3D_SensitiveWire@F@Swap#I#I#
+// Source: c:@S@SelectMgr_AndFilter@F@DynamicType#1
 // Source: c:@S@SelectMgr_AndFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@SelectMgr_AndFilter@F@SelectMgr_AndFilter#
+// Source: c:@S@SelectMgr_AndOrFilter@F@DynamicType#1
 // Source: c:@S@SelectMgr_AndOrFilter@F@FilterType#1
 // Source: c:@S@SelectMgr_AndOrFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@SelectMgr_AndOrFilter@F@SelectMgr_AndOrFilter#$@E@SelectMgr_FilterType#
@@ -2638,21 +3289,29 @@
 // Source: c:@S@SelectMgr_AxisIntersector@F@CopyWithBuilder#&1$@N@opencascade@S@handle>#$@S@SelectMgr_FrustumBuilder#1
 // Source: c:@S@SelectMgr_AxisIntersector@F@DetectedPoint#d#1
 // Source: c:@S@SelectMgr_AxisIntersector@F@DistToGeometryCenter#&1$@S@gp_Pnt#1
+// Source: c:@S@SelectMgr_AxisIntersector@F@GetFarPnt#1
+// Source: c:@S@SelectMgr_AxisIntersector@F@GetNearPnt#1
 // Source: c:@S@SelectMgr_AxisIntersector@F@IsScalable#1
 // Source: c:@S@SelectMgr_AxisIntersector@F@OverlapsPoint#&1$@S@gp_Pnt#1
 // Source: c:@S@SelectMgr_AxisIntersector@F@SelectMgr_AxisIntersector#
 // Source: c:@S@SelectMgr_AxisIntersector@F@SetCamera#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@SelectMgr_BVHThreadPool@F@AddEntity#&1$@N@opencascade@S@handle>#$@S@Select3D_SensitiveEntity#
+// Source: c:@S@SelectMgr_BVHThreadPool@F@DynamicType#1
 // Source: c:@S@SelectMgr_BVHThreadPool@F@SelectMgr_BVHThreadPool#I#
 // Source: c:@S@SelectMgr_BVHThreadPool@F@StopThreads#
 // Source: c:@S@SelectMgr_BVHThreadPool@F@WaitThreads#
+// Source: c:@S@SelectMgr_BaseFrustum@F@DynamicType#1
 // Source: c:@S@SelectMgr_BaseFrustum@F@SetBuilder#&1$@N@opencascade@S@handle>#$@S@SelectMgr_FrustumBuilder#
 // Source: c:@S@SelectMgr_BaseFrustum@F@SetCamera#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@SelectMgr_BaseFrustum@F@SetPixelTolerance#I#
 // Source: c:@S@SelectMgr_BaseFrustum@F@SetViewport#d#d#d#d#
 // Source: c:@S@SelectMgr_BaseFrustum@F@SetWindowSize#I#I#
+// Source: c:@S@SelectMgr_BaseIntersector@F@Camera#1
 // Source: c:@S@SelectMgr_BaseIntersector@F@DetectedPoint#d#1
 // Source: c:@S@SelectMgr_BaseIntersector@F@DistToGeometryCenter#&1$@S@gp_Pnt#1
+// Source: c:@S@SelectMgr_BaseIntersector@F@DynamicType#1
+// Source: c:@S@SelectMgr_BaseIntersector@F@GetFarPnt#1
+// Source: c:@S@SelectMgr_BaseIntersector@F@GetNearPnt#1
 // Source: c:@S@SelectMgr_BaseIntersector@F@GetSelectionType#1
 // Source: c:@S@SelectMgr_BaseIntersector@F@SetCamera#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@SelectMgr_BaseIntersector@F@SetPixelTolerance#I#
@@ -2661,11 +3320,13 @@
 // Source: c:@S@SelectMgr_CompositionFilter@F@ActsOn#$@E@TopAbs_ShapeEnum#1
 // Source: c:@S@SelectMgr_CompositionFilter@F@Add#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Filter#
 // Source: c:@S@SelectMgr_CompositionFilter@F@Clear#
+// Source: c:@S@SelectMgr_CompositionFilter@F@DynamicType#1
 // Source: c:@S@SelectMgr_CompositionFilter@F@IsEmpty#1
 // Source: c:@S@SelectMgr_CompositionFilter@F@IsIn#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Filter#1
 // Source: c:@S@SelectMgr_CompositionFilter@F@Remove#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Filter#
 // Source: c:@S@SelectMgr_EntityOwner@F@Clear#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@SelectMgr_EntityOwner@F@ComesFromDecomposition#1
+// Source: c:@S@SelectMgr_EntityOwner@F@DynamicType#1
 // Source: c:@S@SelectMgr_EntityOwner@F@HasLocation#1
 // Source: c:@S@SelectMgr_EntityOwner@F@HasSelectable#1
 // Source: c:@S@SelectMgr_EntityOwner@F@HilightWithColor#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#I#
@@ -2692,12 +3353,16 @@
 // Source: c:@S@SelectMgr_EntityOwner@F@Unhilight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@SelectMgr_EntityOwner@F@UpdateHighlightTrsf#&1$@N@opencascade@S@handle>#$@S@V3d_Viewer#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@SelectMgr_Filter@F@ActsOn#$@E@TopAbs_ShapeEnum#1
+// Source: c:@S@SelectMgr_Filter@F@DynamicType#1
+// Source: c:@S@SelectMgr_FrustumBuilder@F@Camera#1
+// Source: c:@S@SelectMgr_FrustumBuilder@F@DynamicType#1
 // Source: c:@S@SelectMgr_FrustumBuilder@F@InvalidateViewport#
 // Source: c:@S@SelectMgr_FrustumBuilder@F@ProjectPntOnViewPlane#&1d#S0_#S0_#1
 // Source: c:@S@SelectMgr_FrustumBuilder@F@SelectMgr_FrustumBuilder#
 // Source: c:@S@SelectMgr_FrustumBuilder@F@SetCamera#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@SelectMgr_FrustumBuilder@F@SetViewport#d#d#d#d#
 // Source: c:@S@SelectMgr_FrustumBuilder@F@SetWindowSize#I#I#
+// Source: c:@S@SelectMgr_OrFilter@F@DynamicType#1
 // Source: c:@S@SelectMgr_OrFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@SelectMgr_OrFilter@F@SelectMgr_OrFilter#
 // Source: c:@S@SelectMgr_SelectableObject@F@AcceptShapeDecomposition#1
@@ -2705,7 +3370,9 @@
 // Source: c:@S@SelectMgr_SelectableObject@F@ClearDynamicHighlight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#
 // Source: c:@S@SelectMgr_SelectableObject@F@ClearSelected#
 // Source: c:@S@SelectMgr_SelectableObject@F@ClearSelections#b#
+// Source: c:@S@SelectMgr_SelectableObject@F@DynamicType#1
 // Source: c:@S@SelectMgr_SelectableObject@F@ErasePresentations#b#
+// Source: c:@S@SelectMgr_SelectableObject@F@GetAssemblyOwner#1
 // Source: c:@S@SelectMgr_SelectableObject@F@GlobalSelOwner#1
 // Source: c:@S@SelectMgr_SelectableObject@F@GlobalSelectionMode#1
 // Source: c:@S@SelectMgr_SelectableObject@F@HasSelection#I#1
@@ -2714,6 +3381,7 @@
 // Source: c:@S@SelectMgr_SelectableObject@F@RecomputePrimitives#
 // Source: c:@S@SelectMgr_SelectableObject@F@RecomputePrimitives#I#
 // Source: c:@S@SelectMgr_SelectableObject@F@ResetTransformation#
+// Source: c:@S@SelectMgr_SelectableObject@F@Selection#I#1
 // Source: c:@S@SelectMgr_SelectableObject@F@SetAssemblyOwner#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#I#
 // Source: c:@S@SelectMgr_SelectableObject@F@SetAutoHilight#b#
 // Source: c:@S@SelectMgr_SelectableObject@F@SetZLayer#I#
@@ -2724,6 +3392,7 @@
 // Source: c:@S@SelectMgr_Selection@F@BVHUpdateStatus#1
 // Source: c:@S@SelectMgr_Selection@F@Clear#
 // Source: c:@S@SelectMgr_Selection@F@Destroy#
+// Source: c:@S@SelectMgr_Selection@F@DynamicType#1
 // Source: c:@S@SelectMgr_Selection@F@GetSelectionState#1
 // Source: c:@S@SelectMgr_Selection@F@IsEmpty#1
 // Source: c:@S@SelectMgr_Selection@F@Mode#1
@@ -2739,18 +3408,22 @@
 // Source: c:@S@SelectMgr_SelectionManager@F@ClearSelectionStructures#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#
 // Source: c:@S@SelectMgr_SelectionManager@F@Contains#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#1
 // Source: c:@S@SelectMgr_SelectionManager@F@Deactivate#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#
+// Source: c:@S@SelectMgr_SelectionManager@F@DynamicType#1
 // Source: c:@S@SelectMgr_SelectionManager@F@IsActivated#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#1
 // Source: c:@S@SelectMgr_SelectionManager@F@Load#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#
 // Source: c:@S@SelectMgr_SelectionManager@F@RecomputeSelection#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#b#I#
 // Source: c:@S@SelectMgr_SelectionManager@F@Remove#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#
 // Source: c:@S@SelectMgr_SelectionManager@F@RestoreSelectionStructures#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#
 // Source: c:@S@SelectMgr_SelectionManager@F@SelectMgr_SelectionManager#&1$@N@opencascade@S@handle>#$@S@SelectMgr_ViewerSelector#
+// Source: c:@S@SelectMgr_SelectionManager@F@Selector#1
 // Source: c:@S@SelectMgr_SelectionManager@F@SetSelectionSensitivity#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#I#
 // Source: c:@S@SelectMgr_SelectionManager@F@SetUpdateMode#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#$@E@SelectMgr_TypeOfUpdate#
 // Source: c:@S@SelectMgr_SelectionManager@F@SetUpdateMode#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#$@E@SelectMgr_TypeOfUpdate#
 // Source: c:@S@SelectMgr_SelectionManager@F@Update#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#b#
 // Source: c:@S@SelectMgr_SelectionManager@F@UpdateSelection#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#
+// Source: c:@S@SelectMgr_SensitiveEntity@F@BaseSensitive#1
 // Source: c:@S@SelectMgr_SensitiveEntity@F@Clear#
+// Source: c:@S@SelectMgr_SensitiveEntity@F@DynamicType#1
 // Source: c:@S@SelectMgr_SensitiveEntity@F@IsActiveForSelection#1
 // Source: c:@S@SelectMgr_SensitiveEntity@F@ResetSelectionActiveStatus#1
 // Source: c:@S@SelectMgr_SensitiveEntity@F@SelectMgr_SensitiveEntity#&1$@N@opencascade@S@handle>#$@S@Select3D_SensitiveEntity#
@@ -2772,6 +3445,7 @@
 // Source: c:@S@SelectMgr_ViewerSelector@F@DepthTolerance#1
 // Source: c:@S@SelectMgr_ViewerSelector@F@DepthToleranceType#1
 // Source: c:@S@SelectMgr_ViewerSelector@F@DisplaySensitive#&1$@N@opencascade@S@handle>#$@S@V3d_View#
+// Source: c:@S@SelectMgr_ViewerSelector@F@DynamicType#1
 // Source: c:@S@SelectMgr_ViewerSelector@F@IsActive#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#1
 // Source: c:@S@SelectMgr_ViewerSelector@F@IsInside#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#1
 // Source: c:@S@SelectMgr_ViewerSelector@F@MoveSelectableObject#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#
@@ -2780,6 +3454,7 @@
 // Source: c:@S@SelectMgr_ViewerSelector@F@Pick#I#I#&1$@N@opencascade@S@handle>#$@S@V3d_View#
 // Source: c:@S@SelectMgr_ViewerSelector@F@Pick#I#I#I#I#&1$@N@opencascade@S@handle>#$@S@V3d_View#
 // Source: c:@S@SelectMgr_ViewerSelector@F@Picked#I#1
+// Source: c:@S@SelectMgr_ViewerSelector@F@PickedEntity#I#1
 // Source: c:@S@SelectMgr_ViewerSelector@F@PickedPoint#I#1
 // Source: c:@S@SelectMgr_ViewerSelector@F@PixelTolerance#1
 // Source: c:@S@SelectMgr_ViewerSelector@F@QueueBVHBuild#&1$@N@opencascade@S@handle>#$@S@Select3D_SensitiveEntity#
@@ -2802,13 +3477,20 @@
 // Source: c:@S@SelectMgr_ViewerSelector@F@WaitForBVHBuild#
 // Source: c:@S@StdPrs_BRepFont@F@Ascender#1
 // Source: c:@S@StdPrs_BRepFont@F@Descender#1
+// Source: c:@S@StdPrs_BRepFont@F@DynamicType#1
+// Source: c:@S@StdPrs_BRepFont@F@FTFont#1
 // Source: c:@S@StdPrs_BRepFont@F@LineSpacing#1
 // Source: c:@S@StdPrs_BRepFont@F@PointSize#1
 // Source: c:@S@StdPrs_BRepFont@F@Release#
 // Source: c:@S@StdPrs_BRepFont@F@Scale#1
 // Source: c:@S@StdPrs_BRepFont@F@SetCompositeCurveMode#b#
+// Source: c:@S@StdPrs_BRepFont@F@SetWidthScaling#f#
 // Source: c:@S@StdPrs_BRepFont@F@StdPrs_BRepFont#
+// Source: c:@S@StdPrs_HLRPolyShape@F@DynamicType#1
+// Source: c:@S@StdPrs_HLRShape@F@DynamicType#1
+// Source: c:@S@StdPrs_HLRShapeI@F@DynamicType#1
 // Source: c:@S@StdSelect_BRepOwner@F@Clear#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
+// Source: c:@S@StdSelect_BRepOwner@F@DynamicType#1
 // Source: c:@S@StdSelect_BRepOwner@F@HasHilightMode#1
 // Source: c:@S@StdSelect_BRepOwner@F@HasShape#1
 // Source: c:@S@StdSelect_BRepOwner@F@HilightMode#1
@@ -2820,16 +3502,20 @@
 // Source: c:@S@StdSelect_BRepOwner@F@Unhilight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@StdSelect_BRepOwner@F@UpdateHighlightTrsf#&1$@N@opencascade@S@handle>#$@S@V3d_Viewer#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@StdSelect_EdgeFilter@F@ActsOn#$@E@TopAbs_ShapeEnum#1
+// Source: c:@S@StdSelect_EdgeFilter@F@DynamicType#1
 // Source: c:@S@StdSelect_EdgeFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@StdSelect_EdgeFilter@F@SetType#$@E@StdSelect_TypeOfEdge#
 // Source: c:@S@StdSelect_EdgeFilter@F@StdSelect_EdgeFilter#$@E@StdSelect_TypeOfEdge#
 // Source: c:@S@StdSelect_EdgeFilter@F@Type#1
 // Source: c:@S@StdSelect_FaceFilter@F@ActsOn#$@E@TopAbs_ShapeEnum#1
+// Source: c:@S@StdSelect_FaceFilter@F@DynamicType#1
 // Source: c:@S@StdSelect_FaceFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@StdSelect_FaceFilter@F@SetType#$@E@StdSelect_TypeOfFace#
 // Source: c:@S@StdSelect_FaceFilter@F@StdSelect_FaceFilter#$@E@StdSelect_TypeOfFace#
 // Source: c:@S@StdSelect_FaceFilter@F@Type#1
+// Source: c:@S@StdSelect_Shape@F@DynamicType#1
 // Source: c:@S@StdSelect_ShapeTypeFilter@F@ActsOn#$@E@TopAbs_ShapeEnum#1
+// Source: c:@S@StdSelect_ShapeTypeFilter@F@DynamicType#1
 // Source: c:@S@StdSelect_ShapeTypeFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@StdSelect_ShapeTypeFilter@F@StdSelect_ShapeTypeFilter#$@E@TopAbs_ShapeEnum#
 // Source: c:@S@StdSelect_ShapeTypeFilter@F@Type#1
@@ -2843,6 +3529,7 @@
 // Source: c:@S@TPrsStd_AISPresentation@F@BeforeUndo#&1$@N@opencascade@S@handle>#$@S@TDF_AttributeDelta#b#
 // Source: c:@S@TPrsStd_AISPresentation@F@Color#1
 // Source: c:@S@TPrsStd_AISPresentation@F@Display#b#
+// Source: c:@S@TPrsStd_AISPresentation@F@DynamicType#1
 // Source: c:@S@TPrsStd_AISPresentation@F@Erase#b#
 // Source: c:@S@TPrsStd_AISPresentation@F@GetAIS#1
 // Source: c:@S@TPrsStd_AISPresentation@F@GetNbSelectionModes#1
@@ -2876,6 +3563,7 @@
 // Source: c:@S@TPrsStd_AISPresentation@F@UnsetWidth#
 // Source: c:@S@TPrsStd_AISPresentation@F@Update#
 // Source: c:@S@TPrsStd_AISPresentation@F@Width#1
+// Source: c:@S@TPrsStd_AISViewer@F@DynamicType#1
 // Source: c:@S@TPrsStd_AISViewer@F@GetInteractiveContext#1
 // Source: c:@S@TPrsStd_AISViewer@F@NewEmpty#1
 // Source: c:@S@TPrsStd_AISViewer@F@Paste#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#&1$@N@opencascade@S@handle>#$@S@TDF_RelocationTable#1
@@ -2883,34 +3571,55 @@
 // Source: c:@S@TPrsStd_AISViewer@F@SetInteractiveContext#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#
 // Source: c:@S@TPrsStd_AISViewer@F@TPrsStd_AISViewer#
 // Source: c:@S@TPrsStd_AISViewer@F@Update#1
+// Source: c:@S@TPrsStd_AxisDriver@F@DynamicType#1
 // Source: c:@S@TPrsStd_AxisDriver@F@TPrsStd_AxisDriver#
+// Source: c:@S@TPrsStd_ConstraintDriver@F@DynamicType#1
 // Source: c:@S@TPrsStd_ConstraintDriver@F@TPrsStd_ConstraintDriver#
+// Source: c:@S@TPrsStd_Driver@F@DynamicType#1
 // Source: c:@S@TPrsStd_DriverTable@F@Clear#
+// Source: c:@S@TPrsStd_DriverTable@F@DynamicType#1
 // Source: c:@S@TPrsStd_DriverTable@F@InitStandardDrivers#
 // Source: c:@S@TPrsStd_DriverTable@F@TPrsStd_DriverTable#
+// Source: c:@S@TPrsStd_GeometryDriver@F@DynamicType#1
 // Source: c:@S@TPrsStd_GeometryDriver@F@TPrsStd_GeometryDriver#
+// Source: c:@S@TPrsStd_NamedShapeDriver@F@DynamicType#1
 // Source: c:@S@TPrsStd_NamedShapeDriver@F@TPrsStd_NamedShapeDriver#
+// Source: c:@S@TPrsStd_PlaneDriver@F@DynamicType#1
 // Source: c:@S@TPrsStd_PlaneDriver@F@TPrsStd_PlaneDriver#
+// Source: c:@S@TPrsStd_PointDriver@F@DynamicType#1
 // Source: c:@S@TPrsStd_PointDriver@F@TPrsStd_PointDriver#
+// Source: c:@S@V3d_AmbientLight@F@DynamicType#1
 // Source: c:@S@V3d_CircularGrid@F@Display#
+// Source: c:@S@V3d_CircularGrid@F@DynamicType#1
 // Source: c:@S@V3d_CircularGrid@F@Erase#1
 // Source: c:@S@V3d_CircularGrid@F@IsDisplayed#1
 // Source: c:@S@V3d_CircularGrid@F@SetGraphicValues#d#d#
+// Source: c:@S@V3d_DirectionalLight@F@DynamicType#1
 // Source: c:@S@V3d_DirectionalLight@F@SetDirection#$@E@V3d_TypeOfOrientation#
+// Source: c:@S@V3d_Plane@F@ClipPlane#1
+// Source: c:@S@V3d_Plane@F@DynamicType#1
 // Source: c:@S@V3d_Plane@F@Erase#
 // Source: c:@S@V3d_Plane@F@IsDisplayed#1
 // Source: c:@S@V3d_Plane@F@SetPlane#d#d#d#d#
 // Source: c:@S@V3d_Plane@F@V3d_Plane#d#d#d#d#
+// Source: c:@S@V3d_PositionLight@F@DynamicType#1
+// Source: c:@S@V3d_PositionalLight@F@DynamicType#1
 // Source: c:@S@V3d_RectangularGrid@F@Display#
+// Source: c:@S@V3d_RectangularGrid@F@DynamicType#1
 // Source: c:@S@V3d_RectangularGrid@F@Erase#1
 // Source: c:@S@V3d_RectangularGrid@F@IsDisplayed#1
 // Source: c:@S@V3d_RectangularGrid@F@SetGraphicValues#d#d#d#
+// Source: c:@S@V3d_SpotLight@F@DynamicType#1
 // Source: c:@S@V3d_SpotLight@F@SetDirection#$@E@V3d_TypeOfOrientation#
+// Source: c:@S@V3d_Trihedron@F@ArrowAspect#$@E@V3d_TypeOfAxe#1
 // Source: c:@S@V3d_Trihedron@F@ArrowDiameter#1
 // Source: c:@S@V3d_Trihedron@F@Display#&1$@N@opencascade@S@handle>#$@S@V3d_View#
+// Source: c:@S@V3d_Trihedron@F@DynamicType#1
 // Source: c:@S@V3d_Trihedron@F@Erase#
 // Source: c:@S@V3d_Trihedron@F@IsWireframe#1
+// Source: c:@S@V3d_Trihedron@F@LabelAspect#$@E@V3d_TypeOfAxe#1
 // Source: c:@S@V3d_Trihedron@F@NbFacets#1
+// Source: c:@S@V3d_Trihedron@F@OriginAspect#1
 // Source: c:@S@V3d_Trihedron@F@Scale#1
 // Source: c:@S@V3d_Trihedron@F@SetArrowDiameter#d#
 // Source: c:@S@V3d_Trihedron@F@SetNbFacets#I#
@@ -2929,12 +3638,15 @@
 // Source: c:@S@V3d_View@F@AxialScale#I#I#$@E@V3d_TypeOfAxe#
 // Source: c:@S@V3d_View@F@BackFacingModel#1
 // Source: c:@S@V3d_View@F@ClearPBREnvironment#b#
+// Source: c:@S@V3d_View@F@ClipPlanes#1
 // Source: c:@S@V3d_View@F@ComputedMode#1
 // Source: c:@S@V3d_View@F@Convert#I#1
 // Source: c:@S@V3d_View@F@Convert#d#1
+// Source: c:@S@V3d_View@F@DefaultCamera#1
 // Source: c:@S@V3d_View@F@Depth#1
 // Source: c:@S@V3d_View@F@DepthFitAll#d#d#
 // Source: c:@S@V3d_View@F@DoMapping#
+// Source: c:@S@V3d_View@F@DynamicType#1
 // Source: c:@S@V3d_View@F@FitAll#d#b#
 // Source: c:@S@V3d_View@F@FitAll#d#d#d#d#
 // Source: c:@S@V3d_View@F@Focale#1
@@ -3027,6 +3739,7 @@
 // Source: c:@S@V3d_View@F@Translate#d#b#
 // Source: c:@S@V3d_View@F@Translate#d#d#d#b#
 // Source: c:@S@V3d_View@F@TriedronErase#
+// Source: c:@S@V3d_View@F@Trihedron#b#
 // Source: c:@S@V3d_View@F@Turn#$@E@V3d_TypeOfAxe#d#b#
 // Source: c:@S@V3d_View@F@Turn#d#b#
 // Source: c:@S@V3d_View@F@Turn#d#d#d#b#
@@ -3038,6 +3751,7 @@
 // Source: c:@S@V3d_View@F@V3d_View#&1$@N@opencascade@S@handle>#$@S@V3d_Viewer#&1$@N@opencascade@S@handle>#$@S@V3d_View#
 // Source: c:@S@V3d_View@F@Viewer#1
 // Source: c:@S@V3d_View@F@Visualization#1
+// Source: c:@S@V3d_View@F@Window#1
 // Source: c:@S@V3d_View@F@WindowFit#I#I#I#I#
 // Source: c:@S@V3d_View@F@WindowFitAll#I#I#I#I#
 // Source: c:@S@V3d_View@F@ZFitAll#d#1
@@ -3045,6 +3759,7 @@
 // Source: c:@S@V3d_View@F@Zoom#I#I#I#I#
 // Source: c:@S@V3d_View@F@ZoomAtPoint#I#I#I#I#
 // Source: c:@S@V3d_Viewer@F@ActivateGrid#$@E@Aspect_GridType#$@E@Aspect_GridDrawMode#
+// Source: c:@S@V3d_Viewer@F@ActiveView#1
 // Source: c:@S@V3d_Viewer@F@ComputedMode#1
 // Source: c:@S@V3d_Viewer@F@CreateView#
 // Source: c:@S@V3d_Viewer@F@DeactivateGrid#
@@ -3054,7 +3769,10 @@
 // Source: c:@S@V3d_Viewer@F@DefaultViewProj#1
 // Source: c:@S@V3d_Viewer@F@DefaultViewSize#1
 // Source: c:@S@V3d_Viewer@F@DefaultVisualization#1
+// Source: c:@S@V3d_Viewer@F@DefinedView#1
 // Source: c:@S@V3d_Viewer@F@DisplayPrivilegedPlane#b#d#
+// Source: c:@S@V3d_Viewer@F@Driver#1
+// Source: c:@S@V3d_Viewer@F@DynamicType#1
 // Source: c:@S@V3d_Viewer@F@Erase#1
 // Source: c:@S@V3d_Viewer@F@Grid#$@E@Aspect_GridType#b#
 // Source: c:@S@V3d_Viewer@F@Grid#b#
@@ -3108,18 +3826,22 @@
 // Source: c:@S@V3d_Viewer@F@Update#
 // Source: c:@S@V3d_Viewer@F@UpdateLights#
 // Source: c:@S@V3d_Viewer@F@V3d_Viewer#&1$@N@opencascade@S@handle>#$@S@Graphic3d_GraphicDriver#
+// Source: c:@S@WNT_WClass@F@DynamicType#1
 // Source: c:@S@WNT_Window@F@DoMapping#1
 // Source: c:@S@WNT_Window@F@DoResize#
+// Source: c:@S@WNT_Window@F@DynamicType#1
 // Source: c:@S@WNT_Window@F@InvalidateContent#&1$@N@opencascade@S@handle>#$@S@Aspect_DisplayConnection#
 // Source: c:@S@WNT_Window@F@IsMapped#1
 // Source: c:@S@WNT_Window@F@Map#1
 // Source: c:@S@WNT_Window@F@Map#I#1
 // Source: c:@S@WNT_Window@F@Ratio#1
+// Source: c:@S@WNT_Window@F@RegisterRawInputDevices#i#
 // Source: c:@S@WNT_Window@F@SetPos#I#I#I#I#
 // Source: c:@S@WNT_Window@F@Unmap#1
 // Source: c:@S@Wasm_Window@F@DevicePixelRatio#1
 // Source: c:@S@Wasm_Window@F@DoMapping#1
 // Source: c:@S@Wasm_Window@F@DoResize#
+// Source: c:@S@Wasm_Window@F@DynamicType#1
 // Source: c:@S@Wasm_Window@F@InvalidateContent#&1$@N@opencascade@S@handle>#$@S@Aspect_DisplayConnection#
 // Source: c:@S@Wasm_Window@F@IsMapped#1
 // Source: c:@S@Wasm_Window@F@Map#1
@@ -3128,6 +3850,7 @@
 // Source: c:@S@Wasm_Window@F@Unmap#1
 // Source: c:@S@Xw_Window@F@DoMapping#1
 // Source: c:@S@Xw_Window@F@DoResize#
+// Source: c:@S@Xw_Window@F@DynamicType#1
 // Source: c:@S@Xw_Window@F@InvalidateContent#&1$@N@opencascade@S@handle>#$@S@Aspect_DisplayConnection#
 // Source: c:@S@Xw_Window@F@IsMapped#1
 // Source: c:@S@Xw_Window@F@Map#1
@@ -3173,6 +3896,14 @@ public sealed class AISAnimation : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISAnimationMethodDuration0(handle, out double resultValue), "occtsharp_generated_ais_animation_method_duration_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT AIS_Animation::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISAnimationMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_animation_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_animation_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT AIS_Animation::ElapsedTime.</summary>
@@ -3280,6 +4011,14 @@ public sealed class AISAnimation : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISAnimationMethodStop0(handle), "occtsharp_generated_ais_animation_method_stop_0");
     }
 
+    /// <summary>Invokes OCCT AIS_Animation::Timer.</summary>
+    public MediaTimer? Timer()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISAnimationMethodTimer0(handle, out nint handleValue), "occtsharp_generated_ais_animation_method_timer_0");
+        return global::OcctSharp.MediaTimer.FromNative(handleValue, "occtsharp_generated_ais_animation_method_timer_0");
+    }
+
     /// <summary>Invokes OCCT AIS_Animation::Update.</summary>
     public bool Update(double thePts)
     {
@@ -3371,6 +4110,14 @@ public sealed class AISAnimationAxisRotation : IDisposable
 
     private AISAnimationAxisRotation(AISAnimationAxisRotationHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT AIS_AnimationAxisRotation::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISAnimationAxisRotationMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_animation_axis_rotation_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_animation_axis_rotation_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -3439,6 +4186,30 @@ public sealed class AISAnimationCamera : IDisposable
 
     private AISAnimationCamera(AISAnimationCameraHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT AIS_AnimationCamera::CameraEnd.</summary>
+    public Graphic3dCamera? CameraEnd()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISAnimationCameraMethodCameraEnd0(handle, out nint handleValue), "occtsharp_generated_ais_animation_camera_method_camera_end_0");
+        return global::OcctSharp.Graphic3dCamera.FromNative(handleValue, "occtsharp_generated_ais_animation_camera_method_camera_end_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_AnimationCamera::CameraStart.</summary>
+    public Graphic3dCamera? CameraStart()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISAnimationCameraMethodCameraStart0(handle, out nint handleValue), "occtsharp_generated_ais_animation_camera_method_camera_start_0");
+        return global::OcctSharp.Graphic3dCamera.FromNative(handleValue, "occtsharp_generated_ais_animation_camera_method_camera_start_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_AnimationCamera::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISAnimationCameraMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_animation_camera_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_animation_camera_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT AIS_AnimationCamera::SetCameraEnd.</summary>
     public void SetCameraEnd(Graphic3dCamera? theCameraEnd)
     {
@@ -3458,6 +4229,14 @@ public sealed class AISAnimationCamera : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISAnimationCameraMethodSetView0(handle, theView is null ? nint.Zero : theView.NativeHandle.DangerousGetHandle()), "occtsharp_generated_ais_animation_camera_method_set_view_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_AnimationCamera::View.</summary>
+    public V3dView? View()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISAnimationCameraMethodView0(handle, out nint handleValue), "occtsharp_generated_ais_animation_camera_method_view_0");
+        return global::OcctSharp.V3dView.FromNative(handleValue, "occtsharp_generated_ais_animation_camera_method_view_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -3527,6 +4306,14 @@ public sealed class AISAnimationObject : IDisposable
     private readonly AISAnimationObjectHandle handle;
 
     private AISAnimationObject(AISAnimationObjectHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT AIS_AnimationObject::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISAnimationObjectMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_animation_object_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_animation_object_method_dynamic_type_0");
+    }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
@@ -3618,6 +4405,14 @@ public sealed class AISAttributeFilter : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISAttributeFilterCreate2(aWidth, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "AISAttributeFilterCreate2");
+    }
+
+    /// <summary>Invokes OCCT AIS_AttributeFilter::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISAttributeFilterMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_attribute_filter_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_attribute_filter_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT AIS_AttributeFilter::HasColor.</summary>
@@ -3770,6 +4565,30 @@ public sealed class AISAxis : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISAxisMethodAcceptDisplayMode0(handle, aMode, out int resultValue), "occtsharp_generated_ais_axis_method_accept_display_mode_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT AIS_Axis::Axis2Placement.</summary>
+    public GeomAxis2Placement? Axis2Placement()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISAxisMethodAxis2Placement0(handle, out nint handleValue), "occtsharp_generated_ais_axis_method_axis2_placement_0");
+        return global::OcctSharp.GeomAxis2Placement.FromNative(handleValue, "occtsharp_generated_ais_axis_method_axis2_placement_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_Axis::Component.</summary>
+    public GeomLine? Component()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISAxisMethodComponent0(handle, out nint handleValue), "occtsharp_generated_ais_axis_method_component_0");
+        return global::OcctSharp.GeomLine.FromNative(handleValue, "occtsharp_generated_ais_axis_method_component_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_Axis::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISAxisMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_axis_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_axis_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT AIS_Axis::IsXYZAxis.</summary>
@@ -3944,6 +4763,14 @@ public sealed class AISBadEdgeFilter : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT AIS_BadEdgeFilter::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISBadEdgeFilterMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_bad_edge_filter_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_bad_edge_filter_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT AIS_BadEdgeFilter::IsOk.</summary>
     public bool IsOk(SelectMgrEntityOwner? eO)
     {
@@ -4034,6 +4861,14 @@ public sealed class AISBaseAnimationObject : IDisposable
 
     private AISBaseAnimationObject(AISBaseAnimationObjectHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT AIS_BaseAnimationObject::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISBaseAnimationObjectMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_base_animation_object_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_base_animation_object_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -4108,6 +4943,14 @@ public sealed class AISC0RegularityFilter : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISC0RegularityFilterMethodActsOn0(handle, (int)aType, out int resultValue), "occtsharp_generated_ais_c0_regularity_filter_method_acts_on_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT AIS_C0RegularityFilter::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISC0RegularityFilterMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_c0_regularity_filter_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_c0_regularity_filter_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT AIS_C0RegularityFilter::IsOk.</summary>
@@ -4200,6 +5043,14 @@ public sealed class AISCameraFrustum : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISCameraFrustumMethodAcceptDisplayMode0(handle, theMode, out int resultValue), "occtsharp_generated_ais_camera_frustum_method_accept_display_mode_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT AIS_CameraFrustum::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISCameraFrustumMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_camera_frustum_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_camera_frustum_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT AIS_CameraFrustum::SetCameraFrustum.</summary>
@@ -4305,6 +5156,22 @@ public sealed class AISCircle : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISCircleCreate1(theCircle is null ? nint.Zero : theCircle.NativeHandle.DangerousGetHandle(), theUStart, theUEnd, theIsFilledCircleSens ? 1 : 0, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "AISCircleCreate1");
+    }
+
+    /// <summary>Invokes OCCT AIS_Circle::Circle.</summary>
+    public GeomCircle? Circle()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISCircleMethodCircle0(handle, out nint handleValue), "occtsharp_generated_ais_circle_method_circle_0");
+        return global::OcctSharp.GeomCircle.FromNative(handleValue, "occtsharp_generated_ais_circle_method_circle_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_Circle::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISCircleMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_circle_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_circle_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT AIS_Circle::IsFilledCircleSens.</summary>
@@ -4469,6 +5336,14 @@ public sealed class AISColorScale : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISColorScaleMethodComputeSelection0(handle, value0 is null ? nint.Zero : value0.NativeHandle.DangerousGetHandle(), value1), "occtsharp_generated_ais_color_scale_method_compute_selection_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_ColorScale::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISColorScaleMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_color_scale_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_color_scale_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT AIS_ColorScale::GetBreadth.</summary>
@@ -4838,6 +5713,14 @@ public sealed class AISColoredDrawer : IDisposable
         handle = CreateHandle(nativeHandle, "AISColoredDrawerCreate0");
     }
 
+    /// <summary>Invokes OCCT AIS_ColoredDrawer::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISColoredDrawerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_colored_drawer_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_colored_drawer_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT AIS_ColoredDrawer::HasOwnColor.</summary>
     public bool HasOwnColor()
     {
@@ -5017,6 +5900,14 @@ public sealed class AISColoredShape : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISColoredShapeMethodClearCustomAspects0(handle), "occtsharp_generated_ais_colored_shape_method_clear_custom_aspects_0");
     }
 
+    /// <summary>Invokes OCCT AIS_ColoredShape::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISColoredShapeMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_colored_shape_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_colored_shape_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT AIS_ColoredShape::SetTransparency.</summary>
     public void SetTransparency(double theValue)
     {
@@ -5151,11 +6042,27 @@ public sealed class AISConnectedInteractive : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISConnectedInteractiveMethodConnect1(handle, theAnotherObj is null ? nint.Zero : theAnotherObj.NativeHandle.DangerousGetHandle(), theLocation is null ? nint.Zero : theLocation.NativeHandle.DangerousGetHandle()), "occtsharp_generated_ais_connected_interactive_method_connect_1");
     }
 
+    /// <summary>Invokes OCCT AIS_ConnectedInteractive::ConnectedTo.</summary>
+    public AISInteractiveObject? ConnectedTo()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISConnectedInteractiveMethodConnectedTo0(handle, out nint handleValue), "occtsharp_generated_ais_connected_interactive_method_connected_to_0");
+        return global::OcctSharp.AISInteractiveObject.FromNative(handleValue, "occtsharp_generated_ais_connected_interactive_method_connected_to_0");
+    }
+
     /// <summary>Invokes OCCT AIS_ConnectedInteractive::Disconnect.</summary>
     public void Disconnect()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISConnectedInteractiveMethodDisconnect0(handle), "occtsharp_generated_ais_connected_interactive_method_disconnect_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_ConnectedInteractive::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISConnectedInteractiveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_connected_interactive_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_connected_interactive_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT AIS_ConnectedInteractive::HasConnection.</summary>
@@ -5295,6 +6202,14 @@ public sealed class AISExclusionFilter : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISExclusionFilterMethodClear0(handle), "occtsharp_generated_ais_exclusion_filter_method_clear_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_ExclusionFilter::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISExclusionFilterMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_exclusion_filter_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_exclusion_filter_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT AIS_ExclusionFilter::IsExclusionFlagOn.</summary>
@@ -5441,6 +6356,22 @@ public sealed class AISGlobalStatus : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISGlobalStatusMethodDisplayMode0(handle, out int resultValue), "occtsharp_generated_ais_global_status_method_display_mode_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT AIS_GlobalStatus::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISGlobalStatusMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_global_status_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_global_status_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_GlobalStatus::HilightStyle.</summary>
+    public Prs3dDrawer? HilightStyle()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISGlobalStatusMethodHilightStyle0(handle, out nint handleValue), "occtsharp_generated_ais_global_status_method_hilight_style_0");
+        return global::OcctSharp.Prs3dDrawer.FromNative(handleValue, "occtsharp_generated_ais_global_status_method_hilight_style_0");
     }
 
     /// <summary>Invokes OCCT AIS_GlobalStatus::IsHilighted.</summary>
@@ -5705,6 +6636,14 @@ public sealed class AISInteractiveContext : IDisposable
         return global::OcctSharp.AISInteractiveObject.FromNative(handleValue, "occtsharp_generated_ais_interactive_context_method_current_0");
     }
 
+    /// <summary>Invokes OCCT AIS_InteractiveContext::CurrentViewer.</summary>
+    public V3dViewer? CurrentViewer()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISInteractiveContextMethodCurrentViewer0(handle, out nint handleValue), "occtsharp_generated_ais_interactive_context_method_current_viewer_0");
+        return global::OcctSharp.V3dViewer.FromNative(handleValue, "occtsharp_generated_ais_interactive_context_method_current_viewer_0");
+    }
+
     /// <summary>Invokes OCCT AIS_InteractiveContext::Deactivate.</summary>
     public void Deactivate()
     {
@@ -5733,6 +6672,14 @@ public sealed class AISInteractiveContext : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISInteractiveContextMethodDeactivate3(handle, theObj is null ? nint.Zero : theObj.NativeHandle.DangerousGetHandle(), theMode), "occtsharp_generated_ais_interactive_context_method_deactivate_3");
     }
 
+    /// <summary>Invokes OCCT AIS_InteractiveContext::DefaultDrawer.</summary>
+    public Prs3dDrawer? DefaultDrawer()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISInteractiveContextMethodDefaultDrawer0(handle, out nint handleValue), "occtsharp_generated_ais_interactive_context_method_default_drawer_0");
+        return global::OcctSharp.Prs3dDrawer.FromNative(handleValue, "occtsharp_generated_ais_interactive_context_method_default_drawer_0");
+    }
+
     /// <summary>Invokes OCCT AIS_InteractiveContext::DetectedCurrentObject.</summary>
     public AISInteractiveObject? DetectedCurrentObject()
     {
@@ -5755,6 +6702,14 @@ public sealed class AISInteractiveContext : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISInteractiveContextMethodDetectedInteractive0(handle, out nint handleValue), "occtsharp_generated_ais_interactive_context_method_detected_interactive_0");
         return global::OcctSharp.AISInteractiveObject.FromNative(handleValue, "occtsharp_generated_ais_interactive_context_method_detected_interactive_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_InteractiveContext::DetectedOwner.</summary>
+    public SelectMgrEntityOwner? DetectedOwner()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISInteractiveContextMethodDetectedOwner0(handle, out nint handleValue), "occtsharp_generated_ais_interactive_context_method_detected_owner_0");
+        return global::OcctSharp.SelectMgrEntityOwner.FromNative(handleValue, "occtsharp_generated_ais_interactive_context_method_detected_owner_0");
     }
 
     /// <summary>Invokes OCCT AIS_InteractiveContext::DeviationAngle.</summary>
@@ -5868,6 +6823,14 @@ public sealed class AISInteractiveContext : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT AIS_InteractiveContext::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISInteractiveContextMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_interactive_context_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_interactive_context_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT AIS_InteractiveContext::EnableDrawHiddenLine.</summary>
     public void EnableDrawHiddenLine()
     {
@@ -5958,6 +6921,14 @@ public sealed class AISInteractiveContext : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT AIS_InteractiveContext::GlobalFilter.</summary>
+    public SelectMgrAndOrFilter? GlobalFilter()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISInteractiveContextMethodGlobalFilter0(handle, out nint handleValue), "occtsharp_generated_ais_interactive_context_method_global_filter_0");
+        return global::OcctSharp.SelectMgrAndOrFilter.FromNative(handleValue, "occtsharp_generated_ais_interactive_context_method_global_filter_0");
+    }
+
     /// <summary>Invokes OCCT AIS_InteractiveContext::GravityPoint.</summary>
     public Point3d GravityPoint(V3dView? theView)
     {
@@ -6028,6 +6999,30 @@ public sealed class AISInteractiveContext : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISInteractiveContextMethodHasSelectedShape0(handle, out int resultValue), "occtsharp_generated_ais_interactive_context_method_has_selected_shape_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT AIS_InteractiveContext::HiddenLineAspect.</summary>
+    public Prs3dLineAspect? HiddenLineAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISInteractiveContextMethodHiddenLineAspect0(handle, out nint handleValue), "occtsharp_generated_ais_interactive_context_method_hidden_line_aspect_0");
+        return global::OcctSharp.Prs3dLineAspect.FromNative(handleValue, "occtsharp_generated_ais_interactive_context_method_hidden_line_aspect_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_InteractiveContext::HighlightStyle.</summary>
+    public Prs3dDrawer? HighlightStyle()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISInteractiveContextMethodHighlightStyle0(handle, out nint handleValue), "occtsharp_generated_ais_interactive_context_method_highlight_style_0");
+        return global::OcctSharp.Prs3dDrawer.FromNative(handleValue, "occtsharp_generated_ais_interactive_context_method_highlight_style_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_InteractiveContext::HighlightStyle.</summary>
+    public Prs3dDrawer? HighlightStyle(Prs3dTypeOfHighlight theStyleType)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISInteractiveContextMethodHighlightStyle1(handle, (int)theStyleType, out nint handleValue), "occtsharp_generated_ais_interactive_context_method_highlight_style_1");
+        return global::OcctSharp.Prs3dDrawer.FromNative(handleValue, "occtsharp_generated_ais_interactive_context_method_highlight_style_1");
     }
 
     /// <summary>Invokes OCCT AIS_InteractiveContext::Hilight.</summary>
@@ -6234,6 +7229,14 @@ public sealed class AISInteractiveContext : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISInteractiveContextMethodLoad1(handle, theObj is null ? nint.Zero : theObj.NativeHandle.DangerousGetHandle(), theSelectionMode, value2 ? 1 : 0), "occtsharp_generated_ais_interactive_context_method_load_1");
     }
 
+    /// <summary>Invokes OCCT AIS_InteractiveContext::MainPrsMgr.</summary>
+    public PrsMgrPresentationManager? MainPrsMgr()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISInteractiveContextMethodMainPrsMgr0(handle, out nint handleValue), "occtsharp_generated_ais_interactive_context_method_main_prs_mgr_0");
+        return global::OcctSharp.PrsMgrPresentationManager.FromNative(handleValue, "occtsharp_generated_ais_interactive_context_method_main_prs_mgr_0");
+    }
+
     /// <summary>Invokes OCCT AIS_InteractiveContext::MoreCurrent.</summary>
     public bool MoreCurrent()
     {
@@ -6436,6 +7439,30 @@ public sealed class AISInteractiveContext : IDisposable
         return global::OcctSharp.SelectMgrEntityOwner.FromNative(handleValue, "occtsharp_generated_ais_interactive_context_method_selected_owner_0");
     }
 
+    /// <summary>Invokes OCCT AIS_InteractiveContext::Selection.</summary>
+    public AISSelection? Selection()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISInteractiveContextMethodSelection0(handle, out nint handleValue), "occtsharp_generated_ais_interactive_context_method_selection_0");
+        return global::OcctSharp.AISSelection.FromNative(handleValue, "occtsharp_generated_ais_interactive_context_method_selection_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_InteractiveContext::SelectionManager.</summary>
+    public SelectMgrSelectionManager? SelectionManager()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISInteractiveContextMethodSelectionManager0(handle, out nint handleValue), "occtsharp_generated_ais_interactive_context_method_selection_manager_0");
+        return global::OcctSharp.SelectMgrSelectionManager.FromNative(handleValue, "occtsharp_generated_ais_interactive_context_method_selection_manager_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_InteractiveContext::SelectionStyle.</summary>
+    public Prs3dDrawer? SelectionStyle()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISInteractiveContextMethodSelectionStyle0(handle, out nint handleValue), "occtsharp_generated_ais_interactive_context_method_selection_style_0");
+        return global::OcctSharp.Prs3dDrawer.FromNative(handleValue, "occtsharp_generated_ais_interactive_context_method_selection_style_0");
+    }
+
     /// <summary>Invokes OCCT AIS_InteractiveContext::SetAngleAndDeviation.</summary>
     public void SetAngleAndDeviation(AISInteractiveObject? theIObj, double theAngle, bool theToUpdateViewer)
     {
@@ -6602,6 +7629,13 @@ public sealed class AISInteractiveContext : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISInteractiveContextMethodSetPlaneSize1(handle, theSizeX, theSizeY, theToUpdateViewer ? 1 : 0), "occtsharp_generated_ais_interactive_context_method_set_plane_size_1");
+    }
+
+    /// <summary>Invokes OCCT AIS_InteractiveContext::SetPolygonOffsets.</summary>
+    public void SetPolygonOffsets(AISInteractiveObject? theIObj, int theMode, float theFactor, float theUnits, bool theToUpdateViewer)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISInteractiveContextMethodSetPolygonOffsets0(handle, theIObj is null ? nint.Zero : theIObj.NativeHandle.DangerousGetHandle(), theMode, theFactor, theUnits, theToUpdateViewer ? 1 : 0), "occtsharp_generated_ais_interactive_context_method_set_polygon_offsets_0");
     }
 
     /// <summary>Invokes OCCT AIS_InteractiveContext::SetSelected.</summary>
@@ -6930,12 +7964,28 @@ public sealed class AISInteractiveObject : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISInteractiveObjectMethodClearOwner0(handle), "occtsharp_generated_ais_interactive_object_method_clear_owner_0");
     }
 
+    /// <summary>Invokes OCCT AIS_InteractiveObject::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISInteractiveObjectMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_interactive_object_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_interactive_object_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT AIS_InteractiveObject::GetContext.</summary>
     public AISInteractiveContext? GetContext()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISInteractiveObjectMethodGetContext0(handle, out nint handleValue), "occtsharp_generated_ais_interactive_object_method_get_context_0");
         return global::OcctSharp.AISInteractiveContext.FromNative(handleValue, "occtsharp_generated_ais_interactive_object_method_get_context_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_InteractiveObject::GetOwner.</summary>
+    public StandardTransient? GetOwner()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISInteractiveObjectMethodGetOwner0(handle, out nint handleValue), "occtsharp_generated_ais_interactive_object_method_get_owner_0");
+        return global::OcctSharp.StandardTransient.FromNative(handleValue, "occtsharp_generated_ais_interactive_object_method_get_owner_0");
     }
 
     /// <summary>Invokes OCCT AIS_InteractiveObject::HasInteractiveContext.</summary>
@@ -7090,12 +8140,36 @@ public sealed class AISLightSource : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT AIS_LightSource::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISLightSourceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_light_source_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_light_source_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT AIS_LightSource::IsZoomable.</summary>
     public bool IsZoomable()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISLightSourceMethodIsZoomable0(handle, out int resultValue), "occtsharp_generated_ais_light_source_method_is_zoomable_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT AIS_LightSource::Light.</summary>
+    public Graphic3dCLight? Light()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISLightSourceMethodLight0(handle, out nint handleValue), "occtsharp_generated_ais_light_source_method_light_0");
+        return global::OcctSharp.Graphic3dCLight.FromNative(handleValue, "occtsharp_generated_ais_light_source_method_light_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_LightSource::MarkerImage.</summary>
+    public Graphic3dMarkerImage? MarkerImage(bool theIsEnabled)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISLightSourceMethodMarkerImage0(handle, theIsEnabled ? 1 : 0, out nint handleValue), "occtsharp_generated_ais_light_source_method_marker_image_0");
+        return global::OcctSharp.Graphic3dMarkerImage.FromNative(handleValue, "occtsharp_generated_ais_light_source_method_marker_image_0");
     }
 
     /// <summary>Invokes OCCT AIS_LightSource::MarkerType.</summary>
@@ -7337,6 +8411,14 @@ public sealed class AISLightSourceOwner : IDisposable
         handle = CreateHandle(nativeHandle, "AISLightSourceOwnerCreate0");
     }
 
+    /// <summary>Invokes OCCT AIS_LightSourceOwner::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISLightSourceOwnerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_light_source_owner_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_light_source_owner_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT AIS_LightSourceOwner::HilightWithColor.</summary>
     public void HilightWithColor(PrsMgrPresentationManager? thePrsMgr, Prs3dDrawer? theStyle, int theMode)
     {
@@ -7436,6 +8518,30 @@ public sealed class AISLine : IDisposable
         handle = CreateHandle(nativeHandle, "AISLineCreate1");
     }
 
+    /// <summary>Invokes OCCT AIS_Line::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISLineMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_line_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_line_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_Line::EndPoint.</summary>
+    public GeomPoint? EndPoint()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISLineMethodEndPoint0(handle, out nint handleValue), "occtsharp_generated_ais_line_method_end_point_0");
+        return global::OcctSharp.GeomPoint.FromNative(handleValue, "occtsharp_generated_ais_line_method_end_point_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_Line::Line.</summary>
+    public GeomLine? Line()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISLineMethodLine0(handle, out nint handleValue), "occtsharp_generated_ais_line_method_line_0");
+        return global::OcctSharp.GeomLine.FromNative(handleValue, "occtsharp_generated_ais_line_method_line_0");
+    }
+
     /// <summary>Invokes OCCT AIS_Line::SetLine.</summary>
     public void SetLine(GeomLine? theLine)
     {
@@ -7463,6 +8569,14 @@ public sealed class AISLine : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISLineMethodSignature0(handle, out int resultValue), "occtsharp_generated_ais_line_method_signature_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT AIS_Line::StartPoint.</summary>
+    public GeomPoint? StartPoint()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISLineMethodStartPoint0(handle, out nint handleValue), "occtsharp_generated_ais_line_method_start_point_0");
+        return global::OcctSharp.GeomPoint.FromNative(handleValue, "occtsharp_generated_ais_line_method_start_point_0");
     }
 
     /// <summary>Invokes OCCT AIS_Line::Type.</summary>
@@ -7607,6 +8721,14 @@ public sealed class AISManipulator : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISManipulatorMethodDetach0(handle), "occtsharp_generated_ais_manipulator_method_detach_0");
     }
 
+    /// <summary>Invokes OCCT AIS_Manipulator::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISManipulatorMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_manipulator_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_manipulator_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT AIS_Manipulator::EnableMode.</summary>
     public void EnableMode(AISManipulatorMode theMode)
     {
@@ -7733,6 +8855,14 @@ public sealed class AISManipulator : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISManipulatorMethodSetZoomPersistence0(handle, theToEnable ? 1 : 0), "occtsharp_generated_ais_manipulator_method_set_zoom_persistence_0");
     }
 
+    /// <summary>Invokes OCCT AIS_Manipulator::Size.</summary>
+    public float Size()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISManipulatorMethodSize0(handle, out float resultValue), "occtsharp_generated_ais_manipulator_method_size_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT AIS_Manipulator::SkinMode.</summary>
     public AISManipulatorManipulatorSkin SkinMode()
     {
@@ -7837,6 +8967,14 @@ public sealed class AISManipulatorOwner : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISManipulatorOwnerCreate0(theSelObject is null ? nint.Zero : theSelObject.NativeHandle.DangerousGetHandle(), theIndex, (int)theMode, thePriority, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "AISManipulatorOwnerCreate0");
+    }
+
+    /// <summary>Invokes OCCT AIS_ManipulatorOwner::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISManipulatorOwnerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_manipulator_owner_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_manipulator_owner_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT AIS_ManipulatorOwner::HilightWithColor.</summary>
@@ -7961,11 +9099,27 @@ public sealed class AISMediaPlayer : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT AIS_MediaPlayer::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISMediaPlayerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_media_player_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_media_player_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT AIS_MediaPlayer::PlayPause.</summary>
     public void PlayPause()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISMediaPlayerMethodPlayPause0(handle), "occtsharp_generated_ais_media_player_method_play_pause_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_MediaPlayer::PlayerContext.</summary>
+    public MediaPlayerContext? PlayerContext()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISMediaPlayerMethodPlayerContext0(handle, out nint handleValue), "occtsharp_generated_ais_media_player_method_player_context_0");
+        return global::OcctSharp.MediaPlayerContext.FromNative(handleValue, "occtsharp_generated_ais_media_player_method_player_context_0");
     }
 
     /// <summary>Invokes OCCT AIS_MediaPlayer::SetClosePlayer.</summary>
@@ -8087,6 +9241,22 @@ public sealed class AISMultipleConnectedInteractive : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISMultipleConnectedInteractiveMethodDisconnectAll0(handle), "occtsharp_generated_ais_multiple_connected_interactive_method_disconnect_all_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_MultipleConnectedInteractive::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISMultipleConnectedInteractiveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_multiple_connected_interactive_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_multiple_connected_interactive_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_MultipleConnectedInteractive::GetAssemblyOwner.</summary>
+    public SelectMgrEntityOwner? GetAssemblyOwner()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISMultipleConnectedInteractiveMethodGetAssemblyOwner0(handle, out nint handleValue), "occtsharp_generated_ais_multiple_connected_interactive_method_get_assembly_owner_0");
+        return global::OcctSharp.SelectMgrEntityOwner.FromNative(handleValue, "occtsharp_generated_ais_multiple_connected_interactive_method_get_assembly_owner_0");
     }
 
     /// <summary>Invokes OCCT AIS_MultipleConnectedInteractive::GlobalSelOwner.</summary>
@@ -8244,6 +9414,22 @@ public sealed class AISPlane : IDisposable
         return global::OcctSharp.GeomAxis2Placement.FromNative(handleValue, "occtsharp_generated_ais_plane_method_axis2_placement_0");
     }
 
+    /// <summary>Invokes OCCT AIS_Plane::Center.</summary>
+    public Point3d Center()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISPlaneMethodCenter0(handle, out Point3dRaw resultValue), "occtsharp_generated_ais_plane_method_center_0");
+        return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT AIS_Plane::Component.</summary>
+    public GeomPlane? Component()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISPlaneMethodComponent0(handle, out nint handleValue), "occtsharp_generated_ais_plane_method_component_0");
+        return global::OcctSharp.GeomPlane.FromNative(handleValue, "occtsharp_generated_ais_plane_method_component_0");
+    }
+
     /// <summary>Invokes OCCT AIS_Plane::ComputeSelection.</summary>
     public void ComputeSelection(SelectMgrSelection? theSelection, int theMode)
     {
@@ -8257,6 +9443,14 @@ public sealed class AISPlane : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISPlaneMethodCurrentMode0(handle, out int resultValue), "occtsharp_generated_ais_plane_method_current_mode_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT AIS_Plane::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISPlaneMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_plane_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_plane_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT AIS_Plane::HasMinimumSize.</summary>
@@ -8498,6 +9692,14 @@ public sealed class AISPlaneTrihedron : IDisposable
         return global::OcctSharp.GeomPlane.FromNative(handleValue, "occtsharp_generated_ais_plane_trihedron_method_component_0");
     }
 
+    /// <summary>Invokes OCCT AIS_PlaneTrihedron::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISPlaneTrihedronMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_plane_trihedron_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_plane_trihedron_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT AIS_PlaneTrihedron::GetLength.</summary>
     public double GetLength()
     {
@@ -8652,6 +9854,14 @@ public sealed class AISPoint : IDisposable
         return global::OcctSharp.GeomPoint.FromNative(handleValue, "occtsharp_generated_ais_point_method_component_0");
     }
 
+    /// <summary>Invokes OCCT AIS_Point::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISPointMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_point_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_point_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT AIS_Point::HasMarker.</summary>
     public bool HasMarker()
     {
@@ -8780,6 +9990,14 @@ public sealed class AISPointCloud : IDisposable
         handle = CreateHandle(nativeHandle, "AISPointCloudCreate0");
     }
 
+    /// <summary>Invokes OCCT AIS_PointCloud::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISPointCloudMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_point_cloud_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_point_cloud_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT AIS_PointCloud::GetPoints.</summary>
     public Graphic3dArrayOfPoints? GetPoints()
     {
@@ -8892,6 +10110,22 @@ public sealed class AISPointCloudOwner : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISPointCloudOwnerMethodClear0(handle, thePrsMgr is null ? nint.Zero : thePrsMgr.NativeHandle.DangerousGetHandle(), theMode), "occtsharp_generated_ais_point_cloud_owner_method_clear_0");
     }
 
+    /// <summary>Invokes OCCT AIS_PointCloudOwner::DetectedPoints.</summary>
+    public TColStdHPackedMapOfInteger? DetectedPoints()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISPointCloudOwnerMethodDetectedPoints0(handle, out nint handleValue), "occtsharp_generated_ais_point_cloud_owner_method_detected_points_0");
+        return global::OcctSharp.TColStdHPackedMapOfInteger.FromNative(handleValue, "occtsharp_generated_ais_point_cloud_owner_method_detected_points_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_PointCloudOwner::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISPointCloudOwnerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_point_cloud_owner_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_point_cloud_owner_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT AIS_PointCloudOwner::HilightWithColor.</summary>
     public void HilightWithColor(PrsMgrPresentationManager? thePrsMgr, Prs3dDrawer? theStyle, int theMode)
     {
@@ -8905,6 +10139,14 @@ public sealed class AISPointCloudOwner : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISPointCloudOwnerMethodIsForcedHilight0(handle, out int resultValue), "occtsharp_generated_ais_point_cloud_owner_method_is_forced_hilight_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT AIS_PointCloudOwner::SelectedPoints.</summary>
+    public TColStdHPackedMapOfInteger? SelectedPoints()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISPointCloudOwnerMethodSelectedPoints0(handle, out nint handleValue), "occtsharp_generated_ais_point_cloud_owner_method_selected_points_0");
+        return global::OcctSharp.TColStdHPackedMapOfInteger.FromNative(handleValue, "occtsharp_generated_ais_point_cloud_owner_method_selected_points_0");
     }
 
     /// <summary>Invokes OCCT AIS_PointCloudOwner::Unhilight.</summary>
@@ -8995,6 +10237,14 @@ public sealed class AISRubberBand : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISRubberBandMethodClearPoints0(handle), "occtsharp_generated_ais_rubber_band_method_clear_points_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_RubberBand::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISRubberBandMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_rubber_band_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_rubber_band_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT AIS_RubberBand::FillTransparency.</summary>
@@ -9184,6 +10434,14 @@ public sealed class AISSelection : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISSelectionMethodClearAndSelect0(handle, theObject is null ? nint.Zero : theObject.NativeHandle.DangerousGetHandle(), theFilter is null ? nint.Zero : theFilter.NativeHandle.DangerousGetHandle(), theIsDetected ? 1 : 0), "occtsharp_generated_ais_selection_method_clear_and_select_0");
     }
 
+    /// <summary>Invokes OCCT AIS_Selection::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISSelectionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_selection_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_selection_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT AIS_Selection::Extent.</summary>
     public int Extent()
     {
@@ -9236,6 +10494,14 @@ public sealed class AISSelection : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISSelectionMethodSelect0(handle, theOwner is null ? nint.Zero : theOwner.NativeHandle.DangerousGetHandle(), theFilter is null ? nint.Zero : theFilter.NativeHandle.DangerousGetHandle(), (int)theSelScheme, theIsDetected ? 1 : 0, out int resultValue), "occtsharp_generated_ais_selection_method_select_0");
         return (AISSelectStatus)resultValue;
+    }
+
+    /// <summary>Invokes OCCT AIS_Selection::Value.</summary>
+    public SelectMgrEntityOwner? Value()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISSelectionMethodValue0(handle, out nint handleValue), "occtsharp_generated_ais_selection_method_value_0");
+        return global::OcctSharp.SelectMgrEntityOwner.FromNative(handleValue, "occtsharp_generated_ais_selection_method_value_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -9320,6 +10586,14 @@ public sealed class AISShape : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISShapeMethodAcceptShapeDecomposition0(handle, out int resultValue), "occtsharp_generated_ais_shape_method_accept_shape_decomposition_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT AIS_Shape::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISShapeMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_shape_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_shape_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT AIS_Shape::Material.</summary>
@@ -9532,6 +10806,14 @@ public sealed class AISSignatureFilter : IDisposable
         handle = CreateHandle(nativeHandle, "AISSignatureFilterCreate0");
     }
 
+    /// <summary>Invokes OCCT AIS_SignatureFilter::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISSignatureFilterMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_signature_filter_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_signature_filter_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT AIS_SignatureFilter::IsOk.</summary>
     public bool IsOk(SelectMgrEntityOwner? anobj)
     {
@@ -9624,6 +10906,14 @@ public sealed class AISTextLabel : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT AIS_TextLabel::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISTextLabelMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_text_label_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_text_label_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT AIS_TextLabel::FontAspect.</summary>
     public FontFontAspect FontAspect()
     {
@@ -9654,6 +10944,14 @@ public sealed class AISTextLabel : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISTextLabelMethodHasOwnAnchorPoint0(handle, out int resultValue), "occtsharp_generated_ais_text_label_method_has_own_anchor_point_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT AIS_TextLabel::Position.</summary>
+    public Point3d Position()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISTextLabelMethodPosition0(handle, out Point3dRaw resultValue), "occtsharp_generated_ais_text_label_method_position_0");
+        return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
     /// <summary>Invokes OCCT AIS_TextLabel::SetAngle.</summary>
@@ -9738,6 +11036,14 @@ public sealed class AISTextLabel : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISTextLabelMethodSetZoomable0(handle, theIsZoomable ? 1 : 0), "occtsharp_generated_ais_text_label_method_set_zoomable_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_TextLabel::TextFormatter.</summary>
+    public FontTextFormatter? TextFormatter()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISTextLabelMethodTextFormatter0(handle, out nint handleValue), "occtsharp_generated_ais_text_label_method_text_formatter_0");
+        return global::OcctSharp.FontTextFormatter.FromNative(handleValue, "occtsharp_generated_ais_text_label_method_text_formatter_0");
     }
 
     /// <summary>Invokes OCCT AIS_TextLabel::UnsetOrientation3D.</summary>
@@ -9837,6 +11143,14 @@ public sealed class AISTexturedShape : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISTexturedShapeMethodDisableTextureModulate0(handle), "occtsharp_generated_ais_textured_shape_method_disable_texture_modulate_0");
     }
 
+    /// <summary>Invokes OCCT AIS_TexturedShape::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISTexturedShapeMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_textured_shape_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_textured_shape_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT AIS_TexturedShape::EnableTextureModulate.</summary>
     public void EnableTextureModulate()
     {
@@ -9923,6 +11237,14 @@ public sealed class AISTexturedShape : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISTexturedShapeMethodTextureOrigin0(handle, out int resultValue), "occtsharp_generated_ais_textured_shape_method_texture_origin_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT AIS_TexturedShape::TexturePixMap.</summary>
+    public ImagePixMap? TexturePixMap()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISTexturedShapeMethodTexturePixMap0(handle, out nint handleValue), "occtsharp_generated_ais_textured_shape_method_texture_pix_map_0");
+        return global::OcctSharp.ImagePixMap.FromNative(handleValue, "occtsharp_generated_ais_textured_shape_method_texture_pix_map_0");
     }
 
     /// <summary>Invokes OCCT AIS_TexturedShape::TextureRepeat.</summary>
@@ -10086,6 +11408,14 @@ public sealed class AISTriangulation : IDisposable
         handle = CreateHandle(nativeHandle, "AISTriangulationCreate0");
     }
 
+    /// <summary>Invokes OCCT AIS_Triangulation::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISTriangulationMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_triangulation_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_triangulation_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT AIS_Triangulation::GetTriangulation.</summary>
     public PolyTriangulation? GetTriangulation()
     {
@@ -10214,12 +11544,28 @@ public sealed class AISTrihedron : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISTrihedronMethodClearSelected0(handle), "occtsharp_generated_ais_trihedron_method_clear_selected_0");
     }
 
+    /// <summary>Invokes OCCT AIS_Trihedron::Component.</summary>
+    public GeomAxis2Placement? Component()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISTrihedronMethodComponent0(handle, out nint handleValue), "occtsharp_generated_ais_trihedron_method_component_0");
+        return global::OcctSharp.GeomAxis2Placement.FromNative(handleValue, "occtsharp_generated_ais_trihedron_method_component_0");
+    }
+
     /// <summary>Invokes OCCT AIS_Trihedron::DatumDisplayMode.</summary>
     public Prs3dDatumMode DatumDisplayMode()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISTrihedronMethodDatumDisplayMode0(handle, out int resultValue), "occtsharp_generated_ais_trihedron_method_datum_display_mode_0");
         return (Prs3dDatumMode)resultValue;
+    }
+
+    /// <summary>Invokes OCCT AIS_Trihedron::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISTrihedronMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_trihedron_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_trihedron_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT AIS_Trihedron::HasArrowColor.</summary>
@@ -10426,6 +11772,14 @@ public sealed class AISTrihedronOwner : IDisposable
         return (Prs3dDatumParts)resultValue;
     }
 
+    /// <summary>Invokes OCCT AIS_TrihedronOwner::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISTrihedronOwnerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_trihedron_owner_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_trihedron_owner_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT AIS_TrihedronOwner::HilightWithColor.</summary>
     public void HilightWithColor(PrsMgrPresentationManager? thePM, Prs3dDrawer? theStyle, int theMode)
     {
@@ -10522,6 +11876,14 @@ public sealed class AISTypeFilter : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISTypeFilterCreate0((int)aGivenKind, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "AISTypeFilterCreate0");
+    }
+
+    /// <summary>Invokes OCCT AIS_TypeFilter::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISTypeFilterMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_type_filter_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_type_filter_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT AIS_TypeFilter::IsOk.</summary>
@@ -10656,6 +12018,14 @@ public sealed class AISViewCube : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT AIS_ViewCube::BoxCornerStyle.</summary>
+    public Prs3dShadingAspect? BoxCornerStyle()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISViewCubeMethodBoxCornerStyle0(handle, out nint handleValue), "occtsharp_generated_ais_view_cube_method_box_corner_style_0");
+        return global::OcctSharp.Prs3dShadingAspect.FromNative(handleValue, "occtsharp_generated_ais_view_cube_method_box_corner_style_0");
+    }
+
     /// <summary>Invokes OCCT AIS_ViewCube::BoxEdgeGap.</summary>
     public double BoxEdgeGap()
     {
@@ -10672,12 +12042,28 @@ public sealed class AISViewCube : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT AIS_ViewCube::BoxEdgeStyle.</summary>
+    public Prs3dShadingAspect? BoxEdgeStyle()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISViewCubeMethodBoxEdgeStyle0(handle, out nint handleValue), "occtsharp_generated_ais_view_cube_method_box_edge_style_0");
+        return global::OcctSharp.Prs3dShadingAspect.FromNative(handleValue, "occtsharp_generated_ais_view_cube_method_box_edge_style_0");
+    }
+
     /// <summary>Invokes OCCT AIS_ViewCube::BoxFacetExtension.</summary>
     public double BoxFacetExtension()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISViewCubeMethodBoxFacetExtension0(handle, out double resultValue), "occtsharp_generated_ais_view_cube_method_box_facet_extension_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT AIS_ViewCube::BoxSideStyle.</summary>
+    public Prs3dShadingAspect? BoxSideStyle()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISViewCubeMethodBoxSideStyle0(handle, out nint handleValue), "occtsharp_generated_ais_view_cube_method_box_side_style_0");
+        return global::OcctSharp.Prs3dShadingAspect.FromNative(handleValue, "occtsharp_generated_ais_view_cube_method_box_side_style_0");
     }
 
     /// <summary>Invokes OCCT AIS_ViewCube::BoxTransparency.</summary>
@@ -10708,6 +12094,14 @@ public sealed class AISViewCube : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISViewCubeMethodDuration0(handle, out double resultValue), "occtsharp_generated_ais_view_cube_method_duration_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT AIS_ViewCube::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISViewCubeMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_view_cube_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_view_cube_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT AIS_ViewCube::FontHeight.</summary>
@@ -11054,6 +12448,14 @@ public sealed class AISViewCube : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT AIS_ViewCube::ViewAnimation.</summary>
+    public AISAnimationCamera? ViewAnimation()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISViewCubeMethodViewAnimation0(handle, out nint handleValue), "occtsharp_generated_ais_view_cube_method_view_animation_0");
+        return global::OcctSharp.AISAnimationCamera.FromNative(handleValue, "occtsharp_generated_ais_view_cube_method_view_animation_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -11128,6 +12530,14 @@ public sealed class AISViewCubeOwner : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISViewCubeOwnerCreate0(theObject is null ? nint.Zero : theObject.NativeHandle.DangerousGetHandle(), (int)theOrient, thePriority, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "AISViewCubeOwnerCreate0");
+    }
+
+    /// <summary>Invokes OCCT AIS_ViewCubeOwner::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISViewCubeOwnerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_view_cube_owner_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_view_cube_owner_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT AIS_ViewCubeOwner::IsForcedHilight.</summary>
@@ -11222,6 +12632,14 @@ public sealed class AISViewCubeSensitive : IDisposable
         handle = CreateHandle(nativeHandle, "AISViewCubeSensitiveCreate0");
     }
 
+    /// <summary>Invokes OCCT AIS_ViewCubeSensitive::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISViewCubeSensitiveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_view_cube_sensitive_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_view_cube_sensitive_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -11306,6 +12724,22 @@ public sealed class AISXRTrackedDevice : IDisposable
         handle = CreateHandle(nativeHandle, "AISXRTrackedDeviceCreate1");
     }
 
+    /// <summary>Invokes OCCT AIS_XRTrackedDevice::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISXRTrackedDeviceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ais_xrtracked_device_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ais_xrtracked_device_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_XRTrackedDevice::LaserLength.</summary>
+    public float LaserLength()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISXRTrackedDeviceMethodLaserLength0(handle, out float resultValue), "occtsharp_generated_ais_xrtracked_device_method_laser_length_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT AIS_XRTrackedDevice::Role.</summary>
     public AspectXRTrackedDeviceRole Role()
     {
@@ -11314,11 +12748,33 @@ public sealed class AISXRTrackedDevice : IDisposable
         return (AspectXRTrackedDeviceRole)resultValue;
     }
 
+    /// <summary>Invokes OCCT AIS_XRTrackedDevice::SetLaserLength.</summary>
+    public void SetLaserLength(float theLength)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISXRTrackedDeviceMethodSetLaserLength0(handle, theLength), "occtsharp_generated_ais_xrtracked_device_method_set_laser_length_0");
+    }
+
     /// <summary>Invokes OCCT AIS_XRTrackedDevice::SetRole.</summary>
     public void SetRole(AspectXRTrackedDeviceRole theRole)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISXRTrackedDeviceMethodSetRole0(handle, (int)theRole), "occtsharp_generated_ais_xrtracked_device_method_set_role_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_XRTrackedDevice::SetUnitFactor.</summary>
+    public void SetUnitFactor(float theFactor)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISXRTrackedDeviceMethodSetUnitFactor0(handle, theFactor), "occtsharp_generated_ais_xrtracked_device_method_set_unit_factor_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_XRTrackedDevice::UnitFactor.</summary>
+    public float UnitFactor()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISXRTrackedDeviceMethodUnitFactor0(handle, out float resultValue), "occtsharp_generated_ais_xrtracked_device_method_unit_factor_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -11411,6 +12867,14 @@ public sealed class AspectCircularGrid : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectCircularGridMethodDivisionNumber0(handle, out int resultValue), "occtsharp_generated_aspect_circular_grid_method_division_number_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Aspect_CircularGrid::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectCircularGridMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_aspect_circular_grid_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_aspect_circular_grid_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Aspect_CircularGrid::Init.</summary>
@@ -11570,6 +13034,22 @@ public sealed class AspectDisplayConnection : IDisposable
         handle = CreateHandle(nativeHandle, "AspectDisplayConnectionCreate0");
     }
 
+    /// <summary>Invokes OCCT Aspect_DisplayConnection::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectDisplayConnectionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_aspect_display_connection_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_aspect_display_connection_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Aspect_DisplayConnection::GetAtom.</summary>
+    public ulong GetAtom(AspectXAtom theAtom)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectDisplayConnectionMethodGetAtom0(handle, (int)theAtom, out ulong resultValue), "occtsharp_generated_aspect_display_connection_method_get_atom_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Aspect_DisplayConnection::IsOwnDisplay.</summary>
     public bool IsOwnDisplay()
     {
@@ -11666,6 +13146,14 @@ public sealed class AspectGrid : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectGridMethodDrawMode0(handle, out int resultValue), "occtsharp_generated_aspect_grid_method_draw_mode_0");
         return (AspectGridDrawMode)resultValue;
+    }
+
+    /// <summary>Invokes OCCT Aspect_Grid::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectGridMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_aspect_grid_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_aspect_grid_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Aspect_Grid::IsActive.</summary>
@@ -11834,6 +13322,14 @@ public sealed class AspectNeutralWindow : IDisposable
         return (AspectTypeOfResize)resultValue;
     }
 
+    /// <summary>Invokes OCCT Aspect_NeutralWindow::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectNeutralWindowMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_aspect_neutral_window_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_aspect_neutral_window_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Aspect_NeutralWindow::IsMapped.</summary>
     public bool IsMapped()
     {
@@ -11971,6 +13467,14 @@ public sealed class AspectOpenVRSession : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectOpenVRSessionMethodClose0(handle), "occtsharp_generated_aspect_open_vrsession_method_close_0");
     }
 
+    /// <summary>Invokes OCCT Aspect_OpenVRSession::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectOpenVRSessionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_aspect_open_vrsession_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_aspect_open_vrsession_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Aspect_OpenVRSession::HasProjectionFrustums.</summary>
     public bool HasProjectionFrustums()
     {
@@ -12092,6 +13596,14 @@ public sealed class AspectRectangularGrid : IDisposable
     private readonly AspectRectangularGridHandle handle;
 
     private AspectRectangularGrid(AspectRectangularGridHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT Aspect_RectangularGrid::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectRectangularGridMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_aspect_rectangular_grid_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_aspect_rectangular_grid_method_dynamic_type_0");
+    }
 
     /// <summary>Invokes OCCT Aspect_RectangularGrid::FirstAngle.</summary>
     public double FirstAngle()
@@ -12281,11 +13793,80 @@ public sealed class AspectVKeySet : IDisposable
         handle = CreateHandle(nativeHandle, "AspectVKeySetCreate0");
     }
 
+    /// <summary>Invokes OCCT Aspect_VKeySet::DownTime.</summary>
+    public double DownTime(uint theKey)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectVKeySetMethodDownTime0(handle, theKey, out double resultValue), "occtsharp_generated_aspect_vkey_set_method_down_time_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Aspect_VKeySet::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectVKeySetMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_aspect_vkey_set_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_aspect_vkey_set_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Aspect_VKeySet::IsFreeKey.</summary>
+    public bool IsFreeKey(uint theKey)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectVKeySetMethodIsFreeKey0(handle, theKey, out int resultValue), "occtsharp_generated_aspect_vkey_set_method_is_free_key_0");
+        return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT Aspect_VKeySet::IsKeyDown.</summary>
+    public bool IsKeyDown(uint theKey)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectVKeySetMethodIsKeyDown0(handle, theKey, out int resultValue), "occtsharp_generated_aspect_vkey_set_method_is_key_down_0");
+        return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT Aspect_VKeySet::KeyDown.</summary>
+    public void KeyDown(uint theKey, double theTime, double thePressure)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectVKeySetMethodKeyDown0(handle, theKey, theTime, thePressure), "occtsharp_generated_aspect_vkey_set_method_key_down_0");
+    }
+
+    /// <summary>Invokes OCCT Aspect_VKeySet::KeyFromAxis.</summary>
+    public void KeyFromAxis(uint theNegative, uint thePositive, double theTime, double thePressure)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectVKeySetMethodKeyFromAxis0(handle, theNegative, thePositive, theTime, thePressure), "occtsharp_generated_aspect_vkey_set_method_key_from_axis_0");
+    }
+
+    /// <summary>Invokes OCCT Aspect_VKeySet::KeyUp.</summary>
+    public void KeyUp(uint theKey, double theTime)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectVKeySetMethodKeyUp0(handle, theKey, theTime), "occtsharp_generated_aspect_vkey_set_method_key_up_0");
+    }
+
+    /// <summary>Invokes OCCT Aspect_VKeySet::Modifiers.</summary>
+    public uint Modifiers()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectVKeySetMethodModifiers0(handle, out uint resultValue), "occtsharp_generated_aspect_vkey_set_method_modifiers_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Aspect_VKeySet::Reset.</summary>
     public void Reset()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectVKeySetMethodReset0(handle), "occtsharp_generated_aspect_vkey_set_method_reset_0");
+    }
+
+    /// <summary>Invokes OCCT Aspect_VKeySet::TimeUp.</summary>
+    public double TimeUp(uint theKey)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectVKeySetMethodTimeUp0(handle, theKey, out double resultValue), "occtsharp_generated_aspect_vkey_set_method_time_up_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -12370,6 +13951,22 @@ public sealed class AspectWindow : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectWindowMethodDevicePixelRatio0(handle, out double resultValue), "occtsharp_generated_aspect_window_method_device_pixel_ratio_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Aspect_Window::DisplayConnection.</summary>
+    public AspectDisplayConnection? DisplayConnection()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectWindowMethodDisplayConnection0(handle, out nint handleValue), "occtsharp_generated_aspect_window_method_display_connection_0");
+        return global::OcctSharp.AspectDisplayConnection.FromNative(handleValue, "occtsharp_generated_aspect_window_method_display_connection_0");
+    }
+
+    /// <summary>Invokes OCCT Aspect_Window::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectWindowMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_aspect_window_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_aspect_window_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Aspect_Window::InvalidateContent.</summary>
@@ -12462,12 +14059,35 @@ public sealed class AspectXRAction : IDisposable
 
     private AspectXRAction(AspectXRActionHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT Aspect_XRAction::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectXRActionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_aspect_xraction_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_aspect_xraction_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Aspect_XRAction::IsValid.</summary>
     public bool IsValid()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectXRActionMethodIsValid0(handle, out int resultValue), "occtsharp_generated_aspect_xraction_method_is_valid_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT Aspect_XRAction::RawHandle.</summary>
+    public ulong RawHandle()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectXRActionMethodRawHandle0(handle, out ulong resultValue), "occtsharp_generated_aspect_xraction_method_raw_handle_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Aspect_XRAction::SetRawHandle.</summary>
+    public void SetRawHandle(ulong theHande)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectXRActionMethodSetRawHandle0(handle, theHande), "occtsharp_generated_aspect_xraction_method_set_raw_handle_0");
     }
 
     /// <summary>Invokes OCCT Aspect_XRAction::Type.</summary>
@@ -12553,6 +14173,29 @@ public sealed class AspectXRActionSet : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectXRActionSetMethodAddAction0(handle, theAction is null ? nint.Zero : theAction.NativeHandle.DangerousGetHandle()), "occtsharp_generated_aspect_xraction_set_method_add_action_0");
     }
 
+    /// <summary>Invokes OCCT Aspect_XRActionSet::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectXRActionSetMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_aspect_xraction_set_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_aspect_xraction_set_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Aspect_XRActionSet::RawHandle.</summary>
+    public ulong RawHandle()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectXRActionSetMethodRawHandle0(handle, out ulong resultValue), "occtsharp_generated_aspect_xraction_set_method_raw_handle_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Aspect_XRActionSet::SetRawHandle.</summary>
+    public void SetRawHandle(ulong theHande)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectXRActionSetMethodSetRawHandle0(handle, theHande), "occtsharp_generated_aspect_xraction_set_method_set_raw_handle_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -12636,12 +14279,36 @@ public sealed class AspectXRSession : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Aspect_XRSession::DisplayFrequency.</summary>
+    public float DisplayFrequency()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectXRSessionMethodDisplayFrequency0(handle, out float resultValue), "occtsharp_generated_aspect_xrsession_method_display_frequency_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Aspect_XRSession::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectXRSessionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_aspect_xrsession_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_aspect_xrsession_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Aspect_XRSession::FieldOfView.</summary>
     public double FieldOfView()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectXRSessionMethodFieldOfView0(handle, out double resultValue), "occtsharp_generated_aspect_xrsession_method_field_of_view_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Aspect_XRSession::GenericAction.</summary>
+    public AspectXRAction? GenericAction(AspectXRTrackedDeviceRole theDevice, AspectXRGenericAction theAction)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AspectXRSessionMethodGenericAction0(handle, (int)theDevice, (int)theAction, out nint handleValue), "occtsharp_generated_aspect_xrsession_method_generic_action_0");
+        return global::OcctSharp.AspectXRAction.FromNative(handleValue, "occtsharp_generated_aspect_xrsession_method_generic_action_0");
     }
 
     /// <summary>Invokes OCCT Aspect_XRSession::HasTrackedPose.</summary>
@@ -12774,6 +14441,14 @@ public sealed class CocoaWindow : IDisposable
         return (AspectTypeOfResize)resultValue;
     }
 
+    /// <summary>Invokes OCCT Cocoa_Window::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.CocoaWindowMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_cocoa_window_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_cocoa_window_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Cocoa_Window::InvalidateContent.</summary>
     public void InvalidateContent(AspectDisplayConnection? theDisp)
     {
@@ -12902,6 +14577,14 @@ public sealed class D3DHostFrameBuffer : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT D3DHost_FrameBuffer::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.D3DHostFrameBufferMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_d3_dhost_frame_buffer_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_d3_dhost_frame_buffer_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT D3DHost_FrameBuffer::IsSRGBReady.</summary>
     public bool IsSRGBReady()
     {
@@ -13023,6 +14706,14 @@ public sealed class D3DHostGraphicDriver : IDisposable
         return global::OcctSharp.Graphic3dCView.FromNative(handleValue, "occtsharp_generated_d3_dhost_graphic_driver_method_create_view_0");
     }
 
+    /// <summary>Invokes OCCT D3DHost_GraphicDriver::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.D3DHostGraphicDriverMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_d3_dhost_graphic_driver_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_d3_dhost_graphic_driver_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -13107,6 +14798,14 @@ public sealed class D3DHostGraphicDriverFactory : IDisposable
         return global::OcctSharp.Graphic3dGraphicDriver.FromNative(handleValue, "occtsharp_generated_d3_dhost_graphic_driver_factory_method_create_driver_0");
     }
 
+    /// <summary>Invokes OCCT D3DHost_GraphicDriverFactory::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.D3DHostGraphicDriverFactoryMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_d3_dhost_graphic_driver_factory_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_d3_dhost_graphic_driver_factory_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -13174,6 +14873,22 @@ public sealed class D3DHostView : IDisposable
     private readonly D3DHostViewHandle handle;
 
     private D3DHostView(D3DHostViewHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT D3DHost_View::D3dWglBuffer.</summary>
+    public D3DHostFrameBuffer? D3dWglBuffer()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.D3DHostViewMethodD3dWglBuffer0(handle, out nint handleValue), "occtsharp_generated_d3_dhost_view_method_d3d_wgl_buffer_0");
+        return global::OcctSharp.D3DHostFrameBuffer.FromNative(handleValue, "occtsharp_generated_d3_dhost_view_method_d3d_wgl_buffer_0");
+    }
+
+    /// <summary>Invokes OCCT D3DHost_View::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.D3DHostViewMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_d3_dhost_view_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_d3_dhost_view_method_dynamic_type_0");
+    }
 
     /// <summary>Invokes OCCT D3DHost_View::isD3dEx.</summary>
     public bool isD3dEx()
@@ -13287,6 +15002,46 @@ public sealed class FontFTFont : IDisposable
         handle = CreateHandle(nativeHandle, "FontFTFontCreate0");
     }
 
+    /// <summary>Invokes OCCT Font_FTFont::Ascender.</summary>
+    public float Ascender()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontFTFontMethodAscender0(handle, out float resultValue), "occtsharp_generated_font_ftfont_method_ascender_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Font_FTFont::Descender.</summary>
+    public float Descender()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontFTFontMethodDescender0(handle, out float resultValue), "occtsharp_generated_font_ftfont_method_descender_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Font_FTFont::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontFTFontMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_font_ftfont_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_font_ftfont_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Font_FTFont::GlyphMaxSizeX.</summary>
+    public uint GlyphMaxSizeX(bool theToIncludeFallback)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontFTFontMethodGlyphMaxSizeX0(handle, theToIncludeFallback ? 1 : 0, out uint resultValue), "occtsharp_generated_font_ftfont_method_glyph_max_size_x_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Font_FTFont::GlyphMaxSizeY.</summary>
+    public uint GlyphMaxSizeY(bool theToIncludeFallback)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontFTFontMethodGlyphMaxSizeY0(handle, theToIncludeFallback ? 1 : 0, out uint resultValue), "occtsharp_generated_font_ftfont_method_glyph_max_size_y_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Font_FTFont::GlyphsNumber.</summary>
     public int GlyphsNumber(bool theToIncludeFallback)
     {
@@ -13311,6 +15066,22 @@ public sealed class FontFTFont : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT Font_FTFont::LineSpacing.</summary>
+    public float LineSpacing()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontFTFontMethodLineSpacing0(handle, out float resultValue), "occtsharp_generated_font_ftfont_method_line_spacing_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Font_FTFont::PointSize.</summary>
+    public uint PointSize()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontFTFontMethodPointSize0(handle, out uint resultValue), "occtsharp_generated_font_ftfont_method_point_size_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Font_FTFont::Release.</summary>
     public void Release()
     {
@@ -13332,6 +15103,13 @@ public sealed class FontFTFont : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontFTFontMethodSetUseUnicodeSubsetFallback0(handle, theToFallback ? 1 : 0), "occtsharp_generated_font_ftfont_method_set_use_unicode_subset_fallback_0");
     }
 
+    /// <summary>Invokes OCCT Font_FTFont::SetWidthScaling.</summary>
+    public void SetWidthScaling(float theScaleFactor)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontFTFontMethodSetWidthScaling0(handle, theScaleFactor), "occtsharp_generated_font_ftfont_method_set_width_scaling_0");
+    }
+
     /// <summary>Invokes OCCT Font_FTFont::ToSynthesizeItalic.</summary>
     public bool ToSynthesizeItalic()
     {
@@ -13346,6 +15124,14 @@ public sealed class FontFTFont : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontFTFontMethodToUseUnicodeSubsetFallback0(handle, out int resultValue), "occtsharp_generated_font_ftfont_method_to_use_unicode_subset_fallback_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT Font_FTFont::WidthScaling.</summary>
+    public float WidthScaling()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontFTFontMethodWidthScaling0(handle, out float resultValue), "occtsharp_generated_font_ftfont_method_width_scaling_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -13422,6 +15208,14 @@ public sealed class FontFTLibrary : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontFTLibraryCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "FontFTLibraryCreate0");
+    }
+
+    /// <summary>Invokes OCCT Font_FTLibrary::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontFTLibraryMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_font_ftlibrary_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_font_ftlibrary_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Font_FTLibrary::IsValid.</summary>
@@ -13505,6 +15299,14 @@ public sealed class FontFontMgr : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontFontMgrMethodClearFontDataBase0(handle), "occtsharp_generated_font_font_mgr_method_clear_font_data_base_0");
+    }
+
+    /// <summary>Invokes OCCT Font_FontMgr::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontFontMgrMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_font_font_mgr_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_font_font_mgr_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Font_FontMgr::FindFallbackFont.</summary>
@@ -13636,6 +15438,14 @@ public sealed class FontSystemFont : IDisposable
 
     private FontSystemFont(FontSystemFontHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT Font_SystemFont::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontSystemFontMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_font_system_font_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_font_system_font_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Font_SystemFont::FontFaceId.</summary>
     public int FontFaceId(FontFontAspect theAspect)
     {
@@ -13751,6 +15561,22 @@ public sealed class FontTextFormatter : IDisposable
         handle = CreateHandle(nativeHandle, "FontTextFormatterCreate0");
     }
 
+    /// <summary>Invokes OCCT Font_TextFormatter::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontTextFormatterMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_font_text_formatter_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_font_text_formatter_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Font_TextFormatter::FirstPosition.</summary>
+    public float FirstPosition()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontTextFormatterMethodFirstPosition0(handle, out float resultValue), "occtsharp_generated_font_text_formatter_method_first_position_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Font_TextFormatter::Format.</summary>
     public void Format()
     {
@@ -13782,6 +15608,14 @@ public sealed class FontTextFormatter : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT Font_TextFormatter::LineHeight.</summary>
+    public float LineHeight(int theIndex)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontTextFormatterMethodLineHeight0(handle, theIndex, out float resultValue), "occtsharp_generated_font_text_formatter_method_line_height_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Font_TextFormatter::LineIndex.</summary>
     public int LineIndex(int theIndex)
     {
@@ -13798,6 +15632,22 @@ public sealed class FontTextFormatter : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Font_TextFormatter::LineWidth.</summary>
+    public float LineWidth(int theIndex)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontTextFormatterMethodLineWidth0(handle, theIndex, out float resultValue), "occtsharp_generated_font_text_formatter_method_line_width_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Font_TextFormatter::MaximumSymbolWidth.</summary>
+    public float MaximumSymbolWidth()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontTextFormatterMethodMaximumSymbolWidth0(handle, out float resultValue), "occtsharp_generated_font_text_formatter_method_maximum_symbol_width_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Font_TextFormatter::Reset.</summary>
     public void Reset()
     {
@@ -13805,11 +15655,34 @@ public sealed class FontTextFormatter : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontTextFormatterMethodReset0(handle), "occtsharp_generated_font_text_formatter_method_reset_0");
     }
 
+    /// <summary>Invokes OCCT Font_TextFormatter::ResultHeight.</summary>
+    public float ResultHeight()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontTextFormatterMethodResultHeight0(handle, out float resultValue), "occtsharp_generated_font_text_formatter_method_result_height_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Font_TextFormatter::ResultWidth.</summary>
+    public float ResultWidth()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontTextFormatterMethodResultWidth0(handle, out float resultValue), "occtsharp_generated_font_text_formatter_method_result_width_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Font_TextFormatter::SetWordWrapping.</summary>
     public void SetWordWrapping(bool theIsWordWrapping)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontTextFormatterMethodSetWordWrapping0(handle, theIsWordWrapping ? 1 : 0), "occtsharp_generated_font_text_formatter_method_set_word_wrapping_0");
+    }
+
+    /// <summary>Invokes OCCT Font_TextFormatter::SetWrapping.</summary>
+    public void SetWrapping(float theWidth)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontTextFormatterMethodSetWrapping0(handle, theWidth), "occtsharp_generated_font_text_formatter_method_set_wrapping_0");
     }
 
     /// <summary>Invokes OCCT Font_TextFormatter::SetupAlignment.</summary>
@@ -13841,6 +15714,14 @@ public sealed class FontTextFormatter : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontTextFormatterMethodWordWrapping0(handle, out int resultValue), "occtsharp_generated_font_text_formatter_method_word_wrapping_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT Font_TextFormatter::Wrapping.</summary>
+    public float Wrapping()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.FontTextFormatterMethodWrapping0(handle, out float resultValue), "occtsharp_generated_font_text_formatter_method_wrapping_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -13927,6 +15808,14 @@ public sealed class Graphic3dArrayOfPoints : IDisposable
         handle = CreateHandle(nativeHandle, "Graphic3dArrayOfPointsCreate1");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_ArrayOfPoints::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfPointsMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_array_of_points_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_array_of_points_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -14011,6 +15900,14 @@ public sealed class Graphic3dArrayOfPolygons : IDisposable
         handle = CreateHandle(nativeHandle, "Graphic3dArrayOfPolygonsCreate1");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_ArrayOfPolygons::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfPolygonsMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_array_of_polygons_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_array_of_polygons_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -14093,6 +15990,14 @@ public sealed class Graphic3dArrayOfPolylines : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfPolylinesCreate1(theMaxVertexs, theMaxBounds, theMaxEdges, theHasVColors ? 1 : 0, theHasBColors ? 1 : 0, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "Graphic3dArrayOfPolylinesCreate1");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_ArrayOfPolylines::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfPolylinesMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_array_of_polylines_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_array_of_polylines_method_dynamic_type_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -14312,6 +16217,46 @@ public sealed class Graphic3dArrayOfPrimitives : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Graphic3d_ArrayOfPrimitives::AddVertex.</summary>
+    public int AddVertex(float theX, float theY, float theZ)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfPrimitivesMethodAddVertex6(handle, theX, theY, theZ, out int resultValue), "occtsharp_generated_graphic3d_array_of_primitives_method_add_vertex_6");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_ArrayOfPrimitives::AddVertex.</summary>
+    public int AddVertex(float theX, float theY, float theZ, float theTX, float theTY)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfPrimitivesMethodAddVertex7(handle, theX, theY, theZ, theTX, theTY, out int resultValue), "occtsharp_generated_graphic3d_array_of_primitives_method_add_vertex_7");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_ArrayOfPrimitives::AddVertex.</summary>
+    public int AddVertex(float theX, float theY, float theZ, float theNX, float theNY, float theNZ)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfPrimitivesMethodAddVertex8(handle, theX, theY, theZ, theNX, theNY, theNZ, out int resultValue), "occtsharp_generated_graphic3d_array_of_primitives_method_add_vertex_8");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_ArrayOfPrimitives::AddVertex.</summary>
+    public int AddVertex(float theX, float theY, float theZ, float theNX, float theNY, float theNZ, float theTX, float theTY)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfPrimitivesMethodAddVertex9(handle, theX, theY, theZ, theNX, theNY, theNZ, theTX, theTY, out int resultValue), "occtsharp_generated_graphic3d_array_of_primitives_method_add_vertex_9");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_ArrayOfPrimitives::Attributes.</summary>
+    public Graphic3dBuffer? Attributes()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfPrimitivesMethodAttributes0(handle, out nint handleValue), "occtsharp_generated_graphic3d_array_of_primitives_method_attributes_0");
+        return global::OcctSharp.Graphic3dBuffer.FromNative(handleValue, "occtsharp_generated_graphic3d_array_of_primitives_method_attributes_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_ArrayOfPrimitives::Bound.</summary>
     public int Bound(int theRank)
     {
@@ -14334,6 +16279,22 @@ public sealed class Graphic3dArrayOfPrimitives : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfPrimitivesMethodBoundNumberAllocated0(handle, out int resultValue), "occtsharp_generated_graphic3d_array_of_primitives_method_bound_number_allocated_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_ArrayOfPrimitives::Bounds.</summary>
+    public Graphic3dBoundBuffer? Bounds()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfPrimitivesMethodBounds0(handle, out nint handleValue), "occtsharp_generated_graphic3d_array_of_primitives_method_bounds_0");
+        return global::OcctSharp.Graphic3dBoundBuffer.FromNative(handleValue, "occtsharp_generated_graphic3d_array_of_primitives_method_bounds_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_ArrayOfPrimitives::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfPrimitivesMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_array_of_primitives_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_array_of_primitives_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_ArrayOfPrimitives::Edge.</summary>
@@ -14392,6 +16353,14 @@ public sealed class Graphic3dArrayOfPrimitives : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT Graphic3d_ArrayOfPrimitives::Indices.</summary>
+    public Graphic3dIndexBuffer? Indices()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfPrimitivesMethodIndices0(handle, out nint handleValue), "occtsharp_generated_graphic3d_array_of_primitives_method_indices_0");
+        return global::OcctSharp.Graphic3dIndexBuffer.FromNative(handleValue, "occtsharp_generated_graphic3d_array_of_primitives_method_indices_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_ArrayOfPrimitives::IsValid.</summary>
     public bool IsValid()
     {
@@ -14448,6 +16417,13 @@ public sealed class Graphic3dArrayOfPrimitives : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfPrimitivesMethodSetVertice0(handle, theIndex, new Point3dRaw(theVertex.X, theVertex.Y, theVertex.Z)), "occtsharp_generated_graphic3d_array_of_primitives_method_set_vertice_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_ArrayOfPrimitives::SetVertice.</summary>
+    public void SetVertice(int theIndex, float theX, float theY, float theZ)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfPrimitivesMethodSetVertice1(handle, theIndex, theX, theY, theZ), "occtsharp_generated_graphic3d_array_of_primitives_method_set_vertice_1");
     }
 
     /// <summary>Invokes OCCT Graphic3d_ArrayOfPrimitives::Type.</summary>
@@ -14566,6 +16542,14 @@ public sealed class Graphic3dArrayOfQuadrangleStrips : IDisposable
         handle = CreateHandle(nativeHandle, "Graphic3dArrayOfQuadrangleStripsCreate1");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_ArrayOfQuadrangleStrips::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfQuadrangleStripsMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_array_of_quadrangle_strips_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_array_of_quadrangle_strips_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -14648,6 +16632,14 @@ public sealed class Graphic3dArrayOfQuadrangles : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfQuadranglesCreate1(theMaxVertexs, theMaxEdges, theHasVNormals ? 1 : 0, theHasVColors ? 1 : 0, theHasVTexels ? 1 : 0, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "Graphic3dArrayOfQuadranglesCreate1");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_ArrayOfQuadrangles::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfQuadranglesMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_array_of_quadrangles_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_array_of_quadrangles_method_dynamic_type_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -14734,6 +16726,14 @@ public sealed class Graphic3dArrayOfSegments : IDisposable
         handle = CreateHandle(nativeHandle, "Graphic3dArrayOfSegmentsCreate1");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_ArrayOfSegments::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfSegmentsMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_array_of_segments_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_array_of_segments_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -14816,6 +16816,14 @@ public sealed class Graphic3dArrayOfTriangleFans : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfTriangleFansCreate1(theMaxVertexs, theMaxFans, theHasVNormals ? 1 : 0, theHasVColors ? 1 : 0, theHasBColors ? 1 : 0, theHasVTexels ? 1 : 0, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "Graphic3dArrayOfTriangleFansCreate1");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_ArrayOfTriangleFans::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfTriangleFansMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_array_of_triangle_fans_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_array_of_triangle_fans_method_dynamic_type_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -14902,6 +16910,14 @@ public sealed class Graphic3dArrayOfTriangleStrips : IDisposable
         handle = CreateHandle(nativeHandle, "Graphic3dArrayOfTriangleStripsCreate1");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_ArrayOfTriangleStrips::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfTriangleStripsMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_array_of_triangle_strips_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_array_of_triangle_strips_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -14986,6 +17002,14 @@ public sealed class Graphic3dArrayOfTriangles : IDisposable
         handle = CreateHandle(nativeHandle, "Graphic3dArrayOfTrianglesCreate1");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_ArrayOfTriangles::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfTrianglesMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_array_of_triangles_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_array_of_triangles_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -15060,6 +17084,14 @@ public sealed class Graphic3dAspectFillArea3d : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectFillArea3dCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "Graphic3dAspectFillArea3dCreate0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_AspectFillArea3d::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectFillArea3dMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_aspect_fill_area3d_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_aspect_fill_area3d_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_AspectFillArea3d::Edge.</summary>
@@ -15146,6 +17178,14 @@ public sealed class Graphic3dAspectLine3d : IDisposable
         handle = CreateHandle(nativeHandle, "Graphic3dAspectLine3dCreate0");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_AspectLine3d::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectLine3dMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_aspect_line3d_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_aspect_line3d_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_AspectLine3d::SetType.</summary>
     public void SetType(AspectTypeOfLine theType)
     {
@@ -15160,12 +17200,27 @@ public sealed class Graphic3dAspectLine3d : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectLine3dMethodSetWidth0(handle, theWidth), "occtsharp_generated_graphic3d_aspect_line3d_method_set_width_0");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_AspectLine3d::SetWidth.</summary>
+    public void SetWidth(float theWidth)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectLine3dMethodSetWidth1(handle, theWidth), "occtsharp_generated_graphic3d_aspect_line3d_method_set_width_1");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_AspectLine3d::Type.</summary>
     public AspectTypeOfLine Type()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectLine3dMethodType0(handle, out int resultValue), "occtsharp_generated_graphic3d_aspect_line3d_method_type_0");
         return (AspectTypeOfLine)resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_AspectLine3d::Width.</summary>
+    public float Width()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectLine3dMethodWidth0(handle, out float resultValue), "occtsharp_generated_graphic3d_aspect_line3d_method_width_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -15252,11 +17307,42 @@ public sealed class Graphic3dAspectMarker3d : IDisposable
         handle = CreateHandle(nativeHandle, "Graphic3dAspectMarker3dCreate1");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_AspectMarker3d::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectMarker3dMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_aspect_marker3d_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_aspect_marker3d_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_AspectMarker3d::GetMarkerImage.</summary>
+    public Graphic3dMarkerImage? GetMarkerImage()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectMarker3dMethodGetMarkerImage0(handle, out nint handleValue), "occtsharp_generated_graphic3d_aspect_marker3d_method_get_marker_image_0");
+        return global::OcctSharp.Graphic3dMarkerImage.FromNative(handleValue, "occtsharp_generated_graphic3d_aspect_marker3d_method_get_marker_image_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_AspectMarker3d::Scale.</summary>
+    public float Scale()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectMarker3dMethodScale0(handle, out float resultValue), "occtsharp_generated_graphic3d_aspect_marker3d_method_scale_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Graphic3d_AspectMarker3d::SetScale.</summary>
     public void SetScale(double theScale)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectMarker3dMethodSetScale0(handle, theScale), "occtsharp_generated_graphic3d_aspect_marker3d_method_set_scale_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_AspectMarker3d::SetScale.</summary>
+    public void SetScale(float theScale)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectMarker3dMethodSetScale1(handle, theScale), "occtsharp_generated_graphic3d_aspect_marker3d_method_set_scale_1");
     }
 
     /// <summary>Invokes OCCT Graphic3d_AspectMarker3d::SetType.</summary>
@@ -15356,6 +17442,22 @@ public sealed class Graphic3dAspectText3d : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectText3dMethodDisplayType0(handle, out int resultValue), "occtsharp_generated_graphic3d_aspect_text3d_method_display_type_0");
         return (AspectTypeOfDisplayText)resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_AspectText3d::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectText3dMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_aspect_text3d_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_aspect_text3d_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_AspectText3d::GetTextAngle.</summary>
+    public float GetTextAngle()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectText3dMethodGetTextAngle0(handle, out float resultValue), "occtsharp_generated_graphic3d_aspect_text3d_method_get_text_angle_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT Graphic3d_AspectText3d::GetTextFontAspect.</summary>
@@ -15486,6 +17588,14 @@ public sealed class Graphic3dAspects : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodAllowBackFace0(handle), "occtsharp_generated_graphic3d_aspects_method_allow_back_face_0");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_Aspects::AlphaCutoff.</summary>
+    public float AlphaCutoff()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodAlphaCutoff0(handle, out float resultValue), "occtsharp_generated_graphic3d_aspects_method_alpha_cutoff_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Graphic3d_Aspects::AlphaMode.</summary>
     public Graphic3dAlphaMode AlphaMode()
     {
@@ -15510,6 +17620,14 @@ public sealed class Graphic3dAspects : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT Graphic3d_Aspects::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_aspects_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_aspects_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_Aspects::EdgeLineType.</summary>
     public AspectTypeOfLine EdgeLineType()
     {
@@ -15518,12 +17636,28 @@ public sealed class Graphic3dAspects : IDisposable
         return (AspectTypeOfLine)resultValue;
     }
 
+    /// <summary>Invokes OCCT Graphic3d_Aspects::EdgeWidth.</summary>
+    public float EdgeWidth()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodEdgeWidth0(handle, out float resultValue), "occtsharp_generated_graphic3d_aspects_method_edge_width_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Graphic3d_Aspects::FaceCulling.</summary>
     public Graphic3dTypeOfBackfacingModel FaceCulling()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodFaceCulling0(handle, out int resultValue), "occtsharp_generated_graphic3d_aspects_method_face_culling_0");
         return (Graphic3dTypeOfBackfacingModel)resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Aspects::HatchStyle.</summary>
+    public Graphic3dHatchStyle? HatchStyle()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodHatchStyle0(handle, out nint handleValue), "occtsharp_generated_graphic3d_aspects_method_hatch_style_0");
+        return global::OcctSharp.Graphic3dHatchStyle.FromNative(handleValue, "occtsharp_generated_graphic3d_aspects_method_hatch_style_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_Aspects::InteriorStyle.</summary>
@@ -15550,12 +17684,52 @@ public sealed class Graphic3dAspects : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT Graphic3d_Aspects::LinePattern.</summary>
+    public ushort LinePattern()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodLinePattern0(handle, out ushort resultValue), "occtsharp_generated_graphic3d_aspects_method_line_pattern_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Aspects::LineStippleFactor.</summary>
+    public ushort LineStippleFactor()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodLineStippleFactor0(handle, out ushort resultValue), "occtsharp_generated_graphic3d_aspects_method_line_stipple_factor_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Graphic3d_Aspects::LineType.</summary>
     public AspectTypeOfLine LineType()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodLineType0(handle, out int resultValue), "occtsharp_generated_graphic3d_aspects_method_line_type_0");
         return (AspectTypeOfLine)resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Aspects::LineWidth.</summary>
+    public float LineWidth()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodLineWidth0(handle, out float resultValue), "occtsharp_generated_graphic3d_aspects_method_line_width_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Aspects::MarkerImage.</summary>
+    public Graphic3dMarkerImage? MarkerImage()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodMarkerImage0(handle, out nint handleValue), "occtsharp_generated_graphic3d_aspects_method_marker_image_0");
+        return global::OcctSharp.Graphic3dMarkerImage.FromNative(handleValue, "occtsharp_generated_graphic3d_aspects_method_marker_image_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Aspects::MarkerScale.</summary>
+    public float MarkerScale()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodMarkerScale0(handle, out float resultValue), "occtsharp_generated_graphic3d_aspects_method_marker_scale_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT Graphic3d_Aspects::MarkerType.</summary>
@@ -15657,11 +17831,32 @@ public sealed class Graphic3dAspects : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodSetInteriorStyle0(handle, (int)theStyle), "occtsharp_generated_graphic3d_aspects_method_set_interior_style_0");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_Aspects::SetLinePattern.</summary>
+    public void SetLinePattern(ushort thePattern)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodSetLinePattern0(handle, thePattern), "occtsharp_generated_graphic3d_aspects_method_set_line_pattern_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Aspects::SetLineStippleFactor.</summary>
+    public void SetLineStippleFactor(ushort theFactor)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodSetLineStippleFactor0(handle, theFactor), "occtsharp_generated_graphic3d_aspects_method_set_line_stipple_factor_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_Aspects::SetLineType.</summary>
     public void SetLineType(AspectTypeOfLine theType)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodSetLineType0(handle, (int)theType), "occtsharp_generated_graphic3d_aspects_method_set_line_type_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Aspects::SetLineWidth.</summary>
+    public void SetLineWidth(float theWidth)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodSetLineWidth0(handle, theWidth), "occtsharp_generated_graphic3d_aspects_method_set_line_width_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_Aspects::SetMarkerImage.</summary>
@@ -15671,11 +17866,25 @@ public sealed class Graphic3dAspects : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodSetMarkerImage0(handle, theImage is null ? nint.Zero : theImage.NativeHandle.DangerousGetHandle()), "occtsharp_generated_graphic3d_aspects_method_set_marker_image_0");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_Aspects::SetMarkerScale.</summary>
+    public void SetMarkerScale(float theScale)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodSetMarkerScale0(handle, theScale), "occtsharp_generated_graphic3d_aspects_method_set_marker_scale_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_Aspects::SetMarkerType.</summary>
     public void SetMarkerType(AspectTypeOfMarker theType)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodSetMarkerType0(handle, (int)theType), "occtsharp_generated_graphic3d_aspects_method_set_marker_type_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Aspects::SetPolygonOffsets.</summary>
+    public void SetPolygonOffsets(int theMode, float theFactor, float theUnits)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodSetPolygonOffsets0(handle, theMode, theFactor, theUnits), "occtsharp_generated_graphic3d_aspects_method_set_polygon_offsets_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_Aspects::SetShaderProgram.</summary>
@@ -15704,6 +17913,13 @@ public sealed class Graphic3dAspects : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodSetSuppressBackFaces0(handle, theToSuppress ? 1 : 0), "occtsharp_generated_graphic3d_aspects_method_set_suppress_back_faces_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Aspects::SetTextAngle.</summary>
+    public void SetTextAngle(float theAngle)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodSetTextAngle0(handle, theAngle), "occtsharp_generated_graphic3d_aspects_method_set_text_angle_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_Aspects::SetTextDisplayType.</summary>
@@ -15783,6 +17999,14 @@ public sealed class Graphic3dAspects : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodSetUseVertexColorForBackFaces0(handle, theToUse ? 1 : 0), "occtsharp_generated_graphic3d_aspects_method_set_use_vertex_color_for_back_faces_0");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_Aspects::ShaderProgram.</summary>
+    public Graphic3dShaderProgram? ShaderProgram()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodShaderProgram0(handle, out nint handleValue), "occtsharp_generated_graphic3d_aspects_method_shader_program_0");
+        return global::OcctSharp.Graphic3dShaderProgram.FromNative(handleValue, "occtsharp_generated_graphic3d_aspects_method_shader_program_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_Aspects::ShadingModel.</summary>
     public Graphic3dTypeOfShadingModel ShadingModel()
     {
@@ -15798,12 +18022,28 @@ public sealed class Graphic3dAspects : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodSuppressBackFace0(handle), "occtsharp_generated_graphic3d_aspects_method_suppress_back_face_0");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_Aspects::TextAngle.</summary>
+    public float TextAngle()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodTextAngle0(handle, out float resultValue), "occtsharp_generated_graphic3d_aspects_method_text_angle_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Graphic3d_Aspects::TextDisplayType.</summary>
     public AspectTypeOfDisplayText TextDisplayType()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodTextDisplayType0(handle, out int resultValue), "occtsharp_generated_graphic3d_aspects_method_text_display_type_0");
         return (AspectTypeOfDisplayText)resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Aspects::TextFont.</summary>
+    public TCollectionHAsciiString? TextFont()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodTextFont0(handle, out nint handleValue), "occtsharp_generated_graphic3d_aspects_method_text_font_0");
+        return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_graphic3d_aspects_method_text_font_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_Aspects::TextFontAspect.</summary>
@@ -15836,6 +18076,14 @@ public sealed class Graphic3dAspects : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodTextureMapState0(handle, out int resultValue), "occtsharp_generated_graphic3d_aspects_method_texture_map_state_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Aspects::TextureSet.</summary>
+    public Graphic3dTextureSet? TextureSet()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAspectsMethodTextureSet0(handle, out nint handleValue), "occtsharp_generated_graphic3d_aspects_method_texture_set_0");
+        return global::OcctSharp.Graphic3dTextureSet.FromNative(handleValue, "occtsharp_generated_graphic3d_aspects_method_texture_set_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_Aspects::ToDrawEdges.</summary>
@@ -15960,6 +18208,14 @@ public sealed class Graphic3dAttribBuffer : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAttribBufferCreate0(theAlloc is null ? nint.Zero : theAlloc.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "Graphic3dAttribBufferCreate0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_AttribBuffer::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dAttribBufferMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_attrib_buffer_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_attrib_buffer_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_AttribBuffer::Invalidate.</summary>
@@ -16103,6 +18359,14 @@ public sealed class Graphic3dBoundBuffer : IDisposable
         handle = CreateHandle(nativeHandle, "Graphic3dBoundBufferCreate0");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_BoundBuffer::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dBoundBufferMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_bound_buffer_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_bound_buffer_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_BoundBuffer::Init.</summary>
     public bool Init(int theNbBounds, bool theHasColors)
     {
@@ -16193,6 +18457,14 @@ public sealed class Graphic3dBuffer : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dBufferMethodAttributeOffset0(handle, theAttribIndex, out int resultValue), "occtsharp_generated_graphic3d_buffer_method_attribute_offset_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Buffer::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dBufferMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_buffer_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_buffer_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_Buffer::FindAttribute.</summary>
@@ -16331,6 +18603,22 @@ public sealed class Graphic3dCLight : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCLightMethodCopyFrom0(handle, theLight is null ? nint.Zero : theLight.NativeHandle.DangerousGetHandle()), "occtsharp_generated_graphic3d_clight_method_copy_from_0");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_CLight::DisplayPosition.</summary>
+    public Point3d DisplayPosition()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCLightMethodDisplayPosition0(handle, out Point3dRaw resultValue), "occtsharp_generated_graphic3d_clight_method_display_position_0");
+        return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_CLight::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCLightMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_clight_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_clight_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_CLight::HasRange.</summary>
     public bool HasRange()
     {
@@ -16361,6 +18649,14 @@ public sealed class Graphic3dCLight : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCLightMethodIsHeadlight0(handle, out int resultValue), "occtsharp_generated_graphic3d_clight_method_is_headlight_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_CLight::Revision.</summary>
+    public ulong Revision()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCLightMethodRevision0(handle, out ulong resultValue), "occtsharp_generated_graphic3d_clight_method_revision_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT Graphic3d_CLight::SetCastShadows.</summary>
@@ -16410,6 +18706,28 @@ public sealed class Graphic3dCLight : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCLightMethodSetPosition1(handle, theX, theY, theZ), "occtsharp_generated_graphic3d_clight_method_set_position_1");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_CLight::SetSmoothAngle.</summary>
+    public void SetSmoothAngle(float theValue)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCLightMethodSetSmoothAngle0(handle, theValue), "occtsharp_generated_graphic3d_clight_method_set_smooth_angle_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_CLight::SetSmoothRadius.</summary>
+    public void SetSmoothRadius(float theValue)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCLightMethodSetSmoothRadius0(handle, theValue), "occtsharp_generated_graphic3d_clight_method_set_smooth_radius_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_CLight::Smoothness.</summary>
+    public float Smoothness()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCLightMethodSmoothness0(handle, out float resultValue), "occtsharp_generated_graphic3d_clight_method_smoothness_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT Graphic3d_CLight::ToCastShadows.</summary>
@@ -16504,6 +18822,30 @@ public sealed class Graphic3dCStructure : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT Graphic3d_CStructure::ClipPlanes.</summary>
+    public Graphic3dSequenceOfHClipPlane? ClipPlanes()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCStructureMethodClipPlanes0(handle, out nint handleValue), "occtsharp_generated_graphic3d_cstructure_method_clip_planes_0");
+        return global::OcctSharp.Graphic3dSequenceOfHClipPlane.FromNative(handleValue, "occtsharp_generated_graphic3d_cstructure_method_clip_planes_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_CStructure::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCStructureMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_cstructure_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_cstructure_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_CStructure::GraphicDriver.</summary>
+    public Graphic3dGraphicDriver? GraphicDriver()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCStructureMethodGraphicDriver0(handle, out nint handleValue), "occtsharp_generated_graphic3d_cstructure_method_graphic_driver_0");
+        return global::OcctSharp.Graphic3dGraphicDriver.FromNative(handleValue, "occtsharp_generated_graphic3d_cstructure_method_graphic_driver_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_CStructure::HasGroupFlipping.</summary>
     public bool HasGroupFlipping()
     {
@@ -16518,6 +18860,14 @@ public sealed class Graphic3dCStructure : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCStructureMethodHasGroupTransformPersistence0(handle, out int resultValue), "occtsharp_generated_graphic3d_cstructure_method_has_group_transform_persistence_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_CStructure::HighlightStyle.</summary>
+    public Graphic3dPresentationAttributes? HighlightStyle()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCStructureMethodHighlightStyle0(handle, out nint handleValue), "occtsharp_generated_graphic3d_cstructure_method_highlight_style_0");
+        return global::OcctSharp.Graphic3dPresentationAttributes.FromNative(handleValue, "occtsharp_generated_graphic3d_cstructure_method_highlight_style_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_CStructure::Identification.</summary>
@@ -16653,6 +19003,22 @@ public sealed class Graphic3dCStructure : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCStructureMethodSetZLayer0(handle, theLayerIndex), "occtsharp_generated_graphic3d_cstructure_method_set_zlayer_0");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_CStructure::TransformPersistence.</summary>
+    public Graphic3dTransformPers? TransformPersistence()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCStructureMethodTransformPersistence0(handle, out nint handleValue), "occtsharp_generated_graphic3d_cstructure_method_transform_persistence_0");
+        return global::OcctSharp.Graphic3dTransformPers.FromNative(handleValue, "occtsharp_generated_graphic3d_cstructure_method_transform_persistence_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_CStructure::Transformation.</summary>
+    public TopLocDatum3D? Transformation()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCStructureMethodTransformation0(handle, out nint handleValue), "occtsharp_generated_graphic3d_cstructure_method_transformation_0");
+        return global::OcctSharp.TopLocDatum3D.FromNative(handleValue, "occtsharp_generated_graphic3d_cstructure_method_transformation_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_CStructure::updateLayerTransformation.</summary>
     public void updateLayerTransformation()
     {
@@ -16758,12 +19124,44 @@ public sealed class Graphic3dCView : IDisposable
         return (Graphic3dTypeOfBackfacingModel)resultValue;
     }
 
+    /// <summary>Invokes OCCT Graphic3d_CView::BackgroundCubeMap.</summary>
+    public Graphic3dCubeMap? BackgroundCubeMap()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCViewMethodBackgroundCubeMap0(handle, out nint handleValue), "occtsharp_generated_graphic3d_cview_method_background_cube_map_0");
+        return global::OcctSharp.Graphic3dCubeMap.FromNative(handleValue, "occtsharp_generated_graphic3d_cview_method_background_cube_map_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_CView::BackgroundImage.</summary>
+    public Graphic3dTextureMap? BackgroundImage()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCViewMethodBackgroundImage0(handle, out nint handleValue), "occtsharp_generated_graphic3d_cview_method_background_image_0");
+        return global::OcctSharp.Graphic3dTextureMap.FromNative(handleValue, "occtsharp_generated_graphic3d_cview_method_background_image_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_CView::BackgroundType.</summary>
     public Graphic3dTypeOfBackground BackgroundType()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCViewMethodBackgroundType0(handle, out int resultValue), "occtsharp_generated_graphic3d_cview_method_background_type_0");
         return (Graphic3dTypeOfBackground)resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_CView::BaseXRCamera.</summary>
+    public Graphic3dCamera? BaseXRCamera()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCViewMethodBaseXRCamera0(handle, out nint handleValue), "occtsharp_generated_graphic3d_cview_method_base_xrcamera_0");
+        return global::OcctSharp.Graphic3dCamera.FromNative(handleValue, "occtsharp_generated_graphic3d_cview_method_base_xrcamera_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_CView::Camera.</summary>
+    public Graphic3dCamera? Camera()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCViewMethodCamera0(handle, out nint handleValue), "occtsharp_generated_graphic3d_cview_method_camera_0");
+        return global::OcctSharp.Graphic3dCamera.FromNative(handleValue, "occtsharp_generated_graphic3d_cview_method_camera_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_CView::Compute.</summary>
@@ -16803,6 +19201,14 @@ public sealed class Graphic3dCView : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCViewMethodDeactivate0(handle), "occtsharp_generated_graphic3d_cview_method_deactivate_0");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_CView::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCViewMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_cview_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_cview_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_CView::GraduatedTrihedronErase.</summary>
     public void GraduatedTrihedronErase()
     {
@@ -16815,6 +19221,14 @@ public sealed class Graphic3dCView : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCViewMethodGridErase0(handle), "occtsharp_generated_graphic3d_cview_method_grid_erase_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_CView::IBLCubeMap.</summary>
+    public Graphic3dCubeMap? IBLCubeMap()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCViewMethodIBLCubeMap0(handle, out nint handleValue), "occtsharp_generated_graphic3d_cview_method_iblcube_map_0");
+        return global::OcctSharp.Graphic3dCubeMap.FromNative(handleValue, "occtsharp_generated_graphic3d_cview_method_iblcube_map_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_CView::Identification.</summary>
@@ -16894,6 +19308,14 @@ public sealed class Graphic3dCView : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCViewMethodNumberOfDisplayedStructures0(handle, out int resultValue), "occtsharp_generated_graphic3d_cview_method_number_of_displayed_structures_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_CView::PosedXRCamera.</summary>
+    public Graphic3dCamera? PosedXRCamera()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCViewMethodPosedXRCamera0(handle, out nint handleValue), "occtsharp_generated_graphic3d_cview_method_posed_xrcamera_0");
+        return global::OcctSharp.Graphic3dCamera.FromNative(handleValue, "occtsharp_generated_graphic3d_cview_method_posed_xrcamera_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_CView::ProcessXRInput.</summary>
@@ -17044,6 +19466,14 @@ public sealed class Graphic3dCView : IDisposable
         return (Graphic3dTypeOfShadingModel)resultValue;
     }
 
+    /// <summary>Invokes OCCT Graphic3d_CView::StructureManager.</summary>
+    public Graphic3dStructureManager? StructureManager()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCViewMethodStructureManager0(handle, out nint handleValue), "occtsharp_generated_graphic3d_cview_method_structure_manager_0");
+        return global::OcctSharp.Graphic3dStructureManager.FromNative(handleValue, "occtsharp_generated_graphic3d_cview_method_structure_manager_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_CView::SubviewCorner.</summary>
     public AspectTypeOfTriedronPosition SubviewCorner()
     {
@@ -17071,6 +19501,14 @@ public sealed class Graphic3dCView : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCViewMethodSynchronizeXRPosedToBaseCamera0(handle), "occtsharp_generated_graphic3d_cview_method_synchronize_xrposed_to_base_camera_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_CView::TextureEnv.</summary>
+    public Graphic3dTextureEnv? TextureEnv()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCViewMethodTextureEnv0(handle, out nint handleValue), "occtsharp_generated_graphic3d_cview_method_texture_env_0");
+        return global::OcctSharp.Graphic3dTextureEnv.FromNative(handleValue, "occtsharp_generated_graphic3d_cview_method_texture_env_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_CView::ToFlipOutput.</summary>
@@ -17109,6 +19547,14 @@ public sealed class Graphic3dCView : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCViewMethodVisualizationType0(handle, out int resultValue), "occtsharp_generated_graphic3d_cview_method_visualization_type_0");
         return (Graphic3dTypeOfVisualization)resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_CView::XRSession.</summary>
+    public AspectXRSession? XRSession()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCViewMethodXRSession0(handle, out nint handleValue), "occtsharp_generated_graphic3d_cview_method_xrsession_0");
+        return global::OcctSharp.AspectXRSession.FromNative(handleValue, "occtsharp_generated_graphic3d_cview_method_xrsession_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_CView::ZLayerRedrawMode.</summary>
@@ -17288,6 +19734,14 @@ public sealed class Graphic3dCamera : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Graphic3d_Camera::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCameraMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_camera_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_camera_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_Camera::FOV2d.</summary>
     public double FOV2d()
     {
@@ -17428,6 +19882,14 @@ public sealed class Graphic3dCamera : IDisposable
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
+    /// <summary>Invokes OCCT Graphic3d_Camera::ProjectionState.</summary>
+    public ulong ProjectionState()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCameraMethodProjectionState0(handle, out ulong resultValue), "occtsharp_generated_graphic3d_camera_method_projection_state_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Graphic3d_Camera::ProjectionType.</summary>
     public Graphic3dCameraProjection ProjectionType()
     {
@@ -17557,6 +20019,14 @@ public sealed class Graphic3dCamera : IDisposable
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
+    /// <summary>Invokes OCCT Graphic3d_Camera::WorldViewState.</summary>
+    public ulong WorldViewState()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCameraMethodWorldViewState0(handle, out ulong resultValue), "occtsharp_generated_graphic3d_camera_method_world_view_state_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Graphic3d_Camera::ZFar.</summary>
     public double ZFar()
     {
@@ -17665,6 +20135,22 @@ public sealed class Graphic3dClipPlane : IDisposable
         handle = CreateHandle(nativeHandle, "Graphic3dClipPlaneCreate0");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_ClipPlane::CappingAspect.</summary>
+    public Graphic3dAspectFillArea3d? CappingAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dClipPlaneMethodCappingAspect0(handle, out nint handleValue), "occtsharp_generated_graphic3d_clip_plane_method_capping_aspect_0");
+        return global::OcctSharp.Graphic3dAspectFillArea3d.FromNative(handleValue, "occtsharp_generated_graphic3d_clip_plane_method_capping_aspect_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_ClipPlane::CappingCustomHatch.</summary>
+    public Graphic3dHatchStyle? CappingCustomHatch()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dClipPlaneMethodCappingCustomHatch0(handle, out nint handleValue), "occtsharp_generated_graphic3d_clip_plane_method_capping_custom_hatch_0");
+        return global::OcctSharp.Graphic3dHatchStyle.FromNative(handleValue, "occtsharp_generated_graphic3d_clip_plane_method_capping_custom_hatch_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_ClipPlane::CappingHatch.</summary>
     public AspectHatchStyle CappingHatch()
     {
@@ -17681,6 +20167,14 @@ public sealed class Graphic3dClipPlane : IDisposable
         return global::OcctSharp.Graphic3dTextureMap.FromNative(handleValue, "occtsharp_generated_graphic3d_clip_plane_method_capping_texture_0");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_ClipPlane::ChainNextPlane.</summary>
+    public Graphic3dClipPlane? ChainNextPlane()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dClipPlaneMethodChainNextPlane0(handle, out nint handleValue), "occtsharp_generated_graphic3d_clip_plane_method_chain_next_plane_0");
+        return global::OcctSharp.Graphic3dClipPlane.FromNative(handleValue, "occtsharp_generated_graphic3d_clip_plane_method_chain_next_plane_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_ClipPlane::ChainPreviousPlane.</summary>
     public Graphic3dClipPlane? ChainPreviousPlane()
     {
@@ -17695,6 +20189,14 @@ public sealed class Graphic3dClipPlane : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dClipPlaneMethodOcctClone0(handle, out nint handleValue), "occtsharp_generated_graphic3d_clip_plane_method_clone_0");
         return global::OcctSharp.Graphic3dClipPlane.FromNative(handleValue, "occtsharp_generated_graphic3d_clip_plane_method_clone_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_ClipPlane::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dClipPlaneMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_clip_plane_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_clip_plane_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_ClipPlane::IsCapping.</summary>
@@ -17727,6 +20229,22 @@ public sealed class Graphic3dClipPlane : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dClipPlaneMethodIsOn0(handle, out int resultValue), "occtsharp_generated_graphic3d_clip_plane_method_is_on_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_ClipPlane::MCountAspect.</summary>
+    public uint MCountAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dClipPlaneMethodMCountAspect0(handle, out uint resultValue), "occtsharp_generated_graphic3d_clip_plane_method_mcount_aspect_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_ClipPlane::MCountEquation.</summary>
+    public uint MCountEquation()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dClipPlaneMethodMCountEquation0(handle, out uint resultValue), "occtsharp_generated_graphic3d_clip_plane_method_mcount_equation_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT Graphic3d_ClipPlane::NbChainNextPlanes.</summary>
@@ -17929,6 +20447,14 @@ public sealed class Graphic3dCubeMap : IDisposable
         return (Graphic3dCubeMapSide)resultValue;
     }
 
+    /// <summary>Invokes OCCT Graphic3d_CubeMap::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCubeMapMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_cube_map_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_cube_map_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_CubeMap::HasMipmaps.</summary>
     public bool HasMipmaps()
     {
@@ -18050,6 +20576,14 @@ public sealed class Graphic3dCubeMapPacked : IDisposable
         return global::OcctSharp.ImageCompressedPixMap.FromNative(handleValue, "occtsharp_generated_graphic3d_cube_map_packed_method_compressed_value_0");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_CubeMapPacked::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCubeMapPackedMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_cube_map_packed_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_cube_map_packed_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_CubeMapPacked::Value.</summary>
     public ImagePixMap? Value(ImageSupportedFormats? theSupported)
     {
@@ -18132,6 +20666,14 @@ public sealed class Graphic3dCubeMapSeparate : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCubeMapSeparateMethodCompressedValue0(handle, theSupported is null ? nint.Zero : theSupported.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_graphic3d_cube_map_separate_method_compressed_value_0");
         return global::OcctSharp.ImageCompressedPixMap.FromNative(handleValue, "occtsharp_generated_graphic3d_cube_map_separate_method_compressed_value_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_CubeMapSeparate::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCubeMapSeparateMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_cube_map_separate_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_cube_map_separate_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_CubeMapSeparate::GetImage.</summary>
@@ -18226,6 +20768,14 @@ public sealed class Graphic3dDataStructureManager : IDisposable
 
     private Graphic3dDataStructureManager(Graphic3dDataStructureManagerHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT Graphic3d_DataStructureManager::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dDataStructureManagerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_data_structure_manager_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_data_structure_manager_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -18294,6 +20844,14 @@ public sealed class Graphic3dFlipper : IDisposable
 
     private Graphic3dFlipper(Graphic3dFlipperHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT Graphic3d_Flipper::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dFlipperMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_flipper_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_flipper_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -18361,6 +20919,22 @@ public sealed class Graphic3dFrameStats : IDisposable
     private readonly Graphic3dFrameStatsHandle handle;
 
     private Graphic3dFrameStats(Graphic3dFrameStatsHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT Graphic3d_FrameStats::CounterValue.</summary>
+    public ulong CounterValue(Graphic3dFrameStatsCounter theCounter)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dFrameStatsMethodCounterValue0(handle, (int)theCounter, out ulong resultValue), "occtsharp_generated_graphic3d_frame_stats_method_counter_value_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_FrameStats::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dFrameStatsMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_frame_stats_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_frame_stats_method_dynamic_type_0");
+    }
 
     /// <summary>Invokes OCCT Graphic3d_FrameStats::FrameDuration.</summary>
     public double FrameDuration()
@@ -18530,6 +21104,22 @@ public sealed class Graphic3dGraphicDriver : IDisposable
 
     private Graphic3dGraphicDriver(Graphic3dGraphicDriverHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT Graphic3d_GraphicDriver::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dGraphicDriverMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_graphic_driver_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_graphic_driver_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_GraphicDriver::GetDisplayConnection.</summary>
+    public AspectDisplayConnection? GetDisplayConnection()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dGraphicDriverMethodGetDisplayConnection0(handle, out nint handleValue), "occtsharp_generated_graphic3d_graphic_driver_method_get_display_connection_0");
+        return global::OcctSharp.AspectDisplayConnection.FromNative(handleValue, "occtsharp_generated_graphic3d_graphic_driver_method_get_display_connection_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_GraphicDriver::InquireLightLimit.</summary>
     public int InquireLightLimit()
     {
@@ -18637,6 +21227,14 @@ public sealed class Graphic3dGraphicDriverFactory : IDisposable
 
     private Graphic3dGraphicDriverFactory(Graphic3dGraphicDriverFactoryHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT Graphic3d_GraphicDriverFactory::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dGraphicDriverFactoryMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_graphic_driver_factory_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_graphic_driver_factory_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -18733,6 +21331,22 @@ public sealed class Graphic3dGroup : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dGroupMethodClear0(handle, theUpdateStructureMgr ? 1 : 0), "occtsharp_generated_graphic3d_group_method_clear_0");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_Group::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dGroupMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_group_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_group_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Group::Flipper.</summary>
+    public Graphic3dFlipper? Flipper()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dGroupMethodFlipper0(handle, out nint handleValue), "occtsharp_generated_graphic3d_group_method_flipper_0");
+        return global::OcctSharp.Graphic3dFlipper.FromNative(handleValue, "occtsharp_generated_graphic3d_group_method_flipper_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_Group::IsClosed.</summary>
     public bool IsClosed()
     {
@@ -18791,6 +21405,14 @@ public sealed class Graphic3dGroup : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dGroupMethodStructure0(handle, out nint handleValue), "occtsharp_generated_graphic3d_group_method_structure_0");
         return global::OcctSharp.Graphic3dStructure.FromNative(handleValue, "occtsharp_generated_graphic3d_group_method_structure_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Group::TransformPersistence.</summary>
+    public Graphic3dTransformPers? TransformPersistence()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dGroupMethodTransformPersistence0(handle, out nint handleValue), "occtsharp_generated_graphic3d_group_method_transform_persistence_0");
+        return global::OcctSharp.Graphic3dTransformPers.FromNative(handleValue, "occtsharp_generated_graphic3d_group_method_transform_persistence_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -18877,6 +21499,14 @@ public sealed class Graphic3dHatchStyle : IDisposable
         handle = CreateHandle(nativeHandle, "Graphic3dHatchStyleCreate1");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_HatchStyle::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dHatchStyleMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_hatch_style_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_hatch_style_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_HatchStyle::HatchType.</summary>
     public int HatchType()
     {
@@ -18959,6 +21589,14 @@ public sealed class Graphic3dIndexBuffer : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dIndexBufferCreate0(theAlloc is null ? nint.Zero : theAlloc.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "Graphic3dIndexBufferCreate0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_IndexBuffer::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dIndexBufferMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_index_buffer_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_index_buffer_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_IndexBuffer::Index.</summary>
@@ -19058,6 +21696,14 @@ public sealed class Graphic3dLayer : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dLayerMethodconsiderZoomPersistenceObjects0(handle, theViewId, theCamera is null ? nint.Zero : theCamera.NativeHandle.DangerousGetHandle(), theWindowWidth, theWindowHeight, out double resultValue), "occtsharp_generated_graphic3d_layer_method_consider_zoom_persistence_objects_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Layer::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dLayerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_layer_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_layer_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_Layer::InvalidateBoundingBox.</summary>
@@ -19222,6 +21868,14 @@ public sealed class Graphic3dLightSet : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT Graphic3d_LightSet::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dLightSetMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_light_set_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_light_set_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_LightSet::Extent.</summary>
     public int Extent()
     {
@@ -19286,12 +21940,36 @@ public sealed class Graphic3dLightSet : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT Graphic3d_LightSet::Revision.</summary>
+    public ulong Revision()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dLightSetMethodRevision0(handle, out ulong resultValue), "occtsharp_generated_graphic3d_light_set_method_revision_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_LightSet::UpdateRevision.</summary>
+    public ulong UpdateRevision()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dLightSetMethodUpdateRevision0(handle, out ulong resultValue), "occtsharp_generated_graphic3d_light_set_method_update_revision_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Graphic3d_LightSet::Upper.</summary>
     public int Upper()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dLightSetMethodUpper0(handle, out int resultValue), "occtsharp_generated_graphic3d_light_set_method_upper_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_LightSet::Value.</summary>
+    public Graphic3dCLight? Value(int theIndex)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dLightSetMethodValue0(handle, theIndex, out nint handleValue), "occtsharp_generated_graphic3d_light_set_method_value_0");
+        return global::OcctSharp.Graphic3dCLight.FromNative(handleValue, "occtsharp_generated_graphic3d_light_set_method_value_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -19370,6 +22048,30 @@ public sealed class Graphic3dMarkerImage : IDisposable
         handle = CreateHandle(nativeHandle, "Graphic3dMarkerImageCreate0");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_MarkerImage::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dMarkerImageMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_marker_image_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_marker_image_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_MarkerImage::GetImage.</summary>
+    public ImagePixMap? GetImage()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dMarkerImageMethodGetImage0(handle, out nint handleValue), "occtsharp_generated_graphic3d_marker_image_method_get_image_0");
+        return global::OcctSharp.ImagePixMap.FromNative(handleValue, "occtsharp_generated_graphic3d_marker_image_method_get_image_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_MarkerImage::GetImageAlpha.</summary>
+    public ImagePixMap? GetImageAlpha()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dMarkerImageMethodGetImageAlpha0(handle, out nint handleValue), "occtsharp_generated_graphic3d_marker_image_method_get_image_alpha_0");
+        return global::OcctSharp.ImagePixMap.FromNative(handleValue, "occtsharp_generated_graphic3d_marker_image_method_get_image_alpha_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_MarkerImage::IsColoredImage.</summary>
     public bool IsColoredImage()
     {
@@ -19445,6 +22147,22 @@ public sealed class Graphic3dMediaTexture : IDisposable
     private readonly Graphic3dMediaTextureHandle handle;
 
     private Graphic3dMediaTexture(Graphic3dMediaTextureHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT Graphic3d_MediaTexture::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dMediaTextureMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_media_texture_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_media_texture_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_MediaTexture::Frame.</summary>
+    public MediaFrame? Frame()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dMediaTextureMethodFrame0(handle, out nint handleValue), "occtsharp_generated_graphic3d_media_texture_method_frame_0");
+        return global::OcctSharp.MediaFrame.FromNative(handleValue, "occtsharp_generated_graphic3d_media_texture_method_frame_0");
+    }
 
     /// <summary>Invokes OCCT Graphic3d_MediaTexture::GenerateNewId.</summary>
     public void GenerateNewId()
@@ -19552,6 +22270,14 @@ public sealed class Graphic3dMediaTextureSet : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Graphic3d_MediaTextureSet::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dMediaTextureSetMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_media_texture_set_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_media_texture_set_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_MediaTextureSet::IsFullRangeYUV.</summary>
     public bool IsFullRangeYUV()
     {
@@ -19573,6 +22299,14 @@ public sealed class Graphic3dMediaTextureSet : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dMediaTextureSetMethodNotify0(handle), "occtsharp_generated_graphic3d_media_texture_set_method_notify_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_MediaTextureSet::PlayerContext.</summary>
+    public MediaPlayerContext? PlayerContext()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dMediaTextureSetMethodPlayerContext0(handle, out nint handleValue), "occtsharp_generated_graphic3d_media_texture_set_method_player_context_0");
+        return global::OcctSharp.MediaPlayerContext.FromNative(handleValue, "occtsharp_generated_graphic3d_media_texture_set_method_player_context_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_MediaTextureSet::Progress.</summary>
@@ -19673,6 +22407,14 @@ public sealed class Graphic3dMutableIndexBuffer : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dMutableIndexBufferCreate0(theAlloc is null ? nint.Zero : theAlloc.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "Graphic3dMutableIndexBufferCreate0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_MutableIndexBuffer::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dMutableIndexBufferMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_mutable_index_buffer_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_mutable_index_buffer_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_MutableIndexBuffer::Invalidate.</summary>
@@ -19780,12 +22522,28 @@ public sealed class Graphic3dPresentationAttributes : IDisposable
         handle = CreateHandle(nativeHandle, "Graphic3dPresentationAttributesCreate0");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_PresentationAttributes::BasicFillAreaAspect.</summary>
+    public Graphic3dAspectFillArea3d? BasicFillAreaAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dPresentationAttributesMethodBasicFillAreaAspect0(handle, out nint handleValue), "occtsharp_generated_graphic3d_presentation_attributes_method_basic_fill_area_aspect_0");
+        return global::OcctSharp.Graphic3dAspectFillArea3d.FromNative(handleValue, "occtsharp_generated_graphic3d_presentation_attributes_method_basic_fill_area_aspect_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_PresentationAttributes::DisplayMode.</summary>
     public int DisplayMode()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dPresentationAttributesMethodDisplayMode0(handle, out int resultValue), "occtsharp_generated_graphic3d_presentation_attributes_method_display_mode_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_PresentationAttributes::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dPresentationAttributesMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_presentation_attributes_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_presentation_attributes_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_PresentationAttributes::Method.</summary>
@@ -19817,11 +22575,26 @@ public sealed class Graphic3dPresentationAttributes : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dPresentationAttributesMethodSetMethod0(handle, (int)theMethod), "occtsharp_generated_graphic3d_presentation_attributes_method_set_method_0");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_PresentationAttributes::SetTransparency.</summary>
+    public void SetTransparency(float theTranspCoef)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dPresentationAttributesMethodSetTransparency0(handle, theTranspCoef), "occtsharp_generated_graphic3d_presentation_attributes_method_set_transparency_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_PresentationAttributes::SetZLayer.</summary>
     public void SetZLayer(int theLayer)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dPresentationAttributesMethodSetZLayer0(handle, theLayer), "occtsharp_generated_graphic3d_presentation_attributes_method_set_zlayer_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_PresentationAttributes::Transparency.</summary>
+    public float Transparency()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dPresentationAttributesMethodTransparency0(handle, out float resultValue), "occtsharp_generated_graphic3d_presentation_attributes_method_transparency_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT Graphic3d_PresentationAttributes::ZLayer.</summary>
@@ -19921,6 +22694,22 @@ public sealed class Graphic3dSequenceOfHClipPlane : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dSequenceOfHClipPlaneMethodClear0(handle), "occtsharp_generated_graphic3d_sequence_of_hclip_plane_method_clear_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_SequenceOfHClipPlane::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dSequenceOfHClipPlaneMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_sequence_of_hclip_plane_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_sequence_of_hclip_plane_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_SequenceOfHClipPlane::First.</summary>
+    public Graphic3dClipPlane? First()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dSequenceOfHClipPlaneMethodFirst0(handle, out nint handleValue), "occtsharp_generated_graphic3d_sequence_of_hclip_plane_method_first_0");
+        return global::OcctSharp.Graphic3dClipPlane.FromNative(handleValue, "occtsharp_generated_graphic3d_sequence_of_hclip_plane_method_first_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_SequenceOfHClipPlane::IsEmpty.</summary>
@@ -20030,6 +22819,14 @@ public sealed class Graphic3dShaderAttribute : IDisposable
 
     private Graphic3dShaderAttribute(Graphic3dShaderAttributeHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT Graphic3d_ShaderAttribute::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dShaderAttributeMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_shader_attribute_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_shader_attribute_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_ShaderAttribute::Location.</summary>
     public int Location()
     {
@@ -20112,6 +22909,14 @@ public sealed class Graphic3dShaderManager : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dShaderManagerCreate0((int)theGapi, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "Graphic3dShaderManagerCreate0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_ShaderManager::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dShaderManagerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_shader_manager_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_shader_manager_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_ShaderManager::EnableGlslExtension.</summary>
@@ -20281,6 +23086,14 @@ public sealed class Graphic3dShaderObject : IDisposable
 
     private Graphic3dShaderObject(Graphic3dShaderObjectHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT Graphic3d_ShaderObject::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dShaderObjectMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_shader_object_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_shader_object_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_ShaderObject::IsDone.</summary>
     public bool IsDone()
     {
@@ -20394,6 +23207,14 @@ public sealed class Graphic3dShaderProgram : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dShaderProgramMethodDetachShader0(handle, theShader is null ? nint.Zero : theShader.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_graphic3d_shader_program_method_detach_shader_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_ShaderProgram::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dShaderProgramMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_shader_program_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_shader_program_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_ShaderProgram::HasAlphaTest.</summary>
@@ -20607,6 +23428,14 @@ public sealed class Graphic3dShaderVariable : IDisposable
 
     private Graphic3dShaderVariable(Graphic3dShaderVariableHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT Graphic3d_ShaderVariable::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dShaderVariableMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_shader_variable_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_shader_variable_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_ShaderVariable::IsDone.</summary>
     public bool IsDone()
     {
@@ -20705,6 +23534,14 @@ public sealed class Graphic3dStructure : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dStructureMethodClear0(handle, withDestruction ? 1 : 0), "occtsharp_generated_graphic3d_structure_method_clear_0");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_Structure::ClipPlanes.</summary>
+    public Graphic3dSequenceOfHClipPlane? ClipPlanes()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dStructureMethodClipPlanes0(handle, out nint handleValue), "occtsharp_generated_graphic3d_structure_method_clip_planes_0");
+        return global::OcctSharp.Graphic3dSequenceOfHClipPlane.FromNative(handleValue, "occtsharp_generated_graphic3d_structure_method_clip_planes_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_Structure::Compute.</summary>
     public void Compute()
     {
@@ -20725,6 +23562,14 @@ public sealed class Graphic3dStructure : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dStructureMethodConnect0(handle, thePrs is null ? nint.Zero : thePrs.NativeHandle.DangerousGetHandle()), "occtsharp_generated_graphic3d_structure_method_connect_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Structure::CStructure.</summary>
+    public Graphic3dCStructure? CStructure()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dStructureMethodCStructure0(handle, out nint handleValue), "occtsharp_generated_graphic3d_structure_method_cstructure_0");
+        return global::OcctSharp.Graphic3dCStructure.FromNative(handleValue, "occtsharp_generated_graphic3d_structure_method_cstructure_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_Structure::CurrentGroup.</summary>
@@ -20755,6 +23600,14 @@ public sealed class Graphic3dStructure : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dStructureMethodDisplayPriority0(handle, out int resultValue), "occtsharp_generated_graphic3d_structure_method_display_priority_0");
         return (Graphic3dDisplayPriority)resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Structure::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dStructureMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_structure_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_structure_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_Structure::Erase.</summary>
@@ -20805,6 +23658,14 @@ public sealed class Graphic3dStructure : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dStructureMethodHighlight0(handle, theStyle is null ? nint.Zero : theStyle.NativeHandle.DangerousGetHandle(), theToUpdateMgr ? 1 : 0), "occtsharp_generated_graphic3d_structure_method_highlight_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Structure::HighlightStyle.</summary>
+    public Graphic3dPresentationAttributes? HighlightStyle()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dStructureMethodHighlightStyle0(handle, out nint handleValue), "occtsharp_generated_graphic3d_structure_method_highlight_style_0");
+        return global::OcctSharp.Graphic3dPresentationAttributes.FromNative(handleValue, "occtsharp_generated_graphic3d_structure_method_highlight_style_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_Structure::HLRValidation.</summary>
@@ -21050,6 +23911,22 @@ public sealed class Graphic3dStructure : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dStructureMethodSetZoomLimit0(handle, limitInf, limitSup), "occtsharp_generated_graphic3d_structure_method_set_zoom_limit_0");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_Structure::TransformPersistence.</summary>
+    public Graphic3dTransformPers? TransformPersistence()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dStructureMethodTransformPersistence0(handle, out nint handleValue), "occtsharp_generated_graphic3d_structure_method_transform_persistence_0");
+        return global::OcctSharp.Graphic3dTransformPers.FromNative(handleValue, "occtsharp_generated_graphic3d_structure_method_transform_persistence_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Structure::Transformation.</summary>
+    public TopLocDatum3D? Transformation()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dStructureMethodTransformation0(handle, out nint handleValue), "occtsharp_generated_graphic3d_structure_method_transformation_0");
+        return global::OcctSharp.TopLocDatum3D.FromNative(handleValue, "occtsharp_generated_graphic3d_structure_method_transformation_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_Structure::UnHighlight.</summary>
     public void UnHighlight()
     {
@@ -21162,6 +24039,14 @@ public sealed class Graphic3dStructureManager : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dStructureManagerMethodDisplay0(handle, theStructure is null ? nint.Zero : theStructure.NativeHandle.DangerousGetHandle()), "occtsharp_generated_graphic3d_structure_manager_method_display_0");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_StructureManager::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dStructureManagerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_structure_manager_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_structure_manager_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_StructureManager::Erase.</summary>
     public void Erase()
     {
@@ -21174,6 +24059,14 @@ public sealed class Graphic3dStructureManager : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dStructureManagerMethodErase1(handle, theStructure is null ? nint.Zero : theStructure.NativeHandle.DangerousGetHandle()), "occtsharp_generated_graphic3d_structure_manager_method_erase_1");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_StructureManager::GraphicDriver.</summary>
+    public Graphic3dGraphicDriver? GraphicDriver()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dStructureManagerMethodGraphicDriver0(handle, out nint handleValue), "occtsharp_generated_graphic3d_structure_manager_method_graphic_driver_0");
+        return global::OcctSharp.Graphic3dGraphicDriver.FromNative(handleValue, "occtsharp_generated_graphic3d_structure_manager_method_graphic_driver_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_StructureManager::Highlight.</summary>
@@ -21205,6 +24098,14 @@ public sealed class Graphic3dStructureManager : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dStructureManagerMethodMaxNumOfViews0(handle, out int resultValue), "occtsharp_generated_graphic3d_structure_manager_method_max_num_of_views_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_StructureManager::ObjectAffinity.</summary>
+    public Graphic3dViewAffinity? ObjectAffinity(StandardTransient? theObject)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dStructureManagerMethodObjectAffinity0(handle, theObject is null ? nint.Zero : theObject.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_graphic3d_structure_manager_method_object_affinity_0");
+        return global::OcctSharp.Graphic3dViewAffinity.FromNative(handleValue, "occtsharp_generated_graphic3d_structure_manager_method_object_affinity_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_StructureManager::ReCompute.</summary>
@@ -21352,6 +24253,22 @@ public sealed class Graphic3dText : IDisposable
 
     private Graphic3dText(Graphic3dTextHandle handle) => this.handle = handle;
 
+    /// <summary>Creates a retained OCCT Graphic3d_Text shared object.</summary>
+    public Graphic3dText(float theHeight)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextCreate0(theHeight, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "Graphic3dTextCreate0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Text::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_text_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_text_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_Text::HasOwnAnchorPoint.</summary>
     public bool HasOwnAnchorPoint()
     {
@@ -21368,6 +24285,14 @@ public sealed class Graphic3dText : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT Graphic3d_Text::Height.</summary>
+    public float Height()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextMethodHeight0(handle, out float resultValue), "occtsharp_generated_graphic3d_text_method_height_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Graphic3d_Text::HorizontalAlignment.</summary>
     public Graphic3dHorizontalTextAlignment HorizontalAlignment()
     {
@@ -21376,11 +24301,26 @@ public sealed class Graphic3dText : IDisposable
         return (Graphic3dHorizontalTextAlignment)resultValue;
     }
 
+    /// <summary>Invokes OCCT Graphic3d_Text::Position.</summary>
+    public Point3d Position()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextMethodPosition0(handle, out Point3dRaw resultValue), "occtsharp_generated_graphic3d_text_method_position_0");
+        return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
     /// <summary>Invokes OCCT Graphic3d_Text::ResetOrientation.</summary>
     public void ResetOrientation()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextMethodResetOrientation0(handle), "occtsharp_generated_graphic3d_text_method_reset_orientation_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Text::SetHeight.</summary>
+    public void SetHeight(float theHeight)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextMethodSetHeight0(handle, theHeight), "occtsharp_generated_graphic3d_text_method_set_height_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_Text::SetHorizontalAlignment.</summary>
@@ -21416,6 +24356,14 @@ public sealed class Graphic3dText : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextMethodSetVerticalAlignment0(handle, (int)theJustification), "occtsharp_generated_graphic3d_text_method_set_vertical_alignment_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Text::TextFormatter.</summary>
+    public FontTextFormatter? TextFormatter()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextMethodTextFormatter0(handle, out nint handleValue), "occtsharp_generated_graphic3d_text_method_text_formatter_0");
+        return global::OcctSharp.FontTextFormatter.FromNative(handleValue, "occtsharp_generated_graphic3d_text_method_text_formatter_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_Text::VerticalAlignment.</summary>
@@ -21493,6 +24441,14 @@ public sealed class Graphic3dTexture1D : IDisposable
     private readonly Graphic3dTexture1DHandle handle;
 
     private Graphic3dTexture1D(Graphic3dTexture1DHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT Graphic3d_Texture1D::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTexture1DMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_texture1_d_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_texture1_d_method_dynamic_type_0");
+    }
 
     /// <summary>Invokes OCCT Graphic3d_Texture1D::Name.</summary>
     public Graphic3dNameOfTexture1D Name()
@@ -21586,6 +24542,14 @@ public sealed class Graphic3dTexture1Dmanual : IDisposable
         handle = CreateHandle(nativeHandle, "Graphic3dTexture1DmanualCreate1");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_Texture1Dmanual::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTexture1DmanualMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_texture1_dmanual_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_texture1_dmanual_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -21670,6 +24634,21 @@ public sealed class Graphic3dTexture1Dsegment : IDisposable
         handle = CreateHandle(nativeHandle, "Graphic3dTexture1DsegmentCreate1");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_Texture1Dsegment::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTexture1DsegmentMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_texture1_dsegment_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_texture1_dsegment_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Texture1Dsegment::SetSegment.</summary>
+    public void SetSegment(float theX1, float theY1, float theZ1, float theX2, float theY2, float theZ2)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTexture1DsegmentMethodSetSegment0(handle, theX1, theY1, theZ1, theX2, theY2, theZ2), "occtsharp_generated_graphic3d_texture1_dsegment_method_set_segment_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -21752,6 +24731,14 @@ public sealed class Graphic3dTexture2D : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTexture2DCreate1(thePixMap is null ? nint.Zero : thePixMap.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "Graphic3dTexture2DCreate1");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Texture2D::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTexture2DMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_texture2_d_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_texture2_d_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_Texture2D::Name.</summary>
@@ -21853,6 +24840,14 @@ public sealed class Graphic3dTexture2Dplane : IDisposable
         handle = CreateHandle(nativeHandle, "Graphic3dTexture2DplaneCreate1");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_Texture2Dplane::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTexture2DplaneMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_texture2_dplane_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_texture2_dplane_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_Texture2Dplane::Plane.</summary>
     public Graphic3dNameOfTexturePlane Plane()
     {
@@ -21866,6 +24861,41 @@ public sealed class Graphic3dTexture2Dplane : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTexture2DplaneMethodSetPlane0(handle, (int)thePlane), "occtsharp_generated_graphic3d_texture2_dplane_method_set_plane_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Texture2Dplane::SetRotation.</summary>
+    public void SetRotation(float theVal)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTexture2DplaneMethodSetRotation0(handle, theVal), "occtsharp_generated_graphic3d_texture2_dplane_method_set_rotation_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Texture2Dplane::SetScaleS.</summary>
+    public void SetScaleS(float theVal)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTexture2DplaneMethodSetScaleS0(handle, theVal), "occtsharp_generated_graphic3d_texture2_dplane_method_set_scale_s_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Texture2Dplane::SetScaleT.</summary>
+    public void SetScaleT(float theVal)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTexture2DplaneMethodSetScaleT0(handle, theVal), "occtsharp_generated_graphic3d_texture2_dplane_method_set_scale_t_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Texture2Dplane::SetTranslateS.</summary>
+    public void SetTranslateS(float theVal)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTexture2DplaneMethodSetTranslateS0(handle, theVal), "occtsharp_generated_graphic3d_texture2_dplane_method_set_translate_s_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Texture2Dplane::SetTranslateT.</summary>
+    public void SetTranslateT(float theVal)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTexture2DplaneMethodSetTranslateT0(handle, theVal), "occtsharp_generated_graphic3d_texture2_dplane_method_set_translate_t_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -21942,6 +24972,14 @@ public sealed class Graphic3dTexture3D : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTexture3DCreate0(thePixMap is null ? nint.Zero : thePixMap.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "Graphic3dTexture3DCreate0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Texture3D::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTexture3DMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_texture3_d_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_texture3_d_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_Texture3D::GetImage.</summary>
@@ -22041,6 +25079,14 @@ public sealed class Graphic3dTextureEnv : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextureEnvCreate1(thePixMap is null ? nint.Zero : thePixMap.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "Graphic3dTextureEnvCreate1");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_TextureEnv::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextureEnvMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_texture_env_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_texture_env_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_TextureEnv::Name.</summary>
@@ -22146,6 +25192,14 @@ public sealed class Graphic3dTextureMap : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextureMapMethodDisableSmooth0(handle), "occtsharp_generated_graphic3d_texture_map_method_disable_smooth_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_TextureMap::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextureMapMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_texture_map_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_texture_map_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_TextureMap::EnableModulate.</summary>
@@ -22292,6 +25346,14 @@ public sealed class Graphic3dTextureParams : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Graphic3d_TextureParams::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextureParamsMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_texture_params_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_texture_params_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_TextureParams::Filter.</summary>
     public Graphic3dTypeOfTextureFilter Filter()
     {
@@ -22329,6 +25391,22 @@ public sealed class Graphic3dTextureParams : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextureParamsMethodMaxLevel0(handle, out int resultValue), "occtsharp_generated_graphic3d_texture_params_method_max_level_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_TextureParams::Rotation.</summary>
+    public float Rotation()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextureParamsMethodRotation0(handle, out float resultValue), "occtsharp_generated_graphic3d_texture_params_method_rotation_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_TextureParams::SamplerRevision.</summary>
+    public uint SamplerRevision()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextureParamsMethodSamplerRevision0(handle, out uint resultValue), "occtsharp_generated_graphic3d_texture_params_method_sampler_revision_0");
         return resultValue;
     }
 
@@ -22450,6 +25528,14 @@ public sealed class Graphic3dTextureRoot : IDisposable
 
     private Graphic3dTextureRoot(Graphic3dTextureRootHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT Graphic3d_TextureRoot::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextureRootMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_texture_root_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_texture_root_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_TextureRoot::GetCompressedImage.</summary>
     public ImageCompressedPixMap? GetCompressedImage(ImageSupportedFormats? theSupported)
     {
@@ -22464,6 +25550,14 @@ public sealed class Graphic3dTextureRoot : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextureRootMethodGetImage0(handle, theSupported is null ? nint.Zero : theSupported.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_graphic3d_texture_root_method_get_image_0");
         return global::OcctSharp.ImagePixMap.FromNative(handleValue, "occtsharp_generated_graphic3d_texture_root_method_get_image_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_TextureRoot::GetParams.</summary>
+    public Graphic3dTextureParams? GetParams()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextureRootMethodGetParams0(handle, out nint handleValue), "occtsharp_generated_graphic3d_texture_root_method_get_params_0");
+        return global::OcctSharp.Graphic3dTextureParams.FromNative(handleValue, "occtsharp_generated_graphic3d_texture_root_method_get_params_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_TextureRoot::HasMipmaps.</summary>
@@ -22496,6 +25590,14 @@ public sealed class Graphic3dTextureRoot : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextureRootMethodIsTopDown0(handle, out int resultValue), "occtsharp_generated_graphic3d_texture_root_method_is_top_down_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_TextureRoot::Revision.</summary>
+    public ulong Revision()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextureRootMethodRevision0(handle, out ulong resultValue), "occtsharp_generated_graphic3d_texture_root_method_revision_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT Graphic3d_TextureRoot::SetColorMap.</summary>
@@ -22619,6 +25721,22 @@ public sealed class Graphic3dTextureSet : IDisposable
         handle = CreateHandle(nativeHandle, "Graphic3dTextureSetCreate2");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_TextureSet::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextureSetMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_texture_set_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_texture_set_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_TextureSet::First.</summary>
+    public Graphic3dTextureMap? First()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextureSetMethodFirst0(handle, out nint handleValue), "occtsharp_generated_graphic3d_texture_set_method_first_0");
+        return global::OcctSharp.Graphic3dTextureMap.FromNative(handleValue, "occtsharp_generated_graphic3d_texture_set_method_first_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_TextureSet::IsEmpty.</summary>
     public bool IsEmpty()
     {
@@ -22663,6 +25781,14 @@ public sealed class Graphic3dTextureSet : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextureSetMethodUpper0(handle, out int resultValue), "occtsharp_generated_graphic3d_texture_set_method_upper_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_TextureSet::Value.</summary>
+    public Graphic3dTextureMap? Value(int theIndex)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextureSetMethodValue0(handle, theIndex, out nint handleValue), "occtsharp_generated_graphic3d_texture_set_method_value_0");
+        return global::OcctSharp.Graphic3dTextureMap.FromNative(handleValue, "occtsharp_generated_graphic3d_texture_set_method_value_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -22763,6 +25889,14 @@ public sealed class Graphic3dTransformPers : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTransformPersMethodCorner2d0(handle, out int resultValue), "occtsharp_generated_graphic3d_transform_pers_method_corner2d_0");
         return (AspectTypeOfTriedronPosition)resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_TransformPers::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTransformPersMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_transform_pers_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_transform_pers_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_TransformPers::Flags.</summary>
@@ -22918,6 +26052,14 @@ public sealed class Graphic3dTransformPersScaledAbove : IDisposable
         handle = CreateHandle(nativeHandle, "Graphic3dTransformPersScaledAboveCreate0");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_TransformPersScaledAbove::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTransformPersScaledAboveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_transform_pers_scaled_above_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_transform_pers_scaled_above_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_TransformPersScaledAbove::persistentScale.</summary>
     public double persistentScale(Graphic3dCamera? theCamera, int theViewportWidth, int theViewportHeight)
     {
@@ -23000,6 +26142,14 @@ public sealed class Graphic3dViewAffinity : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dViewAffinityCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "Graphic3dViewAffinityCreate0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_ViewAffinity::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dViewAffinityMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_view_affinity_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_view_affinity_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_ViewAffinity::IsVisible.</summary>
@@ -23115,6 +26265,22 @@ public sealed class ImageAlienPixMap : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImageAlienPixMapMethodClear0(handle), "occtsharp_generated_image_alien_pix_map_method_clear_0");
     }
 
+    /// <summary>Invokes OCCT Image_AlienPixMap::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImageAlienPixMapMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_image_alien_pix_map_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_image_alien_pix_map_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Image_AlienPixMap::InitTrash.</summary>
+    public bool InitTrash(ImageFormat thePixelFormat, ulong theSizeX, ulong theSizeY, ulong theSizeRowBytes)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImageAlienPixMapMethodInitTrash0(handle, (int)thePixelFormat, theSizeX, theSizeY, theSizeRowBytes, out int resultValue), "occtsharp_generated_image_alien_pix_map_method_init_trash_0");
+        return resultValue != 0;
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -23207,6 +26373,30 @@ public sealed class ImageCompressedPixMap : IDisposable
         return (ImageCompressedFormat)resultValue;
     }
 
+    /// <summary>Invokes OCCT Image_CompressedPixMap::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImageCompressedPixMapMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_image_compressed_pix_map_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_image_compressed_pix_map_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Image_CompressedPixMap::FaceBytes.</summary>
+    public ulong FaceBytes()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImageCompressedPixMapMethodFaceBytes0(handle, out ulong resultValue), "occtsharp_generated_image_compressed_pix_map_method_face_bytes_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Image_CompressedPixMap::FaceData.</summary>
+    public NCollectionBuffer? FaceData()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImageCompressedPixMapMethodFaceData0(handle, out nint handleValue), "occtsharp_generated_image_compressed_pix_map_method_face_data_0");
+        return global::OcctSharp.NCollectionBuffer.FromNative(handleValue, "occtsharp_generated_image_compressed_pix_map_method_face_data_0");
+    }
+
     /// <summary>Invokes OCCT Image_CompressedPixMap::IsCompleteMipMapSet.</summary>
     public bool IsCompleteMipMapSet()
     {
@@ -23250,6 +26440,13 @@ public sealed class ImageCompressedPixMap : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImageCompressedPixMapMethodSetCompressedFormat0(handle, (int)theFormat), "occtsharp_generated_image_compressed_pix_map_method_set_compressed_format_0");
+    }
+
+    /// <summary>Invokes OCCT Image_CompressedPixMap::SetFaceBytes.</summary>
+    public void SetFaceBytes(ulong theSize)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImageCompressedPixMapMethodSetFaceBytes0(handle, theSize), "occtsharp_generated_image_compressed_pix_map_method_set_face_bytes_0");
     }
 
     /// <summary>Invokes OCCT Image_CompressedPixMap::SetFaceData.</summary>
@@ -23381,6 +26578,14 @@ public sealed class ImageDiff : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Image_Diff::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImageDiffMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_image_diff_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_image_diff_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Image_Diff::Init.</summary>
     public bool Init(ImagePixMap? theImageRef, ImagePixMap? theImageNew, bool theToBlackWhite)
     {
@@ -23494,12 +26699,44 @@ public sealed class ImagePixMap : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImagePixMapMethodClear0(handle), "occtsharp_generated_image_pix_map_method_clear_0");
     }
 
+    /// <summary>Invokes OCCT Image_PixMap::Depth.</summary>
+    public ulong Depth()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImagePixMapMethodDepth0(handle, out ulong resultValue), "occtsharp_generated_image_pix_map_method_depth_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Image_PixMap::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImagePixMapMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_image_pix_map_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_image_pix_map_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Image_PixMap::Format.</summary>
     public ImageFormat Format()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImagePixMapMethodFormat0(handle, out int resultValue), "occtsharp_generated_image_pix_map_method_format_0");
         return (ImageFormat)resultValue;
+    }
+
+    /// <summary>Invokes OCCT Image_PixMap::Height.</summary>
+    public ulong Height()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImagePixMapMethodHeight0(handle, out ulong resultValue), "occtsharp_generated_image_pix_map_method_height_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Image_PixMap::InitZero.</summary>
+    public bool InitZero(ImageFormat thePixelFormat, ulong theSizeX, ulong theSizeY, ulong theSizeRowBytes, byte theValue)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImagePixMapMethodInitZero0(handle, (int)thePixelFormat, theSizeX, theSizeY, theSizeRowBytes, theValue, out int resultValue), "occtsharp_generated_image_pix_map_method_init_zero_0");
+        return resultValue != 0;
     }
 
     /// <summary>Invokes OCCT Image_PixMap::IsEmpty.</summary>
@@ -23518,11 +26755,27 @@ public sealed class ImagePixMap : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT Image_PixMap::MaxRowAligmentBytes.</summary>
+    public ulong MaxRowAligmentBytes()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImagePixMapMethodMaxRowAligmentBytes0(handle, out ulong resultValue), "occtsharp_generated_image_pix_map_method_max_row_aligment_bytes_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Image_PixMap::Ratio.</summary>
     public double Ratio()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImagePixMapMethodRatio0(handle, out double resultValue), "occtsharp_generated_image_pix_map_method_ratio_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Image_PixMap::RowExtraBytes.</summary>
+    public ulong RowExtraBytes()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImagePixMapMethodRowExtraBytes0(handle, out ulong resultValue), "occtsharp_generated_image_pix_map_method_row_extra_bytes_0");
         return resultValue;
     }
 
@@ -23538,6 +26791,62 @@ public sealed class ImagePixMap : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImagePixMapMethodSetTopDown0(handle, theIsTopDown ? 1 : 0), "occtsharp_generated_image_pix_map_method_set_top_down_0");
+    }
+
+    /// <summary>Invokes OCCT Image_PixMap::SizeBytes.</summary>
+    public ulong SizeBytes()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImagePixMapMethodSizeBytes0(handle, out ulong resultValue), "occtsharp_generated_image_pix_map_method_size_bytes_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Image_PixMap::SizePixelBytes.</summary>
+    public ulong SizePixelBytes()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImagePixMapMethodSizePixelBytes0(handle, out ulong resultValue), "occtsharp_generated_image_pix_map_method_size_pixel_bytes_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Image_PixMap::SizeRowBytes.</summary>
+    public ulong SizeRowBytes()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImagePixMapMethodSizeRowBytes0(handle, out ulong resultValue), "occtsharp_generated_image_pix_map_method_size_row_bytes_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Image_PixMap::SizeSliceBytes.</summary>
+    public ulong SizeSliceBytes()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImagePixMapMethodSizeSliceBytes0(handle, out ulong resultValue), "occtsharp_generated_image_pix_map_method_size_slice_bytes_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Image_PixMap::SizeZ.</summary>
+    public ulong SizeZ()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImagePixMapMethodSizeZ0(handle, out ulong resultValue), "occtsharp_generated_image_pix_map_method_size_z_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Image_PixMap::TopDownInc.</summary>
+    public ulong TopDownInc()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImagePixMapMethodTopDownInc0(handle, out ulong resultValue), "occtsharp_generated_image_pix_map_method_top_down_inc_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Image_PixMap::Width.</summary>
+    public ulong Width()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImagePixMapMethodWidth0(handle, out ulong resultValue), "occtsharp_generated_image_pix_map_method_width_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -23614,6 +26923,22 @@ public sealed class ImagePixMapData : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImagePixMapDataCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ImagePixMapDataCreate0");
+    }
+
+    /// <summary>Invokes OCCT Image_PixMapData::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImagePixMapDataMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_image_pix_map_data_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_image_pix_map_data_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Image_PixMapData::MaxRowAligmentBytes.</summary>
+    public ulong MaxRowAligmentBytes()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImagePixMapDataMethodMaxRowAligmentBytes0(handle, out ulong resultValue), "occtsharp_generated_image_pix_map_data_method_max_row_aligment_bytes_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT Image_PixMapData::SetTopDown.</summary>
@@ -23727,6 +27052,14 @@ public sealed class ImageSupportedFormats : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImageSupportedFormatsMethodClear0(handle), "occtsharp_generated_image_supported_formats_method_clear_0");
     }
 
+    /// <summary>Invokes OCCT Image_SupportedFormats::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImageSupportedFormatsMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_image_supported_formats_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_image_supported_formats_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Image_SupportedFormats::HasCompressed.</summary>
     public bool HasCompressed()
     {
@@ -23818,6 +27151,38 @@ public sealed class ImageTexture : IDisposable
     private readonly ImageTextureHandle handle;
 
     private ImageTexture(ImageTextureHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT Image_Texture::DataBuffer.</summary>
+    public NCollectionBuffer? DataBuffer()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImageTextureMethodDataBuffer0(handle, out nint handleValue), "occtsharp_generated_image_texture_method_data_buffer_0");
+        return global::OcctSharp.NCollectionBuffer.FromNative(handleValue, "occtsharp_generated_image_texture_method_data_buffer_0");
+    }
+
+    /// <summary>Invokes OCCT Image_Texture::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImageTextureMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_image_texture_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_image_texture_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Image_Texture::FileLength.</summary>
+    public long FileLength()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImageTextureMethodFileLength0(handle, out long resultValue), "occtsharp_generated_image_texture_method_file_length_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Image_Texture::FileOffset.</summary>
+    public long FileOffset()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImageTextureMethodFileOffset0(handle, out long resultValue), "occtsharp_generated_image_texture_method_file_offset_0");
+        return resultValue;
+    }
 
     /// <summary>Invokes OCCT Image_Texture::ReadCompressedImage.</summary>
     public ImageCompressedPixMap? ReadCompressedImage(ImageSupportedFormats? theSupported)
@@ -23918,6 +27283,22 @@ public sealed class ImageVideoRecorder : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImageVideoRecorderMethodClose0(handle), "occtsharp_generated_image_video_recorder_method_close_0");
     }
 
+    /// <summary>Invokes OCCT Image_VideoRecorder::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImageVideoRecorderMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_image_video_recorder_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_image_video_recorder_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Image_VideoRecorder::FrameCount.</summary>
+    public long FrameCount()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.ImageVideoRecorderMethodFrameCount0(handle, out long resultValue), "occtsharp_generated_image_video_recorder_method_frame_count_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Image_VideoRecorder::PushFrame.</summary>
     public bool PushFrame()
     {
@@ -24008,6 +27389,14 @@ public sealed class MediaBufferPool : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MediaBufferPoolMethodBufferSize0(handle, out int resultValue), "occtsharp_generated_media_buffer_pool_method_buffer_size_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Media_BufferPool::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MediaBufferPoolMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_media_buffer_pool_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_media_buffer_pool_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Media_BufferPool::Init.</summary>
@@ -24114,6 +27503,14 @@ public sealed class MediaCodecContext : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MediaCodecContextMethodClose0(handle), "occtsharp_generated_media_codec_context_method_close_0");
+    }
+
+    /// <summary>Invokes OCCT Media_CodecContext::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MediaCodecContextMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_media_codec_context_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_media_codec_context_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Media_CodecContext::Flush.</summary>
@@ -24254,6 +27651,22 @@ public sealed class MediaFormatContext : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Media_FormatContext::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MediaFormatContextMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_media_format_context_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_media_format_context_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Media_FormatContext::NbSteams.</summary>
+    public uint NbSteams()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MediaFormatContextMethodNbSteams0(handle, out uint resultValue), "occtsharp_generated_media_format_context_method_nb_steams_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Media_FormatContext::PtsStartBase.</summary>
     public double PtsStartBase()
     {
@@ -24275,6 +27688,14 @@ public sealed class MediaFormatContext : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MediaFormatContextMethodSeek0(handle, theSeekPts, toSeekBack ? 1 : 0, out int resultValue), "occtsharp_generated_media_format_context_method_seek_0");
+        return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT Media_FormatContext::SeekStream.</summary>
+    public bool SeekStream(uint theStreamId, double theSeekPts, bool toSeekBack)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MediaFormatContextMethodSeekStream0(handle, theStreamId, theSeekPts, toSeekBack ? 1 : 0, out int resultValue), "occtsharp_generated_media_format_context_method_seek_stream_0");
         return resultValue != 0;
     }
 
@@ -24354,6 +27775,22 @@ public sealed class MediaFrame : IDisposable
         handle = CreateHandle(nativeHandle, "MediaFrameCreate0");
     }
 
+    /// <summary>Invokes OCCT Media_Frame::BestEffortTimestamp.</summary>
+    public long BestEffortTimestamp()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MediaFrameMethodBestEffortTimestamp0(handle, out long resultValue), "occtsharp_generated_media_frame_method_best_effort_timestamp_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Media_Frame::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MediaFrameMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_media_frame_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_media_frame_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Media_Frame::Format.</summary>
     public int Format()
     {
@@ -24402,6 +27839,14 @@ public sealed class MediaFrame : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Media_Frame::PixelAspectRatio.</summary>
+    public float PixelAspectRatio()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MediaFrameMethodPixelAspectRatio0(handle, out float resultValue), "occtsharp_generated_media_frame_method_pixel_aspect_ratio_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Media_Frame::Pts.</summary>
     public double Pts()
     {
@@ -24415,6 +27860,13 @@ public sealed class MediaFrame : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MediaFrameMethodSetLocked0(handle, theToLock ? 1 : 0), "occtsharp_generated_media_frame_method_set_locked_0");
+    }
+
+    /// <summary>Invokes OCCT Media_Frame::SetPixelAspectRatio.</summary>
+    public void SetPixelAspectRatio(float theRatio)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MediaFrameMethodSetPixelAspectRatio0(handle, theRatio), "occtsharp_generated_media_frame_method_set_pixel_aspect_ratio_0");
     }
 
     /// <summary>Invokes OCCT Media_Frame::SetPts.</summary>
@@ -24523,6 +27975,22 @@ public sealed class MediaPacket : IDisposable
         handle = CreateHandle(nativeHandle, "MediaPacketCreate0");
     }
 
+    /// <summary>Invokes OCCT Media_Packet::Dts.</summary>
+    public long Dts()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MediaPacketMethodDts0(handle, out long resultValue), "occtsharp_generated_media_packet_method_dts_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Media_Packet::Duration.</summary>
+    public long Duration()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MediaPacketMethodDuration0(handle, out long resultValue), "occtsharp_generated_media_packet_method_duration_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Media_Packet::DurationSeconds.</summary>
     public double DurationSeconds()
     {
@@ -24531,12 +27999,28 @@ public sealed class MediaPacket : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Media_Packet::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MediaPacketMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_media_packet_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_media_packet_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Media_Packet::IsKeyFrame.</summary>
     public bool IsKeyFrame()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MediaPacketMethodIsKeyFrame0(handle, out int resultValue), "occtsharp_generated_media_packet_method_is_key_frame_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT Media_Packet::Pts.</summary>
+    public long Pts()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MediaPacketMethodPts0(handle, out long resultValue), "occtsharp_generated_media_packet_method_pts_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT Media_Packet::SetDurationSeconds.</summary>
@@ -24643,6 +28127,14 @@ public sealed class MediaPlayerContext : IDisposable
     private readonly MediaPlayerContextHandle handle;
 
     private MediaPlayerContext(MediaPlayerContextHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT Media_PlayerContext::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MediaPlayerContextMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_media_player_context_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_media_player_context_method_dynamic_type_0");
+    }
 
     /// <summary>Invokes OCCT Media_PlayerContext::Pause.</summary>
     public void Pause()
@@ -24764,6 +28256,14 @@ public sealed class MediaScaler : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT Media_Scaler::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MediaScalerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_media_scaler_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_media_scaler_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Media_Scaler::IsValid.</summary>
     public bool IsValid()
     {
@@ -24853,6 +28353,14 @@ public sealed class MediaTimer : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MediaTimerCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "MediaTimerCreate0");
+    }
+
+    /// <summary>Invokes OCCT Media_Timer::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MediaTimerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_media_timer_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_media_timer_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Media_Timer::ElapsedTime.</summary>
@@ -25006,6 +28514,14 @@ public sealed class MeshVSCommonSensitiveEntity : IDisposable
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
+    /// <summary>Invokes OCCT MeshVS_CommonSensitiveEntity::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSCommonSensitiveEntityMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_common_sensitive_entity_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mesh_vs_common_sensitive_entity_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT MeshVS_CommonSensitiveEntity::GetConnected.</summary>
     public Select3DSensitiveEntity? GetConnected()
     {
@@ -25105,6 +28621,14 @@ public sealed class MeshVSDataSource : IDisposable
 
     private MeshVSDataSource(MeshVSDataSourceHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT MeshVS_DataSource::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSDataSourceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_data_source_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mesh_vs_data_source_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT MeshVS_DataSource::IsAdvancedSelectionEnabled.</summary>
     public bool IsAdvancedSelectionEnabled()
     {
@@ -25181,6 +28705,14 @@ public sealed class MeshVSDataSource3D : IDisposable
 
     private MeshVSDataSource3D(MeshVSDataSource3DHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT MeshVS_DataSource3D::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSDataSource3DMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_data_source3_d_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mesh_vs_data_source3_d_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -25255,6 +28787,14 @@ public sealed class MeshVSDeformedDataSource : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSDeformedDataSourceCreate0(theNonDeformDS is null ? nint.Zero : theNonDeformDS.NativeHandle.DangerousGetHandle(), theMagnify, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "MeshVSDeformedDataSourceCreate0");
+    }
+
+    /// <summary>Invokes OCCT MeshVS_DeformedDataSource::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSDeformedDataSourceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_deformed_data_source_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mesh_vs_deformed_data_source_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT MeshVS_DeformedDataSource::GetMagnify.</summary>
@@ -25360,6 +28900,14 @@ public sealed class MeshVSDrawer : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSDrawerMethodAssign0(handle, aDrawer is null ? nint.Zero : aDrawer.NativeHandle.DangerousGetHandle()), "occtsharp_generated_mesh_vs_drawer_method_assign_0");
+    }
+
+    /// <summary>Invokes OCCT MeshVS_Drawer::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSDrawerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_drawer_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mesh_vs_drawer_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT MeshVS_Drawer::RemoveAsciiString.</summary>
@@ -25529,6 +29077,14 @@ public sealed class MeshVSDummySensitiveEntity : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSDummySensitiveEntityMethodClear0(handle), "occtsharp_generated_mesh_vs_dummy_sensitive_entity_method_clear_0");
     }
 
+    /// <summary>Invokes OCCT MeshVS_DummySensitiveEntity::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSDummySensitiveEntityMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_dummy_sensitive_entity_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mesh_vs_dummy_sensitive_entity_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT MeshVS_DummySensitiveEntity::HasInitLocation.</summary>
     public bool HasInitLocation()
     {
@@ -25627,6 +29183,14 @@ public sealed class MeshVSElementalColorPrsBuilder : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSElementalColorPrsBuilderCreate0(parent is null ? nint.Zero : parent.NativeHandle.DangerousGetHandle(), flags, dS is null ? nint.Zero : dS.NativeHandle.DangerousGetHandle(), id, priority, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "MeshVSElementalColorPrsBuilderCreate0");
+    }
+
+    /// <summary>Invokes OCCT MeshVS_ElementalColorPrsBuilder::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSElementalColorPrsBuilderMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_elemental_color_prs_builder_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mesh_vs_elemental_color_prs_builder_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT MeshVS_ElementalColorPrsBuilder::HasColors1.</summary>
@@ -25750,6 +29314,14 @@ public sealed class MeshVSMesh : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSMeshMethodComputeSelection0(handle, theSel is null ? nint.Zero : theSel.NativeHandle.DangerousGetHandle(), theSelMode), "occtsharp_generated_mesh_vs_mesh_method_compute_selection_0");
     }
 
+    /// <summary>Invokes OCCT MeshVS_Mesh::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSMeshMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_mesh_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mesh_vs_mesh_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT MeshVS_Mesh::FindBuilder.</summary>
     public MeshVSPrsBuilder? FindBuilder(StandardType? typeString)
     {
@@ -25806,6 +29378,22 @@ public sealed class MeshVSMesh : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT MeshVS_Mesh::GetHiddenElems.</summary>
+    public TColStdHPackedMapOfInteger? GetHiddenElems()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSMeshMethodGetHiddenElems0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_mesh_method_get_hidden_elems_0");
+        return global::OcctSharp.TColStdHPackedMapOfInteger.FromNative(handleValue, "occtsharp_generated_mesh_vs_mesh_method_get_hidden_elems_0");
+    }
+
+    /// <summary>Invokes OCCT MeshVS_Mesh::GetHiddenNodes.</summary>
+    public TColStdHPackedMapOfInteger? GetHiddenNodes()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSMeshMethodGetHiddenNodes0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_mesh_method_get_hidden_nodes_0");
+        return global::OcctSharp.TColStdHPackedMapOfInteger.FromNative(handleValue, "occtsharp_generated_mesh_vs_mesh_method_get_hidden_nodes_0");
+    }
+
     /// <summary>Invokes OCCT MeshVS_Mesh::GetHilighter.</summary>
     public MeshVSPrsBuilder? GetHilighter()
     {
@@ -25820,6 +29408,14 @@ public sealed class MeshVSMesh : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSMeshMethodGetMeshSelMethod0(handle, out int resultValue), "occtsharp_generated_mesh_vs_mesh_method_get_mesh_sel_method_0");
         return (MeshVSMeshSelectionMethod)resultValue;
+    }
+
+    /// <summary>Invokes OCCT MeshVS_Mesh::GetSelectableNodes.</summary>
+    public TColStdHPackedMapOfInteger? GetSelectableNodes()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSMeshMethodGetSelectableNodes0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_mesh_method_get_selectable_nodes_0");
+        return global::OcctSharp.TColStdHPackedMapOfInteger.FromNative(handleValue, "occtsharp_generated_mesh_vs_mesh_method_get_selectable_nodes_0");
     }
 
     /// <summary>Invokes OCCT MeshVS_Mesh::HilightOwnerWithColor.</summary>
@@ -26030,6 +29626,14 @@ public sealed class MeshVSMeshEntityOwner : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSMeshEntityOwnerMethodClear0(handle, pM is null ? nint.Zero : pM.NativeHandle.DangerousGetHandle(), mode), "occtsharp_generated_mesh_vs_mesh_entity_owner_method_clear_0");
     }
 
+    /// <summary>Invokes OCCT MeshVS_MeshEntityOwner::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSMeshEntityOwnerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_mesh_entity_owner_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mesh_vs_mesh_entity_owner_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT MeshVS_MeshEntityOwner::HilightWithColor.</summary>
     public void HilightWithColor(PrsMgrPresentationManager? thePM, Prs3dDrawer? theStyle, int theMode)
     {
@@ -26158,6 +29762,54 @@ public sealed class MeshVSMeshOwner : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSMeshOwnerMethodClearSelectedEntities0(handle), "occtsharp_generated_mesh_vs_mesh_owner_method_clear_selected_entities_0");
     }
 
+    /// <summary>Invokes OCCT MeshVS_MeshOwner::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSMeshOwnerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_mesh_owner_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mesh_vs_mesh_owner_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT MeshVS_MeshOwner::GetDataSource.</summary>
+    public MeshVSDataSource? GetDataSource()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSMeshOwnerMethodGetDataSource0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_mesh_owner_method_get_data_source_0");
+        return global::OcctSharp.MeshVSDataSource.FromNative(handleValue, "occtsharp_generated_mesh_vs_mesh_owner_method_get_data_source_0");
+    }
+
+    /// <summary>Invokes OCCT MeshVS_MeshOwner::GetDetectedElements.</summary>
+    public TColStdHPackedMapOfInteger? GetDetectedElements()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSMeshOwnerMethodGetDetectedElements0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_mesh_owner_method_get_detected_elements_0");
+        return global::OcctSharp.TColStdHPackedMapOfInteger.FromNative(handleValue, "occtsharp_generated_mesh_vs_mesh_owner_method_get_detected_elements_0");
+    }
+
+    /// <summary>Invokes OCCT MeshVS_MeshOwner::GetDetectedNodes.</summary>
+    public TColStdHPackedMapOfInteger? GetDetectedNodes()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSMeshOwnerMethodGetDetectedNodes0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_mesh_owner_method_get_detected_nodes_0");
+        return global::OcctSharp.TColStdHPackedMapOfInteger.FromNative(handleValue, "occtsharp_generated_mesh_vs_mesh_owner_method_get_detected_nodes_0");
+    }
+
+    /// <summary>Invokes OCCT MeshVS_MeshOwner::GetSelectedElements.</summary>
+    public TColStdHPackedMapOfInteger? GetSelectedElements()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSMeshOwnerMethodGetSelectedElements0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_mesh_owner_method_get_selected_elements_0");
+        return global::OcctSharp.TColStdHPackedMapOfInteger.FromNative(handleValue, "occtsharp_generated_mesh_vs_mesh_owner_method_get_selected_elements_0");
+    }
+
+    /// <summary>Invokes OCCT MeshVS_MeshOwner::GetSelectedNodes.</summary>
+    public TColStdHPackedMapOfInteger? GetSelectedNodes()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSMeshOwnerMethodGetSelectedNodes0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_mesh_owner_method_get_selected_nodes_0");
+        return global::OcctSharp.TColStdHPackedMapOfInteger.FromNative(handleValue, "occtsharp_generated_mesh_vs_mesh_owner_method_get_selected_nodes_0");
+    }
+
     /// <summary>Invokes OCCT MeshVS_MeshOwner::HilightWithColor.</summary>
     public void HilightWithColor(PrsMgrPresentationManager? thePM, Prs3dDrawer? theColor, int theMode)
     {
@@ -26263,6 +29915,14 @@ public sealed class MeshVSMeshPrsBuilder : IDisposable
         handle = CreateHandle(nativeHandle, "MeshVSMeshPrsBuilderCreate0");
     }
 
+    /// <summary>Invokes OCCT MeshVS_MeshPrsBuilder::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSMeshPrsBuilderMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_mesh_prs_builder_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mesh_vs_mesh_prs_builder_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -26337,6 +29997,14 @@ public sealed class MeshVSNodalColorPrsBuilder : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSNodalColorPrsBuilderCreate0(parent is null ? nint.Zero : parent.NativeHandle.DangerousGetHandle(), flags, dS is null ? nint.Zero : dS.NativeHandle.DangerousGetHandle(), id, priority, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "MeshVSNodalColorPrsBuilderCreate0");
+    }
+
+    /// <summary>Invokes OCCT MeshVS_NodalColorPrsBuilder::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSNodalColorPrsBuilderMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_nodal_color_prs_builder_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mesh_vs_nodal_color_prs_builder_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT MeshVS_NodalColorPrsBuilder::GetTextureCoord.</summary>
@@ -26451,6 +30119,14 @@ public sealed class MeshVSPrsBuilder : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSPrsBuilderMethodCustomSensitiveEntity0(handle, owner is null ? nint.Zero : owner.NativeHandle.DangerousGetHandle(), selectMode, out nint handleValue), "occtsharp_generated_mesh_vs_prs_builder_method_custom_sensitive_entity_0");
         return global::OcctSharp.Select3DSensitiveEntity.FromNative(handleValue, "occtsharp_generated_mesh_vs_prs_builder_method_custom_sensitive_entity_0");
+    }
+
+    /// <summary>Invokes OCCT MeshVS_PrsBuilder::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSPrsBuilderMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_prs_builder_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mesh_vs_prs_builder_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT MeshVS_PrsBuilder::GetDataSource.</summary>
@@ -26613,6 +30289,14 @@ public sealed class MeshVSSensitiveFace : IDisposable
 
     private MeshVSSensitiveFace(MeshVSSensitiveFaceHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT MeshVS_SensitiveFace::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSSensitiveFaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_sensitive_face_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mesh_vs_sensitive_face_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -26695,6 +30379,14 @@ public sealed class MeshVSSensitiveMesh : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSSensitiveMeshMethodCenterOfGeometry0(handle, out Point3dRaw resultValue), "occtsharp_generated_mesh_vs_sensitive_mesh_method_center_of_geometry_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT MeshVS_SensitiveMesh::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSSensitiveMeshMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_sensitive_mesh_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mesh_vs_sensitive_mesh_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT MeshVS_SensitiveMesh::GetConnected.</summary>
@@ -26797,6 +30489,14 @@ public sealed class MeshVSSensitivePolyhedron : IDisposable
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
+    /// <summary>Invokes OCCT MeshVS_SensitivePolyhedron::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSSensitivePolyhedronMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_sensitive_polyhedron_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mesh_vs_sensitive_polyhedron_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT MeshVS_SensitivePolyhedron::GetConnected.</summary>
     public Select3DSensitiveEntity? GetConnected()
     {
@@ -26897,6 +30597,14 @@ public sealed class MeshVSSensitiveQuad : IDisposable
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
+    /// <summary>Invokes OCCT MeshVS_SensitiveQuad::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSSensitiveQuadMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_sensitive_quad_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mesh_vs_sensitive_quad_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT MeshVS_SensitiveQuad::GetConnected.</summary>
     public Select3DSensitiveEntity? GetConnected()
     {
@@ -26989,6 +30697,14 @@ public sealed class MeshVSSensitiveSegment : IDisposable
         handle = CreateHandle(nativeHandle, "MeshVSSensitiveSegmentCreate0");
     }
 
+    /// <summary>Invokes OCCT MeshVS_SensitiveSegment::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSSensitiveSegmentMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_sensitive_segment_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mesh_vs_sensitive_segment_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -27056,6 +30772,14 @@ public sealed class MeshVSTextPrsBuilder : IDisposable
     private readonly MeshVSTextPrsBuilderHandle handle;
 
     private MeshVSTextPrsBuilder(MeshVSTextPrsBuilderHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT MeshVS_TextPrsBuilder::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSTextPrsBuilderMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_text_prs_builder_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mesh_vs_text_prs_builder_method_dynamic_type_0");
+    }
 
     /// <summary>Invokes OCCT MeshVS_TextPrsBuilder::HasTexts.</summary>
     public bool HasTexts(bool isElement)
@@ -27132,6 +30856,14 @@ public sealed class MeshVSVectorPrsBuilder : IDisposable
     private readonly MeshVSVectorPrsBuilderHandle handle;
 
     private MeshVSVectorPrsBuilder(MeshVSVectorPrsBuilderHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT MeshVS_VectorPrsBuilder::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSVectorPrsBuilderMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mesh_vs_vector_prs_builder_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mesh_vs_vector_prs_builder_method_dynamic_type_0");
+    }
 
     /// <summary>Invokes OCCT MeshVS_VectorPrsBuilder::HasVectors.</summary>
     public bool HasVectors(bool isElement)
@@ -27236,6 +30968,38 @@ public sealed class OpenGlBuffer : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlBufferMethodCreate0(handle, theGlCtx is null ? nint.Zero : theGlCtx.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_open_gl_buffer_method_create_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Buffer::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlBufferMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_buffer_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_buffer_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Buffer::EstimatedDataSize.</summary>
+    public ulong EstimatedDataSize()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlBufferMethodEstimatedDataSize0(handle, out ulong resultValue), "occtsharp_generated_open_gl_buffer_method_estimated_data_size_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Buffer::GetComponentsNb.</summary>
+    public uint GetComponentsNb()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlBufferMethodGetComponentsNb0(handle, out uint resultValue), "occtsharp_generated_open_gl_buffer_method_get_components_nb_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Buffer::GetDataType.</summary>
+    public uint GetDataType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlBufferMethodGetDataType0(handle, out uint resultValue), "occtsharp_generated_open_gl_buffer_method_get_data_type_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT OpenGl_Buffer::GetElemsNb.</summary>
@@ -27352,6 +31116,30 @@ public sealed class OpenGlCappingPlaneResource : IDisposable
         handle = CreateHandle(nativeHandle, "OpenGlCappingPlaneResourceCreate0");
     }
 
+    /// <summary>Invokes OCCT OpenGl_CappingPlaneResource::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlCappingPlaneResourceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_capping_plane_resource_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_capping_plane_resource_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_CappingPlaneResource::EstimatedDataSize.</summary>
+    public ulong EstimatedDataSize()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlCappingPlaneResourceMethodEstimatedDataSize0(handle, out ulong resultValue), "occtsharp_generated_open_gl_capping_plane_resource_method_estimated_data_size_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_CappingPlaneResource::Plane.</summary>
+    public Graphic3dClipPlane? Plane()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlCappingPlaneResourceMethodPlane0(handle, out nint handleValue), "occtsharp_generated_open_gl_capping_plane_resource_method_plane_0");
+        return global::OcctSharp.Graphic3dClipPlane.FromNative(handleValue, "occtsharp_generated_open_gl_capping_plane_resource_method_plane_0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_CappingPlaneResource::Update.</summary>
     public void Update(OpenGlContext? theContext, Graphic3dAspects? theObjAspect)
     {
@@ -27435,6 +31223,14 @@ public sealed class OpenGlCaps : IDisposable
         handle = CreateHandle(nativeHandle, "OpenGlCapsCreate0");
     }
 
+    /// <summary>Invokes OCCT OpenGl_Caps::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlCapsMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_caps_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_caps_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -27511,6 +31307,22 @@ public sealed class OpenGlContext : IDisposable
         handle = CreateHandle(nativeHandle, "OpenGlContextCreate0");
     }
 
+    /// <summary>Invokes OCCT OpenGl_Context::ActiveProgram.</summary>
+    public OpenGlShaderProgram? ActiveProgram()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodActiveProgram0(handle, out nint handleValue), "occtsharp_generated_open_gl_context_method_active_program_0");
+        return global::OcctSharp.OpenGlShaderProgram.FromNative(handleValue, "occtsharp_generated_open_gl_context_method_active_program_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Context::ActiveTextures.</summary>
+    public OpenGlTextureSet? ActiveTextures()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodActiveTextures0(handle, out nint handleValue), "occtsharp_generated_open_gl_context_method_active_textures_0");
+        return global::OcctSharp.OpenGlTextureSet.FromNative(handleValue, "occtsharp_generated_open_gl_context_method_active_textures_0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_Context::AllowSampleAlphaToCoverage.</summary>
     public bool AllowSampleAlphaToCoverage()
     {
@@ -27547,6 +31359,14 @@ public sealed class OpenGlContext : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodApplyWorldViewMatrix0(handle), "occtsharp_generated_open_gl_context_method_apply_world_view_matrix_0");
     }
 
+    /// <summary>Invokes OCCT OpenGl_Context::AvailableMemory.</summary>
+    public ulong AvailableMemory()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodAvailableMemory0(handle, out ulong resultValue), "occtsharp_generated_open_gl_context_method_available_memory_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT OpenGl_Context::BindDefaultVao.</summary>
     public void BindDefaultVao()
     {
@@ -27578,12 +31398,28 @@ public sealed class OpenGlContext : IDisposable
         return global::OcctSharp.OpenGlTextureSet.FromNative(handleValue, "occtsharp_generated_open_gl_context_method_bind_textures_1");
     }
 
+    /// <summary>Invokes OCCT OpenGl_Context::Camera.</summary>
+    public Graphic3dCamera? Camera()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodCamera0(handle, out nint handleValue), "occtsharp_generated_open_gl_context_method_camera_0");
+        return global::OcctSharp.Graphic3dCamera.FromNative(handleValue, "occtsharp_generated_open_gl_context_method_camera_0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_Context::ColorMask.</summary>
     public bool ColorMask()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodColorMask0(handle, out int resultValue), "occtsharp_generated_open_gl_context_method_color_mask_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Context::DefaultFrameBuffer.</summary>
+    public OpenGlFrameBuffer? DefaultFrameBuffer()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodDefaultFrameBuffer0(handle, out nint handleValue), "occtsharp_generated_open_gl_context_method_default_frame_buffer_0");
+        return global::OcctSharp.OpenGlFrameBuffer.FromNative(handleValue, "occtsharp_generated_open_gl_context_method_default_frame_buffer_0");
     }
 
     /// <summary>Invokes OCCT OpenGl_Context::DepthPeelingDepthTexUnit.</summary>
@@ -27617,11 +31453,27 @@ public sealed class OpenGlContext : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT OpenGl_Context::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_context_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_context_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_Context::EnableFeatures.</summary>
     public void EnableFeatures()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodEnableFeatures0(handle), "occtsharp_generated_open_gl_context_method_enable_features_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Context::ExcludeMessage.</summary>
+    public bool ExcludeMessage(uint theSource, uint theId)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodExcludeMessage0(handle, theSource, theId, out int resultValue), "occtsharp_generated_open_gl_context_method_exclude_message_0");
+        return resultValue != 0;
     }
 
     /// <summary>Invokes OCCT OpenGl_Context::FaceCulling.</summary>
@@ -27644,6 +31496,14 @@ public sealed class OpenGlContext : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodforcedRelease0(handle), "occtsharp_generated_open_gl_context_method_forced_release_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Context::FrameStats.</summary>
+    public OpenGlFrameStats? FrameStats()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodFrameStats0(handle, out nint handleValue), "occtsharp_generated_open_gl_context_method_frame_stats_0");
+        return global::OcctSharp.OpenGlFrameStats.FromNative(handleValue, "occtsharp_generated_open_gl_context_method_frame_stats_0");
     }
 
     /// <summary>Invokes OCCT OpenGl_Context::GraphicsLibrary.</summary>
@@ -27731,6 +31591,14 @@ public sealed class OpenGlContext : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodHasTextureMultisampling0(handle, out int resultValue), "occtsharp_generated_open_gl_context_method_has_texture_multisampling_0");
+        return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Context::IncludeMessage.</summary>
+    public bool IncludeMessage(uint theSource, uint theId)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodIncludeMessage0(handle, theSource, theId, out int resultValue), "occtsharp_generated_open_gl_context_method_include_message_0");
         return resultValue != 0;
     }
 
@@ -27830,6 +31698,22 @@ public sealed class OpenGlContext : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT OpenGl_Context::LineFeather.</summary>
+    public float LineFeather()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodLineFeather0(handle, out float resultValue), "occtsharp_generated_open_gl_context_method_line_feather_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Context::LineWidthScale.</summary>
+    public float LineWidthScale()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodLineWidthScale0(handle, out float resultValue), "occtsharp_generated_open_gl_context_method_line_width_scale_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT OpenGl_Context::MakeCurrent.</summary>
     public bool MakeCurrent()
     {
@@ -27918,6 +31802,14 @@ public sealed class OpenGlContext : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT OpenGl_Context::Messenger.</summary>
+    public MessageMessenger? Messenger()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodMessenger0(handle, out nint handleValue), "occtsharp_generated_open_gl_context_method_messenger_0");
+        return global::OcctSharp.MessageMessenger.FromNative(handleValue, "occtsharp_generated_open_gl_context_method_messenger_0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_Context::PBRDiffIBLMapSHTexUnit.</summary>
     public Graphic3dTextureUnit PBRDiffIBLMapSHTexUnit()
     {
@@ -27973,12 +31865,44 @@ public sealed class OpenGlContext : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodReleaseDelayed0(handle), "occtsharp_generated_open_gl_context_method_release_delayed_0");
     }
 
+    /// <summary>Invokes OCCT OpenGl_Context::RenderScale.</summary>
+    public float RenderScale()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodRenderScale0(handle, out float resultValue), "occtsharp_generated_open_gl_context_method_render_scale_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Context::RenderScaleInv.</summary>
+    public float RenderScaleInv()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodRenderScaleInv0(handle, out float resultValue), "occtsharp_generated_open_gl_context_method_render_scale_inv_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT OpenGl_Context::ResetErrors.</summary>
     public bool ResetErrors(bool theToPrintErrors)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodResetErrors0(handle, theToPrintErrors ? 1 : 0, out int resultValue), "occtsharp_generated_open_gl_context_method_reset_errors_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Context::Resolution.</summary>
+    public uint Resolution()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodResolution0(handle, out uint resultValue), "occtsharp_generated_open_gl_context_method_resolution_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Context::ResolutionRatio.</summary>
+    public float ResolutionRatio()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodResolutionRatio0(handle, out float resultValue), "occtsharp_generated_open_gl_context_method_resolution_ratio_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT OpenGl_Context::SampleAlphaToCoverage.</summary>
@@ -28062,6 +31986,41 @@ public sealed class OpenGlContext : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT OpenGl_Context::SetLineFeather.</summary>
+    public void SetLineFeather(float theValue)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodSetLineFeather0(handle, theValue), "occtsharp_generated_open_gl_context_method_set_line_feather_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Context::SetLineStipple.</summary>
+    public void SetLineStipple(float theFactor, ushort thePattern)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodSetLineStipple0(handle, theFactor, thePattern), "occtsharp_generated_open_gl_context_method_set_line_stipple_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Context::SetLineStipple.</summary>
+    public void SetLineStipple(ushort thePattern)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodSetLineStipple1(handle, thePattern), "occtsharp_generated_open_gl_context_method_set_line_stipple_1");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Context::SetLineWidth.</summary>
+    public void SetLineWidth(float theWidth)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodSetLineWidth0(handle, theWidth), "occtsharp_generated_open_gl_context_method_set_line_width_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Context::SetPointSize.</summary>
+    public void SetPointSize(float theSize)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodSetPointSize0(handle, theSize), "occtsharp_generated_open_gl_context_method_set_point_size_0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_Context::SetPointSpriteOrigin.</summary>
     public void SetPointSpriteOrigin()
     {
@@ -28107,6 +32066,20 @@ public sealed class OpenGlContext : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodSetReadDrawBuffer0(handle, theBuffer), "occtsharp_generated_open_gl_context_method_set_read_draw_buffer_0");
     }
 
+    /// <summary>Invokes OCCT OpenGl_Context::SetResolution.</summary>
+    public void SetResolution(uint theResolution, float theRatio, float theScale)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodSetResolution0(handle, theResolution, theRatio, theScale), "occtsharp_generated_open_gl_context_method_set_resolution_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Context::SetResolutionRatio.</summary>
+    public void SetResolutionRatio(float theRatio)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodSetResolutionRatio0(handle, theRatio), "occtsharp_generated_open_gl_context_method_set_resolution_ratio_0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_Context::SetSampleAlphaToCoverage.</summary>
     public bool SetSampleAlphaToCoverage(bool theToEnable)
     {
@@ -28137,11 +32110,26 @@ public sealed class OpenGlContext : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodSetTextureMatrix0(handle, theParams is null ? nint.Zero : theParams.NativeHandle.DangerousGetHandle(), theIsTopDown ? 1 : 0), "occtsharp_generated_open_gl_context_method_set_texture_matrix_0");
     }
 
+    /// <summary>Invokes OCCT OpenGl_Context::SetTypeOfLine.</summary>
+    public void SetTypeOfLine(AspectTypeOfLine theType, float theFactor)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodSetTypeOfLine0(handle, (int)theType, theFactor), "occtsharp_generated_open_gl_context_method_set_type_of_line_0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_Context::SetWindowSRGB.</summary>
     public void SetWindowSRGB(bool theIsSRgb)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodSetWindowSRGB0(handle, theIsSRgb ? 1 : 0), "occtsharp_generated_open_gl_context_method_set_window_srgb_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Context::ShaderManager.</summary>
+    public OpenGlShaderManager? ShaderManager()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodShaderManager0(handle, out nint handleValue), "occtsharp_generated_open_gl_context_method_shader_manager_0");
+        return global::OcctSharp.OpenGlShaderManager.FromNative(handleValue, "occtsharp_generated_open_gl_context_method_shader_manager_0");
     }
 
     /// <summary>Invokes OCCT OpenGl_Context::ShadowMapTexUnit.</summary>
@@ -28165,6 +32153,14 @@ public sealed class OpenGlContext : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodSpriteTextureUnit0(handle, out int resultValue), "occtsharp_generated_open_gl_context_method_sprite_texture_unit_0");
         return (Graphic3dTextureUnit)resultValue;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Context::SupportedTextureFormats.</summary>
+    public ImageSupportedFormats? SupportedTextureFormats()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlContextMethodSupportedTextureFormats0(handle, out nint handleValue), "occtsharp_generated_open_gl_context_method_supported_texture_formats_0");
+        return global::OcctSharp.ImageSupportedFormats.FromNative(handleValue, "occtsharp_generated_open_gl_context_method_supported_texture_formats_0");
     }
 
     /// <summary>Invokes OCCT OpenGl_Context::SwapBuffers.</summary>
@@ -28305,11 +32301,35 @@ public sealed class OpenGlDepthPeeling : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlDepthPeelingMethodAttachDepthTexture0(handle, theCtx is null ? nint.Zero : theCtx.NativeHandle.DangerousGetHandle(), theDepthStencilTexture is null ? nint.Zero : theDepthStencilTexture.NativeHandle.DangerousGetHandle()), "occtsharp_generated_open_gl_depth_peeling_method_attach_depth_texture_0");
     }
 
+    /// <summary>Invokes OCCT OpenGl_DepthPeeling::BlendBackFboOit.</summary>
+    public OpenGlFrameBuffer? BlendBackFboOit()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlDepthPeelingMethodBlendBackFboOit0(handle, out nint handleValue), "occtsharp_generated_open_gl_depth_peeling_method_blend_back_fbo_oit_0");
+        return global::OcctSharp.OpenGlFrameBuffer.FromNative(handleValue, "occtsharp_generated_open_gl_depth_peeling_method_blend_back_fbo_oit_0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_DepthPeeling::DetachDepthTexture.</summary>
     public void DetachDepthTexture(OpenGlContext? theCtx)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlDepthPeelingMethodDetachDepthTexture0(handle, theCtx is null ? nint.Zero : theCtx.NativeHandle.DangerousGetHandle()), "occtsharp_generated_open_gl_depth_peeling_method_detach_depth_texture_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_DepthPeeling::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlDepthPeelingMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_depth_peeling_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_depth_peeling_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_DepthPeeling::EstimatedDataSize.</summary>
+    public ulong EstimatedDataSize()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlDepthPeelingMethodEstimatedDataSize0(handle, out ulong resultValue), "occtsharp_generated_open_gl_depth_peeling_method_estimated_data_size_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -28380,6 +32400,46 @@ public sealed class OpenGlFont : IDisposable
 
     private OpenGlFont(OpenGlFontHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT OpenGl_Font::Ascender.</summary>
+    public float Ascender()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlFontMethodAscender0(handle, out float resultValue), "occtsharp_generated_open_gl_font_method_ascender_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Font::Descender.</summary>
+    public float Descender()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlFontMethodDescender0(handle, out float resultValue), "occtsharp_generated_open_gl_font_method_descender_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Font::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlFontMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_font_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_font_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Font::EstimatedDataSize.</summary>
+    public ulong EstimatedDataSize()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlFontMethodEstimatedDataSize0(handle, out ulong resultValue), "occtsharp_generated_open_gl_font_method_estimated_data_size_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Font::FTFont.</summary>
+    public FontFTFont? FTFont()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlFontMethodFTFont0(handle, out nint handleValue), "occtsharp_generated_open_gl_font_method_ftfont_0");
+        return global::OcctSharp.FontFTFont.FromNative(handleValue, "occtsharp_generated_open_gl_font_method_ftfont_0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_Font::Init.</summary>
     public bool Init(OpenGlContext? theCtx)
     {
@@ -28394,6 +32454,14 @@ public sealed class OpenGlFont : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlFontMethodIsValid0(handle, out int resultValue), "occtsharp_generated_open_gl_font_method_is_valid_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Font::Texture.</summary>
+    public OpenGlTexture? Texture()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlFontMethodTexture0(handle, out nint handleValue), "occtsharp_generated_open_gl_font_method_texture_0");
+        return global::OcctSharp.OpenGlTexture.FromNative(handleValue, "occtsharp_generated_open_gl_font_method_texture_0");
     }
 
     /// <summary>Invokes OCCT OpenGl_Font::WasInitialized.</summary>
@@ -28500,6 +32568,54 @@ public sealed class OpenGlFrameBuffer : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlFrameBufferMethodChangeViewport0(handle, theVPSizeX, theVPSizeY), "occtsharp_generated_open_gl_frame_buffer_method_change_viewport_0");
     }
 
+    /// <summary>Invokes OCCT OpenGl_FrameBuffer::ColorRenderBuffer.</summary>
+    public uint ColorRenderBuffer()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlFrameBufferMethodColorRenderBuffer0(handle, out uint resultValue), "occtsharp_generated_open_gl_frame_buffer_method_color_render_buffer_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_FrameBuffer::ColorTexture.</summary>
+    public OpenGlTexture? ColorTexture(int theColorBufferIndex)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlFrameBufferMethodColorTexture0(handle, theColorBufferIndex, out nint handleValue), "occtsharp_generated_open_gl_frame_buffer_method_color_texture_0");
+        return global::OcctSharp.OpenGlTexture.FromNative(handleValue, "occtsharp_generated_open_gl_frame_buffer_method_color_texture_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_FrameBuffer::DepthStencilRenderBuffer.</summary>
+    public uint DepthStencilRenderBuffer()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlFrameBufferMethodDepthStencilRenderBuffer0(handle, out uint resultValue), "occtsharp_generated_open_gl_frame_buffer_method_depth_stencil_render_buffer_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_FrameBuffer::DepthStencilTexture.</summary>
+    public OpenGlTexture? DepthStencilTexture()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlFrameBufferMethodDepthStencilTexture0(handle, out nint handleValue), "occtsharp_generated_open_gl_frame_buffer_method_depth_stencil_texture_0");
+        return global::OcctSharp.OpenGlTexture.FromNative(handleValue, "occtsharp_generated_open_gl_frame_buffer_method_depth_stencil_texture_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_FrameBuffer::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlFrameBufferMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_frame_buffer_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_frame_buffer_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_FrameBuffer::EstimatedDataSize.</summary>
+    public ulong EstimatedDataSize()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlFrameBufferMethodEstimatedDataSize0(handle, out ulong resultValue), "occtsharp_generated_open_gl_frame_buffer_method_estimated_data_size_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT OpenGl_FrameBuffer::GetInitVPSizeX.</summary>
     public int GetInitVPSizeX()
     {
@@ -28577,6 +32693,14 @@ public sealed class OpenGlFrameBuffer : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlFrameBufferMethodInitLazy0(handle, theGlCtx is null ? nint.Zero : theGlCtx.NativeHandle.DangerousGetHandle(), theViewportSizeX, theViewportSizeY, theColorFormat, theDepthFormat, theNbSamples, out int resultValue), "occtsharp_generated_open_gl_frame_buffer_method_init_lazy_0");
+        return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_FrameBuffer::InitWithRB.</summary>
+    public bool InitWithRB(OpenGlContext? theGlCtx, int theSizeX, int theSizeY, int theColorFormat, int theDepthFormat, uint theColorRBufferFromWindow)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlFrameBufferMethodInitWithRB0(handle, theGlCtx is null ? nint.Zero : theGlCtx.NativeHandle.DangerousGetHandle(), theSizeX, theSizeY, theColorFormat, theDepthFormat, theColorRBufferFromWindow, out int resultValue), "occtsharp_generated_open_gl_frame_buffer_method_init_with_rb_0");
         return resultValue != 0;
     }
 
@@ -28718,6 +32842,14 @@ public sealed class OpenGlFrameStats : IDisposable
         handle = CreateHandle(nativeHandle, "OpenGlFrameStatsCreate0");
     }
 
+    /// <summary>Invokes OCCT OpenGl_FrameStats::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlFrameStatsMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_frame_stats_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_frame_stats_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -28810,11 +32942,35 @@ public sealed class OpenGlGraphicDriver : IDisposable
         return global::OcctSharp.Graphic3dCView.FromNative(handleValue, "occtsharp_generated_open_gl_graphic_driver_method_create_view_0");
     }
 
+    /// <summary>Invokes OCCT OpenGl_GraphicDriver::DefaultTextHeight.</summary>
+    public float DefaultTextHeight()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlGraphicDriverMethodDefaultTextHeight0(handle, out float resultValue), "occtsharp_generated_open_gl_graphic_driver_method_default_text_height_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_GraphicDriver::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlGraphicDriverMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_graphic_driver_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_graphic_driver_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_GraphicDriver::EnableVBO.</summary>
     public void EnableVBO(bool theToTurnOn)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlGraphicDriverMethodEnableVBO0(handle, theToTurnOn ? 1 : 0), "occtsharp_generated_open_gl_graphic_driver_method_enable_vbo_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_GraphicDriver::GetNextPrimitiveArrayUID.</summary>
+    public ulong GetNextPrimitiveArrayUID()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlGraphicDriverMethodGetNextPrimitiveArrayUID0(handle, out ulong resultValue), "occtsharp_generated_open_gl_graphic_driver_method_get_next_primitive_array_uid_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT OpenGl_GraphicDriver::InitContext.</summary>
@@ -28967,6 +33123,22 @@ public sealed class OpenGlGraphicDriverFactory : IDisposable
         return global::OcctSharp.Graphic3dGraphicDriver.FromNative(handleValue, "occtsharp_generated_open_gl_graphic_driver_factory_method_create_driver_0");
     }
 
+    /// <summary>Invokes OCCT OpenGl_GraphicDriverFactory::DefaultOptions.</summary>
+    public OpenGlCaps? DefaultOptions()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlGraphicDriverFactoryMethodDefaultOptions0(handle, out nint handleValue), "occtsharp_generated_open_gl_graphic_driver_factory_method_default_options_0");
+        return global::OcctSharp.OpenGlCaps.FromNative(handleValue, "occtsharp_generated_open_gl_graphic_driver_factory_method_default_options_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_GraphicDriverFactory::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlGraphicDriverFactoryMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_graphic_driver_factory_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_graphic_driver_factory_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_GraphicDriverFactory::SetDefaultOptions.</summary>
     public void SetDefaultOptions(OpenGlCaps? theOptions)
     {
@@ -29077,6 +33249,14 @@ public sealed class OpenGlGroup : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlGroupMethodClear0(handle, theToUpdateStructureMgr ? 1 : 0), "occtsharp_generated_open_gl_group_method_clear_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Group::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlGroupMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_group_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_group_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT OpenGl_Group::HasPersistence.</summary>
@@ -29213,6 +33393,22 @@ public sealed class OpenGlIndexBuffer : IDisposable
         handle = CreateHandle(nativeHandle, "OpenGlIndexBufferCreate0");
     }
 
+    /// <summary>Invokes OCCT OpenGl_IndexBuffer::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlIndexBufferMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_index_buffer_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_index_buffer_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_IndexBuffer::GetTarget.</summary>
+    public uint GetTarget()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlIndexBufferMethodGetTarget0(handle, out uint resultValue), "occtsharp_generated_open_gl_index_buffer_method_get_target_0");
+        return resultValue;
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -29289,6 +33485,22 @@ public sealed class OpenGlLineAttributes : IDisposable
         handle = CreateHandle(nativeHandle, "OpenGlLineAttributesCreate0");
     }
 
+    /// <summary>Invokes OCCT OpenGl_LineAttributes::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlLineAttributesMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_line_attributes_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_line_attributes_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_LineAttributes::EstimatedDataSize.</summary>
+    public ulong EstimatedDataSize()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlLineAttributesMethodEstimatedDataSize0(handle, out ulong resultValue), "occtsharp_generated_open_gl_line_attributes_method_estimated_data_size_0");
+        return resultValue;
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -29356,6 +33568,14 @@ public sealed class OpenGlNamedResource : IDisposable
     private readonly OpenGlNamedResourceHandle handle;
 
     private OpenGlNamedResource(OpenGlNamedResourceHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT OpenGl_NamedResource::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlNamedResourceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_named_resource_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_named_resource_method_dynamic_type_0");
+    }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
@@ -29425,11 +33645,34 @@ public sealed class OpenGlPBREnvironment : IDisposable
 
     private OpenGlPBREnvironment(OpenGlPBREnvironmentHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT OpenGl_PBREnvironment::Bake.</summary>
+    public void Bake(OpenGlContext? theCtx, OpenGlTexture? theEnvMap, bool theZIsInverted, bool theIsTopDown, ulong theDiffMapNbSamples, ulong theSpecMapNbSamples, float theProbability)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlPBREnvironmentMethodBake0(handle, theCtx is null ? nint.Zero : theCtx.NativeHandle.DangerousGetHandle(), theEnvMap is null ? nint.Zero : theEnvMap.NativeHandle.DangerousGetHandle(), theZIsInverted ? 1 : 0, theIsTopDown ? 1 : 0, theDiffMapNbSamples, theSpecMapNbSamples, theProbability), "occtsharp_generated_open_gl_pbrenvironment_method_bake_0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_PBREnvironment::Bind.</summary>
     public void Bind(OpenGlContext? theCtx)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlPBREnvironmentMethodBind0(handle, theCtx is null ? nint.Zero : theCtx.NativeHandle.DangerousGetHandle()), "occtsharp_generated_open_gl_pbrenvironment_method_bind_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_PBREnvironment::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlPBREnvironmentMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_pbrenvironment_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_pbrenvironment_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_PBREnvironment::EstimatedDataSize.</summary>
+    public ulong EstimatedDataSize()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlPBREnvironmentMethodEstimatedDataSize0(handle, out ulong resultValue), "occtsharp_generated_open_gl_pbrenvironment_method_estimated_data_size_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT OpenGl_PBREnvironment::IsComplete.</summary>
@@ -29446,6 +33689,30 @@ public sealed class OpenGlPBREnvironment : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlPBREnvironmentMethodIsNeededToBeBound0(handle, out int resultValue), "occtsharp_generated_open_gl_pbrenvironment_method_is_needed_to_be_bound_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_PBREnvironment::Pow2Size.</summary>
+    public uint Pow2Size()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlPBREnvironmentMethodPow2Size0(handle, out uint resultValue), "occtsharp_generated_open_gl_pbrenvironment_method_pow2_size_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_PBREnvironment::SizesAreDifferent.</summary>
+    public bool SizesAreDifferent(uint thePow2Size, uint theSpecMapLevelsNumber)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlPBREnvironmentMethodSizesAreDifferent0(handle, thePow2Size, theSpecMapLevelsNumber, out int resultValue), "occtsharp_generated_open_gl_pbrenvironment_method_sizes_are_different_0");
+        return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_PBREnvironment::SpecMapLevelsNumber.</summary>
+    public uint SpecMapLevelsNumber()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlPBREnvironmentMethodSpecMapLevelsNumber0(handle, out uint resultValue), "occtsharp_generated_open_gl_pbrenvironment_method_spec_map_levels_number_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT OpenGl_PBREnvironment::Unbind.</summary>
@@ -29530,6 +33797,14 @@ public sealed class OpenGlPointSprite : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlPointSpriteMethodDrawBitmap0(handle, theCtx is null ? nint.Zero : theCtx.NativeHandle.DangerousGetHandle()), "occtsharp_generated_open_gl_point_sprite_method_draw_bitmap_0");
     }
 
+    /// <summary>Invokes OCCT OpenGl_PointSprite::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlPointSpriteMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_point_sprite_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_point_sprite_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_PointSprite::IsDisplayList.</summary>
     public bool IsDisplayList()
     {
@@ -29552,6 +33827,13 @@ public sealed class OpenGlPointSprite : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlPointSpriteMethodIsValid0(handle, out int resultValue), "occtsharp_generated_open_gl_point_sprite_method_is_valid_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_PointSprite::SetDisplayList.</summary>
+    public void SetDisplayList(OpenGlContext? theCtx, uint theBitmapList)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlPointSpriteMethodSetDisplayList0(handle, theCtx is null ? nint.Zero : theCtx.NativeHandle.DangerousGetHandle(), theBitmapList), "occtsharp_generated_open_gl_point_sprite_method_set_display_list_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -29621,6 +33903,14 @@ public sealed class OpenGlResource : IDisposable
     private readonly OpenGlResourceHandle handle;
 
     private OpenGlResource(OpenGlResourceHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT OpenGl_Resource::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlResourceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_resource_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_resource_method_dynamic_type_0");
+    }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
@@ -29720,6 +34010,22 @@ public sealed class OpenGlSampler : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT OpenGl_Sampler::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlSamplerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_sampler_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_sampler_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Sampler::EstimatedDataSize.</summary>
+    public ulong EstimatedDataSize()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlSamplerMethodEstimatedDataSize0(handle, out ulong resultValue), "occtsharp_generated_open_gl_sampler_method_estimated_data_size_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT OpenGl_Sampler::IsImmutable.</summary>
     public bool IsImmutable()
     {
@@ -29736,11 +34042,34 @@ public sealed class OpenGlSampler : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT OpenGl_Sampler::Parameters.</summary>
+    public Graphic3dTextureParams? Parameters()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlSamplerMethodParameters0(handle, out nint handleValue), "occtsharp_generated_open_gl_sampler_method_parameters_0");
+        return global::OcctSharp.Graphic3dTextureParams.FromNative(handleValue, "occtsharp_generated_open_gl_sampler_method_parameters_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Sampler::SamplerID.</summary>
+    public uint SamplerID()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlSamplerMethodSamplerID0(handle, out uint resultValue), "occtsharp_generated_open_gl_sampler_method_sampler_id_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT OpenGl_Sampler::SetImmutable.</summary>
     public void SetImmutable()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlSamplerMethodSetImmutable0(handle), "occtsharp_generated_open_gl_sampler_method_set_immutable_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Sampler::SetParameter.</summary>
+    public void SetParameter(OpenGlContext? theCtx, uint theTarget, uint theParam, int theValue)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlSamplerMethodSetParameter0(handle, theCtx is null ? nint.Zero : theCtx.NativeHandle.DangerousGetHandle(), theTarget, theParam, theValue), "occtsharp_generated_open_gl_sampler_method_set_parameter_0");
     }
 
     /// <summary>Invokes OCCT OpenGl_Sampler::SetParameters.</summary>
@@ -29848,6 +34177,14 @@ public sealed class OpenGlSetOfPrograms : IDisposable
         handle = CreateHandle(nativeHandle, "OpenGlSetOfProgramsCreate0");
     }
 
+    /// <summary>Invokes OCCT OpenGl_SetOfPrograms::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlSetOfProgramsMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_set_of_programs_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_set_of_programs_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -29930,6 +34267,14 @@ public sealed class OpenGlSetOfShaderPrograms : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlSetOfShaderProgramsCreate1(thePrograms is null ? nint.Zero : thePrograms.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "OpenGlSetOfShaderProgramsCreate1");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_SetOfShaderPrograms::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlSetOfShaderProgramsMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_set_of_shader_programs_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_set_of_shader_programs_method_dynamic_type_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -30104,6 +34449,14 @@ public sealed class OpenGlShaderManager : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT OpenGl_ShaderManager::BoundBoxVertBuffer.</summary>
+    public OpenGlVertexBuffer? BoundBoxVertBuffer()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShaderManagerMethodBoundBoxVertBuffer0(handle, out nint handleValue), "occtsharp_generated_open_gl_shader_manager_method_bound_box_vert_buffer_0");
+        return global::OcctSharp.OpenGlVertexBuffer.FromNative(handleValue, "occtsharp_generated_open_gl_shader_manager_method_bound_box_vert_buffer_0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_ShaderManager::ChooseFaceShadingModel.</summary>
     public Graphic3dTypeOfShadingModel ChooseFaceShadingModel(Graphic3dTypeOfShadingModel theCustomModel, bool theHasNodalNormals)
     {
@@ -30133,6 +34486,38 @@ public sealed class OpenGlShaderManager : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShaderManagerMethodclear0(handle), "occtsharp_generated_open_gl_shader_manager_method_clear_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_ShaderManager::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShaderManagerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_shader_manager_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_shader_manager_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_ShaderManager::GetBgCubeMapProgram.</summary>
+    public Graphic3dShaderProgram? GetBgCubeMapProgram()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShaderManagerMethodGetBgCubeMapProgram0(handle, out nint handleValue), "occtsharp_generated_open_gl_shader_manager_method_get_bg_cube_map_program_0");
+        return global::OcctSharp.Graphic3dShaderProgram.FromNative(handleValue, "occtsharp_generated_open_gl_shader_manager_method_get_bg_cube_map_program_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_ShaderManager::GetBgSkydomeProgram.</summary>
+    public Graphic3dShaderProgram? GetBgSkydomeProgram()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShaderManagerMethodGetBgSkydomeProgram0(handle, out nint handleValue), "occtsharp_generated_open_gl_shader_manager_method_get_bg_skydome_program_0");
+        return global::OcctSharp.Graphic3dShaderProgram.FromNative(handleValue, "occtsharp_generated_open_gl_shader_manager_method_get_bg_skydome_program_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_ShaderManager::GetColoredQuadProgram.</summary>
+    public Graphic3dShaderProgram? GetColoredQuadProgram()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShaderManagerMethodGetColoredQuadProgram0(handle, out nint handleValue), "occtsharp_generated_open_gl_shader_manager_method_get_colored_quad_program_0");
+        return global::OcctSharp.Graphic3dShaderProgram.FromNative(handleValue, "occtsharp_generated_open_gl_shader_manager_method_get_colored_quad_program_0");
     }
 
     /// <summary>Invokes OCCT OpenGl_ShaderManager::IsEmpty.</summary>
@@ -30291,6 +34676,13 @@ public sealed class OpenGlShaderManager : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShaderManagerMethodSetShadingModel0(handle, (int)theModel), "occtsharp_generated_open_gl_shader_manager_method_set_shading_model_0");
     }
 
+    /// <summary>Invokes OCCT OpenGl_ShaderManager::SetWeighedOitState.</summary>
+    public void SetWeighedOitState(float theDepthFactor)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShaderManagerMethodSetWeighedOitState0(handle, theDepthFactor), "occtsharp_generated_open_gl_shader_manager_method_set_weighed_oit_state_0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_ShaderManager::ShadingModel.</summary>
     public Graphic3dTypeOfShadingModel ShadingModel()
     {
@@ -30402,6 +34794,14 @@ public sealed class OpenGlShaderObject : IDisposable
 
     private OpenGlShaderObject(OpenGlShaderObjectHandle handle) => this.handle = handle;
 
+    /// <summary>Creates a retained OCCT OpenGl_ShaderObject shared object.</summary>
+    public OpenGlShaderObject(uint theType)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShaderObjectCreate0(theType, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "OpenGlShaderObjectCreate0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_ShaderObject::Compile.</summary>
     public bool Compile(OpenGlContext? theCtx)
     {
@@ -30416,6 +34816,30 @@ public sealed class OpenGlShaderObject : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShaderObjectMethodCreate0(handle, theCtx is null ? nint.Zero : theCtx.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_open_gl_shader_object_method_create_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_ShaderObject::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShaderObjectMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_shader_object_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_shader_object_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_ShaderObject::EstimatedDataSize.</summary>
+    public ulong EstimatedDataSize()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShaderObjectMethodEstimatedDataSize0(handle, out ulong resultValue), "occtsharp_generated_open_gl_shader_object_method_estimated_data_size_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_ShaderObject::Type.</summary>
+    public uint Type()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShaderObjectMethodType0(handle, out uint resultValue), "occtsharp_generated_open_gl_shader_object_method_type_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -30518,6 +34942,22 @@ public sealed class OpenGlShaderProgram : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT OpenGl_ShaderProgram::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShaderProgramMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_shader_program_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_shader_program_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_ShaderProgram::EstimatedDataSize.</summary>
+    public ulong EstimatedDataSize()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShaderProgramMethodEstimatedDataSize0(handle, out ulong resultValue), "occtsharp_generated_open_gl_shader_program_method_estimated_data_size_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT OpenGl_ShaderProgram::HasAlphaTest.</summary>
     public bool HasAlphaTest()
     {
@@ -30590,6 +35030,30 @@ public sealed class OpenGlShaderProgram : IDisposable
         return (Graphic3dRenderTransparentMethod)resultValue;
     }
 
+    /// <summary>Invokes OCCT OpenGl_ShaderProgram::ProgramId.</summary>
+    public uint ProgramId()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShaderProgramMethodProgramId0(handle, out uint resultValue), "occtsharp_generated_open_gl_shader_program_method_program_id_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_ShaderProgram::Proxy.</summary>
+    public Graphic3dShaderProgram? Proxy()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShaderProgramMethodProxy0(handle, out nint handleValue), "occtsharp_generated_open_gl_shader_program_method_proxy_0");
+        return global::OcctSharp.Graphic3dShaderProgram.FromNative(handleValue, "occtsharp_generated_open_gl_shader_program_method_proxy_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_ShaderProgram::SetAttribute.</summary>
+    public bool SetAttribute(OpenGlContext? theCtx, int theIndex, float theValue)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShaderProgramMethodSetAttribute0(handle, theCtx is null ? nint.Zero : theCtx.NativeHandle.DangerousGetHandle(), theIndex, theValue, out int resultValue), "occtsharp_generated_open_gl_shader_program_method_set_attribute_0");
+        return resultValue != 0;
+    }
+
     /// <summary>Invokes OCCT OpenGl_ShaderProgram::SetSampler.</summary>
     public bool SetSampler(OpenGlContext? theCtx, int theLocation, Graphic3dTextureUnit theTextureUnit)
     {
@@ -30603,6 +35067,14 @@ public sealed class OpenGlShaderProgram : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShaderProgramMethodSetUniform0(handle, theCtx is null ? nint.Zero : theCtx.NativeHandle.DangerousGetHandle(), theLocation, theValue, out int resultValue), "occtsharp_generated_open_gl_shader_program_method_set_uniform_0");
+        return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_ShaderProgram::SetUniform.</summary>
+    public bool SetUniform(OpenGlContext? theCtx, int theLocation, float theValue)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShaderProgramMethodSetUniform1(handle, theCtx is null ? nint.Zero : theCtx.NativeHandle.DangerousGetHandle(), theLocation, theValue, out int resultValue), "occtsharp_generated_open_gl_shader_program_method_set_uniform_1");
         return resultValue != 0;
     }
 
@@ -30682,6 +35154,38 @@ public sealed class OpenGlShadowMap : IDisposable
 
     private OpenGlShadowMap(OpenGlShadowMapHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT OpenGl_ShadowMap::Camera.</summary>
+    public Graphic3dCamera? Camera()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShadowMapMethodCamera0(handle, out nint handleValue), "occtsharp_generated_open_gl_shadow_map_method_camera_0");
+        return global::OcctSharp.Graphic3dCamera.FromNative(handleValue, "occtsharp_generated_open_gl_shadow_map_method_camera_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_ShadowMap::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShadowMapMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_shadow_map_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_shadow_map_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_ShadowMap::EstimatedDataSize.</summary>
+    public ulong EstimatedDataSize()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShadowMapMethodEstimatedDataSize0(handle, out ulong resultValue), "occtsharp_generated_open_gl_shadow_map_method_estimated_data_size_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_ShadowMap::FrameBuffer.</summary>
+    public OpenGlFrameBuffer? FrameBuffer()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShadowMapMethodFrameBuffer0(handle, out nint handleValue), "occtsharp_generated_open_gl_shadow_map_method_frame_buffer_0");
+        return global::OcctSharp.OpenGlFrameBuffer.FromNative(handleValue, "occtsharp_generated_open_gl_shadow_map_method_frame_buffer_0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_ShadowMap::IsValid.</summary>
     public bool IsValid()
     {
@@ -30690,11 +35194,42 @@ public sealed class OpenGlShadowMap : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT OpenGl_ShadowMap::LightSource.</summary>
+    public Graphic3dCLight? LightSource()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShadowMapMethodLightSource0(handle, out nint handleValue), "occtsharp_generated_open_gl_shadow_map_method_light_source_0");
+        return global::OcctSharp.Graphic3dCLight.FromNative(handleValue, "occtsharp_generated_open_gl_shadow_map_method_light_source_0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_ShadowMap::SetLightSource.</summary>
     public void SetLightSource(Graphic3dCLight? theLight)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShadowMapMethodSetLightSource0(handle, theLight is null ? nint.Zero : theLight.NativeHandle.DangerousGetHandle()), "occtsharp_generated_open_gl_shadow_map_method_set_light_source_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_ShadowMap::SetShadowMapBias.</summary>
+    public void SetShadowMapBias(float theBias)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShadowMapMethodSetShadowMapBias0(handle, theBias), "occtsharp_generated_open_gl_shadow_map_method_set_shadow_map_bias_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_ShadowMap::ShadowMapBias.</summary>
+    public float ShadowMapBias()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShadowMapMethodShadowMapBias0(handle, out float resultValue), "occtsharp_generated_open_gl_shadow_map_method_shadow_map_bias_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_ShadowMap::Texture.</summary>
+    public OpenGlTexture? Texture()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShadowMapMethodTexture0(handle, out nint handleValue), "occtsharp_generated_open_gl_shadow_map_method_texture_0");
+        return global::OcctSharp.OpenGlTexture.FromNative(handleValue, "occtsharp_generated_open_gl_shadow_map_method_texture_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -30771,6 +35306,14 @@ public sealed class OpenGlShadowMapArray : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShadowMapArrayCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "OpenGlShadowMapArrayCreate0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_ShadowMapArray::EstimatedDataSize.</summary>
+    public ulong EstimatedDataSize()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShadowMapArrayMethodEstimatedDataSize0(handle, out ulong resultValue), "occtsharp_generated_open_gl_shadow_map_array_method_estimated_data_size_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT OpenGl_ShadowMapArray::IsValid.</summary>
@@ -30871,6 +35414,14 @@ public sealed class OpenGlStructure : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlStructureMethodClear1(handle, theGlCtx is null ? nint.Zero : theGlCtx.NativeHandle.DangerousGetHandle()), "occtsharp_generated_open_gl_structure_method_clear_1");
     }
 
+    /// <summary>Invokes OCCT OpenGl_Structure::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlStructureMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_structure_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_structure_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_Structure::GraphicHighlight.</summary>
     public void GraphicHighlight(Graphic3dPresentationAttributes? theStyle)
     {
@@ -30883,6 +35434,14 @@ public sealed class OpenGlStructure : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlStructureMethodGraphicUnhighlight0(handle), "occtsharp_generated_open_gl_structure_method_graphic_unhighlight_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Structure::ModificationState.</summary>
+    public ulong ModificationState()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlStructureMethodModificationState0(handle, out ulong resultValue), "occtsharp_generated_open_gl_structure_method_modification_state_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT OpenGl_Structure::NewGroup.</summary>
@@ -31047,6 +35606,14 @@ public sealed class OpenGlStructureShadow : IDisposable
         handle = CreateHandle(nativeHandle, "OpenGlStructureShadowCreate0");
     }
 
+    /// <summary>Invokes OCCT OpenGl_StructureShadow::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlStructureShadowMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_structure_shadow_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_structure_shadow_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -31137,12 +35704,44 @@ public sealed class OpenGlTexture : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT OpenGl_Texture::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlTextureMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_texture_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_texture_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Texture::EstimatedDataSize.</summary>
+    public ulong EstimatedDataSize()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlTextureMethodEstimatedDataSize0(handle, out ulong resultValue), "occtsharp_generated_open_gl_texture_method_estimated_data_size_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT OpenGl_Texture::GenerateMipmaps.</summary>
     public bool GenerateMipmaps(OpenGlContext? theCtx)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlTextureMethodGenerateMipmaps0(handle, theCtx is null ? nint.Zero : theCtx.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_open_gl_texture_method_generate_mipmaps_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Texture::GetFormat.</summary>
+    public uint GetFormat()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlTextureMethodGetFormat0(handle, out uint resultValue), "occtsharp_generated_open_gl_texture_method_get_format_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Texture::GetTarget.</summary>
+    public uint GetTarget()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlTextureMethodGetTarget0(handle, out uint resultValue), "occtsharp_generated_open_gl_texture_method_get_target_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT OpenGl_Texture::HasMipmaps.</summary>
@@ -31166,6 +35765,14 @@ public sealed class OpenGlTexture : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlTextureMethodInit2DMultisample0(handle, theCtx is null ? nint.Zero : theCtx.NativeHandle.DangerousGetHandle(), theNbSamples, theTextFormat, theSizeX, theSizeY, out int resultValue), "occtsharp_generated_open_gl_texture_method_init2_dmultisample_0");
+        return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Texture::InitCubeMap.</summary>
+    public bool InitCubeMap(OpenGlContext? theCtx, Graphic3dCubeMap? theCubeMap, ulong theSize, ImageFormat theFormat, bool theToGenMipmap, bool theIsColorMap)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlTextureMethodInitCubeMap0(handle, theCtx is null ? nint.Zero : theCtx.NativeHandle.DangerousGetHandle(), theCubeMap is null ? nint.Zero : theCubeMap.NativeHandle.DangerousGetHandle(), theSize, (int)theFormat, theToGenMipmap ? 1 : 0, theIsColorMap ? 1 : 0, out int resultValue), "occtsharp_generated_open_gl_texture_method_init_cube_map_0");
         return resultValue != 0;
     }
 
@@ -31225,11 +35832,34 @@ public sealed class OpenGlTexture : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT OpenGl_Texture::Revision.</summary>
+    public ulong Revision()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlTextureMethodRevision0(handle, out ulong resultValue), "occtsharp_generated_open_gl_texture_method_revision_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Texture::Sampler.</summary>
+    public OpenGlSampler? Sampler()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlTextureMethodSampler0(handle, out nint handleValue), "occtsharp_generated_open_gl_texture_method_sampler_0");
+        return global::OcctSharp.OpenGlSampler.FromNative(handleValue, "occtsharp_generated_open_gl_texture_method_sampler_0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_Texture::SetAlpha.</summary>
     public void SetAlpha(bool theValue)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlTextureMethodSetAlpha0(handle, theValue ? 1 : 0), "occtsharp_generated_open_gl_texture_method_set_alpha_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Texture::SetRevision.</summary>
+    public void SetRevision(ulong theRevision)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlTextureMethodSetRevision0(handle, theRevision), "occtsharp_generated_open_gl_texture_method_set_revision_0");
     }
 
     /// <summary>Invokes OCCT OpenGl_Texture::SetSampler.</summary>
@@ -31275,6 +35905,14 @@ public sealed class OpenGlTexture : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlTextureMethodSizedFormat0(handle, out int resultValue), "occtsharp_generated_open_gl_texture_method_sized_format_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Texture::TextureId.</summary>
+    public uint TextureId()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlTextureMethodTextureId0(handle, out uint resultValue), "occtsharp_generated_open_gl_texture_method_texture_id_0");
         return resultValue;
     }
 
@@ -31383,12 +36021,44 @@ public sealed class OpenGlTextureBuffer : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT OpenGl_TextureBuffer::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlTextureBufferMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_texture_buffer_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_texture_buffer_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_TextureBuffer::GetTarget.</summary>
+    public uint GetTarget()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlTextureBufferMethodGetTarget0(handle, out uint resultValue), "occtsharp_generated_open_gl_texture_buffer_method_get_target_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT OpenGl_TextureBuffer::IsValid.</summary>
     public bool IsValid()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlTextureBufferMethodIsValid0(handle, out int resultValue), "occtsharp_generated_open_gl_texture_buffer_method_is_valid_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_TextureBuffer::TextureFormat.</summary>
+    public uint TextureFormat()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlTextureBufferMethodTextureFormat0(handle, out uint resultValue), "occtsharp_generated_open_gl_texture_buffer_method_texture_format_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_TextureBuffer::TextureId.</summary>
+    public uint TextureId()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlTextureBufferMethodTextureId0(handle, out uint resultValue), "occtsharp_generated_open_gl_texture_buffer_method_texture_id_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT OpenGl_TextureBuffer::UnbindTexture.</summary>
@@ -31490,6 +36160,22 @@ public sealed class OpenGlTextureSet : IDisposable
         handle = CreateHandle(nativeHandle, "OpenGlTextureSetCreate2");
     }
 
+    /// <summary>Invokes OCCT OpenGl_TextureSet::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlTextureSetMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_texture_set_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_texture_set_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_TextureSet::First.</summary>
+    public OpenGlTexture? First()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlTextureSetMethodFirst0(handle, out nint handleValue), "occtsharp_generated_open_gl_texture_set_method_first_0");
+        return global::OcctSharp.OpenGlTexture.FromNative(handleValue, "occtsharp_generated_open_gl_texture_set_method_first_0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_TextureSet::FirstUnit.</summary>
     public Graphic3dTextureUnit FirstUnit()
     {
@@ -31537,6 +36223,14 @@ public sealed class OpenGlTextureSet : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT OpenGl_TextureSet::Last.</summary>
+    public OpenGlTexture? Last()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlTextureSetMethodLast0(handle, out nint handleValue), "occtsharp_generated_open_gl_texture_set_method_last_0");
+        return global::OcctSharp.OpenGlTexture.FromNative(handleValue, "occtsharp_generated_open_gl_texture_set_method_last_0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_TextureSet::LastUnit.</summary>
     public Graphic3dTextureUnit LastUnit()
     {
@@ -31575,6 +36269,14 @@ public sealed class OpenGlTextureSet : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlTextureSetMethodUpper0(handle, out int resultValue), "occtsharp_generated_open_gl_texture_set_method_upper_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_TextureSet::Value.</summary>
+    public OpenGlTexture? Value(int theIndex)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlTextureSetMethodValue0(handle, theIndex, out nint handleValue), "occtsharp_generated_open_gl_texture_set_method_value_0");
+        return global::OcctSharp.OpenGlTexture.FromNative(handleValue, "occtsharp_generated_open_gl_texture_set_method_value_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -31651,6 +36353,22 @@ public sealed class OpenGlUniformBuffer : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlUniformBufferCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "OpenGlUniformBufferCreate0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_UniformBuffer::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlUniformBufferMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_uniform_buffer_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_uniform_buffer_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_UniformBuffer::GetTarget.</summary>
+    public uint GetTarget()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlUniformBufferMethodGetTarget0(handle, out uint resultValue), "occtsharp_generated_open_gl_uniform_buffer_method_get_target_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -31750,6 +36468,29 @@ public sealed class OpenGlVertexBuffer : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlVertexBufferMethodBindPositionAttribute0(handle, theGlCtx is null ? nint.Zero : theGlCtx.NativeHandle.DangerousGetHandle()), "occtsharp_generated_open_gl_vertex_buffer_method_bind_position_attribute_0");
     }
 
+    /// <summary>Invokes OCCT OpenGl_VertexBuffer::BindVertexAttrib.</summary>
+    public void BindVertexAttrib(OpenGlContext? theGlCtx, uint theAttribLoc)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlVertexBufferMethodBindVertexAttrib0(handle, theGlCtx is null ? nint.Zero : theGlCtx.NativeHandle.DangerousGetHandle(), theAttribLoc), "occtsharp_generated_open_gl_vertex_buffer_method_bind_vertex_attrib_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_VertexBuffer::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlVertexBufferMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_vertex_buffer_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_vertex_buffer_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_VertexBuffer::GetTarget.</summary>
+    public uint GetTarget()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlVertexBufferMethodGetTarget0(handle, out uint resultValue), "occtsharp_generated_open_gl_vertex_buffer_method_get_target_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT OpenGl_VertexBuffer::HasColorAttribute.</summary>
     public bool HasColorAttribute()
     {
@@ -31778,6 +36519,13 @@ public sealed class OpenGlVertexBuffer : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlVertexBufferMethodUnbindAttribute0(handle, theCtx is null ? nint.Zero : theCtx.NativeHandle.DangerousGetHandle(), (int)theMode), "occtsharp_generated_open_gl_vertex_buffer_method_unbind_attribute_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_VertexBuffer::UnbindVertexAttrib.</summary>
+    public void UnbindVertexAttrib(OpenGlContext? theGlCtx, uint theAttribLoc)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlVertexBufferMethodUnbindVertexAttrib0(handle, theGlCtx is null ? nint.Zero : theGlCtx.NativeHandle.DangerousGetHandle(), theAttribLoc), "occtsharp_generated_open_gl_vertex_buffer_method_unbind_vertex_attrib_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -31856,6 +36604,30 @@ public sealed class OpenGlView : IDisposable
         return (AspectFillMethod)resultValue;
     }
 
+    /// <summary>Invokes OCCT OpenGl_View::ClipPlanes.</summary>
+    public Graphic3dSequenceOfHClipPlane? ClipPlanes()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlViewMethodClipPlanes0(handle, out nint handleValue), "occtsharp_generated_open_gl_view_method_clip_planes_0");
+        return global::OcctSharp.Graphic3dSequenceOfHClipPlane.FromNative(handleValue, "occtsharp_generated_open_gl_view_method_clip_planes_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_View::DepthPeelingFbos.</summary>
+    public OpenGlDepthPeeling? DepthPeelingFbos()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlViewMethodDepthPeelingFbos0(handle, out nint handleValue), "occtsharp_generated_open_gl_view_method_depth_peeling_fbos_0");
+        return global::OcctSharp.OpenGlDepthPeeling.FromNative(handleValue, "occtsharp_generated_open_gl_view_method_depth_peeling_fbos_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_View::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlViewMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_view_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_view_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_View::FBO.</summary>
     public StandardTransient? FBO()
     {
@@ -31877,6 +36649,22 @@ public sealed class OpenGlView : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlViewMethodFBOCreate0(handle, theWidth, theHeight, out nint handleValue), "occtsharp_generated_open_gl_view_method_fbocreate_0");
         return global::OcctSharp.StandardTransient.FromNative(handleValue, "occtsharp_generated_open_gl_view_method_fbocreate_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_View::GlTextureEnv.</summary>
+    public OpenGlTextureSet? GlTextureEnv()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlViewMethodGlTextureEnv0(handle, out nint handleValue), "occtsharp_generated_open_gl_view_method_gl_texture_env_0");
+        return global::OcctSharp.OpenGlTextureSet.FromNative(handleValue, "occtsharp_generated_open_gl_view_method_gl_texture_env_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_View::GlWindow.</summary>
+    public OpenGlWindow? GlWindow()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlViewMethodGlWindow0(handle, out nint handleValue), "occtsharp_generated_open_gl_view_method_gl_window_0");
+        return global::OcctSharp.OpenGlWindow.FromNative(handleValue, "occtsharp_generated_open_gl_view_method_gl_window_0");
     }
 
     /// <summary>Invokes OCCT OpenGl_View::GraduatedTrihedronErase.</summary>
@@ -31937,6 +36725,14 @@ public sealed class OpenGlView : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlViewMethodLayer0(handle, theLayerId, out nint handleValue), "occtsharp_generated_open_gl_view_method_layer_0");
         return global::OcctSharp.Graphic3dLayer.FromNative(handleValue, "occtsharp_generated_open_gl_view_method_layer_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_View::Lights.</summary>
+    public Graphic3dLightSet? Lights()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlViewMethodLights0(handle, out nint handleValue), "occtsharp_generated_open_gl_view_method_lights_0");
+        return global::OcctSharp.Graphic3dLightSet.FromNative(handleValue, "occtsharp_generated_open_gl_view_method_lights_0");
     }
 
     /// <summary>Invokes OCCT OpenGl_View::Redraw.</summary>
@@ -32043,6 +36839,14 @@ public sealed class OpenGlView : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlViewMethodSetToFlipOutput0(handle, theFlip ? 1 : 0), "occtsharp_generated_open_gl_view_method_set_to_flip_output_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_View::SpecIBLMapLevels.</summary>
+    public uint SpecIBLMapLevels()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlViewMethodSpecIBLMapLevels0(handle, out uint resultValue), "occtsharp_generated_open_gl_view_method_spec_iblmap_levels_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT OpenGl_View::ToFlipOutput.</summary>
@@ -32153,12 +36957,36 @@ public sealed class OpenGlWindow : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT OpenGl_Window::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlWindowMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_window_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_window_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Window::GetGlContext.</summary>
+    public OpenGlContext? GetGlContext()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlWindowMethodGetGlContext0(handle, out nint handleValue), "occtsharp_generated_open_gl_window_method_get_gl_context_0");
+        return global::OcctSharp.OpenGlContext.FromNative(handleValue, "occtsharp_generated_open_gl_window_method_get_gl_context_0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_Window::Height.</summary>
     public int Height()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlWindowMethodHeight0(handle, out int resultValue), "occtsharp_generated_open_gl_window_method_height_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Window::PlatformWindow.</summary>
+    public AspectWindow? PlatformWindow()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlWindowMethodPlatformWindow0(handle, out nint handleValue), "occtsharp_generated_open_gl_window_method_platform_window_0");
+        return global::OcctSharp.AspectWindow.FromNative(handleValue, "occtsharp_generated_open_gl_window_method_platform_window_0");
     }
 
     /// <summary>Invokes OCCT OpenGl_Window::Resize.</summary>
@@ -32173,6 +37001,14 @@ public sealed class OpenGlWindow : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlWindowMethodSetSwapInterval0(handle, theToForceNoSync ? 1 : 0), "occtsharp_generated_open_gl_window_method_set_swap_interval_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Window::SizeWindow.</summary>
+    public AspectWindow? SizeWindow()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlWindowMethodSizeWindow0(handle, out nint handleValue), "occtsharp_generated_open_gl_window_method_size_window_0");
+        return global::OcctSharp.AspectWindow.FromNative(handleValue, "occtsharp_generated_open_gl_window_method_size_window_0");
     }
 
     /// <summary>Invokes OCCT OpenGl_Window::Width.</summary>
@@ -32259,6 +37095,22 @@ public sealed class OpenGlWorkspace : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT OpenGl_Workspace::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlWorkspaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_open_gl_workspace_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_open_gl_workspace_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Workspace::EnvironmentTexture.</summary>
+    public OpenGlTextureSet? EnvironmentTexture()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlWorkspaceMethodEnvironmentTexture0(handle, out nint handleValue), "occtsharp_generated_open_gl_workspace_method_environment_texture_0");
+        return global::OcctSharp.OpenGlTextureSet.FromNative(handleValue, "occtsharp_generated_open_gl_workspace_method_environment_texture_0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_Workspace::FBOCreate.</summary>
     public OpenGlFrameBuffer? FBOCreate(int theWidth, int theHeight)
     {
@@ -32267,12 +37119,28 @@ public sealed class OpenGlWorkspace : IDisposable
         return global::OcctSharp.OpenGlFrameBuffer.FromNative(handleValue, "occtsharp_generated_open_gl_workspace_method_fbocreate_0");
     }
 
+    /// <summary>Invokes OCCT OpenGl_Workspace::GetGlContext.</summary>
+    public OpenGlContext? GetGlContext()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlWorkspaceMethodGetGlContext0(handle, out nint handleValue), "occtsharp_generated_open_gl_workspace_method_get_gl_context_0");
+        return global::OcctSharp.OpenGlContext.FromNative(handleValue, "occtsharp_generated_open_gl_workspace_method_get_gl_context_0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_Workspace::Height.</summary>
     public int Height()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlWorkspaceMethodHeight0(handle, out int resultValue), "occtsharp_generated_open_gl_workspace_method_height_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Workspace::HighlightStyle.</summary>
+    public Graphic3dPresentationAttributes? HighlightStyle()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlWorkspaceMethodHighlightStyle0(handle, out nint handleValue), "occtsharp_generated_open_gl_workspace_method_highlight_style_0");
+        return global::OcctSharp.Graphic3dPresentationAttributes.FromNative(handleValue, "occtsharp_generated_open_gl_workspace_method_highlight_style_0");
     }
 
     /// <summary>Invokes OCCT OpenGl_Workspace::NbSkippedTransparentElements.</summary>
@@ -32333,6 +37201,14 @@ public sealed class OpenGlWorkspace : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlWorkspaceMethodSetUseZBuffer0(handle, theToUse ? 1 : 0, out int resultValue), "occtsharp_generated_open_gl_workspace_method_set_use_zbuffer_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_Workspace::TextureSet.</summary>
+    public OpenGlTextureSet? TextureSet()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlWorkspaceMethodTextureSet0(handle, out nint handleValue), "occtsharp_generated_open_gl_workspace_method_texture_set_0");
+        return global::OcctSharp.OpenGlTextureSet.FromNative(handleValue, "occtsharp_generated_open_gl_workspace_method_texture_set_0");
     }
 
     /// <summary>Invokes OCCT OpenGl_Workspace::ToAllowFaceCulling.</summary>
@@ -32459,6 +37335,22 @@ public sealed class Prs3dArrowAspect : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Prs3d_ArrowAspect::Aspect.</summary>
+    public Graphic3dAspectLine3d? Aspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dArrowAspectMethodAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_arrow_aspect_method_aspect_0");
+        return global::OcctSharp.Graphic3dAspectLine3d.FromNative(handleValue, "occtsharp_generated_prs3d_arrow_aspect_method_aspect_0");
+    }
+
+    /// <summary>Invokes OCCT Prs3d_ArrowAspect::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dArrowAspectMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs3d_arrow_aspect_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs3d_arrow_aspect_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Prs3d_ArrowAspect::IsZoomable.</summary>
     public bool IsZoomable()
     {
@@ -32571,6 +37463,14 @@ public sealed class Prs3dBasicAspect : IDisposable
 
     private Prs3dBasicAspect(Prs3dBasicAspectHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT Prs3d_BasicAspect::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dBasicAspectMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs3d_basic_aspect_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs3d_basic_aspect_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -32647,6 +37547,14 @@ public sealed class Prs3dDatumAspect : IDisposable
         handle = CreateHandle(nativeHandle, "Prs3dDatumAspectCreate0");
     }
 
+    /// <summary>Invokes OCCT Prs3d_DatumAspect::ArrowAspect.</summary>
+    public Prs3dArrowAspect? ArrowAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDatumAspectMethodArrowAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_datum_aspect_method_arrow_aspect_0");
+        return global::OcctSharp.Prs3dArrowAspect.FromNative(handleValue, "occtsharp_generated_prs3d_datum_aspect_method_arrow_aspect_0");
+    }
+
     /// <summary>Invokes OCCT Prs3d_DatumAspect::Attribute.</summary>
     public double Attribute(Prs3dDatumAttribute theType)
     {
@@ -32684,6 +37592,30 @@ public sealed class Prs3dDatumAspect : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDatumAspectMethodDrawDatumPart0(handle, (int)thePart, out int resultValue), "occtsharp_generated_prs3d_datum_aspect_method_draw_datum_part_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT Prs3d_DatumAspect::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDatumAspectMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs3d_datum_aspect_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs3d_datum_aspect_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Prs3d_DatumAspect::LineAspect.</summary>
+    public Prs3dLineAspect? LineAspect(Prs3dDatumParts thePart)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDatumAspectMethodLineAspect0(handle, (int)thePart, out nint handleValue), "occtsharp_generated_prs3d_datum_aspect_method_line_aspect_0");
+        return global::OcctSharp.Prs3dLineAspect.FromNative(handleValue, "occtsharp_generated_prs3d_datum_aspect_method_line_aspect_0");
+    }
+
+    /// <summary>Invokes OCCT Prs3d_DatumAspect::PointAspect.</summary>
+    public Prs3dPointAspect? PointAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDatumAspectMethodPointAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_datum_aspect_method_point_aspect_0");
+        return global::OcctSharp.Prs3dPointAspect.FromNative(handleValue, "occtsharp_generated_prs3d_datum_aspect_method_point_aspect_0");
     }
 
     /// <summary>Invokes OCCT Prs3d_DatumAspect::SetArrowAspect.</summary>
@@ -32747,6 +37679,30 @@ public sealed class Prs3dDatumAspect : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDatumAspectMethodSetToDrawLabels0(handle, theToDraw ? 1 : 0), "occtsharp_generated_prs3d_datum_aspect_method_set_to_draw_labels_0");
+    }
+
+    /// <summary>Invokes OCCT Prs3d_DatumAspect::ShadingAspect.</summary>
+    public Prs3dShadingAspect? ShadingAspect(Prs3dDatumParts thePart)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDatumAspectMethodShadingAspect0(handle, (int)thePart, out nint handleValue), "occtsharp_generated_prs3d_datum_aspect_method_shading_aspect_0");
+        return global::OcctSharp.Prs3dShadingAspect.FromNative(handleValue, "occtsharp_generated_prs3d_datum_aspect_method_shading_aspect_0");
+    }
+
+    /// <summary>Invokes OCCT Prs3d_DatumAspect::TextAspect.</summary>
+    public Prs3dTextAspect? TextAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDatumAspectMethodTextAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_datum_aspect_method_text_aspect_0");
+        return global::OcctSharp.Prs3dTextAspect.FromNative(handleValue, "occtsharp_generated_prs3d_datum_aspect_method_text_aspect_0");
+    }
+
+    /// <summary>Invokes OCCT Prs3d_DatumAspect::TextAspect.</summary>
+    public Prs3dTextAspect? TextAspect(Prs3dDatumParts thePart)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDatumAspectMethodTextAspect1(handle, (int)thePart, out nint handleValue), "occtsharp_generated_prs3d_datum_aspect_method_text_aspect_1");
+        return global::OcctSharp.Prs3dTextAspect.FromNative(handleValue, "occtsharp_generated_prs3d_datum_aspect_method_text_aspect_1");
     }
 
     /// <summary>Invokes OCCT Prs3d_DatumAspect::ToDrawArrows.</summary>
@@ -32841,6 +37797,14 @@ public sealed class Prs3dDimensionAspect : IDisposable
         handle = CreateHandle(nativeHandle, "Prs3dDimensionAspectCreate0");
     }
 
+    /// <summary>Invokes OCCT Prs3d_DimensionAspect::ArrowAspect.</summary>
+    public Prs3dArrowAspect? ArrowAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDimensionAspectMethodArrowAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_dimension_aspect_method_arrow_aspect_0");
+        return global::OcctSharp.Prs3dArrowAspect.FromNative(handleValue, "occtsharp_generated_prs3d_dimension_aspect_method_arrow_aspect_0");
+    }
+
     /// <summary>Invokes OCCT Prs3d_DimensionAspect::ArrowOrientation.</summary>
     public Prs3dDimensionArrowOrientation ArrowOrientation()
     {
@@ -32855,6 +37819,14 @@ public sealed class Prs3dDimensionAspect : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDimensionAspectMethodArrowTailSize0(handle, out double resultValue), "occtsharp_generated_prs3d_dimension_aspect_method_arrow_tail_size_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Prs3d_DimensionAspect::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDimensionAspectMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs3d_dimension_aspect_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs3d_dimension_aspect_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Prs3d_DimensionAspect::ExtensionSize.</summary>
@@ -32895,6 +37867,14 @@ public sealed class Prs3dDimensionAspect : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDimensionAspectMethodIsUnitsDisplayed0(handle, out int resultValue), "occtsharp_generated_prs3d_dimension_aspect_method_is_units_displayed_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT Prs3d_DimensionAspect::LineAspect.</summary>
+    public Prs3dLineAspect? LineAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDimensionAspectMethodLineAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_dimension_aspect_method_line_aspect_0");
+        return global::OcctSharp.Prs3dLineAspect.FromNative(handleValue, "occtsharp_generated_prs3d_dimension_aspect_method_line_aspect_0");
     }
 
     /// <summary>Invokes OCCT Prs3d_DimensionAspect::MakeArrows3d.</summary>
@@ -32979,6 +37959,14 @@ public sealed class Prs3dDimensionAspect : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDimensionAspectMethodSetTextVerticalPosition0(handle, (int)thePosition), "occtsharp_generated_prs3d_dimension_aspect_method_set_text_vertical_position_0");
+    }
+
+    /// <summary>Invokes OCCT Prs3d_DimensionAspect::TextAspect.</summary>
+    public Prs3dTextAspect? TextAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDimensionAspectMethodTextAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_dimension_aspect_method_text_aspect_0");
+        return global::OcctSharp.Prs3dTextAspect.FromNative(handleValue, "occtsharp_generated_prs3d_dimension_aspect_method_text_aspect_0");
     }
 
     /// <summary>Invokes OCCT Prs3d_DimensionAspect::TextHorizontalPosition.</summary>
@@ -33073,11 +38061,27 @@ public sealed class Prs3dDrawer : IDisposable
         handle = CreateHandle(nativeHandle, "Prs3dDrawerCreate0");
     }
 
+    /// <summary>Invokes OCCT Prs3d_Drawer::ArrowAspect.</summary>
+    public Prs3dArrowAspect? ArrowAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodArrowAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_drawer_method_arrow_aspect_0");
+        return global::OcctSharp.Prs3dArrowAspect.FromNative(handleValue, "occtsharp_generated_prs3d_drawer_method_arrow_aspect_0");
+    }
+
     /// <summary>Invokes OCCT Prs3d_Drawer::ClearLocalAttributes.</summary>
     public void ClearLocalAttributes()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodClearLocalAttributes0(handle), "occtsharp_generated_prs3d_drawer_method_clear_local_attributes_0");
+    }
+
+    /// <summary>Invokes OCCT Prs3d_Drawer::DatumAspect.</summary>
+    public Prs3dDatumAspect? DatumAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodDatumAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_drawer_method_datum_aspect_0");
+        return global::OcctSharp.Prs3dDatumAspect.FromNative(handleValue, "occtsharp_generated_prs3d_drawer_method_datum_aspect_0");
     }
 
     /// <summary>Invokes OCCT Prs3d_Drawer::DeviationAngle.</summary>
@@ -33094,6 +38098,14 @@ public sealed class Prs3dDrawer : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodDeviationCoefficient0(handle, out double resultValue), "occtsharp_generated_prs3d_drawer_method_deviation_coefficient_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Prs3d_Drawer::DimensionAspect.</summary>
+    public Prs3dDimensionAspect? DimensionAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodDimensionAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_drawer_method_dimension_aspect_0");
+        return global::OcctSharp.Prs3dDimensionAspect.FromNative(handleValue, "occtsharp_generated_prs3d_drawer_method_dimension_aspect_0");
     }
 
     /// <summary>Invokes OCCT Prs3d_Drawer::DisableDrawHiddenLine.</summary>
@@ -33119,11 +38131,27 @@ public sealed class Prs3dDrawer : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT Prs3d_Drawer::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs3d_drawer_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs3d_drawer_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Prs3d_Drawer::EnableDrawHiddenLine.</summary>
     public void EnableDrawHiddenLine()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodEnableDrawHiddenLine0(handle), "occtsharp_generated_prs3d_drawer_method_enable_draw_hidden_line_0");
+    }
+
+    /// <summary>Invokes OCCT Prs3d_Drawer::FaceBoundaryAspect.</summary>
+    public Prs3dLineAspect? FaceBoundaryAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodFaceBoundaryAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_drawer_method_face_boundary_aspect_0");
+        return global::OcctSharp.Prs3dLineAspect.FromNative(handleValue, "occtsharp_generated_prs3d_drawer_method_face_boundary_aspect_0");
     }
 
     /// <summary>Invokes OCCT Prs3d_Drawer::FaceBoundaryDraw.</summary>
@@ -33140,6 +38168,14 @@ public sealed class Prs3dDrawer : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodFaceBoundaryUpperContinuity0(handle, out int resultValue), "occtsharp_generated_prs3d_drawer_method_face_boundary_upper_continuity_0");
         return (GeomAbsShape)resultValue;
+    }
+
+    /// <summary>Invokes OCCT Prs3d_Drawer::FreeBoundaryAspect.</summary>
+    public Prs3dLineAspect? FreeBoundaryAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodFreeBoundaryAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_drawer_method_free_boundary_aspect_0");
+        return global::OcctSharp.Prs3dLineAspect.FromNative(handleValue, "occtsharp_generated_prs3d_drawer_method_free_boundary_aspect_0");
     }
 
     /// <summary>Invokes OCCT Prs3d_Drawer::FreeBoundaryDraw.</summary>
@@ -33486,6 +38522,14 @@ public sealed class Prs3dDrawer : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT Prs3d_Drawer::HiddenLineAspect.</summary>
+    public Prs3dLineAspect? HiddenLineAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodHiddenLineAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_drawer_method_hidden_line_aspect_0");
+        return global::OcctSharp.Prs3dLineAspect.FromNative(handleValue, "occtsharp_generated_prs3d_drawer_method_hidden_line_aspect_0");
+    }
+
     /// <summary>Invokes OCCT Prs3d_Drawer::HLRAngle.</summary>
     public double HLRAngle()
     {
@@ -33526,11 +38570,27 @@ public sealed class Prs3dDrawer : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT Prs3d_Drawer::LineAspect.</summary>
+    public Prs3dLineAspect? LineAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodLineAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_drawer_method_line_aspect_0");
+        return global::OcctSharp.Prs3dLineAspect.FromNative(handleValue, "occtsharp_generated_prs3d_drawer_method_line_aspect_0");
+    }
+
     /// <summary>Invokes OCCT Prs3d_Drawer::Link.</summary>
     public void Link(Prs3dDrawer? theDrawer)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodLink0(handle, theDrawer is null ? nint.Zero : theDrawer.NativeHandle.DangerousGetHandle()), "occtsharp_generated_prs3d_drawer_method_link_0");
+    }
+
+    /// <summary>Invokes OCCT Prs3d_Drawer::Link.</summary>
+    public Prs3dDrawer? Link()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodLink1(handle, out nint handleValue), "occtsharp_generated_prs3d_drawer_method_link_1");
+        return global::OcctSharp.Prs3dDrawer.FromNative(handleValue, "occtsharp_generated_prs3d_drawer_method_link_1");
     }
 
     /// <summary>Invokes OCCT Prs3d_Drawer::MaximalChordialDeviation.</summary>
@@ -33547,6 +38607,22 @@ public sealed class Prs3dDrawer : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodMaximalParameterValue0(handle, out double resultValue), "occtsharp_generated_prs3d_drawer_method_maximal_parameter_value_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Prs3d_Drawer::PlaneAspect.</summary>
+    public Prs3dPlaneAspect? PlaneAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodPlaneAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_drawer_method_plane_aspect_0");
+        return global::OcctSharp.Prs3dPlaneAspect.FromNative(handleValue, "occtsharp_generated_prs3d_drawer_method_plane_aspect_0");
+    }
+
+    /// <summary>Invokes OCCT Prs3d_Drawer::PointAspect.</summary>
+    public Prs3dPointAspect? PointAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodPointAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_drawer_method_point_aspect_0");
+        return global::OcctSharp.Prs3dPointAspect.FromNative(handleValue, "occtsharp_generated_prs3d_drawer_method_point_aspect_0");
     }
 
     /// <summary>Invokes OCCT Prs3d_Drawer::PreviousDeviationAngle.</summary>
@@ -33571,6 +38647,22 @@ public sealed class Prs3dDrawer : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodPreviousHLRDeviationAngle0(handle, out double resultValue), "occtsharp_generated_prs3d_drawer_method_previous_hlrdeviation_angle_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Prs3d_Drawer::SectionAspect.</summary>
+    public Prs3dLineAspect? SectionAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodSectionAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_drawer_method_section_aspect_0");
+        return global::OcctSharp.Prs3dLineAspect.FromNative(handleValue, "occtsharp_generated_prs3d_drawer_method_section_aspect_0");
+    }
+
+    /// <summary>Invokes OCCT Prs3d_Drawer::SeenLineAspect.</summary>
+    public Prs3dLineAspect? SeenLineAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodSeenLineAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_drawer_method_seen_line_aspect_0");
+        return global::OcctSharp.Prs3dLineAspect.FromNative(handleValue, "occtsharp_generated_prs3d_drawer_method_seen_line_aspect_0");
     }
 
     /// <summary>Invokes OCCT Prs3d_Drawer::SetArrowAspect.</summary>
@@ -33916,6 +39008,14 @@ public sealed class Prs3dDrawer : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT Prs3d_Drawer::TextAspect.</summary>
+    public Prs3dTextAspect? TextAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodTextAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_drawer_method_text_aspect_0");
+        return global::OcctSharp.Prs3dTextAspect.FromNative(handleValue, "occtsharp_generated_prs3d_drawer_method_text_aspect_0");
+    }
+
     /// <summary>Invokes OCCT Prs3d_Drawer::TypeOfDeflection.</summary>
     public AspectTypeOfDeflection TypeOfDeflection()
     {
@@ -33930,6 +39030,22 @@ public sealed class Prs3dDrawer : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodTypeOfHLR0(handle, out int resultValue), "occtsharp_generated_prs3d_drawer_method_type_of_hlr_0");
         return (Prs3dTypeOfHLR)resultValue;
+    }
+
+    /// <summary>Invokes OCCT Prs3d_Drawer::UIsoAspect.</summary>
+    public Prs3dIsoAspect? UIsoAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodUIsoAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_drawer_method_uiso_aspect_0");
+        return global::OcctSharp.Prs3dIsoAspect.FromNative(handleValue, "occtsharp_generated_prs3d_drawer_method_uiso_aspect_0");
+    }
+
+    /// <summary>Invokes OCCT Prs3d_Drawer::UnFreeBoundaryAspect.</summary>
+    public Prs3dLineAspect? UnFreeBoundaryAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodUnFreeBoundaryAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_drawer_method_un_free_boundary_aspect_0");
+        return global::OcctSharp.Prs3dLineAspect.FromNative(handleValue, "occtsharp_generated_prs3d_drawer_method_un_free_boundary_aspect_0");
     }
 
     /// <summary>Invokes OCCT Prs3d_Drawer::UnFreeBoundaryDraw.</summary>
@@ -34080,12 +39196,36 @@ public sealed class Prs3dDrawer : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodUpdatePreviousDeviationCoefficient0(handle), "occtsharp_generated_prs3d_drawer_method_update_previous_deviation_coefficient_0");
     }
 
+    /// <summary>Invokes OCCT Prs3d_Drawer::VectorAspect.</summary>
+    public Prs3dLineAspect? VectorAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodVectorAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_drawer_method_vector_aspect_0");
+        return global::OcctSharp.Prs3dLineAspect.FromNative(handleValue, "occtsharp_generated_prs3d_drawer_method_vector_aspect_0");
+    }
+
     /// <summary>Invokes OCCT Prs3d_Drawer::VertexDrawMode.</summary>
     public Prs3dVertexDrawMode VertexDrawMode()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodVertexDrawMode0(handle, out int resultValue), "occtsharp_generated_prs3d_drawer_method_vertex_draw_mode_0");
         return (Prs3dVertexDrawMode)resultValue;
+    }
+
+    /// <summary>Invokes OCCT Prs3d_Drawer::VIsoAspect.</summary>
+    public Prs3dIsoAspect? VIsoAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodVIsoAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_drawer_method_viso_aspect_0");
+        return global::OcctSharp.Prs3dIsoAspect.FromNative(handleValue, "occtsharp_generated_prs3d_drawer_method_viso_aspect_0");
+    }
+
+    /// <summary>Invokes OCCT Prs3d_Drawer::WireAspect.</summary>
+    public Prs3dLineAspect? WireAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dDrawerMethodWireAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_drawer_method_wire_aspect_0");
+        return global::OcctSharp.Prs3dLineAspect.FromNative(handleValue, "occtsharp_generated_prs3d_drawer_method_wire_aspect_0");
     }
 
     /// <summary>Invokes OCCT Prs3d_Drawer::WireDraw.</summary>
@@ -34163,6 +39303,14 @@ public sealed class Prs3dIsoAspect : IDisposable
     private readonly Prs3dIsoAspectHandle handle;
 
     private Prs3dIsoAspect(Prs3dIsoAspectHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT Prs3d_IsoAspect::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dIsoAspectMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs3d_iso_aspect_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs3d_iso_aspect_method_dynamic_type_0");
+    }
 
     /// <summary>Invokes OCCT Prs3d_IsoAspect::Number.</summary>
     public int Number()
@@ -34253,6 +39401,22 @@ public sealed class Prs3dLineAspect : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dLineAspectCreate0(theAspect is null ? nint.Zero : theAspect.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "Prs3dLineAspectCreate0");
+    }
+
+    /// <summary>Invokes OCCT Prs3d_LineAspect::Aspect.</summary>
+    public Graphic3dAspectLine3d? Aspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dLineAspectMethodAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_line_aspect_method_aspect_0");
+        return global::OcctSharp.Graphic3dAspectLine3d.FromNative(handleValue, "occtsharp_generated_prs3d_line_aspect_method_aspect_0");
+    }
+
+    /// <summary>Invokes OCCT Prs3d_LineAspect::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dLineAspectMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs3d_line_aspect_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs3d_line_aspect_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Prs3d_LineAspect::SetAspect.</summary>
@@ -34352,6 +39516,14 @@ public sealed class Prs3dPlaneAspect : IDisposable
         handle = CreateHandle(nativeHandle, "Prs3dPlaneAspectCreate0");
     }
 
+    /// <summary>Invokes OCCT Prs3d_PlaneAspect::ArrowAspect.</summary>
+    public Prs3dLineAspect? ArrowAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dPlaneAspectMethodArrowAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_plane_aspect_method_arrow_aspect_0");
+        return global::OcctSharp.Prs3dLineAspect.FromNative(handleValue, "occtsharp_generated_prs3d_plane_aspect_method_arrow_aspect_0");
+    }
+
     /// <summary>Invokes OCCT Prs3d_PlaneAspect::ArrowsAngle.</summary>
     public double ArrowsAngle()
     {
@@ -34406,6 +39578,30 @@ public sealed class Prs3dPlaneAspect : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dPlaneAspectMethodDisplayIso0(handle, out int resultValue), "occtsharp_generated_prs3d_plane_aspect_method_display_iso_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT Prs3d_PlaneAspect::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dPlaneAspectMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs3d_plane_aspect_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs3d_plane_aspect_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Prs3d_PlaneAspect::EdgesAspect.</summary>
+    public Prs3dLineAspect? EdgesAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dPlaneAspectMethodEdgesAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_plane_aspect_method_edges_aspect_0");
+        return global::OcctSharp.Prs3dLineAspect.FromNative(handleValue, "occtsharp_generated_prs3d_plane_aspect_method_edges_aspect_0");
+    }
+
+    /// <summary>Invokes OCCT Prs3d_PlaneAspect::IsoAspect.</summary>
+    public Prs3dLineAspect? IsoAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dPlaneAspectMethodIsoAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_plane_aspect_method_iso_aspect_0");
+        return global::OcctSharp.Prs3dLineAspect.FromNative(handleValue, "occtsharp_generated_prs3d_plane_aspect_method_iso_aspect_0");
     }
 
     /// <summary>Invokes OCCT Prs3d_PlaneAspect::IsoDistance.</summary>
@@ -34571,6 +39767,30 @@ public sealed class Prs3dPointAspect : IDisposable
         handle = CreateHandle(nativeHandle, "Prs3dPointAspectCreate0");
     }
 
+    /// <summary>Invokes OCCT Prs3d_PointAspect::Aspect.</summary>
+    public Graphic3dAspectMarker3d? Aspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dPointAspectMethodAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_point_aspect_method_aspect_0");
+        return global::OcctSharp.Graphic3dAspectMarker3d.FromNative(handleValue, "occtsharp_generated_prs3d_point_aspect_method_aspect_0");
+    }
+
+    /// <summary>Invokes OCCT Prs3d_PointAspect::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dPointAspectMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs3d_point_aspect_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs3d_point_aspect_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Prs3d_PointAspect::GetTexture.</summary>
+    public Graphic3dMarkerImage? GetTexture()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dPointAspectMethodGetTexture0(handle, out nint handleValue), "occtsharp_generated_prs3d_point_aspect_method_get_texture_0");
+        return global::OcctSharp.Graphic3dMarkerImage.FromNative(handleValue, "occtsharp_generated_prs3d_point_aspect_method_get_texture_0");
+    }
+
     /// <summary>Invokes OCCT Prs3d_PointAspect::SetAspect.</summary>
     public void SetAspect(Graphic3dAspectMarker3d? theAspect)
     {
@@ -34675,6 +39895,22 @@ public sealed class Prs3dPresentationShadow : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dPresentationShadowMethodCalculateBoundBox0(handle), "occtsharp_generated_prs3d_presentation_shadow_method_calculate_bound_box_0");
     }
 
+    /// <summary>Invokes OCCT Prs3d_PresentationShadow::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dPresentationShadowMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs3d_presentation_shadow_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs3d_presentation_shadow_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Prs3d_PresentationShadow::ParentAffinity.</summary>
+    public Graphic3dViewAffinity? ParentAffinity()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dPresentationShadowMethodParentAffinity0(handle, out nint handleValue), "occtsharp_generated_prs3d_presentation_shadow_method_parent_affinity_0");
+        return global::OcctSharp.Graphic3dViewAffinity.FromNative(handleValue, "occtsharp_generated_prs3d_presentation_shadow_method_parent_affinity_0");
+    }
+
     /// <summary>Invokes OCCT Prs3d_PresentationShadow::ParentId.</summary>
     public int ParentId()
     {
@@ -34765,6 +40001,14 @@ public sealed class Prs3dShadingAspect : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dShadingAspectCreate1(theAspect is null ? nint.Zero : theAspect.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "Prs3dShadingAspectCreate1");
+    }
+
+    /// <summary>Invokes OCCT Prs3d_ShadingAspect::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dShadingAspectMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs3d_shading_aspect_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs3d_shading_aspect_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Prs3d_ShadingAspect::SetAspect.</summary>
@@ -34894,6 +40138,22 @@ public sealed class Prs3dTextAspect : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dTextAspectMethodAngle0(handle, out double resultValue), "occtsharp_generated_prs3d_text_aspect_method_angle_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Prs3d_TextAspect::Aspect.</summary>
+    public Graphic3dAspectText3d? Aspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dTextAspectMethodAspect0(handle, out nint handleValue), "occtsharp_generated_prs3d_text_aspect_method_aspect_0");
+        return global::OcctSharp.Graphic3dAspectText3d.FromNative(handleValue, "occtsharp_generated_prs3d_text_aspect_method_aspect_0");
+    }
+
+    /// <summary>Invokes OCCT Prs3d_TextAspect::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Prs3dTextAspectMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs3d_text_aspect_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs3d_text_aspect_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Prs3d_TextAspect::Height.</summary>
@@ -35046,6 +40306,30 @@ public sealed class PrsDimAngleDimension : IDisposable
         handle = CreateHandle(nativeHandle, "PrsDimAngleDimensionCreate0");
     }
 
+    /// <summary>Invokes OCCT PrsDim_AngleDimension::CenterPoint.</summary>
+    public Point3d CenterPoint()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimAngleDimensionMethodCenterPoint0(handle, out Point3dRaw resultValue), "occtsharp_generated_prs_dim_angle_dimension_method_center_point_0");
+        return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT PrsDim_AngleDimension::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimAngleDimensionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs_dim_angle_dimension_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs_dim_angle_dimension_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT PrsDim_AngleDimension::FirstPoint.</summary>
+    public Point3d FirstPoint()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimAngleDimensionMethodFirstPoint0(handle, out Point3dRaw resultValue), "occtsharp_generated_prs_dim_angle_dimension_method_first_point_0");
+        return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
     /// <summary>Invokes OCCT PrsDim_AngleDimension::GetArrowsVisibility.</summary>
     public PrsDimTypeOfAngleArrowVisibility GetArrowsVisibility()
     {
@@ -35068,6 +40352,14 @@ public sealed class PrsDimAngleDimension : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimAngleDimensionMethodOcctGetType0(handle, out int resultValue), "occtsharp_generated_prs_dim_angle_dimension_method_get_type_0");
         return (PrsDimTypeOfAngle)resultValue;
+    }
+
+    /// <summary>Invokes OCCT PrsDim_AngleDimension::SecondPoint.</summary>
+    public Point3d SecondPoint()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimAngleDimensionMethodSecondPoint0(handle, out Point3dRaw resultValue), "occtsharp_generated_prs_dim_angle_dimension_method_second_point_0");
+        return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
     /// <summary>Invokes OCCT PrsDim_AngleDimension::SetArrowsVisibility.</summary>
@@ -35166,6 +40458,14 @@ public sealed class PrsDimChamf2dDimension : IDisposable
 
     private PrsDimChamf2dDimension(PrsDimChamf2dDimensionHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT PrsDim_Chamf2dDimension::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimChamf2dDimensionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs_dim_chamf2d_dimension_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs_dim_chamf2d_dimension_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT PrsDim_Chamf2dDimension::IsMovable.</summary>
     public bool IsMovable()
     {
@@ -35249,6 +40549,14 @@ public sealed class PrsDimChamf3dDimension : IDisposable
     private readonly PrsDimChamf3dDimensionHandle handle;
 
     private PrsDimChamf3dDimension(PrsDimChamf3dDimensionHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT PrsDim_Chamf3dDimension::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimChamf3dDimensionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs_dim_chamf3d_dimension_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs_dim_chamf3d_dimension_method_dynamic_type_0");
+    }
 
     /// <summary>Invokes OCCT PrsDim_Chamf3dDimension::IsMovable.</summary>
     public bool IsMovable()
@@ -35334,6 +40642,14 @@ public sealed class PrsDimConcentricRelation : IDisposable
 
     private PrsDimConcentricRelation(PrsDimConcentricRelationHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT PrsDim_ConcentricRelation::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimConcentricRelationMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs_dim_concentric_relation_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs_dim_concentric_relation_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -35408,6 +40724,14 @@ public sealed class PrsDimDiameterDimension : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimDiameterDimensionMethodAnchorPoint0(handle, out Point3dRaw resultValue), "occtsharp_generated_prs_dim_diameter_dimension_method_anchor_point_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT PrsDim_DiameterDimension::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimDiameterDimensionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs_dim_diameter_dimension_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs_dim_diameter_dimension_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT PrsDim_DiameterDimension::GetTextPosition.</summary>
@@ -35515,6 +40839,14 @@ public sealed class PrsDimDimension : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimDimensionMethodDisplaySpecialSymbol0(handle, out int resultValue), "occtsharp_generated_prs_dim_dimension_method_display_special_symbol_0");
         return (PrsDimDisplaySpecialSymbol)resultValue;
+    }
+
+    /// <summary>Invokes OCCT PrsDim_Dimension::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimDimensionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs_dim_dimension_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs_dim_dimension_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT PrsDim_Dimension::GetFlyout.</summary>
@@ -35728,6 +41060,14 @@ public sealed class PrsDimDimensionOwner : IDisposable
         handle = CreateHandle(nativeHandle, "PrsDimDimensionOwnerCreate0");
     }
 
+    /// <summary>Invokes OCCT PrsDim_DimensionOwner::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimDimensionOwnerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs_dim_dimension_owner_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs_dim_dimension_owner_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT PrsDim_DimensionOwner::HilightWithColor.</summary>
     public void HilightWithColor(PrsMgrPresentationManager? thePM, Prs3dDrawer? theStyle, int theMode)
     {
@@ -35833,6 +41173,14 @@ public sealed class PrsDimEllipseRadiusDimension : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimEllipseRadiusDimensionMethodComputeGeometry0(handle), "occtsharp_generated_prs_dim_ellipse_radius_dimension_method_compute_geometry_0");
     }
 
+    /// <summary>Invokes OCCT PrsDim_EllipseRadiusDimension::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimEllipseRadiusDimensionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs_dim_ellipse_radius_dimension_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs_dim_ellipse_radius_dimension_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT PrsDim_EllipseRadiusDimension::IsMovable.</summary>
     public bool IsMovable()
     {
@@ -35917,6 +41265,14 @@ public sealed class PrsDimEqualDistanceRelation : IDisposable
 
     private PrsDimEqualDistanceRelation(PrsDimEqualDistanceRelationHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT PrsDim_EqualDistanceRelation::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimEqualDistanceRelationMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs_dim_equal_distance_relation_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs_dim_equal_distance_relation_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -35985,6 +41341,14 @@ public sealed class PrsDimEqualRadiusRelation : IDisposable
 
     private PrsDimEqualRadiusRelation(PrsDimEqualRadiusRelationHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT PrsDim_EqualRadiusRelation::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimEqualRadiusRelationMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs_dim_equal_radius_relation_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs_dim_equal_radius_relation_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -36052,6 +41416,14 @@ public sealed class PrsDimFixRelation : IDisposable
     private readonly PrsDimFixRelationHandle handle;
 
     private PrsDimFixRelation(PrsDimFixRelationHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT PrsDim_FixRelation::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimFixRelationMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs_dim_fix_relation_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs_dim_fix_relation_method_dynamic_type_0");
+    }
 
     /// <summary>Invokes OCCT PrsDim_FixRelation::IsMovable.</summary>
     public bool IsMovable()
@@ -36141,6 +41513,14 @@ public sealed class PrsDimIdenticRelation : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimIdenticRelationMethodClearUsers0(handle), "occtsharp_generated_prs_dim_identic_relation_method_clear_users_0");
+    }
+
+    /// <summary>Invokes OCCT PrsDim_IdenticRelation::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimIdenticRelationMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs_dim_identic_relation_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs_dim_identic_relation_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT PrsDim_IdenticRelation::HasUsers.</summary>
@@ -36235,11 +41615,35 @@ public sealed class PrsDimLengthDimension : IDisposable
         handle = CreateHandle(nativeHandle, "PrsDimLengthDimensionCreate0");
     }
 
+    /// <summary>Invokes OCCT PrsDim_LengthDimension::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimLengthDimensionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs_dim_length_dimension_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs_dim_length_dimension_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT PrsDim_LengthDimension::FirstPoint.</summary>
+    public Point3d FirstPoint()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimLengthDimensionMethodFirstPoint0(handle, out Point3dRaw resultValue), "occtsharp_generated_prs_dim_length_dimension_method_first_point_0");
+        return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
     /// <summary>Invokes OCCT PrsDim_LengthDimension::GetTextPosition.</summary>
     public Point3d GetTextPosition()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimLengthDimensionMethodGetTextPosition0(handle, out Point3dRaw resultValue), "occtsharp_generated_prs_dim_length_dimension_method_get_text_position_0");
+        return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT PrsDim_LengthDimension::SecondPoint.</summary>
+    public Point3d SecondPoint()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimLengthDimensionMethodSecondPoint0(handle, out Point3dRaw resultValue), "occtsharp_generated_prs_dim_length_dimension_method_second_point_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
@@ -36318,6 +41722,14 @@ public sealed class PrsDimMaxRadiusDimension : IDisposable
 
     private PrsDimMaxRadiusDimension(PrsDimMaxRadiusDimensionHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT PrsDim_MaxRadiusDimension::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimMaxRadiusDimensionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs_dim_max_radius_dimension_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs_dim_max_radius_dimension_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -36385,6 +41797,14 @@ public sealed class PrsDimMidPointRelation : IDisposable
     private readonly PrsDimMidPointRelationHandle handle;
 
     private PrsDimMidPointRelation(PrsDimMidPointRelationHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT PrsDim_MidPointRelation::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimMidPointRelationMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs_dim_mid_point_relation_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs_dim_mid_point_relation_method_dynamic_type_0");
+    }
 
     /// <summary>Invokes OCCT PrsDim_MidPointRelation::IsMovable.</summary>
     public bool IsMovable()
@@ -36462,6 +41882,14 @@ public sealed class PrsDimMinRadiusDimension : IDisposable
 
     private PrsDimMinRadiusDimension(PrsDimMinRadiusDimensionHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT PrsDim_MinRadiusDimension::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimMinRadiusDimensionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs_dim_min_radius_dimension_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs_dim_min_radius_dimension_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -36529,6 +41957,14 @@ public sealed class PrsDimOffsetDimension : IDisposable
     private readonly PrsDimOffsetDimensionHandle handle;
 
     private PrsDimOffsetDimension(PrsDimOffsetDimensionHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT PrsDim_OffsetDimension::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimOffsetDimensionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs_dim_offset_dimension_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs_dim_offset_dimension_method_dynamic_type_0");
+    }
 
     /// <summary>Invokes OCCT PrsDim_OffsetDimension::IsMovable.</summary>
     public bool IsMovable()
@@ -36614,6 +42050,14 @@ public sealed class PrsDimParallelRelation : IDisposable
 
     private PrsDimParallelRelation(PrsDimParallelRelationHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT PrsDim_ParallelRelation::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimParallelRelationMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs_dim_parallel_relation_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs_dim_parallel_relation_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT PrsDim_ParallelRelation::IsMovable.</summary>
     public bool IsMovable()
     {
@@ -36690,6 +42134,14 @@ public sealed class PrsDimPerpendicularRelation : IDisposable
 
     private PrsDimPerpendicularRelation(PrsDimPerpendicularRelationHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT PrsDim_PerpendicularRelation::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimPerpendicularRelationMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs_dim_perpendicular_relation_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs_dim_perpendicular_relation_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -36757,6 +42209,22 @@ public sealed class PrsDimRadiusDimension : IDisposable
     private readonly PrsDimRadiusDimensionHandle handle;
 
     private PrsDimRadiusDimension(PrsDimRadiusDimensionHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT PrsDim_RadiusDimension::AnchorPoint.</summary>
+    public Point3d AnchorPoint()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimRadiusDimensionMethodAnchorPoint0(handle, out Point3dRaw resultValue), "occtsharp_generated_prs_dim_radius_dimension_method_anchor_point_0");
+        return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT PrsDim_RadiusDimension::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimRadiusDimensionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs_dim_radius_dimension_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs_dim_radius_dimension_method_dynamic_type_0");
+    }
 
     /// <summary>Invokes OCCT PrsDim_RadiusDimension::GetTextPosition.</summary>
     public Point3d GetTextPosition()
@@ -36865,6 +42333,14 @@ public sealed class PrsDimRelation : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT PrsDim_Relation::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimRelationMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs_dim_relation_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs_dim_relation_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT PrsDim_Relation::ExtShape.</summary>
     public int ExtShape()
     {
@@ -36887,6 +42363,22 @@ public sealed class PrsDimRelation : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimRelationMethodKindOfDimension0(handle, out int resultValue), "occtsharp_generated_prs_dim_relation_method_kind_of_dimension_0");
         return (PrsDimKindOfDimension)resultValue;
+    }
+
+    /// <summary>Invokes OCCT PrsDim_Relation::Plane.</summary>
+    public GeomPlane? Plane()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimRelationMethodPlane0(handle, out nint handleValue), "occtsharp_generated_prs_dim_relation_method_plane_0");
+        return global::OcctSharp.GeomPlane.FromNative(handleValue, "occtsharp_generated_prs_dim_relation_method_plane_0");
+    }
+
+    /// <summary>Invokes OCCT PrsDim_Relation::Position.</summary>
+    public Point3d Position()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimRelationMethodPosition0(handle, out Point3dRaw resultValue), "occtsharp_generated_prs_dim_relation_method_position_0");
+        return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
     /// <summary>Invokes OCCT PrsDim_Relation::SetArrowSize.</summary>
@@ -37051,6 +42543,14 @@ public sealed class PrsDimSymmetricRelation : IDisposable
 
     private PrsDimSymmetricRelation(PrsDimSymmetricRelationHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT PrsDim_SymmetricRelation::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimSymmetricRelationMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs_dim_symmetric_relation_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs_dim_symmetric_relation_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT PrsDim_SymmetricRelation::IsMovable.</summary>
     public bool IsMovable()
     {
@@ -37126,6 +42626,14 @@ public sealed class PrsDimTangentRelation : IDisposable
     private readonly PrsDimTangentRelationHandle handle;
 
     private PrsDimTangentRelation(PrsDimTangentRelationHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT PrsDim_TangentRelation::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimTangentRelationMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs_dim_tangent_relation_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs_dim_tangent_relation_method_dynamic_type_0");
+    }
 
     /// <summary>Invokes OCCT PrsDim_TangentRelation::ExternRef.</summary>
     public int ExternRef()
@@ -37239,6 +42747,22 @@ public sealed class PrsMgrPresentableObject : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsMgrPresentableObjectMethodAddClipPlane0(handle, thePlane is null ? nint.Zero : thePlane.NativeHandle.DangerousGetHandle()), "occtsharp_generated_prs_mgr_presentable_object_method_add_clip_plane_0");
     }
 
+    /// <summary>Invokes OCCT PrsMgr_PresentableObject::ClipPlanes.</summary>
+    public Graphic3dSequenceOfHClipPlane? ClipPlanes()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsMgrPresentableObjectMethodClipPlanes0(handle, out nint handleValue), "occtsharp_generated_prs_mgr_presentable_object_method_clip_planes_0");
+        return global::OcctSharp.Graphic3dSequenceOfHClipPlane.FromNative(handleValue, "occtsharp_generated_prs_mgr_presentable_object_method_clip_planes_0");
+    }
+
+    /// <summary>Invokes OCCT PrsMgr_PresentableObject::CombinedParentTransformation.</summary>
+    public TopLocDatum3D? CombinedParentTransformation()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsMgrPresentableObjectMethodCombinedParentTransformation0(handle, out nint handleValue), "occtsharp_generated_prs_mgr_presentable_object_method_combined_parent_transformation_0");
+        return global::OcctSharp.TopLocDatum3D.FromNative(handleValue, "occtsharp_generated_prs_mgr_presentable_object_method_combined_parent_transformation_0");
+    }
+
     /// <summary>Invokes OCCT PrsMgr_PresentableObject::CurrentFacingModel.</summary>
     public AspectTypeOfFacingModel CurrentFacingModel()
     {
@@ -37269,6 +42793,22 @@ public sealed class PrsMgrPresentableObject : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsMgrPresentableObjectMethodDisplayStatus0(handle, out int resultValue), "occtsharp_generated_prs_mgr_presentable_object_method_display_status_0");
         return (PrsMgrDisplayStatus)resultValue;
+    }
+
+    /// <summary>Invokes OCCT PrsMgr_PresentableObject::DynamicHilightAttributes.</summary>
+    public Prs3dDrawer? DynamicHilightAttributes()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsMgrPresentableObjectMethodDynamicHilightAttributes0(handle, out nint handleValue), "occtsharp_generated_prs_mgr_presentable_object_method_dynamic_hilight_attributes_0");
+        return global::OcctSharp.Prs3dDrawer.FromNative(handleValue, "occtsharp_generated_prs_mgr_presentable_object_method_dynamic_hilight_attributes_0");
+    }
+
+    /// <summary>Invokes OCCT PrsMgr_PresentableObject::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsMgrPresentableObjectMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs_mgr_presentable_object_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs_mgr_presentable_object_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT PrsMgr_PresentableObject::HasColor.</summary>
@@ -37335,6 +42875,14 @@ public sealed class PrsMgrPresentableObject : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT PrsMgr_PresentableObject::HilightAttributes.</summary>
+    public Prs3dDrawer? HilightAttributes()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsMgrPresentableObjectMethodHilightAttributes0(handle, out nint handleValue), "occtsharp_generated_prs_mgr_presentable_object_method_hilight_attributes_0");
+        return global::OcctSharp.Prs3dDrawer.FromNative(handleValue, "occtsharp_generated_prs_mgr_presentable_object_method_hilight_attributes_0");
+    }
+
     /// <summary>Invokes OCCT PrsMgr_PresentableObject::HilightMode.</summary>
     public int HilightMode()
     {
@@ -37365,6 +42913,14 @@ public sealed class PrsMgrPresentableObject : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsMgrPresentableObjectMethodIsTransparent0(handle, out int resultValue), "occtsharp_generated_prs_mgr_presentable_object_method_is_transparent_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT PrsMgr_PresentableObject::LocalTransformationGeom.</summary>
+    public TopLocDatum3D? LocalTransformationGeom()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsMgrPresentableObjectMethodLocalTransformationGeom0(handle, out nint handleValue), "occtsharp_generated_prs_mgr_presentable_object_method_local_transformation_geom_0");
+        return global::OcctSharp.TopLocDatum3D.FromNative(handleValue, "occtsharp_generated_prs_mgr_presentable_object_method_local_transformation_geom_0");
     }
 
     /// <summary>Invokes OCCT PrsMgr_PresentableObject::Material.</summary>
@@ -37487,6 +43043,13 @@ public sealed class PrsMgrPresentableObject : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsMgrPresentableObjectMethodSetMutable0(handle, theIsMutable ? 1 : 0), "occtsharp_generated_prs_mgr_presentable_object_method_set_mutable_0");
     }
 
+    /// <summary>Invokes OCCT PrsMgr_PresentableObject::SetPolygonOffsets.</summary>
+    public void SetPolygonOffsets(int aMode, float aFactor, float aUnits)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsMgrPresentableObjectMethodSetPolygonOffsets0(handle, aMode, aFactor, aUnits), "occtsharp_generated_prs_mgr_presentable_object_method_set_polygon_offsets_0");
+    }
+
     /// <summary>Invokes OCCT PrsMgr_PresentableObject::SetPropagateVisualState.</summary>
     public void SetPropagateVisualState(bool theFlag)
     {
@@ -37566,6 +43129,22 @@ public sealed class PrsMgrPresentableObject : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT PrsMgr_PresentableObject::TransformPersistence.</summary>
+    public Graphic3dTransformPers? TransformPersistence()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsMgrPresentableObjectMethodTransformPersistence0(handle, out nint handleValue), "occtsharp_generated_prs_mgr_presentable_object_method_transform_persistence_0");
+        return global::OcctSharp.Graphic3dTransformPers.FromNative(handleValue, "occtsharp_generated_prs_mgr_presentable_object_method_transform_persistence_0");
+    }
+
+    /// <summary>Invokes OCCT PrsMgr_PresentableObject::TransformationGeom.</summary>
+    public TopLocDatum3D? TransformationGeom()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsMgrPresentableObjectMethodTransformationGeom0(handle, out nint handleValue), "occtsharp_generated_prs_mgr_presentable_object_method_transformation_geom_0");
+        return global::OcctSharp.TopLocDatum3D.FromNative(handleValue, "occtsharp_generated_prs_mgr_presentable_object_method_transformation_geom_0");
+    }
+
     /// <summary>Invokes OCCT PrsMgr_PresentableObject::Transparency.</summary>
     public double Transparency()
     {
@@ -37643,6 +43222,14 @@ public sealed class PrsMgrPresentableObject : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsMgrPresentableObjectMethodUpdateTransformation0(handle), "occtsharp_generated_prs_mgr_presentable_object_method_update_transformation_0");
+    }
+
+    /// <summary>Invokes OCCT PrsMgr_PresentableObject::ViewAffinity.</summary>
+    public Graphic3dViewAffinity? ViewAffinity()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsMgrPresentableObjectMethodViewAffinity0(handle, out nint handleValue), "occtsharp_generated_prs_mgr_presentable_object_method_view_affinity_0");
+        return global::OcctSharp.Graphic3dViewAffinity.FromNative(handleValue, "occtsharp_generated_prs_mgr_presentable_object_method_view_affinity_0");
     }
 
     /// <summary>Invokes OCCT PrsMgr_PresentableObject::Width.</summary>
@@ -37750,6 +43337,14 @@ public sealed class PrsMgrPresentation : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsMgrPresentationMethodDisplay0(handle), "occtsharp_generated_prs_mgr_presentation_method_display_0");
     }
 
+    /// <summary>Invokes OCCT PrsMgr_Presentation::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsMgrPresentationMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs_mgr_presentation_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs_mgr_presentation_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT PrsMgr_Presentation::Erase.</summary>
     public void Erase()
     {
@@ -37786,6 +43381,14 @@ public sealed class PrsMgrPresentation : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsMgrPresentationMethodMustBeUpdated0(handle, out int resultValue), "occtsharp_generated_prs_mgr_presentation_method_must_be_updated_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT PrsMgr_Presentation::PresentationManager.</summary>
+    public PrsMgrPresentationManager? PresentationManager()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsMgrPresentationMethodPresentationManager0(handle, out nint handleValue), "occtsharp_generated_prs_mgr_presentation_method_presentation_manager_0");
+        return global::OcctSharp.PrsMgrPresentationManager.FromNative(handleValue, "occtsharp_generated_prs_mgr_presentation_method_presentation_manager_0");
     }
 
     /// <summary>Invokes OCCT PrsMgr_Presentation::SetUpdateStatus.</summary>
@@ -37928,6 +43531,14 @@ public sealed class PrsMgrPresentationManager : IDisposable
         return (Graphic3dDisplayPriority)resultValue;
     }
 
+    /// <summary>Invokes OCCT PrsMgr_PresentationManager::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsMgrPresentationManagerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_prs_mgr_presentation_manager_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_prs_mgr_presentation_manager_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT PrsMgr_PresentationManager::EndImmediateDraw.</summary>
     public void EndImmediateDraw(V3dViewer? theViewer)
     {
@@ -38016,6 +43627,14 @@ public sealed class PrsMgrPresentationManager : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsMgrPresentationManagerMethodSetZLayer0(handle, thePrsObject is null ? nint.Zero : thePrsObject.NativeHandle.DangerousGetHandle(), theLayerId), "occtsharp_generated_prs_mgr_presentation_manager_method_set_zlayer_0");
+    }
+
+    /// <summary>Invokes OCCT PrsMgr_PresentationManager::StructureManager.</summary>
+    public Graphic3dStructureManager? StructureManager()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsMgrPresentationManagerMethodStructureManager0(handle, out nint handleValue), "occtsharp_generated_prs_mgr_presentation_manager_method_structure_manager_0");
+        return global::OcctSharp.Graphic3dStructureManager.FromNative(handleValue, "occtsharp_generated_prs_mgr_presentation_manager_method_structure_manager_0");
     }
 
     /// <summary>Invokes OCCT PrsMgr_PresentationManager::Transform.</summary>
@@ -38120,6 +43739,14 @@ public sealed class Select3DBVHIndexBuffer : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DBVHIndexBufferCreate0(theAlloc is null ? nint.Zero : theAlloc.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "Select3DBVHIndexBufferCreate0");
+    }
+
+    /// <summary>Invokes OCCT Select3D_BVHIndexBuffer::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DBVHIndexBufferMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select3_d_bvhindex_buffer_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select3_d_bvhindex_buffer_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Select3D_BVHIndexBuffer::HasPatches.</summary>
@@ -38252,6 +43879,14 @@ public sealed class Select3DInteriorSensitivePointSet : IDisposable
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
+    /// <summary>Invokes OCCT Select3D_InteriorSensitivePointSet::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DInteriorSensitivePointSetMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select3_d_interior_sensitive_point_set_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select3_d_interior_sensitive_point_set_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Select3D_InteriorSensitivePointSet::NbSubElements.</summary>
     public int NbSubElements()
     {
@@ -38359,6 +43994,14 @@ public sealed class Select3DSensitiveBox : IDisposable
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
+    /// <summary>Invokes OCCT Select3D_SensitiveBox::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveBoxMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select3_d_sensitive_box_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select3_d_sensitive_box_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Select3D_SensitiveBox::GetConnected.</summary>
     public Select3DSensitiveEntity? GetConnected()
     {
@@ -38457,6 +44100,14 @@ public sealed class Select3DSensitiveCircle : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveCircleMethodCenterOfGeometry0(handle, out Point3dRaw resultValue), "occtsharp_generated_select3_d_sensitive_circle_method_center_of_geometry_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT Select3D_SensitiveCircle::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveCircleMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select3_d_sensitive_circle_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select3_d_sensitive_circle_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Select3D_SensitiveCircle::GetConnected.</summary>
@@ -38567,6 +44218,14 @@ public sealed class Select3DSensitiveCurve : IDisposable
         handle = CreateHandle(nativeHandle, "Select3DSensitiveCurveCreate0");
     }
 
+    /// <summary>Invokes OCCT Select3D_SensitiveCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select3_d_sensitive_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select3_d_sensitive_curve_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Select3D_SensitiveCurve::GetConnected.</summary>
     public Select3DSensitiveEntity? GetConnected()
     {
@@ -38657,6 +44316,14 @@ public sealed class Select3DSensitiveCylinder : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveCylinderMethodCenterOfGeometry0(handle, out Point3dRaw resultValue), "occtsharp_generated_select3_d_sensitive_cylinder_method_center_of_geometry_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT Select3D_SensitiveCylinder::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveCylinderMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select3_d_sensitive_cylinder_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select3_d_sensitive_cylinder_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Select3D_SensitiveCylinder::GetConnected.</summary>
@@ -38789,6 +44456,22 @@ public sealed class Select3DSensitiveEntity : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveEntityMethodClear0(handle), "occtsharp_generated_select3_d_sensitive_entity_method_clear_0");
     }
 
+    /// <summary>Invokes OCCT Select3D_SensitiveEntity::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveEntityMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select3_d_sensitive_entity_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select3_d_sensitive_entity_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Select3D_SensitiveEntity::Flipper.</summary>
+    public Graphic3dFlipper? Flipper()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveEntityMethodFlipper0(handle, out nint handleValue), "occtsharp_generated_select3_d_sensitive_entity_method_flipper_0");
+        return global::OcctSharp.Graphic3dFlipper.FromNative(handleValue, "occtsharp_generated_select3_d_sensitive_entity_method_flipper_0");
+    }
+
     /// <summary>Invokes OCCT Select3D_SensitiveEntity::GetConnected.</summary>
     public Select3DSensitiveEntity? GetConnected()
     {
@@ -38803,6 +44486,14 @@ public sealed class Select3DSensitiveEntity : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveEntityMethodHasInitLocation0(handle, out int resultValue), "occtsharp_generated_select3_d_sensitive_entity_method_has_init_location_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT Select3D_SensitiveEntity::OwnerId.</summary>
+    public SelectMgrEntityOwner? OwnerId()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveEntityMethodOwnerId0(handle, out nint handleValue), "occtsharp_generated_select3_d_sensitive_entity_method_owner_id_0");
+        return global::OcctSharp.SelectMgrEntityOwner.FromNative(handleValue, "occtsharp_generated_select3_d_sensitive_entity_method_owner_id_0");
     }
 
     /// <summary>Invokes OCCT Select3D_SensitiveEntity::SensitivityFactor.</summary>
@@ -38840,6 +44531,14 @@ public sealed class Select3DSensitiveEntity : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveEntityMethodToBuildBVH0(handle, out int resultValue), "occtsharp_generated_select3_d_sensitive_entity_method_to_build_bvh_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT Select3D_SensitiveEntity::TransformPersistence.</summary>
+    public Graphic3dTransformPers? TransformPersistence()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveEntityMethodTransformPersistence0(handle, out nint handleValue), "occtsharp_generated_select3_d_sensitive_entity_method_transform_persistence_0");
+        return global::OcctSharp.Graphic3dTransformPers.FromNative(handleValue, "occtsharp_generated_select3_d_sensitive_entity_method_transform_persistence_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -38923,6 +44622,14 @@ public sealed class Select3DSensitiveFace : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveFaceMethodCenterOfGeometry0(handle, out Point3dRaw resultValue), "occtsharp_generated_select3_d_sensitive_face_method_center_of_geometry_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT Select3D_SensitiveFace::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveFaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select3_d_sensitive_face_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select3_d_sensitive_face_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Select3D_SensitiveFace::GetConnected.</summary>
@@ -39055,6 +44762,14 @@ public sealed class Select3DSensitiveGroup : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveGroupMethodClear0(handle), "occtsharp_generated_select3_d_sensitive_group_method_clear_0");
     }
 
+    /// <summary>Invokes OCCT Select3D_SensitiveGroup::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveGroupMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select3_d_sensitive_group_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select3_d_sensitive_group_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Select3D_SensitiveGroup::GetConnected.</summary>
     public Select3DSensitiveEntity? GetConnected()
     {
@@ -39137,6 +44852,14 @@ public sealed class Select3DSensitiveGroup : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveGroupMethodSize0(handle, out int resultValue), "occtsharp_generated_select3_d_sensitive_group_method_size_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Select3D_SensitiveGroup::SubEntity.</summary>
+    public Select3DSensitiveEntity? SubEntity(int theIndex)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveGroupMethodSubEntity0(handle, theIndex, out nint handleValue), "occtsharp_generated_select3_d_sensitive_group_method_sub_entity_0");
+        return global::OcctSharp.Select3DSensitiveEntity.FromNative(handleValue, "occtsharp_generated_select3_d_sensitive_group_method_sub_entity_0");
     }
 
     /// <summary>Invokes OCCT Select3D_SensitiveGroup::Swap.</summary>
@@ -39238,6 +44961,14 @@ public sealed class Select3DSensitivePoint : IDisposable
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
+    /// <summary>Invokes OCCT Select3D_SensitivePoint::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitivePointMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select3_d_sensitive_point_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select3_d_sensitive_point_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Select3D_SensitivePoint::GetConnected.</summary>
     public Select3DSensitiveEntity? GetConnected()
     {
@@ -39252,6 +44983,14 @@ public sealed class Select3DSensitivePoint : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitivePointMethodNbSubElements0(handle, out int resultValue), "occtsharp_generated_select3_d_sensitive_point_method_nb_sub_elements_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Select3D_SensitivePoint::Point.</summary>
+    public Point3d Point()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitivePointMethodPoint0(handle, out Point3dRaw resultValue), "occtsharp_generated_select3_d_sensitive_point_method_point_0");
+        return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
     /// <summary>Invokes OCCT Select3D_SensitivePoint::ToBuildBVH.</summary>
@@ -39352,6 +45091,14 @@ public sealed class Select3DSensitivePoly : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitivePolyMethodCenterOfGeometry0(handle, out Point3dRaw resultValue), "occtsharp_generated_select3_d_sensitive_poly_method_center_of_geometry_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT Select3D_SensitivePoly::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitivePolyMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select3_d_sensitive_poly_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select3_d_sensitive_poly_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Select3D_SensitivePoly::GetPoint3d.</summary>
@@ -39484,6 +45231,14 @@ public sealed class Select3DSensitivePrimitiveArray : IDisposable
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
+    /// <summary>Invokes OCCT Select3D_SensitivePrimitiveArray::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitivePrimitiveArrayMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select3_d_sensitive_primitive_array_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select3_d_sensitive_primitive_array_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Select3D_SensitivePrimitiveArray::GetConnected.</summary>
     public Select3DSensitiveEntity? GetConnected()
     {
@@ -39524,6 +45279,14 @@ public sealed class Select3DSensitivePrimitiveArray : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Select3D_SensitivePrimitiveArray::LastDetectedElementMap.</summary>
+    public TColStdHPackedMapOfInteger? LastDetectedElementMap()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitivePrimitiveArrayMethodLastDetectedElementMap0(handle, out nint handleValue), "occtsharp_generated_select3_d_sensitive_primitive_array_method_last_detected_element_map_0");
+        return global::OcctSharp.TColStdHPackedMapOfInteger.FromNative(handleValue, "occtsharp_generated_select3_d_sensitive_primitive_array_method_last_detected_element_map_0");
+    }
+
     /// <summary>Invokes OCCT Select3D_SensitivePrimitiveArray::LastDetectedNode.</summary>
     public int LastDetectedNode()
     {
@@ -39532,11 +45295,27 @@ public sealed class Select3DSensitivePrimitiveArray : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Select3D_SensitivePrimitiveArray::LastDetectedNodeMap.</summary>
+    public TColStdHPackedMapOfInteger? LastDetectedNodeMap()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitivePrimitiveArrayMethodLastDetectedNodeMap0(handle, out nint handleValue), "occtsharp_generated_select3_d_sensitive_primitive_array_method_last_detected_node_map_0");
+        return global::OcctSharp.TColStdHPackedMapOfInteger.FromNative(handleValue, "occtsharp_generated_select3_d_sensitive_primitive_array_method_last_detected_node_map_0");
+    }
+
     /// <summary>Invokes OCCT Select3D_SensitivePrimitiveArray::NbSubElements.</summary>
     public int NbSubElements()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitivePrimitiveArrayMethodNbSubElements0(handle, out int resultValue), "occtsharp_generated_select3_d_sensitive_primitive_array_method_nb_sub_elements_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Select3D_SensitivePrimitiveArray::PatchDistance.</summary>
+    public float PatchDistance()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitivePrimitiveArrayMethodPatchDistance0(handle, out float resultValue), "occtsharp_generated_select3_d_sensitive_primitive_array_method_patch_distance_0");
         return resultValue;
     }
 
@@ -39595,6 +45374,13 @@ public sealed class Select3DSensitivePrimitiveArray : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitivePrimitiveArrayMethodSetMinMax0(handle, theMinX, theMinY, theMinZ, theMaxX, theMaxY, theMaxZ), "occtsharp_generated_select3_d_sensitive_primitive_array_method_set_min_max_0");
+    }
+
+    /// <summary>Invokes OCCT Select3D_SensitivePrimitiveArray::SetPatchDistance.</summary>
+    public void SetPatchDistance(float thePatchDistMax)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitivePrimitiveArrayMethodSetPatchDistance0(handle, thePatchDistMax), "occtsharp_generated_select3_d_sensitive_primitive_array_method_set_patch_distance_0");
     }
 
     /// <summary>Invokes OCCT Select3D_SensitivePrimitiveArray::SetPatchSizeMax.</summary>
@@ -39743,11 +45529,27 @@ public sealed class Select3DSensitiveSegment : IDisposable
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
+    /// <summary>Invokes OCCT Select3D_SensitiveSegment::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveSegmentMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select3_d_sensitive_segment_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select3_d_sensitive_segment_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Select3D_SensitiveSegment::EndPoint.</summary>
     public void EndPoint(Point3d thePnt)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveSegmentMethodEndPoint0(handle, new Point3dRaw(thePnt.X, thePnt.Y, thePnt.Z)), "occtsharp_generated_select3_d_sensitive_segment_method_end_point_0");
+    }
+
+    /// <summary>Invokes OCCT Select3D_SensitiveSegment::EndPoint.</summary>
+    public Point3d EndPoint()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveSegmentMethodEndPoint1(handle, out Point3dRaw resultValue), "occtsharp_generated_select3_d_sensitive_segment_method_end_point_1");
+        return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
     /// <summary>Invokes OCCT Select3D_SensitiveSegment::GetConnected.</summary>
@@ -39785,6 +45587,14 @@ public sealed class Select3DSensitiveSegment : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveSegmentMethodStartPoint0(handle, new Point3dRaw(thePnt.X, thePnt.Y, thePnt.Z)), "occtsharp_generated_select3_d_sensitive_segment_method_start_point_0");
+    }
+
+    /// <summary>Invokes OCCT Select3D_SensitiveSegment::StartPoint.</summary>
+    public Point3d StartPoint()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveSegmentMethodStartPoint1(handle, out Point3dRaw resultValue), "occtsharp_generated_select3_d_sensitive_segment_method_start_point_1");
+        return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
     /// <summary>Invokes OCCT Select3D_SensitiveSegment::ToBuildBVH.</summary>
@@ -39883,6 +45693,14 @@ public sealed class Select3DSensitiveSet : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveSetMethodClear0(handle), "occtsharp_generated_select3_d_sensitive_set_method_clear_0");
+    }
+
+    /// <summary>Invokes OCCT Select3D_SensitiveSet::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveSetMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select3_d_sensitive_set_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select3_d_sensitive_set_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Select3D_SensitiveSet::GetLeafNodeSize.</summary>
@@ -39992,12 +45810,28 @@ public sealed class Select3DSensitiveSphere : IDisposable
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
+    /// <summary>Invokes OCCT Select3D_SensitiveSphere::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveSphereMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select3_d_sensitive_sphere_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select3_d_sensitive_sphere_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Select3D_SensitiveSphere::GetConnected.</summary>
     public Select3DSensitiveEntity? GetConnected()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveSphereMethodGetConnected0(handle, out nint handleValue), "occtsharp_generated_select3_d_sensitive_sphere_method_get_connected_0");
         return global::OcctSharp.Select3DSensitiveEntity.FromNative(handleValue, "occtsharp_generated_select3_d_sensitive_sphere_method_get_connected_0");
+    }
+
+    /// <summary>Invokes OCCT Select3D_SensitiveSphere::LastDetectedPoint.</summary>
+    public Point3d LastDetectedPoint()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveSphereMethodLastDetectedPoint0(handle, out Point3dRaw resultValue), "occtsharp_generated_select3_d_sensitive_sphere_method_last_detected_point_0");
+        return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
     /// <summary>Invokes OCCT Select3D_SensitiveSphere::NbSubElements.</summary>
@@ -40123,6 +45957,14 @@ public sealed class Select3DSensitiveTriangle : IDisposable
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
+    /// <summary>Invokes OCCT Select3D_SensitiveTriangle::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveTriangleMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select3_d_sensitive_triangle_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select3_d_sensitive_triangle_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Select3D_SensitiveTriangle::GetConnected.</summary>
     public Select3DSensitiveEntity? GetConnected()
     {
@@ -40231,6 +46073,14 @@ public sealed class Select3DSensitiveTriangulation : IDisposable
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
+    /// <summary>Invokes OCCT Select3D_SensitiveTriangulation::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveTriangulationMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select3_d_sensitive_triangulation_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select3_d_sensitive_triangulation_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Select3D_SensitiveTriangulation::GetConnected.</summary>
     public Select3DSensitiveEntity? GetConnected()
     {
@@ -40276,6 +46126,14 @@ public sealed class Select3DSensitiveTriangulation : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveTriangulationMethodSwap0(handle, theIdx1, theIdx2), "occtsharp_generated_select3_d_sensitive_triangulation_method_swap_0");
+    }
+
+    /// <summary>Invokes OCCT Select3D_SensitiveTriangulation::Triangulation.</summary>
+    public PolyTriangulation? Triangulation()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveTriangulationMethodTriangulation0(handle, out nint handleValue), "occtsharp_generated_select3_d_sensitive_triangulation_method_triangulation_0");
+        return global::OcctSharp.PolyTriangulation.FromNative(handleValue, "occtsharp_generated_select3_d_sensitive_triangulation_method_triangulation_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -40375,6 +46233,14 @@ public sealed class Select3DSensitiveWire : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveWireMethodCenterOfGeometry0(handle, out Point3dRaw resultValue), "occtsharp_generated_select3_d_sensitive_wire_method_center_of_geometry_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT Select3D_SensitiveWire::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveWireMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select3_d_sensitive_wire_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select3_d_sensitive_wire_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Select3D_SensitiveWire::GetConnected.</summary>
@@ -40499,6 +46365,14 @@ public sealed class SelectMgrAndFilter : IDisposable
         handle = CreateHandle(nativeHandle, "SelectMgrAndFilterCreate0");
     }
 
+    /// <summary>Invokes OCCT SelectMgr_AndFilter::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrAndFilterMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select_mgr_and_filter_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select_mgr_and_filter_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT SelectMgr_AndFilter::IsOk.</summary>
     public bool IsOk(SelectMgrEntityOwner? anobj)
     {
@@ -40581,6 +46455,14 @@ public sealed class SelectMgrAndOrFilter : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrAndOrFilterCreate0((int)theFilterType, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "SelectMgrAndOrFilterCreate0");
+    }
+
+    /// <summary>Invokes OCCT SelectMgr_AndOrFilter::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrAndOrFilterMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select_mgr_and_or_filter_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select_mgr_and_or_filter_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT SelectMgr_AndOrFilter::FilterType.</summary>
@@ -40713,6 +46595,22 @@ public sealed class SelectMgrAxisIntersector : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT SelectMgr_AxisIntersector::GetFarPnt.</summary>
+    public Point3d GetFarPnt()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrAxisIntersectorMethodGetFarPnt0(handle, out Point3dRaw resultValue), "occtsharp_generated_select_mgr_axis_intersector_method_get_far_pnt_0");
+        return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT SelectMgr_AxisIntersector::GetNearPnt.</summary>
+    public Point3d GetNearPnt()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrAxisIntersectorMethodGetNearPnt0(handle, out Point3dRaw resultValue), "occtsharp_generated_select_mgr_axis_intersector_method_get_near_pnt_0");
+        return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
     /// <summary>Invokes OCCT SelectMgr_AxisIntersector::IsScalable.</summary>
     public bool IsScalable()
     {
@@ -40819,6 +46717,14 @@ public sealed class SelectMgrBVHThreadPool : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrBVHThreadPoolMethodAddEntity0(handle, theEntity is null ? nint.Zero : theEntity.NativeHandle.DangerousGetHandle()), "occtsharp_generated_select_mgr_bvhthread_pool_method_add_entity_0");
     }
 
+    /// <summary>Invokes OCCT SelectMgr_BVHThreadPool::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrBVHThreadPoolMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select_mgr_bvhthread_pool_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select_mgr_bvhthread_pool_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT SelectMgr_BVHThreadPool::StopThreads.</summary>
     public void StopThreads()
     {
@@ -40900,6 +46806,14 @@ public sealed class SelectMgrBaseFrustum : IDisposable
     private readonly SelectMgrBaseFrustumHandle handle;
 
     private SelectMgrBaseFrustum(SelectMgrBaseFrustumHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT SelectMgr_BaseFrustum::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrBaseFrustumMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select_mgr_base_frustum_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select_mgr_base_frustum_method_dynamic_type_0");
+    }
 
     /// <summary>Invokes OCCT SelectMgr_BaseFrustum::SetBuilder.</summary>
     public void SetBuilder(SelectMgrFrustumBuilder? theBuilder)
@@ -41004,6 +46918,14 @@ public sealed class SelectMgrBaseIntersector : IDisposable
 
     private SelectMgrBaseIntersector(SelectMgrBaseIntersectorHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT SelectMgr_BaseIntersector::Camera.</summary>
+    public Graphic3dCamera? Camera()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrBaseIntersectorMethodCamera0(handle, out nint handleValue), "occtsharp_generated_select_mgr_base_intersector_method_camera_0");
+        return global::OcctSharp.Graphic3dCamera.FromNative(handleValue, "occtsharp_generated_select_mgr_base_intersector_method_camera_0");
+    }
+
     /// <summary>Invokes OCCT SelectMgr_BaseIntersector::DetectedPoint.</summary>
     public Point3d DetectedPoint(double theDepth)
     {
@@ -41018,6 +46940,30 @@ public sealed class SelectMgrBaseIntersector : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrBaseIntersectorMethodDistToGeometryCenter0(handle, new Point3dRaw(theCOG.X, theCOG.Y, theCOG.Z), out double resultValue), "occtsharp_generated_select_mgr_base_intersector_method_dist_to_geometry_center_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT SelectMgr_BaseIntersector::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrBaseIntersectorMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select_mgr_base_intersector_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select_mgr_base_intersector_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT SelectMgr_BaseIntersector::GetFarPnt.</summary>
+    public Point3d GetFarPnt()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrBaseIntersectorMethodGetFarPnt0(handle, out Point3dRaw resultValue), "occtsharp_generated_select_mgr_base_intersector_method_get_far_pnt_0");
+        return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT SelectMgr_BaseIntersector::GetNearPnt.</summary>
+    public Point3d GetNearPnt()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrBaseIntersectorMethodGetNearPnt0(handle, out Point3dRaw resultValue), "occtsharp_generated_select_mgr_base_intersector_method_get_near_pnt_0");
+        return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
     /// <summary>Invokes OCCT SelectMgr_BaseIntersector::GetSelectionType.</summary>
@@ -41144,6 +47090,14 @@ public sealed class SelectMgrCompositionFilter : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrCompositionFilterMethodClear0(handle), "occtsharp_generated_select_mgr_composition_filter_method_clear_0");
+    }
+
+    /// <summary>Invokes OCCT SelectMgr_CompositionFilter::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrCompositionFilterMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select_mgr_composition_filter_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select_mgr_composition_filter_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT SelectMgr_CompositionFilter::IsEmpty.</summary>
@@ -41274,6 +47228,14 @@ public sealed class SelectMgrEntityOwner : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrEntityOwnerMethodComesFromDecomposition0(handle, out int resultValue), "occtsharp_generated_select_mgr_entity_owner_method_comes_from_decomposition_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT SelectMgr_EntityOwner::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrEntityOwnerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select_mgr_entity_owner_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select_mgr_entity_owner_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT SelectMgr_EntityOwner::HasLocation.</summary>
@@ -41517,6 +47479,14 @@ public sealed class SelectMgrFilter : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT SelectMgr_Filter::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrFilterMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select_mgr_filter_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select_mgr_filter_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -41591,6 +47561,22 @@ public sealed class SelectMgrFrustumBuilder : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrFrustumBuilderCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "SelectMgrFrustumBuilderCreate0");
+    }
+
+    /// <summary>Invokes OCCT SelectMgr_FrustumBuilder::Camera.</summary>
+    public Graphic3dCamera? Camera()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrFrustumBuilderMethodCamera0(handle, out nint handleValue), "occtsharp_generated_select_mgr_frustum_builder_method_camera_0");
+        return global::OcctSharp.Graphic3dCamera.FromNative(handleValue, "occtsharp_generated_select_mgr_frustum_builder_method_camera_0");
+    }
+
+    /// <summary>Invokes OCCT SelectMgr_FrustumBuilder::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrFrustumBuilderMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select_mgr_frustum_builder_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select_mgr_frustum_builder_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT SelectMgr_FrustumBuilder::InvalidateViewport.</summary>
@@ -41705,6 +47691,14 @@ public sealed class SelectMgrOrFilter : IDisposable
         handle = CreateHandle(nativeHandle, "SelectMgrOrFilterCreate0");
     }
 
+    /// <summary>Invokes OCCT SelectMgr_OrFilter::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrOrFilterMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select_mgr_or_filter_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select_mgr_or_filter_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT SelectMgr_OrFilter::IsOk.</summary>
     public bool IsOk(SelectMgrEntityOwner? anobj)
     {
@@ -41817,11 +47811,27 @@ public sealed class SelectMgrSelectableObject : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrSelectableObjectMethodClearSelections0(handle, update ? 1 : 0), "occtsharp_generated_select_mgr_selectable_object_method_clear_selections_0");
     }
 
+    /// <summary>Invokes OCCT SelectMgr_SelectableObject::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrSelectableObjectMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select_mgr_selectable_object_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select_mgr_selectable_object_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT SelectMgr_SelectableObject::ErasePresentations.</summary>
     public void ErasePresentations(bool theToRemove)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrSelectableObjectMethodErasePresentations0(handle, theToRemove ? 1 : 0), "occtsharp_generated_select_mgr_selectable_object_method_erase_presentations_0");
+    }
+
+    /// <summary>Invokes OCCT SelectMgr_SelectableObject::GetAssemblyOwner.</summary>
+    public SelectMgrEntityOwner? GetAssemblyOwner()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrSelectableObjectMethodGetAssemblyOwner0(handle, out nint handleValue), "occtsharp_generated_select_mgr_selectable_object_method_get_assembly_owner_0");
+        return global::OcctSharp.SelectMgrEntityOwner.FromNative(handleValue, "occtsharp_generated_select_mgr_selectable_object_method_get_assembly_owner_0");
     }
 
     /// <summary>Invokes OCCT SelectMgr_SelectableObject::GlobalSelOwner.</summary>
@@ -41882,6 +47892,14 @@ public sealed class SelectMgrSelectableObject : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrSelectableObjectMethodResetTransformation0(handle), "occtsharp_generated_select_mgr_selectable_object_method_reset_transformation_0");
+    }
+
+    /// <summary>Invokes OCCT SelectMgr_SelectableObject::Selection.</summary>
+    public SelectMgrSelection? Selection(int theMode)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrSelectableObjectMethodSelection0(handle, theMode, out nint handleValue), "occtsharp_generated_select_mgr_selectable_object_method_selection_0");
+        return global::OcctSharp.SelectMgrSelection.FromNative(handleValue, "occtsharp_generated_select_mgr_selectable_object_method_selection_0");
     }
 
     /// <summary>Invokes OCCT SelectMgr_SelectableObject::SetAssemblyOwner.</summary>
@@ -42029,6 +48047,14 @@ public sealed class SelectMgrSelection : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrSelectionMethodDestroy0(handle), "occtsharp_generated_select_mgr_selection_method_destroy_0");
+    }
+
+    /// <summary>Invokes OCCT SelectMgr_Selection::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrSelectionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select_mgr_selection_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select_mgr_selection_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT SelectMgr_Selection::GetSelectionState.</summary>
@@ -42279,6 +48305,14 @@ public sealed class SelectMgrSelectionManager : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrSelectionManagerMethodDeactivate0(handle, theObject is null ? nint.Zero : theObject.NativeHandle.DangerousGetHandle(), theMode), "occtsharp_generated_select_mgr_selection_manager_method_deactivate_0");
     }
 
+    /// <summary>Invokes OCCT SelectMgr_SelectionManager::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrSelectionManagerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select_mgr_selection_manager_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select_mgr_selection_manager_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT SelectMgr_SelectionManager::IsActivated.</summary>
     public bool IsActivated(SelectMgrSelectableObject? theObject, int theMode)
     {
@@ -42313,6 +48347,14 @@ public sealed class SelectMgrSelectionManager : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrSelectionManagerMethodRestoreSelectionStructures0(handle, theObj is null ? nint.Zero : theObj.NativeHandle.DangerousGetHandle(), theMode), "occtsharp_generated_select_mgr_selection_manager_method_restore_selection_structures_0");
+    }
+
+    /// <summary>Invokes OCCT SelectMgr_SelectionManager::Selector.</summary>
+    public SelectMgrViewerSelector? Selector()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrSelectionManagerMethodSelector0(handle, out nint handleValue), "occtsharp_generated_select_mgr_selection_manager_method_selector_0");
+        return global::OcctSharp.SelectMgrViewerSelector.FromNative(handleValue, "occtsharp_generated_select_mgr_selection_manager_method_selector_0");
     }
 
     /// <summary>Invokes OCCT SelectMgr_SelectionManager::SetSelectionSensitivity.</summary>
@@ -42426,11 +48468,27 @@ public sealed class SelectMgrSensitiveEntity : IDisposable
         handle = CreateHandle(nativeHandle, "SelectMgrSensitiveEntityCreate0");
     }
 
+    /// <summary>Invokes OCCT SelectMgr_SensitiveEntity::BaseSensitive.</summary>
+    public Select3DSensitiveEntity? BaseSensitive()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrSensitiveEntityMethodBaseSensitive0(handle, out nint handleValue), "occtsharp_generated_select_mgr_sensitive_entity_method_base_sensitive_0");
+        return global::OcctSharp.Select3DSensitiveEntity.FromNative(handleValue, "occtsharp_generated_select_mgr_sensitive_entity_method_base_sensitive_0");
+    }
+
     /// <summary>Invokes OCCT SelectMgr_SensitiveEntity::Clear.</summary>
     public void Clear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrSensitiveEntityMethodClear0(handle), "occtsharp_generated_select_mgr_sensitive_entity_method_clear_0");
+    }
+
+    /// <summary>Invokes OCCT SelectMgr_SensitiveEntity::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrSensitiveEntityMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select_mgr_sensitive_entity_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select_mgr_sensitive_entity_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT SelectMgr_SensitiveEntity::IsActiveForSelection.</summary>
@@ -42726,6 +48784,14 @@ public sealed class SelectMgrViewerSelector : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrViewerSelectorMethodDisplaySensitive0(handle, theView is null ? nint.Zero : theView.NativeHandle.DangerousGetHandle()), "occtsharp_generated_select_mgr_viewer_selector_method_display_sensitive_0");
     }
 
+    /// <summary>Invokes OCCT SelectMgr_ViewerSelector::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrViewerSelectorMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_select_mgr_viewer_selector_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_select_mgr_viewer_selector_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT SelectMgr_ViewerSelector::IsActive.</summary>
     public bool IsActive(SelectMgrSelectableObject? theSelectableObject, int theMode)
     {
@@ -42785,6 +48851,14 @@ public sealed class SelectMgrViewerSelector : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrViewerSelectorMethodPicked0(handle, theRank, out nint handleValue), "occtsharp_generated_select_mgr_viewer_selector_method_picked_0");
         return global::OcctSharp.SelectMgrEntityOwner.FromNative(handleValue, "occtsharp_generated_select_mgr_viewer_selector_method_picked_0");
+    }
+
+    /// <summary>Invokes OCCT SelectMgr_ViewerSelector::PickedEntity.</summary>
+    public Select3DSensitiveEntity? PickedEntity(int theRank)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrViewerSelectorMethodPickedEntity0(handle, theRank, out nint handleValue), "occtsharp_generated_select_mgr_viewer_selector_method_picked_entity_0");
+        return global::OcctSharp.Select3DSensitiveEntity.FromNative(handleValue, "occtsharp_generated_select_mgr_viewer_selector_method_picked_entity_0");
     }
 
     /// <summary>Invokes OCCT SelectMgr_ViewerSelector::PickedPoint.</summary>
@@ -43019,6 +49093,22 @@ public sealed class StdPrsBRepFont : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT StdPrs_BRepFont::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.StdPrsBRepFontMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_std_prs_brep_font_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_std_prs_brep_font_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT StdPrs_BRepFont::FTFont.</summary>
+    public FontFTFont? FTFont()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.StdPrsBRepFontMethodFTFont0(handle, out nint handleValue), "occtsharp_generated_std_prs_brep_font_method_ftfont_0");
+        return global::OcctSharp.FontFTFont.FromNative(handleValue, "occtsharp_generated_std_prs_brep_font_method_ftfont_0");
+    }
+
     /// <summary>Invokes OCCT StdPrs_BRepFont::LineSpacing.</summary>
     public double LineSpacing()
     {
@@ -43055,6 +49145,13 @@ public sealed class StdPrsBRepFont : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.StdPrsBRepFontMethodSetCompositeCurveMode0(handle, theToConcatenate ? 1 : 0), "occtsharp_generated_std_prs_brep_font_method_set_composite_curve_mode_0");
+    }
+
+    /// <summary>Invokes OCCT StdPrs_BRepFont::SetWidthScaling.</summary>
+    public void SetWidthScaling(float theScaleFactor)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.StdPrsBRepFontMethodSetWidthScaling0(handle, theScaleFactor), "occtsharp_generated_std_prs_brep_font_method_set_width_scaling_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -43125,6 +49222,14 @@ public sealed class StdPrsHLRPolyShape : IDisposable
 
     private StdPrsHLRPolyShape(StdPrsHLRPolyShapeHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT StdPrs_HLRPolyShape::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.StdPrsHLRPolyShapeMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_std_prs_hlrpoly_shape_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_std_prs_hlrpoly_shape_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -43193,6 +49298,14 @@ public sealed class StdPrsHLRShape : IDisposable
 
     private StdPrsHLRShape(StdPrsHLRShapeHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT StdPrs_HLRShape::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.StdPrsHLRShapeMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_std_prs_hlrshape_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_std_prs_hlrshape_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -43260,6 +49373,14 @@ public sealed class StdPrsHLRShapeI : IDisposable
     private readonly StdPrsHLRShapeIHandle handle;
 
     private StdPrsHLRShapeI(StdPrsHLRShapeIHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT StdPrs_HLRShapeI::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.StdPrsHLRShapeIMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_std_prs_hlrshape_i_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_std_prs_hlrshape_i_method_dynamic_type_0");
+    }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
@@ -43342,6 +49463,14 @@ public sealed class StdSelectBRepOwner : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.StdSelectBRepOwnerMethodClear0(handle, aPM is null ? nint.Zero : aPM.NativeHandle.DangerousGetHandle(), aMode), "occtsharp_generated_std_select_brep_owner_method_clear_0");
+    }
+
+    /// <summary>Invokes OCCT StdSelect_BRepOwner::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.StdSelectBRepOwnerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_std_select_brep_owner_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_std_select_brep_owner_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT StdSelect_BRepOwner::HasHilightMode.</summary>
@@ -43495,6 +49624,14 @@ public sealed class StdSelectEdgeFilter : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT StdSelect_EdgeFilter::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.StdSelectEdgeFilterMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_std_select_edge_filter_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_std_select_edge_filter_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT StdSelect_EdgeFilter::IsOk.</summary>
     public bool IsOk(SelectMgrEntityOwner? anobj)
     {
@@ -43602,6 +49739,14 @@ public sealed class StdSelectFaceFilter : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT StdSelect_FaceFilter::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.StdSelectFaceFilterMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_std_select_face_filter_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_std_select_face_filter_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT StdSelect_FaceFilter::IsOk.</summary>
     public bool IsOk(SelectMgrEntityOwner? anobj)
     {
@@ -43693,6 +49838,14 @@ public sealed class StdSelectShape : IDisposable
 
     private StdSelectShape(StdSelectShapeHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT StdSelect_Shape::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.StdSelectShapeMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_std_select_shape_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_std_select_shape_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -43775,6 +49928,14 @@ public sealed class StdSelectShapeTypeFilter : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.StdSelectShapeTypeFilterMethodActsOn0(handle, (int)aStandardMode, out int resultValue), "occtsharp_generated_std_select_shape_type_filter_method_acts_on_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT StdSelect_ShapeTypeFilter::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.StdSelectShapeTypeFilterMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_std_select_shape_type_filter_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_std_select_shape_type_filter_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT StdSelect_ShapeTypeFilter::IsOk.</summary>
@@ -43941,6 +50102,14 @@ public sealed class TPrsStdAISPresentation : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.TPrsStdAISPresentationMethodDisplay0(handle, update ? 1 : 0), "occtsharp_generated_tprs_std_aispresentation_method_display_0");
+    }
+
+    /// <summary>Invokes OCCT TPrsStd_AISPresentation::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.TPrsStdAISPresentationMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_tprs_std_aispresentation_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_tprs_std_aispresentation_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT TPrsStd_AISPresentation::Erase.</summary>
@@ -44258,6 +50427,14 @@ public sealed class TPrsStdAISViewer : IDisposable
         handle = CreateHandle(nativeHandle, "TPrsStdAISViewerCreate0");
     }
 
+    /// <summary>Invokes OCCT TPrsStd_AISViewer::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.TPrsStdAISViewerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_tprs_std_aisviewer_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_tprs_std_aisviewer_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT TPrsStd_AISViewer::GetInteractiveContext.</summary>
     public AISInteractiveContext? GetInteractiveContext()
     {
@@ -44378,6 +50555,14 @@ public sealed class TPrsStdAxisDriver : IDisposable
         handle = CreateHandle(nativeHandle, "TPrsStdAxisDriverCreate0");
     }
 
+    /// <summary>Invokes OCCT TPrsStd_AxisDriver::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.TPrsStdAxisDriverMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_tprs_std_axis_driver_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_tprs_std_axis_driver_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -44454,6 +50639,14 @@ public sealed class TPrsStdConstraintDriver : IDisposable
         handle = CreateHandle(nativeHandle, "TPrsStdConstraintDriverCreate0");
     }
 
+    /// <summary>Invokes OCCT TPrsStd_ConstraintDriver::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.TPrsStdConstraintDriverMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_tprs_std_constraint_driver_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_tprs_std_constraint_driver_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -44521,6 +50714,14 @@ public sealed class TPrsStdDriver : IDisposable
     private readonly TPrsStdDriverHandle handle;
 
     private TPrsStdDriver(TPrsStdDriverHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT TPrsStd_Driver::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.TPrsStdDriverMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_tprs_std_driver_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_tprs_std_driver_method_dynamic_type_0");
+    }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
@@ -44603,6 +50804,14 @@ public sealed class TPrsStdDriverTable : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.TPrsStdDriverTableMethodClear0(handle), "occtsharp_generated_tprs_std_driver_table_method_clear_0");
+    }
+
+    /// <summary>Invokes OCCT TPrsStd_DriverTable::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.TPrsStdDriverTableMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_tprs_std_driver_table_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_tprs_std_driver_table_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT TPrsStd_DriverTable::InitStandardDrivers.</summary>
@@ -44688,6 +50897,14 @@ public sealed class TPrsStdGeometryDriver : IDisposable
         handle = CreateHandle(nativeHandle, "TPrsStdGeometryDriverCreate0");
     }
 
+    /// <summary>Invokes OCCT TPrsStd_GeometryDriver::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.TPrsStdGeometryDriverMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_tprs_std_geometry_driver_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_tprs_std_geometry_driver_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -44762,6 +50979,14 @@ public sealed class TPrsStdNamedShapeDriver : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.TPrsStdNamedShapeDriverCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "TPrsStdNamedShapeDriverCreate0");
+    }
+
+    /// <summary>Invokes OCCT TPrsStd_NamedShapeDriver::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.TPrsStdNamedShapeDriverMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_tprs_std_named_shape_driver_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_tprs_std_named_shape_driver_method_dynamic_type_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -44840,6 +51065,14 @@ public sealed class TPrsStdPlaneDriver : IDisposable
         handle = CreateHandle(nativeHandle, "TPrsStdPlaneDriverCreate0");
     }
 
+    /// <summary>Invokes OCCT TPrsStd_PlaneDriver::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.TPrsStdPlaneDriverMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_tprs_std_plane_driver_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_tprs_std_plane_driver_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -44916,6 +51149,14 @@ public sealed class TPrsStdPointDriver : IDisposable
         handle = CreateHandle(nativeHandle, "TPrsStdPointDriverCreate0");
     }
 
+    /// <summary>Invokes OCCT TPrsStd_PointDriver::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.TPrsStdPointDriverMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_tprs_std_point_driver_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_tprs_std_point_driver_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -44983,6 +51224,14 @@ public sealed class V3dAmbientLight : IDisposable
     private readonly V3dAmbientLightHandle handle;
 
     private V3dAmbientLight(V3dAmbientLightHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT V3d_AmbientLight::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dAmbientLightMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_v3d_ambient_light_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_v3d_ambient_light_method_dynamic_type_0");
+    }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
@@ -45057,6 +51306,14 @@ public sealed class V3dCircularGrid : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dCircularGridMethodDisplay0(handle), "occtsharp_generated_v3d_circular_grid_method_display_0");
+    }
+
+    /// <summary>Invokes OCCT V3d_CircularGrid::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dCircularGridMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_v3d_circular_grid_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_v3d_circular_grid_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT V3d_CircularGrid::Erase.</summary>
@@ -45149,6 +51406,14 @@ public sealed class V3dDirectionalLight : IDisposable
 
     private V3dDirectionalLight(V3dDirectionalLightHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT V3d_DirectionalLight::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dDirectionalLightMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_v3d_directional_light_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_v3d_directional_light_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT V3d_DirectionalLight::SetDirection.</summary>
     public void SetDirection(V3dTypeOfOrientation theDirection)
     {
@@ -45230,6 +51495,22 @@ public sealed class V3dPlane : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dPlaneCreate0(theA, theB, theC, theD, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "V3dPlaneCreate0");
+    }
+
+    /// <summary>Invokes OCCT V3d_Plane::ClipPlane.</summary>
+    public Graphic3dClipPlane? ClipPlane()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dPlaneMethodClipPlane0(handle, out nint handleValue), "occtsharp_generated_v3d_plane_method_clip_plane_0");
+        return global::OcctSharp.Graphic3dClipPlane.FromNative(handleValue, "occtsharp_generated_v3d_plane_method_clip_plane_0");
+    }
+
+    /// <summary>Invokes OCCT V3d_Plane::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dPlaneMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_v3d_plane_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_v3d_plane_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT V3d_Plane::Erase.</summary>
@@ -45322,6 +51603,14 @@ public sealed class V3dPositionLight : IDisposable
 
     private V3dPositionLight(V3dPositionLightHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT V3d_PositionLight::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dPositionLightMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_v3d_position_light_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_v3d_position_light_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -45389,6 +51678,14 @@ public sealed class V3dPositionalLight : IDisposable
     private readonly V3dPositionalLightHandle handle;
 
     private V3dPositionalLight(V3dPositionalLightHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT V3d_PositionalLight::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dPositionalLightMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_v3d_positional_light_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_v3d_positional_light_method_dynamic_type_0");
+    }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
@@ -45463,6 +51760,14 @@ public sealed class V3dRectangularGrid : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dRectangularGridMethodDisplay0(handle), "occtsharp_generated_v3d_rectangular_grid_method_display_0");
+    }
+
+    /// <summary>Invokes OCCT V3d_RectangularGrid::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dRectangularGridMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_v3d_rectangular_grid_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_v3d_rectangular_grid_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT V3d_RectangularGrid::Erase.</summary>
@@ -45555,6 +51860,14 @@ public sealed class V3dSpotLight : IDisposable
 
     private V3dSpotLight(V3dSpotLightHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT V3d_SpotLight::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dSpotLightMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_v3d_spot_light_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_v3d_spot_light_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT V3d_SpotLight::SetDirection.</summary>
     public void SetDirection(V3dTypeOfOrientation theOrientation)
     {
@@ -45638,6 +51951,14 @@ public sealed class V3dTrihedron : IDisposable
         handle = CreateHandle(nativeHandle, "V3dTrihedronCreate0");
     }
 
+    /// <summary>Invokes OCCT V3d_Trihedron::ArrowAspect.</summary>
+    public Prs3dShadingAspect? ArrowAspect(V3dTypeOfAxe theAxis)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dTrihedronMethodArrowAspect0(handle, (int)theAxis, out nint handleValue), "occtsharp_generated_v3d_trihedron_method_arrow_aspect_0");
+        return global::OcctSharp.Prs3dShadingAspect.FromNative(handleValue, "occtsharp_generated_v3d_trihedron_method_arrow_aspect_0");
+    }
+
     /// <summary>Invokes OCCT V3d_Trihedron::ArrowDiameter.</summary>
     public double ArrowDiameter()
     {
@@ -45651,6 +51972,14 @@ public sealed class V3dTrihedron : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dTrihedronMethodDisplay0(handle, theView is null ? nint.Zero : theView.NativeHandle.DangerousGetHandle()), "occtsharp_generated_v3d_trihedron_method_display_0");
+    }
+
+    /// <summary>Invokes OCCT V3d_Trihedron::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dTrihedronMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_v3d_trihedron_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_v3d_trihedron_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT V3d_Trihedron::Erase.</summary>
@@ -45668,12 +51997,28 @@ public sealed class V3dTrihedron : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT V3d_Trihedron::LabelAspect.</summary>
+    public Prs3dTextAspect? LabelAspect(V3dTypeOfAxe theAxis)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dTrihedronMethodLabelAspect0(handle, (int)theAxis, out nint handleValue), "occtsharp_generated_v3d_trihedron_method_label_aspect_0");
+        return global::OcctSharp.Prs3dTextAspect.FromNative(handleValue, "occtsharp_generated_v3d_trihedron_method_label_aspect_0");
+    }
+
     /// <summary>Invokes OCCT V3d_Trihedron::NbFacets.</summary>
     public int NbFacets()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dTrihedronMethodNbFacets0(handle, out int resultValue), "occtsharp_generated_v3d_trihedron_method_nb_facets_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT V3d_Trihedron::OriginAspect.</summary>
+    public Prs3dShadingAspect? OriginAspect()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dTrihedronMethodOriginAspect0(handle, out nint handleValue), "occtsharp_generated_v3d_trihedron_method_origin_aspect_0");
+        return global::OcctSharp.Prs3dShadingAspect.FromNative(handleValue, "occtsharp_generated_v3d_trihedron_method_origin_aspect_0");
     }
 
     /// <summary>Invokes OCCT V3d_Trihedron::Scale.</summary>
@@ -45885,6 +52230,14 @@ public sealed class V3dView : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dViewMethodClearPBREnvironment0(handle, theToUpdate ? 1 : 0), "occtsharp_generated_v3d_view_method_clear_pbrenvironment_0");
     }
 
+    /// <summary>Invokes OCCT V3d_View::ClipPlanes.</summary>
+    public Graphic3dSequenceOfHClipPlane? ClipPlanes()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dViewMethodClipPlanes0(handle, out nint handleValue), "occtsharp_generated_v3d_view_method_clip_planes_0");
+        return global::OcctSharp.Graphic3dSequenceOfHClipPlane.FromNative(handleValue, "occtsharp_generated_v3d_view_method_clip_planes_0");
+    }
+
     /// <summary>Invokes OCCT V3d_View::ComputedMode.</summary>
     public bool ComputedMode()
     {
@@ -45909,6 +52262,14 @@ public sealed class V3dView : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT V3d_View::DefaultCamera.</summary>
+    public Graphic3dCamera? DefaultCamera()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dViewMethodDefaultCamera0(handle, out nint handleValue), "occtsharp_generated_v3d_view_method_default_camera_0");
+        return global::OcctSharp.Graphic3dCamera.FromNative(handleValue, "occtsharp_generated_v3d_view_method_default_camera_0");
+    }
+
     /// <summary>Invokes OCCT V3d_View::Depth.</summary>
     public double Depth()
     {
@@ -45929,6 +52290,14 @@ public sealed class V3dView : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dViewMethodDoMapping0(handle), "occtsharp_generated_v3d_view_method_do_mapping_0");
+    }
+
+    /// <summary>Invokes OCCT V3d_View::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dViewMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_v3d_view_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_v3d_view_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT V3d_View::FitAll.</summary>
@@ -46594,6 +52963,14 @@ public sealed class V3dView : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dViewMethodTriedronErase0(handle), "occtsharp_generated_v3d_view_method_triedron_erase_0");
     }
 
+    /// <summary>Invokes OCCT V3d_View::Trihedron.</summary>
+    public V3dTrihedron? Trihedron(bool theToCreate)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dViewMethodTrihedron0(handle, theToCreate ? 1 : 0, out nint handleValue), "occtsharp_generated_v3d_view_method_trihedron_0");
+        return global::OcctSharp.V3dTrihedron.FromNative(handleValue, "occtsharp_generated_v3d_view_method_trihedron_0");
+    }
+
     /// <summary>Invokes OCCT V3d_View::Turn.</summary>
     public void Turn(V3dTypeOfAxe axe, double angle, bool start)
     {
@@ -46659,6 +53036,14 @@ public sealed class V3dView : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dViewMethodVisualization0(handle, out int resultValue), "occtsharp_generated_v3d_view_method_visualization_0");
         return (V3dTypeOfVisualization)resultValue;
+    }
+
+    /// <summary>Invokes OCCT V3d_View::Window.</summary>
+    public AspectWindow? Window()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dViewMethodWindow0(handle, out nint handleValue), "occtsharp_generated_v3d_view_method_window_0");
+        return global::OcctSharp.AspectWindow.FromNative(handleValue, "occtsharp_generated_v3d_view_method_window_0");
     }
 
     /// <summary>Invokes OCCT V3d_View::WindowFit.</summary>
@@ -46787,6 +53172,14 @@ public sealed class V3dViewer : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dViewerMethodActivateGrid0(handle, (int)aGridType, (int)aGridDrawMode), "occtsharp_generated_v3d_viewer_method_activate_grid_0");
     }
 
+    /// <summary>Invokes OCCT V3d_Viewer::ActiveView.</summary>
+    public V3dView? ActiveView()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dViewerMethodActiveView0(handle, out nint handleValue), "occtsharp_generated_v3d_viewer_method_active_view_0");
+        return global::OcctSharp.V3dView.FromNative(handleValue, "occtsharp_generated_v3d_viewer_method_active_view_0");
+    }
+
     /// <summary>Invokes OCCT V3d_Viewer::ComputedMode.</summary>
     public bool ComputedMode()
     {
@@ -46858,11 +53251,35 @@ public sealed class V3dViewer : IDisposable
         return (V3dTypeOfVisualization)resultValue;
     }
 
+    /// <summary>Invokes OCCT V3d_Viewer::DefinedView.</summary>
+    public V3dView? DefinedView()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dViewerMethodDefinedView0(handle, out nint handleValue), "occtsharp_generated_v3d_viewer_method_defined_view_0");
+        return global::OcctSharp.V3dView.FromNative(handleValue, "occtsharp_generated_v3d_viewer_method_defined_view_0");
+    }
+
     /// <summary>Invokes OCCT V3d_Viewer::DisplayPrivilegedPlane.</summary>
     public void DisplayPrivilegedPlane(bool theOnOff, double theSize)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dViewerMethodDisplayPrivilegedPlane0(handle, theOnOff ? 1 : 0, theSize), "occtsharp_generated_v3d_viewer_method_display_privileged_plane_0");
+    }
+
+    /// <summary>Invokes OCCT V3d_Viewer::Driver.</summary>
+    public Graphic3dGraphicDriver? Driver()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dViewerMethodDriver0(handle, out nint handleValue), "occtsharp_generated_v3d_viewer_method_driver_0");
+        return global::OcctSharp.Graphic3dGraphicDriver.FromNative(handleValue, "occtsharp_generated_v3d_viewer_method_driver_0");
+    }
+
+    /// <summary>Invokes OCCT V3d_Viewer::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dViewerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_v3d_viewer_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_v3d_viewer_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT V3d_Viewer::Erase.</summary>
@@ -47312,6 +53729,14 @@ public sealed class WNTWClass : IDisposable
 
     private WNTWClass(WNTWClassHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT WNT_WClass::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.WNTWClassMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_wnt_wclass_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_wnt_wclass_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -47396,6 +53821,14 @@ public sealed class WNTWindow : IDisposable
         return (AspectTypeOfResize)resultValue;
     }
 
+    /// <summary>Invokes OCCT WNT_Window::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.WNTWindowMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_wnt_window_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_wnt_window_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT WNT_Window::InvalidateContent.</summary>
     public void InvalidateContent(AspectDisplayConnection? theDisp)
     {
@@ -47430,6 +53863,14 @@ public sealed class WNTWindow : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.WNTWindowMethodRatio0(handle, out double resultValue), "occtsharp_generated_wnt_window_method_ratio_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT WNT_Window::RegisterRawInputDevices.</summary>
+    public int RegisterRawInputDevices(uint theRawDeviceMask)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.WNTWindowMethodRegisterRawInputDevices0(handle, theRawDeviceMask, out int resultValue), "occtsharp_generated_wnt_window_method_register_raw_input_devices_0");
         return resultValue;
     }
 
@@ -47537,6 +53978,14 @@ public sealed class WasmWindow : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.WasmWindowMethodDoResize0(handle, out int resultValue), "occtsharp_generated_wasm_window_method_do_resize_0");
         return (AspectTypeOfResize)resultValue;
+    }
+
+    /// <summary>Invokes OCCT Wasm_Window::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.WasmWindowMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_wasm_window_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_wasm_window_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Wasm_Window::InvalidateContent.</summary>
@@ -47665,6 +54114,14 @@ public sealed class XwWindow : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.XwWindowMethodDoResize0(handle, out int resultValue), "occtsharp_generated_xw_window_method_do_resize_0");
         return (AspectTypeOfResize)resultValue;
+    }
+
+    /// <summary>Invokes OCCT Xw_Window::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.XwWindowMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_xw_window_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_xw_window_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Xw_Window::InvalidateContent.</summary>

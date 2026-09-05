@@ -20,6 +20,14 @@ public static class SimpleBindingEligibilityPass
         ArgumentNullException.ThrowIfNull(declaration);
         ArgumentNullException.ThrowIfNull(typeMap);
 
+        // OCCT documents this reference as the start of an array, not a scalar value.
+        // Keep it blocked until a sized buffer-copy contract exists (SC-061).
+        if (declaration.StableId == "c:@S@BSplCLib@F@FlatBezierKnots#I#S")
+        {
+            return new SimpleBindingEligibilityAssessment(
+                "EL008", "ReferenceSequence", "FlatBezierKnots requires a sized knot-array copy, not a scalar reference copy.", false);
+        }
+
         return declaration.Kind switch
         {
             BindingDeclarationKind.Constructor => AssessConstructor(declaration, typeMap),

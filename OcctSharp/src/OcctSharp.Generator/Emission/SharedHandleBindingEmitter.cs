@@ -187,7 +187,8 @@ public static class SharedHandleBindingEmitter
                 && !scope.ExcludedStableIds.Contains(declaration.StableId, StringComparer.Ordinal)
                 && declaration.Parameters.All(parameter => IsSupportedParameter(
                     parameter.Type, typeMap, scopeByNativeType)))
-            .OrderBy(static declaration => declaration.NativeSignature, StringComparer.Ordinal)
+            .OrderBy(GeneratedBindingEpoch.Order)
+            .ThenBy(static declaration => declaration.NativeSignature, StringComparer.Ordinal)
             .ThenBy(static declaration => declaration.StableId, StringComparer.Ordinal)
             .Select((declaration, index) => CreateConstructor(
                 declaration,
@@ -211,7 +212,8 @@ public static class SharedHandleBindingEmitter
                 StringComparer.Ordinal)
             .OrderBy(static group => group.Key, StringComparer.Ordinal)
             .SelectMany(group => group
-                .OrderBy(static declaration => declaration.NativeName, StringComparer.Ordinal)
+                .OrderBy(GeneratedBindingEpoch.Order)
+                .ThenBy(static declaration => declaration.NativeName, StringComparer.Ordinal)
                 .ThenBy(static declaration => declaration.NativeSignature, StringComparer.Ordinal)
                 .ThenBy(static declaration => declaration.StableId, StringComparer.Ordinal)
                 .Select((declaration, index) =>
@@ -425,6 +427,7 @@ public static class SharedHandleBindingEmitter
             builder.AppendLine($"#include <{header}>");
         }
         builder.AppendLine("#include <utility>");
+        NumericProjectionAssertions.AppendTo(builder);
         foreach (SharedTypeBinding binding in bindings)
         {
             SharedHandleScopeConfiguration scope = binding.Scope;
@@ -691,6 +694,10 @@ public static class SharedHandleBindingEmitter
         }
         string arguments = string.Join(", ", method.Parameters.Select(RenderNativeArgument));
         string invocation = $"Validate{binding.Scope.ManagedTypeName}(handle)->Value->{method.MemberName}({arguments})";
+        if (GeneratedBindingEpoch.Order(method.Declaration) != 0 && method.Declaration.IsConst)
+        {
+            invocation = $"static_cast<const {binding.Scope.NativeType}*>(Validate{binding.Scope.ManagedTypeName}(handle)->Value.get())->{method.MemberName}({arguments})";
+        }
         builder.AppendLine("  return GeneratedGuard([&]");
         builder.AppendLine("  {");
         if (method.ReturnsVoid)
@@ -1044,6 +1051,7 @@ public static class SharedHandleBindingEmitter
             "TM003" => $"({parameter.Name} != 0)",
             "TM004" => $"static_cast<{parameter.Parameter.Type.BaseCanonicalSpelling}>({parameter.Name})",
             "TM005" => $"gp_Pnt({parameter.Name}.x, {parameter.Name}.y, {parameter.Name}.z)",
+            "TM008" => $"static_cast<{parameter.Parameter.Type.BaseCanonicalSpelling}>({parameter.Name})",
             _ => parameter.Name,
         };
     }

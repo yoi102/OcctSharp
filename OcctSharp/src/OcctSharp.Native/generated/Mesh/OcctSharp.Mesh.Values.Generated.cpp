@@ -7,6 +7,16 @@
 // Source: c:@S@BRepMesh_VertexInspector@F@IsEqual#I#I#S
 // Source: c:@S@IMeshTools_Parameters@F@RelMinSize#S
 #include "OcctSharp.Mesh.Values.Generated.h"
+#include <climits>
+#include <cstdint>
+#include <limits>
+static_assert(CHAR_BIT == 8 && sizeof(short) == 2 && sizeof(int) == 4);
+static_assert(sizeof(long) == 4 && sizeof(long long) == 8 && sizeof(size_t) == 8);
+static_assert(sizeof(float) == 4 && std::numeric_limits<float>::is_iec559);
+static_assert(sizeof(double) == 8 && std::numeric_limits<double>::is_iec559);
+#include <Standard_Failure.hxx>
+#include <exception>
+#include "../../include/OcctSharp.Native.Internal.hxx"
 
 #include <gp_Pnt.hxx>
 #include <BRepMesh_CircleInspector.hxx>

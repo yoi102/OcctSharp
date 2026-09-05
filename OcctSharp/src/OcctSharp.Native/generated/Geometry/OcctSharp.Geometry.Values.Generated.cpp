@@ -16,11 +16,22 @@
 // Source: c:@S@PLib@F@Bin#I#I#S
 // Source: c:@S@PLib@F@ConstraintOrder#I#S
 // Source: c:@S@PLib@F@NivConstr#$@E@GeomAbs_Shape#S
+// Source: c:@S@gp@F@Origin#S
 // Source: c:@S@gp@F@Resolution#S
 // Source: c:@S@gp_Pnt@F@gp_Pnt#
 // Source: c:@S@gp_Pnt@F@gp_Pnt#&1$@S@gp_Pnt#
 // Source: c:@S@gp_Pnt@F@gp_Pnt#d#d#d#
 #include "OcctSharp.Geometry.Values.Generated.h"
+#include <climits>
+#include <cstdint>
+#include <limits>
+static_assert(CHAR_BIT == 8 && sizeof(short) == 2 && sizeof(int) == 4);
+static_assert(sizeof(long) == 4 && sizeof(long long) == 8 && sizeof(size_t) == 8);
+static_assert(sizeof(float) == 4 && std::numeric_limits<float>::is_iec559);
+static_assert(sizeof(double) == 8 && std::numeric_limits<double>::is_iec559);
+#include <Standard_Failure.hxx>
+#include <exception>
+#include "../../include/OcctSharp.Native.Internal.hxx"
 
 #include <gp_Pnt.hxx>
 #include <AdvApp2Var_SysBase.hxx>
@@ -166,6 +177,22 @@ int32_t OCCTSHARP_CALL occtsharp_generated_plib_static_niv_constr_0(
   const int32_t ConstraintOrder)
 {
   return PLib::NivConstr(static_cast<const GeomAbs_Shape>(ConstraintOrder));
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gp_static_origin_0(OcctSharp_Point3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    const gp_Pnt copiedPoint = gp::Origin();
+    *generatedResult = {copiedPoint.X(), copiedPoint.Y(), copiedPoint.Z()};
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
 }
 
 double OCCTSHARP_CALL occtsharp_generated_gp_static_resolution_0(void)

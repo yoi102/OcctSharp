@@ -2,66 +2,108 @@
 // Source: c:@S@BRepMeshData_Curve@F@AddPoint#&1$@S@gp_Pnt#d#
 // Source: c:@S@BRepMeshData_Curve@F@BRepMeshData_Curve#&1$@N@opencascade@S@handle>#$@S@NCollection_IncAllocator#
 // Source: c:@S@BRepMeshData_Curve@F@Clear#b#
+// Source: c:@S@BRepMeshData_Curve@F@DynamicType#1
 // Source: c:@S@BRepMeshData_Curve@F@InsertPoint#I#&1$@S@gp_Pnt#d#
 // Source: c:@S@BRepMeshData_Curve@F@ParametersNb#1
 // Source: c:@S@BRepMeshData_Curve@F@RemovePoint#I#
+// Source: c:@S@BRepMeshData_Edge@F@DynamicType#1
+// Source: c:@S@BRepMeshData_Edge@F@GetPCurve#I#1
 // Source: c:@S@BRepMeshData_Edge@F@PCurvesNb#1
+// Source: c:@S@BRepMeshData_Face@F@DynamicType#1
+// Source: c:@S@BRepMeshData_Face@F@GetWire#I#1
 // Source: c:@S@BRepMeshData_Face@F@WiresNb#1
+// Source: c:@S@BRepMeshData_Model@F@DynamicType#1
 // Source: c:@S@BRepMeshData_Model@F@EdgesNb#1
 // Source: c:@S@BRepMeshData_Model@F@FacesNb#1
+// Source: c:@S@BRepMeshData_Model@F@GetEdge#I#1
+// Source: c:@S@BRepMeshData_Model@F@GetFace#I#1
 // Source: c:@S@BRepMeshData_Model@F@GetMaxSize#1
 // Source: c:@S@BRepMeshData_Model@F@SetMaxSize#d#
 // Source: c:@S@BRepMeshData_PCurve@F@Clear#b#
+// Source: c:@S@BRepMeshData_PCurve@F@DynamicType#1
 // Source: c:@S@BRepMeshData_PCurve@F@ParametersNb#1
 // Source: c:@S@BRepMeshData_PCurve@F@RemovePoint#I#
+// Source: c:@S@BRepMeshData_Wire@F@DynamicType#1
 // Source: c:@S@BRepMeshData_Wire@F@EdgesNb#1
 // Source: c:@S@BRepMeshData_Wire@F@GetEdgeOrientation#I#1
+// Source: c:@S@BRepMesh_BaseMeshAlgo@F@DynamicType#1
 // Source: c:@S@BRepMesh_Classifier@F@BRepMesh_Classifier#
+// Source: c:@S@BRepMesh_Classifier@F@DynamicType#1
+// Source: c:@S@BRepMesh_ConstrainedBaseMeshAlgo@F@DynamicType#1
 // Source: c:@S@BRepMesh_Context@F@BRepMesh_Context#$@E@IMeshTools_MeshAlgoType#
+// Source: c:@S@BRepMesh_Context@F@DynamicType#1
+// Source: c:@S@BRepMesh_CurveTessellator@F@DynamicType#1
 // Source: c:@S@BRepMesh_CurveTessellator@F@PointsNb#1
+// Source: c:@S@BRepMesh_CustomBaseMeshAlgo@F@DynamicType#1
+// Source: c:@S@BRepMesh_DataStructureOfDelaun@F@Allocator#1
 // Source: c:@S@BRepMesh_DataStructureOfDelaun@F@BRepMesh_DataStructureOfDelaun#&1$@N@opencascade@S@handle>#$@S@NCollection_IncAllocator#I#
 // Source: c:@S@BRepMesh_DataStructureOfDelaun@F@ClearDeleted#
 // Source: c:@S@BRepMesh_DataStructureOfDelaun@F@ClearDomain#
+// Source: c:@S@BRepMesh_DataStructureOfDelaun@F@Data#
+// Source: c:@S@BRepMesh_DataStructureOfDelaun@F@DynamicType#1
 // Source: c:@S@BRepMesh_DataStructureOfDelaun@F@NbElements#1
 // Source: c:@S@BRepMesh_DataStructureOfDelaun@F@NbLinks#1
 // Source: c:@S@BRepMesh_DataStructureOfDelaun@F@NbNodes#1
 // Source: c:@S@BRepMesh_DataStructureOfDelaun@F@RemoveElement#I#
 // Source: c:@S@BRepMesh_DataStructureOfDelaun@F@RemoveLink#I#b#
 // Source: c:@S@BRepMesh_DataStructureOfDelaun@F@RemoveNode#I#b#
+// Source: c:@S@BRepMesh_Deflection@F@DynamicType#1
 // Source: c:@S@BRepMesh_DelabellaBaseMeshAlgo@F@BRepMesh_DelabellaBaseMeshAlgo#
+// Source: c:@S@BRepMesh_DelabellaBaseMeshAlgo@F@DynamicType#1
 // Source: c:@S@BRepMesh_DelabellaMeshAlgoFactory@F@BRepMesh_DelabellaMeshAlgoFactory#
+// Source: c:@S@BRepMesh_DelabellaMeshAlgoFactory@F@DynamicType#1
 // Source: c:@S@BRepMesh_DelaunayBaseMeshAlgo@F@BRepMesh_DelaunayBaseMeshAlgo#
+// Source: c:@S@BRepMesh_DelaunayBaseMeshAlgo@F@DynamicType#1
+// Source: c:@S@BRepMesh_DiscretAlgoFactory@F@DynamicType#1
+// Source: c:@S@BRepMesh_DiscretRoot@F@DynamicType#1
 // Source: c:@S@BRepMesh_DiscretRoot@F@IsDone#1
 // Source: c:@S@BRepMesh_EdgeDiscret@F@BRepMesh_EdgeDiscret#
+// Source: c:@S@BRepMesh_EdgeDiscret@F@DynamicType#1
 // Source: c:@S@BRepMesh_EdgeTessellationExtractor@F@BRepMesh_EdgeTessellationExtractor#&1$@N@opencascade@S@handle>#$@S@IMeshData_Edge#&1$@N@opencascade@S@handle>#$@S@IMeshData_Face#
+// Source: c:@S@BRepMesh_EdgeTessellationExtractor@F@DynamicType#1
 // Source: c:@S@BRepMesh_EdgeTessellationExtractor@F@PointsNb#1
+// Source: c:@S@BRepMesh_FaceChecker@F@DynamicType#1
 // Source: c:@S@BRepMesh_FaceChecker@F@Perform#
 // Source: c:@S@BRepMesh_FaceDiscret@F@BRepMesh_FaceDiscret#&1$@N@opencascade@S@handle>#$@S@IMeshTools_MeshAlgoFactory#
+// Source: c:@S@BRepMesh_FaceDiscret@F@DynamicType#1
 // Source: c:@S@BRepMesh_IncrementalMesh@F@BRepMesh_IncrementalMesh#
+// Source: c:@S@BRepMesh_IncrementalMesh@F@DynamicType#1
 // Source: c:@S@BRepMesh_IncrementalMesh@F@GetStatusFlags#1
 // Source: c:@S@BRepMesh_IncrementalMesh@F@IsModified#1
 // Source: c:@S@BRepMesh_IncrementalMeshFactory@F@BRepMesh_IncrementalMeshFactory#
+// Source: c:@S@BRepMesh_IncrementalMeshFactory@F@DynamicType#1
 // Source: c:@S@BRepMesh_MeshAlgoFactory@F@BRepMesh_MeshAlgoFactory#
+// Source: c:@S@BRepMesh_MeshAlgoFactory@F@DynamicType#1
 // Source: c:@S@BRepMesh_MeshTool@F@AddAndLegalizeTriangle#I#I#I#
 // Source: c:@S@BRepMesh_MeshTool@F@BRepMesh_MeshTool#&1$@N@opencascade@S@handle>#$@S@BRepMesh_DataStructureOfDelaun#
 // Source: c:@S@BRepMesh_MeshTool@F@CleanFrontierLinks#
+// Source: c:@S@BRepMesh_MeshTool@F@DynamicType#1
 // Source: c:@S@BRepMesh_MeshTool@F@EraseFreeLinks#
 // Source: c:@S@BRepMesh_MeshTool@F@EraseItemsConnectedTo#I#
+// Source: c:@S@BRepMesh_MeshTool@F@GetStructure#1
 // Source: c:@S@BRepMesh_MeshTool@F@Legalize#I#
 // Source: c:@S@BRepMesh_ModelBuilder@F@BRepMesh_ModelBuilder#
+// Source: c:@S@BRepMesh_ModelBuilder@F@DynamicType#1
 // Source: c:@S@BRepMesh_ModelHealer@F@BRepMesh_ModelHealer#
+// Source: c:@S@BRepMesh_ModelHealer@F@DynamicType#1
 // Source: c:@S@BRepMesh_ModelPostProcessor@F@BRepMesh_ModelPostProcessor#
+// Source: c:@S@BRepMesh_ModelPostProcessor@F@DynamicType#1
 // Source: c:@S@BRepMesh_ModelPreProcessor@F@BRepMesh_ModelPreProcessor#
+// Source: c:@S@BRepMesh_ModelPreProcessor@F@DynamicType#1
 // Source: c:@S@BRepMesh_SelectorOfDataStructureOfDelaun@F@AddNeighbours#
 // Source: c:@S@BRepMesh_SelectorOfDataStructureOfDelaun@F@BRepMesh_SelectorOfDataStructureOfDelaun#
 // Source: c:@S@BRepMesh_SelectorOfDataStructureOfDelaun@F@BRepMesh_SelectorOfDataStructureOfDelaun#&1$@N@opencascade@S@handle>#$@S@BRepMesh_DataStructureOfDelaun#
+// Source: c:@S@BRepMesh_SelectorOfDataStructureOfDelaun@F@DynamicType#1
 // Source: c:@S@BRepMesh_SelectorOfDataStructureOfDelaun@F@Initialize#&1$@N@opencascade@S@handle>#$@S@BRepMesh_DataStructureOfDelaun#
 // Source: c:@S@BRepMesh_SelectorOfDataStructureOfDelaun@F@NeighboursOfElement#I#
 // Source: c:@S@BRepMesh_SelectorOfDataStructureOfDelaun@F@NeighboursOfLink#I#
 // Source: c:@S@BRepMesh_SelectorOfDataStructureOfDelaun@F@NeighboursOfNode#I#
+// Source: c:@S@BRepMesh_ShapeTool@F@DynamicType#1
 // Source: c:@S@BRepMesh_ShapeVisitor@F@BRepMesh_ShapeVisitor#&1$@N@opencascade@S@handle>#$@S@IMeshData_Model#
+// Source: c:@S@BRepMesh_ShapeVisitor@F@DynamicType#1
 // Source: c:@S@BRepMesh_VertexTool@F@BRepMesh_VertexTool#&1$@N@opencascade@S@handle>#$@S@NCollection_IncAllocator#
 // Source: c:@S@BRepMesh_VertexTool@F@DeleteVertex#I#
+// Source: c:@S@BRepMesh_VertexTool@F@DynamicType#1
 // Source: c:@S@BRepMesh_VertexTool@F@Extent#1
 // Source: c:@S@BRepMesh_VertexTool@F@IsEmpty#1
 // Source: c:@S@BRepMesh_VertexTool@F@RemoveLast#
@@ -69,8 +111,11 @@
 // Source: c:@S@BRepMesh_VertexTool@F@SetCellSize#d#d#
 // Source: c:@S@BRepMesh_VertexTool@F@SetTolerance#d#
 // Source: c:@S@BRepMesh_VertexTool@F@SetTolerance#d#d#
+// Source: c:@S@IMeshData_Curve@F@DynamicType#1
 // Source: c:@S@IMeshData_Edge@F@Clear#b#
+// Source: c:@S@IMeshData_Edge@F@DynamicType#1
 // Source: c:@S@IMeshData_Edge@F@GetAngularDeflection#1
+// Source: c:@S@IMeshData_Edge@F@GetCurve#1
 // Source: c:@S@IMeshData_Edge@F@GetDegenerated#1
 // Source: c:@S@IMeshData_Edge@F@GetSameParam#1
 // Source: c:@S@IMeshData_Edge@F@GetSameRange#1
@@ -80,15 +125,31 @@
 // Source: c:@S@IMeshData_Edge@F@SetDegenerated#b#
 // Source: c:@S@IMeshData_Edge@F@SetSameParam#b#
 // Source: c:@S@IMeshData_Edge@F@SetSameRange#b#
+// Source: c:@S@IMeshData_Face@F@DynamicType#1
+// Source: c:@S@IMeshData_Face@F@GetSurface#1
 // Source: c:@S@IMeshData_Face@F@IsValid#1
+// Source: c:@S@IMeshData_Model@F@DynamicType#1
+// Source: c:@S@IMeshData_PCurve@F@DynamicType#1
 // Source: c:@S@IMeshData_PCurve@F@GetOrientation#1
 // Source: c:@S@IMeshData_PCurve@F@IsForward#1
 // Source: c:@S@IMeshData_PCurve@F@IsInternal#1
+// Source: c:@S@IMeshData_ParametersList@F@DynamicType#1
+// Source: c:@S@IMeshData_Shape@F@DynamicType#1
+// Source: c:@S@IMeshData_TessellatedShape@F@DynamicType#1
 // Source: c:@S@IMeshData_TessellatedShape@F@GetDeflection#1
 // Source: c:@S@IMeshData_TessellatedShape@F@SetDeflection#d#
+// Source: c:@S@IMeshData_Wire@F@DynamicType#1
 // Source: c:@S@IMeshTools_Context@F@BuildModel#
 // Source: c:@S@IMeshTools_Context@F@Clean#
 // Source: c:@S@IMeshTools_Context@F@DiscretizeEdges#
+// Source: c:@S@IMeshTools_Context@F@DynamicType#1
+// Source: c:@S@IMeshTools_Context@F@GetEdgeDiscret#1
+// Source: c:@S@IMeshTools_Context@F@GetFaceDiscret#1
+// Source: c:@S@IMeshTools_Context@F@GetModel#1
+// Source: c:@S@IMeshTools_Context@F@GetModelBuilder#1
+// Source: c:@S@IMeshTools_Context@F@GetModelHealer#1
+// Source: c:@S@IMeshTools_Context@F@GetPostProcessor#1
+// Source: c:@S@IMeshTools_Context@F@GetPreProcessor#1
 // Source: c:@S@IMeshTools_Context@F@HealModel#
 // Source: c:@S@IMeshTools_Context@F@IMeshTools_Context#
 // Source: c:@S@IMeshTools_Context@F@PostProcessModel#
@@ -99,10 +160,20 @@
 // Source: c:@S@IMeshTools_Context@F@SetModelHealer#&1$@N@opencascade@S@handle>#$@S@IMeshTools_ModelAlgo#
 // Source: c:@S@IMeshTools_Context@F@SetPostProcessor#&1$@N@opencascade@S@handle>#$@S@IMeshTools_ModelAlgo#
 // Source: c:@S@IMeshTools_Context@F@SetPreProcessor#&1$@N@opencascade@S@handle>#$@S@IMeshTools_ModelAlgo#
+// Source: c:@S@IMeshTools_CurveTessellator@F@DynamicType#1
+// Source: c:@S@IMeshTools_MeshAlgo@F@DynamicType#1
+// Source: c:@S@IMeshTools_MeshAlgoFactory@F@DynamicType#1
+// Source: c:@S@IMeshTools_MeshBuilder@F@DynamicType#1
+// Source: c:@S@IMeshTools_MeshBuilder@F@GetContext#1
 // Source: c:@S@IMeshTools_MeshBuilder@F@IMeshTools_MeshBuilder#
 // Source: c:@S@IMeshTools_MeshBuilder@F@IMeshTools_MeshBuilder#&1$@N@opencascade@S@handle>#$@S@IMeshTools_Context#
 // Source: c:@S@IMeshTools_MeshBuilder@F@SetContext#&1$@N@opencascade@S@handle>#$@S@IMeshTools_Context#
+// Source: c:@S@IMeshTools_ModelAlgo@F@DynamicType#1
+// Source: c:@S@IMeshTools_ModelBuilder@F@DynamicType#1
 // Source: c:@S@IMeshTools_ShapeExplorer@F@Accept#&1$@N@opencascade@S@handle>#$@S@IMeshTools_ShapeVisitor#
+// Source: c:@S@IMeshTools_ShapeExplorer@F@DynamicType#1
+// Source: c:@S@IMeshTools_ShapeVisitor@F@DynamicType#1
+// Source: c:@S@XBRepMesh_Factory@F@DynamicType#1
 // Source: c:@S@XBRepMesh_Factory@F@XBRepMesh_Factory#
 #pragma once
 
@@ -111,6 +182,8 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+typedef struct OcctSharp_BRepAdaptorSurfaceHandle OcctSharp_BRepAdaptorSurfaceHandle;
 
 typedef struct OcctSharp_BRepMeshDataCurveHandle OcctSharp_BRepMeshDataCurveHandle;
 
@@ -220,6 +293,8 @@ typedef struct OcctSharp_IMeshToolsShapeVisitorHandle OcctSharp_IMeshToolsShapeV
 
 typedef struct OcctSharp_NCollectionIncAllocatorHandle OcctSharp_NCollectionIncAllocatorHandle;
 
+typedef struct OcctSharp_StandardTypeHandle OcctSharp_StandardTypeHandle;
+
 typedef struct OcctSharp_XBRepMeshFactoryHandle OcctSharp_XBRepMeshFactoryHandle;
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_curve_create_0(
@@ -234,6 +309,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_curve_method_clear_0(
   const OcctSharp_BRepMeshDataCurveHandle* handle,
   int32_t isKeepEndPoints);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_curve_method_dynamic_type_0(
+  const OcctSharp_BRepMeshDataCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_curve_method_insert_point_0(
   const OcctSharp_BRepMeshDataCurveHandle* handle,
@@ -268,6 +347,15 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_curve_release(OcctSharp_BRepMeshDataCurveHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_edge_method_dynamic_type_0(
+  const OcctSharp_BRepMeshDataEdgeHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_edge_method_get_pcurve_0(
+  const OcctSharp_BRepMeshDataEdgeHandle* handle,
+  int32_t theIndex,
+  OcctSharp_IMeshDataPCurveHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_edge_method_pcurves_nb_0(
   const OcctSharp_BRepMeshDataEdgeHandle* handle,
   int32_t* out_value);
@@ -290,6 +378,15 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data
   int32_t* out_is_kind);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_edge_release(OcctSharp_BRepMeshDataEdgeHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_face_method_dynamic_type_0(
+  const OcctSharp_BRepMeshDataFaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_face_method_get_wire_0(
+  const OcctSharp_BRepMeshDataFaceHandle* handle,
+  int32_t theIndex,
+  OcctSharp_IMeshDataWireHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_face_method_wires_nb_0(
   const OcctSharp_BRepMeshDataFaceHandle* handle,
@@ -314,6 +411,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_face_release(OcctSharp_BRepMeshDataFaceHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_model_method_dynamic_type_0(
+  const OcctSharp_BRepMeshDataModelHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_model_method_edges_nb_0(
   const OcctSharp_BRepMeshDataModelHandle* handle,
   int32_t* out_value);
@@ -321,6 +422,16 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_model_method_faces_nb_0(
   const OcctSharp_BRepMeshDataModelHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_model_method_get_edge_0(
+  const OcctSharp_BRepMeshDataModelHandle* handle,
+  int32_t theIndex,
+  OcctSharp_IMeshDataEdgeHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_model_method_get_face_0(
+  const OcctSharp_BRepMeshDataModelHandle* handle,
+  int32_t theIndex,
+  OcctSharp_IMeshDataFaceHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_model_method_get_max_size_0(
   const OcctSharp_BRepMeshDataModelHandle* handle,
@@ -353,6 +464,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data
   const OcctSharp_BRepMeshDataPCurveHandle* handle,
   int32_t isKeepEndPoints);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_pcurve_method_dynamic_type_0(
+  const OcctSharp_BRepMeshDataPCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_pcurve_method_parameters_nb_0(
   const OcctSharp_BRepMeshDataPCurveHandle* handle,
   int32_t* out_value);
@@ -379,6 +494,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data
   int32_t* out_is_kind);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_pcurve_release(OcctSharp_BRepMeshDataPCurveHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_wire_method_dynamic_type_0(
+  const OcctSharp_BRepMeshDataWireHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_wire_method_edges_nb_0(
   const OcctSharp_BRepMeshDataWireHandle* handle,
@@ -408,6 +527,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_wire_release(OcctSharp_BRepMeshDataWireHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_base_mesh_algo_method_dynamic_type_0(
+  const OcctSharp_BRepMeshBaseMeshAlgoHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_base_mesh_algo_clone(
   const OcctSharp_BRepMeshBaseMeshAlgoHandle* source,
   OcctSharp_BRepMeshBaseMeshAlgoHandle** out_handle);
@@ -430,6 +553,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_base_mesh_algo_r
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_classifier_create_0(
   OcctSharp_BRepMeshClassifierHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_classifier_method_dynamic_type_0(
+  const OcctSharp_BRepMeshClassifierHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_classifier_clone(
   const OcctSharp_BRepMeshClassifierHandle* source,
   OcctSharp_BRepMeshClassifierHandle** out_handle);
@@ -448,6 +575,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_clas
   int32_t* out_is_kind);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_classifier_release(OcctSharp_BRepMeshClassifierHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_constrained_base_mesh_algo_method_dynamic_type_0(
+  const OcctSharp_BRepMeshConstrainedBaseMeshAlgoHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_constrained_base_mesh_algo_clone(
   const OcctSharp_BRepMeshConstrainedBaseMeshAlgoHandle* source,
@@ -472,6 +603,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_cont
   int32_t theMeshType,
   OcctSharp_BRepMeshContextHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_context_method_dynamic_type_0(
+  const OcctSharp_BRepMeshContextHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_context_clone(
   const OcctSharp_BRepMeshContextHandle* source,
   OcctSharp_BRepMeshContextHandle** out_handle);
@@ -490,6 +625,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_cont
   int32_t* out_is_kind);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_context_release(OcctSharp_BRepMeshContextHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_curve_tessellator_method_dynamic_type_0(
+  const OcctSharp_BRepMeshCurveTessellatorHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_curve_tessellator_method_points_nb_0(
   const OcctSharp_BRepMeshCurveTessellatorHandle* handle,
@@ -513,6 +652,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_curv
   int32_t* out_is_kind);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_curve_tessellator_release(OcctSharp_BRepMeshCurveTessellatorHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_custom_base_mesh_algo_method_dynamic_type_0(
+  const OcctSharp_BRepMeshCustomBaseMeshAlgoHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_custom_base_mesh_algo_clone(
   const OcctSharp_BRepMeshCustomBaseMeshAlgoHandle* source,
@@ -538,11 +681,23 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data
   int32_t theReservedNodeSize,
   OcctSharp_BRepMeshDataStructureOfDelaunHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_structure_of_delaun_method_allocator_0(
+  const OcctSharp_BRepMeshDataStructureOfDelaunHandle* handle,
+  OcctSharp_NCollectionIncAllocatorHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_structure_of_delaun_method_clear_deleted_0(
   const OcctSharp_BRepMeshDataStructureOfDelaunHandle* handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_structure_of_delaun_method_clear_domain_0(
   const OcctSharp_BRepMeshDataStructureOfDelaunHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_structure_of_delaun_method_data_0(
+  const OcctSharp_BRepMeshDataStructureOfDelaunHandle* handle,
+  OcctSharp_BRepMeshVertexToolHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_structure_of_delaun_method_dynamic_type_0(
+  const OcctSharp_BRepMeshDataStructureOfDelaunHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_structure_of_delaun_method_nb_elements_0(
   const OcctSharp_BRepMeshDataStructureOfDelaunHandle* handle,
@@ -589,6 +744,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_structure_of_delaun_release(OcctSharp_BRepMeshDataStructureOfDelaunHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_deflection_method_dynamic_type_0(
+  const OcctSharp_BRepMeshDeflectionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_deflection_clone(
   const OcctSharp_BRepMeshDeflectionHandle* source,
   OcctSharp_BRepMeshDeflectionHandle** out_handle);
@@ -610,6 +769,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_deflection_relea
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_delabella_base_mesh_algo_create_0(
   OcctSharp_BRepMeshDelabellaBaseMeshAlgoHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_delabella_base_mesh_algo_method_dynamic_type_0(
+  const OcctSharp_BRepMeshDelabellaBaseMeshAlgoHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_delabella_base_mesh_algo_clone(
   const OcctSharp_BRepMeshDelabellaBaseMeshAlgoHandle* source,
@@ -633,6 +796,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_delabella_base_m
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_delabella_mesh_algo_factory_create_0(
   OcctSharp_BRepMeshDelabellaMeshAlgoFactoryHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_delabella_mesh_algo_factory_method_dynamic_type_0(
+  const OcctSharp_BRepMeshDelabellaMeshAlgoFactoryHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_delabella_mesh_algo_factory_clone(
   const OcctSharp_BRepMeshDelabellaMeshAlgoFactoryHandle* source,
   OcctSharp_BRepMeshDelabellaMeshAlgoFactoryHandle** out_handle);
@@ -655,6 +822,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_delabella_mesh_a
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_delaunay_base_mesh_algo_create_0(
   OcctSharp_BRepMeshDelaunayBaseMeshAlgoHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_delaunay_base_mesh_algo_method_dynamic_type_0(
+  const OcctSharp_BRepMeshDelaunayBaseMeshAlgoHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_delaunay_base_mesh_algo_clone(
   const OcctSharp_BRepMeshDelaunayBaseMeshAlgoHandle* source,
   OcctSharp_BRepMeshDelaunayBaseMeshAlgoHandle** out_handle);
@@ -674,6 +845,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_dela
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_delaunay_base_mesh_algo_release(OcctSharp_BRepMeshDelaunayBaseMeshAlgoHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_discret_algo_factory_method_dynamic_type_0(
+  const OcctSharp_BRepMeshDiscretAlgoFactoryHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_discret_algo_factory_clone(
   const OcctSharp_BRepMeshDiscretAlgoFactoryHandle* source,
   OcctSharp_BRepMeshDiscretAlgoFactoryHandle** out_handle);
@@ -692,6 +867,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_disc
   int32_t* out_is_kind);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_discret_algo_factory_release(OcctSharp_BRepMeshDiscretAlgoFactoryHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_discret_root_method_dynamic_type_0(
+  const OcctSharp_BRepMeshDiscretRootHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_discret_root_method_is_done_0(
   const OcctSharp_BRepMeshDiscretRootHandle* handle,
@@ -719,6 +898,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_discret_root_rel
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_edge_discret_create_0(
   OcctSharp_BRepMeshEdgeDiscretHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_edge_discret_method_dynamic_type_0(
+  const OcctSharp_BRepMeshEdgeDiscretHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_edge_discret_clone(
   const OcctSharp_BRepMeshEdgeDiscretHandle* source,
   OcctSharp_BRepMeshEdgeDiscretHandle** out_handle);
@@ -743,6 +926,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_edge
   const OcctSharp_IMeshDataFaceHandle* theFace,
   OcctSharp_BRepMeshEdgeTessellationExtractorHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_edge_tessellation_extractor_method_dynamic_type_0(
+  const OcctSharp_BRepMeshEdgeTessellationExtractorHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_edge_tessellation_extractor_method_points_nb_0(
   const OcctSharp_BRepMeshEdgeTessellationExtractorHandle* handle,
   int32_t* out_value);
@@ -765,6 +952,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_edge
   int32_t* out_is_kind);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_edge_tessellation_extractor_release(OcctSharp_BRepMeshEdgeTessellationExtractorHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_face_checker_method_dynamic_type_0(
+  const OcctSharp_BRepMeshFaceCheckerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_face_checker_method_perform_0(
   const OcctSharp_BRepMeshFaceCheckerHandle* handle,
@@ -793,6 +984,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_face
   const OcctSharp_IMeshToolsMeshAlgoFactoryHandle* theAlgoFactory,
   OcctSharp_BRepMeshFaceDiscretHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_face_discret_method_dynamic_type_0(
+  const OcctSharp_BRepMeshFaceDiscretHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_face_discret_clone(
   const OcctSharp_BRepMeshFaceDiscretHandle* source,
   OcctSharp_BRepMeshFaceDiscretHandle** out_handle);
@@ -814,6 +1009,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_face_discret_rel
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_incremental_mesh_create_0(
   OcctSharp_BRepMeshIncrementalMeshHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_incremental_mesh_method_dynamic_type_0(
+  const OcctSharp_BRepMeshIncrementalMeshHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_incremental_mesh_method_get_status_flags_0(
   const OcctSharp_BRepMeshIncrementalMeshHandle* handle,
@@ -845,6 +1044,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_incremental_mesh
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_incremental_mesh_factory_create_0(
   OcctSharp_BRepMeshIncrementalMeshFactoryHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_incremental_mesh_factory_method_dynamic_type_0(
+  const OcctSharp_BRepMeshIncrementalMeshFactoryHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_incremental_mesh_factory_clone(
   const OcctSharp_BRepMeshIncrementalMeshFactoryHandle* source,
   OcctSharp_BRepMeshIncrementalMeshFactoryHandle** out_handle);
@@ -866,6 +1069,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_incremental_mesh
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_mesh_algo_factory_create_0(
   OcctSharp_BRepMeshMeshAlgoFactoryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_mesh_algo_factory_method_dynamic_type_0(
+  const OcctSharp_BRepMeshMeshAlgoFactoryHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_mesh_algo_factory_clone(
   const OcctSharp_BRepMeshMeshAlgoFactoryHandle* source,
@@ -899,12 +1106,20 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_mesh
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_mesh_tool_method_clean_frontier_links_0(
   const OcctSharp_BRepMeshMeshToolHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_mesh_tool_method_dynamic_type_0(
+  const OcctSharp_BRepMeshMeshToolHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_mesh_tool_method_erase_free_links_0(
   const OcctSharp_BRepMeshMeshToolHandle* handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_mesh_tool_method_erase_items_connected_to_0(
   const OcctSharp_BRepMeshMeshToolHandle* handle,
   int32_t theNodeIndex);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_mesh_tool_method_get_structure_0(
+  const OcctSharp_BRepMeshMeshToolHandle* handle,
+  OcctSharp_BRepMeshDataStructureOfDelaunHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_mesh_tool_method_legalize_0(
   const OcctSharp_BRepMeshMeshToolHandle* handle,
@@ -932,6 +1147,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_mesh_tool_releas
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_model_builder_create_0(
   OcctSharp_BRepMeshModelBuilderHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_model_builder_method_dynamic_type_0(
+  const OcctSharp_BRepMeshModelBuilderHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_model_builder_clone(
   const OcctSharp_BRepMeshModelBuilderHandle* source,
   OcctSharp_BRepMeshModelBuilderHandle** out_handle);
@@ -953,6 +1172,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_model_builder_re
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_model_healer_create_0(
   OcctSharp_BRepMeshModelHealerHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_model_healer_method_dynamic_type_0(
+  const OcctSharp_BRepMeshModelHealerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_model_healer_clone(
   const OcctSharp_BRepMeshModelHealerHandle* source,
@@ -976,6 +1199,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_model_healer_rel
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_model_post_processor_create_0(
   OcctSharp_BRepMeshModelPostProcessorHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_model_post_processor_method_dynamic_type_0(
+  const OcctSharp_BRepMeshModelPostProcessorHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_model_post_processor_clone(
   const OcctSharp_BRepMeshModelPostProcessorHandle* source,
   OcctSharp_BRepMeshModelPostProcessorHandle** out_handle);
@@ -997,6 +1224,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_model_post_proce
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_model_pre_processor_create_0(
   OcctSharp_BRepMeshModelPreProcessorHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_model_pre_processor_method_dynamic_type_0(
+  const OcctSharp_BRepMeshModelPreProcessorHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_model_pre_processor_clone(
   const OcctSharp_BRepMeshModelPreProcessorHandle* source,
@@ -1026,6 +1257,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_sele
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_selector_of_data_structure_of_delaun_method_add_neighbours_0(
   const OcctSharp_BRepMeshSelectorOfDataStructureOfDelaunHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_selector_of_data_structure_of_delaun_method_dynamic_type_0(
+  const OcctSharp_BRepMeshSelectorOfDataStructureOfDelaunHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_selector_of_data_structure_of_delaun_method_initialize_0(
   const OcctSharp_BRepMeshSelectorOfDataStructureOfDelaunHandle* handle,
@@ -1062,6 +1297,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_sele
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_selector_of_data_structure_of_delaun_release(OcctSharp_BRepMeshSelectorOfDataStructureOfDelaunHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_shape_tool_method_dynamic_type_0(
+  const OcctSharp_BRepMeshShapeToolHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_shape_tool_clone(
   const OcctSharp_BRepMeshShapeToolHandle* source,
   OcctSharp_BRepMeshShapeToolHandle** out_handle);
@@ -1084,6 +1323,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_shape_tool_relea
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_shape_visitor_create_0(
   const OcctSharp_IMeshDataModelHandle* theModel,
   OcctSharp_BRepMeshShapeVisitorHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_shape_visitor_method_dynamic_type_0(
+  const OcctSharp_BRepMeshShapeVisitorHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_shape_visitor_clone(
   const OcctSharp_BRepMeshShapeVisitorHandle* source,
@@ -1111,6 +1354,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_vert
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_vertex_tool_method_delete_vertex_0(
   const OcctSharp_BRepMeshVertexToolHandle* handle,
   int32_t theIndex);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_vertex_tool_method_dynamic_type_0(
+  const OcctSharp_BRepMeshVertexToolHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_vertex_tool_method_extent_0(
   const OcctSharp_BRepMeshVertexToolHandle* handle,
@@ -1160,6 +1407,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_vert
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_vertex_tool_release(OcctSharp_BRepMeshVertexToolHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_curve_method_dynamic_type_0(
+  const OcctSharp_IMeshDataCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_curve_clone(
   const OcctSharp_IMeshDataCurveHandle* source,
   OcctSharp_IMeshDataCurveHandle** out_handle);
@@ -1183,9 +1434,17 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_edg
   const OcctSharp_IMeshDataEdgeHandle* handle,
   int32_t isKeepEndPoints);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_edge_method_dynamic_type_0(
+  const OcctSharp_IMeshDataEdgeHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_edge_method_get_angular_deflection_0(
   const OcctSharp_IMeshDataEdgeHandle* handle,
   double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_edge_method_get_curve_0(
+  const OcctSharp_IMeshDataEdgeHandle* handle,
+  OcctSharp_IMeshDataCurveHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_edge_method_get_degenerated_0(
   const OcctSharp_IMeshDataEdgeHandle* handle,
@@ -1242,6 +1501,14 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_edg
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_imesh_data_edge_release(OcctSharp_IMeshDataEdgeHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_face_method_dynamic_type_0(
+  const OcctSharp_IMeshDataFaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_face_method_get_surface_0(
+  const OcctSharp_IMeshDataFaceHandle* handle,
+  OcctSharp_BRepAdaptorSurfaceHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_face_method_is_valid_0(
   const OcctSharp_IMeshDataFaceHandle* handle,
   int32_t* out_value);
@@ -1265,6 +1532,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_fac
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_imesh_data_face_release(OcctSharp_IMeshDataFaceHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_model_method_dynamic_type_0(
+  const OcctSharp_IMeshDataModelHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_model_clone(
   const OcctSharp_IMeshDataModelHandle* source,
   OcctSharp_IMeshDataModelHandle** out_handle);
@@ -1283,6 +1554,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_mod
   int32_t* out_is_kind);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_imesh_data_model_release(OcctSharp_IMeshDataModelHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_pcurve_method_dynamic_type_0(
+  const OcctSharp_IMeshDataPCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_pcurve_method_get_orientation_0(
   const OcctSharp_IMeshDataPCurveHandle* handle,
@@ -1315,6 +1590,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_pcu
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_imesh_data_pcurve_release(OcctSharp_IMeshDataPCurveHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_parameters_list_method_dynamic_type_0(
+  const OcctSharp_IMeshDataParametersListHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_parameters_list_clone(
   const OcctSharp_IMeshDataParametersListHandle* source,
   OcctSharp_IMeshDataParametersListHandle** out_handle);
@@ -1334,6 +1613,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_par
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_imesh_data_parameters_list_release(OcctSharp_IMeshDataParametersListHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_shape_method_dynamic_type_0(
+  const OcctSharp_IMeshDataShapeHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_shape_clone(
   const OcctSharp_IMeshDataShapeHandle* source,
   OcctSharp_IMeshDataShapeHandle** out_handle);
@@ -1352,6 +1635,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_sha
   int32_t* out_is_kind);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_imesh_data_shape_release(OcctSharp_IMeshDataShapeHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_tessellated_shape_method_dynamic_type_0(
+  const OcctSharp_IMeshDataTessellatedShapeHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_tessellated_shape_method_get_deflection_0(
   const OcctSharp_IMeshDataTessellatedShapeHandle* handle,
@@ -1379,6 +1666,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_tes
   int32_t* out_is_kind);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_imesh_data_tessellated_shape_release(OcctSharp_IMeshDataTessellatedShapeHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_wire_method_dynamic_type_0(
+  const OcctSharp_IMeshDataWireHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_wire_clone(
   const OcctSharp_IMeshDataWireHandle* source,
@@ -1412,6 +1703,38 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_co
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_context_method_discretize_edges_0(
   const OcctSharp_IMeshToolsContextHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_context_method_dynamic_type_0(
+  const OcctSharp_IMeshToolsContextHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_context_method_get_edge_discret_0(
+  const OcctSharp_IMeshToolsContextHandle* handle,
+  OcctSharp_IMeshToolsModelAlgoHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_context_method_get_face_discret_0(
+  const OcctSharp_IMeshToolsContextHandle* handle,
+  OcctSharp_IMeshToolsModelAlgoHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_context_method_get_model_0(
+  const OcctSharp_IMeshToolsContextHandle* handle,
+  OcctSharp_IMeshDataModelHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_context_method_get_model_builder_0(
+  const OcctSharp_IMeshToolsContextHandle* handle,
+  OcctSharp_IMeshToolsModelBuilderHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_context_method_get_model_healer_0(
+  const OcctSharp_IMeshToolsContextHandle* handle,
+  OcctSharp_IMeshToolsModelAlgoHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_context_method_get_post_processor_0(
+  const OcctSharp_IMeshToolsContextHandle* handle,
+  OcctSharp_IMeshToolsModelAlgoHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_context_method_get_pre_processor_0(
+  const OcctSharp_IMeshToolsContextHandle* handle,
+  OcctSharp_IMeshToolsModelAlgoHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_context_method_heal_model_0(
   const OcctSharp_IMeshToolsContextHandle* handle,
@@ -1468,6 +1791,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_co
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_imesh_tools_context_release(OcctSharp_IMeshToolsContextHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_curve_tessellator_method_dynamic_type_0(
+  const OcctSharp_IMeshToolsCurveTessellatorHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_curve_tessellator_clone(
   const OcctSharp_IMeshToolsCurveTessellatorHandle* source,
   OcctSharp_IMeshToolsCurveTessellatorHandle** out_handle);
@@ -1487,6 +1814,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_cu
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_imesh_tools_curve_tessellator_release(OcctSharp_IMeshToolsCurveTessellatorHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_mesh_algo_method_dynamic_type_0(
+  const OcctSharp_IMeshToolsMeshAlgoHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_mesh_algo_clone(
   const OcctSharp_IMeshToolsMeshAlgoHandle* source,
   OcctSharp_IMeshToolsMeshAlgoHandle** out_handle);
@@ -1505,6 +1836,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_me
   int32_t* out_is_kind);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_imesh_tools_mesh_algo_release(OcctSharp_IMeshToolsMeshAlgoHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_mesh_algo_factory_method_dynamic_type_0(
+  const OcctSharp_IMeshToolsMeshAlgoFactoryHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_mesh_algo_factory_clone(
   const OcctSharp_IMeshToolsMeshAlgoFactoryHandle* source,
@@ -1532,6 +1867,14 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_me
   const OcctSharp_IMeshToolsContextHandle* theContext,
   OcctSharp_IMeshToolsMeshBuilderHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_mesh_builder_method_dynamic_type_0(
+  const OcctSharp_IMeshToolsMeshBuilderHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_mesh_builder_method_get_context_0(
+  const OcctSharp_IMeshToolsMeshBuilderHandle* handle,
+  OcctSharp_IMeshToolsContextHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_mesh_builder_method_set_context_0(
   const OcctSharp_IMeshToolsMeshBuilderHandle* handle,
   const OcctSharp_IMeshToolsContextHandle* theContext);
@@ -1555,6 +1898,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_me
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_imesh_tools_mesh_builder_release(OcctSharp_IMeshToolsMeshBuilderHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_model_algo_method_dynamic_type_0(
+  const OcctSharp_IMeshToolsModelAlgoHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_model_algo_clone(
   const OcctSharp_IMeshToolsModelAlgoHandle* source,
   OcctSharp_IMeshToolsModelAlgoHandle** out_handle);
@@ -1573,6 +1920,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_mo
   int32_t* out_is_kind);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_imesh_tools_model_algo_release(OcctSharp_IMeshToolsModelAlgoHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_model_builder_method_dynamic_type_0(
+  const OcctSharp_IMeshToolsModelBuilderHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_model_builder_clone(
   const OcctSharp_IMeshToolsModelBuilderHandle* source,
@@ -1597,6 +1948,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_sh
   const OcctSharp_IMeshToolsShapeExplorerHandle* handle,
   const OcctSharp_IMeshToolsShapeVisitorHandle* theVisitor);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_shape_explorer_method_dynamic_type_0(
+  const OcctSharp_IMeshToolsShapeExplorerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_shape_explorer_clone(
   const OcctSharp_IMeshToolsShapeExplorerHandle* source,
   OcctSharp_IMeshToolsShapeExplorerHandle** out_handle);
@@ -1615,6 +1970,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_sh
   int32_t* out_is_kind);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_imesh_tools_shape_explorer_release(OcctSharp_IMeshToolsShapeExplorerHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_shape_visitor_method_dynamic_type_0(
+  const OcctSharp_IMeshToolsShapeVisitorHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_shape_visitor_clone(
   const OcctSharp_IMeshToolsShapeVisitorHandle* source,
@@ -1637,6 +1996,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_imesh_tools_shape_visitor_
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xbrep_mesh_factory_create_0(
   OcctSharp_XBRepMeshFactoryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xbrep_mesh_factory_method_dynamic_type_0(
+  const OcctSharp_XBRepMeshFactoryHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xbrep_mesh_factory_clone(
   const OcctSharp_XBRepMeshFactoryHandle* source,
@@ -1718,6 +2081,13 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_xbrep_mesh_factory_release
 #include <NCollection_IncAllocator.hxx>
 #include <XBRepMesh_Factory.hxx>
 #include <utility>
+#include <climits>
+#include <cstdint>
+#include <limits>
+static_assert(CHAR_BIT == 8 && sizeof(short) == 2 && sizeof(int) == 4);
+static_assert(sizeof(long) == 4 && sizeof(long long) == 8 && sizeof(size_t) == 8);
+static_assert(sizeof(float) == 4 && std::numeric_limits<float>::is_iec559);
+static_assert(sizeof(double) == 8 && std::numeric_limits<double>::is_iec559);
 
 struct OcctSharp_BRepMeshDataCurveHandle
 {

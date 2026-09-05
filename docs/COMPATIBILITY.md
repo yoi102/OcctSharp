@@ -1,5 +1,15 @@
 # Compatibility
 
+## Preview.23 generated projection expansion
+
+X preserves Preview.22 overload ordinals using the immutable 16,353 stable-ID baseline.
+New eligible signatures append within an overload group. The native source comparison
+checks all 28,747 old generated signatures and function bodies, not only export names.
+New static calls use checked status/output ABI without changing old direct-return calls.
+The final managed API diff, Release/Debug export parity and fresh consumers are recorded
+in STATUS. Assembly/file identity remains 0.1.0.0, configuration schema remains 1.13,
+and binding-model schema remains 1.3.
+
 ## Preview.22 additive rendering API
 
 W retains the module graph, assembly identities and one Native DLL. The comparison

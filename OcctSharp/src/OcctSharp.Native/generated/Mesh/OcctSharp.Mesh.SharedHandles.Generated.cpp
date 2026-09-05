@@ -2,66 +2,108 @@
 // Source: c:@S@BRepMeshData_Curve@F@AddPoint#&1$@S@gp_Pnt#d#
 // Source: c:@S@BRepMeshData_Curve@F@BRepMeshData_Curve#&1$@N@opencascade@S@handle>#$@S@NCollection_IncAllocator#
 // Source: c:@S@BRepMeshData_Curve@F@Clear#b#
+// Source: c:@S@BRepMeshData_Curve@F@DynamicType#1
 // Source: c:@S@BRepMeshData_Curve@F@InsertPoint#I#&1$@S@gp_Pnt#d#
 // Source: c:@S@BRepMeshData_Curve@F@ParametersNb#1
 // Source: c:@S@BRepMeshData_Curve@F@RemovePoint#I#
+// Source: c:@S@BRepMeshData_Edge@F@DynamicType#1
+// Source: c:@S@BRepMeshData_Edge@F@GetPCurve#I#1
 // Source: c:@S@BRepMeshData_Edge@F@PCurvesNb#1
+// Source: c:@S@BRepMeshData_Face@F@DynamicType#1
+// Source: c:@S@BRepMeshData_Face@F@GetWire#I#1
 // Source: c:@S@BRepMeshData_Face@F@WiresNb#1
+// Source: c:@S@BRepMeshData_Model@F@DynamicType#1
 // Source: c:@S@BRepMeshData_Model@F@EdgesNb#1
 // Source: c:@S@BRepMeshData_Model@F@FacesNb#1
+// Source: c:@S@BRepMeshData_Model@F@GetEdge#I#1
+// Source: c:@S@BRepMeshData_Model@F@GetFace#I#1
 // Source: c:@S@BRepMeshData_Model@F@GetMaxSize#1
 // Source: c:@S@BRepMeshData_Model@F@SetMaxSize#d#
 // Source: c:@S@BRepMeshData_PCurve@F@Clear#b#
+// Source: c:@S@BRepMeshData_PCurve@F@DynamicType#1
 // Source: c:@S@BRepMeshData_PCurve@F@ParametersNb#1
 // Source: c:@S@BRepMeshData_PCurve@F@RemovePoint#I#
+// Source: c:@S@BRepMeshData_Wire@F@DynamicType#1
 // Source: c:@S@BRepMeshData_Wire@F@EdgesNb#1
 // Source: c:@S@BRepMeshData_Wire@F@GetEdgeOrientation#I#1
+// Source: c:@S@BRepMesh_BaseMeshAlgo@F@DynamicType#1
 // Source: c:@S@BRepMesh_Classifier@F@BRepMesh_Classifier#
+// Source: c:@S@BRepMesh_Classifier@F@DynamicType#1
+// Source: c:@S@BRepMesh_ConstrainedBaseMeshAlgo@F@DynamicType#1
 // Source: c:@S@BRepMesh_Context@F@BRepMesh_Context#$@E@IMeshTools_MeshAlgoType#
+// Source: c:@S@BRepMesh_Context@F@DynamicType#1
+// Source: c:@S@BRepMesh_CurveTessellator@F@DynamicType#1
 // Source: c:@S@BRepMesh_CurveTessellator@F@PointsNb#1
+// Source: c:@S@BRepMesh_CustomBaseMeshAlgo@F@DynamicType#1
+// Source: c:@S@BRepMesh_DataStructureOfDelaun@F@Allocator#1
 // Source: c:@S@BRepMesh_DataStructureOfDelaun@F@BRepMesh_DataStructureOfDelaun#&1$@N@opencascade@S@handle>#$@S@NCollection_IncAllocator#I#
 // Source: c:@S@BRepMesh_DataStructureOfDelaun@F@ClearDeleted#
 // Source: c:@S@BRepMesh_DataStructureOfDelaun@F@ClearDomain#
+// Source: c:@S@BRepMesh_DataStructureOfDelaun@F@Data#
+// Source: c:@S@BRepMesh_DataStructureOfDelaun@F@DynamicType#1
 // Source: c:@S@BRepMesh_DataStructureOfDelaun@F@NbElements#1
 // Source: c:@S@BRepMesh_DataStructureOfDelaun@F@NbLinks#1
 // Source: c:@S@BRepMesh_DataStructureOfDelaun@F@NbNodes#1
 // Source: c:@S@BRepMesh_DataStructureOfDelaun@F@RemoveElement#I#
 // Source: c:@S@BRepMesh_DataStructureOfDelaun@F@RemoveLink#I#b#
 // Source: c:@S@BRepMesh_DataStructureOfDelaun@F@RemoveNode#I#b#
+// Source: c:@S@BRepMesh_Deflection@F@DynamicType#1
 // Source: c:@S@BRepMesh_DelabellaBaseMeshAlgo@F@BRepMesh_DelabellaBaseMeshAlgo#
+// Source: c:@S@BRepMesh_DelabellaBaseMeshAlgo@F@DynamicType#1
 // Source: c:@S@BRepMesh_DelabellaMeshAlgoFactory@F@BRepMesh_DelabellaMeshAlgoFactory#
+// Source: c:@S@BRepMesh_DelabellaMeshAlgoFactory@F@DynamicType#1
 // Source: c:@S@BRepMesh_DelaunayBaseMeshAlgo@F@BRepMesh_DelaunayBaseMeshAlgo#
+// Source: c:@S@BRepMesh_DelaunayBaseMeshAlgo@F@DynamicType#1
+// Source: c:@S@BRepMesh_DiscretAlgoFactory@F@DynamicType#1
+// Source: c:@S@BRepMesh_DiscretRoot@F@DynamicType#1
 // Source: c:@S@BRepMesh_DiscretRoot@F@IsDone#1
 // Source: c:@S@BRepMesh_EdgeDiscret@F@BRepMesh_EdgeDiscret#
+// Source: c:@S@BRepMesh_EdgeDiscret@F@DynamicType#1
 // Source: c:@S@BRepMesh_EdgeTessellationExtractor@F@BRepMesh_EdgeTessellationExtractor#&1$@N@opencascade@S@handle>#$@S@IMeshData_Edge#&1$@N@opencascade@S@handle>#$@S@IMeshData_Face#
+// Source: c:@S@BRepMesh_EdgeTessellationExtractor@F@DynamicType#1
 // Source: c:@S@BRepMesh_EdgeTessellationExtractor@F@PointsNb#1
+// Source: c:@S@BRepMesh_FaceChecker@F@DynamicType#1
 // Source: c:@S@BRepMesh_FaceChecker@F@Perform#
 // Source: c:@S@BRepMesh_FaceDiscret@F@BRepMesh_FaceDiscret#&1$@N@opencascade@S@handle>#$@S@IMeshTools_MeshAlgoFactory#
+// Source: c:@S@BRepMesh_FaceDiscret@F@DynamicType#1
 // Source: c:@S@BRepMesh_IncrementalMesh@F@BRepMesh_IncrementalMesh#
+// Source: c:@S@BRepMesh_IncrementalMesh@F@DynamicType#1
 // Source: c:@S@BRepMesh_IncrementalMesh@F@GetStatusFlags#1
 // Source: c:@S@BRepMesh_IncrementalMesh@F@IsModified#1
 // Source: c:@S@BRepMesh_IncrementalMeshFactory@F@BRepMesh_IncrementalMeshFactory#
+// Source: c:@S@BRepMesh_IncrementalMeshFactory@F@DynamicType#1
 // Source: c:@S@BRepMesh_MeshAlgoFactory@F@BRepMesh_MeshAlgoFactory#
+// Source: c:@S@BRepMesh_MeshAlgoFactory@F@DynamicType#1
 // Source: c:@S@BRepMesh_MeshTool@F@AddAndLegalizeTriangle#I#I#I#
 // Source: c:@S@BRepMesh_MeshTool@F@BRepMesh_MeshTool#&1$@N@opencascade@S@handle>#$@S@BRepMesh_DataStructureOfDelaun#
 // Source: c:@S@BRepMesh_MeshTool@F@CleanFrontierLinks#
+// Source: c:@S@BRepMesh_MeshTool@F@DynamicType#1
 // Source: c:@S@BRepMesh_MeshTool@F@EraseFreeLinks#
 // Source: c:@S@BRepMesh_MeshTool@F@EraseItemsConnectedTo#I#
+// Source: c:@S@BRepMesh_MeshTool@F@GetStructure#1
 // Source: c:@S@BRepMesh_MeshTool@F@Legalize#I#
 // Source: c:@S@BRepMesh_ModelBuilder@F@BRepMesh_ModelBuilder#
+// Source: c:@S@BRepMesh_ModelBuilder@F@DynamicType#1
 // Source: c:@S@BRepMesh_ModelHealer@F@BRepMesh_ModelHealer#
+// Source: c:@S@BRepMesh_ModelHealer@F@DynamicType#1
 // Source: c:@S@BRepMesh_ModelPostProcessor@F@BRepMesh_ModelPostProcessor#
+// Source: c:@S@BRepMesh_ModelPostProcessor@F@DynamicType#1
 // Source: c:@S@BRepMesh_ModelPreProcessor@F@BRepMesh_ModelPreProcessor#
+// Source: c:@S@BRepMesh_ModelPreProcessor@F@DynamicType#1
 // Source: c:@S@BRepMesh_SelectorOfDataStructureOfDelaun@F@AddNeighbours#
 // Source: c:@S@BRepMesh_SelectorOfDataStructureOfDelaun@F@BRepMesh_SelectorOfDataStructureOfDelaun#
 // Source: c:@S@BRepMesh_SelectorOfDataStructureOfDelaun@F@BRepMesh_SelectorOfDataStructureOfDelaun#&1$@N@opencascade@S@handle>#$@S@BRepMesh_DataStructureOfDelaun#
+// Source: c:@S@BRepMesh_SelectorOfDataStructureOfDelaun@F@DynamicType#1
 // Source: c:@S@BRepMesh_SelectorOfDataStructureOfDelaun@F@Initialize#&1$@N@opencascade@S@handle>#$@S@BRepMesh_DataStructureOfDelaun#
 // Source: c:@S@BRepMesh_SelectorOfDataStructureOfDelaun@F@NeighboursOfElement#I#
 // Source: c:@S@BRepMesh_SelectorOfDataStructureOfDelaun@F@NeighboursOfLink#I#
 // Source: c:@S@BRepMesh_SelectorOfDataStructureOfDelaun@F@NeighboursOfNode#I#
+// Source: c:@S@BRepMesh_ShapeTool@F@DynamicType#1
 // Source: c:@S@BRepMesh_ShapeVisitor@F@BRepMesh_ShapeVisitor#&1$@N@opencascade@S@handle>#$@S@IMeshData_Model#
+// Source: c:@S@BRepMesh_ShapeVisitor@F@DynamicType#1
 // Source: c:@S@BRepMesh_VertexTool@F@BRepMesh_VertexTool#&1$@N@opencascade@S@handle>#$@S@NCollection_IncAllocator#
 // Source: c:@S@BRepMesh_VertexTool@F@DeleteVertex#I#
+// Source: c:@S@BRepMesh_VertexTool@F@DynamicType#1
 // Source: c:@S@BRepMesh_VertexTool@F@Extent#1
 // Source: c:@S@BRepMesh_VertexTool@F@IsEmpty#1
 // Source: c:@S@BRepMesh_VertexTool@F@RemoveLast#
@@ -69,8 +111,11 @@
 // Source: c:@S@BRepMesh_VertexTool@F@SetCellSize#d#d#
 // Source: c:@S@BRepMesh_VertexTool@F@SetTolerance#d#
 // Source: c:@S@BRepMesh_VertexTool@F@SetTolerance#d#d#
+// Source: c:@S@IMeshData_Curve@F@DynamicType#1
 // Source: c:@S@IMeshData_Edge@F@Clear#b#
+// Source: c:@S@IMeshData_Edge@F@DynamicType#1
 // Source: c:@S@IMeshData_Edge@F@GetAngularDeflection#1
+// Source: c:@S@IMeshData_Edge@F@GetCurve#1
 // Source: c:@S@IMeshData_Edge@F@GetDegenerated#1
 // Source: c:@S@IMeshData_Edge@F@GetSameParam#1
 // Source: c:@S@IMeshData_Edge@F@GetSameRange#1
@@ -80,15 +125,31 @@
 // Source: c:@S@IMeshData_Edge@F@SetDegenerated#b#
 // Source: c:@S@IMeshData_Edge@F@SetSameParam#b#
 // Source: c:@S@IMeshData_Edge@F@SetSameRange#b#
+// Source: c:@S@IMeshData_Face@F@DynamicType#1
+// Source: c:@S@IMeshData_Face@F@GetSurface#1
 // Source: c:@S@IMeshData_Face@F@IsValid#1
+// Source: c:@S@IMeshData_Model@F@DynamicType#1
+// Source: c:@S@IMeshData_PCurve@F@DynamicType#1
 // Source: c:@S@IMeshData_PCurve@F@GetOrientation#1
 // Source: c:@S@IMeshData_PCurve@F@IsForward#1
 // Source: c:@S@IMeshData_PCurve@F@IsInternal#1
+// Source: c:@S@IMeshData_ParametersList@F@DynamicType#1
+// Source: c:@S@IMeshData_Shape@F@DynamicType#1
+// Source: c:@S@IMeshData_TessellatedShape@F@DynamicType#1
 // Source: c:@S@IMeshData_TessellatedShape@F@GetDeflection#1
 // Source: c:@S@IMeshData_TessellatedShape@F@SetDeflection#d#
+// Source: c:@S@IMeshData_Wire@F@DynamicType#1
 // Source: c:@S@IMeshTools_Context@F@BuildModel#
 // Source: c:@S@IMeshTools_Context@F@Clean#
 // Source: c:@S@IMeshTools_Context@F@DiscretizeEdges#
+// Source: c:@S@IMeshTools_Context@F@DynamicType#1
+// Source: c:@S@IMeshTools_Context@F@GetEdgeDiscret#1
+// Source: c:@S@IMeshTools_Context@F@GetFaceDiscret#1
+// Source: c:@S@IMeshTools_Context@F@GetModel#1
+// Source: c:@S@IMeshTools_Context@F@GetModelBuilder#1
+// Source: c:@S@IMeshTools_Context@F@GetModelHealer#1
+// Source: c:@S@IMeshTools_Context@F@GetPostProcessor#1
+// Source: c:@S@IMeshTools_Context@F@GetPreProcessor#1
 // Source: c:@S@IMeshTools_Context@F@HealModel#
 // Source: c:@S@IMeshTools_Context@F@IMeshTools_Context#
 // Source: c:@S@IMeshTools_Context@F@PostProcessModel#
@@ -99,16 +160,28 @@
 // Source: c:@S@IMeshTools_Context@F@SetModelHealer#&1$@N@opencascade@S@handle>#$@S@IMeshTools_ModelAlgo#
 // Source: c:@S@IMeshTools_Context@F@SetPostProcessor#&1$@N@opencascade@S@handle>#$@S@IMeshTools_ModelAlgo#
 // Source: c:@S@IMeshTools_Context@F@SetPreProcessor#&1$@N@opencascade@S@handle>#$@S@IMeshTools_ModelAlgo#
+// Source: c:@S@IMeshTools_CurveTessellator@F@DynamicType#1
+// Source: c:@S@IMeshTools_MeshAlgo@F@DynamicType#1
+// Source: c:@S@IMeshTools_MeshAlgoFactory@F@DynamicType#1
+// Source: c:@S@IMeshTools_MeshBuilder@F@DynamicType#1
+// Source: c:@S@IMeshTools_MeshBuilder@F@GetContext#1
 // Source: c:@S@IMeshTools_MeshBuilder@F@IMeshTools_MeshBuilder#
 // Source: c:@S@IMeshTools_MeshBuilder@F@IMeshTools_MeshBuilder#&1$@N@opencascade@S@handle>#$@S@IMeshTools_Context#
 // Source: c:@S@IMeshTools_MeshBuilder@F@SetContext#&1$@N@opencascade@S@handle>#$@S@IMeshTools_Context#
+// Source: c:@S@IMeshTools_ModelAlgo@F@DynamicType#1
+// Source: c:@S@IMeshTools_ModelBuilder@F@DynamicType#1
 // Source: c:@S@IMeshTools_ShapeExplorer@F@Accept#&1$@N@opencascade@S@handle>#$@S@IMeshTools_ShapeVisitor#
+// Source: c:@S@IMeshTools_ShapeExplorer@F@DynamicType#1
+// Source: c:@S@IMeshTools_ShapeVisitor@F@DynamicType#1
+// Source: c:@S@XBRepMesh_Factory@F@DynamicType#1
 // Source: c:@S@XBRepMesh_Factory@F@XBRepMesh_Factory#
 #include "OcctSharp.Mesh.SharedHandles.Generated.h"
 #include "../Foundation/OcctSharp.Foundation.SharedHandles.Generated.h"
+#include "../Modeling/OcctSharp.Modeling.SharedHandles.Generated.h"
 #include "../Runtime/OcctSharp.Runtime.SharedSupport.Generated.hxx"
 #include "../../include/OcctSharp.Native.Internal.hxx"
 #include <RWGltf_GltfPrimArrayData.hxx>
+#include <BRepAdaptor_Surface.hxx>
 #include <BRepMeshData_Curve.hxx>
 #include <BRepMeshData_Edge.hxx>
 #include <BRepMeshData_Face.hxx>
@@ -163,6 +236,7 @@
 #include <IMeshTools_ShapeExplorer.hxx>
 #include <IMeshTools_ShapeVisitor.hxx>
 #include <NCollection_IncAllocator.hxx>
+#include <Standard_Type.hxx>
 #include <XBRepMesh_Factory.hxx>
 #include <Standard_Failure.hxx>
 #include <Standard_Handle.hxx>
@@ -175,6 +249,8 @@
 
 namespace OcctSharpGenerated
 {
+OcctSharp_BRepAdaptorSurfaceHandle* AllocateBRepAdaptorSurface(opencascade::handle<BRepAdaptor_Surface> value);
+const OcctSharp_BRepAdaptorSurfaceHandle* ValidateBRepAdaptorSurface(const OcctSharp_BRepAdaptorSurfaceHandle* handle);
 OcctSharp_BRepMeshDataCurveHandle* AllocateBRepMeshDataCurve(opencascade::handle<BRepMeshData_Curve> value, opencascade::handle<NCollection_IncAllocator> allocator);
 const OcctSharp_BRepMeshDataCurveHandle* ValidateBRepMeshDataCurve(const OcctSharp_BRepMeshDataCurveHandle* handle);
 OcctSharp_BRepMeshDataEdgeHandle* AllocateBRepMeshDataEdge(opencascade::handle<BRepMeshData_Edge> value);
@@ -283,6 +359,8 @@ OcctSharp_IMeshToolsShapeVisitorHandle* AllocateIMeshToolsShapeVisitor(opencasca
 const OcctSharp_IMeshToolsShapeVisitorHandle* ValidateIMeshToolsShapeVisitor(const OcctSharp_IMeshToolsShapeVisitorHandle* handle);
 OcctSharp_NCollectionIncAllocatorHandle* AllocateNCollectionIncAllocator(opencascade::handle<NCollection_IncAllocator> value);
 const OcctSharp_NCollectionIncAllocatorHandle* ValidateNCollectionIncAllocator(const OcctSharp_NCollectionIncAllocatorHandle* handle);
+OcctSharp_StandardTypeHandle* AllocateStandardType(opencascade::handle<Standard_Type> value);
+const OcctSharp_StandardTypeHandle* ValidateStandardType(const OcctSharp_StandardTypeHandle* handle);
 OcctSharp_XBRepMeshFactoryHandle* AllocateXBRepMeshFactory(opencascade::handle<XBRepMesh_Factory> value);
 const OcctSharp_XBRepMeshFactoryHandle* ValidateXBRepMeshFactory(const OcctSharp_XBRepMeshFactoryHandle* handle);
 }
@@ -1957,6 +2035,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_curve_method_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_curve_method_dynamic_type_0(
+  const OcctSharp_BRepMeshDataCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMeshData_Curve*>(ValidateBRepMeshDataCurve(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_curve_method_insert_point_0(
   const OcctSharp_BRepMeshDataCurveHandle* handle,
   int32_t thePosition,
@@ -2037,6 +2128,33 @@ void OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_curve_release(OcctSharp_B
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_edge_method_dynamic_type_0(
+  const OcctSharp_BRepMeshDataEdgeHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMeshData_Edge*>(ValidateBRepMeshDataEdge(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_edge_method_get_pcurve_0(
+  const OcctSharp_BRepMeshDataEdgeHandle* handle,
+  int32_t theIndex,
+  OcctSharp_IMeshDataPCurveHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IMeshData_PCurve> returnedHandle = static_cast<const BRepMeshData_Edge*>(ValidateBRepMeshDataEdge(handle)->Value.get())->GetPCurve(theIndex);
+    if (!returnedHandle.IsNull()) *out_handle = AllocateIMeshDataPCurve(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_edge_method_pcurves_nb_0(
   const OcctSharp_BRepMeshDataEdgeHandle* handle,
   int32_t* out_value)
@@ -2093,6 +2211,33 @@ void OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_edge_release(OcctSharp_BR
   bool removed = false;
   { std::lock_guard<std::mutex> lock(BRepMeshDataEdgeMutex); removed = LiveBRepMeshDataEdgeHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_face_method_dynamic_type_0(
+  const OcctSharp_BRepMeshDataFaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMeshData_Face*>(ValidateBRepMeshDataFace(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_face_method_get_wire_0(
+  const OcctSharp_BRepMeshDataFaceHandle* handle,
+  int32_t theIndex,
+  OcctSharp_IMeshDataWireHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IMeshData_Wire> returnedHandle = static_cast<const BRepMeshData_Face*>(ValidateBRepMeshDataFace(handle)->Value.get())->GetWire(theIndex);
+    if (!returnedHandle.IsNull()) *out_handle = AllocateIMeshDataWire(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_face_method_wires_nb_0(
@@ -2153,6 +2298,19 @@ void OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_face_release(OcctSharp_BR
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_model_method_dynamic_type_0(
+  const OcctSharp_BRepMeshDataModelHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMeshData_Model*>(ValidateBRepMeshDataModel(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_model_method_edges_nb_0(
   const OcctSharp_BRepMeshDataModelHandle* handle,
   int32_t* out_value)
@@ -2174,6 +2332,34 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_model_method_
   return GeneratedGuard([&]
   {
     *out_value = ValidateBRepMeshDataModel(handle)->Value->FacesNb();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_model_method_get_edge_0(
+  const OcctSharp_BRepMeshDataModelHandle* handle,
+  int32_t theIndex,
+  OcctSharp_IMeshDataEdgeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IMeshData_Edge> returnedHandle = static_cast<const BRepMeshData_Model*>(ValidateBRepMeshDataModel(handle)->Value.get())->GetEdge(theIndex);
+    if (!returnedHandle.IsNull()) *out_handle = AllocateIMeshDataEdge(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_model_method_get_face_0(
+  const OcctSharp_BRepMeshDataModelHandle* handle,
+  int32_t theIndex,
+  OcctSharp_IMeshDataFaceHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IMeshData_Face> returnedHandle = static_cast<const BRepMeshData_Model*>(ValidateBRepMeshDataModel(handle)->Value.get())->GetFace(theIndex);
+    if (!returnedHandle.IsNull()) *out_handle = AllocateIMeshDataFace(std::move(returnedHandle));
   });
 }
 
@@ -2255,6 +2441,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_pcurve_method
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_pcurve_method_dynamic_type_0(
+  const OcctSharp_BRepMeshDataPCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMeshData_PCurve*>(ValidateBRepMeshDataPCurve(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_pcurve_method_parameters_nb_0(
   const OcctSharp_BRepMeshDataPCurveHandle* handle,
   int32_t* out_value)
@@ -2321,6 +2520,19 @@ void OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_pcurve_release(OcctSharp_
   bool removed = false;
   { std::lock_guard<std::mutex> lock(BRepMeshDataPCurveMutex); removed = LiveBRepMeshDataPCurveHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_wire_method_dynamic_type_0(
+  const OcctSharp_BRepMeshDataWireHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMeshData_Wire*>(ValidateBRepMeshDataWire(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_wire_method_edges_nb_0(
@@ -2394,6 +2606,19 @@ void OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_wire_release(OcctSharp_BR
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_base_mesh_algo_method_dynamic_type_0(
+  const OcctSharp_BRepMeshBaseMeshAlgoHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_BaseMeshAlgo*>(ValidateBRepMeshBaseMeshAlgo(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_base_mesh_algo_clone(
   const OcctSharp_BRepMeshBaseMeshAlgoHandle* source,
   OcctSharp_BRepMeshBaseMeshAlgoHandle** out_handle)
@@ -2452,6 +2677,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_classifier_create_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_classifier_method_dynamic_type_0(
+  const OcctSharp_BRepMeshClassifierHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_Classifier*>(ValidateBRepMeshClassifier(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_classifier_clone(
   const OcctSharp_BRepMeshClassifierHandle* source,
   OcctSharp_BRepMeshClassifierHandle** out_handle)
@@ -2496,6 +2734,19 @@ void OCCTSHARP_CALL occtsharp_generated_brep_mesh_classifier_release(OcctSharp_B
   bool removed = false;
   { std::lock_guard<std::mutex> lock(BRepMeshClassifierMutex); removed = LiveBRepMeshClassifierHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_constrained_base_mesh_algo_method_dynamic_type_0(
+  const OcctSharp_BRepMeshConstrainedBaseMeshAlgoHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_ConstrainedBaseMeshAlgo*>(ValidateBRepMeshConstrainedBaseMeshAlgo(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_constrained_base_mesh_algo_clone(
@@ -2557,6 +2808,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_context_create_0(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_context_method_dynamic_type_0(
+  const OcctSharp_BRepMeshContextHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_Context*>(ValidateBRepMeshContext(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_context_clone(
   const OcctSharp_BRepMeshContextHandle* source,
   OcctSharp_BRepMeshContextHandle** out_handle)
@@ -2601,6 +2865,19 @@ void OCCTSHARP_CALL occtsharp_generated_brep_mesh_context_release(OcctSharp_BRep
   bool removed = false;
   { std::lock_guard<std::mutex> lock(BRepMeshContextMutex); removed = LiveBRepMeshContextHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_curve_tessellator_method_dynamic_type_0(
+  const OcctSharp_BRepMeshCurveTessellatorHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_CurveTessellator*>(ValidateBRepMeshCurveTessellator(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_curve_tessellator_method_points_nb_0(
@@ -2659,6 +2936,19 @@ void OCCTSHARP_CALL occtsharp_generated_brep_mesh_curve_tessellator_release(Occt
   bool removed = false;
   { std::lock_guard<std::mutex> lock(BRepMeshCurveTessellatorMutex); removed = LiveBRepMeshCurveTessellatorHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_custom_base_mesh_algo_method_dynamic_type_0(
+  const OcctSharp_BRepMeshCustomBaseMeshAlgoHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_CustomBaseMeshAlgo*>(ValidateBRepMeshCustomBaseMeshAlgo(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_custom_base_mesh_algo_clone(
@@ -2721,6 +3011,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_structure_of_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_structure_of_delaun_method_allocator_0(
+  const OcctSharp_BRepMeshDataStructureOfDelaunHandle* handle,
+  OcctSharp_NCollectionIncAllocatorHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<NCollection_IncAllocator> returnedHandle = static_cast<const BRepMesh_DataStructureOfDelaun*>(ValidateBRepMeshDataStructureOfDelaun(handle)->Value.get())->Allocator();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateNCollectionIncAllocator(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_structure_of_delaun_method_clear_deleted_0(
   const OcctSharp_BRepMeshDataStructureOfDelaunHandle* handle)
 {
@@ -2736,6 +3039,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_structure_of_
   return GeneratedGuard([&]
   {
     ValidateBRepMeshDataStructureOfDelaun(handle)->Value->ClearDomain();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_structure_of_delaun_method_data_0(
+  const OcctSharp_BRepMeshDataStructureOfDelaunHandle* handle,
+  OcctSharp_BRepMeshVertexToolHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<BRepMesh_VertexTool> returnedHandle = ValidateBRepMeshDataStructureOfDelaun(handle)->Value->Data();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateBRepMeshVertexTool(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_structure_of_delaun_method_dynamic_type_0(
+  const OcctSharp_BRepMeshDataStructureOfDelaunHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_DataStructureOfDelaun*>(ValidateBRepMeshDataStructureOfDelaun(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -2853,6 +3182,19 @@ void OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_structure_of_delaun_relea
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_deflection_method_dynamic_type_0(
+  const OcctSharp_BRepMeshDeflectionHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_Deflection*>(ValidateBRepMeshDeflection(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_deflection_clone(
   const OcctSharp_BRepMeshDeflectionHandle* source,
   OcctSharp_BRepMeshDeflectionHandle** out_handle)
@@ -2908,6 +3250,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_delabella_base_mes
   {
     opencascade::handle<BRepMesh_DelabellaBaseMeshAlgo> createdHandle = new BRepMesh_DelabellaBaseMeshAlgo();
     *out_handle = AllocateBRepMeshDelabellaBaseMeshAlgo(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_delabella_base_mesh_algo_method_dynamic_type_0(
+  const OcctSharp_BRepMeshDelabellaBaseMeshAlgoHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_DelabellaBaseMeshAlgo*>(ValidateBRepMeshDelabellaBaseMeshAlgo(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -2969,6 +3324,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_delabella_mesh_alg
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_delabella_mesh_algo_factory_method_dynamic_type_0(
+  const OcctSharp_BRepMeshDelabellaMeshAlgoFactoryHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_DelabellaMeshAlgoFactory*>(ValidateBRepMeshDelabellaMeshAlgoFactory(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_delabella_mesh_algo_factory_clone(
   const OcctSharp_BRepMeshDelabellaMeshAlgoFactoryHandle* source,
   OcctSharp_BRepMeshDelabellaMeshAlgoFactoryHandle** out_handle)
@@ -3027,6 +3395,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_delaunay_base_mesh
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_delaunay_base_mesh_algo_method_dynamic_type_0(
+  const OcctSharp_BRepMeshDelaunayBaseMeshAlgoHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_DelaunayBaseMeshAlgo*>(ValidateBRepMeshDelaunayBaseMeshAlgo(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_delaunay_base_mesh_algo_clone(
   const OcctSharp_BRepMeshDelaunayBaseMeshAlgoHandle* source,
   OcctSharp_BRepMeshDelaunayBaseMeshAlgoHandle** out_handle)
@@ -3073,6 +3454,19 @@ void OCCTSHARP_CALL occtsharp_generated_brep_mesh_delaunay_base_mesh_algo_releas
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_discret_algo_factory_method_dynamic_type_0(
+  const OcctSharp_BRepMeshDiscretAlgoFactoryHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_DiscretAlgoFactory*>(ValidateBRepMeshDiscretAlgoFactory(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_discret_algo_factory_clone(
   const OcctSharp_BRepMeshDiscretAlgoFactoryHandle* source,
   OcctSharp_BRepMeshDiscretAlgoFactoryHandle** out_handle)
@@ -3117,6 +3511,19 @@ void OCCTSHARP_CALL occtsharp_generated_brep_mesh_discret_algo_factory_release(O
   bool removed = false;
   { std::lock_guard<std::mutex> lock(BRepMeshDiscretAlgoFactoryMutex); removed = LiveBRepMeshDiscretAlgoFactoryHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_discret_root_method_dynamic_type_0(
+  const OcctSharp_BRepMeshDiscretRootHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_DiscretRoot*>(ValidateBRepMeshDiscretRoot(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_discret_root_method_is_done_0(
@@ -3189,6 +3596,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_edge_discret_creat
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_edge_discret_method_dynamic_type_0(
+  const OcctSharp_BRepMeshEdgeDiscretHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_EdgeDiscret*>(ValidateBRepMeshEdgeDiscret(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_edge_discret_clone(
   const OcctSharp_BRepMeshEdgeDiscretHandle* source,
   OcctSharp_BRepMeshEdgeDiscretHandle** out_handle)
@@ -3249,6 +3669,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_edge_tessellation_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_edge_tessellation_extractor_method_dynamic_type_0(
+  const OcctSharp_BRepMeshEdgeTessellationExtractorHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_EdgeTessellationExtractor*>(ValidateBRepMeshEdgeTessellationExtractor(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_edge_tessellation_extractor_method_points_nb_0(
   const OcctSharp_BRepMeshEdgeTessellationExtractorHandle* handle,
   int32_t* out_value)
@@ -3305,6 +3738,19 @@ void OCCTSHARP_CALL occtsharp_generated_brep_mesh_edge_tessellation_extractor_re
   bool removed = false;
   { std::lock_guard<std::mutex> lock(BRepMeshEdgeTessellationExtractorMutex); removed = LiveBRepMeshEdgeTessellationExtractorHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_face_checker_method_dynamic_type_0(
+  const OcctSharp_BRepMeshFaceCheckerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_FaceChecker*>(ValidateBRepMeshFaceChecker(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_face_checker_method_perform_0(
@@ -3378,6 +3824,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_face_discret_creat
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_face_discret_method_dynamic_type_0(
+  const OcctSharp_BRepMeshFaceDiscretHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_FaceDiscret*>(ValidateBRepMeshFaceDiscret(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_face_discret_clone(
   const OcctSharp_BRepMeshFaceDiscretHandle* source,
   OcctSharp_BRepMeshFaceDiscretHandle** out_handle)
@@ -3433,6 +3892,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_incremental_mesh_c
   {
     opencascade::handle<BRepMesh_IncrementalMesh> createdHandle = new BRepMesh_IncrementalMesh();
     *out_handle = AllocateBRepMeshIncrementalMesh(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_incremental_mesh_method_dynamic_type_0(
+  const OcctSharp_BRepMeshIncrementalMeshHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_IncrementalMesh*>(ValidateBRepMeshIncrementalMesh(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -3518,6 +3990,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_incremental_mesh_f
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_incremental_mesh_factory_method_dynamic_type_0(
+  const OcctSharp_BRepMeshIncrementalMeshFactoryHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_IncrementalMeshFactory*>(ValidateBRepMeshIncrementalMeshFactory(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_incremental_mesh_factory_clone(
   const OcctSharp_BRepMeshIncrementalMeshFactoryHandle* source,
   OcctSharp_BRepMeshIncrementalMeshFactoryHandle** out_handle)
@@ -3573,6 +4058,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_mesh_algo_factory_
   {
     opencascade::handle<BRepMesh_MeshAlgoFactory> createdHandle = new BRepMesh_MeshAlgoFactory();
     *out_handle = AllocateBRepMeshMeshAlgoFactory(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_mesh_algo_factory_method_dynamic_type_0(
+  const OcctSharp_BRepMeshMeshAlgoFactoryHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_MeshAlgoFactory*>(ValidateBRepMeshMeshAlgoFactory(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -3656,6 +4154,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_mesh_tool_method_c
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_mesh_tool_method_dynamic_type_0(
+  const OcctSharp_BRepMeshMeshToolHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_MeshTool*>(ValidateBRepMeshMeshTool(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_mesh_tool_method_erase_free_links_0(
   const OcctSharp_BRepMeshMeshToolHandle* handle)
 {
@@ -3672,6 +4183,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_mesh_tool_method_e
   return GeneratedGuard([&]
   {
     ValidateBRepMeshMeshTool(handle)->Value->EraseItemsConnectedTo(theNodeIndex);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_mesh_tool_method_get_structure_0(
+  const OcctSharp_BRepMeshMeshToolHandle* handle,
+  OcctSharp_BRepMeshDataStructureOfDelaunHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<BRepMesh_DataStructureOfDelaun> returnedHandle = static_cast<const BRepMesh_MeshTool*>(ValidateBRepMeshMeshTool(handle)->Value.get())->GetStructure();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateBRepMeshDataStructureOfDelaun(std::move(returnedHandle));
   });
 }
 
@@ -3743,6 +4267,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_model_builder_crea
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_model_builder_method_dynamic_type_0(
+  const OcctSharp_BRepMeshModelBuilderHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_ModelBuilder*>(ValidateBRepMeshModelBuilder(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_model_builder_clone(
   const OcctSharp_BRepMeshModelBuilderHandle* source,
   OcctSharp_BRepMeshModelBuilderHandle** out_handle)
@@ -3798,6 +4335,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_model_healer_creat
   {
     opencascade::handle<BRepMesh_ModelHealer> createdHandle = new BRepMesh_ModelHealer();
     *out_handle = AllocateBRepMeshModelHealer(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_model_healer_method_dynamic_type_0(
+  const OcctSharp_BRepMeshModelHealerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_ModelHealer*>(ValidateBRepMeshModelHealer(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -3859,6 +4409,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_model_post_process
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_model_post_processor_method_dynamic_type_0(
+  const OcctSharp_BRepMeshModelPostProcessorHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_ModelPostProcessor*>(ValidateBRepMeshModelPostProcessor(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_model_post_processor_clone(
   const OcctSharp_BRepMeshModelPostProcessorHandle* source,
   OcctSharp_BRepMeshModelPostProcessorHandle** out_handle)
@@ -3914,6 +4477,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_model_pre_processo
   {
     opencascade::handle<BRepMesh_ModelPreProcessor> createdHandle = new BRepMesh_ModelPreProcessor();
     *out_handle = AllocateBRepMeshModelPreProcessor(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_model_pre_processor_method_dynamic_type_0(
+  const OcctSharp_BRepMeshModelPreProcessorHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_ModelPreProcessor*>(ValidateBRepMeshModelPreProcessor(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -3994,6 +4570,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_selector_of_data_s
   return GeneratedGuard([&]
   {
     ValidateBRepMeshSelectorOfDataStructureOfDelaun(handle)->Value->AddNeighbours();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_selector_of_data_structure_of_delaun_method_dynamic_type_0(
+  const OcctSharp_BRepMeshSelectorOfDataStructureOfDelaunHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_SelectorOfDataStructureOfDelaun*>(ValidateBRepMeshSelectorOfDataStructureOfDelaun(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -4083,6 +4672,19 @@ void OCCTSHARP_CALL occtsharp_generated_brep_mesh_selector_of_data_structure_of_
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_shape_tool_method_dynamic_type_0(
+  const OcctSharp_BRepMeshShapeToolHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_ShapeTool*>(ValidateBRepMeshShapeTool(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_shape_tool_clone(
   const OcctSharp_BRepMeshShapeToolHandle* source,
   OcctSharp_BRepMeshShapeToolHandle** out_handle)
@@ -4139,6 +4741,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_shape_visitor_crea
   {
     opencascade::handle<BRepMesh_ShapeVisitor> createdHandle = new BRepMesh_ShapeVisitor((theModel == nullptr ? opencascade::handle<IMeshData_Model>() : ValidateIMeshDataModel(theModel)->Value));
     *out_handle = AllocateBRepMeshShapeVisitor(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_shape_visitor_method_dynamic_type_0(
+  const OcctSharp_BRepMeshShapeVisitorHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_ShapeVisitor*>(ValidateBRepMeshShapeVisitor(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -4208,6 +4823,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_vertex_tool_method
   return GeneratedGuard([&]
   {
     ValidateBRepMeshVertexTool(handle)->Value->DeleteVertex(theIndex);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_vertex_tool_method_dynamic_type_0(
+  const OcctSharp_BRepMeshVertexToolHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_VertexTool*>(ValidateBRepMeshVertexTool(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 
@@ -4332,6 +4960,19 @@ void OCCTSHARP_CALL occtsharp_generated_brep_mesh_vertex_tool_release(OcctSharp_
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_curve_method_dynamic_type_0(
+  const OcctSharp_IMeshDataCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const IMeshData_Curve*>(ValidateIMeshDataCurve(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_curve_clone(
   const OcctSharp_IMeshDataCurveHandle* source,
   OcctSharp_IMeshDataCurveHandle** out_handle)
@@ -4388,6 +5029,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_edge_method_clear
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_edge_method_dynamic_type_0(
+  const OcctSharp_IMeshDataEdgeHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const IMeshData_Edge*>(ValidateIMeshDataEdge(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_edge_method_get_angular_deflection_0(
   const OcctSharp_IMeshDataEdgeHandle* handle,
   double* out_value)
@@ -4397,6 +5051,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_edge_method_get_a
   return GeneratedGuard([&]
   {
     *out_value = ValidateIMeshDataEdge(handle)->Value->GetAngularDeflection();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_edge_method_get_curve_0(
+  const OcctSharp_IMeshDataEdgeHandle* handle,
+  OcctSharp_IMeshDataCurveHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IMeshData_Curve> returnedHandle = static_cast<const IMeshData_Edge*>(ValidateIMeshDataEdge(handle)->Value.get())->GetCurve();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateIMeshDataCurve(std::move(returnedHandle));
   });
 }
 
@@ -4544,6 +5211,32 @@ void OCCTSHARP_CALL occtsharp_generated_imesh_data_edge_release(OcctSharp_IMeshD
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_face_method_dynamic_type_0(
+  const OcctSharp_IMeshDataFaceHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const IMeshData_Face*>(ValidateIMeshDataFace(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_face_method_get_surface_0(
+  const OcctSharp_IMeshDataFaceHandle* handle,
+  OcctSharp_BRepAdaptorSurfaceHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<BRepAdaptor_Surface> returnedHandle = static_cast<const IMeshData_Face*>(ValidateIMeshDataFace(handle)->Value.get())->GetSurface();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateBRepAdaptorSurface(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_face_method_is_valid_0(
   const OcctSharp_IMeshDataFaceHandle* handle,
   int32_t* out_value)
@@ -4602,6 +5295,19 @@ void OCCTSHARP_CALL occtsharp_generated_imesh_data_face_release(OcctSharp_IMeshD
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_model_method_dynamic_type_0(
+  const OcctSharp_IMeshDataModelHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const IMeshData_Model*>(ValidateIMeshDataModel(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_model_clone(
   const OcctSharp_IMeshDataModelHandle* source,
   OcctSharp_IMeshDataModelHandle** out_handle)
@@ -4646,6 +5352,19 @@ void OCCTSHARP_CALL occtsharp_generated_imesh_data_model_release(OcctSharp_IMesh
   bool removed = false;
   { std::lock_guard<std::mutex> lock(IMeshDataModelMutex); removed = LiveIMeshDataModelHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_pcurve_method_dynamic_type_0(
+  const OcctSharp_IMeshDataPCurveHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const IMeshData_PCurve*>(ValidateIMeshDataPCurve(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_pcurve_method_get_orientation_0(
@@ -4730,6 +5449,19 @@ void OCCTSHARP_CALL occtsharp_generated_imesh_data_pcurve_release(OcctSharp_IMes
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_parameters_list_method_dynamic_type_0(
+  const OcctSharp_IMeshDataParametersListHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const IMeshData_ParametersList*>(ValidateIMeshDataParametersList(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_parameters_list_clone(
   const OcctSharp_IMeshDataParametersListHandle* source,
   OcctSharp_IMeshDataParametersListHandle** out_handle)
@@ -4776,6 +5508,19 @@ void OCCTSHARP_CALL occtsharp_generated_imesh_data_parameters_list_release(OcctS
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_shape_method_dynamic_type_0(
+  const OcctSharp_IMeshDataShapeHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const IMeshData_Shape*>(ValidateIMeshDataShape(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_shape_clone(
   const OcctSharp_IMeshDataShapeHandle* source,
   OcctSharp_IMeshDataShapeHandle** out_handle)
@@ -4820,6 +5565,19 @@ void OCCTSHARP_CALL occtsharp_generated_imesh_data_shape_release(OcctSharp_IMesh
   bool removed = false;
   { std::lock_guard<std::mutex> lock(IMeshDataShapeMutex); removed = LiveIMeshDataShapeHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_tessellated_shape_method_dynamic_type_0(
+  const OcctSharp_IMeshDataTessellatedShapeHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const IMeshData_TessellatedShape*>(ValidateIMeshDataTessellatedShape(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_tessellated_shape_method_get_deflection_0(
@@ -4888,6 +5646,19 @@ void OCCTSHARP_CALL occtsharp_generated_imesh_data_tessellated_shape_release(Occ
   bool removed = false;
   { std::lock_guard<std::mutex> lock(IMeshDataTessellatedShapeMutex); removed = LiveIMeshDataTessellatedShapeHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_wire_method_dynamic_type_0(
+  const OcctSharp_IMeshDataWireHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const IMeshData_Wire*>(ValidateIMeshDataWire(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_data_wire_clone(
@@ -4978,6 +5749,110 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_context_method_d
   return GeneratedGuard([&]
   {
     *out_value = ValidateIMeshToolsContext(handle)->Value->DiscretizeEdges() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_context_method_dynamic_type_0(
+  const OcctSharp_IMeshToolsContextHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const IMeshTools_Context*>(ValidateIMeshToolsContext(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_context_method_get_edge_discret_0(
+  const OcctSharp_IMeshToolsContextHandle* handle,
+  OcctSharp_IMeshToolsModelAlgoHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IMeshTools_ModelAlgo> returnedHandle = static_cast<const IMeshTools_Context*>(ValidateIMeshToolsContext(handle)->Value.get())->GetEdgeDiscret();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateIMeshToolsModelAlgo(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_context_method_get_face_discret_0(
+  const OcctSharp_IMeshToolsContextHandle* handle,
+  OcctSharp_IMeshToolsModelAlgoHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IMeshTools_ModelAlgo> returnedHandle = static_cast<const IMeshTools_Context*>(ValidateIMeshToolsContext(handle)->Value.get())->GetFaceDiscret();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateIMeshToolsModelAlgo(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_context_method_get_model_0(
+  const OcctSharp_IMeshToolsContextHandle* handle,
+  OcctSharp_IMeshDataModelHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IMeshData_Model> returnedHandle = static_cast<const IMeshTools_Context*>(ValidateIMeshToolsContext(handle)->Value.get())->GetModel();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateIMeshDataModel(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_context_method_get_model_builder_0(
+  const OcctSharp_IMeshToolsContextHandle* handle,
+  OcctSharp_IMeshToolsModelBuilderHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IMeshTools_ModelBuilder> returnedHandle = static_cast<const IMeshTools_Context*>(ValidateIMeshToolsContext(handle)->Value.get())->GetModelBuilder();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateIMeshToolsModelBuilder(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_context_method_get_model_healer_0(
+  const OcctSharp_IMeshToolsContextHandle* handle,
+  OcctSharp_IMeshToolsModelAlgoHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IMeshTools_ModelAlgo> returnedHandle = static_cast<const IMeshTools_Context*>(ValidateIMeshToolsContext(handle)->Value.get())->GetModelHealer();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateIMeshToolsModelAlgo(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_context_method_get_post_processor_0(
+  const OcctSharp_IMeshToolsContextHandle* handle,
+  OcctSharp_IMeshToolsModelAlgoHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IMeshTools_ModelAlgo> returnedHandle = static_cast<const IMeshTools_Context*>(ValidateIMeshToolsContext(handle)->Value.get())->GetPostProcessor();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateIMeshToolsModelAlgo(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_context_method_get_pre_processor_0(
+  const OcctSharp_IMeshToolsContextHandle* handle,
+  OcctSharp_IMeshToolsModelAlgoHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IMeshTools_ModelAlgo> returnedHandle = static_cast<const IMeshTools_Context*>(ValidateIMeshToolsContext(handle)->Value.get())->GetPreProcessor();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateIMeshToolsModelAlgo(std::move(returnedHandle));
   });
 }
 
@@ -5123,6 +5998,19 @@ void OCCTSHARP_CALL occtsharp_generated_imesh_tools_context_release(OcctSharp_IM
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_curve_tessellator_method_dynamic_type_0(
+  const OcctSharp_IMeshToolsCurveTessellatorHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const IMeshTools_CurveTessellator*>(ValidateIMeshToolsCurveTessellator(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_curve_tessellator_clone(
   const OcctSharp_IMeshToolsCurveTessellatorHandle* source,
   OcctSharp_IMeshToolsCurveTessellatorHandle** out_handle)
@@ -5169,6 +6057,19 @@ void OCCTSHARP_CALL occtsharp_generated_imesh_tools_curve_tessellator_release(Oc
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_mesh_algo_method_dynamic_type_0(
+  const OcctSharp_IMeshToolsMeshAlgoHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const IMeshTools_MeshAlgo*>(ValidateIMeshToolsMeshAlgo(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_mesh_algo_clone(
   const OcctSharp_IMeshToolsMeshAlgoHandle* source,
   OcctSharp_IMeshToolsMeshAlgoHandle** out_handle)
@@ -5213,6 +6114,19 @@ void OCCTSHARP_CALL occtsharp_generated_imesh_tools_mesh_algo_release(OcctSharp_
   bool removed = false;
   { std::lock_guard<std::mutex> lock(IMeshToolsMeshAlgoMutex); removed = LiveIMeshToolsMeshAlgoHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_mesh_algo_factory_method_dynamic_type_0(
+  const OcctSharp_IMeshToolsMeshAlgoFactoryHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const IMeshTools_MeshAlgoFactory*>(ValidateIMeshToolsMeshAlgoFactory(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_mesh_algo_factory_clone(
@@ -5286,6 +6200,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_mesh_builder_cre
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_mesh_builder_method_dynamic_type_0(
+  const OcctSharp_IMeshToolsMeshBuilderHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const IMeshTools_MeshBuilder*>(ValidateIMeshToolsMeshBuilder(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_mesh_builder_method_get_context_0(
+  const OcctSharp_IMeshToolsMeshBuilderHandle* handle,
+  OcctSharp_IMeshToolsContextHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IMeshTools_Context> returnedHandle = static_cast<const IMeshTools_MeshBuilder*>(ValidateIMeshToolsMeshBuilder(handle)->Value.get())->GetContext();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateIMeshToolsContext(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_mesh_builder_method_set_context_0(
   const OcctSharp_IMeshToolsMeshBuilderHandle* handle,
   const OcctSharp_IMeshToolsContextHandle* theContext)
@@ -5342,6 +6282,19 @@ void OCCTSHARP_CALL occtsharp_generated_imesh_tools_mesh_builder_release(OcctSha
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_model_algo_method_dynamic_type_0(
+  const OcctSharp_IMeshToolsModelAlgoHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const IMeshTools_ModelAlgo*>(ValidateIMeshToolsModelAlgo(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_model_algo_clone(
   const OcctSharp_IMeshToolsModelAlgoHandle* source,
   OcctSharp_IMeshToolsModelAlgoHandle** out_handle)
@@ -5386,6 +6339,19 @@ void OCCTSHARP_CALL occtsharp_generated_imesh_tools_model_algo_release(OcctSharp
   bool removed = false;
   { std::lock_guard<std::mutex> lock(IMeshToolsModelAlgoMutex); removed = LiveIMeshToolsModelAlgoHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_model_builder_method_dynamic_type_0(
+  const OcctSharp_IMeshToolsModelBuilderHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const IMeshTools_ModelBuilder*>(ValidateIMeshToolsModelBuilder(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_model_builder_clone(
@@ -5444,6 +6410,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_shape_explorer_m
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_shape_explorer_method_dynamic_type_0(
+  const OcctSharp_IMeshToolsShapeExplorerHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const IMeshTools_ShapeExplorer*>(ValidateIMeshToolsShapeExplorer(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_shape_explorer_clone(
   const OcctSharp_IMeshToolsShapeExplorerHandle* source,
   OcctSharp_IMeshToolsShapeExplorerHandle** out_handle)
@@ -5488,6 +6467,19 @@ void OCCTSHARP_CALL occtsharp_generated_imesh_tools_shape_explorer_release(OcctS
   bool removed = false;
   { std::lock_guard<std::mutex> lock(IMeshToolsShapeExplorerMutex); removed = LiveIMeshToolsShapeExplorerHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_shape_visitor_method_dynamic_type_0(
+  const OcctSharp_IMeshToolsShapeVisitorHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const IMeshTools_ShapeVisitor*>(ValidateIMeshToolsShapeVisitor(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_imesh_tools_shape_visitor_clone(
@@ -5545,6 +6537,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xbrep_mesh_factory_create_0(
   {
     opencascade::handle<XBRepMesh_Factory> createdHandle = new XBRepMesh_Factory();
     *out_handle = AllocateXBRepMeshFactory(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xbrep_mesh_factory_method_dynamic_type_0(
+  const OcctSharp_XBRepMeshFactoryHandle* handle,
+  OcctSharp_StandardTypeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Standard_Type> returnedHandle = static_cast<const XBRepMesh_Factory*>(ValidateXBRepMeshFactory(handle)->Value.get())->DynamicType();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
   });
 }
 

@@ -84,6 +84,10 @@ public sealed class InitialTypeMap
 
         if (Matches(nativeType, canonicalType, "TopoDS_Shape"))
         {
+            if (usage == BindingTypeUsage.ReturnValue && type.Layers.Count != 1)
+            {
+                return false;
+            }
             projection = new BindingTypeProjection(
                 "TM007",
                 "OcctSharp_ShapeHandle*",
@@ -115,6 +119,28 @@ public sealed class InitialTypeMap
                 "double",
                 "ValueCopy",
                 "Direct IEEE-754 binary64 value conversion.");
+            return true;
+        }
+
+        (string Abi, string Managed)? numeric = canonicalType switch
+        {
+            "float" => ("float", "float"),
+            "signed char" => ("int8_t", "sbyte"),
+            "unsigned char" => ("uint8_t", "byte"),
+            "short" or "short int" => ("int16_t", "short"),
+            "unsigned short" or "unsigned short int" => ("uint16_t", "ushort"),
+            "unsigned int" => ("uint32_t", "uint"),
+            "long" or "long int" => ("int32_t", "int"),
+            "unsigned long" or "unsigned long int" => ("uint32_t", "uint"),
+            "long long" or "long long int" => ("int64_t", "long"),
+            "unsigned long long" or "unsigned long long int" => ("uint64_t", "ulong"),
+            _ => null,
+        };
+        if (numeric is { } scalar)
+        {
+            projection = new BindingTypeProjection(
+                "TM008", scalar.Abi, scalar.Managed, scalar.Managed, "ValueCopy",
+                "Numeric copy on the pinned Windows x64 ABI; generated native width assertions and explicit canonical casts preserve overload selection.");
             return true;
         }
 
@@ -165,7 +191,7 @@ public sealed class InitialTypeMap
             return true;
         }
 
-        return usage == BindingTypeUsage.Parameter
+        return usage is BindingTypeUsage.Parameter or BindingTypeUsage.ReturnValue
             && type.Layers is
             [
                 { Kind: BindingTypeLayerKind.LValueReference },

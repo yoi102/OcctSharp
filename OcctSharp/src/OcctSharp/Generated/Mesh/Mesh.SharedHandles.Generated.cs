@@ -2,66 +2,108 @@
 // Source: c:@S@BRepMeshData_Curve@F@AddPoint#&1$@S@gp_Pnt#d#
 // Source: c:@S@BRepMeshData_Curve@F@BRepMeshData_Curve#&1$@N@opencascade@S@handle>#$@S@NCollection_IncAllocator#
 // Source: c:@S@BRepMeshData_Curve@F@Clear#b#
+// Source: c:@S@BRepMeshData_Curve@F@DynamicType#1
 // Source: c:@S@BRepMeshData_Curve@F@InsertPoint#I#&1$@S@gp_Pnt#d#
 // Source: c:@S@BRepMeshData_Curve@F@ParametersNb#1
 // Source: c:@S@BRepMeshData_Curve@F@RemovePoint#I#
+// Source: c:@S@BRepMeshData_Edge@F@DynamicType#1
+// Source: c:@S@BRepMeshData_Edge@F@GetPCurve#I#1
 // Source: c:@S@BRepMeshData_Edge@F@PCurvesNb#1
+// Source: c:@S@BRepMeshData_Face@F@DynamicType#1
+// Source: c:@S@BRepMeshData_Face@F@GetWire#I#1
 // Source: c:@S@BRepMeshData_Face@F@WiresNb#1
+// Source: c:@S@BRepMeshData_Model@F@DynamicType#1
 // Source: c:@S@BRepMeshData_Model@F@EdgesNb#1
 // Source: c:@S@BRepMeshData_Model@F@FacesNb#1
+// Source: c:@S@BRepMeshData_Model@F@GetEdge#I#1
+// Source: c:@S@BRepMeshData_Model@F@GetFace#I#1
 // Source: c:@S@BRepMeshData_Model@F@GetMaxSize#1
 // Source: c:@S@BRepMeshData_Model@F@SetMaxSize#d#
 // Source: c:@S@BRepMeshData_PCurve@F@Clear#b#
+// Source: c:@S@BRepMeshData_PCurve@F@DynamicType#1
 // Source: c:@S@BRepMeshData_PCurve@F@ParametersNb#1
 // Source: c:@S@BRepMeshData_PCurve@F@RemovePoint#I#
+// Source: c:@S@BRepMeshData_Wire@F@DynamicType#1
 // Source: c:@S@BRepMeshData_Wire@F@EdgesNb#1
 // Source: c:@S@BRepMeshData_Wire@F@GetEdgeOrientation#I#1
+// Source: c:@S@BRepMesh_BaseMeshAlgo@F@DynamicType#1
 // Source: c:@S@BRepMesh_Classifier@F@BRepMesh_Classifier#
+// Source: c:@S@BRepMesh_Classifier@F@DynamicType#1
+// Source: c:@S@BRepMesh_ConstrainedBaseMeshAlgo@F@DynamicType#1
 // Source: c:@S@BRepMesh_Context@F@BRepMesh_Context#$@E@IMeshTools_MeshAlgoType#
+// Source: c:@S@BRepMesh_Context@F@DynamicType#1
+// Source: c:@S@BRepMesh_CurveTessellator@F@DynamicType#1
 // Source: c:@S@BRepMesh_CurveTessellator@F@PointsNb#1
+// Source: c:@S@BRepMesh_CustomBaseMeshAlgo@F@DynamicType#1
+// Source: c:@S@BRepMesh_DataStructureOfDelaun@F@Allocator#1
 // Source: c:@S@BRepMesh_DataStructureOfDelaun@F@BRepMesh_DataStructureOfDelaun#&1$@N@opencascade@S@handle>#$@S@NCollection_IncAllocator#I#
 // Source: c:@S@BRepMesh_DataStructureOfDelaun@F@ClearDeleted#
 // Source: c:@S@BRepMesh_DataStructureOfDelaun@F@ClearDomain#
+// Source: c:@S@BRepMesh_DataStructureOfDelaun@F@Data#
+// Source: c:@S@BRepMesh_DataStructureOfDelaun@F@DynamicType#1
 // Source: c:@S@BRepMesh_DataStructureOfDelaun@F@NbElements#1
 // Source: c:@S@BRepMesh_DataStructureOfDelaun@F@NbLinks#1
 // Source: c:@S@BRepMesh_DataStructureOfDelaun@F@NbNodes#1
 // Source: c:@S@BRepMesh_DataStructureOfDelaun@F@RemoveElement#I#
 // Source: c:@S@BRepMesh_DataStructureOfDelaun@F@RemoveLink#I#b#
 // Source: c:@S@BRepMesh_DataStructureOfDelaun@F@RemoveNode#I#b#
+// Source: c:@S@BRepMesh_Deflection@F@DynamicType#1
 // Source: c:@S@BRepMesh_DelabellaBaseMeshAlgo@F@BRepMesh_DelabellaBaseMeshAlgo#
+// Source: c:@S@BRepMesh_DelabellaBaseMeshAlgo@F@DynamicType#1
 // Source: c:@S@BRepMesh_DelabellaMeshAlgoFactory@F@BRepMesh_DelabellaMeshAlgoFactory#
+// Source: c:@S@BRepMesh_DelabellaMeshAlgoFactory@F@DynamicType#1
 // Source: c:@S@BRepMesh_DelaunayBaseMeshAlgo@F@BRepMesh_DelaunayBaseMeshAlgo#
+// Source: c:@S@BRepMesh_DelaunayBaseMeshAlgo@F@DynamicType#1
+// Source: c:@S@BRepMesh_DiscretAlgoFactory@F@DynamicType#1
+// Source: c:@S@BRepMesh_DiscretRoot@F@DynamicType#1
 // Source: c:@S@BRepMesh_DiscretRoot@F@IsDone#1
 // Source: c:@S@BRepMesh_EdgeDiscret@F@BRepMesh_EdgeDiscret#
+// Source: c:@S@BRepMesh_EdgeDiscret@F@DynamicType#1
 // Source: c:@S@BRepMesh_EdgeTessellationExtractor@F@BRepMesh_EdgeTessellationExtractor#&1$@N@opencascade@S@handle>#$@S@IMeshData_Edge#&1$@N@opencascade@S@handle>#$@S@IMeshData_Face#
+// Source: c:@S@BRepMesh_EdgeTessellationExtractor@F@DynamicType#1
 // Source: c:@S@BRepMesh_EdgeTessellationExtractor@F@PointsNb#1
+// Source: c:@S@BRepMesh_FaceChecker@F@DynamicType#1
 // Source: c:@S@BRepMesh_FaceChecker@F@Perform#
 // Source: c:@S@BRepMesh_FaceDiscret@F@BRepMesh_FaceDiscret#&1$@N@opencascade@S@handle>#$@S@IMeshTools_MeshAlgoFactory#
+// Source: c:@S@BRepMesh_FaceDiscret@F@DynamicType#1
 // Source: c:@S@BRepMesh_IncrementalMesh@F@BRepMesh_IncrementalMesh#
+// Source: c:@S@BRepMesh_IncrementalMesh@F@DynamicType#1
 // Source: c:@S@BRepMesh_IncrementalMesh@F@GetStatusFlags#1
 // Source: c:@S@BRepMesh_IncrementalMesh@F@IsModified#1
 // Source: c:@S@BRepMesh_IncrementalMeshFactory@F@BRepMesh_IncrementalMeshFactory#
+// Source: c:@S@BRepMesh_IncrementalMeshFactory@F@DynamicType#1
 // Source: c:@S@BRepMesh_MeshAlgoFactory@F@BRepMesh_MeshAlgoFactory#
+// Source: c:@S@BRepMesh_MeshAlgoFactory@F@DynamicType#1
 // Source: c:@S@BRepMesh_MeshTool@F@AddAndLegalizeTriangle#I#I#I#
 // Source: c:@S@BRepMesh_MeshTool@F@BRepMesh_MeshTool#&1$@N@opencascade@S@handle>#$@S@BRepMesh_DataStructureOfDelaun#
 // Source: c:@S@BRepMesh_MeshTool@F@CleanFrontierLinks#
+// Source: c:@S@BRepMesh_MeshTool@F@DynamicType#1
 // Source: c:@S@BRepMesh_MeshTool@F@EraseFreeLinks#
 // Source: c:@S@BRepMesh_MeshTool@F@EraseItemsConnectedTo#I#
+// Source: c:@S@BRepMesh_MeshTool@F@GetStructure#1
 // Source: c:@S@BRepMesh_MeshTool@F@Legalize#I#
 // Source: c:@S@BRepMesh_ModelBuilder@F@BRepMesh_ModelBuilder#
+// Source: c:@S@BRepMesh_ModelBuilder@F@DynamicType#1
 // Source: c:@S@BRepMesh_ModelHealer@F@BRepMesh_ModelHealer#
+// Source: c:@S@BRepMesh_ModelHealer@F@DynamicType#1
 // Source: c:@S@BRepMesh_ModelPostProcessor@F@BRepMesh_ModelPostProcessor#
+// Source: c:@S@BRepMesh_ModelPostProcessor@F@DynamicType#1
 // Source: c:@S@BRepMesh_ModelPreProcessor@F@BRepMesh_ModelPreProcessor#
+// Source: c:@S@BRepMesh_ModelPreProcessor@F@DynamicType#1
 // Source: c:@S@BRepMesh_SelectorOfDataStructureOfDelaun@F@AddNeighbours#
 // Source: c:@S@BRepMesh_SelectorOfDataStructureOfDelaun@F@BRepMesh_SelectorOfDataStructureOfDelaun#
 // Source: c:@S@BRepMesh_SelectorOfDataStructureOfDelaun@F@BRepMesh_SelectorOfDataStructureOfDelaun#&1$@N@opencascade@S@handle>#$@S@BRepMesh_DataStructureOfDelaun#
+// Source: c:@S@BRepMesh_SelectorOfDataStructureOfDelaun@F@DynamicType#1
 // Source: c:@S@BRepMesh_SelectorOfDataStructureOfDelaun@F@Initialize#&1$@N@opencascade@S@handle>#$@S@BRepMesh_DataStructureOfDelaun#
 // Source: c:@S@BRepMesh_SelectorOfDataStructureOfDelaun@F@NeighboursOfElement#I#
 // Source: c:@S@BRepMesh_SelectorOfDataStructureOfDelaun@F@NeighboursOfLink#I#
 // Source: c:@S@BRepMesh_SelectorOfDataStructureOfDelaun@F@NeighboursOfNode#I#
+// Source: c:@S@BRepMesh_ShapeTool@F@DynamicType#1
 // Source: c:@S@BRepMesh_ShapeVisitor@F@BRepMesh_ShapeVisitor#&1$@N@opencascade@S@handle>#$@S@IMeshData_Model#
+// Source: c:@S@BRepMesh_ShapeVisitor@F@DynamicType#1
 // Source: c:@S@BRepMesh_VertexTool@F@BRepMesh_VertexTool#&1$@N@opencascade@S@handle>#$@S@NCollection_IncAllocator#
 // Source: c:@S@BRepMesh_VertexTool@F@DeleteVertex#I#
+// Source: c:@S@BRepMesh_VertexTool@F@DynamicType#1
 // Source: c:@S@BRepMesh_VertexTool@F@Extent#1
 // Source: c:@S@BRepMesh_VertexTool@F@IsEmpty#1
 // Source: c:@S@BRepMesh_VertexTool@F@RemoveLast#
@@ -69,8 +111,11 @@
 // Source: c:@S@BRepMesh_VertexTool@F@SetCellSize#d#d#
 // Source: c:@S@BRepMesh_VertexTool@F@SetTolerance#d#
 // Source: c:@S@BRepMesh_VertexTool@F@SetTolerance#d#d#
+// Source: c:@S@IMeshData_Curve@F@DynamicType#1
 // Source: c:@S@IMeshData_Edge@F@Clear#b#
+// Source: c:@S@IMeshData_Edge@F@DynamicType#1
 // Source: c:@S@IMeshData_Edge@F@GetAngularDeflection#1
+// Source: c:@S@IMeshData_Edge@F@GetCurve#1
 // Source: c:@S@IMeshData_Edge@F@GetDegenerated#1
 // Source: c:@S@IMeshData_Edge@F@GetSameParam#1
 // Source: c:@S@IMeshData_Edge@F@GetSameRange#1
@@ -80,15 +125,31 @@
 // Source: c:@S@IMeshData_Edge@F@SetDegenerated#b#
 // Source: c:@S@IMeshData_Edge@F@SetSameParam#b#
 // Source: c:@S@IMeshData_Edge@F@SetSameRange#b#
+// Source: c:@S@IMeshData_Face@F@DynamicType#1
+// Source: c:@S@IMeshData_Face@F@GetSurface#1
 // Source: c:@S@IMeshData_Face@F@IsValid#1
+// Source: c:@S@IMeshData_Model@F@DynamicType#1
+// Source: c:@S@IMeshData_PCurve@F@DynamicType#1
 // Source: c:@S@IMeshData_PCurve@F@GetOrientation#1
 // Source: c:@S@IMeshData_PCurve@F@IsForward#1
 // Source: c:@S@IMeshData_PCurve@F@IsInternal#1
+// Source: c:@S@IMeshData_ParametersList@F@DynamicType#1
+// Source: c:@S@IMeshData_Shape@F@DynamicType#1
+// Source: c:@S@IMeshData_TessellatedShape@F@DynamicType#1
 // Source: c:@S@IMeshData_TessellatedShape@F@GetDeflection#1
 // Source: c:@S@IMeshData_TessellatedShape@F@SetDeflection#d#
+// Source: c:@S@IMeshData_Wire@F@DynamicType#1
 // Source: c:@S@IMeshTools_Context@F@BuildModel#
 // Source: c:@S@IMeshTools_Context@F@Clean#
 // Source: c:@S@IMeshTools_Context@F@DiscretizeEdges#
+// Source: c:@S@IMeshTools_Context@F@DynamicType#1
+// Source: c:@S@IMeshTools_Context@F@GetEdgeDiscret#1
+// Source: c:@S@IMeshTools_Context@F@GetFaceDiscret#1
+// Source: c:@S@IMeshTools_Context@F@GetModel#1
+// Source: c:@S@IMeshTools_Context@F@GetModelBuilder#1
+// Source: c:@S@IMeshTools_Context@F@GetModelHealer#1
+// Source: c:@S@IMeshTools_Context@F@GetPostProcessor#1
+// Source: c:@S@IMeshTools_Context@F@GetPreProcessor#1
 // Source: c:@S@IMeshTools_Context@F@HealModel#
 // Source: c:@S@IMeshTools_Context@F@IMeshTools_Context#
 // Source: c:@S@IMeshTools_Context@F@PostProcessModel#
@@ -99,10 +160,20 @@
 // Source: c:@S@IMeshTools_Context@F@SetModelHealer#&1$@N@opencascade@S@handle>#$@S@IMeshTools_ModelAlgo#
 // Source: c:@S@IMeshTools_Context@F@SetPostProcessor#&1$@N@opencascade@S@handle>#$@S@IMeshTools_ModelAlgo#
 // Source: c:@S@IMeshTools_Context@F@SetPreProcessor#&1$@N@opencascade@S@handle>#$@S@IMeshTools_ModelAlgo#
+// Source: c:@S@IMeshTools_CurveTessellator@F@DynamicType#1
+// Source: c:@S@IMeshTools_MeshAlgo@F@DynamicType#1
+// Source: c:@S@IMeshTools_MeshAlgoFactory@F@DynamicType#1
+// Source: c:@S@IMeshTools_MeshBuilder@F@DynamicType#1
+// Source: c:@S@IMeshTools_MeshBuilder@F@GetContext#1
 // Source: c:@S@IMeshTools_MeshBuilder@F@IMeshTools_MeshBuilder#
 // Source: c:@S@IMeshTools_MeshBuilder@F@IMeshTools_MeshBuilder#&1$@N@opencascade@S@handle>#$@S@IMeshTools_Context#
 // Source: c:@S@IMeshTools_MeshBuilder@F@SetContext#&1$@N@opencascade@S@handle>#$@S@IMeshTools_Context#
+// Source: c:@S@IMeshTools_ModelAlgo@F@DynamicType#1
+// Source: c:@S@IMeshTools_ModelBuilder@F@DynamicType#1
 // Source: c:@S@IMeshTools_ShapeExplorer@F@Accept#&1$@N@opencascade@S@handle>#$@S@IMeshTools_ShapeVisitor#
+// Source: c:@S@IMeshTools_ShapeExplorer@F@DynamicType#1
+// Source: c:@S@IMeshTools_ShapeVisitor@F@DynamicType#1
+// Source: c:@S@XBRepMesh_Factory@F@DynamicType#1
 // Source: c:@S@XBRepMesh_Factory@F@XBRepMesh_Factory#
 #nullable enable
 using System.Runtime.InteropServices;
@@ -138,6 +209,14 @@ public sealed class BRepMeshDataCurve : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataCurveMethodClear0(handle, isKeepEndPoints ? 1 : 0), "occtsharp_generated_brep_mesh_data_curve_method_clear_0");
+    }
+
+    /// <summary>Invokes OCCT BRepMeshData_Curve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_data_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_data_curve_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT BRepMeshData_Curve::InsertPoint.</summary>
@@ -230,6 +309,22 @@ public sealed class BRepMeshDataEdge : IDisposable
 
     private BRepMeshDataEdge(BRepMeshDataEdgeHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT BRepMeshData_Edge::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataEdgeMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_data_edge_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_data_edge_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT BRepMeshData_Edge::GetPCurve.</summary>
+    public IMeshDataPCurve? GetPCurve(int theIndex)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataEdgeMethodGetPCurve0(handle, theIndex, out nint handleValue), "occtsharp_generated_brep_mesh_data_edge_method_get_pcurve_0");
+        return global::OcctSharp.IMeshDataPCurve.FromNative(handleValue, "occtsharp_generated_brep_mesh_data_edge_method_get_pcurve_0");
+    }
+
     /// <summary>Invokes OCCT BRepMeshData_Edge::PCurvesNb.</summary>
     public int PCurvesNb()
     {
@@ -305,6 +400,22 @@ public sealed class BRepMeshDataFace : IDisposable
     private readonly BRepMeshDataFaceHandle handle;
 
     private BRepMeshDataFace(BRepMeshDataFaceHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT BRepMeshData_Face::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataFaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_data_face_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_data_face_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT BRepMeshData_Face::GetWire.</summary>
+    public IMeshDataWire? GetWire(int theIndex)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataFaceMethodGetWire0(handle, theIndex, out nint handleValue), "occtsharp_generated_brep_mesh_data_face_method_get_wire_0");
+        return global::OcctSharp.IMeshDataWire.FromNative(handleValue, "occtsharp_generated_brep_mesh_data_face_method_get_wire_0");
+    }
 
     /// <summary>Invokes OCCT BRepMeshData_Face::WiresNb.</summary>
     public int WiresNb()
@@ -382,6 +493,14 @@ public sealed class BRepMeshDataModel : IDisposable
 
     private BRepMeshDataModel(BRepMeshDataModelHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT BRepMeshData_Model::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataModelMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_data_model_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_data_model_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT BRepMeshData_Model::EdgesNb.</summary>
     public int EdgesNb()
     {
@@ -396,6 +515,22 @@ public sealed class BRepMeshDataModel : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataModelMethodFacesNb0(handle, out int resultValue), "occtsharp_generated_brep_mesh_data_model_method_faces_nb_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT BRepMeshData_Model::GetEdge.</summary>
+    public IMeshDataEdge? GetEdge(int theIndex)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataModelMethodGetEdge0(handle, theIndex, out nint handleValue), "occtsharp_generated_brep_mesh_data_model_method_get_edge_0");
+        return global::OcctSharp.IMeshDataEdge.FromNative(handleValue, "occtsharp_generated_brep_mesh_data_model_method_get_edge_0");
+    }
+
+    /// <summary>Invokes OCCT BRepMeshData_Model::GetFace.</summary>
+    public IMeshDataFace? GetFace(int theIndex)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataModelMethodGetFace0(handle, theIndex, out nint handleValue), "occtsharp_generated_brep_mesh_data_model_method_get_face_0");
+        return global::OcctSharp.IMeshDataFace.FromNative(handleValue, "occtsharp_generated_brep_mesh_data_model_method_get_face_0");
     }
 
     /// <summary>Invokes OCCT BRepMeshData_Model::GetMaxSize.</summary>
@@ -488,6 +623,14 @@ public sealed class BRepMeshDataPCurve : IDisposable
         Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataPCurveMethodClear0(handle, isKeepEndPoints ? 1 : 0), "occtsharp_generated_brep_mesh_data_pcurve_method_clear_0");
     }
 
+    /// <summary>Invokes OCCT BRepMeshData_PCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataPCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_data_pcurve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_data_pcurve_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT BRepMeshData_PCurve::ParametersNb.</summary>
     public int ParametersNb()
     {
@@ -570,6 +713,14 @@ public sealed class BRepMeshDataWire : IDisposable
     private readonly BRepMeshDataWireHandle handle;
 
     private BRepMeshDataWire(BRepMeshDataWireHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT BRepMeshData_Wire::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataWireMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_data_wire_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_data_wire_method_dynamic_type_0");
+    }
 
     /// <summary>Invokes OCCT BRepMeshData_Wire::EdgesNb.</summary>
     public int EdgesNb()
@@ -655,6 +806,14 @@ public sealed class BRepMeshBaseMeshAlgo : IDisposable
 
     private BRepMeshBaseMeshAlgo(BRepMeshBaseMeshAlgoHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT BRepMesh_BaseMeshAlgo::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshBaseMeshAlgoMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_base_mesh_algo_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_base_mesh_algo_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -731,6 +890,14 @@ public sealed class BRepMeshClassifier : IDisposable
         handle = CreateHandle(nativeHandle, "BRepMeshClassifierCreate0");
     }
 
+    /// <summary>Invokes OCCT BRepMesh_Classifier::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshClassifierMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_classifier_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_classifier_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -798,6 +965,14 @@ public sealed class BRepMeshConstrainedBaseMeshAlgo : IDisposable
     private readonly BRepMeshConstrainedBaseMeshAlgoHandle handle;
 
     private BRepMeshConstrainedBaseMeshAlgo(BRepMeshConstrainedBaseMeshAlgoHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT BRepMesh_ConstrainedBaseMeshAlgo::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshConstrainedBaseMeshAlgoMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_constrained_base_mesh_algo_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_constrained_base_mesh_algo_method_dynamic_type_0");
+    }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
@@ -875,6 +1050,14 @@ public sealed class BRepMeshContext : IDisposable
         handle = CreateHandle(nativeHandle, "BRepMeshContextCreate0");
     }
 
+    /// <summary>Invokes OCCT BRepMesh_Context::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshContextMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_context_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_context_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -942,6 +1125,14 @@ public sealed class BRepMeshCurveTessellator : IDisposable
     private readonly BRepMeshCurveTessellatorHandle handle;
 
     private BRepMeshCurveTessellator(BRepMeshCurveTessellatorHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT BRepMesh_CurveTessellator::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshCurveTessellatorMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_curve_tessellator_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_curve_tessellator_method_dynamic_type_0");
+    }
 
     /// <summary>Invokes OCCT BRepMesh_CurveTessellator::PointsNb.</summary>
     public int PointsNb()
@@ -1019,6 +1210,14 @@ public sealed class BRepMeshCustomBaseMeshAlgo : IDisposable
 
     private BRepMeshCustomBaseMeshAlgo(BRepMeshCustomBaseMeshAlgoHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT BRepMesh_CustomBaseMeshAlgo::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshCustomBaseMeshAlgoMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_custom_base_mesh_algo_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_custom_base_mesh_algo_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -1095,6 +1294,14 @@ public sealed class BRepMeshDataStructureOfDelaun : IDisposable
         handle = CreateHandle(nativeHandle, "BRepMeshDataStructureOfDelaunCreate0");
     }
 
+    /// <summary>Invokes OCCT BRepMesh_DataStructureOfDelaun::Allocator.</summary>
+    public NCollectionIncAllocator? Allocator()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataStructureOfDelaunMethodAllocator0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_data_structure_of_delaun_method_allocator_0");
+        return global::OcctSharp.NCollectionIncAllocator.FromNative(handleValue, "occtsharp_generated_brep_mesh_data_structure_of_delaun_method_allocator_0");
+    }
+
     /// <summary>Invokes OCCT BRepMesh_DataStructureOfDelaun::ClearDeleted.</summary>
     public void ClearDeleted()
     {
@@ -1107,6 +1314,22 @@ public sealed class BRepMeshDataStructureOfDelaun : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataStructureOfDelaunMethodClearDomain0(handle), "occtsharp_generated_brep_mesh_data_structure_of_delaun_method_clear_domain_0");
+    }
+
+    /// <summary>Invokes OCCT BRepMesh_DataStructureOfDelaun::Data.</summary>
+    public BRepMeshVertexTool? Data()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataStructureOfDelaunMethodData0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_data_structure_of_delaun_method_data_0");
+        return global::OcctSharp.BRepMeshVertexTool.FromNative(handleValue, "occtsharp_generated_brep_mesh_data_structure_of_delaun_method_data_0");
+    }
+
+    /// <summary>Invokes OCCT BRepMesh_DataStructureOfDelaun::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataStructureOfDelaunMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_data_structure_of_delaun_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_data_structure_of_delaun_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT BRepMesh_DataStructureOfDelaun::NbElements.</summary>
@@ -1222,6 +1445,14 @@ public sealed class BRepMeshDeflection : IDisposable
 
     private BRepMeshDeflection(BRepMeshDeflectionHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT BRepMesh_Deflection::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDeflectionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_deflection_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_deflection_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -1296,6 +1527,14 @@ public sealed class BRepMeshDelabellaBaseMeshAlgo : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDelabellaBaseMeshAlgoCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshDelabellaBaseMeshAlgoCreate0");
+    }
+
+    /// <summary>Invokes OCCT BRepMesh_DelabellaBaseMeshAlgo::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDelabellaBaseMeshAlgoMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_delabella_base_mesh_algo_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_delabella_base_mesh_algo_method_dynamic_type_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -1374,6 +1613,14 @@ public sealed class BRepMeshDelabellaMeshAlgoFactory : IDisposable
         handle = CreateHandle(nativeHandle, "BRepMeshDelabellaMeshAlgoFactoryCreate0");
     }
 
+    /// <summary>Invokes OCCT BRepMesh_DelabellaMeshAlgoFactory::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDelabellaMeshAlgoFactoryMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_delabella_mesh_algo_factory_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_delabella_mesh_algo_factory_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -1450,6 +1697,14 @@ public sealed class BRepMeshDelaunayBaseMeshAlgo : IDisposable
         handle = CreateHandle(nativeHandle, "BRepMeshDelaunayBaseMeshAlgoCreate0");
     }
 
+    /// <summary>Invokes OCCT BRepMesh_DelaunayBaseMeshAlgo::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDelaunayBaseMeshAlgoMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_delaunay_base_mesh_algo_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_delaunay_base_mesh_algo_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -1518,6 +1773,14 @@ public sealed class BRepMeshDiscretAlgoFactory : IDisposable
 
     private BRepMeshDiscretAlgoFactory(BRepMeshDiscretAlgoFactoryHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT BRepMesh_DiscretAlgoFactory::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDiscretAlgoFactoryMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_discret_algo_factory_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_discret_algo_factory_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -1585,6 +1848,14 @@ public sealed class BRepMeshDiscretRoot : IDisposable
     private readonly BRepMeshDiscretRootHandle handle;
 
     private BRepMeshDiscretRoot(BRepMeshDiscretRootHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT BRepMesh_DiscretRoot::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDiscretRootMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_discret_root_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_discret_root_method_dynamic_type_0");
+    }
 
     /// <summary>Invokes OCCT BRepMesh_DiscretRoot::IsDone.</summary>
     public bool IsDone()
@@ -1670,6 +1941,14 @@ public sealed class BRepMeshEdgeDiscret : IDisposable
         handle = CreateHandle(nativeHandle, "BRepMeshEdgeDiscretCreate0");
     }
 
+    /// <summary>Invokes OCCT BRepMesh_EdgeDiscret::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshEdgeDiscretMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_edge_discret_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_edge_discret_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -1744,6 +2023,14 @@ public sealed class BRepMeshEdgeTessellationExtractor : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshEdgeTessellationExtractorCreate0(theEdge is null ? nint.Zero : theEdge.NativeHandle.DangerousGetHandle(), theFace is null ? nint.Zero : theFace.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshEdgeTessellationExtractorCreate0");
+    }
+
+    /// <summary>Invokes OCCT BRepMesh_EdgeTessellationExtractor::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshEdgeTessellationExtractorMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_edge_tessellation_extractor_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_edge_tessellation_extractor_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT BRepMesh_EdgeTessellationExtractor::PointsNb.</summary>
@@ -1821,6 +2108,14 @@ public sealed class BRepMeshFaceChecker : IDisposable
     private readonly BRepMeshFaceCheckerHandle handle;
 
     private BRepMeshFaceChecker(BRepMeshFaceCheckerHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT BRepMesh_FaceChecker::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshFaceCheckerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_face_checker_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_face_checker_method_dynamic_type_0");
+    }
 
     /// <summary>Invokes OCCT BRepMesh_FaceChecker::Perform.</summary>
     public bool Perform()
@@ -1906,6 +2201,14 @@ public sealed class BRepMeshFaceDiscret : IDisposable
         handle = CreateHandle(nativeHandle, "BRepMeshFaceDiscretCreate0");
     }
 
+    /// <summary>Invokes OCCT BRepMesh_FaceDiscret::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshFaceDiscretMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_face_discret_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_face_discret_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -1980,6 +2283,14 @@ public sealed class BRepMeshIncrementalMesh : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshIncrementalMeshCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshIncrementalMeshCreate0");
+    }
+
+    /// <summary>Invokes OCCT BRepMesh_IncrementalMesh::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshIncrementalMeshMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_incremental_mesh_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_incremental_mesh_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT BRepMesh_IncrementalMesh::GetStatusFlags.</summary>
@@ -2074,6 +2385,14 @@ public sealed class BRepMeshIncrementalMeshFactory : IDisposable
         handle = CreateHandle(nativeHandle, "BRepMeshIncrementalMeshFactoryCreate0");
     }
 
+    /// <summary>Invokes OCCT BRepMesh_IncrementalMeshFactory::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshIncrementalMeshFactoryMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_incremental_mesh_factory_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_incremental_mesh_factory_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -2148,6 +2467,14 @@ public sealed class BRepMeshMeshAlgoFactory : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshMeshAlgoFactoryCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshMeshAlgoFactoryCreate0");
+    }
+
+    /// <summary>Invokes OCCT BRepMesh_MeshAlgoFactory::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshMeshAlgoFactoryMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_mesh_algo_factory_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_mesh_algo_factory_method_dynamic_type_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -2240,6 +2567,14 @@ public sealed class BRepMeshMeshTool : IDisposable
         Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshMeshToolMethodCleanFrontierLinks0(handle), "occtsharp_generated_brep_mesh_mesh_tool_method_clean_frontier_links_0");
     }
 
+    /// <summary>Invokes OCCT BRepMesh_MeshTool::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshMeshToolMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_mesh_tool_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_mesh_tool_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT BRepMesh_MeshTool::EraseFreeLinks.</summary>
     public void EraseFreeLinks()
     {
@@ -2252,6 +2587,14 @@ public sealed class BRepMeshMeshTool : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshMeshToolMethodEraseItemsConnectedTo0(handle, theNodeIndex), "occtsharp_generated_brep_mesh_mesh_tool_method_erase_items_connected_to_0");
+    }
+
+    /// <summary>Invokes OCCT BRepMesh_MeshTool::GetStructure.</summary>
+    public BRepMeshDataStructureOfDelaun? GetStructure()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshMeshToolMethodGetStructure0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_mesh_tool_method_get_structure_0");
+        return global::OcctSharp.BRepMeshDataStructureOfDelaun.FromNative(handleValue, "occtsharp_generated_brep_mesh_mesh_tool_method_get_structure_0");
     }
 
     /// <summary>Invokes OCCT BRepMesh_MeshTool::Legalize.</summary>
@@ -2337,6 +2680,14 @@ public sealed class BRepMeshModelBuilder : IDisposable
         handle = CreateHandle(nativeHandle, "BRepMeshModelBuilderCreate0");
     }
 
+    /// <summary>Invokes OCCT BRepMesh_ModelBuilder::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshModelBuilderMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_model_builder_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_model_builder_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -2411,6 +2762,14 @@ public sealed class BRepMeshModelHealer : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshModelHealerCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshModelHealerCreate0");
+    }
+
+    /// <summary>Invokes OCCT BRepMesh_ModelHealer::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshModelHealerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_model_healer_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_model_healer_method_dynamic_type_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -2489,6 +2848,14 @@ public sealed class BRepMeshModelPostProcessor : IDisposable
         handle = CreateHandle(nativeHandle, "BRepMeshModelPostProcessorCreate0");
     }
 
+    /// <summary>Invokes OCCT BRepMesh_ModelPostProcessor::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshModelPostProcessorMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_model_post_processor_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_model_post_processor_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -2563,6 +2930,14 @@ public sealed class BRepMeshModelPreProcessor : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshModelPreProcessorCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshModelPreProcessorCreate0");
+    }
+
+    /// <summary>Invokes OCCT BRepMesh_ModelPreProcessor::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshModelPreProcessorMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_model_pre_processor_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_model_pre_processor_method_dynamic_type_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -2654,6 +3029,14 @@ public sealed class BRepMeshSelectorOfDataStructureOfDelaun : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshSelectorOfDataStructureOfDelaunMethodAddNeighbours0(handle), "occtsharp_generated_brep_mesh_selector_of_data_structure_of_delaun_method_add_neighbours_0");
+    }
+
+    /// <summary>Invokes OCCT BRepMesh_SelectorOfDataStructureOfDelaun::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshSelectorOfDataStructureOfDelaunMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_selector_of_data_structure_of_delaun_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_selector_of_data_structure_of_delaun_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT BRepMesh_SelectorOfDataStructureOfDelaun::Initialize.</summary>
@@ -2752,6 +3135,14 @@ public sealed class BRepMeshShapeTool : IDisposable
 
     private BRepMeshShapeTool(BRepMeshShapeToolHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT BRepMesh_ShapeTool::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshShapeToolMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_shape_tool_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_shape_tool_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -2826,6 +3217,14 @@ public sealed class BRepMeshShapeVisitor : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshShapeVisitorCreate0(theModel is null ? nint.Zero : theModel.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshShapeVisitorCreate0");
+    }
+
+    /// <summary>Invokes OCCT BRepMesh_ShapeVisitor::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshShapeVisitorMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_shape_visitor_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_shape_visitor_method_dynamic_type_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -2909,6 +3308,14 @@ public sealed class BRepMeshVertexTool : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshVertexToolMethodDeleteVertex0(handle, theIndex), "occtsharp_generated_brep_mesh_vertex_tool_method_delete_vertex_0");
+    }
+
+    /// <summary>Invokes OCCT BRepMesh_VertexTool::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshVertexToolMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_vertex_tool_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_vertex_tool_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT BRepMesh_VertexTool::Extent.</summary>
@@ -3030,6 +3437,14 @@ public sealed class IMeshDataCurve : IDisposable
 
     private IMeshDataCurve(IMeshDataCurveHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT IMeshData_Curve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_imesh_data_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_imesh_data_curve_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -3105,12 +3520,28 @@ public sealed class IMeshDataEdge : IDisposable
         Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataEdgeMethodClear0(handle, isKeepEndPoints ? 1 : 0), "occtsharp_generated_imesh_data_edge_method_clear_0");
     }
 
+    /// <summary>Invokes OCCT IMeshData_Edge::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataEdgeMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_imesh_data_edge_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_imesh_data_edge_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT IMeshData_Edge::GetAngularDeflection.</summary>
     public double GetAngularDeflection()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataEdgeMethodGetAngularDeflection0(handle, out double resultValue), "occtsharp_generated_imesh_data_edge_method_get_angular_deflection_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IMeshData_Edge::GetCurve.</summary>
+    public IMeshDataCurve? GetCurve()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataEdgeMethodGetCurve0(handle, out nint handleValue), "occtsharp_generated_imesh_data_edge_method_get_curve_0");
+        return global::OcctSharp.IMeshDataCurve.FromNative(handleValue, "occtsharp_generated_imesh_data_edge_method_get_curve_0");
     }
 
     /// <summary>Invokes OCCT IMeshData_Edge::GetDegenerated.</summary>
@@ -3248,6 +3679,22 @@ public sealed class IMeshDataFace : IDisposable
 
     private IMeshDataFace(IMeshDataFaceHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT IMeshData_Face::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataFaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_imesh_data_face_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_imesh_data_face_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT IMeshData_Face::GetSurface.</summary>
+    public BRepAdaptorSurface? GetSurface()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataFaceMethodGetSurface0(handle, out nint handleValue), "occtsharp_generated_imesh_data_face_method_get_surface_0");
+        return global::OcctSharp.BRepAdaptorSurface.FromNative(handleValue, "occtsharp_generated_imesh_data_face_method_get_surface_0");
+    }
+
     /// <summary>Invokes OCCT IMeshData_Face::IsValid.</summary>
     public bool IsValid()
     {
@@ -3324,6 +3771,14 @@ public sealed class IMeshDataModel : IDisposable
 
     private IMeshDataModel(IMeshDataModelHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT IMeshData_Model::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataModelMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_imesh_data_model_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_imesh_data_model_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -3391,6 +3846,14 @@ public sealed class IMeshDataPCurve : IDisposable
     private readonly IMeshDataPCurveHandle handle;
 
     private IMeshDataPCurve(IMeshDataPCurveHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT IMeshData_PCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataPCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_imesh_data_pcurve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_imesh_data_pcurve_method_dynamic_type_0");
+    }
 
     /// <summary>Invokes OCCT IMeshData_PCurve::GetOrientation.</summary>
     public TopAbsOrientation GetOrientation()
@@ -3484,6 +3947,14 @@ public sealed class IMeshDataParametersList : IDisposable
 
     private IMeshDataParametersList(IMeshDataParametersListHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT IMeshData_ParametersList::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataParametersListMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_imesh_data_parameters_list_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_imesh_data_parameters_list_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -3552,6 +4023,14 @@ public sealed class IMeshDataShape : IDisposable
 
     private IMeshDataShape(IMeshDataShapeHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT IMeshData_Shape::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataShapeMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_imesh_data_shape_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_imesh_data_shape_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -3619,6 +4098,14 @@ public sealed class IMeshDataTessellatedShape : IDisposable
     private readonly IMeshDataTessellatedShapeHandle handle;
 
     private IMeshDataTessellatedShape(IMeshDataTessellatedShapeHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT IMeshData_TessellatedShape::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataTessellatedShapeMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_imesh_data_tessellated_shape_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_imesh_data_tessellated_shape_method_dynamic_type_0");
+    }
 
     /// <summary>Invokes OCCT IMeshData_TessellatedShape::GetDeflection.</summary>
     public double GetDeflection()
@@ -3702,6 +4189,14 @@ public sealed class IMeshDataWire : IDisposable
     private readonly IMeshDataWireHandle handle;
 
     private IMeshDataWire(IMeshDataWireHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT IMeshData_Wire::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataWireMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_imesh_data_wire_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_imesh_data_wire_method_dynamic_type_0");
+    }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
@@ -3800,6 +4295,70 @@ public sealed class IMeshToolsContext : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsContextMethodDiscretizeEdges0(handle, out int resultValue), "occtsharp_generated_imesh_tools_context_method_discretize_edges_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT IMeshTools_Context::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsContextMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_imesh_tools_context_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_imesh_tools_context_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT IMeshTools_Context::GetEdgeDiscret.</summary>
+    public IMeshToolsModelAlgo? GetEdgeDiscret()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsContextMethodGetEdgeDiscret0(handle, out nint handleValue), "occtsharp_generated_imesh_tools_context_method_get_edge_discret_0");
+        return global::OcctSharp.IMeshToolsModelAlgo.FromNative(handleValue, "occtsharp_generated_imesh_tools_context_method_get_edge_discret_0");
+    }
+
+    /// <summary>Invokes OCCT IMeshTools_Context::GetFaceDiscret.</summary>
+    public IMeshToolsModelAlgo? GetFaceDiscret()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsContextMethodGetFaceDiscret0(handle, out nint handleValue), "occtsharp_generated_imesh_tools_context_method_get_face_discret_0");
+        return global::OcctSharp.IMeshToolsModelAlgo.FromNative(handleValue, "occtsharp_generated_imesh_tools_context_method_get_face_discret_0");
+    }
+
+    /// <summary>Invokes OCCT IMeshTools_Context::GetModel.</summary>
+    public IMeshDataModel? GetModel()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsContextMethodGetModel0(handle, out nint handleValue), "occtsharp_generated_imesh_tools_context_method_get_model_0");
+        return global::OcctSharp.IMeshDataModel.FromNative(handleValue, "occtsharp_generated_imesh_tools_context_method_get_model_0");
+    }
+
+    /// <summary>Invokes OCCT IMeshTools_Context::GetModelBuilder.</summary>
+    public IMeshToolsModelBuilder? GetModelBuilder()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsContextMethodGetModelBuilder0(handle, out nint handleValue), "occtsharp_generated_imesh_tools_context_method_get_model_builder_0");
+        return global::OcctSharp.IMeshToolsModelBuilder.FromNative(handleValue, "occtsharp_generated_imesh_tools_context_method_get_model_builder_0");
+    }
+
+    /// <summary>Invokes OCCT IMeshTools_Context::GetModelHealer.</summary>
+    public IMeshToolsModelAlgo? GetModelHealer()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsContextMethodGetModelHealer0(handle, out nint handleValue), "occtsharp_generated_imesh_tools_context_method_get_model_healer_0");
+        return global::OcctSharp.IMeshToolsModelAlgo.FromNative(handleValue, "occtsharp_generated_imesh_tools_context_method_get_model_healer_0");
+    }
+
+    /// <summary>Invokes OCCT IMeshTools_Context::GetPostProcessor.</summary>
+    public IMeshToolsModelAlgo? GetPostProcessor()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsContextMethodGetPostProcessor0(handle, out nint handleValue), "occtsharp_generated_imesh_tools_context_method_get_post_processor_0");
+        return global::OcctSharp.IMeshToolsModelAlgo.FromNative(handleValue, "occtsharp_generated_imesh_tools_context_method_get_post_processor_0");
+    }
+
+    /// <summary>Invokes OCCT IMeshTools_Context::GetPreProcessor.</summary>
+    public IMeshToolsModelAlgo? GetPreProcessor()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsContextMethodGetPreProcessor0(handle, out nint handleValue), "occtsharp_generated_imesh_tools_context_method_get_pre_processor_0");
+        return global::OcctSharp.IMeshToolsModelAlgo.FromNative(handleValue, "occtsharp_generated_imesh_tools_context_method_get_pre_processor_0");
     }
 
     /// <summary>Invokes OCCT IMeshTools_Context::HealModel.</summary>
@@ -3936,6 +4495,14 @@ public sealed class IMeshToolsCurveTessellator : IDisposable
 
     private IMeshToolsCurveTessellator(IMeshToolsCurveTessellatorHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT IMeshTools_CurveTessellator::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsCurveTessellatorMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_imesh_tools_curve_tessellator_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_imesh_tools_curve_tessellator_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -4004,6 +4571,14 @@ public sealed class IMeshToolsMeshAlgo : IDisposable
 
     private IMeshToolsMeshAlgo(IMeshToolsMeshAlgoHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT IMeshTools_MeshAlgo::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsMeshAlgoMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_imesh_tools_mesh_algo_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_imesh_tools_mesh_algo_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -4071,6 +4646,14 @@ public sealed class IMeshToolsMeshAlgoFactory : IDisposable
     private readonly IMeshToolsMeshAlgoFactoryHandle handle;
 
     private IMeshToolsMeshAlgoFactory(IMeshToolsMeshAlgoFactoryHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT IMeshTools_MeshAlgoFactory::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsMeshAlgoFactoryMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_imesh_tools_mesh_algo_factory_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_imesh_tools_mesh_algo_factory_method_dynamic_type_0");
+    }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
@@ -4156,6 +4739,22 @@ public sealed class IMeshToolsMeshBuilder : IDisposable
         handle = CreateHandle(nativeHandle, "IMeshToolsMeshBuilderCreate1");
     }
 
+    /// <summary>Invokes OCCT IMeshTools_MeshBuilder::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsMeshBuilderMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_imesh_tools_mesh_builder_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_imesh_tools_mesh_builder_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT IMeshTools_MeshBuilder::GetContext.</summary>
+    public IMeshToolsContext? GetContext()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsMeshBuilderMethodGetContext0(handle, out nint handleValue), "occtsharp_generated_imesh_tools_mesh_builder_method_get_context_0");
+        return global::OcctSharp.IMeshToolsContext.FromNative(handleValue, "occtsharp_generated_imesh_tools_mesh_builder_method_get_context_0");
+    }
+
     /// <summary>Invokes OCCT IMeshTools_MeshBuilder::SetContext.</summary>
     public void SetContext(IMeshToolsContext? theContext)
     {
@@ -4231,6 +4830,14 @@ public sealed class IMeshToolsModelAlgo : IDisposable
 
     private IMeshToolsModelAlgo(IMeshToolsModelAlgoHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT IMeshTools_ModelAlgo::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsModelAlgoMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_imesh_tools_model_algo_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_imesh_tools_model_algo_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -4298,6 +4905,14 @@ public sealed class IMeshToolsModelBuilder : IDisposable
     private readonly IMeshToolsModelBuilderHandle handle;
 
     private IMeshToolsModelBuilder(IMeshToolsModelBuilderHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT IMeshTools_ModelBuilder::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsModelBuilderMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_imesh_tools_model_builder_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_imesh_tools_model_builder_method_dynamic_type_0");
+    }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
@@ -4374,6 +4989,14 @@ public sealed class IMeshToolsShapeExplorer : IDisposable
         Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsShapeExplorerMethodAccept0(handle, theVisitor is null ? nint.Zero : theVisitor.NativeHandle.DangerousGetHandle()), "occtsharp_generated_imesh_tools_shape_explorer_method_accept_0");
     }
 
+    /// <summary>Invokes OCCT IMeshTools_ShapeExplorer::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsShapeExplorerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_imesh_tools_shape_explorer_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_imesh_tools_shape_explorer_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -4441,6 +5064,14 @@ public sealed class IMeshToolsShapeVisitor : IDisposable
     private readonly IMeshToolsShapeVisitorHandle handle;
 
     private IMeshToolsShapeVisitor(IMeshToolsShapeVisitorHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT IMeshTools_ShapeVisitor::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsShapeVisitorMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_imesh_tools_shape_visitor_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_imesh_tools_shape_visitor_method_dynamic_type_0");
+    }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
@@ -4516,6 +5147,14 @@ public sealed class XBRepMeshFactory : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.XBRepMeshFactoryCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XBRepMeshFactoryCreate0");
+    }
+
+    /// <summary>Invokes OCCT XBRepMesh_Factory::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.XBRepMeshFactoryMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_xbrep_mesh_factory_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_xbrep_mesh_factory_method_dynamic_type_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>

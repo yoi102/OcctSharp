@@ -7,6 +7,35 @@ namespace OcctSharp.Generator.Tests;
 public sealed class SharedHandleBindingEmitterTests
 {
     [Fact]
+    public void NewConstructorPreservesOldOrdinalAndConstReferenceReturnRetainsItsHandle()
+    {
+        BindingDeclaration oldConstructor = Declaration("c:@S@Geom_CartesianPoint@F@Geom_CartesianPoint#d#d#d#", "Geom_CartesianPoint::Geom_CartesianPoint", BindingDeclarationKind.Constructor) with
+        {
+            NativeSignature = "Z baseline constructor",
+            Parameters = [new(0, "x", Value("double"), false), new(1, "y", Value("double"), false), new(2, "z", Value("double"), false)],
+        };
+        BindingDeclaration newConstructor = Declaration("x:new-constructor", oldConstructor.NativeName, BindingDeclarationKind.Constructor) with
+        {
+            NativeSignature = "A new float constructor", Parameters = [new(0, "x", Value("float"), false)],
+        };
+        BindingType reference = Handle("Geom_CartesianPoint") with
+        {
+            Layers = [new(BindingTypeLayerKind.LValueReference, false), new(BindingTypeLayerKind.Value, true)],
+        };
+        BindingDeclaration retained = Declaration("x:retained-return", "Geom_CartesianPoint::Retained", BindingDeclarationKind.Method) with { ReturnType = reference, IsConst = true };
+        SharedHandleScopeConfiguration scope = new()
+        {
+            SourcePackage = "Geom", NativeType = "Geom_CartesianPoint", Header = "Geom_CartesianPoint.hxx",
+            ExportNamePrefix = "geom_cartesian_point", ManagedTypeName = "GeomCartesianPoint",
+        };
+        GeneratedBindingSet emitted = SharedHandleBindingEmitter.Emit("8.0.1", new BindingModel([newConstructor, oldConstructor, retained]), [scope]);
+        string source = Assert.Single(emitted.Files, file => file.RelativePath.EndsWith("SharedHandles.Generated.cpp", StringComparison.Ordinal)).Content;
+        Assert.Contains("occtsharp_generated_geom_cartesian_point_create_0(\n  double x,", source, StringComparison.Ordinal);
+        Assert.Contains("occtsharp_generated_geom_cartesian_point_create_1(\n  float x,", source, StringComparison.Ordinal);
+        Assert.Contains("opencascade::handle<Geom_CartesianPoint> returnedHandle = static_cast<const Geom_CartesianPoint*>", source, StringComparison.Ordinal);
+        Assert.Contains("AllocateGeomCartesianPoint(std::move(returnedHandle))", source, StringComparison.Ordinal);
+    }
+    [Fact]
     public void EmitsDeterministicTypedSharedHandleNativeAndManagedLayers()
     {
         BindingType real = Value("double");

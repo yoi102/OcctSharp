@@ -3,8 +3,11 @@
 ## Current planning policy (2026-09-06)
 
 B-W and Q-W's 280/280 accepted capabilities are locally complete at `15fd671`.
-No successor product scope is selected. For further migration, audit remaining
-projection/ownership/dependency gaps and select a useful generator or product outcome.
+Batch X implements [ADR-0092](adr/0092-generated-numeric-and-copied-reference-expansion.md):
+broad generated numeric mappings and copied/retained const-reference returns, with
+compatible old overload identities. Its local product gates pass; [STATUS](STATUS.md)
+owns final delivery evidence. Further migration should audit remaining pointer/output,
+value/sequence and nested-handle projection gaps instead of inheriting a fixed row count.
 Follow [WORKFLOW](WORKFLOW.md) and ADR-0091: no fixed row/family count, flexible authorized
 intermediate commits, impact-based development checks and full product delivery gates.
 [STATUS](STATUS.md) owns current counts, active work and validation references.

@@ -6,9 +6,14 @@
 // Source: c:@S@AIS_ViewCube@F@IsBoxEdge#$@E@V3d_TypeOfOrientation#S
 // Source: c:@S@AIS_ViewCube@F@IsBoxSide#$@E@V3d_TypeOfOrientation#S
 // Source: c:@S@Aspect_OpenVRSession@F@IsHmdPresent#S
+// Source: c:@S@Graphic3d_Aspects@F@DefaultLinePatternForType#$@E@Aspect_TypeOfLine#S
+// Source: c:@S@Graphic3d_Aspects@F@DefaultLineTypeForPattern#s#S
 // Source: c:@S@Graphic3d_Attribute@F@Stride#$@E@Graphic3d_TypeOfData#S
 // Source: c:@S@Graphic3d_MaterialAspect@F@MaterialType#I#S
 // Source: c:@S@Graphic3d_MaterialAspect@F@NumberOfMaterials#S
+// Source: c:@S@Graphic3d_PBRMaterial@F@MinRoughness#S
+// Source: c:@S@Graphic3d_PBRMaterial@F@Roughness#f#S
+// Source: c:@S@Graphic3d_PBRMaterial@F@SpecIBLMapSamplesFactor#f#f#S
 // Source: c:@S@Graphic3d_Texture1D@F@NumberOfTextures#S
 // Source: c:@S@Graphic3d_Texture2D@F@NumberOfTextures#S
 // Source: c:@S@Graphic3d_TextureEnv@F@NumberOfTextures#S
@@ -28,19 +33,36 @@
 // Source: c:@S@Image_ColorRGBAF@F@Length#S
 // Source: c:@S@Image_ColorRGBF@F@Length#S
 // Source: c:@S@Image_ColorRGF@F@Length#S
+// Source: c:@S@Image_PixMap@F@ConvertFromHalfFloat#s#S
+// Source: c:@S@Image_PixMap@F@ConvertToHalfFloat#f#S
 // Source: c:@S@Image_PixMap@F@IsBigEndianHost#S
+// Source: c:@S@Image_PixMap@F@SizePixelBytes#$@E@Image_Format#S
+// Source: c:@S@Media_FormatContext@F@FormatUnitsToSeconds#K#S
+// Source: c:@S@Media_FormatContext@F@SecondsToUnits#d#S
 // Source: c:@S@Media_Frame@F@FormatFFmpeg2Occt#I#S
 // Source: c:@S@Media_Frame@F@FormatOcct2FFmpeg#$@E@Image_Format#S
+// Source: c:@S@OpenGl_Buffer@F@sizeOfGlType#i#S
 // Source: c:@S@OpenGl_Context@F@GetPowerOfTwo#I#I#S
+// Source: c:@S@OpenGl_HaltonSampler@F@get_num_dimensions#S
 // Source: c:@S@OpenGl_Material@F@NbOfVec4Common#S
 // Source: c:@S@OpenGl_Material@F@NbOfVec4Pbr#S
 // Source: c:@S@OpenGl_ShaderManager@F@PBRShadingModelFallback#$@E@Graphic3d_TypeOfShadingModel#b#S
+// Source: c:@S@OpenGl_Texture@F@PixelSizeOfPixelFormat#I#S
 // Source: c:@S@Prs3d_DatumAspect@F@ArrowPartForAxis#$@E@Prs3d_DatumParts#S
 // Source: c:@S@Prs3d_ToolQuadric@F@TrianglesNb#I#I#S
 // Source: c:@S@Prs3d_ToolQuadric@F@VerticesNb#I#I#b#S
 // Source: c:@S@PrsDim@F@InDomain#d#d#d#S
 // Source: c:@S@SelectBasics@F@MaxOwnerPriority#S
 // Source: c:@S@SelectBasics@F@MinOwnerPriority#S
+// Source: c:@S@WNT_HIDSpaceMouse@F@IsKnownProduct#l#S
+// Source: c:@S@WNT_Window@F@MouseButtonsAsync#S
+// Source: c:@S@WNT_Window@F@MouseButtonsFromEvent#k#S
+// Source: c:@S@WNT_Window@F@MouseKeyFlagsAsync#S
+// Source: c:@S@WNT_Window@F@MouseKeyFlagsFromEvent#k#S
+// Source: c:@S@WNT_Window@F@VirtualKeyFromNative#I#S
+// Source: c:@S@Wasm_Window@F@MouseButtonsFromNative#s#S
+// Source: c:@S@Wasm_Window@F@VirtualKeyFromNative#I#S
+// Source: c:@S@Xw_Window@F@VirtualKeyFromNative#l#S
 #pragma once
 
 #include "../../include/OcctSharp.Native.h"
@@ -71,6 +93,10 @@ OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_ais_view_cube_is_box_si
 
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_aspect_open_vrsession_is_hmd_present_static_is_hmd_present_0(void);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_default_line_pattern_for_type_static_default_line_pattern_for_type_0(int32_t theType, uint16_t* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_default_line_type_for_pattern_static_default_line_type_for_pattern_0(uint16_t thePattern, int32_t* generatedResult);
+
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_graphic3d_attribute_stride_static_stride_0(
   int32_t theType);
 
@@ -78,6 +104,12 @@ OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_graphic3d_material_aspe
   int32_t theRank);
 
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_graphic3d_material_aspect_number_of_materials_static_number_of_materials_0(void);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_pbrmaterial_min_roughness_static_min_roughness_0(float* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_pbrmaterial_roughness_static_roughness_0(float theNormalizedRoughness, float* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_pbrmaterial_spec_iblmap_samples_factor_static_spec_ibl_map_samples_factor_0(float theProbability, float theRoughness, float* generatedResult);
 
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_graphic3d_texture1_d_number_of_textures_static_number_of_textures_0(void);
 
@@ -121,7 +153,17 @@ OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_image_color_rgbf_length
 
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_image_color_rgf_length_static_length_0(void);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_convert_from_half_float_static_convert_from_half_float_0(uint16_t theHalf, float* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_convert_to_half_float_static_convert_to_half_float_0(float theFloat, uint16_t* generatedResult);
+
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_image_pix_map_is_big_endian_host_static_is_big_endian_host_0(void);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_image_pix_map_size_pixel_bytes_static_size_pixel_bytes_0(int32_t thePixelFormat, uint64_t* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_format_context_format_units_to_seconds_static_format_units_to_seconds_0(int64_t theTimeUnits, double* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_media_format_context_seconds_to_units_static_seconds_to_units_0(double theTimeSeconds, int64_t* generatedResult);
 
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_media_frame_format_ffmpeg2_occt_static_format_f_fmpeg2_occt_0(
   int32_t theFormat);
@@ -129,9 +171,13 @@ OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_media_frame_format_ffmp
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_media_frame_format_occt2_ffmpeg_static_format_occt2_f_fmpeg_0(
   int32_t theFormat);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_buffer_size_of_gl_type_static_size_of_gl_type_0(uint32_t theType, uint64_t* generatedResult);
+
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_open_gl_context_get_power_of_two_static_get_power_of_two_0(
   int32_t theNumber,
   int32_t theThreshold);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_halton_sampler_get_num_dimensions_static_get_num_dimensions_0(uint32_t* generatedResult);
 
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_open_gl_material_nb_of_vec4_common_static_nb_of_vec4_common_0(void);
 
@@ -140,6 +186,8 @@ OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_open_gl_material_nb_of_
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_open_gl_shader_manager_pbrshading_model_fallback_static_pbr_shading_model_fallback_0(
   int32_t theShadingModel,
   int32_t theIsPbrAllowed);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_texture_pixel_size_of_pixel_format_static_pixel_size_of_pixel_format_0(int32_t theInternalFormat, uint64_t* generatedResult);
 
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_prs3d_datum_aspect_arrow_part_for_axis_static_arrow_part_for_axis_0(
   int32_t thePart);
@@ -161,6 +209,24 @@ OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_prs_dim_in_domain_stati
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_select_basics_max_owner_priority_static_max_owner_priority_0(void);
 
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_select_basics_min_owner_priority_static_min_owner_priority_0(void);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_wnt_hidspace_mouse_is_known_product_static_is_known_product_0(uint32_t theProductId, int32_t* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_wnt_window_mouse_buttons_async_static_mouse_buttons_async_0(uint32_t* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_wnt_window_mouse_buttons_from_event_static_mouse_buttons_from_event_0(uint64_t theKeys, uint32_t* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_wnt_window_mouse_key_flags_async_static_mouse_key_flags_async_0(uint32_t* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_wnt_window_mouse_key_flags_from_event_static_mouse_key_flags_from_event_0(uint64_t theKeys, uint32_t* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_wnt_window_virtual_key_from_native_static_virtual_key_from_native_0(int32_t theKey, uint32_t* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_wasm_window_mouse_buttons_from_native_static_mouse_buttons_from_native_0(uint16_t theButtons, uint32_t* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_wasm_window_virtual_key_from_native_static_virtual_key_from_native_0(int32_t theKey, uint32_t* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xw_window_virtual_key_from_native_static_virtual_key_from_native_0(uint32_t theKey, uint32_t* generatedResult);
 
 #ifdef __cplusplus
 }

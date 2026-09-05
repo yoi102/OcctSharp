@@ -15,6 +15,9 @@
 // Source: c:@S@BRepBuilderAPI@F@Precision#d#S
 // Source: c:@S@BRepGraph_Layer@F@KindBit#$@S@BRepGraph_NodeId@E@Kind#S
 // Source: c:@S@BRepGraph_Layer@F@RefKindBit#$@S@BRepGraph_RefId@E@Kind#S
+// Source: c:@S@BRepGraph_LayerParametric@F@GenerationMask#$@S@BRepGraph_LayerParametric@E@GenerationFlag#S
+// Source: c:@S@BRepGraph_LayerParametric@F@HasGenerationFlag#i#$@S@BRepGraph_LayerParametric@E@GenerationFlag#S
+// Source: c:@S@BRepGraph_LayerParametric@F@MeshQualityValue#$@S@BRepGraph_LayerParametric@E@MeshQuality#i#i#i#i#i#S
 // Source: c:@S@BRepGraph_NodeId@F@IsAssemblyKind#$@S@BRepGraph_NodeId@E@Kind#S
 // Source: c:@S@BRepGraph_NodeId@F@IsTopologyKind#$@S@BRepGraph_NodeId@E@Kind#S
 // Source: c:@S@BRepGraph_NodeId@F@IsValidKind#$@S@BRepGraph_NodeId@E@Kind#S
@@ -54,6 +57,16 @@
 // Source: c:@S@TopTrans_SurfaceTransition@F@GetAfter#$@E@TopAbs_Orientation#S
 // Source: c:@S@TopTrans_SurfaceTransition@F@GetBefore#$@E@TopAbs_Orientation#S
 #include "OcctSharp.Modeling.Values.Generated.h"
+#include <climits>
+#include <cstdint>
+#include <limits>
+static_assert(CHAR_BIT == 8 && sizeof(short) == 2 && sizeof(int) == 4);
+static_assert(sizeof(long) == 4 && sizeof(long long) == 8 && sizeof(size_t) == 8);
+static_assert(sizeof(float) == 4 && std::numeric_limits<float>::is_iec559);
+static_assert(sizeof(double) == 8 && std::numeric_limits<double>::is_iec559);
+#include <Standard_Failure.hxx>
+#include <exception>
+#include "../../include/OcctSharp.Native.Internal.hxx"
 
 #include <gp_Pnt.hxx>
 #include <BOPAlgo_MakePeriodic.hxx>
@@ -67,6 +80,7 @@
 #include <BRepBuilderAPI.hxx>
 #include <BRepGraphInc_RepId.hxx>
 #include <BRepGraph_Layer.hxx>
+#include <BRepGraph_LayerParametric.hxx>
 #include <BRepGraph_NodeId.hxx>
 #include <BRepGraph_ParallelPolicy.hxx>
 #include <BRepGraph_RefId.hxx>
@@ -176,6 +190,51 @@ int32_t OCCTSHARP_CALL occtsharp_generated_brep_graph_layer_ref_kind_bit_static_
   const int32_t theKind)
 {
   return BRepGraph_Layer::RefKindBit(static_cast<const BRepGraph_RefId::Kind>(theKind));
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_graph_layer_parametric_generation_mask_static_generation_mask_0(int32_t theFlag, uint32_t* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = BRepGraph_LayerParametric::GenerationMask(static_cast<const BRepGraph_LayerParametric::GenerationFlag>(theFlag));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_graph_layer_parametric_has_generation_flag_static_has_generation_flag_0(uint32_t theFlags, int32_t theFlag, int32_t* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = BRepGraph_LayerParametric::HasGenerationFlag(static_cast<const unsigned int>(theFlags), static_cast<const BRepGraph_LayerParametric::GenerationFlag>(theFlag)) ? 1 : 0;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_graph_layer_parametric_mesh_quality_value_static_mesh_quality_value_0(int32_t theQuality, uint32_t theVeryCoarse, uint32_t theCoarse, uint32_t theMedium, uint32_t theFine, uint32_t theVeryFine, uint32_t* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = BRepGraph_LayerParametric::MeshQualityValue(static_cast<const BRepGraph_LayerParametric::MeshQuality>(theQuality), static_cast<const unsigned int>(theVeryCoarse), static_cast<const unsigned int>(theCoarse), static_cast<const unsigned int>(theMedium), static_cast<const unsigned int>(theFine), static_cast<const unsigned int>(theVeryFine));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
 }
 
 int32_t OCCTSHARP_CALL occtsharp_generated_brep_graph_node_id_is_assembly_kind_static_is_assembly_kind_0(

@@ -156,6 +156,7 @@ public static class LongTailClassification
             "EL005" => ("Blocked", "BL002", "MissingToolkitProvenance"),
             "EL006" => ("Skipped", "SK013", "InternalHeaderFunction"),
             "EL007" => ("Blocked", "BL003", "UnverifiedFreeFunctionExport"),
+            "EL008" => ("Blocked", "BL209", "ReferenceSequenceContract"),
             _ => ("Blocked", "BL099", "UnimplementedSpecificRule"),
         };
     }

@@ -3,6 +3,7 @@
 // Source: c:@S@Adaptor2d_Curve2d@F@Bezier#1
 // Source: c:@S@Adaptor2d_Curve2d@F@Continuity#1
 // Source: c:@S@Adaptor2d_Curve2d@F@Degree#1
+// Source: c:@S@Adaptor2d_Curve2d@F@DynamicType#1
 // Source: c:@S@Adaptor2d_Curve2d@F@FirstParameter#1
 // Source: c:@S@Adaptor2d_Curve2d@F@GetType#1
 // Source: c:@S@Adaptor2d_Curve2d@F@IsClosed#1
@@ -22,6 +23,7 @@
 // Source: c:@S@Adaptor2d_Line2d@F@Bezier#1
 // Source: c:@S@Adaptor2d_Line2d@F@Continuity#1
 // Source: c:@S@Adaptor2d_Line2d@F@Degree#1
+// Source: c:@S@Adaptor2d_Line2d@F@DynamicType#1
 // Source: c:@S@Adaptor2d_Line2d@F@FirstParameter#1
 // Source: c:@S@Adaptor2d_Line2d@F@GetType#1
 // Source: c:@S@Adaptor2d_Line2d@F@IsClosed#1
@@ -42,7 +44,9 @@
 // Source: c:@S@Adaptor2d_OffsetCurve@F@BSpline#1
 // Source: c:@S@Adaptor2d_OffsetCurve@F@Bezier#1
 // Source: c:@S@Adaptor2d_OffsetCurve@F@Continuity#1
+// Source: c:@S@Adaptor2d_OffsetCurve@F@Curve#1
 // Source: c:@S@Adaptor2d_OffsetCurve@F@Degree#1
+// Source: c:@S@Adaptor2d_OffsetCurve@F@DynamicType#1
 // Source: c:@S@Adaptor2d_OffsetCurve@F@FirstParameter#1
 // Source: c:@S@Adaptor2d_OffsetCurve@F@GetType#1
 // Source: c:@S@Adaptor2d_OffsetCurve@F@IsClosed#1
@@ -66,6 +70,7 @@
 // Source: c:@S@Adaptor3d_Curve@F@Bezier#1
 // Source: c:@S@Adaptor3d_Curve@F@Continuity#1
 // Source: c:@S@Adaptor3d_Curve@F@Degree#1
+// Source: c:@S@Adaptor3d_Curve@F@DynamicType#1
 // Source: c:@S@Adaptor3d_Curve@F@EvalD0#d#1
 // Source: c:@S@Adaptor3d_Curve@F@FirstParameter#1
 // Source: c:@S@Adaptor3d_Curve@F@GetType#1
@@ -89,8 +94,11 @@
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@Bezier#1
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@Continuity#1
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@Degree#1
+// Source: c:@S@Adaptor3d_CurveOnSurface@F@DynamicType#1
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@EvalD0#d#1
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@FirstParameter#1
+// Source: c:@S@Adaptor3d_CurveOnSurface@F@GetCurve#1
+// Source: c:@S@Adaptor3d_CurveOnSurface@F@GetSurface#1
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@GetType#1
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@IsClosed#1
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@IsPeriodic#1
@@ -107,6 +115,7 @@
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@ShallowCopy#1
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@Trim#d#d#d#1
 // Source: c:@S@Adaptor3d_HVertex@F@Adaptor3d_HVertex#
+// Source: c:@S@Adaptor3d_HVertex@F@DynamicType#1
 // Source: c:@S@Adaptor3d_HVertex@F@IsSame#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_HVertex#
 // Source: c:@S@Adaptor3d_HVertex@F@Orientation#
 // Source: c:@S@Adaptor3d_HVertex@F@Parameter#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#
@@ -119,6 +128,7 @@
 // Source: c:@S@Adaptor3d_IsoCurve@F@Bezier#1
 // Source: c:@S@Adaptor3d_IsoCurve@F@Continuity#1
 // Source: c:@S@Adaptor3d_IsoCurve@F@Degree#1
+// Source: c:@S@Adaptor3d_IsoCurve@F@DynamicType#1
 // Source: c:@S@Adaptor3d_IsoCurve@F@EvalD0#d#1
 // Source: c:@S@Adaptor3d_IsoCurve@F@FirstParameter#1
 // Source: c:@S@Adaptor3d_IsoCurve@F@GetType#1
@@ -137,11 +147,13 @@
 // Source: c:@S@Adaptor3d_IsoCurve@F@Period#1
 // Source: c:@S@Adaptor3d_IsoCurve@F@Resolution#d#1
 // Source: c:@S@Adaptor3d_IsoCurve@F@ShallowCopy#1
+// Source: c:@S@Adaptor3d_IsoCurve@F@Surface#1
 // Source: c:@S@Adaptor3d_IsoCurve@F@Trim#d#d#d#1
 // Source: c:@S@Adaptor3d_Surface@F@BSpline#1
 // Source: c:@S@Adaptor3d_Surface@F@BasisCurve#1
 // Source: c:@S@Adaptor3d_Surface@F@BasisSurface#1
 // Source: c:@S@Adaptor3d_Surface@F@Bezier#1
+// Source: c:@S@Adaptor3d_Surface@F@DynamicType#1
 // Source: c:@S@Adaptor3d_Surface@F@EvalD0#d#d#1
 // Source: c:@S@Adaptor3d_Surface@F@FirstUParameter#1
 // Source: c:@S@Adaptor3d_Surface@F@FirstVParameter#1
@@ -178,6 +190,7 @@
 // Source: c:@S@Adaptor3d_TopolTool@F@BSplSamplePnts#d#I#I#
 // Source: c:@S@Adaptor3d_TopolTool@F@ComputeSamplePoints#
 // Source: c:@S@Adaptor3d_TopolTool@F@DomainIsInfinite#
+// Source: c:@S@Adaptor3d_TopolTool@F@DynamicType#1
 // Source: c:@S@Adaptor3d_TopolTool@F@Has3d#1
 // Source: c:@S@Adaptor3d_TopolTool@F@Identical#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_HVertex#S0_#
 // Source: c:@S@Adaptor3d_TopolTool@F@Init#
@@ -207,6 +220,7 @@
 // Source: c:@S@AdvApp2Var_Iso@F@ChangeDomain#d#d#
 // Source: c:@S@AdvApp2Var_Iso@F@ChangeDomain#d#d#d#d#
 // Source: c:@S@AdvApp2Var_Iso@F@Constante#1
+// Source: c:@S@AdvApp2Var_Iso@F@DynamicType#1
 // Source: c:@S@AdvApp2Var_Iso@F@HasResult#1
 // Source: c:@S@AdvApp2Var_Iso@F@IsApproximated#1
 // Source: c:@S@AdvApp2Var_Iso@F@NbCoeff#1
@@ -226,7 +240,9 @@
 // Source: c:@S@AdvApp2Var_Iso@F@VOrder#1
 // Source: c:@S@AdvApp2Var_Node@F@AdvApp2Var_Node#
 // Source: c:@S@AdvApp2Var_Node@F@AdvApp2Var_Node#I#I#
+// Source: c:@S@AdvApp2Var_Node@F@DynamicType#1
 // Source: c:@S@AdvApp2Var_Node@F@Error#I#I#1
+// Source: c:@S@AdvApp2Var_Node@F@Point#I#I#1
 // Source: c:@S@AdvApp2Var_Node@F@SetCoord#d#d#
 // Source: c:@S@AdvApp2Var_Node@F@SetError#I#I#d#
 // Source: c:@S@AdvApp2Var_Node@F@SetPoint#I#I#&1$@S@gp_Pnt#
@@ -238,6 +254,7 @@
 // Source: c:@S@AdvApp2Var_Patch@F@ChangeNbCoeff#I#I#
 // Source: c:@S@AdvApp2Var_Patch@F@CritValue#1
 // Source: c:@S@AdvApp2Var_Patch@F@CutSense#1
+// Source: c:@S@AdvApp2Var_Patch@F@DynamicType#1
 // Source: c:@S@AdvApp2Var_Patch@F@HasResult#1
 // Source: c:@S@AdvApp2Var_Patch@F@IsApproximated#1
 // Source: c:@S@AdvApp2Var_Patch@F@IsDiscretised#1
@@ -252,13 +269,16 @@
 // Source: c:@S@AdvApp2Var_Patch@F@V0#1
 // Source: c:@S@AdvApp2Var_Patch@F@V1#1
 // Source: c:@S@AdvApp2Var_Patch@F@VOrder#1
+// Source: c:@S@AppDef_LinearCriteria@F@DynamicType#1
 // Source: c:@S@AppDef_LinearCriteria@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@FEmTool_Curve#
 // Source: c:@S@AppDef_LinearCriteria@F@SetEstimation#d#d#d#
 // Source: c:@S@AppDef_LinearCriteria@F@SetWeight#d#d#d#d#d#
 // Source: c:@S@AppDef_SmoothCriterion@F@Curve#1
+// Source: c:@S@AppDef_SmoothCriterion@F@DynamicType#1
 // Source: c:@S@Approx_CurvlinFunc@F@Approx_CurvlinFunc#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#d#
 // Source: c:@S@Approx_CurvlinFunc@F@Approx_CurvlinFunc#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#S0_#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#S3_#d#
 // Source: c:@S@Approx_CurvlinFunc@F@Approx_CurvlinFunc#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#d#
+// Source: c:@S@Approx_CurvlinFunc@F@DynamicType#1
 // Source: c:@S@Approx_CurvlinFunc@F@FirstParameter#1
 // Source: c:@S@Approx_CurvlinFunc@F@GetLength#1
 // Source: c:@S@Approx_CurvlinFunc@F@GetSParameter#d#1
@@ -268,14 +288,18 @@
 // Source: c:@S@Approx_CurvlinFunc@F@SetTol#d#
 // Source: c:@S@Approx_CurvlinFunc@F@Trim#d#d#d#
 // Source: c:@S@Approx_SweepFunction@F@BarycentreOfSurf#1
+// Source: c:@S@Approx_SweepFunction@F@DynamicType#1
 // Source: c:@S@Approx_SweepFunction@F@MaximalSection#1
+// Source: c:@S@BSplCLib_Cache@F@DynamicType#1
 // Source: c:@S@BSplCLib_Cache@F@IsCacheValid#d#1
+// Source: c:@S@BSplSLib_Cache@F@DynamicType#1
 // Source: c:@S@BSplSLib_Cache@F@IsCacheValid#d#d#1
 // Source: c:@S@BiTgte_CurveOnEdge@F@BSpline#1
 // Source: c:@S@BiTgte_CurveOnEdge@F@Bezier#1
 // Source: c:@S@BiTgte_CurveOnEdge@F@BiTgte_CurveOnEdge#
 // Source: c:@S@BiTgte_CurveOnEdge@F@Continuity#1
 // Source: c:@S@BiTgte_CurveOnEdge@F@Degree#1
+// Source: c:@S@BiTgte_CurveOnEdge@F@DynamicType#1
 // Source: c:@S@BiTgte_CurveOnEdge@F@EvalD0#d#1
 // Source: c:@S@BiTgte_CurveOnEdge@F@FirstParameter#1
 // Source: c:@S@BiTgte_CurveOnEdge@F@GetType#1
@@ -295,6 +319,7 @@
 // Source: c:@S@BiTgte_CurveOnVertex@F@BiTgte_CurveOnVertex#
 // Source: c:@S@BiTgte_CurveOnVertex@F@Continuity#1
 // Source: c:@S@BiTgte_CurveOnVertex@F@Degree#1
+// Source: c:@S@BiTgte_CurveOnVertex@F@DynamicType#1
 // Source: c:@S@BiTgte_CurveOnVertex@F@EvalD0#d#1
 // Source: c:@S@BiTgte_CurveOnVertex@F@FirstParameter#1
 // Source: c:@S@BiTgte_CurveOnVertex@F@GetType#1
@@ -312,6 +337,7 @@
 // Source: c:@S@Bisector_BisecAna@F@Continuity#1
 // Source: c:@S@Bisector_BisecAna@F@Copy#1
 // Source: c:@S@Bisector_BisecAna@F@Dump#I#I#1
+// Source: c:@S@Bisector_BisecAna@F@DynamicType#1
 // Source: c:@S@Bisector_BisecAna@F@FirstParameter#1
 // Source: c:@S@Bisector_BisecAna@F@Geom2dCurve#1
 // Source: c:@S@Bisector_BisecAna@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom2d_TrimmedCurve#
@@ -336,6 +362,7 @@
 // Source: c:@S@Bisector_BisecCC@F@Copy#1
 // Source: c:@S@Bisector_BisecCC@F@Curve#I#1
 // Source: c:@S@Bisector_BisecCC@F@Dump#I#I#1
+// Source: c:@S@Bisector_BisecCC@F@DynamicType#1
 // Source: c:@S@Bisector_BisecCC@F@FirstParameter#1
 // Source: c:@S@Bisector_BisecCC@F@IntervalContinuity#1
 // Source: c:@S@Bisector_BisecCC@F@IntervalFirst#I#1
@@ -357,6 +384,7 @@
 // Source: c:@S@Bisector_BisecPC@F@Copy#1
 // Source: c:@S@Bisector_BisecPC@F@Distance#d#1
 // Source: c:@S@Bisector_BisecPC@F@Dump#I#I#1
+// Source: c:@S@Bisector_BisecPC@F@DynamicType#1
 // Source: c:@S@Bisector_BisecPC@F@FirstParameter#1
 // Source: c:@S@Bisector_BisecPC@F@IntervalContinuity#1
 // Source: c:@S@Bisector_BisecPC@F@IntervalFirst#I#1
@@ -373,6 +401,8 @@
 // Source: c:@S@Bisector_BisecPC@F@NbIntervals#1
 // Source: c:@S@Bisector_BisecPC@F@Reverse#
 // Source: c:@S@Bisector_BisecPC@F@ReversedParameter#d#1
+// Source: c:@S@Bisector_Curve@F@DynamicType#1
+// Source: c:@S@Extrema_ExtPExtS@F@DynamicType#1
 // Source: c:@S@Extrema_ExtPExtS@F@Extrema_ExtPExtS#
 // Source: c:@S@Extrema_ExtPExtS@F@Extrema_ExtPExtS#&1$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@GeomAdaptor_SurfaceOfLinearExtrusion#d#d#
 // Source: c:@S@Extrema_ExtPExtS@F@Extrema_ExtPExtS#&1$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@GeomAdaptor_SurfaceOfLinearExtrusion#d#d#d#d#d#d#
@@ -381,6 +411,7 @@
 // Source: c:@S@Extrema_ExtPExtS@F@NbExt#1
 // Source: c:@S@Extrema_ExtPExtS@F@Perform#&1$@S@gp_Pnt#
 // Source: c:@S@Extrema_ExtPExtS@F@SquareDistance#I#1
+// Source: c:@S@Extrema_ExtPRevS@F@DynamicType#1
 // Source: c:@S@Extrema_ExtPRevS@F@Extrema_ExtPRevS#
 // Source: c:@S@Extrema_ExtPRevS@F@Extrema_ExtPRevS#&1$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@GeomAdaptor_SurfaceOfRevolution#d#d#
 // Source: c:@S@Extrema_ExtPRevS@F@Extrema_ExtPRevS#&1$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@GeomAdaptor_SurfaceOfRevolution#d#d#d#d#d#d#
@@ -391,33 +422,49 @@
 // Source: c:@S@Extrema_ExtPRevS@F@SquareDistance#I#1
 // Source: c:@S@FEmTool_Curve@F@Degree#I#1
 // Source: c:@S@FEmTool_Curve@F@Dimension#1
+// Source: c:@S@FEmTool_Curve@F@DynamicType#1
 // Source: c:@S@FEmTool_Curve@F@NbElements#1
 // Source: c:@S@FEmTool_Curve@F@SetDegree#I#I#
+// Source: c:@S@FEmTool_ElementaryCriterion@F@DynamicType#1
 // Source: c:@S@FEmTool_ElementaryCriterion@F@Set#d#d#
+// Source: c:@S@FEmTool_LinearFlexion@F@DynamicType#1
 // Source: c:@S@FEmTool_LinearFlexion@F@FEmTool_LinearFlexion#I#$@E@GeomAbs_Shape#
 // Source: c:@S@FEmTool_LinearFlexion@F@Value#
+// Source: c:@S@FEmTool_LinearJerk@F@DynamicType#1
 // Source: c:@S@FEmTool_LinearJerk@F@FEmTool_LinearJerk#I#$@E@GeomAbs_Shape#
 // Source: c:@S@FEmTool_LinearJerk@F@Value#
+// Source: c:@S@FEmTool_LinearTension@F@DynamicType#1
 // Source: c:@S@FEmTool_LinearTension@F@FEmTool_LinearTension#I#$@E@GeomAbs_Shape#
 // Source: c:@S@FEmTool_LinearTension@F@Value#
 // Source: c:@S@FEmTool_ProfileMatrix@F@ColNumber#1
 // Source: c:@S@FEmTool_ProfileMatrix@F@Decompose#
+// Source: c:@S@FEmTool_ProfileMatrix@F@DynamicType#1
 // Source: c:@S@FEmTool_ProfileMatrix@F@Init#d#
 // Source: c:@S@FEmTool_ProfileMatrix@F@IsInProfile#I#I#1
 // Source: c:@S@FEmTool_ProfileMatrix@F@OutM#1
 // Source: c:@S@FEmTool_ProfileMatrix@F@OutS#1
 // Source: c:@S@FEmTool_ProfileMatrix@F@Prepare#
 // Source: c:@S@FEmTool_ProfileMatrix@F@RowNumber#1
+// Source: c:@S@FEmTool_SparseMatrix@F@DynamicType#1
 // Source: c:@S@GccInt_BCirc@F@ArcType#1
+// Source: c:@S@GccInt_BCirc@F@DynamicType#1
 // Source: c:@S@GccInt_BElips@F@ArcType#1
+// Source: c:@S@GccInt_BElips@F@DynamicType#1
 // Source: c:@S@GccInt_BHyper@F@ArcType#1
+// Source: c:@S@GccInt_BHyper@F@DynamicType#1
 // Source: c:@S@GccInt_BLine@F@ArcType#1
+// Source: c:@S@GccInt_BLine@F@DynamicType#1
 // Source: c:@S@GccInt_BParab@F@ArcType#1
+// Source: c:@S@GccInt_BParab@F@DynamicType#1
 // Source: c:@S@GccInt_BPoint@F@ArcType#1
+// Source: c:@S@GccInt_BPoint@F@DynamicType#1
+// Source: c:@S@GccInt_Bisec@F@DynamicType#1
 // Source: c:@S@Geom2dAdaptor_Curve@F@BSpline#1
 // Source: c:@S@Geom2dAdaptor_Curve@F@Bezier#1
 // Source: c:@S@Geom2dAdaptor_Curve@F@Continuity#1
+// Source: c:@S@Geom2dAdaptor_Curve@F@Curve#1
 // Source: c:@S@Geom2dAdaptor_Curve@F@Degree#1
+// Source: c:@S@Geom2dAdaptor_Curve@F@DynamicType#1
 // Source: c:@S@Geom2dAdaptor_Curve@F@FirstParameter#1
 // Source: c:@S@Geom2dAdaptor_Curve@F@Geom2dAdaptor_Curve#
 // Source: c:@S@Geom2dAdaptor_Curve@F@Geom2dAdaptor_Curve#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#
@@ -444,6 +491,7 @@
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@Beta#1
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@Copy#1
+// Source: c:@S@Geom2dEval_AHTBezierCurve@F@DynamicType#1
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@FirstParameter#1
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@IsCN#I#1
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@IsClosed#1
@@ -455,6 +503,7 @@
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@Copy#1
+// Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@DynamicType#1
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@FirstParameter#1
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@GrowthRate#1
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@InitialRadius#1
@@ -466,6 +515,7 @@
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@Copy#1
+// Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@DynamicType#1
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@FirstParameter#1
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@IsCN#I#1
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@IsClosed#1
@@ -476,6 +526,7 @@
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@Copy#1
+// Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@DynamicType#1
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@FirstParameter#1
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@GrowthExponent#1
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@IsCN#I#1
@@ -488,6 +539,7 @@
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Amplitude#1
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Copy#1
+// Source: c:@S@Geom2dEval_SineWaveCurve@F@DynamicType#1
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@FirstParameter#1
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@IsCN#I#1
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@IsClosed#1
@@ -500,6 +552,7 @@
 // Source: c:@S@Geom2dEval_TBezierCurve@F@Alpha#1
 // Source: c:@S@Geom2dEval_TBezierCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_TBezierCurve@F@Copy#1
+// Source: c:@S@Geom2dEval_TBezierCurve@F@DynamicType#1
 // Source: c:@S@Geom2dEval_TBezierCurve@F@FirstParameter#1
 // Source: c:@S@Geom2dEval_TBezierCurve@F@IsCN#I#1
 // Source: c:@S@Geom2dEval_TBezierCurve@F@IsClosed#1
@@ -512,12 +565,15 @@
 // Source: c:@S@Geom2dEval_TBezierCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_AxisPlacement@F@Angle#&1$@N@opencascade@S@handle>#$@S@Geom2d_AxisPlacement#1
 // Source: c:@S@Geom2d_AxisPlacement@F@Copy#1
+// Source: c:@S@Geom2d_AxisPlacement@F@DynamicType#1
 // Source: c:@S@Geom2d_AxisPlacement@F@Reverse#
 // Source: c:@S@Geom2d_AxisPlacement@F@Reversed#1
 // Source: c:@S@Geom2d_BSplineCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom2d_BSplineCurve@F@Continuity#1
 // Source: c:@S@Geom2d_BSplineCurve@F@Copy#1
 // Source: c:@S@Geom2d_BSplineCurve@F@Degree#1
+// Source: c:@S@Geom2d_BSplineCurve@F@DynamicType#1
+// Source: c:@S@Geom2d_BSplineCurve@F@EvalRepresentation#1
 // Source: c:@S@Geom2d_BSplineCurve@F@FirstParameter#1
 // Source: c:@S@Geom2d_BSplineCurve@F@FirstUKnotIndex#1
 // Source: c:@S@Geom2d_BSplineCurve@F@HasEvalRepresentation#1
@@ -555,6 +611,8 @@
 // Source: c:@S@Geom2d_BezierCurve@F@Continuity#1
 // Source: c:@S@Geom2d_BezierCurve@F@Copy#1
 // Source: c:@S@Geom2d_BezierCurve@F@Degree#1
+// Source: c:@S@Geom2d_BezierCurve@F@DynamicType#1
+// Source: c:@S@Geom2d_BezierCurve@F@EvalRepresentation#1
 // Source: c:@S@Geom2d_BezierCurve@F@FirstParameter#1
 // Source: c:@S@Geom2d_BezierCurve@F@HasEvalRepresentation#1
 // Source: c:@S@Geom2d_BezierCurve@F@Increase#I#
@@ -571,7 +629,9 @@
 // Source: c:@S@Geom2d_BezierCurve@F@SetEvalRepresentation#&1$@N@opencascade@S@handle>#$@N@Geom2dEval_RepCurveDesc@S@Base#
 // Source: c:@S@Geom2d_BezierCurve@F@SetWeight#I#d#
 // Source: c:@S@Geom2d_BezierCurve@F@Weight#I#1
+// Source: c:@S@Geom2d_BoundedCurve@F@DynamicType#1
 // Source: c:@S@Geom2d_CartesianPoint@F@Copy#1
+// Source: c:@S@Geom2d_CartesianPoint@F@DynamicType#1
 // Source: c:@S@Geom2d_CartesianPoint@F@Geom2d_CartesianPoint#d#d#
 // Source: c:@S@Geom2d_CartesianPoint@F@SetCoord#d#d#
 // Source: c:@S@Geom2d_CartesianPoint@F@SetX#d#
@@ -579,6 +639,7 @@
 // Source: c:@S@Geom2d_CartesianPoint@F@X#1
 // Source: c:@S@Geom2d_CartesianPoint@F@Y#1
 // Source: c:@S@Geom2d_Circle@F@Copy#1
+// Source: c:@S@Geom2d_Circle@F@DynamicType#1
 // Source: c:@S@Geom2d_Circle@F@Eccentricity#1
 // Source: c:@S@Geom2d_Circle@F@FirstParameter#1
 // Source: c:@S@Geom2d_Circle@F@IsClosed#1
@@ -588,12 +649,15 @@
 // Source: c:@S@Geom2d_Circle@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_Circle@F@SetRadius#d#
 // Source: c:@S@Geom2d_Conic@F@Continuity#1
+// Source: c:@S@Geom2d_Conic@F@DynamicType#1
 // Source: c:@S@Geom2d_Conic@F@IsCN#I#1
 // Source: c:@S@Geom2d_Conic@F@Reverse#
+// Source: c:@S@Geom2d_Curve@F@DynamicType#1
 // Source: c:@S@Geom2d_Curve@F@Period#1
 // Source: c:@S@Geom2d_Curve@F@Reversed#1
 // Source: c:@S@Geom2d_Direction@F@Copy#1
 // Source: c:@S@Geom2d_Direction@F@Crossed#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
+// Source: c:@S@Geom2d_Direction@F@DynamicType#1
 // Source: c:@S@Geom2d_Direction@F@Geom2d_Direction#d#d#
 // Source: c:@S@Geom2d_Direction@F@Magnitude#1
 // Source: c:@S@Geom2d_Direction@F@SetCoord#d#d#
@@ -601,6 +665,7 @@
 // Source: c:@S@Geom2d_Direction@F@SetY#d#
 // Source: c:@S@Geom2d_Direction@F@SquareMagnitude#1
 // Source: c:@S@Geom2d_Ellipse@F@Copy#1
+// Source: c:@S@Geom2d_Ellipse@F@DynamicType#1
 // Source: c:@S@Geom2d_Ellipse@F@Eccentricity#1
 // Source: c:@S@Geom2d_Ellipse@F@FirstParameter#1
 // Source: c:@S@Geom2d_Ellipse@F@Focal#1
@@ -613,7 +678,9 @@
 // Source: c:@S@Geom2d_Ellipse@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_Ellipse@F@SetMajorRadius#d#
 // Source: c:@S@Geom2d_Ellipse@F@SetMinorRadius#d#
+// Source: c:@S@Geom2d_Geometry@F@DynamicType#1
 // Source: c:@S@Geom2d_Hyperbola@F@Copy#1
+// Source: c:@S@Geom2d_Hyperbola@F@DynamicType#1
 // Source: c:@S@Geom2d_Hyperbola@F@Eccentricity#1
 // Source: c:@S@Geom2d_Hyperbola@F@FirstParameter#1
 // Source: c:@S@Geom2d_Hyperbola@F@Focal#1
@@ -628,6 +695,7 @@
 // Source: c:@S@Geom2d_Hyperbola@F@SetMinorRadius#d#
 // Source: c:@S@Geom2d_Line@F@Continuity#1
 // Source: c:@S@Geom2d_Line@F@Copy#1
+// Source: c:@S@Geom2d_Line@F@DynamicType#1
 // Source: c:@S@Geom2d_Line@F@FirstParameter#1
 // Source: c:@S@Geom2d_Line@F@IsCN#I#1
 // Source: c:@S@Geom2d_Line@F@IsClosed#1
@@ -639,6 +707,8 @@
 // Source: c:@S@Geom2d_OffsetCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom2d_OffsetCurve@F@Continuity#1
 // Source: c:@S@Geom2d_OffsetCurve@F@Copy#1
+// Source: c:@S@Geom2d_OffsetCurve@F@DynamicType#1
+// Source: c:@S@Geom2d_OffsetCurve@F@EvalRepresentation#1
 // Source: c:@S@Geom2d_OffsetCurve@F@FirstParameter#1
 // Source: c:@S@Geom2d_OffsetCurve@F@Geom2d_OffsetCurve#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#d#b#
 // Source: c:@S@Geom2d_OffsetCurve@F@GetBasisCurveContinuity#1
@@ -655,6 +725,7 @@
 // Source: c:@S@Geom2d_OffsetCurve@F@SetEvalRepresentation#&1$@N@opencascade@S@handle>#$@N@Geom2dEval_RepCurveDesc@S@Base#
 // Source: c:@S@Geom2d_OffsetCurve@F@SetOffsetValue#d#
 // Source: c:@S@Geom2d_Parabola@F@Copy#1
+// Source: c:@S@Geom2d_Parabola@F@DynamicType#1
 // Source: c:@S@Geom2d_Parabola@F@Eccentricity#1
 // Source: c:@S@Geom2d_Parabola@F@FirstParameter#1
 // Source: c:@S@Geom2d_Parabola@F@Focal#1
@@ -665,8 +736,10 @@
 // Source: c:@S@Geom2d_Parabola@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_Parabola@F@SetFocal#d#
 // Source: c:@S@Geom2d_Point@F@Distance#&1$@N@opencascade@S@handle>#$@S@Geom2d_Point#1
+// Source: c:@S@Geom2d_Point@F@DynamicType#1
 // Source: c:@S@Geom2d_Point@F@SquareDistance#&1$@N@opencascade@S@handle>#$@S@Geom2d_Point#1
 // Source: c:@S@Geom2d_Transformation@F@Copy#1
+// Source: c:@S@Geom2d_Transformation@F@DynamicType#1
 // Source: c:@S@Geom2d_Transformation@F@Form#1
 // Source: c:@S@Geom2d_Transformation@F@Geom2d_Transformation#
 // Source: c:@S@Geom2d_Transformation@F@Invert#
@@ -682,6 +755,7 @@
 // Source: c:@S@Geom2d_TrimmedCurve@F@BasisCurve#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@Continuity#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@Copy#1
+// Source: c:@S@Geom2d_TrimmedCurve@F@DynamicType#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@FirstParameter#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@Geom2d_TrimmedCurve#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#d#d#b#b#
 // Source: c:@S@Geom2d_TrimmedCurve@F@IsCN#I#1
@@ -694,6 +768,7 @@
 // Source: c:@S@Geom2d_TrimmedCurve@F@SetTrim#d#d#b#b#
 // Source: c:@S@Geom2d_Vector@F@Angle#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
 // Source: c:@S@Geom2d_Vector@F@Dot#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
+// Source: c:@S@Geom2d_Vector@F@DynamicType#1
 // Source: c:@S@Geom2d_Vector@F@Reverse#
 // Source: c:@S@Geom2d_Vector@F@Reversed#1
 // Source: c:@S@Geom2d_Vector@F@X#1
@@ -704,6 +779,7 @@
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@Crossed#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@Divide#d#
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@Divided#d#1
+// Source: c:@S@Geom2d_VectorWithMagnitude@F@DynamicType#1
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@Geom2d_VectorWithMagnitude#d#d#
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@Magnitude#1
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@Multiplied#d#1
@@ -719,7 +795,9 @@
 // Source: c:@S@GeomAdaptor_Curve@F@BSpline#1
 // Source: c:@S@GeomAdaptor_Curve@F@Bezier#1
 // Source: c:@S@GeomAdaptor_Curve@F@Continuity#1
+// Source: c:@S@GeomAdaptor_Curve@F@Curve#1
 // Source: c:@S@GeomAdaptor_Curve@F@Degree#1
+// Source: c:@S@GeomAdaptor_Curve@F@DynamicType#1
 // Source: c:@S@GeomAdaptor_Curve@F@EvalD0#d#1
 // Source: c:@S@GeomAdaptor_Curve@F@FirstParameter#1
 // Source: c:@S@GeomAdaptor_Curve@F@GeomAdaptor_Curve#
@@ -745,6 +823,7 @@
 // Source: c:@S@GeomAdaptor_Surface@F@BasisCurve#1
 // Source: c:@S@GeomAdaptor_Surface@F@BasisSurface#1
 // Source: c:@S@GeomAdaptor_Surface@F@Bezier#1
+// Source: c:@S@GeomAdaptor_Surface@F@DynamicType#1
 // Source: c:@S@GeomAdaptor_Surface@F@EvalD0#d#d#1
 // Source: c:@S@GeomAdaptor_Surface@F@FirstUParameter#1
 // Source: c:@S@GeomAdaptor_Surface@F@FirstVParameter#1
@@ -770,6 +849,7 @@
 // Source: c:@S@GeomAdaptor_Surface@F@NbVPoles#1
 // Source: c:@S@GeomAdaptor_Surface@F@OffsetValue#1
 // Source: c:@S@GeomAdaptor_Surface@F@ShallowCopy#1
+// Source: c:@S@GeomAdaptor_Surface@F@Surface#1
 // Source: c:@S@GeomAdaptor_Surface@F@ToleranceU#1
 // Source: c:@S@GeomAdaptor_Surface@F@ToleranceV#1
 // Source: c:@S@GeomAdaptor_Surface@F@UContinuity#1
@@ -785,6 +865,7 @@
 // Source: c:@S@GeomAdaptor_SurfaceOfLinearExtrusion@F@BSpline#1
 // Source: c:@S@GeomAdaptor_SurfaceOfLinearExtrusion@F@BasisCurve#1
 // Source: c:@S@GeomAdaptor_SurfaceOfLinearExtrusion@F@Bezier#1
+// Source: c:@S@GeomAdaptor_SurfaceOfLinearExtrusion@F@DynamicType#1
 // Source: c:@S@GeomAdaptor_SurfaceOfLinearExtrusion@F@FirstUParameter#1
 // Source: c:@S@GeomAdaptor_SurfaceOfLinearExtrusion@F@FirstVParameter#1
 // Source: c:@S@GeomAdaptor_SurfaceOfLinearExtrusion@F@GeomAdaptor_SurfaceOfLinearExtrusion#
@@ -815,6 +896,7 @@
 // Source: c:@S@GeomAdaptor_SurfaceOfRevolution@F@BSpline#1
 // Source: c:@S@GeomAdaptor_SurfaceOfRevolution@F@BasisCurve#1
 // Source: c:@S@GeomAdaptor_SurfaceOfRevolution@F@Bezier#1
+// Source: c:@S@GeomAdaptor_SurfaceOfRevolution@F@DynamicType#1
 // Source: c:@S@GeomAdaptor_SurfaceOfRevolution@F@FirstUParameter#1
 // Source: c:@S@GeomAdaptor_SurfaceOfRevolution@F@FirstVParameter#1
 // Source: c:@S@GeomAdaptor_SurfaceOfRevolution@F@GeomAdaptor_SurfaceOfRevolution#
@@ -847,9 +929,11 @@
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Bezier#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Continuity#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Degree#1
+// Source: c:@S@GeomAdaptor_TransformedCurve@F@DynamicType#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@EvalD0#d#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@FirstParameter#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@GeomAdaptor_TransformedCurve#
+// Source: c:@S@GeomAdaptor_TransformedCurve@F@GeomCurve#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@GetType#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Is3DCurve#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@IsClosed#1
@@ -872,10 +956,14 @@
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@BasisCurve#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@BasisSurface#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@Bezier#1
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@DynamicType#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@EvalD0#d#d#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@FirstUParameter#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@FirstVParameter#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomAdaptor_TransformedSurface#
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomSurface#1
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomSurfaceOriginal#1
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomSurfaceTransformed#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@GetType#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@HasTrsf#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@IsUClosed#1
@@ -911,6 +999,7 @@
 // Source: c:@S@GeomEval_AHTBezierCurve@F@Beta#1
 // Source: c:@S@GeomEval_AHTBezierCurve@F@Continuity#1
 // Source: c:@S@GeomEval_AHTBezierCurve@F@Copy#1
+// Source: c:@S@GeomEval_AHTBezierCurve@F@DynamicType#1
 // Source: c:@S@GeomEval_AHTBezierCurve@F@EndPoint#1
 // Source: c:@S@GeomEval_AHTBezierCurve@F@EvalD0#d#1
 // Source: c:@S@GeomEval_AHTBezierCurve@F@FirstParameter#1
@@ -931,6 +1020,7 @@
 // Source: c:@S@GeomEval_AHTBezierSurface@F@BetaV#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@Continuity#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@Copy#1
+// Source: c:@S@GeomEval_AHTBezierSurface@F@DynamicType#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@EvalD0#d#d#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@IsCNu#I#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@IsCNv#I#1
@@ -949,6 +1039,7 @@
 // Source: c:@S@GeomEval_AHTBezierSurface@F@VReverse#
 // Source: c:@S@GeomEval_AHTBezierSurface@F@VReversedParameter#d#1
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@Copy#1
+// Source: c:@S@GeomEval_CircularHelicoidSurface@F@DynamicType#1
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@EvalD0#d#d#1
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@IsUClosed#1
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@IsUPeriodic#1
@@ -964,6 +1055,7 @@
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@VReversedParameter#d#1
 // Source: c:@S@GeomEval_CircularHelixCurve@F@Continuity#1
 // Source: c:@S@GeomEval_CircularHelixCurve@F@Copy#1
+// Source: c:@S@GeomEval_CircularHelixCurve@F@DynamicType#1
 // Source: c:@S@GeomEval_CircularHelixCurve@F@EvalD0#d#1
 // Source: c:@S@GeomEval_CircularHelixCurve@F@FirstParameter#1
 // Source: c:@S@GeomEval_CircularHelixCurve@F@IsCN#I#1
@@ -975,6 +1067,7 @@
 // Source: c:@S@GeomEval_CircularHelixCurve@F@Reverse#
 // Source: c:@S@GeomEval_CircularHelixCurve@F@ReversedParameter#d#1
 // Source: c:@S@GeomEval_EllipsoidSurface@F@Copy#1
+// Source: c:@S@GeomEval_EllipsoidSurface@F@DynamicType#1
 // Source: c:@S@GeomEval_EllipsoidSurface@F@EvalD0#d#d#1
 // Source: c:@S@GeomEval_EllipsoidSurface@F@IsUClosed#1
 // Source: c:@S@GeomEval_EllipsoidSurface@F@IsUPeriodic#1
@@ -993,6 +1086,7 @@
 // Source: c:@S@GeomEval_EllipsoidSurface@F@VReverse#
 // Source: c:@S@GeomEval_EllipsoidSurface@F@VReversedParameter#d#1
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@Copy#1
+// Source: c:@S@GeomEval_HypParaboloidSurface@F@DynamicType#1
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@EvalD0#d#d#1
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@IsUClosed#1
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@IsUPeriodic#1
@@ -1009,6 +1103,7 @@
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@VReverse#
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@VReversedParameter#d#1
 // Source: c:@S@GeomEval_HyperboloidSurface@F@Copy#1
+// Source: c:@S@GeomEval_HyperboloidSurface@F@DynamicType#1
 // Source: c:@S@GeomEval_HyperboloidSurface@F@EvalD0#d#d#1
 // Source: c:@S@GeomEval_HyperboloidSurface@F@IsUClosed#1
 // Source: c:@S@GeomEval_HyperboloidSurface@F@IsUPeriodic#1
@@ -1027,6 +1122,7 @@
 // Source: c:@S@GeomEval_HyperboloidSurface@F@VReverse#
 // Source: c:@S@GeomEval_HyperboloidSurface@F@VReversedParameter#d#1
 // Source: c:@S@GeomEval_ParaboloidSurface@F@Copy#1
+// Source: c:@S@GeomEval_ParaboloidSurface@F@DynamicType#1
 // Source: c:@S@GeomEval_ParaboloidSurface@F@EvalD0#d#d#1
 // Source: c:@S@GeomEval_ParaboloidSurface@F@Focal#1
 // Source: c:@S@GeomEval_ParaboloidSurface@F@IsUClosed#1
@@ -1043,6 +1139,7 @@
 // Source: c:@S@GeomEval_SineWaveCurve@F@Amplitude#1
 // Source: c:@S@GeomEval_SineWaveCurve@F@Continuity#1
 // Source: c:@S@GeomEval_SineWaveCurve@F@Copy#1
+// Source: c:@S@GeomEval_SineWaveCurve@F@DynamicType#1
 // Source: c:@S@GeomEval_SineWaveCurve@F@EvalD0#d#1
 // Source: c:@S@GeomEval_SineWaveCurve@F@FirstParameter#1
 // Source: c:@S@GeomEval_SineWaveCurve@F@IsCN#I#1
@@ -1056,6 +1153,7 @@
 // Source: c:@S@GeomEval_TBezierCurve@F@Alpha#1
 // Source: c:@S@GeomEval_TBezierCurve@F@Continuity#1
 // Source: c:@S@GeomEval_TBezierCurve@F@Copy#1
+// Source: c:@S@GeomEval_TBezierCurve@F@DynamicType#1
 // Source: c:@S@GeomEval_TBezierCurve@F@EndPoint#1
 // Source: c:@S@GeomEval_TBezierCurve@F@EvalD0#d#1
 // Source: c:@S@GeomEval_TBezierCurve@F@FirstParameter#1
@@ -1073,6 +1171,7 @@
 // Source: c:@S@GeomEval_TBezierSurface@F@AlphaV#1
 // Source: c:@S@GeomEval_TBezierSurface@F@Continuity#1
 // Source: c:@S@GeomEval_TBezierSurface@F@Copy#1
+// Source: c:@S@GeomEval_TBezierSurface@F@DynamicType#1
 // Source: c:@S@GeomEval_TBezierSurface@F@EvalD0#d#d#1
 // Source: c:@S@GeomEval_TBezierSurface@F@IsCNu#I#1
 // Source: c:@S@GeomEval_TBezierSurface@F@IsCNv#I#1
@@ -1091,16 +1190,19 @@
 // Source: c:@S@GeomEval_TBezierSurface@F@VIso#d#1
 // Source: c:@S@GeomEval_TBezierSurface@F@VReverse#
 // Source: c:@S@GeomEval_TBezierSurface@F@VReversedParameter#d#1
+// Source: c:@S@GeomFill_BoundWithSurf@F@DynamicType#1
 // Source: c:@S@GeomFill_BoundWithSurf@F@HasNormals#1
 // Source: c:@S@GeomFill_BoundWithSurf@F@IsDegenerated#1
 // Source: c:@S@GeomFill_BoundWithSurf@F@Reparametrize#d#d#b#b#d#d#b#
 // Source: c:@S@GeomFill_BoundWithSurf@F@Value#d#1
+// Source: c:@S@GeomFill_Boundary@F@DynamicType#1
 // Source: c:@S@GeomFill_Boundary@F@HasNormals#1
 // Source: c:@S@GeomFill_Boundary@F@Tol3d#1
 // Source: c:@S@GeomFill_Boundary@F@Tol3d#d#
 // Source: c:@S@GeomFill_Boundary@F@Tolang#1
 // Source: c:@S@GeomFill_Boundary@F@Tolang#d#
 // Source: c:@S@GeomFill_CircularBlendFunc@F@BarycentreOfSurf#1
+// Source: c:@S@GeomFill_CircularBlendFunc@F@DynamicType#1
 // Source: c:@S@GeomFill_CircularBlendFunc@F@GeomFill_CircularBlendFunc#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#S0_#S0_#d#b#
 // Source: c:@S@GeomFill_CircularBlendFunc@F@IsRational#1
 // Source: c:@S@GeomFill_CircularBlendFunc@F@MaximalSection#1
@@ -1109,14 +1211,20 @@
 // Source: c:@S@GeomFill_CircularBlendFunc@F@SetInterval#d#d#
 // Source: c:@S@GeomFill_CircularBlendFunc@F@SetTolerance#d#d#
 // Source: c:@S@GeomFill_ConstantBiNormal@F@Copy#1
+// Source: c:@S@GeomFill_ConstantBiNormal@F@DynamicType#1
 // Source: c:@S@GeomFill_ConstantBiNormal@F@IsConstant#1
 // Source: c:@S@GeomFill_ConstantBiNormal@F@IsOnlyBy3dCurve#1
 // Source: c:@S@GeomFill_ConstantBiNormal@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@GeomFill_ConstantBiNormal@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
+// Source: c:@S@GeomFill_CoonsAlgPatch@F@Bound#I#1
+// Source: c:@S@GeomFill_CoonsAlgPatch@F@Corner#I#1
+// Source: c:@S@GeomFill_CoonsAlgPatch@F@DynamicType#1
+// Source: c:@S@GeomFill_CoonsAlgPatch@F@Func#I#1
 // Source: c:@S@GeomFill_CoonsAlgPatch@F@GeomFill_CoonsAlgPatch#&1$@N@opencascade@S@handle>#$@S@GeomFill_Boundary#S0_#S0_#S0_#
 // Source: c:@S@GeomFill_CoonsAlgPatch@F@SetFunc#&1$@N@opencascade@S@handle>#$@S@Law_Function#S0_#
 // Source: c:@S@GeomFill_CoonsAlgPatch@F@Value#d#d#1
 // Source: c:@S@GeomFill_CorrectedFrenet@F@Copy#1
+// Source: c:@S@GeomFill_CorrectedFrenet@F@DynamicType#1
 // Source: c:@S@GeomFill_CorrectedFrenet@F@EvaluateBestMode#
 // Source: c:@S@GeomFill_CorrectedFrenet@F@GeomFill_CorrectedFrenet#
 // Source: c:@S@GeomFill_CorrectedFrenet@F@GeomFill_CorrectedFrenet#b#
@@ -1126,21 +1234,26 @@
 // Source: c:@S@GeomFill_CorrectedFrenet@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
 // Source: c:@S@GeomFill_CorrectedFrenet@F@SetInterval#d#d#
 // Source: c:@S@GeomFill_CurveAndTrihedron@F@Copy#1
+// Source: c:@S@GeomFill_CurveAndTrihedron@F@DynamicType#1
 // Source: c:@S@GeomFill_CurveAndTrihedron@F@GeomFill_CurveAndTrihedron#&1$@N@opencascade@S@handle>#$@S@GeomFill_TrihedronLaw#
+// Source: c:@S@GeomFill_CurveAndTrihedron@F@GetCurve#1
 // Source: c:@S@GeomFill_CurveAndTrihedron@F@GetMaximalNorm#
 // Source: c:@S@GeomFill_CurveAndTrihedron@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@GeomFill_CurveAndTrihedron@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
 // Source: c:@S@GeomFill_CurveAndTrihedron@F@SetInterval#d#d#
 // Source: c:@S@GeomFill_Darboux@F@Copy#1
+// Source: c:@S@GeomFill_Darboux@F@DynamicType#1
 // Source: c:@S@GeomFill_Darboux@F@GeomFill_Darboux#
 // Source: c:@S@GeomFill_Darboux@F@IsConstant#1
 // Source: c:@S@GeomFill_Darboux@F@IsOnlyBy3dCurve#1
 // Source: c:@S@GeomFill_Darboux@F@NbIntervals#$@E@GeomAbs_Shape#1
+// Source: c:@S@GeomFill_DegeneratedBound@F@DynamicType#1
 // Source: c:@S@GeomFill_DegeneratedBound@F@GeomFill_DegeneratedBound#&1$@S@gp_Pnt#d#d#d#d#
 // Source: c:@S@GeomFill_DegeneratedBound@F@IsDegenerated#1
 // Source: c:@S@GeomFill_DegeneratedBound@F@Reparametrize#d#d#b#b#d#d#b#
 // Source: c:@S@GeomFill_DegeneratedBound@F@Value#d#1
 // Source: c:@S@GeomFill_DiscreteTrihedron@F@Copy#1
+// Source: c:@S@GeomFill_DiscreteTrihedron@F@DynamicType#1
 // Source: c:@S@GeomFill_DiscreteTrihedron@F@GeomFill_DiscreteTrihedron#
 // Source: c:@S@GeomFill_DiscreteTrihedron@F@Init#
 // Source: c:@S@GeomFill_DiscreteTrihedron@F@IsConstant#1
@@ -1148,6 +1261,7 @@
 // Source: c:@S@GeomFill_DiscreteTrihedron@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@GeomFill_DiscreteTrihedron@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
 // Source: c:@S@GeomFill_DraftTrihedron@F@Copy#1
+// Source: c:@S@GeomFill_DraftTrihedron@F@DynamicType#1
 // Source: c:@S@GeomFill_DraftTrihedron@F@IsConstant#1
 // Source: c:@S@GeomFill_DraftTrihedron@F@IsOnlyBy3dCurve#1
 // Source: c:@S@GeomFill_DraftTrihedron@F@NbIntervals#$@E@GeomAbs_Shape#1
@@ -1155,6 +1269,7 @@
 // Source: c:@S@GeomFill_EvolvedSection@F@BSplineSurface#1
 // Source: c:@S@GeomFill_EvolvedSection@F@BarycentreOfSurf#1
 // Source: c:@S@GeomFill_EvolvedSection@F@ConstantSection#1
+// Source: c:@S@GeomFill_EvolvedSection@F@DynamicType#1
 // Source: c:@S@GeomFill_EvolvedSection@F@GeomFill_EvolvedSection#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@N@opencascade@S@handle>#$@S@Law_Function#
 // Source: c:@S@GeomFill_EvolvedSection@F@IsRational#1
 // Source: c:@S@GeomFill_EvolvedSection@F@IsUPeriodic#1
@@ -1163,9 +1278,11 @@
 // Source: c:@S@GeomFill_EvolvedSection@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@GeomFill_EvolvedSection@F@SetInterval#d#d#
 // Source: c:@S@GeomFill_Fixed@F@Copy#1
+// Source: c:@S@GeomFill_Fixed@F@DynamicType#1
 // Source: c:@S@GeomFill_Fixed@F@IsConstant#1
 // Source: c:@S@GeomFill_Fixed@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@GeomFill_Frenet@F@Copy#1
+// Source: c:@S@GeomFill_Frenet@F@DynamicType#1
 // Source: c:@S@GeomFill_Frenet@F@GeomFill_Frenet#
 // Source: c:@S@GeomFill_Frenet@F@Init#
 // Source: c:@S@GeomFill_Frenet@F@IsConstant#1
@@ -1173,6 +1290,7 @@
 // Source: c:@S@GeomFill_Frenet@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@GeomFill_Frenet@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
 // Source: c:@S@GeomFill_GuideTrihedronAC@F@Copy#1
+// Source: c:@S@GeomFill_GuideTrihedronAC@F@DynamicType#1
 // Source: c:@S@GeomFill_GuideTrihedronAC@F@GeomFill_GuideTrihedronAC#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
 // Source: c:@S@GeomFill_GuideTrihedronAC@F@Guide#1
 // Source: c:@S@GeomFill_GuideTrihedronAC@F@IsConstant#1
@@ -1182,6 +1300,7 @@
 // Source: c:@S@GeomFill_GuideTrihedronAC@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
 // Source: c:@S@GeomFill_GuideTrihedronAC@F@SetInterval#d#d#
 // Source: c:@S@GeomFill_GuideTrihedronPlan@F@Copy#1
+// Source: c:@S@GeomFill_GuideTrihedronPlan@F@DynamicType#1
 // Source: c:@S@GeomFill_GuideTrihedronPlan@F@ErrorStatus#1
 // Source: c:@S@GeomFill_GuideTrihedronPlan@F@GeomFill_GuideTrihedronPlan#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
 // Source: c:@S@GeomFill_GuideTrihedronPlan@F@Guide#1
@@ -1191,11 +1310,14 @@
 // Source: c:@S@GeomFill_GuideTrihedronPlan@F@Origine#d#d#
 // Source: c:@S@GeomFill_GuideTrihedronPlan@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
 // Source: c:@S@GeomFill_GuideTrihedronPlan@F@SetInterval#d#d#
+// Source: c:@S@GeomFill_Line@F@DynamicType#1
 // Source: c:@S@GeomFill_Line@F@GeomFill_Line#
 // Source: c:@S@GeomFill_Line@F@GeomFill_Line#I#
 // Source: c:@S@GeomFill_Line@F@NbPoints#1
 // Source: c:@S@GeomFill_Line@F@Point#I#1
 // Source: c:@S@GeomFill_LocationDraft@F@Copy#1
+// Source: c:@S@GeomFill_LocationDraft@F@DynamicType#1
+// Source: c:@S@GeomFill_LocationDraft@F@GetCurve#1
 // Source: c:@S@GeomFill_LocationDraft@F@GetMaximalNorm#
 // Source: c:@S@GeomFill_LocationDraft@F@HasFirstRestriction#1
 // Source: c:@S@GeomFill_LocationDraft@F@HasLastRestriction#1
@@ -1207,9 +1329,11 @@
 // Source: c:@S@GeomFill_LocationDraft@F@SetStopSurf#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#
 // Source: c:@S@GeomFill_LocationDraft@F@TraceNumber#1
 // Source: c:@S@GeomFill_LocationGuide@F@Copy#1
+// Source: c:@S@GeomFill_LocationGuide@F@DynamicType#1
 // Source: c:@S@GeomFill_LocationGuide@F@EraseRotation#
 // Source: c:@S@GeomFill_LocationGuide@F@ErrorStatus#1
 // Source: c:@S@GeomFill_LocationGuide@F@GeomFill_LocationGuide#&1$@N@opencascade@S@handle>#$@S@GeomFill_TrihedronWithGuide#
+// Source: c:@S@GeomFill_LocationGuide@F@GetCurve#1
 // Source: c:@S@GeomFill_LocationGuide@F@GetMaximalNorm#
 // Source: c:@S@GeomFill_LocationGuide@F@Guide#1
 // Source: c:@S@GeomFill_LocationGuide@F@HasFirstRestriction#1
@@ -1221,6 +1345,7 @@
 // Source: c:@S@GeomFill_LocationGuide@F@SetOrigine#d#d#
 // Source: c:@S@GeomFill_LocationGuide@F@SetTolerance#d#d#
 // Source: c:@S@GeomFill_LocationGuide@F@TraceNumber#1
+// Source: c:@S@GeomFill_LocationLaw@F@DynamicType#1
 // Source: c:@S@GeomFill_LocationLaw@F@ErrorStatus#1
 // Source: c:@S@GeomFill_LocationLaw@F@HasFirstRestriction#1
 // Source: c:@S@GeomFill_LocationLaw@F@HasLastRestriction#1
@@ -1232,6 +1357,7 @@
 // Source: c:@S@GeomFill_NSections@F@CirclSection#d#1
 // Source: c:@S@GeomFill_NSections@F@ComputeSurface#
 // Source: c:@S@GeomFill_NSections@F@ConstantSection#1
+// Source: c:@S@GeomFill_NSections@F@DynamicType#1
 // Source: c:@S@GeomFill_NSections@F@IsRational#1
 // Source: c:@S@GeomFill_NSections@F@IsUPeriodic#1
 // Source: c:@S@GeomFill_NSections@F@IsVPeriodic#1
@@ -1243,7 +1369,9 @@
 // Source: c:@S@GeomFill_SectionLaw@F@BarycentreOfSurf#1
 // Source: c:@S@GeomFill_SectionLaw@F@CirclSection#d#1
 // Source: c:@S@GeomFill_SectionLaw@F@ConstantSection#1
+// Source: c:@S@GeomFill_SectionLaw@F@DynamicType#1
 // Source: c:@S@GeomFill_SectionLaw@F@SetTolerance#d#d#
+// Source: c:@S@GeomFill_SimpleBound@F@DynamicType#1
 // Source: c:@S@GeomFill_SimpleBound@F@GeomFill_SimpleBound#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#d#d#
 // Source: c:@S@GeomFill_SimpleBound@F@IsDegenerated#1
 // Source: c:@S@GeomFill_SimpleBound@F@Reparametrize#d#d#b#b#d#d#b#
@@ -1260,6 +1388,7 @@
 // Source: c:@S@GeomFill_SnglrFunc@F@SetRatio#d#
 // Source: c:@S@GeomFill_SnglrFunc@F@ShallowCopy#1
 // Source: c:@S@GeomFill_SweepFunction@F@BarycentreOfSurf#1
+// Source: c:@S@GeomFill_SweepFunction@F@DynamicType#1
 // Source: c:@S@GeomFill_SweepFunction@F@GeomFill_SweepFunction#&1$@N@opencascade@S@handle>#$@S@GeomFill_SectionLaw#&1$@N@opencascade@S@handle>#$@S@GeomFill_LocationLaw#d#d#d#
 // Source: c:@S@GeomFill_SweepFunction@F@IsRational#1
 // Source: c:@S@GeomFill_SweepFunction@F@MaximalSection#1
@@ -1267,18 +1396,23 @@
 // Source: c:@S@GeomFill_SweepFunction@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@GeomFill_SweepFunction@F@SetInterval#d#d#
 // Source: c:@S@GeomFill_SweepFunction@F@SetTolerance#d#d#
+// Source: c:@S@GeomFill_TgtField@F@DynamicType#1
 // Source: c:@S@GeomFill_TgtField@F@IsScalable#1
 // Source: c:@S@GeomFill_TgtField@F@Scale#&1$@N@opencascade@S@handle>#$@S@Law_BSpline#
+// Source: c:@S@GeomFill_TgtOnCoons@F@DynamicType#1
 // Source: c:@S@GeomFill_TgtOnCoons@F@GeomFill_TgtOnCoons#&1$@N@opencascade@S@handle>#$@S@GeomFill_CoonsAlgPatch#I#
+// Source: c:@S@GeomFill_TrihedronLaw@F@DynamicType#1
 // Source: c:@S@GeomFill_TrihedronLaw@F@ErrorStatus#1
 // Source: c:@S@GeomFill_TrihedronLaw@F@IsConstant#1
 // Source: c:@S@GeomFill_TrihedronLaw@F@IsOnlyBy3dCurve#1
 // Source: c:@S@GeomFill_TrihedronLaw@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
 // Source: c:@S@GeomFill_TrihedronLaw@F@SetInterval#d#d#
 // Source: c:@S@GeomFill_TrihedronWithGuide@F@CurrentPointOnGuide#1
+// Source: c:@S@GeomFill_TrihedronWithGuide@F@DynamicType#1
 // Source: c:@S@GeomFill_UniformSection@F@BSplineSurface#1
 // Source: c:@S@GeomFill_UniformSection@F@BarycentreOfSurf#1
 // Source: c:@S@GeomFill_UniformSection@F@ConstantSection#1
+// Source: c:@S@GeomFill_UniformSection@F@DynamicType#1
 // Source: c:@S@GeomFill_UniformSection@F@GeomFill_UniformSection#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#d#
 // Source: c:@S@GeomFill_UniformSection@F@IsRational#1
 // Source: c:@S@GeomFill_UniformSection@F@IsUPeriodic#1
@@ -1288,6 +1422,7 @@
 // Source: c:@S@GeomFill_UniformSection@F@SetInterval#d#d#
 // Source: c:@S@GeomPlate_CurveConstraint@F@Curve2dOnSurf#1
 // Source: c:@S@GeomPlate_CurveConstraint@F@Curve3d#1
+// Source: c:@S@GeomPlate_CurveConstraint@F@DynamicType#1
 // Source: c:@S@GeomPlate_CurveConstraint@F@FirstParameter#1
 // Source: c:@S@GeomPlate_CurveConstraint@F@G0Criterion#d#1
 // Source: c:@S@GeomPlate_CurveConstraint@F@G1Criterion#d#1
@@ -1306,6 +1441,7 @@
 // Source: c:@S@GeomPlate_CurveConstraint@F@SetNbPoints#I#
 // Source: c:@S@GeomPlate_CurveConstraint@F@SetOrder#I#
 // Source: c:@S@GeomPlate_CurveConstraint@F@SetProjectedCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#d#d#
+// Source: c:@S@GeomPlate_PointConstraint@F@DynamicType#1
 // Source: c:@S@GeomPlate_PointConstraint@F@G0Criterion#1
 // Source: c:@S@GeomPlate_PointConstraint@F@G1Criterion#1
 // Source: c:@S@GeomPlate_PointConstraint@F@G2Criterion#1
@@ -1320,6 +1456,7 @@
 // Source: c:@S@GeomPlate_Surface@F@CallSurfinit#1
 // Source: c:@S@GeomPlate_Surface@F@Continuity#1
 // Source: c:@S@GeomPlate_Surface@F@Copy#1
+// Source: c:@S@GeomPlate_Surface@F@DynamicType#1
 // Source: c:@S@GeomPlate_Surface@F@EvalD0#d#d#1
 // Source: c:@S@GeomPlate_Surface@F@IsCNu#I#1
 // Source: c:@S@GeomPlate_Surface@F@IsCNv#I#1
@@ -1336,18 +1473,23 @@
 // Source: c:@S@GeomPlate_Surface@F@VPeriod#1
 // Source: c:@S@GeomPlate_Surface@F@VReverse#
 // Source: c:@S@GeomPlate_Surface@F@VReversedParameter#d#1
+// Source: c:@S@GeomTools_UndefinedTypeHandler@F@DynamicType#1
 // Source: c:@S@GeomTools_UndefinedTypeHandler@F@GeomTools_UndefinedTypeHandler#
 // Source: c:@S@Geom_Axis1Placement@F@Copy#1
+// Source: c:@S@Geom_Axis1Placement@F@DynamicType#1
 // Source: c:@S@Geom_Axis1Placement@F@Reverse#
 // Source: c:@S@Geom_Axis1Placement@F@Reversed#1
 // Source: c:@S@Geom_Axis2Placement@F@Copy#1
+// Source: c:@S@Geom_Axis2Placement@F@DynamicType#1
 // Source: c:@S@Geom_AxisPlacement@F@Angle#&1$@N@opencascade@S@handle>#$@S@Geom_AxisPlacement#1
+// Source: c:@S@Geom_AxisPlacement@F@DynamicType#1
 // Source: c:@S@Geom_AxisPlacement@F@Location#1
 // Source: c:@S@Geom_AxisPlacement@F@SetLocation#&1$@S@gp_Pnt#
 // Source: c:@S@Geom_BSplineCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_BSplineCurve@F@Continuity#1
 // Source: c:@S@Geom_BSplineCurve@F@Copy#1
 // Source: c:@S@Geom_BSplineCurve@F@Degree#1
+// Source: c:@S@Geom_BSplineCurve@F@DynamicType#1
 // Source: c:@S@Geom_BSplineCurve@F@EndPoint#1
 // Source: c:@S@Geom_BSplineCurve@F@EvalD0#d#1
 // Source: c:@S@Geom_BSplineCurve@F@FirstParameter#1
@@ -1391,6 +1533,7 @@
 // Source: c:@S@Geom_BSplineSurface@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_BSplineSurface@F@Continuity#1
 // Source: c:@S@Geom_BSplineSurface@F@Copy#1
+// Source: c:@S@Geom_BSplineSurface@F@DynamicType#1
 // Source: c:@S@Geom_BSplineSurface@F@EvalD0#d#d#1
 // Source: c:@S@Geom_BSplineSurface@F@ExchangeUV#
 // Source: c:@S@Geom_BSplineSurface@F@FirstUKnotIndex#1
@@ -1457,6 +1600,7 @@
 // Source: c:@S@Geom_BezierCurve@F@Continuity#1
 // Source: c:@S@Geom_BezierCurve@F@Copy#1
 // Source: c:@S@Geom_BezierCurve@F@Degree#1
+// Source: c:@S@Geom_BezierCurve@F@DynamicType#1
 // Source: c:@S@Geom_BezierCurve@F@EndPoint#1
 // Source: c:@S@Geom_BezierCurve@F@EvalD0#d#1
 // Source: c:@S@Geom_BezierCurve@F@FirstParameter#1
@@ -1484,6 +1628,7 @@
 // Source: c:@S@Geom_BezierSurface@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_BezierSurface@F@Continuity#1
 // Source: c:@S@Geom_BezierSurface@F@Copy#1
+// Source: c:@S@Geom_BezierSurface@F@DynamicType#1
 // Source: c:@S@Geom_BezierSurface@F@EvalD0#d#d#1
 // Source: c:@S@Geom_BezierSurface@F@ExchangeUV#
 // Source: c:@S@Geom_BezierSurface@F@HasEvalRepresentation#1
@@ -1513,7 +1658,10 @@
 // Source: c:@S@Geom_BezierSurface@F@VReverse#
 // Source: c:@S@Geom_BezierSurface@F@VReversedParameter#d#1
 // Source: c:@S@Geom_BezierSurface@F@Weight#I#I#1
+// Source: c:@S@Geom_BoundedCurve@F@DynamicType#1
+// Source: c:@S@Geom_BoundedSurface@F@DynamicType#1
 // Source: c:@S@Geom_CartesianPoint@F@Copy#1
+// Source: c:@S@Geom_CartesianPoint@F@DynamicType#1
 // Source: c:@S@Geom_CartesianPoint@F@Geom_CartesianPoint#&1$@S@gp_Pnt#
 // Source: c:@S@Geom_CartesianPoint@F@Geom_CartesianPoint#d#d#d#
 // Source: c:@S@Geom_CartesianPoint@F@Pnt#1
@@ -1526,6 +1674,7 @@
 // Source: c:@S@Geom_CartesianPoint@F@Y#1
 // Source: c:@S@Geom_CartesianPoint@F@Z#1
 // Source: c:@S@Geom_Circle@F@Copy#1
+// Source: c:@S@Geom_Circle@F@DynamicType#1
 // Source: c:@S@Geom_Circle@F@Eccentricity#1
 // Source: c:@S@Geom_Circle@F@EvalD0#d#1
 // Source: c:@S@Geom_Circle@F@FirstParameter#1
@@ -1536,11 +1685,14 @@
 // Source: c:@S@Geom_Circle@F@ReversedParameter#d#1
 // Source: c:@S@Geom_Circle@F@SetRadius#d#
 // Source: c:@S@Geom_Conic@F@Continuity#1
+// Source: c:@S@Geom_Conic@F@DynamicType#1
 // Source: c:@S@Geom_Conic@F@IsCN#I#1
+// Source: c:@S@Geom_Conic@F@Location#1
 // Source: c:@S@Geom_Conic@F@Reverse#
 // Source: c:@S@Geom_Conic@F@SetLocation#&1$@S@gp_Pnt#
 // Source: c:@S@Geom_ConicalSurface@F@Apex#1
 // Source: c:@S@Geom_ConicalSurface@F@Copy#1
+// Source: c:@S@Geom_ConicalSurface@F@DynamicType#1
 // Source: c:@S@Geom_ConicalSurface@F@EvalD0#d#d#1
 // Source: c:@S@Geom_ConicalSurface@F@IsUClosed#1
 // Source: c:@S@Geom_ConicalSurface@F@IsUPeriodic#1
@@ -1555,10 +1707,12 @@
 // Source: c:@S@Geom_ConicalSurface@F@VIso#d#1
 // Source: c:@S@Geom_ConicalSurface@F@VReverse#
 // Source: c:@S@Geom_ConicalSurface@F@VReversedParameter#d#1
+// Source: c:@S@Geom_Curve@F@DynamicType#1
 // Source: c:@S@Geom_Curve@F@Period#1
 // Source: c:@S@Geom_Curve@F@Reversed#1
 // Source: c:@S@Geom_Curve@F@Value#d#1
 // Source: c:@S@Geom_CylindricalSurface@F@Copy#1
+// Source: c:@S@Geom_CylindricalSurface@F@DynamicType#1
 // Source: c:@S@Geom_CylindricalSurface@F@EvalD0#d#d#1
 // Source: c:@S@Geom_CylindricalSurface@F@IsUClosed#1
 // Source: c:@S@Geom_CylindricalSurface@F@IsUPeriodic#1
@@ -1575,6 +1729,7 @@
 // Source: c:@S@Geom_Direction@F@CrossCross#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#S0_#
 // Source: c:@S@Geom_Direction@F@CrossCrossed#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#S0_#1
 // Source: c:@S@Geom_Direction@F@Crossed#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#1
+// Source: c:@S@Geom_Direction@F@DynamicType#1
 // Source: c:@S@Geom_Direction@F@Geom_Direction#d#d#d#
 // Source: c:@S@Geom_Direction@F@Magnitude#1
 // Source: c:@S@Geom_Direction@F@SetCoord#d#d#d#
@@ -1583,12 +1738,15 @@
 // Source: c:@S@Geom_Direction@F@SetZ#d#
 // Source: c:@S@Geom_Direction@F@SquareMagnitude#1
 // Source: c:@S@Geom_ElementarySurface@F@Continuity#1
+// Source: c:@S@Geom_ElementarySurface@F@DynamicType#1
 // Source: c:@S@Geom_ElementarySurface@F@IsCNu#I#1
 // Source: c:@S@Geom_ElementarySurface@F@IsCNv#I#1
+// Source: c:@S@Geom_ElementarySurface@F@Location#1
 // Source: c:@S@Geom_ElementarySurface@F@SetLocation#&1$@S@gp_Pnt#
 // Source: c:@S@Geom_ElementarySurface@F@UReverse#
 // Source: c:@S@Geom_ElementarySurface@F@VReverse#
 // Source: c:@S@Geom_Ellipse@F@Copy#1
+// Source: c:@S@Geom_Ellipse@F@DynamicType#1
 // Source: c:@S@Geom_Ellipse@F@Eccentricity#1
 // Source: c:@S@Geom_Ellipse@F@EvalD0#d#1
 // Source: c:@S@Geom_Ellipse@F@FirstParameter#1
@@ -1604,6 +1762,7 @@
 // Source: c:@S@Geom_Ellipse@F@ReversedParameter#d#1
 // Source: c:@S@Geom_Ellipse@F@SetMajorRadius#d#
 // Source: c:@S@Geom_Ellipse@F@SetMinorRadius#d#
+// Source: c:@S@Geom_Geometry@F@DynamicType#1
 // Source: c:@S@Geom_Geometry@F@Mirror#&1$@S@gp_Pnt#
 // Source: c:@S@Geom_Geometry@F@Mirrored#&1$@S@gp_Pnt#1
 // Source: c:@S@Geom_Geometry@F@Scale#&1$@S@gp_Pnt#d#
@@ -1611,6 +1770,7 @@
 // Source: c:@S@Geom_Geometry@F@Translate#&1$@S@gp_Pnt#S0_#
 // Source: c:@S@Geom_Geometry@F@Translated#&1$@S@gp_Pnt#S0_#1
 // Source: c:@S@Geom_Hyperbola@F@Copy#1
+// Source: c:@S@Geom_Hyperbola@F@DynamicType#1
 // Source: c:@S@Geom_Hyperbola@F@Eccentricity#1
 // Source: c:@S@Geom_Hyperbola@F@EvalD0#d#1
 // Source: c:@S@Geom_Hyperbola@F@FirstParameter#1
@@ -1628,6 +1788,7 @@
 // Source: c:@S@Geom_Hyperbola@F@SetMinorRadius#d#
 // Source: c:@S@Geom_Line@F@Continuity#1
 // Source: c:@S@Geom_Line@F@Copy#1
+// Source: c:@S@Geom_Line@F@DynamicType#1
 // Source: c:@S@Geom_Line@F@EvalD0#d#1
 // Source: c:@S@Geom_Line@F@FirstParameter#1
 // Source: c:@S@Geom_Line@F@IsCN#I#1
@@ -1641,6 +1802,7 @@
 // Source: c:@S@Geom_OffsetCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_OffsetCurve@F@Continuity#1
 // Source: c:@S@Geom_OffsetCurve@F@Copy#1
+// Source: c:@S@Geom_OffsetCurve@F@DynamicType#1
 // Source: c:@S@Geom_OffsetCurve@F@EvalD0#d#1
 // Source: c:@S@Geom_OffsetCurve@F@FirstParameter#1
 // Source: c:@S@Geom_OffsetCurve@F@GetBasisCurveContinuity#1
@@ -1655,9 +1817,11 @@
 // Source: c:@S@Geom_OffsetCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom_OffsetCurve@F@SetBasisCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#b#
 // Source: c:@S@Geom_OffsetCurve@F@SetOffsetValue#d#
+// Source: c:@S@Geom_OffsetSurface@F@BasisSurface#1
 // Source: c:@S@Geom_OffsetSurface@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_OffsetSurface@F@Continuity#1
 // Source: c:@S@Geom_OffsetSurface@F@Copy#1
+// Source: c:@S@Geom_OffsetSurface@F@DynamicType#1
 // Source: c:@S@Geom_OffsetSurface@F@EvalD0#d#d#1
 // Source: c:@S@Geom_OffsetSurface@F@Geom_OffsetSurface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#b#
 // Source: c:@S@Geom_OffsetSurface@F@GetBasisSurfContinuity#1
@@ -1681,6 +1845,7 @@
 // Source: c:@S@Geom_OffsetSurface@F@VReverse#
 // Source: c:@S@Geom_OffsetSurface@F@VReversedParameter#d#1
 // Source: c:@S@Geom_Parabola@F@Copy#1
+// Source: c:@S@Geom_Parabola@F@DynamicType#1
 // Source: c:@S@Geom_Parabola@F@Eccentricity#1
 // Source: c:@S@Geom_Parabola@F@EvalD0#d#1
 // Source: c:@S@Geom_Parabola@F@FirstParameter#1
@@ -1693,6 +1858,7 @@
 // Source: c:@S@Geom_Parabola@F@ReversedParameter#d#1
 // Source: c:@S@Geom_Parabola@F@SetFocal#d#
 // Source: c:@S@Geom_Plane@F@Copy#1
+// Source: c:@S@Geom_Plane@F@DynamicType#1
 // Source: c:@S@Geom_Plane@F@EvalD0#d#d#1
 // Source: c:@S@Geom_Plane@F@Geom_Plane#d#d#d#d#
 // Source: c:@S@Geom_Plane@F@IsUClosed#1
@@ -1706,10 +1872,12 @@
 // Source: c:@S@Geom_Plane@F@VReverse#
 // Source: c:@S@Geom_Plane@F@VReversedParameter#d#1
 // Source: c:@S@Geom_Point@F@Distance#&1$@N@opencascade@S@handle>#$@S@Geom_Point#1
+// Source: c:@S@Geom_Point@F@DynamicType#1
 // Source: c:@S@Geom_Point@F@SquareDistance#&1$@N@opencascade@S@handle>#$@S@Geom_Point#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@BasisSurface#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@Continuity#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@Copy#1
+// Source: c:@S@Geom_RectangularTrimmedSurface@F@DynamicType#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@EvalD0#d#d#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@Geom_RectangularTrimmedSurface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#b#b#
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@Geom_RectangularTrimmedSurface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#d#d#b#b#
@@ -1731,6 +1899,7 @@
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@VReversedParameter#d#1
 // Source: c:@S@Geom_SphericalSurface@F@Area#1
 // Source: c:@S@Geom_SphericalSurface@F@Copy#1
+// Source: c:@S@Geom_SphericalSurface@F@DynamicType#1
 // Source: c:@S@Geom_SphericalSurface@F@EvalD0#d#d#1
 // Source: c:@S@Geom_SphericalSurface@F@IsUClosed#1
 // Source: c:@S@Geom_SphericalSurface@F@IsUPeriodic#1
@@ -1743,6 +1912,7 @@
 // Source: c:@S@Geom_SphericalSurface@F@VIso#d#1
 // Source: c:@S@Geom_SphericalSurface@F@VReversedParameter#d#1
 // Source: c:@S@Geom_SphericalSurface@F@Volume#1
+// Source: c:@S@Geom_Surface@F@DynamicType#1
 // Source: c:@S@Geom_Surface@F@UPeriod#1
 // Source: c:@S@Geom_Surface@F@UReversed#1
 // Source: c:@S@Geom_Surface@F@VPeriod#1
@@ -1750,6 +1920,7 @@
 // Source: c:@S@Geom_Surface@F@Value#d#d#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@Copy#1
+// Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@DynamicType#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@EvalD0#d#d#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@HasEvalRepresentation#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@IsCNu#I#1
@@ -1767,6 +1938,7 @@
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@VReversedParameter#d#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@Copy#1
+// Source: c:@S@Geom_SurfaceOfRevolution@F@DynamicType#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@EvalD0#d#d#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@HasEvalRepresentation#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@IsCNu#I#1
@@ -1775,6 +1947,7 @@
 // Source: c:@S@Geom_SurfaceOfRevolution@F@IsUPeriodic#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@IsVClosed#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@IsVPeriodic#1
+// Source: c:@S@Geom_SurfaceOfRevolution@F@Location#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@SetBasisCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@SetLocation#&1$@S@gp_Pnt#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@UIso#d#1
@@ -1785,8 +1958,10 @@
 // Source: c:@S@Geom_SurfaceOfRevolution@F@VReversedParameter#d#1
 // Source: c:@S@Geom_SweptSurface@F@BasisCurve#1
 // Source: c:@S@Geom_SweptSurface@F@Continuity#1
+// Source: c:@S@Geom_SweptSurface@F@DynamicType#1
 // Source: c:@S@Geom_ToroidalSurface@F@Area#1
 // Source: c:@S@Geom_ToroidalSurface@F@Copy#1
+// Source: c:@S@Geom_ToroidalSurface@F@DynamicType#1
 // Source: c:@S@Geom_ToroidalSurface@F@EvalD0#d#d#1
 // Source: c:@S@Geom_ToroidalSurface@F@IsUClosed#1
 // Source: c:@S@Geom_ToroidalSurface@F@IsUPeriodic#1
@@ -1802,6 +1977,7 @@
 // Source: c:@S@Geom_ToroidalSurface@F@VReversedParameter#d#1
 // Source: c:@S@Geom_ToroidalSurface@F@Volume#1
 // Source: c:@S@Geom_Transformation@F@Copy#1
+// Source: c:@S@Geom_Transformation@F@DynamicType#1
 // Source: c:@S@Geom_Transformation@F@Form#1
 // Source: c:@S@Geom_Transformation@F@Geom_Transformation#
 // Source: c:@S@Geom_Transformation@F@Invert#
@@ -1820,6 +1996,7 @@
 // Source: c:@S@Geom_TrimmedCurve@F@BasisCurve#1
 // Source: c:@S@Geom_TrimmedCurve@F@Continuity#1
 // Source: c:@S@Geom_TrimmedCurve@F@Copy#1
+// Source: c:@S@Geom_TrimmedCurve@F@DynamicType#1
 // Source: c:@S@Geom_TrimmedCurve@F@EndPoint#1
 // Source: c:@S@Geom_TrimmedCurve@F@EvalD0#d#1
 // Source: c:@S@Geom_TrimmedCurve@F@FirstParameter#1
@@ -1837,6 +2014,7 @@
 // Source: c:@S@Geom_Vector@F@AngleWithRef#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#S0_#1
 // Source: c:@S@Geom_Vector@F@Dot#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#1
 // Source: c:@S@Geom_Vector@F@DotCross#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#S0_#1
+// Source: c:@S@Geom_Vector@F@DynamicType#1
 // Source: c:@S@Geom_Vector@F@Reverse#
 // Source: c:@S@Geom_Vector@F@Reversed#1
 // Source: c:@S@Geom_Vector@F@X#1
@@ -1851,6 +2029,7 @@
 // Source: c:@S@Geom_VectorWithMagnitude@F@Crossed#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#1
 // Source: c:@S@Geom_VectorWithMagnitude@F@Divide#d#
 // Source: c:@S@Geom_VectorWithMagnitude@F@Divided#d#1
+// Source: c:@S@Geom_VectorWithMagnitude@F@DynamicType#1
 // Source: c:@S@Geom_VectorWithMagnitude@F@Geom_VectorWithMagnitude#&1$@S@gp_Pnt#S0_#
 // Source: c:@S@Geom_VectorWithMagnitude@F@Geom_VectorWithMagnitude#d#d#d#
 // Source: c:@S@Geom_VectorWithMagnitude@F@Magnitude#1
@@ -1865,8 +2044,10 @@
 // Source: c:@S@Geom_VectorWithMagnitude@F@SquareMagnitude#1
 // Source: c:@S@Geom_VectorWithMagnitude@F@Subtract#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#
 // Source: c:@S@Geom_VectorWithMagnitude@F@Subtracted#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#1
+// Source: c:@S@GeometryTest_DrawableQualifiedCurve2d@F@DynamicType#1
 // Source: c:@S@Law_BSpFunc@F@Continuity#1
 // Source: c:@S@Law_BSpFunc@F@Curve#1
+// Source: c:@S@Law_BSpFunc@F@DynamicType#1
 // Source: c:@S@Law_BSpFunc@F@Law_BSpFunc#
 // Source: c:@S@Law_BSpFunc@F@Law_BSpFunc#&1$@N@opencascade@S@handle>#$@S@Law_BSpline#d#d#
 // Source: c:@S@Law_BSpFunc@F@NbIntervals#$@E@GeomAbs_Shape#1
@@ -1877,6 +2058,7 @@
 // Source: c:@S@Law_BSpline@F@Copy#1
 // Source: c:@S@Law_BSpline@F@DN#d#I#1
 // Source: c:@S@Law_BSpline@F@Degree#1
+// Source: c:@S@Law_BSpline@F@DynamicType#1
 // Source: c:@S@Law_BSpline@F@EndPoint#1
 // Source: c:@S@Law_BSpline@F@FirstParameter#1
 // Source: c:@S@Law_BSpline@F@FirstUKnotIndex#1
@@ -1915,6 +2097,7 @@
 // Source: c:@S@Law_BSpline@F@Value#d#1
 // Source: c:@S@Law_BSpline@F@Weight#I#1
 // Source: c:@S@Law_Composite@F@Continuity#1
+// Source: c:@S@Law_Composite@F@DynamicType#1
 // Source: c:@S@Law_Composite@F@IsPeriodic#1
 // Source: c:@S@Law_Composite@F@Law_Composite#
 // Source: c:@S@Law_Composite@F@Law_Composite#d#d#d#
@@ -1923,23 +2106,29 @@
 // Source: c:@S@Law_Composite@F@Trim#d#d#d#1
 // Source: c:@S@Law_Composite@F@Value#d#
 // Source: c:@S@Law_Constant@F@Continuity#1
+// Source: c:@S@Law_Constant@F@DynamicType#1
 // Source: c:@S@Law_Constant@F@Law_Constant#
 // Source: c:@S@Law_Constant@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@Law_Constant@F@Set#d#d#d#
 // Source: c:@S@Law_Constant@F@Trim#d#d#d#1
 // Source: c:@S@Law_Constant@F@Value#d#
+// Source: c:@S@Law_Function@F@DynamicType#1
+// Source: c:@S@Law_Interpol@F@DynamicType#1
 // Source: c:@S@Law_Interpol@F@Law_Interpol#
 // Source: c:@S@Law_Linear@F@Continuity#1
+// Source: c:@S@Law_Linear@F@DynamicType#1
 // Source: c:@S@Law_Linear@F@Law_Linear#
 // Source: c:@S@Law_Linear@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@Law_Linear@F@Set#d#d#d#d#
 // Source: c:@S@Law_Linear@F@Trim#d#d#d#1
 // Source: c:@S@Law_Linear@F@Value#d#
+// Source: c:@S@Law_S@F@DynamicType#1
 // Source: c:@S@Law_S@F@Law_S#
 // Source: c:@S@Law_S@F@Set#d#d#d#d#
 // Source: c:@S@Law_S@F@Set#d#d#d#d#d#d#
 // Source: c:@S@MAT2d_Circuit@F@Connexion#I#1
 // Source: c:@S@MAT2d_Circuit@F@ConnexionOn#I#1
+// Source: c:@S@MAT2d_Circuit@F@DynamicType#1
 // Source: c:@S@MAT2d_Circuit@F@LineLength#I#1
 // Source: c:@S@MAT2d_Circuit@F@MAT2d_Circuit#$@E@GeomAbs_JoinType#b#
 // Source: c:@S@MAT2d_Circuit@F@NumberOfItems#1
@@ -1947,6 +2136,7 @@
 // Source: c:@S@MAT2d_Connexion@F@Distance#1
 // Source: c:@S@MAT2d_Connexion@F@Distance#d#
 // Source: c:@S@MAT2d_Connexion@F@Dump#I#I#1
+// Source: c:@S@MAT2d_Connexion@F@DynamicType#1
 // Source: c:@S@MAT2d_Connexion@F@IndexFirstLine#1
 // Source: c:@S@MAT2d_Connexion@F@IndexFirstLine#I#
 // Source: c:@S@MAT2d_Connexion@F@IndexItemOnFirst#1
@@ -1962,6 +2152,7 @@
 // Source: c:@S@MAT2d_Connexion@F@ParameterOnSecond#1
 // Source: c:@S@MAT2d_Connexion@F@ParameterOnSecond#d#
 // Source: c:@S@MAT2d_Connexion@F@Reverse#1
+// Source: c:@S@MAT_Arc@F@DynamicType#1
 // Source: c:@S@MAT_Arc@F@FirstElement#1
 // Source: c:@S@MAT_Arc@F@FirstNode#1
 // Source: c:@S@MAT_Arc@F@GeomIndex#1
@@ -1981,6 +2172,7 @@
 // Source: c:@S@MAT_Arc@F@SetSecondElement#&1$@N@opencascade@S@handle>#$@S@MAT_BasicElt#
 // Source: c:@S@MAT_Arc@F@SetSecondNode#&1$@N@opencascade@S@handle>#$@S@MAT_Node#
 // Source: c:@S@MAT_Arc@F@TheOtherNode#&1$@N@opencascade@S@handle>#$@S@MAT_Node#1
+// Source: c:@S@MAT_BasicElt@F@DynamicType#1
 // Source: c:@S@MAT_BasicElt@F@EndArc#1
 // Source: c:@S@MAT_BasicElt@F@GeomIndex#1
 // Source: c:@S@MAT_BasicElt@F@Index#1
@@ -1996,6 +2188,7 @@
 // Source: c:@S@MAT_Bisector@F@DistIssuePoint#1
 // Source: c:@S@MAT_Bisector@F@DistIssuePoint#d#
 // Source: c:@S@MAT_Bisector@F@Dump#I#I#1
+// Source: c:@S@MAT_Bisector@F@DynamicType#1
 // Source: c:@S@MAT_Bisector@F@EndPoint#1
 // Source: c:@S@MAT_Bisector@F@EndPoint#I#
 // Source: c:@S@MAT_Bisector@F@FirstBisector#1
@@ -2023,6 +2216,7 @@
 // Source: c:@S@MAT_Edge@F@Distance#1
 // Source: c:@S@MAT_Edge@F@Distance#d#
 // Source: c:@S@MAT_Edge@F@Dump#I#I#1
+// Source: c:@S@MAT_Edge@F@DynamicType#1
 // Source: c:@S@MAT_Edge@F@EdgeNumber#1
 // Source: c:@S@MAT_Edge@F@EdgeNumber#I#
 // Source: c:@S@MAT_Edge@F@FirstBisector#&1$@N@opencascade@S@handle>#$@S@MAT_Bisector#
@@ -2037,6 +2231,7 @@
 // Source: c:@S@MAT_Graph@F@ChangeBasicElt#I#
 // Source: c:@S@MAT_Graph@F@CompactArcs#
 // Source: c:@S@MAT_Graph@F@CompactNodes#
+// Source: c:@S@MAT_Graph@F@DynamicType#1
 // Source: c:@S@MAT_Graph@F@MAT_Graph#
 // Source: c:@S@MAT_Graph@F@Node#I#1
 // Source: c:@S@MAT_Graph@F@NumberOfArcs#1
@@ -2049,6 +2244,7 @@
 // Source: c:@S@MAT_ListOfBisector@F@Current#&1$@N@opencascade@S@handle>#$@S@MAT_Bisector#1
 // Source: c:@S@MAT_ListOfBisector@F@Current#1
 // Source: c:@S@MAT_ListOfBisector@F@Dump#I#I#
+// Source: c:@S@MAT_ListOfBisector@F@DynamicType#1
 // Source: c:@S@MAT_ListOfBisector@F@First#
 // Source: c:@S@MAT_ListOfBisector@F@FirstItem#1
 // Source: c:@S@MAT_ListOfBisector@F@FrontAdd#&1$@N@opencascade@S@handle>#$@S@MAT_Bisector#
@@ -2074,6 +2270,7 @@
 // Source: c:@S@MAT_ListOfEdge@F@Current#&1$@N@opencascade@S@handle>#$@S@MAT_Edge#1
 // Source: c:@S@MAT_ListOfEdge@F@Current#1
 // Source: c:@S@MAT_ListOfEdge@F@Dump#I#I#
+// Source: c:@S@MAT_ListOfEdge@F@DynamicType#1
 // Source: c:@S@MAT_ListOfEdge@F@First#
 // Source: c:@S@MAT_ListOfEdge@F@FirstItem#1
 // Source: c:@S@MAT_ListOfEdge@F@FrontAdd#&1$@N@opencascade@S@handle>#$@S@MAT_Edge#
@@ -2095,6 +2292,7 @@
 // Source: c:@S@MAT_ListOfEdge@F@PreviousItem#1
 // Source: c:@S@MAT_ListOfEdge@F@Unlink#
 // Source: c:@S@MAT_Node@F@Distance#1
+// Source: c:@S@MAT_Node@F@DynamicType#1
 // Source: c:@S@MAT_Node@F@GeomIndex#1
 // Source: c:@S@MAT_Node@F@Index#1
 // Source: c:@S@MAT_Node@F@Infinite#1
@@ -2104,6 +2302,7 @@
 // Source: c:@S@MAT_Node@F@SetIndex#I#
 // Source: c:@S@MAT_Node@F@SetLinkedArc#&1$@N@opencascade@S@handle>#$@S@MAT_Arc#
 // Source: c:@S@MAT_TListNodeOfListOfBisector@F@Dummy#1
+// Source: c:@S@MAT_TListNodeOfListOfBisector@F@DynamicType#1
 // Source: c:@S@MAT_TListNodeOfListOfBisector@F@GetItem#1
 // Source: c:@S@MAT_TListNodeOfListOfBisector@F@MAT_TListNodeOfListOfBisector#
 // Source: c:@S@MAT_TListNodeOfListOfBisector@F@MAT_TListNodeOfListOfBisector#&1$@N@opencascade@S@handle>#$@S@MAT_Bisector#
@@ -2113,6 +2312,7 @@
 // Source: c:@S@MAT_TListNodeOfListOfBisector@F@Previous#1
 // Source: c:@S@MAT_TListNodeOfListOfBisector@F@SetItem#&1$@N@opencascade@S@handle>#$@S@MAT_Bisector#
 // Source: c:@S@MAT_TListNodeOfListOfEdge@F@Dummy#1
+// Source: c:@S@MAT_TListNodeOfListOfEdge@F@DynamicType#1
 // Source: c:@S@MAT_TListNodeOfListOfEdge@F@GetItem#1
 // Source: c:@S@MAT_TListNodeOfListOfEdge@F@MAT_TListNodeOfListOfEdge#
 // Source: c:@S@MAT_TListNodeOfListOfEdge@F@MAT_TListNodeOfListOfEdge#&1$@N@opencascade@S@handle>#$@S@MAT_Edge#
@@ -2122,12 +2322,14 @@
 // Source: c:@S@MAT_TListNodeOfListOfEdge@F@Previous#1
 // Source: c:@S@MAT_TListNodeOfListOfEdge@F@SetItem#&1$@N@opencascade@S@handle>#$@S@MAT_Edge#
 // Source: c:@S@MAT_Zone@F@ArcOnFrontier#I#1
+// Source: c:@S@MAT_Zone@F@DynamicType#1
 // Source: c:@S@MAT_Zone@F@Limited#1
 // Source: c:@S@MAT_Zone@F@MAT_Zone#
 // Source: c:@S@MAT_Zone@F@MAT_Zone#&1$@N@opencascade@S@handle>#$@S@MAT_BasicElt#
 // Source: c:@S@MAT_Zone@F@NoEmptyZone#1
 // Source: c:@S@MAT_Zone@F@NumberOfArcs#1
 // Source: c:@S@MAT_Zone@F@Perform#&1$@N@opencascade@S@handle>#$@S@MAT_BasicElt#
+// Source: c:@S@NLPlate_HGPPConstraint@F@DynamicType#1
 // Source: c:@S@NLPlate_HGPPConstraint@F@G0Criterion#1
 // Source: c:@S@NLPlate_HGPPConstraint@F@G1Criterion#1
 // Source: c:@S@NLPlate_HGPPConstraint@F@G2Criterion#1
@@ -2144,26 +2346,35 @@
 // Source: c:@S@NLPlate_HGPPConstraint@F@SetUVFreeSliding#b#
 // Source: c:@S@NLPlate_HGPPConstraint@F@UVFreeSliding#1
 // Source: c:@S@NLPlate_HPG0Constraint@F@ActiveOrder#1
+// Source: c:@S@NLPlate_HPG0Constraint@F@DynamicType#1
 // Source: c:@S@NLPlate_HPG0Constraint@F@IncrementalLoadAllowed#1
 // Source: c:@S@NLPlate_HPG0Constraint@F@IsG0#1
 // Source: c:@S@NLPlate_HPG0Constraint@F@SetIncrementalLoadAllowed#b#
 // Source: c:@S@NLPlate_HPG0Constraint@F@SetUVFreeSliding#b#
 // Source: c:@S@NLPlate_HPG0Constraint@F@UVFreeSliding#1
 // Source: c:@S@NLPlate_HPG0G1Constraint@F@ActiveOrder#1
+// Source: c:@S@NLPlate_HPG0G1Constraint@F@DynamicType#1
 // Source: c:@S@NLPlate_HPG0G1Constraint@F@Orientation#
 // Source: c:@S@NLPlate_HPG0G1Constraint@F@SetOrientation#I#
 // Source: c:@S@NLPlate_HPG0G2Constraint@F@ActiveOrder#1
+// Source: c:@S@NLPlate_HPG0G2Constraint@F@DynamicType#1
 // Source: c:@S@NLPlate_HPG0G3Constraint@F@ActiveOrder#1
+// Source: c:@S@NLPlate_HPG0G3Constraint@F@DynamicType#1
 // Source: c:@S@NLPlate_HPG1Constraint@F@ActiveOrder#1
+// Source: c:@S@NLPlate_HPG1Constraint@F@DynamicType#1
 // Source: c:@S@NLPlate_HPG1Constraint@F@IncrementalLoadAllowed#1
 // Source: c:@S@NLPlate_HPG1Constraint@F@IsG0#1
 // Source: c:@S@NLPlate_HPG1Constraint@F@Orientation#
 // Source: c:@S@NLPlate_HPG1Constraint@F@SetIncrementalLoadAllowed#b#
 // Source: c:@S@NLPlate_HPG1Constraint@F@SetOrientation#I#
 // Source: c:@S@NLPlate_HPG2Constraint@F@ActiveOrder#1
+// Source: c:@S@NLPlate_HPG2Constraint@F@DynamicType#1
 // Source: c:@S@NLPlate_HPG3Constraint@F@ActiveOrder#1
+// Source: c:@S@NLPlate_HPG3Constraint@F@DynamicType#1
 // Source: c:@S@ProjLib_CompProjectedCurve@F@Continuity#1
+// Source: c:@S@ProjLib_CompProjectedCurve@F@DynamicType#1
 // Source: c:@S@ProjLib_CompProjectedCurve@F@FirstParameter#1
+// Source: c:@S@ProjLib_CompProjectedCurve@F@GetCurve#1
 // Source: c:@S@ProjLib_CompProjectedCurve@F@GetProj2d#1
 // Source: c:@S@ProjLib_CompProjectedCurve@F@GetProj3d#1
 // Source: c:@S@ProjLib_CompProjectedCurve@F@GetResult2dC#I#1
@@ -2172,6 +2383,7 @@
 // Source: c:@S@ProjLib_CompProjectedCurve@F@GetResult3dApproxError#I#1
 // Source: c:@S@ProjLib_CompProjectedCurve@F@GetResult3dC#I#1
 // Source: c:@S@ProjLib_CompProjectedCurve@F@GetResult3dP#I#1
+// Source: c:@S@ProjLib_CompProjectedCurve@F@GetSurface#1
 // Source: c:@S@ProjLib_CompProjectedCurve@F@GetType#1
 // Source: c:@S@ProjLib_CompProjectedCurve@F@Init#
 // Source: c:@S@ProjLib_CompProjectedCurve@F@LastParameter#1
@@ -2200,6 +2412,8 @@
 // Source: c:@S@ProjLib_ProjectOnPlane@F@Degree#1
 // Source: c:@S@ProjLib_ProjectOnPlane@F@EvalD0#d#1
 // Source: c:@S@ProjLib_ProjectOnPlane@F@FirstParameter#1
+// Source: c:@S@ProjLib_ProjectOnPlane@F@GetCurve#1
+// Source: c:@S@ProjLib_ProjectOnPlane@F@GetResult#1
 // Source: c:@S@ProjLib_ProjectOnPlane@F@GetType#1
 // Source: c:@S@ProjLib_ProjectOnPlane@F@IsClosed#1
 // Source: c:@S@ProjLib_ProjectOnPlane@F@IsPeriodic#1
@@ -2218,7 +2432,10 @@
 // Source: c:@S@ProjLib_ProjectedCurve@F@Bezier#1
 // Source: c:@S@ProjLib_ProjectedCurve@F@Continuity#1
 // Source: c:@S@ProjLib_ProjectedCurve@F@Degree#1
+// Source: c:@S@ProjLib_ProjectedCurve@F@DynamicType#1
 // Source: c:@S@ProjLib_ProjectedCurve@F@FirstParameter#1
+// Source: c:@S@ProjLib_ProjectedCurve@F@GetCurve#1
+// Source: c:@S@ProjLib_ProjectedCurve@F@GetSurface#1
 // Source: c:@S@ProjLib_ProjectedCurve@F@GetTolerance#1
 // Source: c:@S@ProjLib_ProjectedCurve@F@GetType#1
 // Source: c:@S@ProjLib_ProjectedCurve@F@IsClosed#1
@@ -2289,6 +2506,14 @@ public sealed class Adaptor2dCurve2d : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Adaptor2dCurve2dMethodDegree0(handle, out int resultValue), "occtsharp_generated_adaptor2d_curve2d_method_degree_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Adaptor2d_Curve2d::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Adaptor2dCurve2dMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_adaptor2d_curve2d_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_adaptor2d_curve2d_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Adaptor2d_Curve2d::FirstParameter.</summary>
@@ -2509,6 +2734,14 @@ public sealed class Adaptor2dLine2d : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Adaptor2dLine2dMethodDegree0(handle, out int resultValue), "occtsharp_generated_adaptor2d_line2d_method_degree_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Adaptor2d_Line2d::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Adaptor2dLine2dMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_adaptor2d_line2d_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_adaptor2d_line2d_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Adaptor2d_Line2d::FirstParameter.</summary>
@@ -2739,12 +2972,28 @@ public sealed class Adaptor2dOffsetCurve : IDisposable
         return (GeomAbsShape)resultValue;
     }
 
+    /// <summary>Invokes OCCT Adaptor2d_OffsetCurve::Curve.</summary>
+    public Adaptor2dCurve2d? Curve()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Adaptor2dOffsetCurveMethodCurve0(handle, out nint handleValue), "occtsharp_generated_adaptor2d_offset_curve_method_curve_0");
+        return global::OcctSharp.Adaptor2dCurve2d.FromNative(handleValue, "occtsharp_generated_adaptor2d_offset_curve_method_curve_0");
+    }
+
     /// <summary>Invokes OCCT Adaptor2d_OffsetCurve::Degree.</summary>
     public int Degree()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Adaptor2dOffsetCurveMethodDegree0(handle, out int resultValue), "occtsharp_generated_adaptor2d_offset_curve_method_degree_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Adaptor2d_OffsetCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Adaptor2dOffsetCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_adaptor2d_offset_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_adaptor2d_offset_curve_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Adaptor2d_OffsetCurve::FirstParameter.</summary>
@@ -2994,6 +3243,14 @@ public sealed class Adaptor3dCurve : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Adaptor3dCurveMethodDegree0(handle, out int resultValue), "occtsharp_generated_adaptor3d_curve_method_degree_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Adaptor3d_Curve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Adaptor3dCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_adaptor3d_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_adaptor3d_curve_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Adaptor3d_Curve::EvalD0.</summary>
@@ -3248,6 +3505,14 @@ public sealed class Adaptor3dCurveOnSurface : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Adaptor3d_CurveOnSurface::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Adaptor3dCurveOnSurfaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_adaptor3d_curve_on_surface_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_adaptor3d_curve_on_surface_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Adaptor3d_CurveOnSurface::EvalD0.</summary>
     public Point3d EvalD0(double theU)
     {
@@ -3262,6 +3527,22 @@ public sealed class Adaptor3dCurveOnSurface : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Adaptor3dCurveOnSurfaceMethodFirstParameter0(handle, out double resultValue), "occtsharp_generated_adaptor3d_curve_on_surface_method_first_parameter_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Adaptor3d_CurveOnSurface::GetCurve.</summary>
+    public Adaptor2dCurve2d? GetCurve()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Adaptor3dCurveOnSurfaceMethodGetCurve0(handle, out nint handleValue), "occtsharp_generated_adaptor3d_curve_on_surface_method_get_curve_0");
+        return global::OcctSharp.Adaptor2dCurve2d.FromNative(handleValue, "occtsharp_generated_adaptor3d_curve_on_surface_method_get_curve_0");
+    }
+
+    /// <summary>Invokes OCCT Adaptor3d_CurveOnSurface::GetSurface.</summary>
+    public Adaptor3dSurface? GetSurface()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Adaptor3dCurveOnSurfaceMethodGetSurface0(handle, out nint handleValue), "occtsharp_generated_adaptor3d_curve_on_surface_method_get_surface_0");
+        return global::OcctSharp.Adaptor3dSurface.FromNative(handleValue, "occtsharp_generated_adaptor3d_curve_on_surface_method_get_surface_0");
     }
 
     /// <summary>Invokes OCCT Adaptor3d_CurveOnSurface::GetType.</summary>
@@ -3457,6 +3738,14 @@ public sealed class Adaptor3dHVertex : IDisposable
         handle = CreateHandle(nativeHandle, "Adaptor3dHVertexCreate0");
     }
 
+    /// <summary>Invokes OCCT Adaptor3d_HVertex::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Adaptor3dHVertexMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_adaptor3d_hvertex_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_adaptor3d_hvertex_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Adaptor3d_HVertex::IsSame.</summary>
     public bool IsSame(Adaptor3dHVertex? other)
     {
@@ -3621,6 +3910,14 @@ public sealed class Adaptor3dIsoCurve : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Adaptor3d_IsoCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Adaptor3dIsoCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_adaptor3d_iso_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_adaptor3d_iso_curve_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Adaptor3d_IsoCurve::EvalD0.</summary>
     public Point3d EvalD0(double theU)
     {
@@ -3762,6 +4059,14 @@ public sealed class Adaptor3dIsoCurve : IDisposable
         return global::OcctSharp.Adaptor3dCurve.FromNative(handleValue, "occtsharp_generated_adaptor3d_iso_curve_method_shallow_copy_0");
     }
 
+    /// <summary>Invokes OCCT Adaptor3d_IsoCurve::Surface.</summary>
+    public Adaptor3dSurface? Surface()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Adaptor3dIsoCurveMethodSurface0(handle, out nint handleValue), "occtsharp_generated_adaptor3d_iso_curve_method_surface_0");
+        return global::OcctSharp.Adaptor3dSurface.FromNative(handleValue, "occtsharp_generated_adaptor3d_iso_curve_method_surface_0");
+    }
+
     /// <summary>Invokes OCCT Adaptor3d_IsoCurve::Trim.</summary>
     public Adaptor3dCurve? Trim(double first, double last, double tol)
     {
@@ -3868,6 +4173,14 @@ public sealed class Adaptor3dSurface : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Adaptor3dSurfaceMethodBSpline0(handle, out nint handleValue), "occtsharp_generated_adaptor3d_surface_method_bspline_0");
         return global::OcctSharp.GeomBSplineSurface.FromNative(handleValue, "occtsharp_generated_adaptor3d_surface_method_bspline_0");
+    }
+
+    /// <summary>Invokes OCCT Adaptor3d_Surface::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Adaptor3dSurfaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_adaptor3d_surface_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_adaptor3d_surface_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Adaptor3d_Surface::EvalD0.</summary>
@@ -4224,6 +4537,14 @@ public sealed class Adaptor3dTopolTool : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT Adaptor3d_TopolTool::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Adaptor3dTopolToolMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_adaptor3d_topol_tool_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_adaptor3d_topol_tool_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Adaptor3d_TopolTool::Has3d.</summary>
     public bool Has3d()
     {
@@ -4514,6 +4835,14 @@ public sealed class AdvApp2VarIso : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT AdvApp2Var_Iso::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.AdvApp2VarIsoMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_adv_app2_var_iso_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_adv_app2_var_iso_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT AdvApp2Var_Iso::HasResult.</summary>
     public bool HasResult()
     {
@@ -4730,12 +5059,28 @@ public sealed class AdvApp2VarNode : IDisposable
         handle = CreateHandle(nativeHandle, "AdvApp2VarNodeCreate1");
     }
 
+    /// <summary>Invokes OCCT AdvApp2Var_Node::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.AdvApp2VarNodeMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_adv_app2_var_node_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_adv_app2_var_node_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT AdvApp2Var_Node::Error.</summary>
     public double Error(int iu, int iv)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.AdvApp2VarNodeMethodError0(handle, iu, iv, out double resultValue), "occtsharp_generated_adv_app2_var_node_method_error_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT AdvApp2Var_Node::Point.</summary>
+    public Point3d Point(int iu, int iv)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.AdvApp2VarNodeMethodPoint0(handle, iu, iv, out Point3dRaw resultValue), "occtsharp_generated_adv_app2_var_node_method_point_0");
+        return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
     /// <summary>Invokes OCCT AdvApp2Var_Node::SetCoord.</summary>
@@ -4887,6 +5232,14 @@ public sealed class AdvApp2VarPatch : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.AdvApp2VarPatchMethodCutSense0(handle, out int resultValue), "occtsharp_generated_adv_app2_var_patch_method_cut_sense_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT AdvApp2Var_Patch::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.AdvApp2VarPatchMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_adv_app2_var_patch_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_adv_app2_var_patch_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT AdvApp2Var_Patch::HasResult.</summary>
@@ -5066,6 +5419,14 @@ public sealed class AppDefLinearCriteria : IDisposable
 
     private AppDefLinearCriteria(AppDefLinearCriteriaHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT AppDef_LinearCriteria::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.AppDefLinearCriteriaMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_app_def_linear_criteria_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_app_def_linear_criteria_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT AppDef_LinearCriteria::SetCurve.</summary>
     public void SetCurve(FEmToolCurve? c)
     {
@@ -5163,6 +5524,14 @@ public sealed class AppDefSmoothCriterion : IDisposable
         return global::OcctSharp.FEmToolCurve.FromNative(handleValue, "occtsharp_generated_app_def_smooth_criterion_method_curve_0");
     }
 
+    /// <summary>Invokes OCCT AppDef_SmoothCriterion::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.AppDefSmoothCriterionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_app_def_smooth_criterion_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_app_def_smooth_criterion_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -5253,6 +5622,14 @@ public sealed class ApproxCurvlinFunc : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.ApproxCurvlinFuncCreate2(c is null ? nint.Zero : c.NativeHandle.DangerousGetHandle(), tol, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ApproxCurvlinFuncCreate2");
+    }
+
+    /// <summary>Invokes OCCT Approx_CurvlinFunc::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.ApproxCurvlinFuncMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_approx_curvlin_func_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_approx_curvlin_func_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Approx_CurvlinFunc::FirstParameter.</summary>
@@ -5392,6 +5769,14 @@ public sealed class ApproxSweepFunction : IDisposable
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
+    /// <summary>Invokes OCCT Approx_SweepFunction::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.ApproxSweepFunctionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_approx_sweep_function_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_approx_sweep_function_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Approx_SweepFunction::MaximalSection.</summary>
     public double MaximalSection()
     {
@@ -5468,6 +5853,14 @@ public sealed class BSplCLibCache : IDisposable
 
     private BSplCLibCache(BSplCLibCacheHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT BSplCLib_Cache::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.BSplCLibCacheMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_bspl_clib_cache_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_bspl_clib_cache_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT BSplCLib_Cache::IsCacheValid.</summary>
     public bool IsCacheValid(double theParameter)
     {
@@ -5543,6 +5936,14 @@ public sealed class BSplSLibCache : IDisposable
     private readonly BSplSLibCacheHandle handle;
 
     private BSplSLibCache(BSplSLibCacheHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT BSplSLib_Cache::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.BSplSLibCacheMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_bspl_slib_cache_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_bspl_slib_cache_method_dynamic_type_0");
+    }
 
     /// <summary>Invokes OCCT BSplSLib_Cache::IsCacheValid.</summary>
     public bool IsCacheValid(double theParameterU, double theParameterV)
@@ -5658,6 +6059,14 @@ public sealed class BiTgteCurveOnEdge : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.BiTgteCurveOnEdgeMethodDegree0(handle, out int resultValue), "occtsharp_generated_bi_tgte_curve_on_edge_method_degree_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT BiTgte_CurveOnEdge::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.BiTgteCurveOnEdgeMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_bi_tgte_curve_on_edge_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_bi_tgte_curve_on_edge_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT BiTgte_CurveOnEdge::EvalD0.</summary>
@@ -5880,6 +6289,14 @@ public sealed class BiTgteCurveOnVertex : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT BiTgte_CurveOnVertex::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.BiTgteCurveOnVertexMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_bi_tgte_curve_on_vertex_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_bi_tgte_curve_on_vertex_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT BiTgte_CurveOnVertex::EvalD0.</summary>
     public Point3d EvalD0(double theU)
     {
@@ -6081,6 +6498,14 @@ public sealed class BisectorBisecAna : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.BisectorBisecAnaMethodDump0(handle, deep, offset), "occtsharp_generated_bisector_bisec_ana_method_dump_0");
+    }
+
+    /// <summary>Invokes OCCT Bisector_BisecAna::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.BisectorBisecAnaMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_bisector_bisec_ana_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_bisector_bisec_ana_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Bisector_BisecAna::FirstParameter.</summary>
@@ -6338,6 +6763,14 @@ public sealed class BisectorBisecCC : IDisposable
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.BisectorBisecCCMethodDump0(handle, deep, offset), "occtsharp_generated_bisector_bisec_cc_method_dump_0");
     }
 
+    /// <summary>Invokes OCCT Bisector_BisecCC::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.BisectorBisecCCMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_bisector_bisec_cc_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_bisector_bisec_cc_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Bisector_BisecCC::FirstParameter.</summary>
     public double FirstParameter()
     {
@@ -6572,6 +7005,14 @@ public sealed class BisectorBisecPC : IDisposable
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.BisectorBisecPCMethodDump0(handle, deep, offset), "occtsharp_generated_bisector_bisec_pc_method_dump_0");
     }
 
+    /// <summary>Invokes OCCT Bisector_BisecPC::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.BisectorBisecPCMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_bisector_bisec_pc_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_bisector_bisec_pc_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Bisector_BisecPC::FirstParameter.</summary>
     public double FirstParameter()
     {
@@ -6767,6 +7208,14 @@ public sealed class BisectorCurve : IDisposable
 
     private BisectorCurve(BisectorCurveHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT Bisector_Curve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.BisectorCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_bisector_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_bisector_curve_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -6857,6 +7306,14 @@ public sealed class ExtremaExtPExtS : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.ExtremaExtPExtSCreate2(new Point3dRaw(p.X, p.Y, p.Z), s is null ? nint.Zero : s.NativeHandle.DangerousGetHandle(), umin, usup, vmin, vsup, tolU, tolV, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExtremaExtPExtSCreate2");
+    }
+
+    /// <summary>Invokes OCCT Extrema_ExtPExtS::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.ExtremaExtPExtSMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_extrema_ext_pext_s_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_extrema_ext_pext_s_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Extrema_ExtPExtS::Initialize.</summary>
@@ -6989,6 +7446,14 @@ public sealed class ExtremaExtPRevS : IDisposable
         handle = CreateHandle(nativeHandle, "ExtremaExtPRevSCreate2");
     }
 
+    /// <summary>Invokes OCCT Extrema_ExtPRevS::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.ExtremaExtPRevSMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_extrema_ext_prev_s_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_extrema_ext_prev_s_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Extrema_ExtPRevS::Initialize.</summary>
     public void Initialize(GeomAdaptorSurfaceOfRevolution? s, double umin, double usup, double vmin, double vsup, double tolU, double tolV)
     {
@@ -7111,6 +7576,14 @@ public sealed class FEmToolCurve : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT FEmTool_Curve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.FEmToolCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_fem_tool_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_fem_tool_curve_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT FEmTool_Curve::NbElements.</summary>
     public int NbElements()
     {
@@ -7194,6 +7667,14 @@ public sealed class FEmToolElementaryCriterion : IDisposable
 
     private FEmToolElementaryCriterion(FEmToolElementaryCriterionHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT FEmTool_ElementaryCriterion::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.FEmToolElementaryCriterionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_fem_tool_elementary_criterion_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_fem_tool_elementary_criterion_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT FEmTool_ElementaryCriterion::Set.</summary>
     public void Set(double firstKnot, double lastKnot)
     {
@@ -7275,6 +7756,14 @@ public sealed class FEmToolLinearFlexion : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.FEmToolLinearFlexionCreate0(workDegree, (int)constraintOrder, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "FEmToolLinearFlexionCreate0");
+    }
+
+    /// <summary>Invokes OCCT FEmTool_LinearFlexion::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.FEmToolLinearFlexionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_fem_tool_linear_flexion_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_fem_tool_linear_flexion_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT FEmTool_LinearFlexion::Value.</summary>
@@ -7361,6 +7850,14 @@ public sealed class FEmToolLinearJerk : IDisposable
         handle = CreateHandle(nativeHandle, "FEmToolLinearJerkCreate0");
     }
 
+    /// <summary>Invokes OCCT FEmTool_LinearJerk::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.FEmToolLinearJerkMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_fem_tool_linear_jerk_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_fem_tool_linear_jerk_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT FEmTool_LinearJerk::Value.</summary>
     public double Value()
     {
@@ -7443,6 +7940,14 @@ public sealed class FEmToolLinearTension : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.FEmToolLinearTensionCreate0(workDegree, (int)constraintOrder, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "FEmToolLinearTensionCreate0");
+    }
+
+    /// <summary>Invokes OCCT FEmTool_LinearTension::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.FEmToolLinearTensionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_fem_tool_linear_tension_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_fem_tool_linear_tension_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT FEmTool_LinearTension::Value.</summary>
@@ -7535,6 +8040,14 @@ public sealed class FEmToolProfileMatrix : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.FEmToolProfileMatrixMethodDecompose0(handle, out int resultValue), "occtsharp_generated_fem_tool_profile_matrix_method_decompose_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT FEmTool_ProfileMatrix::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.FEmToolProfileMatrixMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_fem_tool_profile_matrix_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_fem_tool_profile_matrix_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT FEmTool_ProfileMatrix::Init.</summary>
@@ -7650,6 +8163,14 @@ public sealed class FEmToolSparseMatrix : IDisposable
 
     private FEmToolSparseMatrix(FEmToolSparseMatrixHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT FEmTool_SparseMatrix::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.FEmToolSparseMatrixMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_fem_tool_sparse_matrix_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_fem_tool_sparse_matrix_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -7724,6 +8245,14 @@ public sealed class GccIntBCirc : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GccIntBCircMethodArcType0(handle, out int resultValue), "occtsharp_generated_gcc_int_bcirc_method_arc_type_0");
         return (GccIntIType)resultValue;
+    }
+
+    /// <summary>Invokes OCCT GccInt_BCirc::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GccIntBCircMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_gcc_int_bcirc_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_gcc_int_bcirc_method_dynamic_type_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -7802,6 +8331,14 @@ public sealed class GccIntBElips : IDisposable
         return (GccIntIType)resultValue;
     }
 
+    /// <summary>Invokes OCCT GccInt_BElips::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GccIntBElipsMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_gcc_int_belips_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_gcc_int_belips_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -7876,6 +8413,14 @@ public sealed class GccIntBHyper : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GccIntBHyperMethodArcType0(handle, out int resultValue), "occtsharp_generated_gcc_int_bhyper_method_arc_type_0");
         return (GccIntIType)resultValue;
+    }
+
+    /// <summary>Invokes OCCT GccInt_BHyper::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GccIntBHyperMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_gcc_int_bhyper_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_gcc_int_bhyper_method_dynamic_type_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -7954,6 +8499,14 @@ public sealed class GccIntBLine : IDisposable
         return (GccIntIType)resultValue;
     }
 
+    /// <summary>Invokes OCCT GccInt_BLine::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GccIntBLineMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_gcc_int_bline_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_gcc_int_bline_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -8028,6 +8581,14 @@ public sealed class GccIntBParab : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GccIntBParabMethodArcType0(handle, out int resultValue), "occtsharp_generated_gcc_int_bparab_method_arc_type_0");
         return (GccIntIType)resultValue;
+    }
+
+    /// <summary>Invokes OCCT GccInt_BParab::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GccIntBParabMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_gcc_int_bparab_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_gcc_int_bparab_method_dynamic_type_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -8106,6 +8667,14 @@ public sealed class GccIntBPoint : IDisposable
         return (GccIntIType)resultValue;
     }
 
+    /// <summary>Invokes OCCT GccInt_BPoint::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GccIntBPointMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_gcc_int_bpoint_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_gcc_int_bpoint_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -8173,6 +8742,14 @@ public sealed class GccIntBisec : IDisposable
     private readonly GccIntBisecHandle handle;
 
     private GccIntBisec(GccIntBisecHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT GccInt_Bisec::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GccIntBisecMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_gcc_int_bisec_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_gcc_int_bisec_method_dynamic_type_0");
+    }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
@@ -8290,12 +8867,28 @@ public sealed class Geom2dAdaptorCurve : IDisposable
         return (GeomAbsShape)resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom2dAdaptor_Curve::Curve.</summary>
+    public Geom2dCurve? Curve()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dAdaptorCurveMethodCurve0(handle, out nint handleValue), "occtsharp_generated_geom2d_adaptor_curve_method_curve_0");
+        return global::OcctSharp.Geom2dCurve.FromNative(handleValue, "occtsharp_generated_geom2d_adaptor_curve_method_curve_0");
+    }
+
     /// <summary>Invokes OCCT Geom2dAdaptor_Curve::Degree.</summary>
     public int Degree()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dAdaptorCurveMethodDegree0(handle, out int resultValue), "occtsharp_generated_geom2d_adaptor_curve_method_degree_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Geom2dAdaptor_Curve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dAdaptorCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom2d_adaptor_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_adaptor_curve_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom2dAdaptor_Curve::FirstParameter.</summary>
@@ -8547,6 +9140,14 @@ public sealed class Geom2dEvalAHTBezierCurve : IDisposable
         return global::OcctSharp.Geom2dGeometry.FromNative(handleValue, "occtsharp_generated_geom2d_eval_ahtbezier_curve_method_copy_0");
     }
 
+    /// <summary>Invokes OCCT Geom2dEval_AHTBezierCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dEvalAHTBezierCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom2d_eval_ahtbezier_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_eval_ahtbezier_curve_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Geom2dEval_AHTBezierCurve::FirstParameter.</summary>
     public double FirstParameter()
     {
@@ -8700,6 +9301,14 @@ public sealed class Geom2dEvalArchimedeanSpiralCurve : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dEvalArchimedeanSpiralCurveMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom2d_eval_archimedean_spiral_curve_method_copy_0");
         return global::OcctSharp.Geom2dGeometry.FromNative(handleValue, "occtsharp_generated_geom2d_eval_archimedean_spiral_curve_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT Geom2dEval_ArchimedeanSpiralCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dEvalArchimedeanSpiralCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom2d_eval_archimedean_spiral_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_eval_archimedean_spiral_curve_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom2dEval_ArchimedeanSpiralCurve::FirstParameter.</summary>
@@ -8857,6 +9466,14 @@ public sealed class Geom2dEvalCircleInvoluteCurve : IDisposable
         return global::OcctSharp.Geom2dGeometry.FromNative(handleValue, "occtsharp_generated_geom2d_eval_circle_involute_curve_method_copy_0");
     }
 
+    /// <summary>Invokes OCCT Geom2dEval_CircleInvoluteCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dEvalCircleInvoluteCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom2d_eval_circle_involute_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_eval_circle_involute_curve_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Geom2dEval_CircleInvoluteCurve::FirstParameter.</summary>
     public double FirstParameter()
     {
@@ -9002,6 +9619,14 @@ public sealed class Geom2dEvalLogarithmicSpiralCurve : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dEvalLogarithmicSpiralCurveMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom2d_eval_logarithmic_spiral_curve_method_copy_0");
         return global::OcctSharp.Geom2dGeometry.FromNative(handleValue, "occtsharp_generated_geom2d_eval_logarithmic_spiral_curve_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT Geom2dEval_LogarithmicSpiralCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dEvalLogarithmicSpiralCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom2d_eval_logarithmic_spiral_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_eval_logarithmic_spiral_curve_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom2dEval_LogarithmicSpiralCurve::FirstParameter.</summary>
@@ -9235,6 +9860,14 @@ public sealed class Geom2dEvalSineWaveCurve : IDisposable
         return global::OcctSharp.Geom2dGeometry.FromNative(handleValue, "occtsharp_generated_geom2d_eval_sine_wave_curve_method_copy_0");
     }
 
+    /// <summary>Invokes OCCT Geom2dEval_SineWaveCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dEvalSineWaveCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom2d_eval_sine_wave_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_eval_sine_wave_curve_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Geom2dEval_SineWaveCurve::FirstParameter.</summary>
     public double FirstParameter()
     {
@@ -9396,6 +10029,14 @@ public sealed class Geom2dEvalTBezierCurve : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dEvalTBezierCurveMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom2d_eval_tbezier_curve_method_copy_0");
         return global::OcctSharp.Geom2dGeometry.FromNative(handleValue, "occtsharp_generated_geom2d_eval_tbezier_curve_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT Geom2dEval_TBezierCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dEvalTBezierCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom2d_eval_tbezier_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_eval_tbezier_curve_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom2dEval_TBezierCurve::FirstParameter.</summary>
@@ -9561,6 +10202,14 @@ public sealed class Geom2dAxisPlacement : IDisposable
         return global::OcctSharp.Geom2dGeometry.FromNative(handleValue, "occtsharp_generated_geom2d_axis_placement_method_copy_0");
     }
 
+    /// <summary>Invokes OCCT Geom2d_AxisPlacement::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dAxisPlacementMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom2d_axis_placement_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_axis_placement_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Geom2d_AxisPlacement::Reverse.</summary>
     public void Reverse()
     {
@@ -9673,6 +10322,22 @@ public sealed class Geom2dBSplineCurve : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dBSplineCurveMethodDegree0(handle, out int resultValue), "occtsharp_generated_geom2d_bspline_curve_method_degree_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Geom2d_BSplineCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dBSplineCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom2d_bspline_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_bspline_curve_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Geom2d_BSplineCurve::EvalRepresentation.</summary>
+    public Geom2dEvalRepCurveDescBase? EvalRepresentation()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dBSplineCurveMethodEvalRepresentation0(handle, out nint handleValue), "occtsharp_generated_geom2d_bspline_curve_method_eval_representation_0");
+        return global::OcctSharp.Geom2dEvalRepCurveDescBase.FromNative(handleValue, "occtsharp_generated_geom2d_bspline_curve_method_eval_representation_0");
     }
 
     /// <summary>Invokes OCCT Geom2d_BSplineCurve::FirstParameter.</summary>
@@ -10023,6 +10688,22 @@ public sealed class Geom2dBezierCurve : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom2d_BezierCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dBezierCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom2d_bezier_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_bezier_curve_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Geom2d_BezierCurve::EvalRepresentation.</summary>
+    public Geom2dEvalRepCurveDescBase? EvalRepresentation()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dBezierCurveMethodEvalRepresentation0(handle, out nint handleValue), "occtsharp_generated_geom2d_bezier_curve_method_eval_representation_0");
+        return global::OcctSharp.Geom2dEvalRepCurveDescBase.FromNative(handleValue, "occtsharp_generated_geom2d_bezier_curve_method_eval_representation_0");
+    }
+
     /// <summary>Invokes OCCT Geom2d_BezierCurve::FirstParameter.</summary>
     public double FirstParameter()
     {
@@ -10213,6 +10894,14 @@ public sealed class Geom2dBoundedCurve : IDisposable
 
     private Geom2dBoundedCurve(Geom2dBoundedCurveHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT Geom2d_BoundedCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dBoundedCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom2d_bounded_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_bounded_curve_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -10295,6 +10984,14 @@ public sealed class Geom2dCartesianPoint : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dCartesianPointMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom2d_cartesian_point_method_copy_0");
         return global::OcctSharp.Geom2dGeometry.FromNative(handleValue, "occtsharp_generated_geom2d_cartesian_point_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT Geom2d_CartesianPoint::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dCartesianPointMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom2d_cartesian_point_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_cartesian_point_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom2d_CartesianPoint::SetCoord.</summary>
@@ -10408,6 +11105,14 @@ public sealed class Geom2dCircle : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dCircleMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom2d_circle_method_copy_0");
         return global::OcctSharp.Geom2dGeometry.FromNative(handleValue, "occtsharp_generated_geom2d_circle_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT Geom2d_Circle::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dCircleMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom2d_circle_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_circle_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom2d_Circle::Eccentricity.</summary>
@@ -10549,6 +11254,14 @@ public sealed class Geom2dConic : IDisposable
         return (GeomAbsShape)resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom2d_Conic::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dConicMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom2d_conic_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_conic_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Geom2d_Conic::IsCN.</summary>
     public bool IsCN(int n)
     {
@@ -10631,6 +11344,14 @@ public sealed class Geom2dCurve : IDisposable
     private readonly Geom2dCurveHandle handle;
 
     private Geom2dCurve(Geom2dCurveHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT Geom2d_Curve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom2d_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_curve_method_dynamic_type_0");
+    }
 
     /// <summary>Invokes OCCT Geom2d_Curve::Period.</summary>
     public double Period()
@@ -10738,6 +11459,14 @@ public sealed class Geom2dDirection : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dDirectionMethodCrossed0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out double resultValue), "occtsharp_generated_geom2d_direction_method_crossed_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Geom2d_Direction::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dDirectionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom2d_direction_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_direction_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom2d_Direction::Magnitude.</summary>
@@ -10851,6 +11580,14 @@ public sealed class Geom2dEllipse : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dEllipseMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom2d_ellipse_method_copy_0");
         return global::OcctSharp.Geom2dGeometry.FromNative(handleValue, "occtsharp_generated_geom2d_ellipse_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT Geom2d_Ellipse::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dEllipseMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom2d_ellipse_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_ellipse_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom2d_Ellipse::Eccentricity.</summary>
@@ -11015,6 +11752,14 @@ public sealed class Geom2dGeometry : IDisposable
 
     private Geom2dGeometry(Geom2dGeometryHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT Geom2d_Geometry::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dGeometryMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom2d_geometry_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_geometry_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -11089,6 +11834,14 @@ public sealed class Geom2dHyperbola : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dHyperbolaMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom2d_hyperbola_method_copy_0");
         return global::OcctSharp.Geom2dGeometry.FromNative(handleValue, "occtsharp_generated_geom2d_hyperbola_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT Geom2d_Hyperbola::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dHyperbolaMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom2d_hyperbola_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_hyperbola_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom2d_Hyperbola::Eccentricity.</summary>
@@ -11269,6 +12022,14 @@ public sealed class Geom2dLine : IDisposable
         return global::OcctSharp.Geom2dGeometry.FromNative(handleValue, "occtsharp_generated_geom2d_line_method_copy_0");
     }
 
+    /// <summary>Invokes OCCT Geom2d_Line::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dLineMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom2d_line_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_line_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Geom2d_Line::FirstParameter.</summary>
     public double FirstParameter()
     {
@@ -11429,6 +12190,22 @@ public sealed class Geom2dOffsetCurve : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dOffsetCurveMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom2d_offset_curve_method_copy_0");
         return global::OcctSharp.Geom2dGeometry.FromNative(handleValue, "occtsharp_generated_geom2d_offset_curve_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT Geom2d_OffsetCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dOffsetCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom2d_offset_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_offset_curve_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Geom2d_OffsetCurve::EvalRepresentation.</summary>
+    public Geom2dEvalRepCurveDescBase? EvalRepresentation()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dOffsetCurveMethodEvalRepresentation0(handle, out nint handleValue), "occtsharp_generated_geom2d_offset_curve_method_eval_representation_0");
+        return global::OcctSharp.Geom2dEvalRepCurveDescBase.FromNative(handleValue, "occtsharp_generated_geom2d_offset_curve_method_eval_representation_0");
     }
 
     /// <summary>Invokes OCCT Geom2d_OffsetCurve::FirstParameter.</summary>
@@ -11615,6 +12392,14 @@ public sealed class Geom2dParabola : IDisposable
         return global::OcctSharp.Geom2dGeometry.FromNative(handleValue, "occtsharp_generated_geom2d_parabola_method_copy_0");
     }
 
+    /// <summary>Invokes OCCT Geom2d_Parabola::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dParabolaMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom2d_parabola_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_parabola_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Geom2d_Parabola::Eccentricity.</summary>
     public double Eccentricity()
     {
@@ -11762,6 +12547,14 @@ public sealed class Geom2dPoint : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom2d_Point::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dPointMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom2d_point_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_point_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Geom2d_Point::SquareDistance.</summary>
     public double SquareDistance(Geom2dPoint? other)
     {
@@ -11852,6 +12645,14 @@ public sealed class Geom2dTransformation : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dTransformationMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom2d_transformation_method_copy_0");
         return global::OcctSharp.Geom2dTransformation.FromNative(handleValue, "occtsharp_generated_geom2d_transformation_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT Geom2d_Transformation::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dTransformationMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom2d_transformation_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_transformation_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom2d_Transformation::Form.</summary>
@@ -12038,6 +12839,14 @@ public sealed class Geom2dTrimmedCurve : IDisposable
         return global::OcctSharp.Geom2dGeometry.FromNative(handleValue, "occtsharp_generated_geom2d_trimmed_curve_method_copy_0");
     }
 
+    /// <summary>Invokes OCCT Geom2d_TrimmedCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dTrimmedCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom2d_trimmed_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_trimmed_curve_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Geom2d_TrimmedCurve::FirstParameter.</summary>
     public double FirstParameter()
     {
@@ -12192,6 +13001,14 @@ public sealed class Geom2dVector : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom2d_Vector::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dVectorMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom2d_vector_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_vector_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Geom2d_Vector::Reverse.</summary>
     public void Reverse()
     {
@@ -12343,6 +13160,14 @@ public sealed class Geom2dVectorWithMagnitude : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dVectorWithMagnitudeMethodDivided0(handle, scalar, out nint handleValue), "occtsharp_generated_geom2d_vector_with_magnitude_method_divided_0");
         return global::OcctSharp.Geom2dVectorWithMagnitude.FromNative(handleValue, "occtsharp_generated_geom2d_vector_with_magnitude_method_divided_0");
+    }
+
+    /// <summary>Invokes OCCT Geom2d_VectorWithMagnitude::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dVectorWithMagnitudeMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom2d_vector_with_magnitude_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_vector_with_magnitude_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom2d_VectorWithMagnitude::Magnitude.</summary>
@@ -12543,12 +13368,28 @@ public sealed class GeomAdaptorCurve : IDisposable
         return (GeomAbsShape)resultValue;
     }
 
+    /// <summary>Invokes OCCT GeomAdaptor_Curve::Curve.</summary>
+    public GeomCurve? Curve()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorCurveMethodCurve0(handle, out nint handleValue), "occtsharp_generated_geom_adaptor_curve_method_curve_0");
+        return global::OcctSharp.GeomCurve.FromNative(handleValue, "occtsharp_generated_geom_adaptor_curve_method_curve_0");
+    }
+
     /// <summary>Invokes OCCT GeomAdaptor_Curve::Degree.</summary>
     public int Degree()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorCurveMethodDegree0(handle, out int resultValue), "occtsharp_generated_geom_adaptor_curve_method_degree_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT GeomAdaptor_Curve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_adaptor_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_adaptor_curve_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT GeomAdaptor_Curve::EvalD0.</summary>
@@ -12816,6 +13657,14 @@ public sealed class GeomAdaptorSurface : IDisposable
         return global::OcctSharp.GeomBSplineSurface.FromNative(handleValue, "occtsharp_generated_geom_adaptor_surface_method_bspline_0");
     }
 
+    /// <summary>Invokes OCCT GeomAdaptor_Surface::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorSurfaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_adaptor_surface_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_adaptor_surface_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT GeomAdaptor_Surface::EvalD0.</summary>
     public Point3d EvalD0(double theU, double theV)
     {
@@ -12988,6 +13837,14 @@ public sealed class GeomAdaptorSurface : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorSurfaceMethodShallowCopy0(handle, out nint handleValue), "occtsharp_generated_geom_adaptor_surface_method_shallow_copy_0");
         return global::OcctSharp.Adaptor3dSurface.FromNative(handleValue, "occtsharp_generated_geom_adaptor_surface_method_shallow_copy_0");
+    }
+
+    /// <summary>Invokes OCCT GeomAdaptor_Surface::Surface.</summary>
+    public GeomSurface? Surface()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorSurfaceMethodSurface0(handle, out nint handleValue), "occtsharp_generated_geom_adaptor_surface_method_surface_0");
+        return global::OcctSharp.GeomSurface.FromNative(handleValue, "occtsharp_generated_geom_adaptor_surface_method_surface_0");
     }
 
     /// <summary>Invokes OCCT GeomAdaptor_Surface::ToleranceU.</summary>
@@ -13192,6 +14049,14 @@ public sealed class GeomAdaptorSurfaceOfLinearExtrusion : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorSurfaceOfLinearExtrusionMethodBSpline0(handle, out nint handleValue), "occtsharp_generated_geom_adaptor_surface_of_linear_extrusion_method_bspline_0");
         return global::OcctSharp.GeomBSplineSurface.FromNative(handleValue, "occtsharp_generated_geom_adaptor_surface_of_linear_extrusion_method_bspline_0");
+    }
+
+    /// <summary>Invokes OCCT GeomAdaptor_SurfaceOfLinearExtrusion::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorSurfaceOfLinearExtrusionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_adaptor_surface_of_linear_extrusion_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_adaptor_surface_of_linear_extrusion_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT GeomAdaptor_SurfaceOfLinearExtrusion::FirstUParameter.</summary>
@@ -13499,6 +14364,14 @@ public sealed class GeomAdaptorSurfaceOfRevolution : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorSurfaceOfRevolutionMethodBSpline0(handle, out nint handleValue), "occtsharp_generated_geom_adaptor_surface_of_revolution_method_bspline_0");
         return global::OcctSharp.GeomBSplineSurface.FromNative(handleValue, "occtsharp_generated_geom_adaptor_surface_of_revolution_method_bspline_0");
+    }
+
+    /// <summary>Invokes OCCT GeomAdaptor_SurfaceOfRevolution::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorSurfaceOfRevolutionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_adaptor_surface_of_revolution_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_adaptor_surface_of_revolution_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT GeomAdaptor_SurfaceOfRevolution::FirstUParameter.</summary>
@@ -13816,6 +14689,14 @@ public sealed class GeomAdaptorTransformedCurve : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT GeomAdaptor_TransformedCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorTransformedCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_adaptor_transformed_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_adaptor_transformed_curve_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT GeomAdaptor_TransformedCurve::EvalD0.</summary>
     public Point3d EvalD0(double theU)
     {
@@ -13830,6 +14711,14 @@ public sealed class GeomAdaptorTransformedCurve : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorTransformedCurveMethodFirstParameter0(handle, out double resultValue), "occtsharp_generated_geom_adaptor_transformed_curve_method_first_parameter_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT GeomAdaptor_TransformedCurve::GeomCurve.</summary>
+    public GeomCurve? GeomCurve()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorTransformedCurveMethodGeomCurve0(handle, out nint handleValue), "occtsharp_generated_geom_adaptor_transformed_curve_method_geom_curve_0");
+        return global::OcctSharp.GeomCurve.FromNative(handleValue, "occtsharp_generated_geom_adaptor_transformed_curve_method_geom_curve_0");
     }
 
     /// <summary>Invokes OCCT GeomAdaptor_TransformedCurve::GetType.</summary>
@@ -14081,6 +14970,14 @@ public sealed class GeomAdaptorTransformedSurface : IDisposable
         return global::OcctSharp.GeomBSplineSurface.FromNative(handleValue, "occtsharp_generated_geom_adaptor_transformed_surface_method_bspline_0");
     }
 
+    /// <summary>Invokes OCCT GeomAdaptor_TransformedSurface::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorTransformedSurfaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_adaptor_transformed_surface_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_adaptor_transformed_surface_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT GeomAdaptor_TransformedSurface::EvalD0.</summary>
     public Point3d EvalD0(double theU, double theV)
     {
@@ -14103,6 +15000,30 @@ public sealed class GeomAdaptorTransformedSurface : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorTransformedSurfaceMethodFirstVParameter0(handle, out double resultValue), "occtsharp_generated_geom_adaptor_transformed_surface_method_first_vparameter_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT GeomAdaptor_TransformedSurface::GeomSurface.</summary>
+    public GeomSurface? GeomSurface()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorTransformedSurfaceMethodGeomSurface0(handle, out nint handleValue), "occtsharp_generated_geom_adaptor_transformed_surface_method_geom_surface_0");
+        return global::OcctSharp.GeomSurface.FromNative(handleValue, "occtsharp_generated_geom_adaptor_transformed_surface_method_geom_surface_0");
+    }
+
+    /// <summary>Invokes OCCT GeomAdaptor_TransformedSurface::GeomSurfaceOriginal.</summary>
+    public GeomSurface? GeomSurfaceOriginal()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorTransformedSurfaceMethodGeomSurfaceOriginal0(handle, out nint handleValue), "occtsharp_generated_geom_adaptor_transformed_surface_method_geom_surface_original_0");
+        return global::OcctSharp.GeomSurface.FromNative(handleValue, "occtsharp_generated_geom_adaptor_transformed_surface_method_geom_surface_original_0");
+    }
+
+    /// <summary>Invokes OCCT GeomAdaptor_TransformedSurface::GeomSurfaceTransformed.</summary>
+    public GeomSurface? GeomSurfaceTransformed()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorTransformedSurfaceMethodGeomSurfaceTransformed0(handle, out nint handleValue), "occtsharp_generated_geom_adaptor_transformed_surface_method_geom_surface_transformed_0");
+        return global::OcctSharp.GeomSurface.FromNative(handleValue, "occtsharp_generated_geom_adaptor_transformed_surface_method_geom_surface_transformed_0");
     }
 
     /// <summary>Invokes OCCT GeomAdaptor_TransformedSurface::GetType.</summary>
@@ -14453,6 +15374,14 @@ public sealed class GeomEvalAHTBezierCurve : IDisposable
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_eval_ahtbezier_curve_method_copy_0");
     }
 
+    /// <summary>Invokes OCCT GeomEval_AHTBezierCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalAHTBezierCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_eval_ahtbezier_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_eval_ahtbezier_curve_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT GeomEval_AHTBezierCurve::EndPoint.</summary>
     public Point3d EndPoint()
     {
@@ -14680,6 +15609,14 @@ public sealed class GeomEvalAHTBezierSurface : IDisposable
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_eval_ahtbezier_surface_method_copy_0");
     }
 
+    /// <summary>Invokes OCCT GeomEval_AHTBezierSurface::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalAHTBezierSurfaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_eval_ahtbezier_surface_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_eval_ahtbezier_surface_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT GeomEval_AHTBezierSurface::EvalD0.</summary>
     public Point3d EvalD0(double u, double v)
     {
@@ -14890,6 +15827,14 @@ public sealed class GeomEvalCircularHelicoidSurface : IDisposable
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_eval_circular_helicoid_surface_method_copy_0");
     }
 
+    /// <summary>Invokes OCCT GeomEval_CircularHelicoidSurface::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalCircularHelicoidSurfaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_eval_circular_helicoid_surface_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_eval_circular_helicoid_surface_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT GeomEval_CircularHelicoidSurface::EvalD0.</summary>
     public Point3d EvalD0(double u, double v)
     {
@@ -15075,6 +16020,14 @@ public sealed class GeomEvalCircularHelixCurve : IDisposable
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_eval_circular_helix_curve_method_copy_0");
     }
 
+    /// <summary>Invokes OCCT GeomEval_CircularHelixCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalCircularHelixCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_eval_circular_helix_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_eval_circular_helix_curve_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT GeomEval_CircularHelixCurve::EvalD0.</summary>
     public Point3d EvalD0(double u)
     {
@@ -15228,6 +16181,14 @@ public sealed class GeomEvalEllipsoidSurface : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalEllipsoidSurfaceMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom_eval_ellipsoid_surface_method_copy_0");
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_eval_ellipsoid_surface_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT GeomEval_EllipsoidSurface::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalEllipsoidSurfaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_eval_ellipsoid_surface_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_eval_ellipsoid_surface_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT GeomEval_EllipsoidSurface::EvalD0.</summary>
@@ -15437,6 +16398,14 @@ public sealed class GeomEvalHypParaboloidSurface : IDisposable
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_eval_hyp_paraboloid_surface_method_copy_0");
     }
 
+    /// <summary>Invokes OCCT GeomEval_HypParaboloidSurface::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalHypParaboloidSurfaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_eval_hyp_paraboloid_surface_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_eval_hyp_paraboloid_surface_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT GeomEval_HypParaboloidSurface::EvalD0.</summary>
     public Point3d EvalD0(double u, double v)
     {
@@ -15627,6 +16596,14 @@ public sealed class GeomEvalHyperboloidSurface : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalHyperboloidSurfaceMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom_eval_hyperboloid_surface_method_copy_0");
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_eval_hyperboloid_surface_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT GeomEval_HyperboloidSurface::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalHyperboloidSurfaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_eval_hyperboloid_surface_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_eval_hyperboloid_surface_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT GeomEval_HyperboloidSurface::EvalD0.</summary>
@@ -15836,6 +16813,14 @@ public sealed class GeomEvalParaboloidSurface : IDisposable
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_eval_paraboloid_surface_method_copy_0");
     }
 
+    /// <summary>Invokes OCCT GeomEval_ParaboloidSurface::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalParaboloidSurfaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_eval_paraboloid_surface_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_eval_paraboloid_surface_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT GeomEval_ParaboloidSurface::EvalD0.</summary>
     public Point3d EvalD0(double u, double v)
     {
@@ -16029,6 +17014,14 @@ public sealed class GeomEvalSineWaveCurve : IDisposable
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_eval_sine_wave_curve_method_copy_0");
     }
 
+    /// <summary>Invokes OCCT GeomEval_SineWaveCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalSineWaveCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_eval_sine_wave_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_eval_sine_wave_curve_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT GeomEval_SineWaveCurve::EvalD0.</summary>
     public Point3d EvalD0(double u)
     {
@@ -16198,6 +17191,14 @@ public sealed class GeomEvalTBezierCurve : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalTBezierCurveMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom_eval_tbezier_curve_method_copy_0");
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_eval_tbezier_curve_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT GeomEval_TBezierCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalTBezierCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_eval_tbezier_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_eval_tbezier_curve_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT GeomEval_TBezierCurve::EndPoint.</summary>
@@ -16401,6 +17402,14 @@ public sealed class GeomEvalTBezierSurface : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalTBezierSurfaceMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom_eval_tbezier_surface_method_copy_0");
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_eval_tbezier_surface_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT GeomEval_TBezierSurface::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalTBezierSurfaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_eval_tbezier_surface_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_eval_tbezier_surface_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT GeomEval_TBezierSurface::EvalD0.</summary>
@@ -16613,6 +17622,14 @@ public sealed class GeomFillBoundWithSurf : IDisposable
 
     private GeomFillBoundWithSurf(GeomFillBoundWithSurfHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT GeomFill_BoundWithSurf::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillBoundWithSurfMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_bound_with_surf_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_bound_with_surf_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT GeomFill_BoundWithSurf::HasNormals.</summary>
     public bool HasNormals()
     {
@@ -16711,6 +17728,14 @@ public sealed class GeomFillBoundary : IDisposable
     private readonly GeomFillBoundaryHandle handle;
 
     private GeomFillBoundary(GeomFillBoundaryHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT GeomFill_Boundary::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillBoundaryMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_boundary_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_boundary_method_dynamic_type_0");
+    }
 
     /// <summary>Invokes OCCT GeomFill_Boundary::HasNormals.</summary>
     public bool HasNormals()
@@ -16832,6 +17857,14 @@ public sealed class GeomFillCircularBlendFunc : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillCircularBlendFuncMethodBarycentreOfSurf0(handle, out Point3dRaw resultValue), "occtsharp_generated_geom_fill_circular_blend_func_method_barycentre_of_surf_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT GeomFill_CircularBlendFunc::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillCircularBlendFuncMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_circular_blend_func_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_circular_blend_func_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT GeomFill_CircularBlendFunc::IsRational.</summary>
@@ -16956,6 +17989,14 @@ public sealed class GeomFillConstantBiNormal : IDisposable
         return global::OcctSharp.GeomFillTrihedronLaw.FromNative(handleValue, "occtsharp_generated_geom_fill_constant_bi_normal_method_copy_0");
     }
 
+    /// <summary>Invokes OCCT GeomFill_ConstantBiNormal::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillConstantBiNormalMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_constant_bi_normal_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_constant_bi_normal_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT GeomFill_ConstantBiNormal::IsConstant.</summary>
     public bool IsConstant()
     {
@@ -17064,6 +18105,38 @@ public sealed class GeomFillCoonsAlgPatch : IDisposable
         handle = CreateHandle(nativeHandle, "GeomFillCoonsAlgPatchCreate0");
     }
 
+    /// <summary>Invokes OCCT GeomFill_CoonsAlgPatch::Bound.</summary>
+    public GeomFillBoundary? Bound(int i)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillCoonsAlgPatchMethodBound0(handle, i, out nint handleValue), "occtsharp_generated_geom_fill_coons_alg_patch_method_bound_0");
+        return global::OcctSharp.GeomFillBoundary.FromNative(handleValue, "occtsharp_generated_geom_fill_coons_alg_patch_method_bound_0");
+    }
+
+    /// <summary>Invokes OCCT GeomFill_CoonsAlgPatch::Corner.</summary>
+    public Point3d Corner(int i)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillCoonsAlgPatchMethodCorner0(handle, i, out Point3dRaw resultValue), "occtsharp_generated_geom_fill_coons_alg_patch_method_corner_0");
+        return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT GeomFill_CoonsAlgPatch::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillCoonsAlgPatchMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_coons_alg_patch_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_coons_alg_patch_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT GeomFill_CoonsAlgPatch::Func.</summary>
+    public LawFunction? Func(int i)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillCoonsAlgPatchMethodFunc0(handle, i, out nint handleValue), "occtsharp_generated_geom_fill_coons_alg_patch_method_func_0");
+        return global::OcctSharp.LawFunction.FromNative(handleValue, "occtsharp_generated_geom_fill_coons_alg_patch_method_func_0");
+    }
+
     /// <summary>Invokes OCCT GeomFill_CoonsAlgPatch::SetFunc.</summary>
     public void SetFunc(LawFunction? f1, LawFunction? f2)
     {
@@ -17169,6 +18242,14 @@ public sealed class GeomFillCorrectedFrenet : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillCorrectedFrenetMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom_fill_corrected_frenet_method_copy_0");
         return global::OcctSharp.GeomFillTrihedronLaw.FromNative(handleValue, "occtsharp_generated_geom_fill_corrected_frenet_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT GeomFill_CorrectedFrenet::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillCorrectedFrenetMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_corrected_frenet_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_corrected_frenet_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT GeomFill_CorrectedFrenet::EvaluateBestMode.</summary>
@@ -17302,6 +18383,22 @@ public sealed class GeomFillCurveAndTrihedron : IDisposable
         return global::OcctSharp.GeomFillLocationLaw.FromNative(handleValue, "occtsharp_generated_geom_fill_curve_and_trihedron_method_copy_0");
     }
 
+    /// <summary>Invokes OCCT GeomFill_CurveAndTrihedron::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillCurveAndTrihedronMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_curve_and_trihedron_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_curve_and_trihedron_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT GeomFill_CurveAndTrihedron::GetCurve.</summary>
+    public Adaptor3dCurve? GetCurve()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillCurveAndTrihedronMethodGetCurve0(handle, out nint handleValue), "occtsharp_generated_geom_fill_curve_and_trihedron_method_get_curve_0");
+        return global::OcctSharp.Adaptor3dCurve.FromNative(handleValue, "occtsharp_generated_geom_fill_curve_and_trihedron_method_get_curve_0");
+    }
+
     /// <summary>Invokes OCCT GeomFill_CurveAndTrihedron::GetMaximalNorm.</summary>
     public double GetMaximalNorm()
     {
@@ -17417,6 +18514,14 @@ public sealed class GeomFillDarboux : IDisposable
         return global::OcctSharp.GeomFillTrihedronLaw.FromNative(handleValue, "occtsharp_generated_geom_fill_darboux_method_copy_0");
     }
 
+    /// <summary>Invokes OCCT GeomFill_Darboux::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillDarbouxMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_darboux_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_darboux_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT GeomFill_Darboux::IsConstant.</summary>
     public bool IsConstant()
     {
@@ -17515,6 +18620,14 @@ public sealed class GeomFillDegeneratedBound : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillDegeneratedBoundCreate0(new Point3dRaw(point.X, point.Y, point.Z), first, last, tol3d, tolang, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "GeomFillDegeneratedBoundCreate0");
+    }
+
+    /// <summary>Invokes OCCT GeomFill_DegeneratedBound::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillDegeneratedBoundMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_degenerated_bound_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_degenerated_bound_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT GeomFill_DegeneratedBound::IsDegenerated.</summary>
@@ -17622,6 +18735,14 @@ public sealed class GeomFillDiscreteTrihedron : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillDiscreteTrihedronMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom_fill_discrete_trihedron_method_copy_0");
         return global::OcctSharp.GeomFillTrihedronLaw.FromNative(handleValue, "occtsharp_generated_geom_fill_discrete_trihedron_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT GeomFill_DiscreteTrihedron::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillDiscreteTrihedronMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_discrete_trihedron_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_discrete_trihedron_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT GeomFill_DiscreteTrihedron::Init.</summary>
@@ -17737,6 +18858,14 @@ public sealed class GeomFillDraftTrihedron : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillDraftTrihedronMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom_fill_draft_trihedron_method_copy_0");
         return global::OcctSharp.GeomFillTrihedronLaw.FromNative(handleValue, "occtsharp_generated_geom_fill_draft_trihedron_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT GeomFill_DraftTrihedron::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillDraftTrihedronMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_draft_trihedron_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_draft_trihedron_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT GeomFill_DraftTrihedron::IsConstant.</summary>
@@ -17870,6 +18999,14 @@ public sealed class GeomFillEvolvedSection : IDisposable
         return global::OcctSharp.GeomCurve.FromNative(handleValue, "occtsharp_generated_geom_fill_evolved_section_method_constant_section_0");
     }
 
+    /// <summary>Invokes OCCT GeomFill_EvolvedSection::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillEvolvedSectionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_evolved_section_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_evolved_section_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT GeomFill_EvolvedSection::IsRational.</summary>
     public bool IsRational()
     {
@@ -17993,6 +19130,14 @@ public sealed class GeomFillFixed : IDisposable
         return global::OcctSharp.GeomFillTrihedronLaw.FromNative(handleValue, "occtsharp_generated_geom_fill_fixed_method_copy_0");
     }
 
+    /// <summary>Invokes OCCT GeomFill_Fixed::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillFixedMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_fixed_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_fixed_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT GeomFill_Fixed::IsConstant.</summary>
     public bool IsConstant()
     {
@@ -18091,6 +19236,14 @@ public sealed class GeomFillFrenet : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillFrenetMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom_fill_frenet_method_copy_0");
         return global::OcctSharp.GeomFillTrihedronLaw.FromNative(handleValue, "occtsharp_generated_geom_fill_frenet_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT GeomFill_Frenet::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillFrenetMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_frenet_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_frenet_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT GeomFill_Frenet::Init.</summary>
@@ -18214,6 +19367,14 @@ public sealed class GeomFillGuideTrihedronAC : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillGuideTrihedronACMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom_fill_guide_trihedron_ac_method_copy_0");
         return global::OcctSharp.GeomFillTrihedronLaw.FromNative(handleValue, "occtsharp_generated_geom_fill_guide_trihedron_ac_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT GeomFill_GuideTrihedronAC::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillGuideTrihedronACMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_guide_trihedron_ac_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_guide_trihedron_ac_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT GeomFill_GuideTrihedronAC::Guide.</summary>
@@ -18352,6 +19513,14 @@ public sealed class GeomFillGuideTrihedronPlan : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillGuideTrihedronPlanMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom_fill_guide_trihedron_plan_method_copy_0");
         return global::OcctSharp.GeomFillTrihedronLaw.FromNative(handleValue, "occtsharp_generated_geom_fill_guide_trihedron_plan_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT GeomFill_GuideTrihedronPlan::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillGuideTrihedronPlanMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_guide_trihedron_plan_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_guide_trihedron_plan_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT GeomFill_GuideTrihedronPlan::ErrorStatus.</summary>
@@ -18500,6 +19669,14 @@ public sealed class GeomFillLine : IDisposable
         handle = CreateHandle(nativeHandle, "GeomFillLineCreate1");
     }
 
+    /// <summary>Invokes OCCT GeomFill_Line::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillLineMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_line_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_line_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT GeomFill_Line::NbPoints.</summary>
     public int NbPoints()
     {
@@ -18590,6 +19767,22 @@ public sealed class GeomFillLocationDraft : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillLocationDraftMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom_fill_location_draft_method_copy_0");
         return global::OcctSharp.GeomFillLocationLaw.FromNative(handleValue, "occtsharp_generated_geom_fill_location_draft_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT GeomFill_LocationDraft::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillLocationDraftMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_location_draft_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_location_draft_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT GeomFill_LocationDraft::GetCurve.</summary>
+    public Adaptor3dCurve? GetCurve()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillLocationDraftMethodGetCurve0(handle, out nint handleValue), "occtsharp_generated_geom_fill_location_draft_method_get_curve_0");
+        return global::OcctSharp.Adaptor3dCurve.FromNative(handleValue, "occtsharp_generated_geom_fill_location_draft_method_get_curve_0");
     }
 
     /// <summary>Invokes OCCT GeomFill_LocationDraft::GetMaximalNorm.</summary>
@@ -18753,6 +19946,14 @@ public sealed class GeomFillLocationGuide : IDisposable
         return global::OcctSharp.GeomFillLocationLaw.FromNative(handleValue, "occtsharp_generated_geom_fill_location_guide_method_copy_0");
     }
 
+    /// <summary>Invokes OCCT GeomFill_LocationGuide::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillLocationGuideMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_location_guide_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_location_guide_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT GeomFill_LocationGuide::EraseRotation.</summary>
     public void EraseRotation()
     {
@@ -18766,6 +19967,14 @@ public sealed class GeomFillLocationGuide : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillLocationGuideMethodErrorStatus0(handle, out int resultValue), "occtsharp_generated_geom_fill_location_guide_method_error_status_0");
         return (GeomFillPipeError)resultValue;
+    }
+
+    /// <summary>Invokes OCCT GeomFill_LocationGuide::GetCurve.</summary>
+    public Adaptor3dCurve? GetCurve()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillLocationGuideMethodGetCurve0(handle, out nint handleValue), "occtsharp_generated_geom_fill_location_guide_method_get_curve_0");
+        return global::OcctSharp.Adaptor3dCurve.FromNative(handleValue, "occtsharp_generated_geom_fill_location_guide_method_get_curve_0");
     }
 
     /// <summary>Invokes OCCT GeomFill_LocationGuide::GetMaximalNorm.</summary>
@@ -18921,6 +20130,14 @@ public sealed class GeomFillLocationLaw : IDisposable
 
     private GeomFillLocationLaw(GeomFillLocationLawHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT GeomFill_LocationLaw::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillLocationLawMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_location_law_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_location_law_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT GeomFill_LocationLaw::ErrorStatus.</summary>
     public GeomFillPipeError ErrorStatus()
     {
@@ -19073,6 +20290,14 @@ public sealed class GeomFillNSections : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillNSectionsMethodConstantSection0(handle, out nint handleValue), "occtsharp_generated_geom_fill_nsections_method_constant_section_0");
         return global::OcctSharp.GeomCurve.FromNative(handleValue, "occtsharp_generated_geom_fill_nsections_method_constant_section_0");
+    }
+
+    /// <summary>Invokes OCCT GeomFill_NSections::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillNSectionsMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_nsections_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_nsections_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT GeomFill_NSections::IsRational.</summary>
@@ -19229,6 +20454,14 @@ public sealed class GeomFillSectionLaw : IDisposable
         return global::OcctSharp.GeomCurve.FromNative(handleValue, "occtsharp_generated_geom_fill_section_law_method_constant_section_0");
     }
 
+    /// <summary>Invokes OCCT GeomFill_SectionLaw::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillSectionLawMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_section_law_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_section_law_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT GeomFill_SectionLaw::SetTolerance.</summary>
     public void SetTolerance(double tol3d, double tol2d)
     {
@@ -19310,6 +20543,14 @@ public sealed class GeomFillSimpleBound : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillSimpleBoundCreate0(curve is null ? nint.Zero : curve.NativeHandle.DangerousGetHandle(), tol3d, tolang, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "GeomFillSimpleBoundCreate0");
+    }
+
+    /// <summary>Invokes OCCT GeomFill_SimpleBound::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillSimpleBoundMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_simple_bound_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_simple_bound_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT GeomFill_SimpleBound::IsDegenerated.</summary>
@@ -19574,6 +20815,14 @@ public sealed class GeomFillSweepFunction : IDisposable
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
+    /// <summary>Invokes OCCT GeomFill_SweepFunction::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillSweepFunctionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_sweep_function_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_sweep_function_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT GeomFill_SweepFunction::IsRational.</summary>
     public bool IsRational()
     {
@@ -19688,6 +20937,14 @@ public sealed class GeomFillTgtField : IDisposable
 
     private GeomFillTgtField(GeomFillTgtFieldHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT GeomFill_TgtField::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillTgtFieldMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_tgt_field_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_tgt_field_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT GeomFill_TgtField::IsScalable.</summary>
     public bool IsScalable()
     {
@@ -19779,6 +21036,14 @@ public sealed class GeomFillTgtOnCoons : IDisposable
         handle = CreateHandle(nativeHandle, "GeomFillTgtOnCoonsCreate0");
     }
 
+    /// <summary>Invokes OCCT GeomFill_TgtOnCoons::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillTgtOnCoonsMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_tgt_on_coons_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_tgt_on_coons_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -19846,6 +21111,14 @@ public sealed class GeomFillTrihedronLaw : IDisposable
     private readonly GeomFillTrihedronLawHandle handle;
 
     private GeomFillTrihedronLaw(GeomFillTrihedronLawHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT GeomFill_TrihedronLaw::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillTrihedronLawMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_trihedron_law_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_trihedron_law_method_dynamic_type_0");
+    }
 
     /// <summary>Invokes OCCT GeomFill_TrihedronLaw::ErrorStatus.</summary>
     public GeomFillPipeError ErrorStatus()
@@ -19962,6 +21235,14 @@ public sealed class GeomFillTrihedronWithGuide : IDisposable
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
+    /// <summary>Invokes OCCT GeomFill_TrihedronWithGuide::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillTrihedronWithGuideMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_trihedron_with_guide_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_trihedron_with_guide_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -20060,6 +21341,14 @@ public sealed class GeomFillUniformSection : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillUniformSectionMethodConstantSection0(handle, out nint handleValue), "occtsharp_generated_geom_fill_uniform_section_method_constant_section_0");
         return global::OcctSharp.GeomCurve.FromNative(handleValue, "occtsharp_generated_geom_fill_uniform_section_method_constant_section_0");
+    }
+
+    /// <summary>Invokes OCCT GeomFill_UniformSection::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomFillUniformSectionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_fill_uniform_section_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_fill_uniform_section_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT GeomFill_UniformSection::IsRational.</summary>
@@ -20207,6 +21496,14 @@ public sealed class GeomPlateCurveConstraint : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomPlateCurveConstraintMethodCurve3d0(handle, out nint handleValue), "occtsharp_generated_geom_plate_curve_constraint_method_curve3d_0");
         return global::OcctSharp.Adaptor3dCurve.FromNative(handleValue, "occtsharp_generated_geom_plate_curve_constraint_method_curve3d_0");
+    }
+
+    /// <summary>Invokes OCCT GeomPlate_CurveConstraint::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomPlateCurveConstraintMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_plate_curve_constraint_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_plate_curve_constraint_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT GeomPlate_CurveConstraint::FirstParameter.</summary>
@@ -20414,6 +21711,14 @@ public sealed class GeomPlatePointConstraint : IDisposable
         handle = CreateHandle(nativeHandle, "GeomPlatePointConstraintCreate1");
     }
 
+    /// <summary>Invokes OCCT GeomPlate_PointConstraint::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomPlatePointConstraintMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_plate_point_constraint_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_plate_point_constraint_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT GeomPlate_PointConstraint::G0Criterion.</summary>
     public double G0Criterion()
     {
@@ -20572,6 +21877,14 @@ public sealed class GeomPlateSurface : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomPlateSurfaceMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom_plate_surface_method_copy_0");
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_plate_surface_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT GeomPlate_Surface::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomPlateSurfaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_plate_surface_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_plate_surface_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT GeomPlate_Surface::EvalD0.</summary>
@@ -20775,6 +22088,14 @@ public sealed class GeomToolsUndefinedTypeHandler : IDisposable
         handle = CreateHandle(nativeHandle, "GeomToolsUndefinedTypeHandlerCreate0");
     }
 
+    /// <summary>Invokes OCCT GeomTools_UndefinedTypeHandler::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomToolsUndefinedTypeHandlerMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_tools_undefined_type_handler_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_tools_undefined_type_handler_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -20849,6 +22170,14 @@ public sealed class GeomAxis1Placement : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAxis1PlacementMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom_axis1_placement_method_copy_0");
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_axis1_placement_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_Axis1Placement::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAxis1PlacementMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_axis1_placement_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_axis1_placement_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom_Axis1Placement::Reverse.</summary>
@@ -20942,6 +22271,14 @@ public sealed class GeomAxis2Placement : IDisposable
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_axis2_placement_method_copy_0");
     }
 
+    /// <summary>Invokes OCCT Geom_Axis2Placement::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAxis2PlacementMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_axis2_placement_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_axis2_placement_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -21016,6 +22353,14 @@ public sealed class GeomAxisPlacement : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAxisPlacementMethodAngle0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out double resultValue), "occtsharp_generated_geom_axis_placement_method_angle_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Geom_AxisPlacement::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAxisPlacementMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_axis_placement_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_axis_placement_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom_AxisPlacement::Location.</summary>
@@ -21130,6 +22475,14 @@ public sealed class GeomBSplineCurve : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomBSplineCurveMethodDegree0(handle, out int resultValue), "occtsharp_generated_geom_bspline_curve_method_degree_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Geom_BSplineCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomBSplineCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_bspline_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_bspline_curve_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom_BSplineCurve::EndPoint.</summary>
@@ -21524,6 +22877,14 @@ public sealed class GeomBSplineSurface : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomBSplineSurfaceMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom_bspline_surface_method_copy_0");
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_bspline_surface_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_BSplineSurface::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomBSplineSurfaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_bspline_surface_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_bspline_surface_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom_BSplineSurface::EvalD0.</summary>
@@ -22095,6 +23456,14 @@ public sealed class GeomBezierCurve : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom_BezierCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomBezierCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_bezier_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_bezier_curve_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Geom_BezierCurve::EndPoint.</summary>
     public Point3d EndPoint()
     {
@@ -22365,6 +23734,14 @@ public sealed class GeomBezierSurface : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomBezierSurfaceMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom_bezier_surface_method_copy_0");
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_bezier_surface_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_BezierSurface::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomBezierSurfaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_bezier_surface_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_bezier_surface_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom_BezierSurface::EvalD0.</summary>
@@ -22657,6 +24034,14 @@ public sealed class GeomBoundedCurve : IDisposable
 
     private GeomBoundedCurve(GeomBoundedCurveHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT Geom_BoundedCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomBoundedCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_bounded_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_bounded_curve_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -22724,6 +24109,14 @@ public sealed class GeomBoundedSurface : IDisposable
     private readonly GeomBoundedSurfaceHandle handle;
 
     private GeomBoundedSurface(GeomBoundedSurfaceHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT Geom_BoundedSurface::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomBoundedSurfaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_bounded_surface_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_bounded_surface_method_dynamic_type_0");
+    }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
@@ -22815,6 +24208,14 @@ public sealed class GeomCartesianPoint : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomCartesianPointMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom_cartesian_point_method_copy_0");
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_cartesian_point_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_CartesianPoint::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomCartesianPointMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_cartesian_point_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_cartesian_point_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom_CartesianPoint::Pnt.</summary>
@@ -22958,6 +24359,14 @@ public sealed class GeomCircle : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomCircleMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom_circle_method_copy_0");
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_circle_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_Circle::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomCircleMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_circle_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_circle_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom_Circle::Eccentricity.</summary>
@@ -23107,12 +24516,28 @@ public sealed class GeomConic : IDisposable
         return (GeomAbsShape)resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom_Conic::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomConicMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_conic_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_conic_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Geom_Conic::IsCN.</summary>
     public bool IsCN(int n)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomConicMethodIsCN0(handle, n, out int resultValue), "occtsharp_generated_geom_conic_method_is_cn_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT Geom_Conic::Location.</summary>
+    public Point3d Location()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomConicMethodLocation0(handle, out Point3dRaw resultValue), "occtsharp_generated_geom_conic_method_location_0");
+        return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
     /// <summary>Invokes OCCT Geom_Conic::Reverse.</summary>
@@ -23211,6 +24636,14 @@ public sealed class GeomConicalSurface : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomConicalSurfaceMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom_conical_surface_method_copy_0");
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_conical_surface_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_ConicalSurface::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomConicalSurfaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_conical_surface_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_conical_surface_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom_ConicalSurface::EvalD0.</summary>
@@ -23390,6 +24823,14 @@ public sealed class GeomCurve : IDisposable
 
     private GeomCurve(GeomCurveHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT Geom_Curve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_curve_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Geom_Curve::Period.</summary>
     public double Period()
     {
@@ -23488,6 +24929,14 @@ public sealed class GeomCylindricalSurface : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomCylindricalSurfaceMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom_cylindrical_surface_method_copy_0");
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_cylindrical_surface_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_CylindricalSurface::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomCylindricalSurfaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_cylindrical_surface_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_cylindrical_surface_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom_CylindricalSurface::EvalD0.</summary>
@@ -23691,6 +25140,14 @@ public sealed class GeomDirection : IDisposable
         return global::OcctSharp.GeomVector.FromNative(handleValue, "occtsharp_generated_geom_direction_method_crossed_0");
     }
 
+    /// <summary>Invokes OCCT Geom_Direction::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomDirectionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_direction_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_direction_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Geom_Direction::Magnitude.</summary>
     public double Magnitude()
     {
@@ -23811,6 +25268,14 @@ public sealed class GeomElementarySurface : IDisposable
         return (GeomAbsShape)resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom_ElementarySurface::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomElementarySurfaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_elementary_surface_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_elementary_surface_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Geom_ElementarySurface::IsCNu.</summary>
     public bool IsCNu(int n)
     {
@@ -23825,6 +25290,14 @@ public sealed class GeomElementarySurface : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomElementarySurfaceMethodIsCNv0(handle, n, out int resultValue), "occtsharp_generated_geom_elementary_surface_method_is_cnv_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT Geom_ElementarySurface::Location.</summary>
+    public Point3d Location()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomElementarySurfaceMethodLocation0(handle, out Point3dRaw resultValue), "occtsharp_generated_geom_elementary_surface_method_location_0");
+        return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
     /// <summary>Invokes OCCT Geom_ElementarySurface::SetLocation.</summary>
@@ -23922,6 +25395,14 @@ public sealed class GeomEllipse : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEllipseMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom_ellipse_method_copy_0");
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_ellipse_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_Ellipse::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEllipseMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_ellipse_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_ellipse_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom_Ellipse::Eccentricity.</summary>
@@ -24110,6 +25591,14 @@ public sealed class GeomGeometry : IDisposable
 
     private GeomGeometry(GeomGeometryHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT Geom_Geometry::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomGeometryMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_geometry_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_geometry_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Geom_Geometry::Mirror.</summary>
     public void Mirror(Point3d p)
     {
@@ -24229,6 +25718,14 @@ public sealed class GeomHyperbola : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomHyperbolaMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom_hyperbola_method_copy_0");
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_hyperbola_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_Hyperbola::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomHyperbolaMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_hyperbola_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_hyperbola_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom_Hyperbola::Eccentricity.</summary>
@@ -24433,6 +25930,14 @@ public sealed class GeomLine : IDisposable
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_line_method_copy_0");
     }
 
+    /// <summary>Invokes OCCT Geom_Line::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomLineMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_line_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_line_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Geom_Line::EvalD0.</summary>
     public Point3d EvalD0(double u)
     {
@@ -24600,6 +26105,14 @@ public sealed class GeomOffsetCurve : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomOffsetCurveMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom_offset_curve_method_copy_0");
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_offset_curve_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_OffsetCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomOffsetCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_offset_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_offset_curve_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom_OffsetCurve::EvalD0.</summary>
@@ -24787,6 +26300,14 @@ public sealed class GeomOffsetSurface : IDisposable
         handle = CreateHandle(nativeHandle, "GeomOffsetSurfaceCreate0");
     }
 
+    /// <summary>Invokes OCCT Geom_OffsetSurface::BasisSurface.</summary>
+    public GeomSurface? BasisSurface()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomOffsetSurfaceMethodBasisSurface0(handle, out nint handleValue), "occtsharp_generated_geom_offset_surface_method_basis_surface_0");
+        return global::OcctSharp.GeomSurface.FromNative(handleValue, "occtsharp_generated_geom_offset_surface_method_basis_surface_0");
+    }
+
     /// <summary>Invokes OCCT Geom_OffsetSurface::ClearEvalRepresentation.</summary>
     public void ClearEvalRepresentation()
     {
@@ -24808,6 +26329,14 @@ public sealed class GeomOffsetSurface : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomOffsetSurfaceMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom_offset_surface_method_copy_0");
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_offset_surface_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_OffsetSurface::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomOffsetSurfaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_offset_surface_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_offset_surface_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom_OffsetSurface::EvalD0.</summary>
@@ -25050,6 +26579,14 @@ public sealed class GeomParabola : IDisposable
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_parabola_method_copy_0");
     }
 
+    /// <summary>Invokes OCCT Geom_Parabola::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomParabolaMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_parabola_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_parabola_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Geom_Parabola::Eccentricity.</summary>
     public double Eccentricity()
     {
@@ -25221,6 +26758,14 @@ public sealed class GeomPlane : IDisposable
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_plane_method_copy_0");
     }
 
+    /// <summary>Invokes OCCT Geom_Plane::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomPlaneMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_plane_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_plane_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Geom_Plane::EvalD0.</summary>
     public Point3d EvalD0(double u, double v)
     {
@@ -25383,6 +26928,14 @@ public sealed class GeomPoint : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom_Point::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomPointMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_point_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_point_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Geom_Point::SquareDistance.</summary>
     public double SquareDistance(GeomPoint? other)
     {
@@ -25497,6 +27050,14 @@ public sealed class GeomRectangularTrimmedSurface : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomRectangularTrimmedSurfaceMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom_rectangular_trimmed_surface_method_copy_0");
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_rectangular_trimmed_surface_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_RectangularTrimmedSurface::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomRectangularTrimmedSurfaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_rectangular_trimmed_surface_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_rectangular_trimmed_surface_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom_RectangularTrimmedSurface::EvalD0.</summary>
@@ -25715,6 +27276,14 @@ public sealed class GeomSphericalSurface : IDisposable
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_spherical_surface_method_copy_0");
     }
 
+    /// <summary>Invokes OCCT Geom_SphericalSurface::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomSphericalSurfaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_spherical_surface_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_spherical_surface_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Geom_SphericalSurface::EvalD0.</summary>
     public Point3d EvalD0(double u, double v)
     {
@@ -25878,6 +27447,14 @@ public sealed class GeomSurface : IDisposable
 
     private GeomSurface(GeomSurfaceHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT Geom_Surface::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomSurfaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_surface_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_surface_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Geom_Surface::UPeriod.</summary>
     public double UPeriod()
     {
@@ -25999,6 +27576,14 @@ public sealed class GeomSurfaceOfLinearExtrusion : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomSurfaceOfLinearExtrusionMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom_surface_of_linear_extrusion_method_copy_0");
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_surface_of_linear_extrusion_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_SurfaceOfLinearExtrusion::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomSurfaceOfLinearExtrusionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_surface_of_linear_extrusion_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_surface_of_linear_extrusion_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom_SurfaceOfLinearExtrusion::EvalD0.</summary>
@@ -26201,6 +27786,14 @@ public sealed class GeomSurfaceOfRevolution : IDisposable
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_surface_of_revolution_method_copy_0");
     }
 
+    /// <summary>Invokes OCCT Geom_SurfaceOfRevolution::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomSurfaceOfRevolutionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_surface_of_revolution_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_surface_of_revolution_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Geom_SurfaceOfRevolution::EvalD0.</summary>
     public Point3d EvalD0(double u, double v)
     {
@@ -26263,6 +27856,14 @@ public sealed class GeomSurfaceOfRevolution : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomSurfaceOfRevolutionMethodIsVPeriodic0(handle, out int resultValue), "occtsharp_generated_geom_surface_of_revolution_method_is_vperiodic_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT Geom_SurfaceOfRevolution::Location.</summary>
+    public Point3d Location()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomSurfaceOfRevolutionMethodLocation0(handle, out Point3dRaw resultValue), "occtsharp_generated_geom_surface_of_revolution_method_location_0");
+        return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
     /// <summary>Invokes OCCT Geom_SurfaceOfRevolution::SetBasisCurve.</summary>
@@ -26409,6 +28010,14 @@ public sealed class GeomSweptSurface : IDisposable
         return (GeomAbsShape)resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom_SweptSurface::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomSweptSurfaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_swept_surface_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_swept_surface_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -26491,6 +28100,14 @@ public sealed class GeomToroidalSurface : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomToroidalSurfaceMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom_toroidal_surface_method_copy_0");
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_toroidal_surface_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_ToroidalSurface::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomToroidalSurfaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_toroidal_surface_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_toroidal_surface_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom_ToroidalSurface::EvalD0.</summary>
@@ -26685,6 +28302,14 @@ public sealed class GeomTransformation : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomTransformationMethodCopy0(handle, out nint handleValue), "occtsharp_generated_geom_transformation_method_copy_0");
         return global::OcctSharp.GeomTransformation.FromNative(handleValue, "occtsharp_generated_geom_transformation_method_copy_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_Transformation::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomTransformationMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_transformation_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_transformation_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Geom_Transformation::Form.</summary>
@@ -26892,6 +28517,14 @@ public sealed class GeomTrimmedCurve : IDisposable
         return global::OcctSharp.GeomGeometry.FromNative(handleValue, "occtsharp_generated_geom_trimmed_curve_method_copy_0");
     }
 
+    /// <summary>Invokes OCCT Geom_TrimmedCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomTrimmedCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_trimmed_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_trimmed_curve_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Geom_TrimmedCurve::EndPoint.</summary>
     public Point3d EndPoint()
     {
@@ -27086,6 +28719,14 @@ public sealed class GeomVector : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom_Vector::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomVectorMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_vector_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_vector_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Geom_Vector::Reverse.</summary>
     public void Reverse()
     {
@@ -27277,6 +28918,14 @@ public sealed class GeomVectorWithMagnitude : IDisposable
         return global::OcctSharp.GeomVectorWithMagnitude.FromNative(handleValue, "occtsharp_generated_geom_vector_with_magnitude_method_divided_0");
     }
 
+    /// <summary>Invokes OCCT Geom_VectorWithMagnitude::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomVectorWithMagnitudeMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_vector_with_magnitude_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_vector_with_magnitude_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Geom_VectorWithMagnitude::Magnitude.</summary>
     public double Magnitude()
     {
@@ -27434,6 +29083,14 @@ public sealed class GeometryTestDrawableQualifiedCurve2d : IDisposable
 
     private GeometryTestDrawableQualifiedCurve2d(GeometryTestDrawableQualifiedCurve2dHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT GeometryTest_DrawableQualifiedCurve2d::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeometryTestDrawableQualifiedCurve2dMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geometry_test_drawable_qualified_curve2d_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geometry_test_drawable_qualified_curve2d_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -27532,6 +29189,14 @@ public sealed class LawBSpFunc : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.LawBSpFuncMethodCurve0(handle, out nint handleValue), "occtsharp_generated_law_bsp_func_method_curve_0");
         return global::OcctSharp.LawBSpline.FromNative(handleValue, "occtsharp_generated_law_bsp_func_method_curve_0");
+    }
+
+    /// <summary>Invokes OCCT Law_BSpFunc::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.LawBSpFuncMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_law_bsp_func_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_law_bsp_func_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Law_BSpFunc::NbIntervals.</summary>
@@ -27663,6 +29328,14 @@ public sealed class LawBSpline : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.LawBSplineMethodDN0(handle, u, n, out double resultValue), "occtsharp_generated_law_bspline_method_dn_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Law_BSpline::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.LawBSplineMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_law_bspline_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_law_bspline_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Law_BSpline::EndPoint.</summary>
@@ -28038,6 +29711,14 @@ public sealed class LawComposite : IDisposable
         return (GeomAbsShape)resultValue;
     }
 
+    /// <summary>Invokes OCCT Law_Composite::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.LawCompositeMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_law_composite_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_law_composite_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Law_Composite::IsPeriodic.</summary>
     public bool IsPeriodic()
     {
@@ -28161,6 +29842,14 @@ public sealed class LawConstant : IDisposable
         return (GeomAbsShape)resultValue;
     }
 
+    /// <summary>Invokes OCCT Law_Constant::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.LawConstantMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_law_constant_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_law_constant_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Law_Constant::NbIntervals.</summary>
     public int NbIntervals(GeomAbsShape s)
     {
@@ -28260,6 +29949,14 @@ public sealed class LawFunction : IDisposable
 
     private LawFunction(LawFunctionHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT Law_Function::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.LawFunctionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_law_function_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_law_function_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -28334,6 +30031,14 @@ public sealed class LawInterpol : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.LawInterpolCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "LawInterpolCreate0");
+    }
+
+    /// <summary>Invokes OCCT Law_Interpol::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.LawInterpolMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_law_interpol_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_law_interpol_method_dynamic_type_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -28418,6 +30123,14 @@ public sealed class LawLinear : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.LawLinearMethodContinuity0(handle, out int resultValue), "occtsharp_generated_law_linear_method_continuity_0");
         return (GeomAbsShape)resultValue;
+    }
+
+    /// <summary>Invokes OCCT Law_Linear::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.LawLinearMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_law_linear_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_law_linear_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT Law_Linear::NbIntervals.</summary>
@@ -28527,6 +30240,14 @@ public sealed class LawS : IDisposable
         handle = CreateHandle(nativeHandle, "LawSCreate0");
     }
 
+    /// <summary>Invokes OCCT Law_S::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.LawSMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_law_s_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_law_s_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT Law_S::Set.</summary>
     public void Set(double pdeb, double valdeb, double pfin, double valfin)
     {
@@ -28631,6 +30352,14 @@ public sealed class MAT2dCircuit : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.MAT2dCircuitMethodConnexionOn0(handle, index, out int resultValue), "occtsharp_generated_mat2d_circuit_method_connexion_on_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT MAT2d_Circuit::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.MAT2dCircuitMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mat2d_circuit_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mat2d_circuit_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT MAT2d_Circuit::LineLength.</summary>
@@ -28753,6 +30482,14 @@ public sealed class MAT2dConnexion : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.MAT2dConnexionMethodDump0(handle, deep, offset), "occtsharp_generated_mat2d_connexion_method_dump_0");
+    }
+
+    /// <summary>Invokes OCCT MAT2d_Connexion::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.MAT2dConnexionMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mat2d_connexion_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mat2d_connexion_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT MAT2d_Connexion::IndexFirstLine.</summary>
@@ -28935,6 +30672,14 @@ public sealed class MATArc : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.MATArcCreate0(arcIndex, geomIndex, firstElement is null ? nint.Zero : firstElement.NativeHandle.DangerousGetHandle(), secondElement is null ? nint.Zero : secondElement.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "MATArcCreate0");
+    }
+
+    /// <summary>Invokes OCCT MAT_Arc::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.MATArcMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mat_arc_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mat_arc_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT MAT_Arc::FirstElement.</summary>
@@ -29148,6 +30893,14 @@ public sealed class MATBasicElt : IDisposable
         handle = CreateHandle(nativeHandle, "MATBasicEltCreate0");
     }
 
+    /// <summary>Invokes OCCT MAT_BasicElt::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.MATBasicEltMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mat_basic_elt_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mat_basic_elt_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT MAT_BasicElt::EndArc.</summary>
     public MATArc? EndArc()
     {
@@ -29326,6 +31079,14 @@ public sealed class MATBisector : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.MATBisectorMethodDump0(handle, ashift, alevel), "occtsharp_generated_mat_bisector_method_dump_0");
+    }
+
+    /// <summary>Invokes OCCT MAT_Bisector::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.MATBisectorMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mat_bisector_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mat_bisector_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT MAT_Bisector::EndPoint.</summary>
@@ -29600,6 +31361,14 @@ public sealed class MATEdge : IDisposable
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.MATEdgeMethodDump0(handle, ashift, alevel), "occtsharp_generated_mat_edge_method_dump_0");
     }
 
+    /// <summary>Invokes OCCT MAT_Edge::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.MATEdgeMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mat_edge_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mat_edge_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT MAT_Edge::EdgeNumber.</summary>
     public int EdgeNumber()
     {
@@ -29774,6 +31543,14 @@ public sealed class MATGraph : IDisposable
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.MATGraphMethodCompactNodes0(handle), "occtsharp_generated_mat_graph_method_compact_nodes_0");
     }
 
+    /// <summary>Invokes OCCT MAT_Graph::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.MATGraphMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mat_graph_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mat_graph_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT MAT_Graph::Node.</summary>
     public MATNode? Node(int index)
     {
@@ -29932,6 +31709,14 @@ public sealed class MATListOfBisector : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.MATListOfBisectorMethodDump0(handle, ashift, alevel), "occtsharp_generated_mat_list_of_bisector_method_dump_0");
+    }
+
+    /// <summary>Invokes OCCT MAT_ListOfBisector::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.MATListOfBisectorMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mat_list_of_bisector_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mat_list_of_bisector_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT MAT_ListOfBisector::First.</summary>
@@ -30188,6 +31973,14 @@ public sealed class MATListOfEdge : IDisposable
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.MATListOfEdgeMethodDump0(handle, ashift, alevel), "occtsharp_generated_mat_list_of_edge_method_dump_0");
     }
 
+    /// <summary>Invokes OCCT MAT_ListOfEdge::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.MATListOfEdgeMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mat_list_of_edge_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mat_list_of_edge_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT MAT_ListOfEdge::First.</summary>
     public void First()
     {
@@ -30413,6 +32206,14 @@ public sealed class MATNode : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT MAT_Node::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.MATNodeMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mat_node_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mat_node_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT MAT_Node::GeomIndex.</summary>
     public int GeomIndex()
     {
@@ -30558,6 +32359,14 @@ public sealed class MATTListNodeOfListOfBisector : IDisposable
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.MATTListNodeOfListOfBisectorMethodDummy0(handle), "occtsharp_generated_mat_tlist_node_of_list_of_bisector_method_dummy_0");
     }
 
+    /// <summary>Invokes OCCT MAT_TListNodeOfListOfBisector::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.MATTListNodeOfListOfBisectorMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mat_tlist_node_of_list_of_bisector_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mat_tlist_node_of_list_of_bisector_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT MAT_TListNodeOfListOfBisector::GetItem.</summary>
     public MATBisector? GetItem()
     {
@@ -30692,6 +32501,14 @@ public sealed class MATTListNodeOfListOfEdge : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.MATTListNodeOfListOfEdgeMethodDummy0(handle), "occtsharp_generated_mat_tlist_node_of_list_of_edge_method_dummy_0");
+    }
+
+    /// <summary>Invokes OCCT MAT_TListNodeOfListOfEdge::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.MATTListNodeOfListOfEdgeMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mat_tlist_node_of_list_of_edge_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mat_tlist_node_of_list_of_edge_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT MAT_TListNodeOfListOfEdge::GetItem.</summary>
@@ -30831,6 +32648,14 @@ public sealed class MATZone : IDisposable
         return global::OcctSharp.MATArc.FromNative(handleValue, "occtsharp_generated_mat_zone_method_arc_on_frontier_0");
     }
 
+    /// <summary>Invokes OCCT MAT_Zone::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.MATZoneMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_mat_zone_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_mat_zone_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT MAT_Zone::Limited.</summary>
     public bool Limited()
     {
@@ -30929,6 +32754,14 @@ public sealed class NLPlateHGPPConstraint : IDisposable
     private readonly NLPlateHGPPConstraintHandle handle;
 
     private NLPlateHGPPConstraint(NLPlateHGPPConstraintHandle handle) => this.handle = handle;
+
+    /// <summary>Invokes OCCT NLPlate_HGPPConstraint::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.NLPlateHGPPConstraintMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_nlplate_hgppconstraint_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_nlplate_hgppconstraint_method_dynamic_type_0");
+    }
 
     /// <summary>Invokes OCCT NLPlate_HGPPConstraint::G0Criterion.</summary>
     public double G0Criterion()
@@ -31118,6 +32951,14 @@ public sealed class NLPlateHPG0Constraint : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT NLPlate_HPG0Constraint::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.NLPlateHPG0ConstraintMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_nlplate_hpg0_constraint_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_nlplate_hpg0_constraint_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT NLPlate_HPG0Constraint::IncrementalLoadAllowed.</summary>
     public bool IncrementalLoadAllowed()
     {
@@ -31232,6 +33073,14 @@ public sealed class NLPlateHPG0G1Constraint : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT NLPlate_HPG0G1Constraint::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.NLPlateHPG0G1ConstraintMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_nlplate_hpg0_g1_constraint_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_nlplate_hpg0_g1_constraint_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT NLPlate_HPG0G1Constraint::Orientation.</summary>
     public int Orientation()
     {
@@ -31323,6 +33172,14 @@ public sealed class NLPlateHPG0G2Constraint : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT NLPlate_HPG0G2Constraint::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.NLPlateHPG0G2ConstraintMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_nlplate_hpg0_g2_constraint_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_nlplate_hpg0_g2_constraint_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -31399,6 +33256,14 @@ public sealed class NLPlateHPG0G3Constraint : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT NLPlate_HPG0G3Constraint::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.NLPlateHPG0G3ConstraintMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_nlplate_hpg0_g3_constraint_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_nlplate_hpg0_g3_constraint_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -31473,6 +33338,14 @@ public sealed class NLPlateHPG1Constraint : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.NLPlateHPG1ConstraintMethodActiveOrder0(handle, out int resultValue), "occtsharp_generated_nlplate_hpg1_constraint_method_active_order_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT NLPlate_HPG1Constraint::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.NLPlateHPG1ConstraintMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_nlplate_hpg1_constraint_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_nlplate_hpg1_constraint_method_dynamic_type_0");
     }
 
     /// <summary>Invokes OCCT NLPlate_HPG1Constraint::IncrementalLoadAllowed.</summary>
@@ -31589,6 +33462,14 @@ public sealed class NLPlateHPG2Constraint : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT NLPlate_HPG2Constraint::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.NLPlateHPG2ConstraintMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_nlplate_hpg2_constraint_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_nlplate_hpg2_constraint_method_dynamic_type_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -31663,6 +33544,14 @@ public sealed class NLPlateHPG3Constraint : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.NLPlateHPG3ConstraintMethodActiveOrder0(handle, out int resultValue), "occtsharp_generated_nlplate_hpg3_constraint_method_active_order_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT NLPlate_HPG3Constraint::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.NLPlateHPG3ConstraintMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_nlplate_hpg3_constraint_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_nlplate_hpg3_constraint_method_dynamic_type_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -31773,12 +33662,28 @@ public sealed class ProjLibCompProjectedCurve : IDisposable
         return (GeomAbsShape)resultValue;
     }
 
+    /// <summary>Invokes OCCT ProjLib_CompProjectedCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.ProjLibCompProjectedCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_proj_lib_comp_projected_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_proj_lib_comp_projected_curve_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT ProjLib_CompProjectedCurve::FirstParameter.</summary>
     public double FirstParameter()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.ProjLibCompProjectedCurveMethodFirstParameter0(handle, out double resultValue), "occtsharp_generated_proj_lib_comp_projected_curve_method_first_parameter_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT ProjLib_CompProjectedCurve::GetCurve.</summary>
+    public Adaptor3dCurve? GetCurve()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.ProjLibCompProjectedCurveMethodGetCurve0(handle, out nint handleValue), "occtsharp_generated_proj_lib_comp_projected_curve_method_get_curve_0");
+        return global::OcctSharp.Adaptor3dCurve.FromNative(handleValue, "occtsharp_generated_proj_lib_comp_projected_curve_method_get_curve_0");
     }
 
     /// <summary>Invokes OCCT ProjLib_CompProjectedCurve::GetProj2d.</summary>
@@ -31843,6 +33748,14 @@ public sealed class ProjLibCompProjectedCurve : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.ProjLibCompProjectedCurveMethodGetResult3dP0(handle, theIndex, out Point3dRaw resultValue), "occtsharp_generated_proj_lib_comp_projected_curve_method_get_result3d_p_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT ProjLib_CompProjectedCurve::GetSurface.</summary>
+    public Adaptor3dSurface? GetSurface()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.ProjLibCompProjectedCurveMethodGetSurface0(handle, out nint handleValue), "occtsharp_generated_proj_lib_comp_projected_curve_method_get_surface_0");
+        return global::OcctSharp.Adaptor3dSurface.FromNative(handleValue, "occtsharp_generated_proj_lib_comp_projected_curve_method_get_surface_0");
     }
 
     /// <summary>Invokes OCCT ProjLib_CompProjectedCurve::GetType.</summary>
@@ -32103,6 +34016,22 @@ public sealed class ProjLibProjectOnPlane : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT ProjLib_ProjectOnPlane::GetCurve.</summary>
+    public Adaptor3dCurve? GetCurve()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.ProjLibProjectOnPlaneMethodGetCurve0(handle, out nint handleValue), "occtsharp_generated_proj_lib_project_on_plane_method_get_curve_0");
+        return global::OcctSharp.Adaptor3dCurve.FromNative(handleValue, "occtsharp_generated_proj_lib_project_on_plane_method_get_curve_0");
+    }
+
+    /// <summary>Invokes OCCT ProjLib_ProjectOnPlane::GetResult.</summary>
+    public GeomAdaptorCurve? GetResult()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.ProjLibProjectOnPlaneMethodGetResult0(handle, out nint handleValue), "occtsharp_generated_proj_lib_project_on_plane_method_get_result_0");
+        return global::OcctSharp.GeomAdaptorCurve.FromNative(handleValue, "occtsharp_generated_proj_lib_project_on_plane_method_get_result_0");
+    }
+
     /// <summary>Invokes OCCT ProjLib_ProjectOnPlane::GetType.</summary>
     public GeomAbsCurveType OcctGetType()
     {
@@ -32338,12 +34267,36 @@ public sealed class ProjLibProjectedCurve : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT ProjLib_ProjectedCurve::DynamicType.</summary>
+    public StandardType? DynamicType()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.ProjLibProjectedCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_proj_lib_projected_curve_method_dynamic_type_0");
+        return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_proj_lib_projected_curve_method_dynamic_type_0");
+    }
+
     /// <summary>Invokes OCCT ProjLib_ProjectedCurve::FirstParameter.</summary>
     public double FirstParameter()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.ProjLibProjectedCurveMethodFirstParameter0(handle, out double resultValue), "occtsharp_generated_proj_lib_projected_curve_method_first_parameter_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT ProjLib_ProjectedCurve::GetCurve.</summary>
+    public Adaptor3dCurve? GetCurve()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.ProjLibProjectedCurveMethodGetCurve0(handle, out nint handleValue), "occtsharp_generated_proj_lib_projected_curve_method_get_curve_0");
+        return global::OcctSharp.Adaptor3dCurve.FromNative(handleValue, "occtsharp_generated_proj_lib_projected_curve_method_get_curve_0");
+    }
+
+    /// <summary>Invokes OCCT ProjLib_ProjectedCurve::GetSurface.</summary>
+    public Adaptor3dSurface? GetSurface()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.ProjLibProjectedCurveMethodGetSurface0(handle, out nint handleValue), "occtsharp_generated_proj_lib_projected_curve_method_get_surface_0");
+        return global::OcctSharp.Adaptor3dSurface.FromNative(handleValue, "occtsharp_generated_proj_lib_projected_curve_method_get_surface_0");
     }
 
     /// <summary>Invokes OCCT ProjLib_ProjectedCurve::GetTolerance.</summary>

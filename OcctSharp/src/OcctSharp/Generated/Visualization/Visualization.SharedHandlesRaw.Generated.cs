@@ -3,6 +3,7 @@
 // Source: c:@S@AIS_Animation@F@Clear#
 // Source: c:@S@AIS_Animation@F@CopyFrom#&1$@N@opencascade@S@handle>#$@S@AIS_Animation#
 // Source: c:@S@AIS_Animation@F@Duration#1
+// Source: c:@S@AIS_Animation@F@DynamicType#1
 // Source: c:@S@AIS_Animation@F@ElapsedTime#1
 // Source: c:@S@AIS_Animation@F@HasOwnDuration#1
 // Source: c:@S@AIS_Animation@F@IsStopped#
@@ -17,15 +18,23 @@
 // Source: c:@S@AIS_Animation@F@StartPts#1
 // Source: c:@S@AIS_Animation@F@StartTimer#d#d#b#b#
 // Source: c:@S@AIS_Animation@F@Stop#
+// Source: c:@S@AIS_Animation@F@Timer#1
 // Source: c:@S@AIS_Animation@F@Update#d#
 // Source: c:@S@AIS_Animation@F@UpdateTimer#
 // Source: c:@S@AIS_Animation@F@UpdateTotalDuration#
+// Source: c:@S@AIS_AnimationAxisRotation@F@DynamicType#1
+// Source: c:@S@AIS_AnimationCamera@F@CameraEnd#1
+// Source: c:@S@AIS_AnimationCamera@F@CameraStart#1
+// Source: c:@S@AIS_AnimationCamera@F@DynamicType#1
 // Source: c:@S@AIS_AnimationCamera@F@SetCameraEnd#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@AIS_AnimationCamera@F@SetCameraStart#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@AIS_AnimationCamera@F@SetView#&1$@N@opencascade@S@handle>#$@S@V3d_View#
+// Source: c:@S@AIS_AnimationCamera@F@View#1
+// Source: c:@S@AIS_AnimationObject@F@DynamicType#1
 // Source: c:@S@AIS_AttributeFilter@F@AIS_AttributeFilter#
 // Source: c:@S@AIS_AttributeFilter@F@AIS_AttributeFilter#$@E@Quantity_NameOfColor#
 // Source: c:@S@AIS_AttributeFilter@F@AIS_AttributeFilter#d#
+// Source: c:@S@AIS_AttributeFilter@F@DynamicType#1
 // Source: c:@S@AIS_AttributeFilter@F@HasColor#1
 // Source: c:@S@AIS_AttributeFilter@F@HasWidth#1
 // Source: c:@S@AIS_AttributeFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
@@ -37,6 +46,9 @@
 // Source: c:@S@AIS_Axis@F@AIS_Axis#&1$@N@opencascade@S@handle>#$@S@Geom_Axis2Placement#$@E@AIS_TypeOfAxis#
 // Source: c:@S@AIS_Axis@F@AIS_Axis#&1$@N@opencascade@S@handle>#$@S@Geom_Line#
 // Source: c:@S@AIS_Axis@F@AcceptDisplayMode#I#1
+// Source: c:@S@AIS_Axis@F@Axis2Placement#1
+// Source: c:@S@AIS_Axis@F@Component#1
+// Source: c:@S@AIS_Axis@F@DynamicType#1
 // Source: c:@S@AIS_Axis@F@IsXYZAxis#1
 // Source: c:@S@AIS_Axis@F@SetAxis1Placement#&1$@N@opencascade@S@handle>#$@S@Geom_Axis1Placement#
 // Source: c:@S@AIS_Axis@F@SetAxis2Placement#&1$@N@opencascade@S@handle>#$@S@Geom_Axis2Placement#$@E@AIS_TypeOfAxis#
@@ -51,18 +63,24 @@
 // Source: c:@S@AIS_Axis@F@UnsetWidth#
 // Source: c:@S@AIS_BadEdgeFilter@F@AIS_BadEdgeFilter#
 // Source: c:@S@AIS_BadEdgeFilter@F@ActsOn#$@E@TopAbs_ShapeEnum#1
+// Source: c:@S@AIS_BadEdgeFilter@F@DynamicType#1
 // Source: c:@S@AIS_BadEdgeFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@AIS_BadEdgeFilter@F@RemoveEdges#I#
 // Source: c:@S@AIS_BadEdgeFilter@F@SetContour#I#
+// Source: c:@S@AIS_BaseAnimationObject@F@DynamicType#1
 // Source: c:@S@AIS_C0RegularityFilter@F@ActsOn#$@E@TopAbs_ShapeEnum#1
+// Source: c:@S@AIS_C0RegularityFilter@F@DynamicType#1
 // Source: c:@S@AIS_C0RegularityFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@AIS_CameraFrustum@F@AIS_CameraFrustum#
 // Source: c:@S@AIS_CameraFrustum@F@AcceptDisplayMode#I#1
+// Source: c:@S@AIS_CameraFrustum@F@DynamicType#1
 // Source: c:@S@AIS_CameraFrustum@F@SetCameraFrustum#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@AIS_CameraFrustum@F@UnsetColor#
 // Source: c:@S@AIS_CameraFrustum@F@UnsetTransparency#
 // Source: c:@S@AIS_Circle@F@AIS_Circle#&1$@N@opencascade@S@handle>#$@S@Geom_Circle#
 // Source: c:@S@AIS_Circle@F@AIS_Circle#&1$@N@opencascade@S@handle>#$@S@Geom_Circle#d#d#b#
+// Source: c:@S@AIS_Circle@F@Circle#1
+// Source: c:@S@AIS_Circle@F@DynamicType#1
 // Source: c:@S@AIS_Circle@F@IsFilledCircleSens#1
 // Source: c:@S@AIS_Circle@F@SetCircle#&1$@N@opencascade@S@handle>#$@S@Geom_Circle#
 // Source: c:@S@AIS_Circle@F@SetFilledCircleSens#b#
@@ -76,6 +94,7 @@
 // Source: c:@S@AIS_ColorScale@F@AIS_ColorScale#
 // Source: c:@S@AIS_ColorScale@F@AcceptDisplayMode#I#1
 // Source: c:@S@AIS_ColorScale@F@ComputeSelection#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Selection#I#
+// Source: c:@S@AIS_ColorScale@F@DynamicType#1
 // Source: c:@S@AIS_ColorScale@F@GetBreadth#1
 // Source: c:@S@AIS_ColorScale@F@GetColorType#1
 // Source: c:@S@AIS_ColorScale@F@GetHeight#1
@@ -116,6 +135,7 @@
 // Source: c:@S@AIS_ColorScale@F@SetXPosition#I#
 // Source: c:@S@AIS_ColorScale@F@SetYPosition#I#
 // Source: c:@S@AIS_ColoredDrawer@F@AIS_ColoredDrawer#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#
+// Source: c:@S@AIS_ColoredDrawer@F@DynamicType#1
 // Source: c:@S@AIS_ColoredDrawer@F@HasOwnColor#1
 // Source: c:@S@AIS_ColoredDrawer@F@HasOwnMaterial#1
 // Source: c:@S@AIS_ColoredDrawer@F@HasOwnTransparency#1
@@ -131,6 +151,7 @@
 // Source: c:@S@AIS_ColoredDrawer@F@UnsetOwnWidth#
 // Source: c:@S@AIS_ColoredShape@F@AIS_ColoredShape#&1$@N@opencascade@S@handle>#$@S@AIS_Shape#
 // Source: c:@S@AIS_ColoredShape@F@ClearCustomAspects#
+// Source: c:@S@AIS_ColoredShape@F@DynamicType#1
 // Source: c:@S@AIS_ColoredShape@F@SetTransparency#d#
 // Source: c:@S@AIS_ColoredShape@F@SetWidth#d#
 // Source: c:@S@AIS_ColoredShape@F@UnsetTransparency#
@@ -140,7 +161,9 @@
 // Source: c:@S@AIS_ConnectedInteractive@F@AcceptShapeDecomposition#1
 // Source: c:@S@AIS_ConnectedInteractive@F@Connect#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#
 // Source: c:@S@AIS_ConnectedInteractive@F@Connect#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#&1$@N@opencascade@S@handle>#$@S@TopLoc_Datum3D#
+// Source: c:@S@AIS_ConnectedInteractive@F@ConnectedTo#1
 // Source: c:@S@AIS_ConnectedInteractive@F@Disconnect#
+// Source: c:@S@AIS_ConnectedInteractive@F@DynamicType#1
 // Source: c:@S@AIS_ConnectedInteractive@F@HasConnection#1
 // Source: c:@S@AIS_ConnectedInteractive@F@Signature#1
 // Source: c:@S@AIS_ConnectedInteractive@F@Type#1
@@ -150,6 +173,7 @@
 // Source: c:@S@AIS_ExclusionFilter@F@Add#$@E@AIS_KindOfInteractive#
 // Source: c:@S@AIS_ExclusionFilter@F@Add#$@E@AIS_KindOfInteractive#I#
 // Source: c:@S@AIS_ExclusionFilter@F@Clear#
+// Source: c:@S@AIS_ExclusionFilter@F@DynamicType#1
 // Source: c:@S@AIS_ExclusionFilter@F@IsExclusionFlagOn#1
 // Source: c:@S@AIS_ExclusionFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@AIS_ExclusionFilter@F@IsStored#$@E@AIS_KindOfInteractive#1
@@ -160,6 +184,8 @@
 // Source: c:@S@AIS_GlobalStatus@F@AddSelectionMode#I#
 // Source: c:@S@AIS_GlobalStatus@F@ClearSelectionModes#
 // Source: c:@S@AIS_GlobalStatus@F@DisplayMode#1
+// Source: c:@S@AIS_GlobalStatus@F@DynamicType#1
+// Source: c:@S@AIS_GlobalStatus@F@HilightStyle#1
 // Source: c:@S@AIS_GlobalStatus@F@IsHilighted#1
 // Source: c:@S@AIS_GlobalStatus@F@IsSModeIn#I#1
 // Source: c:@S@AIS_GlobalStatus@F@IsSubIntensityOn#1
@@ -186,13 +212,16 @@
 // Source: c:@S@AIS_InteractiveContext@F@ClearPrs#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#I#b#
 // Source: c:@S@AIS_InteractiveContext@F@ClearSelected#b#
 // Source: c:@S@AIS_InteractiveContext@F@Current#1
+// Source: c:@S@AIS_InteractiveContext@F@CurrentViewer#1
 // Source: c:@S@AIS_InteractiveContext@F@Deactivate#
 // Source: c:@S@AIS_InteractiveContext@F@Deactivate#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#
 // Source: c:@S@AIS_InteractiveContext@F@Deactivate#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#I#
 // Source: c:@S@AIS_InteractiveContext@F@Deactivate#I#
+// Source: c:@S@AIS_InteractiveContext@F@DefaultDrawer#1
 // Source: c:@S@AIS_InteractiveContext@F@DetectedCurrentObject#1
 // Source: c:@S@AIS_InteractiveContext@F@DetectedCurrentOwner#1
 // Source: c:@S@AIS_InteractiveContext@F@DetectedInteractive#1
+// Source: c:@S@AIS_InteractiveContext@F@DetectedOwner#1
 // Source: c:@S@AIS_InteractiveContext@F@DeviationAngle#1
 // Source: c:@S@AIS_InteractiveContext@F@DeviationCoefficient#1
 // Source: c:@S@AIS_InteractiveContext@F@DisableDrawHiddenLine#1
@@ -208,6 +237,7 @@
 // Source: c:@S@AIS_InteractiveContext@F@DisplaySelected#b#
 // Source: c:@S@AIS_InteractiveContext@F@DisplayStatus#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#1
 // Source: c:@S@AIS_InteractiveContext@F@DrawHiddenLine#1
+// Source: c:@S@AIS_InteractiveContext@F@DynamicType#1
 // Source: c:@S@AIS_InteractiveContext@F@EnableDrawHiddenLine#1
 // Source: c:@S@AIS_InteractiveContext@F@EndImmediateDraw#
 // Source: c:@S@AIS_InteractiveContext@F@EndImmediateDraw#&1$@N@opencascade@S@handle>#$@S@V3d_View#
@@ -220,6 +250,7 @@
 // Source: c:@S@AIS_InteractiveContext@F@FitSelected#&1$@N@opencascade@S@handle>#$@S@V3d_View#d#b#
 // Source: c:@S@AIS_InteractiveContext@F@GetAutoActivateSelection#1
 // Source: c:@S@AIS_InteractiveContext@F@GetZLayer#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#1
+// Source: c:@S@AIS_InteractiveContext@F@GlobalFilter#1
 // Source: c:@S@AIS_InteractiveContext@F@GravityPoint#&1$@N@opencascade@S@handle>#$@S@V3d_View#1
 // Source: c:@S@AIS_InteractiveContext@F@HasApplicative#1
 // Source: c:@S@AIS_InteractiveContext@F@HasColor#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#1
@@ -229,6 +260,9 @@
 // Source: c:@S@AIS_InteractiveContext@F@HasNextDetected#1
 // Source: c:@S@AIS_InteractiveContext@F@HasPolygonOffsets#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#1
 // Source: c:@S@AIS_InteractiveContext@F@HasSelectedShape#1
+// Source: c:@S@AIS_InteractiveContext@F@HiddenLineAspect#1
+// Source: c:@S@AIS_InteractiveContext@F@HighlightStyle#$@E@Prs3d_TypeOfHighlight#1
+// Source: c:@S@AIS_InteractiveContext@F@HighlightStyle#1
 // Source: c:@S@AIS_InteractiveContext@F@Hilight#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#b#
 // Source: c:@S@AIS_InteractiveContext@F@HilightCurrents#b#
 // Source: c:@S@AIS_InteractiveContext@F@HilightNextDetected#&1$@N@opencascade@S@handle>#$@S@V3d_View#b#
@@ -256,6 +290,7 @@
 // Source: c:@S@AIS_InteractiveContext@F@LastActiveView#1
 // Source: c:@S@AIS_InteractiveContext@F@Load#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#I#
 // Source: c:@S@AIS_InteractiveContext@F@Load#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#I#b#
+// Source: c:@S@AIS_InteractiveContext@F@MainPrsMgr#1
 // Source: c:@S@AIS_InteractiveContext@F@MoreCurrent#1
 // Source: c:@S@AIS_InteractiveContext@F@MoreDetected#1
 // Source: c:@S@AIS_InteractiveContext@F@MoreSelected#1
@@ -283,6 +318,9 @@
 // Source: c:@S@AIS_InteractiveContext@F@SelectDetected#$@E@AIS_SelectionScheme#
 // Source: c:@S@AIS_InteractiveContext@F@SelectedInteractive#1
 // Source: c:@S@AIS_InteractiveContext@F@SelectedOwner#1
+// Source: c:@S@AIS_InteractiveContext@F@Selection#1
+// Source: c:@S@AIS_InteractiveContext@F@SelectionManager#1
+// Source: c:@S@AIS_InteractiveContext@F@SelectionStyle#1
 // Source: c:@S@AIS_InteractiveContext@F@SetAngleAndDeviation#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#d#b#
 // Source: c:@S@AIS_InteractiveContext@F@SetAutoActivateSelection#b#
 // Source: c:@S@AIS_InteractiveContext@F@SetAutomaticHilight#b#
@@ -307,6 +345,7 @@
 // Source: c:@S@AIS_InteractiveContext@F@SetPixelTolerance#I#
 // Source: c:@S@AIS_InteractiveContext@F@SetPlaneSize#d#b#
 // Source: c:@S@AIS_InteractiveContext@F@SetPlaneSize#d#d#b#
+// Source: c:@S@AIS_InteractiveContext@F@SetPolygonOffsets#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#I#f#f#b#
 // Source: c:@S@AIS_InteractiveContext@F@SetSelected#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#b#
 // Source: c:@S@AIS_InteractiveContext@F@SetSelected#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#b#
 // Source: c:@S@AIS_InteractiveContext@F@SetSelectedAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_BasicAspect#b#
@@ -343,7 +382,9 @@
 // Source: c:@S@AIS_InteractiveContext@F@UpdateSelected#b#
 // Source: c:@S@AIS_InteractiveContext@F@Width#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#1
 // Source: c:@S@AIS_InteractiveObject@F@ClearOwner#
+// Source: c:@S@AIS_InteractiveObject@F@DynamicType#1
 // Source: c:@S@AIS_InteractiveObject@F@GetContext#1
+// Source: c:@S@AIS_InteractiveObject@F@GetOwner#1
 // Source: c:@S@AIS_InteractiveObject@F@HasInteractiveContext#1
 // Source: c:@S@AIS_InteractiveObject@F@HasOwner#1
 // Source: c:@S@AIS_InteractiveObject@F@HasPresentation#1
@@ -355,7 +396,10 @@
 // Source: c:@S@AIS_InteractiveObject@F@Type#1
 // Source: c:@S@AIS_LightSource@F@AIS_LightSource#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#
 // Source: c:@S@AIS_LightSource@F@ArcSize#1
+// Source: c:@S@AIS_LightSource@F@DynamicType#1
 // Source: c:@S@AIS_LightSource@F@IsZoomable#1
+// Source: c:@S@AIS_LightSource@F@Light#1
+// Source: c:@S@AIS_LightSource@F@MarkerImage#b#1
 // Source: c:@S@AIS_LightSource@F@MarkerType#b#1
 // Source: c:@S@AIS_LightSource@F@NbArrows#1
 // Source: c:@S@AIS_LightSource@F@NbSplitsArrow#1
@@ -379,14 +423,19 @@
 // Source: c:@S@AIS_LightSource@F@ToSwitchOnClick#1
 // Source: c:@S@AIS_LightSource@F@Type#1
 // Source: c:@S@AIS_LightSourceOwner@F@AIS_LightSourceOwner#&1$@N@opencascade@S@handle>#$@S@AIS_LightSource#I#
+// Source: c:@S@AIS_LightSourceOwner@F@DynamicType#1
 // Source: c:@S@AIS_LightSourceOwner@F@HilightWithColor#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#I#
 // Source: c:@S@AIS_LightSourceOwner@F@IsForcedHilight#1
 // Source: c:@S@AIS_Line@F@AIS_Line#&1$@N@opencascade@S@handle>#$@S@Geom_Line#
 // Source: c:@S@AIS_Line@F@AIS_Line#&1$@N@opencascade@S@handle>#$@S@Geom_Point#S0_#
+// Source: c:@S@AIS_Line@F@DynamicType#1
+// Source: c:@S@AIS_Line@F@EndPoint#1
+// Source: c:@S@AIS_Line@F@Line#1
 // Source: c:@S@AIS_Line@F@SetLine#&1$@N@opencascade@S@handle>#$@S@Geom_Line#
 // Source: c:@S@AIS_Line@F@SetPoints#&1$@N@opencascade@S@handle>#$@S@Geom_Point#S0_#
 // Source: c:@S@AIS_Line@F@SetWidth#d#
 // Source: c:@S@AIS_Line@F@Signature#1
+// Source: c:@S@AIS_Line@F@StartPoint#1
 // Source: c:@S@AIS_Line@F@Type#1
 // Source: c:@S@AIS_Line@F@UnsetColor#
 // Source: c:@S@AIS_Line@F@UnsetWidth#
@@ -397,6 +446,7 @@
 // Source: c:@S@AIS_Manipulator@F@ComputeSelection#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Selection#I#
 // Source: c:@S@AIS_Manipulator@F@DeactivateCurrentMode#
 // Source: c:@S@AIS_Manipulator@F@Detach#
+// Source: c:@S@AIS_Manipulator@F@DynamicType#1
 // Source: c:@S@AIS_Manipulator@F@EnableMode#$@E@AIS_ManipulatorMode#
 // Source: c:@S@AIS_Manipulator@F@HasActiveMode#1
 // Source: c:@S@AIS_Manipulator@F@HasActiveTransformation#
@@ -414,11 +464,13 @@
 // Source: c:@S@AIS_Manipulator@F@SetSkinMode#$@S@AIS_Manipulator@E@ManipulatorSkin#
 // Source: c:@S@AIS_Manipulator@F@SetTransformPersistence#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TransformPers#
 // Source: c:@S@AIS_Manipulator@F@SetZoomPersistence#b#
+// Source: c:@S@AIS_Manipulator@F@Size#1
 // Source: c:@S@AIS_Manipulator@F@SkinMode#1
 // Source: c:@S@AIS_Manipulator@F@StartTransform#I#I#&1$@N@opencascade@S@handle>#$@S@V3d_View#
 // Source: c:@S@AIS_Manipulator@F@StopTransform#b#
 // Source: c:@S@AIS_Manipulator@F@ZoomPersistence#1
 // Source: c:@S@AIS_ManipulatorOwner@F@AIS_ManipulatorOwner#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#$@E@AIS_ManipulatorMode#I#
+// Source: c:@S@AIS_ManipulatorOwner@F@DynamicType#1
 // Source: c:@S@AIS_ManipulatorOwner@F@HilightWithColor#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#I#
 // Source: c:@S@AIS_ManipulatorOwner@F@Index#1
 // Source: c:@S@AIS_ManipulatorOwner@F@IsHilighted#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#1
@@ -426,7 +478,9 @@
 // Source: c:@S@AIS_ManipulatorOwner@F@Unhilight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@AIS_MediaPlayer@F@AIS_MediaPlayer#
 // Source: c:@S@AIS_MediaPlayer@F@Duration#1
+// Source: c:@S@AIS_MediaPlayer@F@DynamicType#1
 // Source: c:@S@AIS_MediaPlayer@F@PlayPause#
+// Source: c:@S@AIS_MediaPlayer@F@PlayerContext#1
 // Source: c:@S@AIS_MediaPlayer@F@SetClosePlayer#
 // Source: c:@S@AIS_MultipleConnectedInteractive@F@AIS_MultipleConnectedInteractive#
 // Source: c:@S@AIS_MultipleConnectedInteractive@F@AcceptShapeDecomposition#1
@@ -434,6 +488,8 @@
 // Source: c:@S@AIS_MultipleConnectedInteractive@F@Connect#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#&1$@N@opencascade@S@handle>#$@S@TopLoc_Datum3D#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TransformPers#
 // Source: c:@S@AIS_MultipleConnectedInteractive@F@Disconnect#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#
 // Source: c:@S@AIS_MultipleConnectedInteractive@F@DisconnectAll#
+// Source: c:@S@AIS_MultipleConnectedInteractive@F@DynamicType#1
+// Source: c:@S@AIS_MultipleConnectedInteractive@F@GetAssemblyOwner#1
 // Source: c:@S@AIS_MultipleConnectedInteractive@F@GlobalSelOwner#1
 // Source: c:@S@AIS_MultipleConnectedInteractive@F@HasConnection#1
 // Source: c:@S@AIS_MultipleConnectedInteractive@F@SetContext#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#
@@ -445,8 +501,11 @@
 // Source: c:@S@AIS_Plane@F@AIS_Plane#&1$@N@opencascade@S@handle>#$@S@Geom_Plane#b#
 // Source: c:@S@AIS_Plane@F@AcceptDisplayMode#I#1
 // Source: c:@S@AIS_Plane@F@Axis2Placement#
+// Source: c:@S@AIS_Plane@F@Center#1
+// Source: c:@S@AIS_Plane@F@Component#
 // Source: c:@S@AIS_Plane@F@ComputeSelection#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Selection#I#
 // Source: c:@S@AIS_Plane@F@CurrentMode#
+// Source: c:@S@AIS_Plane@F@DynamicType#1
 // Source: c:@S@AIS_Plane@F@HasMinimumSize#1
 // Source: c:@S@AIS_Plane@F@HasOwnSize#1
 // Source: c:@S@AIS_Plane@F@IsXYZPlane#
@@ -470,6 +529,7 @@
 // Source: c:@S@AIS_PlaneTrihedron@F@AIS_PlaneTrihedron#&1$@N@opencascade@S@handle>#$@S@Geom_Plane#
 // Source: c:@S@AIS_PlaneTrihedron@F@AcceptDisplayMode#I#1
 // Source: c:@S@AIS_PlaneTrihedron@F@Component#
+// Source: c:@S@AIS_PlaneTrihedron@F@DynamicType#1
 // Source: c:@S@AIS_PlaneTrihedron@F@GetLength#1
 // Source: c:@S@AIS_PlaneTrihedron@F@Position#1
 // Source: c:@S@AIS_PlaneTrihedron@F@SetComponent#&1$@N@opencascade@S@handle>#$@S@Geom_Plane#
@@ -481,6 +541,7 @@
 // Source: c:@S@AIS_Point@F@AIS_Point#&1$@N@opencascade@S@handle>#$@S@Geom_Point#
 // Source: c:@S@AIS_Point@F@AcceptDisplayMode#I#1
 // Source: c:@S@AIS_Point@F@Component#
+// Source: c:@S@AIS_Point@F@DynamicType#1
 // Source: c:@S@AIS_Point@F@HasMarker#1
 // Source: c:@S@AIS_Point@F@SetComponent#&1$@N@opencascade@S@handle>#$@S@Geom_Point#
 // Source: c:@S@AIS_Point@F@SetMarker#$@E@Aspect_TypeOfMarker#
@@ -489,17 +550,22 @@
 // Source: c:@S@AIS_Point@F@UnsetColor#
 // Source: c:@S@AIS_Point@F@UnsetMarker#
 // Source: c:@S@AIS_PointCloud@F@AIS_PointCloud#
+// Source: c:@S@AIS_PointCloud@F@DynamicType#1
 // Source: c:@S@AIS_PointCloud@F@GetPoints#1
 // Source: c:@S@AIS_PointCloud@F@SetPoints#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ArrayOfPoints#
 // Source: c:@S@AIS_PointCloud@F@UnsetColor#
 // Source: c:@S@AIS_PointCloud@F@UnsetMaterial#
 // Source: c:@S@AIS_PointCloudOwner@F@AIS_PointCloudOwner#&1$@N@opencascade@S@handle>#$@S@AIS_PointCloud#
 // Source: c:@S@AIS_PointCloudOwner@F@Clear#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
+// Source: c:@S@AIS_PointCloudOwner@F@DetectedPoints#1
+// Source: c:@S@AIS_PointCloudOwner@F@DynamicType#1
 // Source: c:@S@AIS_PointCloudOwner@F@HilightWithColor#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#I#
 // Source: c:@S@AIS_PointCloudOwner@F@IsForcedHilight#1
+// Source: c:@S@AIS_PointCloudOwner@F@SelectedPoints#1
 // Source: c:@S@AIS_PointCloudOwner@F@Unhilight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@AIS_RubberBand@F@AIS_RubberBand#
 // Source: c:@S@AIS_RubberBand@F@ClearPoints#
+// Source: c:@S@AIS_RubberBand@F@DynamicType#1
 // Source: c:@S@AIS_RubberBand@F@FillTransparency#1
 // Source: c:@S@AIS_RubberBand@F@IsFilling#1
 // Source: c:@S@AIS_RubberBand@F@IsPolygonClosed#1
@@ -516,6 +582,7 @@
 // Source: c:@S@AIS_Selection@F@AddSelect#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#
 // Source: c:@S@AIS_Selection@F@Clear#
 // Source: c:@S@AIS_Selection@F@ClearAndSelect#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Filter#b#
+// Source: c:@S@AIS_Selection@F@DynamicType#1
 // Source: c:@S@AIS_Selection@F@Extent#1
 // Source: c:@S@AIS_Selection@F@Init#
 // Source: c:@S@AIS_Selection@F@IsEmpty#1
@@ -523,8 +590,10 @@
 // Source: c:@S@AIS_Selection@F@More#1
 // Source: c:@S@AIS_Selection@F@Next#
 // Source: c:@S@AIS_Selection@F@Select#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Filter#$@E@AIS_SelectionScheme#b#
+// Source: c:@S@AIS_Selection@F@Value#1
 // Source: c:@S@AIS_Shape@F@AcceptDisplayMode#I#1
 // Source: c:@S@AIS_Shape@F@AcceptShapeDecomposition#1
+// Source: c:@S@AIS_Shape@F@DynamicType#1
 // Source: c:@S@AIS_Shape@F@Material#1
 // Source: c:@S@AIS_Shape@F@SetAngleAndDeviation#d#
 // Source: c:@S@AIS_Shape@F@SetOwnDeviationAngle#
@@ -544,13 +613,16 @@
 // Source: c:@S@AIS_Shape@F@UnsetWidth#
 // Source: c:@S@AIS_Shape@F@UserAngle#1
 // Source: c:@S@AIS_SignatureFilter@F@AIS_SignatureFilter#$@E@AIS_KindOfInteractive#I#
+// Source: c:@S@AIS_SignatureFilter@F@DynamicType#1
 // Source: c:@S@AIS_SignatureFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@AIS_TextLabel@F@AIS_TextLabel#
 // Source: c:@S@AIS_TextLabel@F@AcceptDisplayMode#I#1
+// Source: c:@S@AIS_TextLabel@F@DynamicType#1
 // Source: c:@S@AIS_TextLabel@F@FontAspect#1
 // Source: c:@S@AIS_TextLabel@F@HasFlipping#1
 // Source: c:@S@AIS_TextLabel@F@HasOrientation3D#1
 // Source: c:@S@AIS_TextLabel@F@HasOwnAnchorPoint#1
+// Source: c:@S@AIS_TextLabel@F@Position#1
 // Source: c:@S@AIS_TextLabel@F@SetAngle#d#
 // Source: c:@S@AIS_TextLabel@F@SetDisplayType#$@E@Aspect_TypeOfDisplayText#
 // Source: c:@S@AIS_TextLabel@F@SetFlipping#b#
@@ -563,10 +635,12 @@
 // Source: c:@S@AIS_TextLabel@F@SetTransparency#d#
 // Source: c:@S@AIS_TextLabel@F@SetVJustification#$@E@Graphic3d_VerticalTextAlignment#
 // Source: c:@S@AIS_TextLabel@F@SetZoomable#b#
+// Source: c:@S@AIS_TextLabel@F@TextFormatter#1
 // Source: c:@S@AIS_TextLabel@F@UnsetOrientation3D#
 // Source: c:@S@AIS_TextLabel@F@UnsetTransparency#
 // Source: c:@S@AIS_TexturedShape@F@AcceptDisplayMode#I#1
 // Source: c:@S@AIS_TexturedShape@F@DisableTextureModulate#
+// Source: c:@S@AIS_TexturedShape@F@DynamicType#1
 // Source: c:@S@AIS_TexturedShape@F@EnableTextureModulate#
 // Source: c:@S@AIS_TexturedShape@F@SetTextureMapOff#
 // Source: c:@S@AIS_TexturedShape@F@SetTextureMapOn#
@@ -579,6 +653,7 @@
 // Source: c:@S@AIS_TexturedShape@F@TextureMapState#1
 // Source: c:@S@AIS_TexturedShape@F@TextureModulate#1
 // Source: c:@S@AIS_TexturedShape@F@TextureOrigin#1
+// Source: c:@S@AIS_TexturedShape@F@TexturePixMap#1
 // Source: c:@S@AIS_TexturedShape@F@TextureRepeat#1
 // Source: c:@S@AIS_TexturedShape@F@TextureScale#1
 // Source: c:@S@AIS_TexturedShape@F@TextureScaleU#1
@@ -591,6 +666,7 @@
 // Source: c:@S@AIS_TexturedShape@F@UpdateAttributes#
 // Source: c:@S@AIS_TexturedShape@F@VRepeat#1
 // Source: c:@S@AIS_Triangulation@F@AIS_Triangulation#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#
+// Source: c:@S@AIS_Triangulation@F@DynamicType#1
 // Source: c:@S@AIS_Triangulation@F@GetTriangulation#1
 // Source: c:@S@AIS_Triangulation@F@HasVertexColors#1
 // Source: c:@S@AIS_Triangulation@F@SetTransparency#d#
@@ -599,7 +675,9 @@
 // Source: c:@S@AIS_Trihedron@F@AIS_Trihedron#&1$@N@opencascade@S@handle>#$@S@Geom_Axis2Placement#
 // Source: c:@S@AIS_Trihedron@F@AcceptDisplayMode#I#1
 // Source: c:@S@AIS_Trihedron@F@ClearSelected#
+// Source: c:@S@AIS_Trihedron@F@Component#1
 // Source: c:@S@AIS_Trihedron@F@DatumDisplayMode#1
+// Source: c:@S@AIS_Trihedron@F@DynamicType#1
 // Source: c:@S@AIS_Trihedron@F@HasArrowColor#1
 // Source: c:@S@AIS_Trihedron@F@HasOwnSize#1
 // Source: c:@S@AIS_Trihedron@F@HasTextColor#1
@@ -618,10 +696,12 @@
 // Source: c:@S@AIS_Trihedron@F@UnsetSize#
 // Source: c:@S@AIS_TrihedronOwner@F@AIS_TrihedronOwner#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#$@E@Prs3d_DatumParts#I#
 // Source: c:@S@AIS_TrihedronOwner@F@DatumPart#1
+// Source: c:@S@AIS_TrihedronOwner@F@DynamicType#1
 // Source: c:@S@AIS_TrihedronOwner@F@HilightWithColor#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#I#
 // Source: c:@S@AIS_TrihedronOwner@F@IsHilighted#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#1
 // Source: c:@S@AIS_TrihedronOwner@F@Unhilight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@AIS_TypeFilter@F@AIS_TypeFilter#$@E@AIS_KindOfInteractive#
+// Source: c:@S@AIS_TypeFilter@F@DynamicType#1
 // Source: c:@S@AIS_TypeFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@AIS_ViewCube@F@AIS_ViewCube#
 // Source: c:@S@AIS_ViewCube@F@AcceptDisplayMode#I#1
@@ -630,13 +710,17 @@
 // Source: c:@S@AIS_ViewCube@F@AxesRadius#1
 // Source: c:@S@AIS_ViewCube@F@AxesSphereRadius#1
 // Source: c:@S@AIS_ViewCube@F@BoxCornerMinSize#1
+// Source: c:@S@AIS_ViewCube@F@BoxCornerStyle#1
 // Source: c:@S@AIS_ViewCube@F@BoxEdgeGap#1
 // Source: c:@S@AIS_ViewCube@F@BoxEdgeMinSize#1
+// Source: c:@S@AIS_ViewCube@F@BoxEdgeStyle#1
 // Source: c:@S@AIS_ViewCube@F@BoxFacetExtension#1
+// Source: c:@S@AIS_ViewCube@F@BoxSideStyle#1
 // Source: c:@S@AIS_ViewCube@F@BoxTransparency#1
 // Source: c:@S@AIS_ViewCube@F@ClearSelected#
 // Source: c:@S@AIS_ViewCube@F@ComputeSelection#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Selection#I#
 // Source: c:@S@AIS_ViewCube@F@Duration#1
+// Source: c:@S@AIS_ViewCube@F@DynamicType#1
 // Source: c:@S@AIS_ViewCube@F@FontHeight#1
 // Source: c:@S@AIS_ViewCube@F@GlobalSelOwner#1
 // Source: c:@S@AIS_ViewCube@F@HandleClick#&1$@N@opencascade@S@handle>#$@S@AIS_ViewCubeOwner#
@@ -684,17 +768,26 @@
 // Source: c:@S@AIS_ViewCube@F@UnsetMaterial#
 // Source: c:@S@AIS_ViewCube@F@UnsetTransparency#
 // Source: c:@S@AIS_ViewCube@F@UpdateAnimation#b#
+// Source: c:@S@AIS_ViewCube@F@ViewAnimation#1
 // Source: c:@S@AIS_ViewCubeOwner@F@AIS_ViewCubeOwner#&1$@N@opencascade@S@handle>#$@S@AIS_ViewCube#$@E@V3d_TypeOfOrientation#I#
+// Source: c:@S@AIS_ViewCubeOwner@F@DynamicType#1
 // Source: c:@S@AIS_ViewCubeOwner@F@IsForcedHilight#1
 // Source: c:@S@AIS_ViewCubeOwner@F@MainOrientation#1
 // Source: c:@S@AIS_ViewCubeSensitive@F@AIS_ViewCubeSensitive#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ArrayOfTriangles#
+// Source: c:@S@AIS_ViewCubeSensitive@F@DynamicType#1
 // Source: c:@S@AIS_XRTrackedDevice@F@AIS_XRTrackedDevice#
 // Source: c:@S@AIS_XRTrackedDevice@F@AIS_XRTrackedDevice#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ArrayOfTriangles#&1$@N@opencascade@S@handle>#$@S@Image_Texture#
+// Source: c:@S@AIS_XRTrackedDevice@F@DynamicType#1
+// Source: c:@S@AIS_XRTrackedDevice@F@LaserLength#1
 // Source: c:@S@AIS_XRTrackedDevice@F@Role#1
+// Source: c:@S@AIS_XRTrackedDevice@F@SetLaserLength#f#
 // Source: c:@S@AIS_XRTrackedDevice@F@SetRole#$@E@Aspect_XRTrackedDeviceRole#
+// Source: c:@S@AIS_XRTrackedDevice@F@SetUnitFactor#f#
+// Source: c:@S@AIS_XRTrackedDevice@F@UnitFactor#1
 // Source: c:@S@Aspect_CircularGrid@F@AngleEnd#1
 // Source: c:@S@Aspect_CircularGrid@F@AngleStart#1
 // Source: c:@S@Aspect_CircularGrid@F@DivisionNumber#1
+// Source: c:@S@Aspect_CircularGrid@F@DynamicType#1
 // Source: c:@S@Aspect_CircularGrid@F@Init#
 // Source: c:@S@Aspect_CircularGrid@F@IsArc#1
 // Source: c:@S@Aspect_CircularGrid@F@Radius#1
@@ -707,10 +800,13 @@
 // Source: c:@S@Aspect_CircularGrid@F@SetZOffset#d#
 // Source: c:@S@Aspect_CircularGrid@F@ZOffset#1
 // Source: c:@S@Aspect_DisplayConnection@F@Aspect_DisplayConnection#
+// Source: c:@S@Aspect_DisplayConnection@F@DynamicType#1
+// Source: c:@S@Aspect_DisplayConnection@F@GetAtom#$@E@Aspect_XAtom#1
 // Source: c:@S@Aspect_DisplayConnection@F@IsOwnDisplay#1
 // Source: c:@S@Aspect_Grid@F@Activate#
 // Source: c:@S@Aspect_Grid@F@Deactivate#
 // Source: c:@S@Aspect_Grid@F@DrawMode#1
+// Source: c:@S@Aspect_Grid@F@DynamicType#1
 // Source: c:@S@Aspect_Grid@F@IsActive#1
 // Source: c:@S@Aspect_Grid@F@Rotate#d#
 // Source: c:@S@Aspect_Grid@F@RotationAngle#1
@@ -724,6 +820,7 @@
 // Source: c:@S@Aspect_NeutralWindow@F@Aspect_NeutralWindow#
 // Source: c:@S@Aspect_NeutralWindow@F@DoMapping#1
 // Source: c:@S@Aspect_NeutralWindow@F@DoResize#
+// Source: c:@S@Aspect_NeutralWindow@F@DynamicType#1
 // Source: c:@S@Aspect_NeutralWindow@F@IsMapped#1
 // Source: c:@S@Aspect_NeutralWindow@F@Map#1
 // Source: c:@S@Aspect_NeutralWindow@F@Ratio#1
@@ -733,6 +830,7 @@
 // Source: c:@S@Aspect_NeutralWindow@F@Unmap#1
 // Source: c:@S@Aspect_OpenVRSession@F@Aspect_OpenVRSession#
 // Source: c:@S@Aspect_OpenVRSession@F@Close#
+// Source: c:@S@Aspect_OpenVRSession@F@DynamicType#1
 // Source: c:@S@Aspect_OpenVRSession@F@HasProjectionFrustums#1
 // Source: c:@S@Aspect_OpenVRSession@F@IsOpen#1
 // Source: c:@S@Aspect_OpenVRSession@F@NamedTrackedDevice#$@E@Aspect_XRTrackedDeviceRole#1
@@ -740,6 +838,7 @@
 // Source: c:@S@Aspect_OpenVRSession@F@ProcessEvents#
 // Source: c:@S@Aspect_OpenVRSession@F@SetTrackingOrigin#$@S@Aspect_XRSession@E@TrackingUniverseOrigin#
 // Source: c:@S@Aspect_OpenVRSession@F@WaitPoses#
+// Source: c:@S@Aspect_RectangularGrid@F@DynamicType#1
 // Source: c:@S@Aspect_RectangularGrid@F@FirstAngle#1
 // Source: c:@S@Aspect_RectangularGrid@F@Init#
 // Source: c:@S@Aspect_RectangularGrid@F@SecondAngle#1
@@ -756,18 +855,38 @@
 // Source: c:@S@Aspect_RectangularGrid@F@YStep#1
 // Source: c:@S@Aspect_RectangularGrid@F@ZOffset#1
 // Source: c:@S@Aspect_VKeySet@F@Aspect_VKeySet#
+// Source: c:@S@Aspect_VKeySet@F@DownTime#i#1
+// Source: c:@S@Aspect_VKeySet@F@DynamicType#1
+// Source: c:@S@Aspect_VKeySet@F@IsFreeKey#i#1
+// Source: c:@S@Aspect_VKeySet@F@IsKeyDown#i#1
+// Source: c:@S@Aspect_VKeySet@F@KeyDown#i#d#d#
+// Source: c:@S@Aspect_VKeySet@F@KeyFromAxis#i#i#d#d#
+// Source: c:@S@Aspect_VKeySet@F@KeyUp#i#d#
+// Source: c:@S@Aspect_VKeySet@F@Modifiers#1
 // Source: c:@S@Aspect_VKeySet@F@Reset#
+// Source: c:@S@Aspect_VKeySet@F@TimeUp#i#1
 // Source: c:@S@Aspect_Window@F@BackgroundFillMethod#1
 // Source: c:@S@Aspect_Window@F@DevicePixelRatio#1
+// Source: c:@S@Aspect_Window@F@DisplayConnection#1
+// Source: c:@S@Aspect_Window@F@DynamicType#1
 // Source: c:@S@Aspect_Window@F@InvalidateContent#&1$@N@opencascade@S@handle>#$@S@Aspect_DisplayConnection#
 // Source: c:@S@Aspect_Window@F@IsVirtual#1
 // Source: c:@S@Aspect_Window@F@SetVirtual#b#
+// Source: c:@S@Aspect_XRAction@F@DynamicType#1
 // Source: c:@S@Aspect_XRAction@F@IsValid#1
+// Source: c:@S@Aspect_XRAction@F@RawHandle#1
+// Source: c:@S@Aspect_XRAction@F@SetRawHandle#k#
 // Source: c:@S@Aspect_XRAction@F@Type#1
 // Source: c:@S@Aspect_XRActionSet@F@AddAction#&1$@N@opencascade@S@handle>#$@S@Aspect_XRAction#
+// Source: c:@S@Aspect_XRActionSet@F@DynamicType#1
+// Source: c:@S@Aspect_XRActionSet@F@RawHandle#1
+// Source: c:@S@Aspect_XRActionSet@F@SetRawHandle#k#
 // Source: c:@S@Aspect_XRSession@F@AbortHapticVibrationAction#&1$@N@opencascade@S@handle>#$@S@Aspect_XRAction#
 // Source: c:@S@Aspect_XRSession@F@Aspect#1
+// Source: c:@S@Aspect_XRSession@F@DisplayFrequency#1
+// Source: c:@S@Aspect_XRSession@F@DynamicType#1
 // Source: c:@S@Aspect_XRSession@F@FieldOfView#1
+// Source: c:@S@Aspect_XRSession@F@GenericAction#$@E@Aspect_XRTrackedDeviceRole#$@E@Aspect_XRGenericAction#1
 // Source: c:@S@Aspect_XRSession@F@HasTrackedPose#I#1
 // Source: c:@S@Aspect_XRSession@F@IOD#1
 // Source: c:@S@Aspect_XRSession@F@SetTrackingOrigin#$@S@Aspect_XRSession@E@TrackingUniverseOrigin#
@@ -776,6 +895,7 @@
 // Source: c:@S@Aspect_XRSession@F@UnitFactor#1
 // Source: c:@S@Cocoa_Window@F@DoMapping#1
 // Source: c:@S@Cocoa_Window@F@DoResize#
+// Source: c:@S@Cocoa_Window@F@DynamicType#1
 // Source: c:@S@Cocoa_Window@F@InvalidateContent#&1$@N@opencascade@S@handle>#$@S@Aspect_DisplayConnection#
 // Source: c:@S@Cocoa_Window@F@IsMapped#1
 // Source: c:@S@Cocoa_Window@F@Map#1
@@ -784,6 +904,7 @@
 // Source: c:@S@D3DHost_FrameBuffer@F@BindBuffer#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@D3DHost_FrameBuffer@F@D3DHost_FrameBuffer#
 // Source: c:@S@D3DHost_FrameBuffer@F@D3dFallback#1
+// Source: c:@S@D3DHost_FrameBuffer@F@DynamicType#1
 // Source: c:@S@D3DHost_FrameBuffer@F@IsSRGBReady#1
 // Source: c:@S@D3DHost_FrameBuffer@F@LockSurface#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@D3DHost_FrameBuffer@F@SetSRGBReady#b#
@@ -791,25 +912,40 @@
 // Source: c:@S@D3DHost_FrameBuffer@F@registerD3dBuffer#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@D3DHost_GraphicDriver@F@CreateView#&1$@N@opencascade@S@handle>#$@S@Graphic3d_StructureManager#
 // Source: c:@S@D3DHost_GraphicDriver@F@D3DHost_GraphicDriver#
+// Source: c:@S@D3DHost_GraphicDriver@F@DynamicType#1
 // Source: c:@S@D3DHost_GraphicDriverFactory@F@CreateDriver#&1$@N@opencascade@S@handle>#$@S@Aspect_DisplayConnection#
 // Source: c:@S@D3DHost_GraphicDriverFactory@F@D3DHost_GraphicDriverFactory#
+// Source: c:@S@D3DHost_GraphicDriverFactory@F@DynamicType#1
+// Source: c:@S@D3DHost_View@F@D3dWglBuffer#1
+// Source: c:@S@D3DHost_View@F@DynamicType#1
 // Source: c:@S@D3DHost_View@F@Redraw#
 // Source: c:@S@D3DHost_View@F@RedrawImmediate#
 // Source: c:@S@D3DHost_View@F@ReleaseGlResources#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@D3DHost_View@F@Resized#
 // Source: c:@S@D3DHost_View@F@isD3dEx#1
+// Source: c:@S@Font_FTFont@F@Ascender#1
+// Source: c:@S@Font_FTFont@F@Descender#1
+// Source: c:@S@Font_FTFont@F@DynamicType#1
 // Source: c:@S@Font_FTFont@F@Font_FTFont#&1$@N@opencascade@S@handle>#$@S@Font_FTLibrary#
+// Source: c:@S@Font_FTFont@F@GlyphMaxSizeX#b#1
+// Source: c:@S@Font_FTFont@F@GlyphMaxSizeY#b#1
 // Source: c:@S@Font_FTFont@F@GlyphsNumber#b#1
 // Source: c:@S@Font_FTFont@F@IsSingleStrokeFont#1
 // Source: c:@S@Font_FTFont@F@IsValid#1
+// Source: c:@S@Font_FTFont@F@LineSpacing#1
+// Source: c:@S@Font_FTFont@F@PointSize#1
 // Source: c:@S@Font_FTFont@F@Release#
 // Source: c:@S@Font_FTFont@F@SetSingleStrokeFont#b#
 // Source: c:@S@Font_FTFont@F@SetUseUnicodeSubsetFallback#b#
+// Source: c:@S@Font_FTFont@F@SetWidthScaling#f#
 // Source: c:@S@Font_FTFont@F@ToSynthesizeItalic#1
 // Source: c:@S@Font_FTFont@F@ToUseUnicodeSubsetFallback#1
+// Source: c:@S@Font_FTFont@F@WidthScaling#1
+// Source: c:@S@Font_FTLibrary@F@DynamicType#1
 // Source: c:@S@Font_FTLibrary@F@Font_FTLibrary#
 // Source: c:@S@Font_FTLibrary@F@IsValid#1
 // Source: c:@S@Font_FontMgr@F@ClearFontDataBase#
+// Source: c:@S@Font_FontMgr@F@DynamicType#1
 // Source: c:@S@Font_FontMgr@F@FindFallbackFont#$@E@Font_UnicodeSubset#$@E@Font_FontAspect#1
 // Source: c:@S@Font_FontMgr@F@GetFont#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#$@E@Font_FontAspect#I#1
 // Source: c:@S@Font_FontMgr@F@InitFontDataBase#
@@ -818,28 +954,41 @@
 // Source: c:@S@Font_FontMgr@F@SetTraceAliases#b#
 // Source: c:@S@Font_FontMgr@F@ToPrintErrors#1
 // Source: c:@S@Font_FontMgr@F@ToTraceAliases#1
+// Source: c:@S@Font_SystemFont@F@DynamicType#1
 // Source: c:@S@Font_SystemFont@F@FontFaceId#$@E@Font_FontAspect#1
 // Source: c:@S@Font_SystemFont@F@HasFontAspect#$@E@Font_FontAspect#1
 // Source: c:@S@Font_SystemFont@F@IsEqual#&1$@N@opencascade@S@handle>#$@S@Font_SystemFont#1
 // Source: c:@S@Font_SystemFont@F@IsSingleStrokeFont#1
 // Source: c:@S@Font_SystemFont@F@SetSingleStrokeFont#b#
+// Source: c:@S@Font_TextFormatter@F@DynamicType#1
+// Source: c:@S@Font_TextFormatter@F@FirstPosition#1
 // Source: c:@S@Font_TextFormatter@F@Font_TextFormatter#
 // Source: c:@S@Font_TextFormatter@F@Format#
 // Source: c:@S@Font_TextFormatter@F@HasWrapping#1
 // Source: c:@S@Font_TextFormatter@F@HorizontalTextAlignment#1
 // Source: c:@S@Font_TextFormatter@F@IsLFSymbol#I#1
+// Source: c:@S@Font_TextFormatter@F@LineHeight#I#1
 // Source: c:@S@Font_TextFormatter@F@LineIndex#I#1
 // Source: c:@S@Font_TextFormatter@F@LinePositionIndex#I#1
+// Source: c:@S@Font_TextFormatter@F@LineWidth#I#1
+// Source: c:@S@Font_TextFormatter@F@MaximumSymbolWidth#1
 // Source: c:@S@Font_TextFormatter@F@Reset#
+// Source: c:@S@Font_TextFormatter@F@ResultHeight#1
+// Source: c:@S@Font_TextFormatter@F@ResultWidth#1
 // Source: c:@S@Font_TextFormatter@F@SetWordWrapping#b#
+// Source: c:@S@Font_TextFormatter@F@SetWrapping#f#
 // Source: c:@S@Font_TextFormatter@F@SetupAlignment#$@E@Graphic3d_HorizontalTextAlignment#$@E@Graphic3d_VerticalTextAlignment#
 // Source: c:@S@Font_TextFormatter@F@TabSize#1
 // Source: c:@S@Font_TextFormatter@F@VerticalTextAlignment#1
 // Source: c:@S@Font_TextFormatter@F@WordWrapping#1
+// Source: c:@S@Font_TextFormatter@F@Wrapping#1
+// Source: c:@S@Graphic3d_ArrayOfPoints@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfPoints@F@Graphic3d_ArrayOfPoints#I#I#
 // Source: c:@S@Graphic3d_ArrayOfPoints@F@Graphic3d_ArrayOfPoints#I#b#b#
+// Source: c:@S@Graphic3d_ArrayOfPolygons@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfPolygons@F@Graphic3d_ArrayOfPolygons#I#I#I#I#
 // Source: c:@S@Graphic3d_ArrayOfPolygons@F@Graphic3d_ArrayOfPolygons#I#I#I#b#b#b#b#
+// Source: c:@S@Graphic3d_ArrayOfPolylines@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfPolylines@F@Graphic3d_ArrayOfPolylines#I#I#I#I#
 // Source: c:@S@Graphic3d_ArrayOfPolylines@F@Graphic3d_ArrayOfPolylines#I#I#I#b#b#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddBound#I#
@@ -861,9 +1010,16 @@
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#d#d#d#d#d#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#d#d#d#d#d#d#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#d#d#d#d#d#d#d#d#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#f#f#f#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#f#f#f#f#f#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#f#f#f#f#f#f#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#f#f#f#f#f#f#f#f#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@Attributes#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@Bound#I#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@BoundNumber#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@BoundNumberAllocated#1
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@Bounds#1
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@Edge#I#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@EdgeNumber#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@EdgeNumberAllocated#1
@@ -871,6 +1027,7 @@
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@HasVertexColors#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@HasVertexNormals#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@HasVertexTexels#1
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@Indices#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@IsValid#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@ItemNumber#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetBoundColor#I#d#d#d#
@@ -879,34 +1036,51 @@
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertexNormal#I#d#d#d#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertexTexel#I#d#d#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertice#I#&1$@S@gp_Pnt#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertice#I#f#f#f#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@Type#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@VertexNumber#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@VertexNumberAllocated#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@Vertice#I#1
+// Source: c:@S@Graphic3d_ArrayOfQuadrangleStrips@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfQuadrangleStrips@F@Graphic3d_ArrayOfQuadrangleStrips#I#I#I#
 // Source: c:@S@Graphic3d_ArrayOfQuadrangleStrips@F@Graphic3d_ArrayOfQuadrangleStrips#I#I#b#b#b#b#
+// Source: c:@S@Graphic3d_ArrayOfQuadrangles@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfQuadrangles@F@Graphic3d_ArrayOfQuadrangles#I#I#I#
 // Source: c:@S@Graphic3d_ArrayOfQuadrangles@F@Graphic3d_ArrayOfQuadrangles#I#I#b#b#b#
+// Source: c:@S@Graphic3d_ArrayOfSegments@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfSegments@F@Graphic3d_ArrayOfSegments#I#I#I#
 // Source: c:@S@Graphic3d_ArrayOfSegments@F@Graphic3d_ArrayOfSegments#I#I#b#
+// Source: c:@S@Graphic3d_ArrayOfTriangleFans@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfTriangleFans@F@Graphic3d_ArrayOfTriangleFans#I#I#I#
 // Source: c:@S@Graphic3d_ArrayOfTriangleFans@F@Graphic3d_ArrayOfTriangleFans#I#I#b#b#b#b#
+// Source: c:@S@Graphic3d_ArrayOfTriangleStrips@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfTriangleStrips@F@Graphic3d_ArrayOfTriangleStrips#I#I#I#
 // Source: c:@S@Graphic3d_ArrayOfTriangleStrips@F@Graphic3d_ArrayOfTriangleStrips#I#I#b#b#b#b#
+// Source: c:@S@Graphic3d_ArrayOfTriangles@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfTriangles@F@Graphic3d_ArrayOfTriangles#I#I#I#
 // Source: c:@S@Graphic3d_ArrayOfTriangles@F@Graphic3d_ArrayOfTriangles#I#I#b#b#b#
+// Source: c:@S@Graphic3d_AspectFillArea3d@F@DynamicType#1
 // Source: c:@S@Graphic3d_AspectFillArea3d@F@Edge#1
 // Source: c:@S@Graphic3d_AspectFillArea3d@F@Graphic3d_AspectFillArea3d#
+// Source: c:@S@Graphic3d_AspectLine3d@F@DynamicType#1
 // Source: c:@S@Graphic3d_AspectLine3d@F@Graphic3d_AspectLine3d#
 // Source: c:@S@Graphic3d_AspectLine3d@F@SetType#$@E@Aspect_TypeOfLine#
 // Source: c:@S@Graphic3d_AspectLine3d@F@SetWidth#d#
+// Source: c:@S@Graphic3d_AspectLine3d@F@SetWidth#f#
 // Source: c:@S@Graphic3d_AspectLine3d@F@Type#1
+// Source: c:@S@Graphic3d_AspectLine3d@F@Width#1
+// Source: c:@S@Graphic3d_AspectMarker3d@F@DynamicType#1
+// Source: c:@S@Graphic3d_AspectMarker3d@F@GetMarkerImage#1
 // Source: c:@S@Graphic3d_AspectMarker3d@F@Graphic3d_AspectMarker3d#
 // Source: c:@S@Graphic3d_AspectMarker3d@F@Graphic3d_AspectMarker3d#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
+// Source: c:@S@Graphic3d_AspectMarker3d@F@Scale#1
 // Source: c:@S@Graphic3d_AspectMarker3d@F@SetScale#d#
+// Source: c:@S@Graphic3d_AspectMarker3d@F@SetScale#f#
 // Source: c:@S@Graphic3d_AspectMarker3d@F@SetType#$@E@Aspect_TypeOfMarker#
 // Source: c:@S@Graphic3d_AspectMarker3d@F@Type#1
 // Source: c:@S@Graphic3d_AspectText3d@F@DisplayType#1
+// Source: c:@S@Graphic3d_AspectText3d@F@DynamicType#1
+// Source: c:@S@Graphic3d_AspectText3d@F@GetTextAngle#1
 // Source: c:@S@Graphic3d_AspectText3d@F@GetTextFontAspect#1
 // Source: c:@S@Graphic3d_AspectText3d@F@GetTextZoomable#1
 // Source: c:@S@Graphic3d_AspectText3d@F@Graphic3d_AspectText3d#
@@ -915,16 +1089,25 @@
 // Source: c:@S@Graphic3d_AspectText3d@F@SetTextAngle#d#
 // Source: c:@S@Graphic3d_AspectText3d@F@Style#1
 // Source: c:@S@Graphic3d_Aspects@F@AllowBackFace#
+// Source: c:@S@Graphic3d_Aspects@F@AlphaCutoff#1
 // Source: c:@S@Graphic3d_Aspects@F@AlphaMode#1
 // Source: c:@S@Graphic3d_Aspects@F@BackFace#1
 // Source: c:@S@Graphic3d_Aspects@F@Distinguish#1
+// Source: c:@S@Graphic3d_Aspects@F@DynamicType#1
 // Source: c:@S@Graphic3d_Aspects@F@EdgeLineType#1
+// Source: c:@S@Graphic3d_Aspects@F@EdgeWidth#1
 // Source: c:@S@Graphic3d_Aspects@F@FaceCulling#1
 // Source: c:@S@Graphic3d_Aspects@F@Graphic3d_Aspects#
+// Source: c:@S@Graphic3d_Aspects@F@HatchStyle#1
 // Source: c:@S@Graphic3d_Aspects@F@InteriorStyle#1
 // Source: c:@S@Graphic3d_Aspects@F@IsMarkerSprite#1
 // Source: c:@S@Graphic3d_Aspects@F@IsTextZoomable#1
+// Source: c:@S@Graphic3d_Aspects@F@LinePattern#1
+// Source: c:@S@Graphic3d_Aspects@F@LineStippleFactor#1
 // Source: c:@S@Graphic3d_Aspects@F@LineType#1
+// Source: c:@S@Graphic3d_Aspects@F@LineWidth#1
+// Source: c:@S@Graphic3d_Aspects@F@MarkerImage#1
+// Source: c:@S@Graphic3d_Aspects@F@MarkerScale#1
 // Source: c:@S@Graphic3d_Aspects@F@MarkerType#1
 // Source: c:@S@Graphic3d_Aspects@F@SetDistinguish#b#
 // Source: c:@S@Graphic3d_Aspects@F@SetDistinguishOff#
@@ -939,13 +1122,19 @@
 // Source: c:@S@Graphic3d_Aspects@F@SetHatchStyle#$@E@Aspect_HatchStyle#
 // Source: c:@S@Graphic3d_Aspects@F@SetHatchStyle#&1$@N@opencascade@S@handle>#$@S@Graphic3d_HatchStyle#
 // Source: c:@S@Graphic3d_Aspects@F@SetInteriorStyle#$@E@Aspect_InteriorStyle#
+// Source: c:@S@Graphic3d_Aspects@F@SetLinePattern#s#
+// Source: c:@S@Graphic3d_Aspects@F@SetLineStippleFactor#s#
 // Source: c:@S@Graphic3d_Aspects@F@SetLineType#$@E@Aspect_TypeOfLine#
+// Source: c:@S@Graphic3d_Aspects@F@SetLineWidth#f#
 // Source: c:@S@Graphic3d_Aspects@F@SetMarkerImage#&1$@N@opencascade@S@handle>#$@S@Graphic3d_MarkerImage#
+// Source: c:@S@Graphic3d_Aspects@F@SetMarkerScale#f#
 // Source: c:@S@Graphic3d_Aspects@F@SetMarkerType#$@E@Aspect_TypeOfMarker#
+// Source: c:@S@Graphic3d_Aspects@F@SetPolygonOffsets#I#f#f#
 // Source: c:@S@Graphic3d_Aspects@F@SetShaderProgram#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ShaderProgram#
 // Source: c:@S@Graphic3d_Aspects@F@SetShadingModel#$@E@Graphic3d_TypeOfShadingModel#
 // Source: c:@S@Graphic3d_Aspects@F@SetSkipFirstEdge#b#
 // Source: c:@S@Graphic3d_Aspects@F@SetSuppressBackFaces#b#
+// Source: c:@S@Graphic3d_Aspects@F@SetTextAngle#f#
 // Source: c:@S@Graphic3d_Aspects@F@SetTextDisplayType#$@E@Aspect_TypeOfDisplayText#
 // Source: c:@S@Graphic3d_Aspects@F@SetTextFont#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#
 // Source: c:@S@Graphic3d_Aspects@F@SetTextFontAspect#$@E@Font_FontAspect#
@@ -957,19 +1146,24 @@
 // Source: c:@S@Graphic3d_Aspects@F@SetTextureMapOn#b#
 // Source: c:@S@Graphic3d_Aspects@F@SetTextureSet#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureSet#
 // Source: c:@S@Graphic3d_Aspects@F@SetUseVertexColorForBackFaces#b#
+// Source: c:@S@Graphic3d_Aspects@F@ShaderProgram#1
 // Source: c:@S@Graphic3d_Aspects@F@ShadingModel#1
 // Source: c:@S@Graphic3d_Aspects@F@SuppressBackFace#
+// Source: c:@S@Graphic3d_Aspects@F@TextAngle#1
 // Source: c:@S@Graphic3d_Aspects@F@TextDisplayType#1
+// Source: c:@S@Graphic3d_Aspects@F@TextFont#1
 // Source: c:@S@Graphic3d_Aspects@F@TextFontAspect#1
 // Source: c:@S@Graphic3d_Aspects@F@TextStyle#1
 // Source: c:@S@Graphic3d_Aspects@F@TextureMap#1
 // Source: c:@S@Graphic3d_Aspects@F@TextureMapState#1
+// Source: c:@S@Graphic3d_Aspects@F@TextureSet#1
 // Source: c:@S@Graphic3d_Aspects@F@ToDrawEdges#1
 // Source: c:@S@Graphic3d_Aspects@F@ToDrawSilhouette#1
 // Source: c:@S@Graphic3d_Aspects@F@ToMapTexture#1
 // Source: c:@S@Graphic3d_Aspects@F@ToSkipFirstEdge#1
 // Source: c:@S@Graphic3d_Aspects@F@ToSuppressBackFaces#1
 // Source: c:@S@Graphic3d_Aspects@F@ToUseVertexColorForBackFaces#1
+// Source: c:@S@Graphic3d_AttribBuffer@F@DynamicType#1
 // Source: c:@S@Graphic3d_AttribBuffer@F@Graphic3d_AttribBuffer#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#
 // Source: c:@S@Graphic3d_AttribBuffer@F@Invalidate#
 // Source: c:@S@Graphic3d_AttribBuffer@F@Invalidate#I#
@@ -980,9 +1174,11 @@
 // Source: c:@S@Graphic3d_AttribBuffer@F@SetInterleaved#b#
 // Source: c:@S@Graphic3d_AttribBuffer@F@SetMutable#b#
 // Source: c:@S@Graphic3d_AttribBuffer@F@Validate#
+// Source: c:@S@Graphic3d_BoundBuffer@F@DynamicType#1
 // Source: c:@S@Graphic3d_BoundBuffer@F@Graphic3d_BoundBuffer#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#
 // Source: c:@S@Graphic3d_BoundBuffer@F@Init#I#b#
 // Source: c:@S@Graphic3d_Buffer@F@AttributeOffset#I#1
+// Source: c:@S@Graphic3d_Buffer@F@DynamicType#1
 // Source: c:@S@Graphic3d_Buffer@F@FindAttribute#$@E@Graphic3d_TypeOfAttribute#1
 // Source: c:@S@Graphic3d_Buffer@F@Graphic3d_Buffer#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#
 // Source: c:@S@Graphic3d_Buffer@F@Invalidate#
@@ -992,11 +1188,14 @@
 // Source: c:@S@Graphic3d_Buffer@F@Validate#
 // Source: c:@S@Graphic3d_Buffer@F@release#
 // Source: c:@S@Graphic3d_CLight@F@CopyFrom#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#
+// Source: c:@S@Graphic3d_CLight@F@DisplayPosition#1
+// Source: c:@S@Graphic3d_CLight@F@DynamicType#1
 // Source: c:@S@Graphic3d_CLight@F@Graphic3d_CLight#$@E@Graphic3d_TypeOfLightSource#
 // Source: c:@S@Graphic3d_CLight@F@HasRange#1
 // Source: c:@S@Graphic3d_CLight@F@Headlight#1
 // Source: c:@S@Graphic3d_CLight@F@IsEnabled#1
 // Source: c:@S@Graphic3d_CLight@F@IsHeadlight#1
+// Source: c:@S@Graphic3d_CLight@F@Revision#1
 // Source: c:@S@Graphic3d_CLight@F@SetCastShadows#b#
 // Source: c:@S@Graphic3d_CLight@F@SetDirection#d#d#d#
 // Source: c:@S@Graphic3d_CLight@F@SetDisplayPosition#&1$@S@gp_Pnt#
@@ -1004,11 +1203,18 @@
 // Source: c:@S@Graphic3d_CLight@F@SetHeadlight#b#
 // Source: c:@S@Graphic3d_CLight@F@SetPosition#&1$@S@gp_Pnt#
 // Source: c:@S@Graphic3d_CLight@F@SetPosition#d#d#d#
+// Source: c:@S@Graphic3d_CLight@F@SetSmoothAngle#f#
+// Source: c:@S@Graphic3d_CLight@F@SetSmoothRadius#f#
+// Source: c:@S@Graphic3d_CLight@F@Smoothness#1
 // Source: c:@S@Graphic3d_CLight@F@ToCastShadows#1
 // Source: c:@S@Graphic3d_CLight@F@Type#1
 // Source: c:@S@Graphic3d_CStructure@F@BndBoxClipCheck#1
+// Source: c:@S@Graphic3d_CStructure@F@ClipPlanes#1
+// Source: c:@S@Graphic3d_CStructure@F@DynamicType#1
+// Source: c:@S@Graphic3d_CStructure@F@GraphicDriver#1
 // Source: c:@S@Graphic3d_CStructure@F@HasGroupFlipping#1
 // Source: c:@S@Graphic3d_CStructure@F@HasGroupTransformPersistence#1
+// Source: c:@S@Graphic3d_CStructure@F@HighlightStyle#1
 // Source: c:@S@Graphic3d_CStructure@F@Identification#1
 // Source: c:@S@Graphic3d_CStructure@F@IsAlwaysRendered#1
 // Source: c:@S@Graphic3d_CStructure@F@IsCulled#1
@@ -1027,19 +1233,27 @@
 // Source: c:@S@Graphic3d_CStructure@F@SetTransformPersistence#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TransformPers#
 // Source: c:@S@Graphic3d_CStructure@F@SetTransformation#&1$@N@opencascade@S@handle>#$@S@TopLoc_Datum3D#
 // Source: c:@S@Graphic3d_CStructure@F@SetZLayer#I#
+// Source: c:@S@Graphic3d_CStructure@F@TransformPersistence#1
+// Source: c:@S@Graphic3d_CStructure@F@Transformation#1
 // Source: c:@S@Graphic3d_CStructure@F@ZLayer#1
 // Source: c:@S@Graphic3d_CStructure@F@updateLayerTransformation#
 // Source: c:@S@Graphic3d_CView@F@Activate#
 // Source: c:@S@Graphic3d_CView@F@AddSubview#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CView#
 // Source: c:@S@Graphic3d_CView@F@BackfacingModel#1
+// Source: c:@S@Graphic3d_CView@F@BackgroundCubeMap#1
+// Source: c:@S@Graphic3d_CView@F@BackgroundImage#
 // Source: c:@S@Graphic3d_CView@F@BackgroundType#1
+// Source: c:@S@Graphic3d_CView@F@BaseXRCamera#1
+// Source: c:@S@Graphic3d_CView@F@Camera#1
 // Source: c:@S@Graphic3d_CView@F@Compute#
 // Source: c:@S@Graphic3d_CView@F@ComputedMode#1
 // Source: c:@S@Graphic3d_CView@F@ConsiderZoomPersistenceObjects#
 // Source: c:@S@Graphic3d_CView@F@CopySettings#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CView#
 // Source: c:@S@Graphic3d_CView@F@Deactivate#
+// Source: c:@S@Graphic3d_CView@F@DynamicType#1
 // Source: c:@S@Graphic3d_CView@F@GraduatedTrihedronErase#
 // Source: c:@S@Graphic3d_CView@F@GridErase#
+// Source: c:@S@Graphic3d_CView@F@IBLCubeMap#1
 // Source: c:@S@Graphic3d_CView@F@Identification#1
 // Source: c:@S@Graphic3d_CView@F@InitXR#
 // Source: c:@S@Graphic3d_CView@F@InvalidateZLayerBoundingBox#I#
@@ -1050,6 +1264,7 @@
 // Source: c:@S@Graphic3d_CView@F@IsSubview#1
 // Source: c:@S@Graphic3d_CView@F@IsSubviewComposer#1
 // Source: c:@S@Graphic3d_CView@F@NumberOfDisplayedStructures#1
+// Source: c:@S@Graphic3d_CView@F@PosedXRCamera#1
 // Source: c:@S@Graphic3d_CView@F@ProcessXRInput#
 // Source: c:@S@Graphic3d_CView@F@ReCompute#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
 // Source: c:@S@Graphic3d_CView@F@ReleaseXR#
@@ -1071,15 +1286,18 @@
 // Source: c:@S@Graphic3d_CView@F@SetZLayerTarget#I#
 // Source: c:@S@Graphic3d_CView@F@SetupXRPosedCamera#
 // Source: c:@S@Graphic3d_CView@F@ShadingModel#1
+// Source: c:@S@Graphic3d_CView@F@StructureManager#1
 // Source: c:@S@Graphic3d_CView@F@SubviewCorner#1
 // Source: c:@S@Graphic3d_CView@F@SubviewResized#&1$@N@opencascade@S@handle>#$@S@Aspect_NeutralWindow#
 // Source: c:@S@Graphic3d_CView@F@SynchronizeXRBaseToPosedCamera#
 // Source: c:@S@Graphic3d_CView@F@SynchronizeXRPosedToBaseCamera#
+// Source: c:@S@Graphic3d_CView@F@TextureEnv#1
 // Source: c:@S@Graphic3d_CView@F@ToFlipOutput#1
 // Source: c:@S@Graphic3d_CView@F@UnitFactor#1
 // Source: c:@S@Graphic3d_CView@F@UnsetXRPosedCamera#
 // Source: c:@S@Graphic3d_CView@F@Update#I#
 // Source: c:@S@Graphic3d_CView@F@VisualizationType#1
+// Source: c:@S@Graphic3d_CView@F@XRSession#1
 // Source: c:@S@Graphic3d_CView@F@ZLayerRedrawMode#1
 // Source: c:@S@Graphic3d_CView@F@ZLayerTarget#1
 // Source: c:@S@Graphic3d_Camera@F@Aspect#1
@@ -1092,6 +1310,7 @@
 // Source: c:@S@Graphic3d_Camera@F@CopyMappingData#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@Graphic3d_Camera@F@CopyOrientationData#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@Graphic3d_Camera@F@Distance#1
+// Source: c:@S@Graphic3d_Camera@F@DynamicType#1
 // Source: c:@S@Graphic3d_Camera@F@FOV2d#1
 // Source: c:@S@Graphic3d_Camera@F@FOVx#1
 // Source: c:@S@Graphic3d_Camera@F@FOVy#1
@@ -1112,6 +1331,7 @@
 // Source: c:@S@Graphic3d_Camera@F@NDC2dOffsetY#1
 // Source: c:@S@Graphic3d_Camera@F@OrthogonalizeUp#
 // Source: c:@S@Graphic3d_Camera@F@Project#&1$@S@gp_Pnt#1
+// Source: c:@S@Graphic3d_Camera@F@ProjectionState#1
 // Source: c:@S@Graphic3d_Camera@F@ProjectionType#1
 // Source: c:@S@Graphic3d_Camera@F@ResetCustomProjection#
 // Source: c:@S@Graphic3d_Camera@F@Scale#1
@@ -1130,19 +1350,26 @@
 // Source: c:@S@Graphic3d_Camera@F@SetZRange#d#d#
 // Source: c:@S@Graphic3d_Camera@F@SetZeroToOneDepth#b#
 // Source: c:@S@Graphic3d_Camera@F@UnProject#&1$@S@gp_Pnt#1
+// Source: c:@S@Graphic3d_Camera@F@WorldViewState#1
 // Source: c:@S@Graphic3d_Camera@F@ZFar#1
 // Source: c:@S@Graphic3d_Camera@F@ZFocus#1
 // Source: c:@S@Graphic3d_Camera@F@ZFocusType#1
 // Source: c:@S@Graphic3d_Camera@F@ZNear#1
+// Source: c:@S@Graphic3d_ClipPlane@F@CappingAspect#1
+// Source: c:@S@Graphic3d_ClipPlane@F@CappingCustomHatch#1
 // Source: c:@S@Graphic3d_ClipPlane@F@CappingHatch#1
 // Source: c:@S@Graphic3d_ClipPlane@F@CappingTexture#1
+// Source: c:@S@Graphic3d_ClipPlane@F@ChainNextPlane#1
 // Source: c:@S@Graphic3d_ClipPlane@F@ChainPreviousPlane#1
 // Source: c:@S@Graphic3d_ClipPlane@F@Clone#1
+// Source: c:@S@Graphic3d_ClipPlane@F@DynamicType#1
 // Source: c:@S@Graphic3d_ClipPlane@F@Graphic3d_ClipPlane#
 // Source: c:@S@Graphic3d_ClipPlane@F@IsCapping#1
 // Source: c:@S@Graphic3d_ClipPlane@F@IsChain#1
 // Source: c:@S@Graphic3d_ClipPlane@F@IsHatchOn#1
 // Source: c:@S@Graphic3d_ClipPlane@F@IsOn#1
+// Source: c:@S@Graphic3d_ClipPlane@F@MCountAspect#1
+// Source: c:@S@Graphic3d_ClipPlane@F@MCountEquation#1
 // Source: c:@S@Graphic3d_ClipPlane@F@NbChainNextPlanes#1
 // Source: c:@S@Graphic3d_ClipPlane@F@SetCapping#b#
 // Source: c:@S@Graphic3d_ClipPlane@F@SetCappingAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_AspectFillArea3d#
@@ -1161,6 +1388,7 @@
 // Source: c:@S@Graphic3d_ClipPlane@F@ToUseObjectShader#1
 // Source: c:@S@Graphic3d_ClipPlane@F@ToUseObjectTexture#1
 // Source: c:@S@Graphic3d_CubeMap@F@CurrentSide#1
+// Source: c:@S@Graphic3d_CubeMap@F@DynamicType#1
 // Source: c:@S@Graphic3d_CubeMap@F@HasMipmaps#1
 // Source: c:@S@Graphic3d_CubeMap@F@More#1
 // Source: c:@S@Graphic3d_CubeMap@F@Next#
@@ -1168,11 +1396,17 @@
 // Source: c:@S@Graphic3d_CubeMap@F@SetZInversion#b#
 // Source: c:@S@Graphic3d_CubeMap@F@ZIsInverted#1
 // Source: c:@S@Graphic3d_CubeMapPacked@F@CompressedValue#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
+// Source: c:@S@Graphic3d_CubeMapPacked@F@DynamicType#1
 // Source: c:@S@Graphic3d_CubeMapPacked@F@Value#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
 // Source: c:@S@Graphic3d_CubeMapSeparate@F@CompressedValue#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
+// Source: c:@S@Graphic3d_CubeMapSeparate@F@DynamicType#1
 // Source: c:@S@Graphic3d_CubeMapSeparate@F@GetImage#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
 // Source: c:@S@Graphic3d_CubeMapSeparate@F@IsDone#1
 // Source: c:@S@Graphic3d_CubeMapSeparate@F@Value#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
+// Source: c:@S@Graphic3d_DataStructureManager@F@DynamicType#1
+// Source: c:@S@Graphic3d_Flipper@F@DynamicType#1
+// Source: c:@S@Graphic3d_FrameStats@F@CounterValue#$@E@Graphic3d_FrameStatsCounter#1
+// Source: c:@S@Graphic3d_FrameStats@F@DynamicType#1
 // Source: c:@S@Graphic3d_FrameStats@F@FrameDuration#1
 // Source: c:@S@Graphic3d_FrameStats@F@FrameEnd#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CView#b#
 // Source: c:@S@Graphic3d_FrameStats@F@FrameRate#1
@@ -1186,15 +1420,20 @@
 // Source: c:@S@Graphic3d_FrameStats@F@SetUpdateInterval#d#
 // Source: c:@S@Graphic3d_FrameStats@F@TimerValue#$@E@Graphic3d_FrameStatsTimer#1
 // Source: c:@S@Graphic3d_FrameStats@F@UpdateInterval#1
+// Source: c:@S@Graphic3d_GraphicDriver@F@DynamicType#1
+// Source: c:@S@Graphic3d_GraphicDriver@F@GetDisplayConnection#1
 // Source: c:@S@Graphic3d_GraphicDriver@F@InquireLightLimit#1
 // Source: c:@S@Graphic3d_GraphicDriver@F@InquirePlaneLimit#1
 // Source: c:@S@Graphic3d_GraphicDriver@F@InquireViewLimit#1
 // Source: c:@S@Graphic3d_GraphicDriver@F@NewIdentification#
 // Source: c:@S@Graphic3d_GraphicDriver@F@RemoveIdentification#I#
+// Source: c:@S@Graphic3d_GraphicDriverFactory@F@DynamicType#1
 // Source: c:@S@Graphic3d_Group@F@AddPrimitiveArray#$@E@Graphic3d_TypeOfPrimitiveArray#&1$@N@opencascade@S@handle>#$@S@Graphic3d_IndexBuffer#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Buffer#&1$@N@opencascade@S@handle>#$@S@Graphic3d_BoundBuffer#b#
 // Source: c:@S@Graphic3d_Group@F@AddPrimitiveArray#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ArrayOfPrimitives#b#
 // Source: c:@S@Graphic3d_Group@F@AddText#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Text#b#
 // Source: c:@S@Graphic3d_Group@F@Clear#b#
+// Source: c:@S@Graphic3d_Group@F@DynamicType#1
+// Source: c:@S@Graphic3d_Group@F@Flipper#1
 // Source: c:@S@Graphic3d_Group@F@IsClosed#1
 // Source: c:@S@Graphic3d_Group@F@IsDeleted#1
 // Source: c:@S@Graphic3d_Group@F@IsEmpty#1
@@ -1203,13 +1442,17 @@
 // Source: c:@S@Graphic3d_Group@F@SetMinMaxValues#d#d#d#d#d#d#
 // Source: c:@S@Graphic3d_Group@F@SetTransformPersistence#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TransformPers#
 // Source: c:@S@Graphic3d_Group@F@Structure#1
+// Source: c:@S@Graphic3d_Group@F@TransformPersistence#1
+// Source: c:@S@Graphic3d_HatchStyle@F@DynamicType#1
 // Source: c:@S@Graphic3d_HatchStyle@F@Graphic3d_HatchStyle#$@E@Aspect_HatchStyle#
 // Source: c:@S@Graphic3d_HatchStyle@F@Graphic3d_HatchStyle#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
 // Source: c:@S@Graphic3d_HatchStyle@F@HatchType#1
+// Source: c:@S@Graphic3d_IndexBuffer@F@DynamicType#1
 // Source: c:@S@Graphic3d_IndexBuffer@F@Graphic3d_IndexBuffer#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#
 // Source: c:@S@Graphic3d_IndexBuffer@F@Index#I#1
 // Source: c:@S@Graphic3d_IndexBuffer@F@InitInt32#I#
 // Source: c:@S@Graphic3d_IndexBuffer@F@SetIndex#I#I#
+// Source: c:@S@Graphic3d_Layer@F@DynamicType#1
 // Source: c:@S@Graphic3d_Layer@F@InvalidateBVHData#
 // Source: c:@S@Graphic3d_Layer@F@InvalidateBoundingBox#1
 // Source: c:@S@Graphic3d_Layer@F@IsCulled#1
@@ -1222,6 +1465,7 @@
 // Source: c:@S@Graphic3d_Layer@F@considerZoomPersistenceObjects#I#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#I#I#1
 // Source: c:@S@Graphic3d_LightSet@F@Add#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#
 // Source: c:@S@Graphic3d_LightSet@F@Contains#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#1
+// Source: c:@S@Graphic3d_LightSet@F@DynamicType#1
 // Source: c:@S@Graphic3d_LightSet@F@Extent#1
 // Source: c:@S@Graphic3d_LightSet@F@Graphic3d_LightSet#
 // Source: c:@S@Graphic3d_LightSet@F@IsEmpty#1
@@ -1231,42 +1475,61 @@
 // Source: c:@S@Graphic3d_LightSet@F@NbEnabledLightsOfType#$@E@Graphic3d_TypeOfLightSource#1
 // Source: c:@S@Graphic3d_LightSet@F@NbLightsOfType#$@E@Graphic3d_TypeOfLightSource#1
 // Source: c:@S@Graphic3d_LightSet@F@Remove#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#
+// Source: c:@S@Graphic3d_LightSet@F@Revision#1
+// Source: c:@S@Graphic3d_LightSet@F@UpdateRevision#
 // Source: c:@S@Graphic3d_LightSet@F@Upper#1
+// Source: c:@S@Graphic3d_LightSet@F@Value#I#1
+// Source: c:@S@Graphic3d_MarkerImage@F@DynamicType#1
+// Source: c:@S@Graphic3d_MarkerImage@F@GetImage#
+// Source: c:@S@Graphic3d_MarkerImage@F@GetImageAlpha#
 // Source: c:@S@Graphic3d_MarkerImage@F@Graphic3d_MarkerImage#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#S0_#
 // Source: c:@S@Graphic3d_MarkerImage@F@IsColoredImage#1
+// Source: c:@S@Graphic3d_MediaTexture@F@DynamicType#1
+// Source: c:@S@Graphic3d_MediaTexture@F@Frame#1
 // Source: c:@S@Graphic3d_MediaTexture@F@GenerateNewId#
 // Source: c:@S@Graphic3d_MediaTexture@F@GetImage#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
 // Source: c:@S@Graphic3d_MediaTexture@F@SetFrame#&1$@N@opencascade@S@handle>#$@S@Media_Frame#
 // Source: c:@S@Graphic3d_MediaTextureSet@F@Duration#1
+// Source: c:@S@Graphic3d_MediaTextureSet@F@DynamicType#1
 // Source: c:@S@Graphic3d_MediaTextureSet@F@Graphic3d_MediaTextureSet#
 // Source: c:@S@Graphic3d_MediaTextureSet@F@IsFullRangeYUV#1
 // Source: c:@S@Graphic3d_MediaTextureSet@F@IsPlanarYUV#1
 // Source: c:@S@Graphic3d_MediaTextureSet@F@Notify#
+// Source: c:@S@Graphic3d_MediaTextureSet@F@PlayerContext#1
 // Source: c:@S@Graphic3d_MediaTextureSet@F@Progress#1
 // Source: c:@S@Graphic3d_MediaTextureSet@F@ShaderProgram#1
 // Source: c:@S@Graphic3d_MediaTextureSet@F@SwapFrames#
+// Source: c:@S@Graphic3d_MutableIndexBuffer@F@DynamicType#1
 // Source: c:@S@Graphic3d_MutableIndexBuffer@F@Graphic3d_MutableIndexBuffer#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#
 // Source: c:@S@Graphic3d_MutableIndexBuffer@F@Invalidate#
 // Source: c:@S@Graphic3d_MutableIndexBuffer@F@Invalidate#I#I#
 // Source: c:@S@Graphic3d_MutableIndexBuffer@F@IsMutable#1
 // Source: c:@S@Graphic3d_MutableIndexBuffer@F@Validate#
+// Source: c:@S@Graphic3d_PresentationAttributes@F@BasicFillAreaAspect#1
 // Source: c:@S@Graphic3d_PresentationAttributes@F@DisplayMode#1
+// Source: c:@S@Graphic3d_PresentationAttributes@F@DynamicType#1
 // Source: c:@S@Graphic3d_PresentationAttributes@F@Graphic3d_PresentationAttributes#
 // Source: c:@S@Graphic3d_PresentationAttributes@F@Method#1
 // Source: c:@S@Graphic3d_PresentationAttributes@F@SetBasicFillAreaAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_AspectFillArea3d#
 // Source: c:@S@Graphic3d_PresentationAttributes@F@SetDisplayMode#I#
 // Source: c:@S@Graphic3d_PresentationAttributes@F@SetMethod#$@E@Aspect_TypeOfHighlightMethod#
+// Source: c:@S@Graphic3d_PresentationAttributes@F@SetTransparency#f#
 // Source: c:@S@Graphic3d_PresentationAttributes@F@SetZLayer#I#
+// Source: c:@S@Graphic3d_PresentationAttributes@F@Transparency#1
 // Source: c:@S@Graphic3d_PresentationAttributes@F@ZLayer#1
 // Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@Append#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ClipPlane#
 // Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@Clear#
+// Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@DynamicType#1
+// Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@First#1
 // Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@Graphic3d_SequenceOfHClipPlane#
 // Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@IsEmpty#1
 // Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@Remove#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ClipPlane#
 // Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@SetOverrideGlobal#b#
 // Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@Size#1
 // Source: c:@S@Graphic3d_SequenceOfHClipPlane@F@ToOverrideGlobal#1
+// Source: c:@S@Graphic3d_ShaderAttribute@F@DynamicType#1
 // Source: c:@S@Graphic3d_ShaderAttribute@F@Location#1
+// Source: c:@S@Graphic3d_ShaderManager@F@DynamicType#1
 // Source: c:@S@Graphic3d_ShaderManager@F@EnableGlslExtension#$@E@Graphic3d_GlslExtension#b#
 // Source: c:@S@Graphic3d_ShaderManager@F@GapiVersionMajor#1
 // Source: c:@S@Graphic3d_ShaderManager@F@GapiVersionMinor#1
@@ -1281,11 +1544,13 @@
 // Source: c:@S@Graphic3d_ShaderManager@F@ToEmulateDepthClamp#1
 // Source: c:@S@Graphic3d_ShaderManager@F@ToReverseDFdxSign#1
 // Source: c:@S@Graphic3d_ShaderManager@F@UseRedAlpha#1
+// Source: c:@S@Graphic3d_ShaderObject@F@DynamicType#1
 // Source: c:@S@Graphic3d_ShaderObject@F@IsDone#1
 // Source: c:@S@Graphic3d_ShaderObject@F@Type#1
 // Source: c:@S@Graphic3d_ShaderProgram@F@AttachShader#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ShaderObject#
 // Source: c:@S@Graphic3d_ShaderProgram@F@ClearVariables#
 // Source: c:@S@Graphic3d_ShaderProgram@F@DetachShader#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ShaderObject#
+// Source: c:@S@Graphic3d_ShaderProgram@F@DynamicType#1
 // Source: c:@S@Graphic3d_ShaderProgram@F@Graphic3d_ShaderProgram#
 // Source: c:@S@Graphic3d_ShaderProgram@F@HasAlphaTest#1
 // Source: c:@S@Graphic3d_ShaderProgram@F@HasDefaultSampler#1
@@ -1306,9 +1571,12 @@
 // Source: c:@S@Graphic3d_ShaderProgram@F@SetPBR#b#
 // Source: c:@S@Graphic3d_ShaderProgram@F@SetTextureSetBits#I#
 // Source: c:@S@Graphic3d_ShaderProgram@F@TextureSetBits#1
+// Source: c:@S@Graphic3d_ShaderVariable@F@DynamicType#1
 // Source: c:@S@Graphic3d_ShaderVariable@F@IsDone#1
+// Source: c:@S@Graphic3d_Structure@F@CStructure#1
 // Source: c:@S@Graphic3d_Structure@F@CalculateBoundBox#
 // Source: c:@S@Graphic3d_Structure@F@Clear#b#
+// Source: c:@S@Graphic3d_Structure@F@ClipPlanes#1
 // Source: c:@S@Graphic3d_Structure@F@Compute#
 // Source: c:@S@Graphic3d_Structure@F@ComputeVisual#1
 // Source: c:@S@Graphic3d_Structure@F@Connect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
@@ -1316,6 +1584,7 @@
 // Source: c:@S@Graphic3d_Structure@F@DisconnectAll#$@E@Graphic3d_TypeOfConnection#
 // Source: c:@S@Graphic3d_Structure@F@Display#
 // Source: c:@S@Graphic3d_Structure@F@DisplayPriority#1
+// Source: c:@S@Graphic3d_Structure@F@DynamicType#1
 // Source: c:@S@Graphic3d_Structure@F@Erase#
 // Source: c:@S@Graphic3d_Structure@F@GetZLayer#1
 // Source: c:@S@Graphic3d_Structure@F@Graphic3d_Structure#&1$@N@opencascade@S@handle>#$@S@Graphic3d_StructureManager#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
@@ -1325,6 +1594,7 @@
 // Source: c:@S@Graphic3d_Structure@F@GraphicTransform#&1$@N@opencascade@S@handle>#$@S@TopLoc_Datum3D#
 // Source: c:@S@Graphic3d_Structure@F@HLRValidation#1
 // Source: c:@S@Graphic3d_Structure@F@Highlight#&1$@N@opencascade@S@handle>#$@S@Graphic3d_PresentationAttributes#b#
+// Source: c:@S@Graphic3d_Structure@F@HighlightStyle#1
 // Source: c:@S@Graphic3d_Structure@F@Identification#1
 // Source: c:@S@Graphic3d_Structure@F@IsDeleted#1
 // Source: c:@S@Graphic3d_Structure@F@IsDisplayed#1
@@ -1357,18 +1627,23 @@
 // Source: c:@S@Graphic3d_Structure@F@SetVisual#$@E@Graphic3d_TypeOfStructure#
 // Source: c:@S@Graphic3d_Structure@F@SetZLayer#I#
 // Source: c:@S@Graphic3d_Structure@F@SetZoomLimit#d#d#
+// Source: c:@S@Graphic3d_Structure@F@TransformPersistence#1
+// Source: c:@S@Graphic3d_Structure@F@Transformation#1
 // Source: c:@S@Graphic3d_Structure@F@UnHighlight#
 // Source: c:@S@Graphic3d_Structure@F@Visual#1
 // Source: c:@S@Graphic3d_StructureManager@F@ChangeDisplayPriority#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#$@E@Graphic3d_DisplayPriority#S3_#
 // Source: c:@S@Graphic3d_StructureManager@F@ChangeZLayer#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#I#
 // Source: c:@S@Graphic3d_StructureManager@F@Display#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
+// Source: c:@S@Graphic3d_StructureManager@F@DynamicType#1
 // Source: c:@S@Graphic3d_StructureManager@F@Erase#
 // Source: c:@S@Graphic3d_StructureManager@F@Erase#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
 // Source: c:@S@Graphic3d_StructureManager@F@Graphic3d_StructureManager#&1$@N@opencascade@S@handle>#$@S@Graphic3d_GraphicDriver#
+// Source: c:@S@Graphic3d_StructureManager@F@GraphicDriver#1
 // Source: c:@S@Graphic3d_StructureManager@F@Highlight#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
 // Source: c:@S@Graphic3d_StructureManager@F@Identification#I#1
 // Source: c:@S@Graphic3d_StructureManager@F@IsDeviceLost#1
 // Source: c:@S@Graphic3d_StructureManager@F@MaxNumOfViews#1
+// Source: c:@S@Graphic3d_StructureManager@F@ObjectAffinity#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#1
 // Source: c:@S@Graphic3d_StructureManager@F@ReCompute#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
 // Source: c:@S@Graphic3d_StructureManager@F@ReCompute#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#&1$@N@opencascade@S@handle>#$@S@Graphic3d_DataStructureManager#
 // Source: c:@S@Graphic3d_StructureManager@F@RecomputeStructures#
@@ -1380,32 +1655,51 @@
 // Source: c:@S@Graphic3d_StructureManager@F@UnHighlight#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
 // Source: c:@S@Graphic3d_StructureManager@F@UnregisterObject#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#
 // Source: c:@S@Graphic3d_StructureManager@F@Update#I#1
+// Source: c:@S@Graphic3d_Text@F@DynamicType#1
+// Source: c:@S@Graphic3d_Text@F@Graphic3d_Text#f#
 // Source: c:@S@Graphic3d_Text@F@HasOwnAnchorPoint#1
 // Source: c:@S@Graphic3d_Text@F@HasPlane#1
+// Source: c:@S@Graphic3d_Text@F@Height#1
 // Source: c:@S@Graphic3d_Text@F@HorizontalAlignment#1
+// Source: c:@S@Graphic3d_Text@F@Position#1
 // Source: c:@S@Graphic3d_Text@F@ResetOrientation#
+// Source: c:@S@Graphic3d_Text@F@SetHeight#f#
 // Source: c:@S@Graphic3d_Text@F@SetHorizontalAlignment#$@E@Graphic3d_HorizontalTextAlignment#
 // Source: c:@S@Graphic3d_Text@F@SetOwnAnchorPoint#b#
 // Source: c:@S@Graphic3d_Text@F@SetPosition#&1$@S@gp_Pnt#
 // Source: c:@S@Graphic3d_Text@F@SetTextFormatter#&1$@N@opencascade@S@handle>#$@S@Font_TextFormatter#
 // Source: c:@S@Graphic3d_Text@F@SetVerticalAlignment#$@E@Graphic3d_VerticalTextAlignment#
+// Source: c:@S@Graphic3d_Text@F@TextFormatter#1
 // Source: c:@S@Graphic3d_Text@F@VerticalAlignment#1
+// Source: c:@S@Graphic3d_Texture1D@F@DynamicType#1
 // Source: c:@S@Graphic3d_Texture1D@F@Name#1
+// Source: c:@S@Graphic3d_Texture1Dmanual@F@DynamicType#1
 // Source: c:@S@Graphic3d_Texture1Dmanual@F@Graphic3d_Texture1Dmanual#$@E@Graphic3d_NameOfTexture1D#
 // Source: c:@S@Graphic3d_Texture1Dmanual@F@Graphic3d_Texture1Dmanual#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
+// Source: c:@S@Graphic3d_Texture1Dsegment@F@DynamicType#1
 // Source: c:@S@Graphic3d_Texture1Dsegment@F@Graphic3d_Texture1Dsegment#$@E@Graphic3d_NameOfTexture1D#
 // Source: c:@S@Graphic3d_Texture1Dsegment@F@Graphic3d_Texture1Dsegment#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
+// Source: c:@S@Graphic3d_Texture1Dsegment@F@SetSegment#f#f#f#f#f#f#
+// Source: c:@S@Graphic3d_Texture2D@F@DynamicType#1
 // Source: c:@S@Graphic3d_Texture2D@F@Graphic3d_Texture2D#$@E@Graphic3d_NameOfTexture2D#
 // Source: c:@S@Graphic3d_Texture2D@F@Graphic3d_Texture2D#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
 // Source: c:@S@Graphic3d_Texture2D@F@Name#1
 // Source: c:@S@Graphic3d_Texture2D@F@SetImage#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
+// Source: c:@S@Graphic3d_Texture2Dplane@F@DynamicType#1
 // Source: c:@S@Graphic3d_Texture2Dplane@F@Graphic3d_Texture2Dplane#$@E@Graphic3d_NameOfTexture2D#
 // Source: c:@S@Graphic3d_Texture2Dplane@F@Graphic3d_Texture2Dplane#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
 // Source: c:@S@Graphic3d_Texture2Dplane@F@Plane#1
 // Source: c:@S@Graphic3d_Texture2Dplane@F@SetPlane#$@E@Graphic3d_NameOfTexturePlane#
+// Source: c:@S@Graphic3d_Texture2Dplane@F@SetRotation#f#
+// Source: c:@S@Graphic3d_Texture2Dplane@F@SetScaleS#f#
+// Source: c:@S@Graphic3d_Texture2Dplane@F@SetScaleT#f#
+// Source: c:@S@Graphic3d_Texture2Dplane@F@SetTranslateS#f#
+// Source: c:@S@Graphic3d_Texture2Dplane@F@SetTranslateT#f#
+// Source: c:@S@Graphic3d_Texture3D@F@DynamicType#1
 // Source: c:@S@Graphic3d_Texture3D@F@GetImage#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
 // Source: c:@S@Graphic3d_Texture3D@F@Graphic3d_Texture3D#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
 // Source: c:@S@Graphic3d_Texture3D@F@SetImage#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
+// Source: c:@S@Graphic3d_TextureEnv@F@DynamicType#1
 // Source: c:@S@Graphic3d_TextureEnv@F@Graphic3d_TextureEnv#$@E@Graphic3d_NameOfTextureEnv#
 // Source: c:@S@Graphic3d_TextureEnv@F@Graphic3d_TextureEnv#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
 // Source: c:@S@Graphic3d_TextureEnv@F@Name#1
@@ -1413,6 +1707,7 @@
 // Source: c:@S@Graphic3d_TextureMap@F@DisableModulate#
 // Source: c:@S@Graphic3d_TextureMap@F@DisableRepeat#
 // Source: c:@S@Graphic3d_TextureMap@F@DisableSmooth#
+// Source: c:@S@Graphic3d_TextureMap@F@DynamicType#1
 // Source: c:@S@Graphic3d_TextureMap@F@EnableModulate#
 // Source: c:@S@Graphic3d_TextureMap@F@EnableRepeat#
 // Source: c:@S@Graphic3d_TextureMap@F@EnableSmooth#
@@ -1422,12 +1717,15 @@
 // Source: c:@S@Graphic3d_TextureMap@F@SetAnisoFilter#$@E@Graphic3d_LevelOfTextureAnisotropy#
 // Source: c:@S@Graphic3d_TextureParams@F@AnisoFilter#1
 // Source: c:@S@Graphic3d_TextureParams@F@BaseLevel#1
+// Source: c:@S@Graphic3d_TextureParams@F@DynamicType#1
 // Source: c:@S@Graphic3d_TextureParams@F@Filter#1
 // Source: c:@S@Graphic3d_TextureParams@F@GenMode#1
 // Source: c:@S@Graphic3d_TextureParams@F@Graphic3d_TextureParams#
 // Source: c:@S@Graphic3d_TextureParams@F@IsModulate#1
 // Source: c:@S@Graphic3d_TextureParams@F@IsRepeat#1
 // Source: c:@S@Graphic3d_TextureParams@F@MaxLevel#1
+// Source: c:@S@Graphic3d_TextureParams@F@Rotation#1
+// Source: c:@S@Graphic3d_TextureParams@F@SamplerRevision#1
 // Source: c:@S@Graphic3d_TextureParams@F@SetAnisoFilter#$@E@Graphic3d_LevelOfTextureAnisotropy#
 // Source: c:@S@Graphic3d_TextureParams@F@SetFilter#$@E@Graphic3d_TypeOfTextureFilter#
 // Source: c:@S@Graphic3d_TextureParams@F@SetLevelsRange#I#I#
@@ -1435,16 +1733,21 @@
 // Source: c:@S@Graphic3d_TextureParams@F@SetRepeat#b#
 // Source: c:@S@Graphic3d_TextureParams@F@SetTextureUnit#$@E@Graphic3d_TextureUnit#
 // Source: c:@S@Graphic3d_TextureParams@F@TextureUnit#1
+// Source: c:@S@Graphic3d_TextureRoot@F@DynamicType#1
 // Source: c:@S@Graphic3d_TextureRoot@F@GetCompressedImage#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
 // Source: c:@S@Graphic3d_TextureRoot@F@GetImage#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
+// Source: c:@S@Graphic3d_TextureRoot@F@GetParams#1
 // Source: c:@S@Graphic3d_TextureRoot@F@HasMipmaps#1
 // Source: c:@S@Graphic3d_TextureRoot@F@IsColorMap#1
 // Source: c:@S@Graphic3d_TextureRoot@F@IsDone#1
 // Source: c:@S@Graphic3d_TextureRoot@F@IsTopDown#1
+// Source: c:@S@Graphic3d_TextureRoot@F@Revision#1
 // Source: c:@S@Graphic3d_TextureRoot@F@SetColorMap#b#
 // Source: c:@S@Graphic3d_TextureRoot@F@SetMipmapsGeneration#b#
 // Source: c:@S@Graphic3d_TextureRoot@F@Type#1
 // Source: c:@S@Graphic3d_TextureRoot@F@UpdateRevision#
+// Source: c:@S@Graphic3d_TextureSet@F@DynamicType#1
+// Source: c:@S@Graphic3d_TextureSet@F@First#1
 // Source: c:@S@Graphic3d_TextureSet@F@Graphic3d_TextureSet#
 // Source: c:@S@Graphic3d_TextureSet@F@Graphic3d_TextureSet#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureMap#
 // Source: c:@S@Graphic3d_TextureSet@F@Graphic3d_TextureSet#I#
@@ -1454,8 +1757,10 @@
 // Source: c:@S@Graphic3d_TextureSet@F@SetValue#I#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureMap#
 // Source: c:@S@Graphic3d_TextureSet@F@Size#1
 // Source: c:@S@Graphic3d_TextureSet@F@Upper#1
+// Source: c:@S@Graphic3d_TextureSet@F@Value#I#1
 // Source: c:@S@Graphic3d_TransformPers@F@AnchorPoint#1
 // Source: c:@S@Graphic3d_TransformPers@F@Corner2d#1
+// Source: c:@S@Graphic3d_TransformPers@F@DynamicType#1
 // Source: c:@S@Graphic3d_TransformPers@F@Flags#1
 // Source: c:@S@Graphic3d_TransformPers@F@Graphic3d_TransformPers#$@E@Graphic3d_TransModeFlags#
 // Source: c:@S@Graphic3d_TransformPers@F@Graphic3d_TransformPers#$@E@Graphic3d_TransModeFlags#&1$@S@gp_Pnt#
@@ -1468,17 +1773,24 @@
 // Source: c:@S@Graphic3d_TransformPers@F@SetCorner2d#$@E@Aspect_TypeOfTriedronPosition#
 // Source: c:@S@Graphic3d_TransformPers@F@SetPersistence#$@E@Graphic3d_TransModeFlags#&1$@S@gp_Pnt#
 // Source: c:@S@Graphic3d_TransformPers@F@persistentScale#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#I#I#1
+// Source: c:@S@Graphic3d_TransformPersScaledAbove@F@DynamicType#1
 // Source: c:@S@Graphic3d_TransformPersScaledAbove@F@Graphic3d_TransformPersScaledAbove#d#&1$@S@gp_Pnt#
 // Source: c:@S@Graphic3d_TransformPersScaledAbove@F@persistentScale#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#I#I#1
+// Source: c:@S@Graphic3d_ViewAffinity@F@DynamicType#1
 // Source: c:@S@Graphic3d_ViewAffinity@F@Graphic3d_ViewAffinity#
 // Source: c:@S@Graphic3d_ViewAffinity@F@IsVisible#I#1
 // Source: c:@S@Graphic3d_ViewAffinity@F@SetVisible#I#b#
 // Source: c:@S@Graphic3d_ViewAffinity@F@SetVisible#b#
 // Source: c:@S@Image_AlienPixMap@F@AdjustGamma#d#
 // Source: c:@S@Image_AlienPixMap@F@Clear#
+// Source: c:@S@Image_AlienPixMap@F@DynamicType#1
 // Source: c:@S@Image_AlienPixMap@F@Image_AlienPixMap#
+// Source: c:@S@Image_AlienPixMap@F@InitTrash#$@E@Image_Format#k#k#k#
 // Source: c:@S@Image_CompressedPixMap@F@BaseFormat#1
 // Source: c:@S@Image_CompressedPixMap@F@CompressedFormat#1
+// Source: c:@S@Image_CompressedPixMap@F@DynamicType#1
+// Source: c:@S@Image_CompressedPixMap@F@FaceBytes#1
+// Source: c:@S@Image_CompressedPixMap@F@FaceData#1
 // Source: c:@S@Image_CompressedPixMap@F@Image_CompressedPixMap#
 // Source: c:@S@Image_CompressedPixMap@F@IsCompleteMipMapSet#1
 // Source: c:@S@Image_CompressedPixMap@F@IsTopDown#1
@@ -1486,6 +1798,7 @@
 // Source: c:@S@Image_CompressedPixMap@F@SetBaseFormat#$@E@Image_Format#
 // Source: c:@S@Image_CompressedPixMap@F@SetCompleteMipMapSet#b#
 // Source: c:@S@Image_CompressedPixMap@F@SetCompressedFormat#$@E@Image_CompressedFormat#
+// Source: c:@S@Image_CompressedPixMap@F@SetFaceBytes#k#
 // Source: c:@S@Image_CompressedPixMap@F@SetFaceData#&1$@N@opencascade@S@handle>#$@S@NCollection_Buffer#
 // Source: c:@S@Image_CompressedPixMap@F@SetNbFaces#I#
 // Source: c:@S@Image_CompressedPixMap@F@SetSize#I#I#
@@ -1493,40 +1806,65 @@
 // Source: c:@S@Image_CompressedPixMap@F@SizeY#1
 // Source: c:@S@Image_Diff@F@ColorTolerance#1
 // Source: c:@S@Image_Diff@F@Compare#
+// Source: c:@S@Image_Diff@F@DynamicType#1
 // Source: c:@S@Image_Diff@F@Image_Diff#
 // Source: c:@S@Image_Diff@F@Init#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#S0_#b#
 // Source: c:@S@Image_Diff@F@IsBorderFilterOn#1
 // Source: c:@S@Image_Diff@F@SetBorderFilterOn#b#
 // Source: c:@S@Image_Diff@F@SetColorTolerance#d#
 // Source: c:@S@Image_PixMap@F@Clear#
+// Source: c:@S@Image_PixMap@F@Depth#1
+// Source: c:@S@Image_PixMap@F@DynamicType#1
 // Source: c:@S@Image_PixMap@F@Format#1
+// Source: c:@S@Image_PixMap@F@Height#1
 // Source: c:@S@Image_PixMap@F@Image_PixMap#
+// Source: c:@S@Image_PixMap@F@InitZero#$@E@Image_Format#k#k#k#c#
 // Source: c:@S@Image_PixMap@F@IsEmpty#1
 // Source: c:@S@Image_PixMap@F@IsTopDown#1
+// Source: c:@S@Image_PixMap@F@MaxRowAligmentBytes#1
 // Source: c:@S@Image_PixMap@F@Ratio#1
+// Source: c:@S@Image_PixMap@F@RowExtraBytes#1
 // Source: c:@S@Image_PixMap@F@SetFormat#$@E@Image_Format#
 // Source: c:@S@Image_PixMap@F@SetTopDown#b#
+// Source: c:@S@Image_PixMap@F@SizeBytes#1
+// Source: c:@S@Image_PixMap@F@SizePixelBytes#1
+// Source: c:@S@Image_PixMap@F@SizeRowBytes#1
+// Source: c:@S@Image_PixMap@F@SizeSliceBytes#1
+// Source: c:@S@Image_PixMap@F@SizeZ#1
+// Source: c:@S@Image_PixMap@F@TopDownInc#1
+// Source: c:@S@Image_PixMap@F@Width#1
+// Source: c:@S@Image_PixMapData@F@DynamicType#1
 // Source: c:@S@Image_PixMapData@F@Image_PixMapData#
+// Source: c:@S@Image_PixMapData@F@MaxRowAligmentBytes#1
 // Source: c:@S@Image_PixMapData@F@SetTopDown#b#
 // Source: c:@S@Image_PixMapData@F@ZeroData#
 // Source: c:@S@Image_SupportedFormats@F@Add#$@E@Image_CompressedFormat#
 // Source: c:@S@Image_SupportedFormats@F@Add#$@E@Image_Format#
 // Source: c:@S@Image_SupportedFormats@F@Clear#
+// Source: c:@S@Image_SupportedFormats@F@DynamicType#1
 // Source: c:@S@Image_SupportedFormats@F@HasCompressed#1
 // Source: c:@S@Image_SupportedFormats@F@Image_SupportedFormats#
 // Source: c:@S@Image_SupportedFormats@F@IsSupported#$@E@Image_CompressedFormat#1
 // Source: c:@S@Image_SupportedFormats@F@IsSupported#$@E@Image_Format#1
+// Source: c:@S@Image_Texture@F@DataBuffer#1
+// Source: c:@S@Image_Texture@F@DynamicType#1
+// Source: c:@S@Image_Texture@F@FileLength#1
+// Source: c:@S@Image_Texture@F@FileOffset#1
 // Source: c:@S@Image_Texture@F@ReadCompressedImage#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#1
 // Source: c:@S@Image_Texture@F@ReadImage#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#1
 // Source: c:@S@Image_VideoRecorder@F@Close#
+// Source: c:@S@Image_VideoRecorder@F@DynamicType#1
+// Source: c:@S@Image_VideoRecorder@F@FrameCount#1
 // Source: c:@S@Image_VideoRecorder@F@Image_VideoRecorder#
 // Source: c:@S@Image_VideoRecorder@F@PushFrame#
 // Source: c:@S@Media_BufferPool@F@BufferSize#1
+// Source: c:@S@Media_BufferPool@F@DynamicType#1
 // Source: c:@S@Media_BufferPool@F@Init#I#
 // Source: c:@S@Media_BufferPool@F@Media_BufferPool#
 // Source: c:@S@Media_BufferPool@F@Release#
 // Source: c:@S@Media_CodecContext@F@CanProcessPacket#&1$@N@opencascade@S@handle>#$@S@Media_Packet#1
 // Source: c:@S@Media_CodecContext@F@Close#
+// Source: c:@S@Media_CodecContext@F@DynamicType#1
 // Source: c:@S@Media_CodecContext@F@Flush#
 // Source: c:@S@Media_CodecContext@F@Media_CodecContext#
 // Source: c:@S@Media_CodecContext@F@ReceiveFrame#&1$@N@opencascade@S@handle>#$@S@Media_Frame#
@@ -1536,10 +1874,15 @@
 // Source: c:@S@Media_CodecContext@F@StreamIndex#1
 // Source: c:@S@Media_FormatContext@F@Close#
 // Source: c:@S@Media_FormatContext@F@Duration#1
+// Source: c:@S@Media_FormatContext@F@DynamicType#1
 // Source: c:@S@Media_FormatContext@F@Media_FormatContext#
+// Source: c:@S@Media_FormatContext@F@NbSteams#1
 // Source: c:@S@Media_FormatContext@F@PtsStartBase#1
 // Source: c:@S@Media_FormatContext@F@ReadPacket#&1$@N@opencascade@S@handle>#$@S@Media_Packet#
 // Source: c:@S@Media_FormatContext@F@Seek#d#b#
+// Source: c:@S@Media_FormatContext@F@SeekStream#i#d#b#
+// Source: c:@S@Media_Frame@F@BestEffortTimestamp#1
+// Source: c:@S@Media_Frame@F@DynamicType#1
 // Source: c:@S@Media_Frame@F@Format#1
 // Source: c:@S@Media_Frame@F@InitWrapper#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#
 // Source: c:@S@Media_Frame@F@IsEmpty#1
@@ -1547,29 +1890,38 @@
 // Source: c:@S@Media_Frame@F@IsLocked#1
 // Source: c:@S@Media_Frame@F@LineSize#I#1
 // Source: c:@S@Media_Frame@F@Media_Frame#
+// Source: c:@S@Media_Frame@F@PixelAspectRatio#1
 // Source: c:@S@Media_Frame@F@Pts#1
 // Source: c:@S@Media_Frame@F@SetLocked#b#
+// Source: c:@S@Media_Frame@F@SetPixelAspectRatio#f#
 // Source: c:@S@Media_Frame@F@SetPts#d#
 // Source: c:@S@Media_Frame@F@SizeX#1
 // Source: c:@S@Media_Frame@F@SizeY#1
 // Source: c:@S@Media_Frame@F@Unref#
+// Source: c:@S@Media_Packet@F@Dts#1
+// Source: c:@S@Media_Packet@F@Duration#1
 // Source: c:@S@Media_Packet@F@DurationSeconds#1
+// Source: c:@S@Media_Packet@F@DynamicType#1
 // Source: c:@S@Media_Packet@F@IsKeyFrame#1
 // Source: c:@S@Media_Packet@F@Media_Packet#
+// Source: c:@S@Media_Packet@F@Pts#1
 // Source: c:@S@Media_Packet@F@SetDurationSeconds#d#
 // Source: c:@S@Media_Packet@F@SetKeyFrame#
 // Source: c:@S@Media_Packet@F@Size#1
 // Source: c:@S@Media_Packet@F@StreamIndex#1
 // Source: c:@S@Media_Packet@F@Unref#
+// Source: c:@S@Media_PlayerContext@F@DynamicType#1
 // Source: c:@S@Media_PlayerContext@F@Pause#
 // Source: c:@S@Media_PlayerContext@F@Resume#
 // Source: c:@S@Media_PlayerContext@F@Seek#d#
 // Source: c:@S@Media_PlayerContext@F@SetForceRgb#b#
 // Source: c:@S@Media_PlayerContext@F@ToForceRgb#1
 // Source: c:@S@Media_Scaler@F@Convert#&1$@N@opencascade@S@handle>#$@S@Media_Frame#S0_#
+// Source: c:@S@Media_Scaler@F@DynamicType#1
 // Source: c:@S@Media_Scaler@F@IsValid#1
 // Source: c:@S@Media_Scaler@F@Media_Scaler#
 // Source: c:@S@Media_Scaler@F@Release#
+// Source: c:@S@Media_Timer@F@DynamicType#1
 // Source: c:@S@Media_Timer@F@ElapsedTime#1
 // Source: c:@S@Media_Timer@F@IsStarted#1
 // Source: c:@S@Media_Timer@F@Media_Timer#
@@ -1581,18 +1933,23 @@
 // Source: c:@S@Media_Timer@F@Stop#
 // Source: c:@S@MeshVS_CommonSensitiveEntity@F@Center#I#I#1
 // Source: c:@S@MeshVS_CommonSensitiveEntity@F@CenterOfGeometry#1
+// Source: c:@S@MeshVS_CommonSensitiveEntity@F@DynamicType#1
 // Source: c:@S@MeshVS_CommonSensitiveEntity@F@GetConnected#
 // Source: c:@S@MeshVS_CommonSensitiveEntity@F@MeshVS_CommonSensitiveEntity#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@N@opencascade@S@handle>#$@S@MeshVS_Mesh#$@E@MeshVS_MeshSelectionMethod#
 // Source: c:@S@MeshVS_CommonSensitiveEntity@F@NbSubElements#1
 // Source: c:@S@MeshVS_CommonSensitiveEntity@F@Size#1
 // Source: c:@S@MeshVS_CommonSensitiveEntity@F@Swap#I#I#
+// Source: c:@S@MeshVS_DataSource3D@F@DynamicType#1
+// Source: c:@S@MeshVS_DataSource@F@DynamicType#1
 // Source: c:@S@MeshVS_DataSource@F@IsAdvancedSelectionEnabled#1
+// Source: c:@S@MeshVS_DeformedDataSource@F@DynamicType#1
 // Source: c:@S@MeshVS_DeformedDataSource@F@GetMagnify#1
 // Source: c:@S@MeshVS_DeformedDataSource@F@GetNonDeformedDataSource#1
 // Source: c:@S@MeshVS_DeformedDataSource@F@MeshVS_DeformedDataSource#&1$@N@opencascade@S@handle>#$@S@MeshVS_DataSource#d#
 // Source: c:@S@MeshVS_DeformedDataSource@F@SetMagnify#d#
 // Source: c:@S@MeshVS_DeformedDataSource@F@SetNonDeformedDataSource#&1$@N@opencascade@S@handle>#$@S@MeshVS_DataSource#
 // Source: c:@S@MeshVS_Drawer@F@Assign#&1$@N@opencascade@S@handle>#$@S@MeshVS_Drawer#
+// Source: c:@S@MeshVS_Drawer@F@DynamicType#1
 // Source: c:@S@MeshVS_Drawer@F@RemoveAsciiString#I#
 // Source: c:@S@MeshVS_Drawer@F@RemoveBoolean#I#
 // Source: c:@S@MeshVS_Drawer@F@RemoveColor#I#
@@ -1605,10 +1962,12 @@
 // Source: c:@S@MeshVS_DummySensitiveEntity@F@BVH#
 // Source: c:@S@MeshVS_DummySensitiveEntity@F@CenterOfGeometry#1
 // Source: c:@S@MeshVS_DummySensitiveEntity@F@Clear#
+// Source: c:@S@MeshVS_DummySensitiveEntity@F@DynamicType#1
 // Source: c:@S@MeshVS_DummySensitiveEntity@F@HasInitLocation#1
 // Source: c:@S@MeshVS_DummySensitiveEntity@F@MeshVS_DummySensitiveEntity#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#
 // Source: c:@S@MeshVS_DummySensitiveEntity@F@NbSubElements#1
 // Source: c:@S@MeshVS_DummySensitiveEntity@F@ToBuildBVH#1
+// Source: c:@S@MeshVS_ElementalColorPrsBuilder@F@DynamicType#1
 // Source: c:@S@MeshVS_ElementalColorPrsBuilder@F@HasColors1#1
 // Source: c:@S@MeshVS_ElementalColorPrsBuilder@F@HasColors2#1
 // Source: c:@S@MeshVS_ElementalColorPrsBuilder@F@MeshVS_ElementalColorPrsBuilder#&1$@N@opencascade@S@handle>#$@S@MeshVS_Mesh#&1I#&1$@N@opencascade@S@handle>#$@S@MeshVS_DataSource#I#S3_#
@@ -1616,6 +1975,7 @@
 // Source: c:@S@MeshVS_Mesh@F@AddBuilder#&1$@N@opencascade@S@handle>#$@S@MeshVS_PrsBuilder#b#
 // Source: c:@S@MeshVS_Mesh@F@ClearSelected#
 // Source: c:@S@MeshVS_Mesh@F@ComputeSelection#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Selection#I#
+// Source: c:@S@MeshVS_Mesh@F@DynamicType#1
 // Source: c:@S@MeshVS_Mesh@F@FindBuilder#&1$@N@opencascade@S@handle>#$@S@Standard_Type#1
 // Source: c:@S@MeshVS_Mesh@F@GetBuilder#I#1
 // Source: c:@S@MeshVS_Mesh@F@GetBuilderById#I#1
@@ -1623,8 +1983,11 @@
 // Source: c:@S@MeshVS_Mesh@F@GetDataSource#1
 // Source: c:@S@MeshVS_Mesh@F@GetDrawer#1
 // Source: c:@S@MeshVS_Mesh@F@GetFreeId#1
+// Source: c:@S@MeshVS_Mesh@F@GetHiddenElems#1
+// Source: c:@S@MeshVS_Mesh@F@GetHiddenNodes#1
 // Source: c:@S@MeshVS_Mesh@F@GetHilighter#1
 // Source: c:@S@MeshVS_Mesh@F@GetMeshSelMethod#1
+// Source: c:@S@MeshVS_Mesh@F@GetSelectableNodes#1
 // Source: c:@S@MeshVS_Mesh@F@HilightOwnerWithColor#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#
 // Source: c:@S@MeshVS_Mesh@F@IsHiddenElem#I#1
 // Source: c:@S@MeshVS_Mesh@F@IsHiddenNode#I#1
@@ -1645,6 +2008,7 @@
 // Source: c:@S@MeshVS_Mesh@F@SetSelectableNodes#&1$@N@opencascade@S@handle>#$@S@TColStd_HPackedMapOfInteger#
 // Source: c:@S@MeshVS_Mesh@F@UpdateSelectableNodes#
 // Source: c:@S@MeshVS_MeshEntityOwner@F@Clear#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
+// Source: c:@S@MeshVS_MeshEntityOwner@F@DynamicType#1
 // Source: c:@S@MeshVS_MeshEntityOwner@F@HilightWithColor#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#I#
 // Source: c:@S@MeshVS_MeshEntityOwner@F@ID#1
 // Source: c:@S@MeshVS_MeshEntityOwner@F@IsGroup#1
@@ -1653,11 +2017,19 @@
 // Source: c:@S@MeshVS_MeshEntityOwner@F@Unhilight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@MeshVS_MeshOwner@F@AddSelectedEntities#&1$@N@opencascade@S@handle>#$@S@TColStd_HPackedMapOfInteger#S0_#
 // Source: c:@S@MeshVS_MeshOwner@F@ClearSelectedEntities#
+// Source: c:@S@MeshVS_MeshOwner@F@DynamicType#1
+// Source: c:@S@MeshVS_MeshOwner@F@GetDataSource#1
+// Source: c:@S@MeshVS_MeshOwner@F@GetDetectedElements#1
+// Source: c:@S@MeshVS_MeshOwner@F@GetDetectedNodes#1
+// Source: c:@S@MeshVS_MeshOwner@F@GetSelectedElements#1
+// Source: c:@S@MeshVS_MeshOwner@F@GetSelectedNodes#1
 // Source: c:@S@MeshVS_MeshOwner@F@HilightWithColor#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#I#
 // Source: c:@S@MeshVS_MeshOwner@F@IsForcedHilight#1
 // Source: c:@S@MeshVS_MeshOwner@F@SetDetectedEntities#&1$@N@opencascade@S@handle>#$@S@TColStd_HPackedMapOfInteger#S0_#
 // Source: c:@S@MeshVS_MeshOwner@F@Unhilight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
+// Source: c:@S@MeshVS_MeshPrsBuilder@F@DynamicType#1
 // Source: c:@S@MeshVS_MeshPrsBuilder@F@MeshVS_MeshPrsBuilder#&1$@N@opencascade@S@handle>#$@S@MeshVS_Mesh#&1I#&1$@N@opencascade@S@handle>#$@S@MeshVS_DataSource#I#S3_#
+// Source: c:@S@MeshVS_NodalColorPrsBuilder@F@DynamicType#1
 // Source: c:@S@MeshVS_NodalColorPrsBuilder@F@GetTextureCoord#I#
 // Source: c:@S@MeshVS_NodalColorPrsBuilder@F@HasColors#1
 // Source: c:@S@MeshVS_NodalColorPrsBuilder@F@IsUseTexture#1
@@ -1665,6 +2037,7 @@
 // Source: c:@S@MeshVS_NodalColorPrsBuilder@F@SetTextureCoord#I#d#
 // Source: c:@S@MeshVS_NodalColorPrsBuilder@F@UseTexture#b#
 // Source: c:@S@MeshVS_PrsBuilder@F@CustomSensitiveEntity#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#I#1
+// Source: c:@S@MeshVS_PrsBuilder@F@DynamicType#1
 // Source: c:@S@MeshVS_PrsBuilder@F@GetDataSource#1
 // Source: c:@S@MeshVS_PrsBuilder@F@GetDrawer#1
 // Source: c:@S@MeshVS_PrsBuilder@F@GetFlags#1
@@ -1677,50 +2050,73 @@
 // Source: c:@S@MeshVS_PrsBuilder@F@SetExcluding#b#
 // Source: c:@S@MeshVS_PrsBuilder@F@SetPresentationManager#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#
 // Source: c:@S@MeshVS_PrsBuilder@F@TestFlags#I#1
+// Source: c:@S@MeshVS_SensitiveFace@F@DynamicType#1
 // Source: c:@S@MeshVS_SensitiveMesh@F@CenterOfGeometry#1
+// Source: c:@S@MeshVS_SensitiveMesh@F@DynamicType#1
 // Source: c:@S@MeshVS_SensitiveMesh@F@GetConnected#
 // Source: c:@S@MeshVS_SensitiveMesh@F@GetMode#1
 // Source: c:@S@MeshVS_SensitiveMesh@F@MeshVS_SensitiveMesh#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#I#
 // Source: c:@S@MeshVS_SensitiveMesh@F@NbSubElements#1
 // Source: c:@S@MeshVS_SensitivePolyhedron@F@CenterOfGeometry#1
+// Source: c:@S@MeshVS_SensitivePolyhedron@F@DynamicType#1
 // Source: c:@S@MeshVS_SensitivePolyhedron@F@GetConnected#
 // Source: c:@S@MeshVS_SensitivePolyhedron@F@NbSubElements#1
 // Source: c:@S@MeshVS_SensitiveQuad@F@CenterOfGeometry#1
+// Source: c:@S@MeshVS_SensitiveQuad@F@DynamicType#1
 // Source: c:@S@MeshVS_SensitiveQuad@F@GetConnected#
 // Source: c:@S@MeshVS_SensitiveQuad@F@MeshVS_SensitiveQuad#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@S@gp_Pnt#S3_#S3_#S3_#
 // Source: c:@S@MeshVS_SensitiveQuad@F@NbSubElements#1
+// Source: c:@S@MeshVS_SensitiveSegment@F@DynamicType#1
 // Source: c:@S@MeshVS_SensitiveSegment@F@MeshVS_SensitiveSegment#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@S@gp_Pnt#S3_#
+// Source: c:@S@MeshVS_TextPrsBuilder@F@DynamicType#1
 // Source: c:@S@MeshVS_TextPrsBuilder@F@HasTexts#b#1
+// Source: c:@S@MeshVS_VectorPrsBuilder@F@DynamicType#1
 // Source: c:@S@MeshVS_VectorPrsBuilder@F@HasVectors#b#1
 // Source: c:@S@MeshVS_VectorPrsBuilder@F@SetSimplePrsMode#b#
 // Source: c:@S@MeshVS_VectorPrsBuilder@F@SetSimplePrsParams#d#d#d#
 // Source: c:@S@OpenGl_Buffer@F@Bind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#1
 // Source: c:@S@OpenGl_Buffer@F@Create#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_Buffer@F@DynamicType#1
+// Source: c:@S@OpenGl_Buffer@F@EstimatedDataSize#1
+// Source: c:@S@OpenGl_Buffer@F@GetComponentsNb#1
+// Source: c:@S@OpenGl_Buffer@F@GetDataType#1
 // Source: c:@S@OpenGl_Buffer@F@GetElemsNb#1
 // Source: c:@S@OpenGl_Buffer@F@IsValid#1
 // Source: c:@S@OpenGl_Buffer@F@IsVirtual#1
 // Source: c:@S@OpenGl_Buffer@F@SetElemsNb#I#
 // Source: c:@S@OpenGl_Buffer@F@Unbind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#1
+// Source: c:@S@OpenGl_CappingPlaneResource@F@DynamicType#1
+// Source: c:@S@OpenGl_CappingPlaneResource@F@EstimatedDataSize#1
 // Source: c:@S@OpenGl_CappingPlaneResource@F@OpenGl_CappingPlaneResource#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ClipPlane#
+// Source: c:@S@OpenGl_CappingPlaneResource@F@Plane#1
 // Source: c:@S@OpenGl_CappingPlaneResource@F@Update#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Aspects#
+// Source: c:@S@OpenGl_Caps@F@DynamicType#1
 // Source: c:@S@OpenGl_Caps@F@OpenGl_Caps#
+// Source: c:@S@OpenGl_Context@F@ActiveProgram#1
+// Source: c:@S@OpenGl_Context@F@ActiveTextures#1
 // Source: c:@S@OpenGl_Context@F@AllowSampleAlphaToCoverage#1
 // Source: c:@S@OpenGl_Context@F@ApplyModelViewMatrix#
 // Source: c:@S@OpenGl_Context@F@ApplyModelWorldMatrix#
 // Source: c:@S@OpenGl_Context@F@ApplyProjectionMatrix#
 // Source: c:@S@OpenGl_Context@F@ApplyWorldViewMatrix#
+// Source: c:@S@OpenGl_Context@F@AvailableMemory#1
 // Source: c:@S@OpenGl_Context@F@BindDefaultVao#
 // Source: c:@S@OpenGl_Context@F@BindProgram#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderProgram#
 // Source: c:@S@OpenGl_Context@F@BindTextures#&1$@N@opencascade@S@handle>#$@S@OpenGl_TextureSet#
 // Source: c:@S@OpenGl_Context@F@BindTextures#&1$@N@opencascade@S@handle>#$@S@OpenGl_TextureSet#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderProgram#
+// Source: c:@S@OpenGl_Context@F@Camera#1
 // Source: c:@S@OpenGl_Context@F@ColorMask#1
+// Source: c:@S@OpenGl_Context@F@DefaultFrameBuffer#1
 // Source: c:@S@OpenGl_Context@F@DepthPeelingDepthTexUnit#1
 // Source: c:@S@OpenGl_Context@F@DepthPeelingFrontColorTexUnit#1
 // Source: c:@S@OpenGl_Context@F@DisableFeatures#1
 // Source: c:@S@OpenGl_Context@F@DrawBuffer#I#1
+// Source: c:@S@OpenGl_Context@F@DynamicType#1
 // Source: c:@S@OpenGl_Context@F@EnableFeatures#1
+// Source: c:@S@OpenGl_Context@F@ExcludeMessage#i#i#
 // Source: c:@S@OpenGl_Context@F@FaceCulling#1
 // Source: c:@S@OpenGl_Context@F@FetchState#
+// Source: c:@S@OpenGl_Context@F@FrameStats#1
 // Source: c:@S@OpenGl_Context@F@GraphicsLibrary#1
 // Source: c:@S@OpenGl_Context@F@HasPBR#1
 // Source: c:@S@OpenGl_Context@F@HasRayTracing#1
@@ -1732,6 +2128,7 @@
 // Source: c:@S@OpenGl_Context@F@HasStereoBuffers#1
 // Source: c:@S@OpenGl_Context@F@HasTextureBaseLevel#1
 // Source: c:@S@OpenGl_Context@F@HasTextureMultisampling#1
+// Source: c:@S@OpenGl_Context@F@IncludeMessage#i#i#
 // Source: c:@S@OpenGl_Context@F@Init#b#
 // Source: c:@S@OpenGl_Context@F@IsCurrent#1
 // Source: c:@S@OpenGl_Context@F@IsDebugContext#1
@@ -1744,6 +2141,8 @@
 // Source: c:@S@OpenGl_Context@F@IsValid#1
 // Source: c:@S@OpenGl_Context@F@IsWindowDeepColor#1
 // Source: c:@S@OpenGl_Context@F@IsWindowSRGB#1
+// Source: c:@S@OpenGl_Context@F@LineFeather#1
+// Source: c:@S@OpenGl_Context@F@LineWidthScale#1
 // Source: c:@S@OpenGl_Context@F@MakeCurrent#
 // Source: c:@S@OpenGl_Context@F@MaxClipPlanes#1
 // Source: c:@S@OpenGl_Context@F@MaxColorAttachments#1
@@ -1755,6 +2154,7 @@
 // Source: c:@S@OpenGl_Context@F@MaxMsaaSamples#1
 // Source: c:@S@OpenGl_Context@F@MaxTextureSize#1
 // Source: c:@S@OpenGl_Context@F@MaxTextureUnitsFFP#1
+// Source: c:@S@OpenGl_Context@F@Messenger#1
 // Source: c:@S@OpenGl_Context@F@OpenGl_Context#&1$@N@opencascade@S@handle>#$@S@OpenGl_Caps#
 // Source: c:@S@OpenGl_Context@F@PBRDiffIBLMapSHTexUnit#1
 // Source: c:@S@OpenGl_Context@F@PBREnvLUTTexUnit#1
@@ -1763,7 +2163,11 @@
 // Source: c:@S@OpenGl_Context@F@PolygonMode#1
 // Source: c:@S@OpenGl_Context@F@ReadBuffer#
 // Source: c:@S@OpenGl_Context@F@ReleaseDelayed#
+// Source: c:@S@OpenGl_Context@F@RenderScale#1
+// Source: c:@S@OpenGl_Context@F@RenderScaleInv#1
 // Source: c:@S@OpenGl_Context@F@ResetErrors#b#
+// Source: c:@S@OpenGl_Context@F@Resolution#1
+// Source: c:@S@OpenGl_Context@F@ResolutionRatio#1
 // Source: c:@S@OpenGl_Context@F@SampleAlphaToCoverage#1
 // Source: c:@S@OpenGl_Context@F@SetAllowSampleAlphaToCoverage#b#
 // Source: c:@S@OpenGl_Context@F@SetCamera#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
@@ -1775,20 +2179,30 @@
 // Source: c:@S@OpenGl_Context@F@SetFrameBufferSRGB#b#b#
 // Source: c:@S@OpenGl_Context@F@SetFrameStats#&1$@N@opencascade@S@handle>#$@S@OpenGl_FrameStats#
 // Source: c:@S@OpenGl_Context@F@SetGlNormalizeEnabled#b#
+// Source: c:@S@OpenGl_Context@F@SetLineFeather#f#
+// Source: c:@S@OpenGl_Context@F@SetLineStipple#f#s#
+// Source: c:@S@OpenGl_Context@F@SetLineStipple#s#
+// Source: c:@S@OpenGl_Context@F@SetLineWidth#f#
+// Source: c:@S@OpenGl_Context@F@SetPointSize#f#
 // Source: c:@S@OpenGl_Context@F@SetPointSpriteOrigin#
 // Source: c:@S@OpenGl_Context@F@SetPolygonHatchEnabled#b#
 // Source: c:@S@OpenGl_Context@F@SetPolygonHatchStyle#&1$@N@opencascade@S@handle>#$@S@Graphic3d_HatchStyle#
 // Source: c:@S@OpenGl_Context@F@SetPolygonMode#I#
 // Source: c:@S@OpenGl_Context@F@SetReadBuffer#I#
 // Source: c:@S@OpenGl_Context@F@SetReadDrawBuffer#I#
+// Source: c:@S@OpenGl_Context@F@SetResolution#i#f#f#
+// Source: c:@S@OpenGl_Context@F@SetResolutionRatio#f#
 // Source: c:@S@OpenGl_Context@F@SetSampleAlphaToCoverage#b#
 // Source: c:@S@OpenGl_Context@F@SetShadeModel#$@E@Graphic3d_TypeOfShadingModel#
 // Source: c:@S@OpenGl_Context@F@SetSwapInterval#I#
 // Source: c:@S@OpenGl_Context@F@SetTextureMatrix#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureParams#b#
+// Source: c:@S@OpenGl_Context@F@SetTypeOfLine#$@E@Aspect_TypeOfLine#f#
 // Source: c:@S@OpenGl_Context@F@SetWindowSRGB#b#
+// Source: c:@S@OpenGl_Context@F@ShaderManager#1
 // Source: c:@S@OpenGl_Context@F@ShadowMapTexUnit#1
 // Source: c:@S@OpenGl_Context@F@Share#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_Context@F@SpriteTextureUnit#1
+// Source: c:@S@OpenGl_Context@F@SupportedTextureFormats#1
 // Source: c:@S@OpenGl_Context@F@SwapBuffers#
 // Source: c:@S@OpenGl_Context@F@TextureWrapClamp#1
 // Source: c:@S@OpenGl_Context@F@ToCullBackFaces#1
@@ -1798,15 +2212,30 @@
 // Source: c:@S@OpenGl_Context@F@VersionMinor#1
 // Source: c:@S@OpenGl_Context@F@forcedRelease#
 // Source: c:@S@OpenGl_DepthPeeling@F@AttachDepthTexture#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#&1$@N@opencascade@S@handle>#$@S@OpenGl_Texture#
+// Source: c:@S@OpenGl_DepthPeeling@F@BlendBackFboOit#1
 // Source: c:@S@OpenGl_DepthPeeling@F@DetachDepthTexture#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_DepthPeeling@F@DynamicType#1
+// Source: c:@S@OpenGl_DepthPeeling@F@EstimatedDataSize#1
 // Source: c:@S@OpenGl_DepthPeeling@F@OpenGl_DepthPeeling#
+// Source: c:@S@OpenGl_Font@F@Ascender#1
+// Source: c:@S@OpenGl_Font@F@Descender#1
+// Source: c:@S@OpenGl_Font@F@DynamicType#1
+// Source: c:@S@OpenGl_Font@F@EstimatedDataSize#1
+// Source: c:@S@OpenGl_Font@F@FTFont#1
 // Source: c:@S@OpenGl_Font@F@Init#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_Font@F@IsValid#1
+// Source: c:@S@OpenGl_Font@F@Texture#1
 // Source: c:@S@OpenGl_Font@F@WasInitialized#1
 // Source: c:@S@OpenGl_FrameBuffer@F@BindBuffer#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_FrameBuffer@F@BindDrawBuffer#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_FrameBuffer@F@BindReadBuffer#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_FrameBuffer@F@ChangeViewport#I#I#
+// Source: c:@S@OpenGl_FrameBuffer@F@ColorRenderBuffer#1
+// Source: c:@S@OpenGl_FrameBuffer@F@ColorTexture#I#1
+// Source: c:@S@OpenGl_FrameBuffer@F@DepthStencilRenderBuffer#1
+// Source: c:@S@OpenGl_FrameBuffer@F@DepthStencilTexture#1
+// Source: c:@S@OpenGl_FrameBuffer@F@DynamicType#1
+// Source: c:@S@OpenGl_FrameBuffer@F@EstimatedDataSize#1
 // Source: c:@S@OpenGl_FrameBuffer@F@GetInitVPSizeX#1
 // Source: c:@S@OpenGl_FrameBuffer@F@GetInitVPSizeY#1
 // Source: c:@S@OpenGl_FrameBuffer@F@GetSizeX#1
@@ -1817,6 +2246,7 @@
 // Source: c:@S@OpenGl_FrameBuffer@F@HasDepth#1
 // Source: c:@S@OpenGl_FrameBuffer@F@Init#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#I#I#I#I#I#
 // Source: c:@S@OpenGl_FrameBuffer@F@InitLazy#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#I#I#I#I#I#
+// Source: c:@S@OpenGl_FrameBuffer@F@InitWithRB#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#I#I#I#I#i#
 // Source: c:@S@OpenGl_FrameBuffer@F@InitWrapper#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_FrameBuffer@F@IsColorRenderBuffer#1
 // Source: c:@S@OpenGl_FrameBuffer@F@IsDepthStencilRenderBuffer#1
@@ -1825,10 +2255,14 @@
 // Source: c:@S@OpenGl_FrameBuffer@F@NbSamples#1
 // Source: c:@S@OpenGl_FrameBuffer@F@SetupViewport#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_FrameBuffer@F@UnbindBuffer#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_FrameStats@F@DynamicType#1
 // Source: c:@S@OpenGl_FrameStats@F@OpenGl_FrameStats#
 // Source: c:@S@OpenGl_GraphicDriver@F@CreateStructure#&1$@N@opencascade@S@handle>#$@S@Graphic3d_StructureManager#
 // Source: c:@S@OpenGl_GraphicDriver@F@CreateView#&1$@N@opencascade@S@handle>#$@S@Graphic3d_StructureManager#
+// Source: c:@S@OpenGl_GraphicDriver@F@DefaultTextHeight#1
+// Source: c:@S@OpenGl_GraphicDriver@F@DynamicType#1
 // Source: c:@S@OpenGl_GraphicDriver@F@EnableVBO#b#
+// Source: c:@S@OpenGl_GraphicDriver@F@GetNextPrimitiveArrayUID#1
 // Source: c:@S@OpenGl_GraphicDriver@F@InitContext#
 // Source: c:@S@OpenGl_GraphicDriver@F@InquireLimit#$@E@Graphic3d_TypeOfLimit#1
 // Source: c:@S@OpenGl_GraphicDriver@F@IsVerticalSync#1
@@ -1840,12 +2274,15 @@
 // Source: c:@S@OpenGl_GraphicDriver@F@SetVerticalSync#b#
 // Source: c:@S@OpenGl_GraphicDriver@F@setDeviceLost#
 // Source: c:@S@OpenGl_GraphicDriverFactory@F@CreateDriver#&1$@N@opencascade@S@handle>#$@S@Aspect_DisplayConnection#
+// Source: c:@S@OpenGl_GraphicDriverFactory@F@DefaultOptions#1
+// Source: c:@S@OpenGl_GraphicDriverFactory@F@DynamicType#1
 // Source: c:@S@OpenGl_GraphicDriverFactory@F@OpenGl_GraphicDriverFactory#
 // Source: c:@S@OpenGl_GraphicDriverFactory@F@SetDefaultOptions#&1$@N@opencascade@S@handle>#$@S@OpenGl_Caps#
 // Source: c:@S@OpenGl_Group@F@AddPrimitiveArray#$@E@Graphic3d_TypeOfPrimitiveArray#&1$@N@opencascade@S@handle>#$@S@Graphic3d_IndexBuffer#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Buffer#&1$@N@opencascade@S@handle>#$@S@Graphic3d_BoundBuffer#b#
 // Source: c:@S@OpenGl_Group@F@AddText#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Text#b#
 // Source: c:@S@OpenGl_Group@F@Aspects#1
 // Source: c:@S@OpenGl_Group@F@Clear#b#
+// Source: c:@S@OpenGl_Group@F@DynamicType#1
 // Source: c:@S@OpenGl_Group@F@HasPersistence#1
 // Source: c:@S@OpenGl_Group@F@IsRaytracable#1
 // Source: c:@S@OpenGl_Group@F@OpenGl_Group#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
@@ -1855,28 +2292,49 @@
 // Source: c:@S@OpenGl_Group@F@SetPrimitivesAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Aspects#
 // Source: c:@S@OpenGl_Group@F@SetStencilTestOptions#b#
 // Source: c:@S@OpenGl_Group@F@SynchronizeAspects#
+// Source: c:@S@OpenGl_IndexBuffer@F@DynamicType#1
+// Source: c:@S@OpenGl_IndexBuffer@F@GetTarget#1
 // Source: c:@S@OpenGl_IndexBuffer@F@OpenGl_IndexBuffer#
+// Source: c:@S@OpenGl_LineAttributes@F@DynamicType#1
+// Source: c:@S@OpenGl_LineAttributes@F@EstimatedDataSize#1
 // Source: c:@S@OpenGl_LineAttributes@F@OpenGl_LineAttributes#
+// Source: c:@S@OpenGl_NamedResource@F@DynamicType#1
+// Source: c:@S@OpenGl_PBREnvironment@F@Bake#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#&1$@N@opencascade@S@handle>#$@S@OpenGl_Texture#b#b#k#k#f#
 // Source: c:@S@OpenGl_PBREnvironment@F@Bind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_PBREnvironment@F@DynamicType#1
+// Source: c:@S@OpenGl_PBREnvironment@F@EstimatedDataSize#1
 // Source: c:@S@OpenGl_PBREnvironment@F@IsComplete#1
 // Source: c:@S@OpenGl_PBREnvironment@F@IsNeededToBeBound#1
+// Source: c:@S@OpenGl_PBREnvironment@F@Pow2Size#1
+// Source: c:@S@OpenGl_PBREnvironment@F@SizesAreDifferent#i#i#1
+// Source: c:@S@OpenGl_PBREnvironment@F@SpecMapLevelsNumber#1
 // Source: c:@S@OpenGl_PBREnvironment@F@Unbind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_PointSprite@F@DrawBitmap#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#1
+// Source: c:@S@OpenGl_PointSprite@F@DynamicType#1
 // Source: c:@S@OpenGl_PointSprite@F@IsDisplayList#1
 // Source: c:@S@OpenGl_PointSprite@F@IsPointSprite#1
 // Source: c:@S@OpenGl_PointSprite@F@IsValid#1
+// Source: c:@S@OpenGl_PointSprite@F@SetDisplayList#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#i#
+// Source: c:@S@OpenGl_Resource@F@DynamicType#1
 // Source: c:@S@OpenGl_Sampler@F@Bind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_Sampler@F@Bind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#$@E@Graphic3d_TextureUnit#
 // Source: c:@S@OpenGl_Sampler@F@Create#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_Sampler@F@DynamicType#1
+// Source: c:@S@OpenGl_Sampler@F@EstimatedDataSize#1
 // Source: c:@S@OpenGl_Sampler@F@IsImmutable#1
 // Source: c:@S@OpenGl_Sampler@F@IsValid#1
 // Source: c:@S@OpenGl_Sampler@F@OpenGl_Sampler#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureParams#
+// Source: c:@S@OpenGl_Sampler@F@Parameters#
+// Source: c:@S@OpenGl_Sampler@F@SamplerID#1
 // Source: c:@S@OpenGl_Sampler@F@SetImmutable#
+// Source: c:@S@OpenGl_Sampler@F@SetParameter#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#i#i#I#
 // Source: c:@S@OpenGl_Sampler@F@SetParameters#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureParams#
 // Source: c:@S@OpenGl_Sampler@F@ToUpdateParameters#1
 // Source: c:@S@OpenGl_Sampler@F@Unbind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_Sampler@F@Unbind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#$@E@Graphic3d_TextureUnit#
+// Source: c:@S@OpenGl_SetOfPrograms@F@DynamicType#1
 // Source: c:@S@OpenGl_SetOfPrograms@F@OpenGl_SetOfPrograms#
+// Source: c:@S@OpenGl_SetOfShaderPrograms@F@DynamicType#1
 // Source: c:@S@OpenGl_SetOfShaderPrograms@F@OpenGl_SetOfShaderPrograms#
 // Source: c:@S@OpenGl_SetOfShaderPrograms@F@OpenGl_SetOfShaderPrograms#&1$@N@opencascade@S@handle>#$@S@OpenGl_SetOfPrograms#
 // Source: c:@S@OpenGl_ShaderManager@F@BindBoundBoxProgram#
@@ -1892,9 +2350,14 @@
 // Source: c:@S@OpenGl_ShaderManager@F@BindOutlineProgram#
 // Source: c:@S@OpenGl_ShaderManager@F@BindPBREnvBakingProgram#I#
 // Source: c:@S@OpenGl_ShaderManager@F@BindStereoProgram#$@E@Graphic3d_StereoMode#
+// Source: c:@S@OpenGl_ShaderManager@F@BoundBoxVertBuffer#1
 // Source: c:@S@OpenGl_ShaderManager@F@ChooseFaceShadingModel#$@E@Graphic3d_TypeOfShadingModel#b#1
 // Source: c:@S@OpenGl_ShaderManager@F@ChooseLineShadingModel#$@E@Graphic3d_TypeOfShadingModel#b#1
 // Source: c:@S@OpenGl_ShaderManager@F@ChooseMarkerShadingModel#$@E@Graphic3d_TypeOfShadingModel#b#1
+// Source: c:@S@OpenGl_ShaderManager@F@DynamicType#1
+// Source: c:@S@OpenGl_ShaderManager@F@GetBgCubeMapProgram#
+// Source: c:@S@OpenGl_ShaderManager@F@GetBgSkydomeProgram#
+// Source: c:@S@OpenGl_ShaderManager@F@GetColoredQuadProgram#
 // Source: c:@S@OpenGl_ShaderManager@F@IsEmpty#1
 // Source: c:@S@OpenGl_ShaderManager@F@PushClippingState#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderProgram#1
 // Source: c:@S@OpenGl_ShaderManager@F@PushInteriorState#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderProgram#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Aspects#1
@@ -1910,6 +2373,7 @@
 // Source: c:@S@OpenGl_ShaderManager@F@SetCastShadows#b#
 // Source: c:@S@OpenGl_ShaderManager@F@SetOitState#$@E@Graphic3d_RenderTransparentMethod#
 // Source: c:@S@OpenGl_ShaderManager@F@SetShadingModel#$@E@Graphic3d_TypeOfShadingModel#
+// Source: c:@S@OpenGl_ShaderManager@F@SetWeighedOitState#f#
 // Source: c:@S@OpenGl_ShaderManager@F@ShadingModel#1
 // Source: c:@S@OpenGl_ShaderManager@F@UpdateClippingState#
 // Source: c:@S@OpenGl_ShaderManager@F@UpdateLightSourceState#
@@ -1926,10 +2390,16 @@
 // Source: c:@S@OpenGl_ShaderManager@F@pushWorldViewState#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderProgram#1
 // Source: c:@S@OpenGl_ShaderObject@F@Compile#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_ShaderObject@F@Create#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_ShaderObject@F@DynamicType#1
+// Source: c:@S@OpenGl_ShaderObject@F@EstimatedDataSize#1
+// Source: c:@S@OpenGl_ShaderObject@F@OpenGl_ShaderObject#i#
+// Source: c:@S@OpenGl_ShaderObject@F@Type#1
 // Source: c:@S@OpenGl_ShaderProgram@F@ApplyVariables#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_ShaderProgram@F@AttachShader#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderObject#
 // Source: c:@S@OpenGl_ShaderProgram@F@Create#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_ShaderProgram@F@DetachShader#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderObject#
+// Source: c:@S@OpenGl_ShaderProgram@F@DynamicType#1
+// Source: c:@S@OpenGl_ShaderProgram@F@EstimatedDataSize#1
 // Source: c:@S@OpenGl_ShaderProgram@F@HasAlphaTest#1
 // Source: c:@S@OpenGl_ShaderProgram@F@HasTessellationStage#1
 // Source: c:@S@OpenGl_ShaderProgram@F@IsValid#1
@@ -1939,17 +2409,32 @@
 // Source: c:@S@OpenGl_ShaderProgram@F@NbLightsMax#1
 // Source: c:@S@OpenGl_ShaderProgram@F@NbShadowMaps#1
 // Source: c:@S@OpenGl_ShaderProgram@F@OitOutput#1
+// Source: c:@S@OpenGl_ShaderProgram@F@ProgramId#1
+// Source: c:@S@OpenGl_ShaderProgram@F@Proxy#1
+// Source: c:@S@OpenGl_ShaderProgram@F@SetAttribute#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#I#f#
 // Source: c:@S@OpenGl_ShaderProgram@F@SetSampler#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#I#$@E@Graphic3d_TextureUnit#
 // Source: c:@S@OpenGl_ShaderProgram@F@SetUniform#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#I#I#
+// Source: c:@S@OpenGl_ShaderProgram@F@SetUniform#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#I#f#
 // Source: c:@S@OpenGl_ShaderProgram@F@TextureSetBits#1
+// Source: c:@S@OpenGl_ShadowMap@F@Camera#1
+// Source: c:@S@OpenGl_ShadowMap@F@DynamicType#1
+// Source: c:@S@OpenGl_ShadowMap@F@EstimatedDataSize#1
+// Source: c:@S@OpenGl_ShadowMap@F@FrameBuffer#1
 // Source: c:@S@OpenGl_ShadowMap@F@IsValid#1
+// Source: c:@S@OpenGl_ShadowMap@F@LightSource#1
 // Source: c:@S@OpenGl_ShadowMap@F@SetLightSource#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#
+// Source: c:@S@OpenGl_ShadowMap@F@SetShadowMapBias#f#
+// Source: c:@S@OpenGl_ShadowMap@F@ShadowMapBias#1
+// Source: c:@S@OpenGl_ShadowMap@F@Texture#1
+// Source: c:@S@OpenGl_ShadowMapArray@F@EstimatedDataSize#1
 // Source: c:@S@OpenGl_ShadowMapArray@F@IsValid#1
 // Source: c:@S@OpenGl_ShadowMapArray@F@OpenGl_ShadowMapArray#
 // Source: c:@S@OpenGl_Structure@F@Clear#
 // Source: c:@S@OpenGl_Structure@F@Clear#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_Structure@F@DynamicType#1
 // Source: c:@S@OpenGl_Structure@F@GraphicHighlight#&1$@N@opencascade@S@handle>#$@S@Graphic3d_PresentationAttributes#
 // Source: c:@S@OpenGl_Structure@F@GraphicUnhighlight#
+// Source: c:@S@OpenGl_Structure@F@ModificationState#1
 // Source: c:@S@OpenGl_Structure@F@NewGroup#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
 // Source: c:@S@OpenGl_Structure@F@OnVisibilityChanged#
 // Source: c:@S@OpenGl_Structure@F@OpenGl_Structure#&1$@N@opencascade@S@handle>#$@S@Graphic3d_StructureManager#
@@ -1963,14 +2448,20 @@
 // Source: c:@S@OpenGl_Structure@F@SetZLayer#I#
 // Source: c:@S@OpenGl_Structure@F@ShadowLink#&1$@N@opencascade@S@handle>#$@S@Graphic3d_StructureManager#1
 // Source: c:@S@OpenGl_Structure@F@updateLayerTransformation#
+// Source: c:@S@OpenGl_StructureShadow@F@DynamicType#1
 // Source: c:@S@OpenGl_StructureShadow@F@OpenGl_StructureShadow#&1$@N@opencascade@S@handle>#$@S@Graphic3d_StructureManager#&1$@N@opencascade@S@handle>#$@S@OpenGl_Structure#
 // Source: c:@S@OpenGl_Texture@F@Bind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#$@E@Graphic3d_TextureUnit#1
 // Source: c:@S@OpenGl_Texture@F@Bind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#1
 // Source: c:@S@OpenGl_Texture@F@Create#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_Texture@F@DynamicType#1
+// Source: c:@S@OpenGl_Texture@F@EstimatedDataSize#1
 // Source: c:@S@OpenGl_Texture@F@GenerateMipmaps#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_Texture@F@GetFormat#1
+// Source: c:@S@OpenGl_Texture@F@GetTarget#1
 // Source: c:@S@OpenGl_Texture@F@HasMipmaps#1
 // Source: c:@S@OpenGl_Texture@F@Init#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureRoot#
 // Source: c:@S@OpenGl_Texture@F@Init2DMultisample#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#I#I#I#I#
+// Source: c:@S@OpenGl_Texture@F@InitCubeMap#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CubeMap#k#$@E@Image_Format#b#b#
 // Source: c:@S@OpenGl_Texture@F@InitSamplerObject#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_Texture@F@IsAlpha#1
 // Source: c:@S@OpenGl_Texture@F@IsPointSprite#1
@@ -1978,26 +2469,37 @@
 // Source: c:@S@OpenGl_Texture@F@IsValid#1
 // Source: c:@S@OpenGl_Texture@F@MaxMipmapLevel#1
 // Source: c:@S@OpenGl_Texture@F@NbSamples#1
+// Source: c:@S@OpenGl_Texture@F@Revision#1
+// Source: c:@S@OpenGl_Texture@F@Sampler#1
 // Source: c:@S@OpenGl_Texture@F@SetAlpha#b#
+// Source: c:@S@OpenGl_Texture@F@SetRevision#k#
 // Source: c:@S@OpenGl_Texture@F@SetSampler#&1$@N@opencascade@S@handle>#$@S@OpenGl_Sampler#
 // Source: c:@S@OpenGl_Texture@F@SetTopDown#b#
 // Source: c:@S@OpenGl_Texture@F@SizeX#1
 // Source: c:@S@OpenGl_Texture@F@SizeY#1
 // Source: c:@S@OpenGl_Texture@F@SizeZ#1
 // Source: c:@S@OpenGl_Texture@F@SizedFormat#1
+// Source: c:@S@OpenGl_Texture@F@TextureId#1
 // Source: c:@S@OpenGl_Texture@F@Unbind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#$@E@Graphic3d_TextureUnit#1
 // Source: c:@S@OpenGl_Texture@F@Unbind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#1
 // Source: c:@S@OpenGl_TextureBuffer@F@BindTexture#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#$@E@Graphic3d_TextureUnit#1
 // Source: c:@S@OpenGl_TextureBuffer@F@Create#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
+// Source: c:@S@OpenGl_TextureBuffer@F@DynamicType#1
+// Source: c:@S@OpenGl_TextureBuffer@F@GetTarget#1
 // Source: c:@S@OpenGl_TextureBuffer@F@IsValid#1
 // Source: c:@S@OpenGl_TextureBuffer@F@OpenGl_TextureBuffer#
+// Source: c:@S@OpenGl_TextureBuffer@F@TextureFormat#1
+// Source: c:@S@OpenGl_TextureBuffer@F@TextureId#1
 // Source: c:@S@OpenGl_TextureBuffer@F@UnbindTexture#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#$@E@Graphic3d_TextureUnit#1
+// Source: c:@S@OpenGl_TextureSet@F@DynamicType#1
+// Source: c:@S@OpenGl_TextureSet@F@First#1
 // Source: c:@S@OpenGl_TextureSet@F@FirstUnit#1
 // Source: c:@S@OpenGl_TextureSet@F@HasNonPointSprite#1
 // Source: c:@S@OpenGl_TextureSet@F@HasPointSprite#1
 // Source: c:@S@OpenGl_TextureSet@F@InitZero#
 // Source: c:@S@OpenGl_TextureSet@F@IsEmpty#1
 // Source: c:@S@OpenGl_TextureSet@F@IsModulate#1
+// Source: c:@S@OpenGl_TextureSet@F@Last#1
 // Source: c:@S@OpenGl_TextureSet@F@LastUnit#1
 // Source: c:@S@OpenGl_TextureSet@F@Lower#1
 // Source: c:@S@OpenGl_TextureSet@F@OpenGl_TextureSet#
@@ -2006,19 +2508,31 @@
 // Source: c:@S@OpenGl_TextureSet@F@Size#1
 // Source: c:@S@OpenGl_TextureSet@F@TextureSetBits#1
 // Source: c:@S@OpenGl_TextureSet@F@Upper#1
+// Source: c:@S@OpenGl_TextureSet@F@Value#I#1
+// Source: c:@S@OpenGl_UniformBuffer@F@DynamicType#1
+// Source: c:@S@OpenGl_UniformBuffer@F@GetTarget#1
 // Source: c:@S@OpenGl_UniformBuffer@F@OpenGl_UniformBuffer#
 // Source: c:@S@OpenGl_VertexBuffer@F@BindAllAttributes#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#1
 // Source: c:@S@OpenGl_VertexBuffer@F@BindAttribute#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#$@E@Graphic3d_TypeOfAttribute#1
 // Source: c:@S@OpenGl_VertexBuffer@F@BindPositionAttribute#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#1
+// Source: c:@S@OpenGl_VertexBuffer@F@BindVertexAttrib#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#i#1
+// Source: c:@S@OpenGl_VertexBuffer@F@DynamicType#1
+// Source: c:@S@OpenGl_VertexBuffer@F@GetTarget#1
 // Source: c:@S@OpenGl_VertexBuffer@F@HasColorAttribute#1
 // Source: c:@S@OpenGl_VertexBuffer@F@HasNormalAttribute#1
 // Source: c:@S@OpenGl_VertexBuffer@F@OpenGl_VertexBuffer#
 // Source: c:@S@OpenGl_VertexBuffer@F@UnbindAllAttributes#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#1
 // Source: c:@S@OpenGl_VertexBuffer@F@UnbindAttribute#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#$@E@Graphic3d_TypeOfAttribute#1
+// Source: c:@S@OpenGl_VertexBuffer@F@UnbindVertexAttrib#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#i#1
 // Source: c:@S@OpenGl_View@F@BackgroundImageStyle#1
+// Source: c:@S@OpenGl_View@F@ClipPlanes#1
+// Source: c:@S@OpenGl_View@F@DepthPeelingFbos#1
+// Source: c:@S@OpenGl_View@F@DynamicType#1
 // Source: c:@S@OpenGl_View@F@FBO#1
 // Source: c:@S@OpenGl_View@F@FBOChangeViewport#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#I#I#
 // Source: c:@S@OpenGl_View@F@FBOCreate#I#I#
+// Source: c:@S@OpenGl_View@F@GlTextureEnv#1
+// Source: c:@S@OpenGl_View@F@GlWindow#1
 // Source: c:@S@OpenGl_View@F@GraduatedTrihedronErase#
 // Source: c:@S@OpenGl_View@F@GridErase#
 // Source: c:@S@OpenGl_View@F@HasImmediateStructures#1
@@ -2027,6 +2541,7 @@
 // Source: c:@S@OpenGl_View@F@IsDefined#1
 // Source: c:@S@OpenGl_View@F@IsInvalidated#
 // Source: c:@S@OpenGl_View@F@Layer#I#1
+// Source: c:@S@OpenGl_View@F@Lights#1
 // Source: c:@S@OpenGl_View@F@Redraw#
 // Source: c:@S@OpenGl_View@F@RedrawImmediate#
 // Source: c:@S@OpenGl_View@F@ReleaseGlResources#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
@@ -2042,18 +2557,27 @@
 // Source: c:@S@OpenGl_View@F@SetLights#&1$@N@opencascade@S@handle>#$@S@Graphic3d_LightSet#
 // Source: c:@S@OpenGl_View@F@SetTextureEnv#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureEnv#
 // Source: c:@S@OpenGl_View@F@SetToFlipOutput#b#
+// Source: c:@S@OpenGl_View@F@SpecIBLMapLevels#1
 // Source: c:@S@OpenGl_View@F@ToFlipOutput#1
 // Source: c:@S@OpenGl_View@F@Window#1
 // Source: c:@S@OpenGl_View@F@ZLayerMax#1
 // Source: c:@S@OpenGl_Window@F@Activate#
+// Source: c:@S@OpenGl_Window@F@DynamicType#1
+// Source: c:@S@OpenGl_Window@F@GetGlContext#1
 // Source: c:@S@OpenGl_Window@F@Height#1
 // Source: c:@S@OpenGl_Window@F@OpenGl_Window#
+// Source: c:@S@OpenGl_Window@F@PlatformWindow#
 // Source: c:@S@OpenGl_Window@F@Resize#
 // Source: c:@S@OpenGl_Window@F@SetSwapInterval#b#
+// Source: c:@S@OpenGl_Window@F@SizeWindow#
 // Source: c:@S@OpenGl_Window@F@Width#1
 // Source: c:@S@OpenGl_Workspace@F@Activate#
+// Source: c:@S@OpenGl_Workspace@F@DynamicType#1
+// Source: c:@S@OpenGl_Workspace@F@EnvironmentTexture#1
 // Source: c:@S@OpenGl_Workspace@F@FBOCreate#I#I#
+// Source: c:@S@OpenGl_Workspace@F@GetGlContext#
 // Source: c:@S@OpenGl_Workspace@F@Height#1
+// Source: c:@S@OpenGl_Workspace@F@HighlightStyle#1
 // Source: c:@S@OpenGl_Workspace@F@NbSkippedTransparentElements#
 // Source: c:@S@OpenGl_Workspace@F@RenderFilter#1
 // Source: c:@S@OpenGl_Workspace@F@ResetSkippedCounter#
@@ -2062,10 +2586,13 @@
 // Source: c:@S@OpenGl_Workspace@F@SetHighlightStyle#&1$@N@opencascade@S@handle>#$@S@Graphic3d_PresentationAttributes#
 // Source: c:@S@OpenGl_Workspace@F@SetRenderFilter#I#
 // Source: c:@S@OpenGl_Workspace@F@SetUseZBuffer#b#
+// Source: c:@S@OpenGl_Workspace@F@TextureSet#1
 // Source: c:@S@OpenGl_Workspace@F@ToAllowFaceCulling#1
 // Source: c:@S@OpenGl_Workspace@F@ToHighlight#1
 // Source: c:@S@OpenGl_Workspace@F@Width#1
 // Source: c:@S@Prs3d_ArrowAspect@F@Angle#1
+// Source: c:@S@Prs3d_ArrowAspect@F@Aspect#1
+// Source: c:@S@Prs3d_ArrowAspect@F@DynamicType#1
 // Source: c:@S@Prs3d_ArrowAspect@F@IsZoomable#1
 // Source: c:@S@Prs3d_ArrowAspect@F@Length#1
 // Source: c:@S@Prs3d_ArrowAspect@F@Prs3d_ArrowAspect#
@@ -2075,11 +2602,16 @@
 // Source: c:@S@Prs3d_ArrowAspect@F@SetAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_AspectLine3d#
 // Source: c:@S@Prs3d_ArrowAspect@F@SetLength#d#
 // Source: c:@S@Prs3d_ArrowAspect@F@SetZoomable#b#
+// Source: c:@S@Prs3d_BasicAspect@F@DynamicType#1
+// Source: c:@S@Prs3d_DatumAspect@F@ArrowAspect#1
 // Source: c:@S@Prs3d_DatumAspect@F@Attribute#$@E@Prs3d_DatumAttribute#1
 // Source: c:@S@Prs3d_DatumAspect@F@AxisLength#$@E@Prs3d_DatumParts#1
 // Source: c:@S@Prs3d_DatumAspect@F@CopyAspectsFrom#&1$@N@opencascade@S@handle>#$@S@Prs3d_DatumAspect#
 // Source: c:@S@Prs3d_DatumAspect@F@DatumAxes#1
 // Source: c:@S@Prs3d_DatumAspect@F@DrawDatumPart#$@E@Prs3d_DatumParts#1
+// Source: c:@S@Prs3d_DatumAspect@F@DynamicType#1
+// Source: c:@S@Prs3d_DatumAspect@F@LineAspect#$@E@Prs3d_DatumParts#1
+// Source: c:@S@Prs3d_DatumAspect@F@PointAspect#1
 // Source: c:@S@Prs3d_DatumAspect@F@Prs3d_DatumAspect#
 // Source: c:@S@Prs3d_DatumAspect@F@SetArrowAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_ArrowAspect#
 // Source: c:@S@Prs3d_DatumAspect@F@SetAttribute#$@E@Prs3d_DatumAttribute#d#
@@ -2090,15 +2622,21 @@
 // Source: c:@S@Prs3d_DatumAspect@F@SetPointAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_PointAspect#
 // Source: c:@S@Prs3d_DatumAspect@F@SetTextAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_TextAspect#
 // Source: c:@S@Prs3d_DatumAspect@F@SetToDrawLabels#b#
+// Source: c:@S@Prs3d_DatumAspect@F@ShadingAspect#$@E@Prs3d_DatumParts#1
+// Source: c:@S@Prs3d_DatumAspect@F@TextAspect#$@E@Prs3d_DatumParts#1
+// Source: c:@S@Prs3d_DatumAspect@F@TextAspect#1
 // Source: c:@S@Prs3d_DatumAspect@F@ToDrawArrows#1
 // Source: c:@S@Prs3d_DatumAspect@F@ToDrawLabels#1
+// Source: c:@S@Prs3d_DimensionAspect@F@ArrowAspect#1
 // Source: c:@S@Prs3d_DimensionAspect@F@ArrowOrientation#1
 // Source: c:@S@Prs3d_DimensionAspect@F@ArrowTailSize#1
+// Source: c:@S@Prs3d_DimensionAspect@F@DynamicType#1
 // Source: c:@S@Prs3d_DimensionAspect@F@ExtensionSize#1
 // Source: c:@S@Prs3d_DimensionAspect@F@IsArrows3d#1
 // Source: c:@S@Prs3d_DimensionAspect@F@IsText3d#1
 // Source: c:@S@Prs3d_DimensionAspect@F@IsTextShaded#1
 // Source: c:@S@Prs3d_DimensionAspect@F@IsUnitsDisplayed#1
+// Source: c:@S@Prs3d_DimensionAspect@F@LineAspect#1
 // Source: c:@S@Prs3d_DimensionAspect@F@MakeArrows3d#b#
 // Source: c:@S@Prs3d_DimensionAspect@F@MakeText3d#b#
 // Source: c:@S@Prs3d_DimensionAspect@F@MakeTextShaded#b#
@@ -2112,17 +2650,24 @@
 // Source: c:@S@Prs3d_DimensionAspect@F@SetTextAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_TextAspect#
 // Source: c:@S@Prs3d_DimensionAspect@F@SetTextHorizontalPosition#$@E@Prs3d_DimensionTextHorizontalPosition#
 // Source: c:@S@Prs3d_DimensionAspect@F@SetTextVerticalPosition#$@E@Prs3d_DimensionTextVerticalPosition#
+// Source: c:@S@Prs3d_DimensionAspect@F@TextAspect#1
 // Source: c:@S@Prs3d_DimensionAspect@F@TextHorizontalPosition#1
 // Source: c:@S@Prs3d_DimensionAspect@F@TextVerticalPosition#1
+// Source: c:@S@Prs3d_Drawer@F@ArrowAspect#1
 // Source: c:@S@Prs3d_Drawer@F@ClearLocalAttributes#
+// Source: c:@S@Prs3d_Drawer@F@DatumAspect#1
 // Source: c:@S@Prs3d_Drawer@F@DeviationAngle#1
 // Source: c:@S@Prs3d_Drawer@F@DeviationCoefficient#1
+// Source: c:@S@Prs3d_Drawer@F@DimensionAspect#1
 // Source: c:@S@Prs3d_Drawer@F@DisableDrawHiddenLine#
 // Source: c:@S@Prs3d_Drawer@F@Discretisation#1
 // Source: c:@S@Prs3d_Drawer@F@DrawHiddenLine#1
+// Source: c:@S@Prs3d_Drawer@F@DynamicType#1
 // Source: c:@S@Prs3d_Drawer@F@EnableDrawHiddenLine#
+// Source: c:@S@Prs3d_Drawer@F@FaceBoundaryAspect#1
 // Source: c:@S@Prs3d_Drawer@F@FaceBoundaryDraw#1
 // Source: c:@S@Prs3d_Drawer@F@FaceBoundaryUpperContinuity#1
+// Source: c:@S@Prs3d_Drawer@F@FreeBoundaryAspect#1
 // Source: c:@S@Prs3d_Drawer@F@FreeBoundaryDraw#1
 // Source: c:@S@Prs3d_Drawer@F@HLRAngle#1
 // Source: c:@S@Prs3d_Drawer@F@HasLink#1
@@ -2167,17 +2712,24 @@
 // Source: c:@S@Prs3d_Drawer@F@HasOwnVertexDrawMode#1
 // Source: c:@S@Prs3d_Drawer@F@HasOwnWireAspect#1
 // Source: c:@S@Prs3d_Drawer@F@HasOwnWireDraw#1
+// Source: c:@S@Prs3d_Drawer@F@HiddenLineAspect#1
 // Source: c:@S@Prs3d_Drawer@F@IsAutoTriangulation#1
 // Source: c:@S@Prs3d_Drawer@F@IsoOnPlane#1
 // Source: c:@S@Prs3d_Drawer@F@IsoOnTriangulation#1
 // Source: c:@S@Prs3d_Drawer@F@LineArrowDraw#1
+// Source: c:@S@Prs3d_Drawer@F@LineAspect#1
 // Source: c:@S@Prs3d_Drawer@F@Link#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#
+// Source: c:@S@Prs3d_Drawer@F@Link#1
 // Source: c:@S@Prs3d_Drawer@F@MaximalChordialDeviation#1
 // Source: c:@S@Prs3d_Drawer@F@MaximalParameterValue#1
+// Source: c:@S@Prs3d_Drawer@F@PlaneAspect#1
+// Source: c:@S@Prs3d_Drawer@F@PointAspect#1
 // Source: c:@S@Prs3d_Drawer@F@PreviousDeviationAngle#1
 // Source: c:@S@Prs3d_Drawer@F@PreviousDeviationCoefficient#1
 // Source: c:@S@Prs3d_Drawer@F@PreviousHLRDeviationAngle#1
 // Source: c:@S@Prs3d_Drawer@F@Prs3d_Drawer#
+// Source: c:@S@Prs3d_Drawer@F@SectionAspect#1
+// Source: c:@S@Prs3d_Drawer@F@SeenLineAspect#1
 // Source: c:@S@Prs3d_Drawer@F@SetArrowAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_ArrowAspect#
 // Source: c:@S@Prs3d_Drawer@F@SetAutoTriangulation#b#
 // Source: c:@S@Prs3d_Drawer@F@SetDatumAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_DatumAspect#
@@ -2226,8 +2778,11 @@
 // Source: c:@S@Prs3d_Drawer@F@SetupOwnFaceBoundaryAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#
 // Source: c:@S@Prs3d_Drawer@F@SetupOwnPointAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#
 // Source: c:@S@Prs3d_Drawer@F@SetupOwnShadingAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#
+// Source: c:@S@Prs3d_Drawer@F@TextAspect#1
 // Source: c:@S@Prs3d_Drawer@F@TypeOfDeflection#1
 // Source: c:@S@Prs3d_Drawer@F@TypeOfHLR#1
+// Source: c:@S@Prs3d_Drawer@F@UIsoAspect#1
+// Source: c:@S@Prs3d_Drawer@F@UnFreeBoundaryAspect#1
 // Source: c:@S@Prs3d_Drawer@F@UnFreeBoundaryDraw#1
 // Source: c:@S@Prs3d_Drawer@F@UnsetFaceBoundaryUpperContinuity#
 // Source: c:@S@Prs3d_Drawer@F@UnsetOwnDimAngleDisplayUnits#
@@ -2249,14 +2804,21 @@
 // Source: c:@S@Prs3d_Drawer@F@UnsetOwnWireDraw#
 // Source: c:@S@Prs3d_Drawer@F@UpdatePreviousDeviationAngle#
 // Source: c:@S@Prs3d_Drawer@F@UpdatePreviousDeviationCoefficient#
+// Source: c:@S@Prs3d_Drawer@F@VIsoAspect#1
+// Source: c:@S@Prs3d_Drawer@F@VectorAspect#1
 // Source: c:@S@Prs3d_Drawer@F@VertexDrawMode#1
+// Source: c:@S@Prs3d_Drawer@F@WireAspect#1
 // Source: c:@S@Prs3d_Drawer@F@WireDraw#1
+// Source: c:@S@Prs3d_IsoAspect@F@DynamicType#1
 // Source: c:@S@Prs3d_IsoAspect@F@Number#1
 // Source: c:@S@Prs3d_IsoAspect@F@SetNumber#I#
+// Source: c:@S@Prs3d_LineAspect@F@Aspect#1
+// Source: c:@S@Prs3d_LineAspect@F@DynamicType#1
 // Source: c:@S@Prs3d_LineAspect@F@Prs3d_LineAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_AspectLine3d#
 // Source: c:@S@Prs3d_LineAspect@F@SetAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_AspectLine3d#
 // Source: c:@S@Prs3d_LineAspect@F@SetTypeOfLine#$@E@Aspect_TypeOfLine#
 // Source: c:@S@Prs3d_LineAspect@F@SetWidth#d#
+// Source: c:@S@Prs3d_PlaneAspect@F@ArrowAspect#1
 // Source: c:@S@Prs3d_PlaneAspect@F@ArrowsAngle#1
 // Source: c:@S@Prs3d_PlaneAspect@F@ArrowsLength#1
 // Source: c:@S@Prs3d_PlaneAspect@F@ArrowsSize#1
@@ -2264,6 +2826,9 @@
 // Source: c:@S@Prs3d_PlaneAspect@F@DisplayEdges#1
 // Source: c:@S@Prs3d_PlaneAspect@F@DisplayEdgesArrows#1
 // Source: c:@S@Prs3d_PlaneAspect@F@DisplayIso#1
+// Source: c:@S@Prs3d_PlaneAspect@F@DynamicType#1
+// Source: c:@S@Prs3d_PlaneAspect@F@EdgesAspect#1
+// Source: c:@S@Prs3d_PlaneAspect@F@IsoAspect#1
 // Source: c:@S@Prs3d_PlaneAspect@F@IsoDistance#1
 // Source: c:@S@Prs3d_PlaneAspect@F@PlaneXLength#1
 // Source: c:@S@Prs3d_PlaneAspect@F@PlaneYLength#1
@@ -2277,13 +2842,19 @@
 // Source: c:@S@Prs3d_PlaneAspect@F@SetDisplayIso#b#
 // Source: c:@S@Prs3d_PlaneAspect@F@SetIsoDistance#d#
 // Source: c:@S@Prs3d_PlaneAspect@F@SetPlaneLength#d#d#
+// Source: c:@S@Prs3d_PointAspect@F@Aspect#1
+// Source: c:@S@Prs3d_PointAspect@F@DynamicType#1
+// Source: c:@S@Prs3d_PointAspect@F@GetTexture#1
 // Source: c:@S@Prs3d_PointAspect@F@Prs3d_PointAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_AspectMarker3d#
 // Source: c:@S@Prs3d_PointAspect@F@SetAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_AspectMarker3d#
 // Source: c:@S@Prs3d_PointAspect@F@SetScale#d#
 // Source: c:@S@Prs3d_PointAspect@F@SetTypeOfMarker#$@E@Aspect_TypeOfMarker#
 // Source: c:@S@Prs3d_PresentationShadow@F@CalculateBoundBox#
+// Source: c:@S@Prs3d_PresentationShadow@F@DynamicType#1
+// Source: c:@S@Prs3d_PresentationShadow@F@ParentAffinity#1
 // Source: c:@S@Prs3d_PresentationShadow@F@ParentId#1
 // Source: c:@S@Prs3d_PresentationShadow@F@Prs3d_PresentationShadow#&1$@N@opencascade@S@handle>#$@S@Graphic3d_StructureManager#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
+// Source: c:@S@Prs3d_ShadingAspect@F@DynamicType#1
 // Source: c:@S@Prs3d_ShadingAspect@F@Prs3d_ShadingAspect#
 // Source: c:@S@Prs3d_ShadingAspect@F@Prs3d_ShadingAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_AspectFillArea3d#
 // Source: c:@S@Prs3d_ShadingAspect@F@SetAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_AspectFillArea3d#
@@ -2292,6 +2863,8 @@
 // Source: c:@S@Prs3d_ShadingAspect@F@ToUseVertexColorForBackFaces#1
 // Source: c:@S@Prs3d_ShadingAspect@F@Transparency#$@E@Aspect_TypeOfFacingModel#1
 // Source: c:@S@Prs3d_TextAspect@F@Angle#1
+// Source: c:@S@Prs3d_TextAspect@F@Aspect#1
+// Source: c:@S@Prs3d_TextAspect@F@DynamicType#1
 // Source: c:@S@Prs3d_TextAspect@F@Height#1
 // Source: c:@S@Prs3d_TextAspect@F@HorizontalJustification#1
 // Source: c:@S@Prs3d_TextAspect@F@Orientation#1
@@ -2304,24 +2877,33 @@
 // Source: c:@S@Prs3d_TextAspect@F@SetOrientation#$@E@Graphic3d_TextPath#
 // Source: c:@S@Prs3d_TextAspect@F@SetVerticalJustification#$@E@Graphic3d_VerticalTextAlignment#
 // Source: c:@S@Prs3d_TextAspect@F@VerticalJustification#1
+// Source: c:@S@PrsDim_AngleDimension@F@CenterPoint#1
+// Source: c:@S@PrsDim_AngleDimension@F@DynamicType#1
+// Source: c:@S@PrsDim_AngleDimension@F@FirstPoint#1
 // Source: c:@S@PrsDim_AngleDimension@F@GetArrowsVisibility#1
 // Source: c:@S@PrsDim_AngleDimension@F@GetTextPosition#1
 // Source: c:@S@PrsDim_AngleDimension@F@GetType#1
 // Source: c:@S@PrsDim_AngleDimension@F@PrsDim_AngleDimension#&1$@S@gp_Pnt#S0_#S0_#
+// Source: c:@S@PrsDim_AngleDimension@F@SecondPoint#1
 // Source: c:@S@PrsDim_AngleDimension@F@SetArrowsVisibility#&1$@E@PrsDim_TypeOfAngleArrowVisibility#
 // Source: c:@S@PrsDim_AngleDimension@F@SetMeasuredGeometry#&1$@S@gp_Pnt#S0_#S0_#
 // Source: c:@S@PrsDim_AngleDimension@F@SetTextPosition#&1$@S@gp_Pnt#
 // Source: c:@S@PrsDim_AngleDimension@F@SetType#$@E@PrsDim_TypeOfAngle#
+// Source: c:@S@PrsDim_Chamf2dDimension@F@DynamicType#1
 // Source: c:@S@PrsDim_Chamf2dDimension@F@IsMovable#1
 // Source: c:@S@PrsDim_Chamf2dDimension@F@KindOfDimension#1
+// Source: c:@S@PrsDim_Chamf3dDimension@F@DynamicType#1
 // Source: c:@S@PrsDim_Chamf3dDimension@F@IsMovable#1
 // Source: c:@S@PrsDim_Chamf3dDimension@F@KindOfDimension#1
+// Source: c:@S@PrsDim_ConcentricRelation@F@DynamicType#1
 // Source: c:@S@PrsDim_DiameterDimension@F@AnchorPoint#
+// Source: c:@S@PrsDim_DiameterDimension@F@DynamicType#1
 // Source: c:@S@PrsDim_DiameterDimension@F@GetTextPosition#1
 // Source: c:@S@PrsDim_DiameterDimension@F@SetTextPosition#&1$@S@gp_Pnt#
 // Source: c:@S@PrsDim_Dimension@F@AcceptDisplayMode#I#1
 // Source: c:@S@PrsDim_Dimension@F@DimensionAspect#1
 // Source: c:@S@PrsDim_Dimension@F@DisplaySpecialSymbol#1
+// Source: c:@S@PrsDim_Dimension@F@DynamicType#1
 // Source: c:@S@PrsDim_Dimension@F@GetFlyout#1
 // Source: c:@S@PrsDim_Dimension@F@GetGeometryType#1
 // Source: c:@S@PrsDim_Dimension@F@GetTextPosition#1
@@ -2340,34 +2922,54 @@
 // Source: c:@S@PrsDim_Dimension@F@Type#1
 // Source: c:@S@PrsDim_Dimension@F@UnsetCustomPlane#
 // Source: c:@S@PrsDim_Dimension@F@UnsetFixedTextPosition#
+// Source: c:@S@PrsDim_DimensionOwner@F@DynamicType#1
 // Source: c:@S@PrsDim_DimensionOwner@F@HilightWithColor#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#I#
 // Source: c:@S@PrsDim_DimensionOwner@F@IsHilighted#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#1
 // Source: c:@S@PrsDim_DimensionOwner@F@PrsDim_DimensionOwner#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#$@E@PrsDim_DimensionSelectionMode#I#
 // Source: c:@S@PrsDim_DimensionOwner@F@SelectionMode#1
 // Source: c:@S@PrsDim_DimensionOwner@F@Unhilight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@PrsDim_EllipseRadiusDimension@F@ComputeGeometry#
+// Source: c:@S@PrsDim_EllipseRadiusDimension@F@DynamicType#1
 // Source: c:@S@PrsDim_EllipseRadiusDimension@F@IsMovable#1
 // Source: c:@S@PrsDim_EllipseRadiusDimension@F@KindOfDimension#1
+// Source: c:@S@PrsDim_EqualDistanceRelation@F@DynamicType#1
+// Source: c:@S@PrsDim_EqualRadiusRelation@F@DynamicType#1
+// Source: c:@S@PrsDim_FixRelation@F@DynamicType#1
 // Source: c:@S@PrsDim_FixRelation@F@IsMovable#1
 // Source: c:@S@PrsDim_IdenticRelation@F@AddUser#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#
 // Source: c:@S@PrsDim_IdenticRelation@F@ClearUsers#
+// Source: c:@S@PrsDim_IdenticRelation@F@DynamicType#1
 // Source: c:@S@PrsDim_IdenticRelation@F@HasUsers#1
 // Source: c:@S@PrsDim_IdenticRelation@F@IsMovable#1
+// Source: c:@S@PrsDim_LengthDimension@F@DynamicType#1
+// Source: c:@S@PrsDim_LengthDimension@F@FirstPoint#1
 // Source: c:@S@PrsDim_LengthDimension@F@GetTextPosition#1
 // Source: c:@S@PrsDim_LengthDimension@F@PrsDim_LengthDimension#
+// Source: c:@S@PrsDim_LengthDimension@F@SecondPoint#1
 // Source: c:@S@PrsDim_LengthDimension@F@SetTextPosition#&1$@S@gp_Pnt#
+// Source: c:@S@PrsDim_MaxRadiusDimension@F@DynamicType#1
+// Source: c:@S@PrsDim_MidPointRelation@F@DynamicType#1
 // Source: c:@S@PrsDim_MidPointRelation@F@IsMovable#1
+// Source: c:@S@PrsDim_MinRadiusDimension@F@DynamicType#1
+// Source: c:@S@PrsDim_OffsetDimension@F@DynamicType#1
 // Source: c:@S@PrsDim_OffsetDimension@F@IsMovable#1
 // Source: c:@S@PrsDim_OffsetDimension@F@KindOfDimension#1
+// Source: c:@S@PrsDim_ParallelRelation@F@DynamicType#1
 // Source: c:@S@PrsDim_ParallelRelation@F@IsMovable#1
+// Source: c:@S@PrsDim_PerpendicularRelation@F@DynamicType#1
+// Source: c:@S@PrsDim_RadiusDimension@F@AnchorPoint#1
+// Source: c:@S@PrsDim_RadiusDimension@F@DynamicType#1
 // Source: c:@S@PrsDim_RadiusDimension@F@GetTextPosition#1
 // Source: c:@S@PrsDim_RadiusDimension@F@SetTextPosition#&1$@S@gp_Pnt#
 // Source: c:@S@PrsDim_Relation@F@AcceptDisplayMode#I#1
 // Source: c:@S@PrsDim_Relation@F@ArrowSize#1
 // Source: c:@S@PrsDim_Relation@F@AutomaticPosition#1
+// Source: c:@S@PrsDim_Relation@F@DynamicType#1
 // Source: c:@S@PrsDim_Relation@F@ExtShape#1
 // Source: c:@S@PrsDim_Relation@F@IsMovable#1
 // Source: c:@S@PrsDim_Relation@F@KindOfDimension#1
+// Source: c:@S@PrsDim_Relation@F@Plane#1
+// Source: c:@S@PrsDim_Relation@F@Position#1
 // Source: c:@S@PrsDim_Relation@F@SetArrowSize#d#
 // Source: c:@S@PrsDim_Relation@F@SetAutomaticPosition#b#
 // Source: c:@S@PrsDim_Relation@F@SetBndBox#d#d#d#d#d#d#
@@ -2381,17 +2983,23 @@
 // Source: c:@S@PrsDim_Relation@F@UnsetBndBox#
 // Source: c:@S@PrsDim_Relation@F@UnsetColor#
 // Source: c:@S@PrsDim_Relation@F@Value#1
+// Source: c:@S@PrsDim_SymmetricRelation@F@DynamicType#1
 // Source: c:@S@PrsDim_SymmetricRelation@F@IsMovable#1
+// Source: c:@S@PrsDim_TangentRelation@F@DynamicType#1
 // Source: c:@S@PrsDim_TangentRelation@F@ExternRef#
 // Source: c:@S@PrsDim_TangentRelation@F@SetExternRef#I#
 // Source: c:@S@PrsMgr_PresentableObject@F@AcceptDisplayMode#I#1
 // Source: c:@S@PrsMgr_PresentableObject@F@AddChild#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#
 // Source: c:@S@PrsMgr_PresentableObject@F@AddChildWithCurrentTransformation#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#
 // Source: c:@S@PrsMgr_PresentableObject@F@AddClipPlane#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ClipPlane#
+// Source: c:@S@PrsMgr_PresentableObject@F@ClipPlanes#1
+// Source: c:@S@PrsMgr_PresentableObject@F@CombinedParentTransformation#1
 // Source: c:@S@PrsMgr_PresentableObject@F@CurrentFacingModel#1
 // Source: c:@S@PrsMgr_PresentableObject@F@DefaultDisplayMode#1
 // Source: c:@S@PrsMgr_PresentableObject@F@DisplayMode#1
 // Source: c:@S@PrsMgr_PresentableObject@F@DisplayStatus#1
+// Source: c:@S@PrsMgr_PresentableObject@F@DynamicHilightAttributes#1
+// Source: c:@S@PrsMgr_PresentableObject@F@DynamicType#1
 // Source: c:@S@PrsMgr_PresentableObject@F@HasColor#1
 // Source: c:@S@PrsMgr_PresentableObject@F@HasDisplayMode#1
 // Source: c:@S@PrsMgr_PresentableObject@F@HasHilightMode#1
@@ -2400,10 +3008,12 @@
 // Source: c:@S@PrsMgr_PresentableObject@F@HasPolygonOffsets#1
 // Source: c:@S@PrsMgr_PresentableObject@F@HasTransformation#1
 // Source: c:@S@PrsMgr_PresentableObject@F@HasWidth#1
+// Source: c:@S@PrsMgr_PresentableObject@F@HilightAttributes#1
 // Source: c:@S@PrsMgr_PresentableObject@F@HilightMode#1
 // Source: c:@S@PrsMgr_PresentableObject@F@IsInfinite#1
 // Source: c:@S@PrsMgr_PresentableObject@F@IsMutable#1
 // Source: c:@S@PrsMgr_PresentableObject@F@IsTransparent#1
+// Source: c:@S@PrsMgr_PresentableObject@F@LocalTransformationGeom#1
 // Source: c:@S@PrsMgr_PresentableObject@F@Material#1
 // Source: c:@S@PrsMgr_PresentableObject@F@RecomputeTransformation#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@PrsMgr_PresentableObject@F@RemoveChild#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#
@@ -2421,6 +3031,7 @@
 // Source: c:@S@PrsMgr_PresentableObject@F@SetIsoOnTriangulation#b#
 // Source: c:@S@PrsMgr_PresentableObject@F@SetLocalTransformation#&1$@N@opencascade@S@handle>#$@S@TopLoc_Datum3D#
 // Source: c:@S@PrsMgr_PresentableObject@F@SetMutable#b#
+// Source: c:@S@PrsMgr_PresentableObject@F@SetPolygonOffsets#I#f#f#
 // Source: c:@S@PrsMgr_PresentableObject@F@SetPropagateVisualState#b#
 // Source: c:@S@PrsMgr_PresentableObject@F@SetToUpdate#
 // Source: c:@S@PrsMgr_PresentableObject@F@SetToUpdate#I#
@@ -2432,6 +3043,8 @@
 // Source: c:@S@PrsMgr_PresentableObject@F@SynchronizeAspects#
 // Source: c:@S@PrsMgr_PresentableObject@F@ToBeUpdated#b#1
 // Source: c:@S@PrsMgr_PresentableObject@F@ToPropagateVisualState#1
+// Source: c:@S@PrsMgr_PresentableObject@F@TransformPersistence#1
+// Source: c:@S@PrsMgr_PresentableObject@F@TransformationGeom#1
 // Source: c:@S@PrsMgr_PresentableObject@F@Transparency#1
 // Source: c:@S@PrsMgr_PresentableObject@F@TypeOfPresentation3d#1
 // Source: c:@S@PrsMgr_PresentableObject@F@UnsetAttributes#
@@ -2443,16 +3056,19 @@
 // Source: c:@S@PrsMgr_PresentableObject@F@UnsetTransparency#
 // Source: c:@S@PrsMgr_PresentableObject@F@UnsetWidth#
 // Source: c:@S@PrsMgr_PresentableObject@F@UpdateTransformation#
+// Source: c:@S@PrsMgr_PresentableObject@F@ViewAffinity#1
 // Source: c:@S@PrsMgr_PresentableObject@F@Width#1
 // Source: c:@S@PrsMgr_PresentableObject@F@ZLayer#1
 // Source: c:@S@PrsMgr_Presentation@F@Clear#b#
 // Source: c:@S@PrsMgr_Presentation@F@Compute#
 // Source: c:@S@PrsMgr_Presentation@F@Display#
+// Source: c:@S@PrsMgr_Presentation@F@DynamicType#1
 // Source: c:@S@PrsMgr_Presentation@F@Erase#
 // Source: c:@S@PrsMgr_Presentation@F@Highlight#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#
 // Source: c:@S@PrsMgr_Presentation@F@IsDisplayed#1
 // Source: c:@S@PrsMgr_Presentation@F@Mode#1
 // Source: c:@S@PrsMgr_Presentation@F@MustBeUpdated#1
+// Source: c:@S@PrsMgr_Presentation@F@PresentationManager#1
 // Source: c:@S@PrsMgr_Presentation@F@SetUpdateStatus#b#
 // Source: c:@S@PrsMgr_Presentation@F@Unhighlight#
 // Source: c:@S@PrsMgr_PresentationManager@F@BeginImmediateDraw#
@@ -2462,6 +3078,7 @@
 // Source: c:@S@PrsMgr_PresentationManager@F@Connect#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#S0_#I#I#
 // Source: c:@S@PrsMgr_PresentationManager@F@Display#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#I#
 // Source: c:@S@PrsMgr_PresentationManager@F@DisplayPriority#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#I#1
+// Source: c:@S@PrsMgr_PresentationManager@F@DynamicType#1
 // Source: c:@S@PrsMgr_PresentationManager@F@EndImmediateDraw#&1$@N@opencascade@S@handle>#$@S@V3d_Viewer#
 // Source: c:@S@PrsMgr_PresentationManager@F@Erase#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#I#
 // Source: c:@S@PrsMgr_PresentationManager@F@GetZLayer#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#1
@@ -2475,10 +3092,12 @@
 // Source: c:@S@PrsMgr_PresentationManager@F@SetDisplayPriority#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#I#$@E@Graphic3d_DisplayPriority#1
 // Source: c:@S@PrsMgr_PresentationManager@F@SetVisibility#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#I#b#
 // Source: c:@S@PrsMgr_PresentationManager@F@SetZLayer#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#I#
+// Source: c:@S@PrsMgr_PresentationManager@F@StructureManager#1
 // Source: c:@S@PrsMgr_PresentationManager@F@Transform#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#&1$@N@opencascade@S@handle>#$@S@TopLoc_Datum3D#I#
 // Source: c:@S@PrsMgr_PresentationManager@F@Unhighlight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#
 // Source: c:@S@PrsMgr_PresentationManager@F@Update#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#I#1
 // Source: c:@S@PrsMgr_PresentationManager@F@UpdateHighlightTrsf#&1$@N@opencascade@S@handle>#$@S@V3d_Viewer#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentableObject#I#S3_#
+// Source: c:@S@Select3D_BVHIndexBuffer@F@DynamicType#1
 // Source: c:@S@Select3D_BVHIndexBuffer@F@HasPatches#1
 // Source: c:@S@Select3D_BVHIndexBuffer@F@Index#I#1
 // Source: c:@S@Select3D_BVHIndexBuffer@F@Init#I#b#
@@ -2488,23 +3107,28 @@
 // Source: c:@S@Select3D_BVHIndexBuffer@F@SetIndex#I#I#I#
 // Source: c:@S@Select3D_InteriorSensitivePointSet@F@Center#I#I#1
 // Source: c:@S@Select3D_InteriorSensitivePointSet@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_InteriorSensitivePointSet@F@DynamicType#1
 // Source: c:@S@Select3D_InteriorSensitivePointSet@F@NbSubElements#1
 // Source: c:@S@Select3D_InteriorSensitivePointSet@F@Size#1
 // Source: c:@S@Select3D_InteriorSensitivePointSet@F@Swap#I#I#
 // Source: c:@S@Select3D_SensitiveBox@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveBox@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveBox@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveBox@F@NbSubElements#1
 // Source: c:@S@Select3D_SensitiveBox@F@Select3D_SensitiveBox#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#d#d#d#d#d#d#
 // Source: c:@S@Select3D_SensitiveBox@F@ToBuildBVH#1
 // Source: c:@S@Select3D_SensitiveCircle@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveCircle@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveCircle@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveCircle@F@NbSubElements#1
 // Source: c:@S@Select3D_SensitiveCircle@F@Radius#1
 // Source: c:@S@Select3D_SensitiveCircle@F@ToBuildBVH#1
+// Source: c:@S@Select3D_SensitiveCurve@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveCurve@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveCurve@F@Select3D_SensitiveCurve#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#I#
 // Source: c:@S@Select3D_SensitiveCylinder@F@BottomRadius#1
 // Source: c:@S@Select3D_SensitiveCylinder@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveCylinder@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveCylinder@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveCylinder@F@Height#1
 // Source: c:@S@Select3D_SensitiveCylinder@F@IsHollow#1
@@ -2513,15 +3137,20 @@
 // Source: c:@S@Select3D_SensitiveCylinder@F@TopRadius#1
 // Source: c:@S@Select3D_SensitiveEntity@F@BVH#
 // Source: c:@S@Select3D_SensitiveEntity@F@Clear#
+// Source: c:@S@Select3D_SensitiveEntity@F@DynamicType#1
+// Source: c:@S@Select3D_SensitiveEntity@F@Flipper#1
 // Source: c:@S@Select3D_SensitiveEntity@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveEntity@F@HasInitLocation#1
+// Source: c:@S@Select3D_SensitiveEntity@F@OwnerId#1
 // Source: c:@S@Select3D_SensitiveEntity@F@SensitivityFactor#1
 // Source: c:@S@Select3D_SensitiveEntity@F@Set#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#
 // Source: c:@S@Select3D_SensitiveEntity@F@SetSensitivityFactor#I#
 // Source: c:@S@Select3D_SensitiveEntity@F@SetTransformPersistence#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TransformPers#
 // Source: c:@S@Select3D_SensitiveEntity@F@ToBuildBVH#1
+// Source: c:@S@Select3D_SensitiveEntity@F@TransformPersistence#1
 // Source: c:@S@Select3D_SensitiveFace@F@BVH#
 // Source: c:@S@Select3D_SensitiveFace@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveFace@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveFace@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveFace@F@NbSubElements#1
 // Source: c:@S@Select3D_SensitiveFace@F@ToBuildBVH#1
@@ -2529,6 +3158,7 @@
 // Source: c:@S@Select3D_SensitiveGroup@F@Center#I#I#1
 // Source: c:@S@Select3D_SensitiveGroup@F@CenterOfGeometry#1
 // Source: c:@S@Select3D_SensitiveGroup@F@Clear#
+// Source: c:@S@Select3D_SensitiveGroup@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveGroup@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveGroup@F@IsIn#&1$@N@opencascade@S@handle>#$@S@Select3D_SensitiveEntity#1
 // Source: c:@S@Select3D_SensitiveGroup@F@LastDetectedEntity#1
@@ -2541,15 +3171,19 @@
 // Source: c:@S@Select3D_SensitiveGroup@F@SetCheckOverlapAll#b#
 // Source: c:@S@Select3D_SensitiveGroup@F@SetMatchType#b#
 // Source: c:@S@Select3D_SensitiveGroup@F@Size#1
+// Source: c:@S@Select3D_SensitiveGroup@F@SubEntity#I#1
 // Source: c:@S@Select3D_SensitiveGroup@F@Swap#I#I#
 // Source: c:@S@Select3D_SensitiveGroup@F@ToCheckOverlapAll#1
 // Source: c:@S@Select3D_SensitivePoint@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitivePoint@F@DynamicType#1
 // Source: c:@S@Select3D_SensitivePoint@F@GetConnected#
 // Source: c:@S@Select3D_SensitivePoint@F@NbSubElements#1
+// Source: c:@S@Select3D_SensitivePoint@F@Point#1
 // Source: c:@S@Select3D_SensitivePoint@F@Select3D_SensitivePoint#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@S@gp_Pnt#
 // Source: c:@S@Select3D_SensitivePoint@F@ToBuildBVH#1
 // Source: c:@S@Select3D_SensitivePoly@F@Center#I#I#1
 // Source: c:@S@Select3D_SensitivePoly@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitivePoly@F@DynamicType#1
 // Source: c:@S@Select3D_SensitivePoly@F@GetPoint3d#I#1
 // Source: c:@S@Select3D_SensitivePoly@F@NbSubElements#1
 // Source: c:@S@Select3D_SensitivePoly@F@Select3D_SensitivePoly#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#b#I#
@@ -2558,13 +3192,17 @@
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@BVH#
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@Center#I#I#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitivePrimitiveArray@F@DynamicType#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@GetConnected#
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@HasInitLocation#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@LastDetectedEdgeNode1#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@LastDetectedEdgeNode2#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@LastDetectedElement#1
+// Source: c:@S@Select3D_SensitivePrimitiveArray@F@LastDetectedElementMap#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@LastDetectedNode#1
+// Source: c:@S@Select3D_SensitivePrimitiveArray@F@LastDetectedNodeMap#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@NbSubElements#1
+// Source: c:@S@Select3D_SensitivePrimitiveArray@F@PatchDistance#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@PatchSizeMax#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@Select3D_SensitivePrimitiveArray#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@Set#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#
@@ -2574,6 +3212,7 @@
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@SetDetectNodeMap#b#
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@SetDetectNodes#b#
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@SetMinMax#d#d#d#d#d#d#
+// Source: c:@S@Select3D_SensitivePrimitiveArray@F@SetPatchDistance#f#
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@SetPatchSizeMax#I#
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@Size#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@Swap#I#I#
@@ -2583,22 +3222,28 @@
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@ToDetectNodeMap#1
 // Source: c:@S@Select3D_SensitivePrimitiveArray@F@ToDetectNodes#1
 // Source: c:@S@Select3D_SensitiveSegment@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveSegment@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveSegment@F@EndPoint#&1$@S@gp_Pnt#
+// Source: c:@S@Select3D_SensitiveSegment@F@EndPoint#1
 // Source: c:@S@Select3D_SensitiveSegment@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveSegment@F@NbSubElements#1
 // Source: c:@S@Select3D_SensitiveSegment@F@Select3D_SensitiveSegment#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@S@gp_Pnt#S3_#
 // Source: c:@S@Select3D_SensitiveSegment@F@SetEndPoint#&1$@S@gp_Pnt#
 // Source: c:@S@Select3D_SensitiveSegment@F@SetStartPoint#&1$@S@gp_Pnt#
 // Source: c:@S@Select3D_SensitiveSegment@F@StartPoint#&1$@S@gp_Pnt#
+// Source: c:@S@Select3D_SensitiveSegment@F@StartPoint#1
 // Source: c:@S@Select3D_SensitiveSegment@F@ToBuildBVH#1
 // Source: c:@S@Select3D_SensitiveSet@F@BVH#
 // Source: c:@S@Select3D_SensitiveSet@F@CenterOfGeometry#1
 // Source: c:@S@Select3D_SensitiveSet@F@Clear#
+// Source: c:@S@Select3D_SensitiveSet@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveSet@F@GetLeafNodeSize#1
 // Source: c:@S@Select3D_SensitiveSet@F@MarkDirty#
 // Source: c:@S@Select3D_SensitiveSet@F@ToBuildBVH#1
 // Source: c:@S@Select3D_SensitiveSphere@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveSphere@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveSphere@F@GetConnected#
+// Source: c:@S@Select3D_SensitiveSphere@F@LastDetectedPoint#1
 // Source: c:@S@Select3D_SensitiveSphere@F@NbSubElements#1
 // Source: c:@S@Select3D_SensitiveSphere@F@Radius#1
 // Source: c:@S@Select3D_SensitiveSphere@F@ResetLastDetectedPoint#
@@ -2606,21 +3251,25 @@
 // Source: c:@S@Select3D_SensitiveSphere@F@ToBuildBVH#1
 // Source: c:@S@Select3D_SensitiveTriangle@F@Center3D#1
 // Source: c:@S@Select3D_SensitiveTriangle@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveTriangle@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveTriangle@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveTriangle@F@NbSubElements#1
 // Source: c:@S@Select3D_SensitiveTriangle@F@Select3D_SensitiveTriangle#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@S@gp_Pnt#S3_#S3_#$@E@Select3D_TypeOfSensitivity#
 // Source: c:@S@Select3D_SensitiveTriangle@F@ToBuildBVH#1
 // Source: c:@S@Select3D_SensitiveTriangulation@F@Center#I#I#1
 // Source: c:@S@Select3D_SensitiveTriangulation@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveTriangulation@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveTriangulation@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveTriangulation@F@HasInitLocation#1
 // Source: c:@S@Select3D_SensitiveTriangulation@F@LastDetectedTriangleIndex#1
 // Source: c:@S@Select3D_SensitiveTriangulation@F@NbSubElements#1
 // Source: c:@S@Select3D_SensitiveTriangulation@F@Size#1
 // Source: c:@S@Select3D_SensitiveTriangulation@F@Swap#I#I#
+// Source: c:@S@Select3D_SensitiveTriangulation@F@Triangulation#1
 // Source: c:@S@Select3D_SensitiveWire@F@Add#&1$@N@opencascade@S@handle>#$@S@Select3D_SensitiveEntity#
 // Source: c:@S@Select3D_SensitiveWire@F@Center#I#I#1
 // Source: c:@S@Select3D_SensitiveWire@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveWire@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveWire@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveWire@F@GetLastDetected#1
 // Source: c:@S@Select3D_SensitiveWire@F@NbSubElements#1
@@ -2628,8 +3277,10 @@
 // Source: c:@S@Select3D_SensitiveWire@F@Set#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#
 // Source: c:@S@Select3D_SensitiveWire@F@Size#1
 // Source: c:@S@Select3D_SensitiveWire@F@Swap#I#I#
+// Source: c:@S@SelectMgr_AndFilter@F@DynamicType#1
 // Source: c:@S@SelectMgr_AndFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@SelectMgr_AndFilter@F@SelectMgr_AndFilter#
+// Source: c:@S@SelectMgr_AndOrFilter@F@DynamicType#1
 // Source: c:@S@SelectMgr_AndOrFilter@F@FilterType#1
 // Source: c:@S@SelectMgr_AndOrFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@SelectMgr_AndOrFilter@F@SelectMgr_AndOrFilter#$@E@SelectMgr_FilterType#
@@ -2638,21 +3289,29 @@
 // Source: c:@S@SelectMgr_AxisIntersector@F@CopyWithBuilder#&1$@N@opencascade@S@handle>#$@S@SelectMgr_FrustumBuilder#1
 // Source: c:@S@SelectMgr_AxisIntersector@F@DetectedPoint#d#1
 // Source: c:@S@SelectMgr_AxisIntersector@F@DistToGeometryCenter#&1$@S@gp_Pnt#1
+// Source: c:@S@SelectMgr_AxisIntersector@F@GetFarPnt#1
+// Source: c:@S@SelectMgr_AxisIntersector@F@GetNearPnt#1
 // Source: c:@S@SelectMgr_AxisIntersector@F@IsScalable#1
 // Source: c:@S@SelectMgr_AxisIntersector@F@OverlapsPoint#&1$@S@gp_Pnt#1
 // Source: c:@S@SelectMgr_AxisIntersector@F@SelectMgr_AxisIntersector#
 // Source: c:@S@SelectMgr_AxisIntersector@F@SetCamera#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@SelectMgr_BVHThreadPool@F@AddEntity#&1$@N@opencascade@S@handle>#$@S@Select3D_SensitiveEntity#
+// Source: c:@S@SelectMgr_BVHThreadPool@F@DynamicType#1
 // Source: c:@S@SelectMgr_BVHThreadPool@F@SelectMgr_BVHThreadPool#I#
 // Source: c:@S@SelectMgr_BVHThreadPool@F@StopThreads#
 // Source: c:@S@SelectMgr_BVHThreadPool@F@WaitThreads#
+// Source: c:@S@SelectMgr_BaseFrustum@F@DynamicType#1
 // Source: c:@S@SelectMgr_BaseFrustum@F@SetBuilder#&1$@N@opencascade@S@handle>#$@S@SelectMgr_FrustumBuilder#
 // Source: c:@S@SelectMgr_BaseFrustum@F@SetCamera#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@SelectMgr_BaseFrustum@F@SetPixelTolerance#I#
 // Source: c:@S@SelectMgr_BaseFrustum@F@SetViewport#d#d#d#d#
 // Source: c:@S@SelectMgr_BaseFrustum@F@SetWindowSize#I#I#
+// Source: c:@S@SelectMgr_BaseIntersector@F@Camera#1
 // Source: c:@S@SelectMgr_BaseIntersector@F@DetectedPoint#d#1
 // Source: c:@S@SelectMgr_BaseIntersector@F@DistToGeometryCenter#&1$@S@gp_Pnt#1
+// Source: c:@S@SelectMgr_BaseIntersector@F@DynamicType#1
+// Source: c:@S@SelectMgr_BaseIntersector@F@GetFarPnt#1
+// Source: c:@S@SelectMgr_BaseIntersector@F@GetNearPnt#1
 // Source: c:@S@SelectMgr_BaseIntersector@F@GetSelectionType#1
 // Source: c:@S@SelectMgr_BaseIntersector@F@SetCamera#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@SelectMgr_BaseIntersector@F@SetPixelTolerance#I#
@@ -2661,11 +3320,13 @@
 // Source: c:@S@SelectMgr_CompositionFilter@F@ActsOn#$@E@TopAbs_ShapeEnum#1
 // Source: c:@S@SelectMgr_CompositionFilter@F@Add#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Filter#
 // Source: c:@S@SelectMgr_CompositionFilter@F@Clear#
+// Source: c:@S@SelectMgr_CompositionFilter@F@DynamicType#1
 // Source: c:@S@SelectMgr_CompositionFilter@F@IsEmpty#1
 // Source: c:@S@SelectMgr_CompositionFilter@F@IsIn#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Filter#1
 // Source: c:@S@SelectMgr_CompositionFilter@F@Remove#&1$@N@opencascade@S@handle>#$@S@SelectMgr_Filter#
 // Source: c:@S@SelectMgr_EntityOwner@F@Clear#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@SelectMgr_EntityOwner@F@ComesFromDecomposition#1
+// Source: c:@S@SelectMgr_EntityOwner@F@DynamicType#1
 // Source: c:@S@SelectMgr_EntityOwner@F@HasLocation#1
 // Source: c:@S@SelectMgr_EntityOwner@F@HasSelectable#1
 // Source: c:@S@SelectMgr_EntityOwner@F@HilightWithColor#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#&1$@N@opencascade@S@handle>#$@S@Prs3d_Drawer#I#
@@ -2692,12 +3353,16 @@
 // Source: c:@S@SelectMgr_EntityOwner@F@Unhilight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@SelectMgr_EntityOwner@F@UpdateHighlightTrsf#&1$@N@opencascade@S@handle>#$@S@V3d_Viewer#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@SelectMgr_Filter@F@ActsOn#$@E@TopAbs_ShapeEnum#1
+// Source: c:@S@SelectMgr_Filter@F@DynamicType#1
+// Source: c:@S@SelectMgr_FrustumBuilder@F@Camera#1
+// Source: c:@S@SelectMgr_FrustumBuilder@F@DynamicType#1
 // Source: c:@S@SelectMgr_FrustumBuilder@F@InvalidateViewport#
 // Source: c:@S@SelectMgr_FrustumBuilder@F@ProjectPntOnViewPlane#&1d#S0_#S0_#1
 // Source: c:@S@SelectMgr_FrustumBuilder@F@SelectMgr_FrustumBuilder#
 // Source: c:@S@SelectMgr_FrustumBuilder@F@SetCamera#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@SelectMgr_FrustumBuilder@F@SetViewport#d#d#d#d#
 // Source: c:@S@SelectMgr_FrustumBuilder@F@SetWindowSize#I#I#
+// Source: c:@S@SelectMgr_OrFilter@F@DynamicType#1
 // Source: c:@S@SelectMgr_OrFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@SelectMgr_OrFilter@F@SelectMgr_OrFilter#
 // Source: c:@S@SelectMgr_SelectableObject@F@AcceptShapeDecomposition#1
@@ -2705,7 +3370,9 @@
 // Source: c:@S@SelectMgr_SelectableObject@F@ClearDynamicHighlight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#
 // Source: c:@S@SelectMgr_SelectableObject@F@ClearSelected#
 // Source: c:@S@SelectMgr_SelectableObject@F@ClearSelections#b#
+// Source: c:@S@SelectMgr_SelectableObject@F@DynamicType#1
 // Source: c:@S@SelectMgr_SelectableObject@F@ErasePresentations#b#
+// Source: c:@S@SelectMgr_SelectableObject@F@GetAssemblyOwner#1
 // Source: c:@S@SelectMgr_SelectableObject@F@GlobalSelOwner#1
 // Source: c:@S@SelectMgr_SelectableObject@F@GlobalSelectionMode#1
 // Source: c:@S@SelectMgr_SelectableObject@F@HasSelection#I#1
@@ -2714,6 +3381,7 @@
 // Source: c:@S@SelectMgr_SelectableObject@F@RecomputePrimitives#
 // Source: c:@S@SelectMgr_SelectableObject@F@RecomputePrimitives#I#
 // Source: c:@S@SelectMgr_SelectableObject@F@ResetTransformation#
+// Source: c:@S@SelectMgr_SelectableObject@F@Selection#I#1
 // Source: c:@S@SelectMgr_SelectableObject@F@SetAssemblyOwner#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#I#
 // Source: c:@S@SelectMgr_SelectableObject@F@SetAutoHilight#b#
 // Source: c:@S@SelectMgr_SelectableObject@F@SetZLayer#I#
@@ -2724,6 +3392,7 @@
 // Source: c:@S@SelectMgr_Selection@F@BVHUpdateStatus#1
 // Source: c:@S@SelectMgr_Selection@F@Clear#
 // Source: c:@S@SelectMgr_Selection@F@Destroy#
+// Source: c:@S@SelectMgr_Selection@F@DynamicType#1
 // Source: c:@S@SelectMgr_Selection@F@GetSelectionState#1
 // Source: c:@S@SelectMgr_Selection@F@IsEmpty#1
 // Source: c:@S@SelectMgr_Selection@F@Mode#1
@@ -2739,18 +3408,22 @@
 // Source: c:@S@SelectMgr_SelectionManager@F@ClearSelectionStructures#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#
 // Source: c:@S@SelectMgr_SelectionManager@F@Contains#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#1
 // Source: c:@S@SelectMgr_SelectionManager@F@Deactivate#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#
+// Source: c:@S@SelectMgr_SelectionManager@F@DynamicType#1
 // Source: c:@S@SelectMgr_SelectionManager@F@IsActivated#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#1
 // Source: c:@S@SelectMgr_SelectionManager@F@Load#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#
 // Source: c:@S@SelectMgr_SelectionManager@F@RecomputeSelection#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#b#I#
 // Source: c:@S@SelectMgr_SelectionManager@F@Remove#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#
 // Source: c:@S@SelectMgr_SelectionManager@F@RestoreSelectionStructures#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#
 // Source: c:@S@SelectMgr_SelectionManager@F@SelectMgr_SelectionManager#&1$@N@opencascade@S@handle>#$@S@SelectMgr_ViewerSelector#
+// Source: c:@S@SelectMgr_SelectionManager@F@Selector#1
 // Source: c:@S@SelectMgr_SelectionManager@F@SetSelectionSensitivity#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#I#
 // Source: c:@S@SelectMgr_SelectionManager@F@SetUpdateMode#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#$@E@SelectMgr_TypeOfUpdate#
 // Source: c:@S@SelectMgr_SelectionManager@F@SetUpdateMode#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#$@E@SelectMgr_TypeOfUpdate#
 // Source: c:@S@SelectMgr_SelectionManager@F@Update#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#b#
 // Source: c:@S@SelectMgr_SelectionManager@F@UpdateSelection#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#
+// Source: c:@S@SelectMgr_SensitiveEntity@F@BaseSensitive#1
 // Source: c:@S@SelectMgr_SensitiveEntity@F@Clear#
+// Source: c:@S@SelectMgr_SensitiveEntity@F@DynamicType#1
 // Source: c:@S@SelectMgr_SensitiveEntity@F@IsActiveForSelection#1
 // Source: c:@S@SelectMgr_SensitiveEntity@F@ResetSelectionActiveStatus#1
 // Source: c:@S@SelectMgr_SensitiveEntity@F@SelectMgr_SensitiveEntity#&1$@N@opencascade@S@handle>#$@S@Select3D_SensitiveEntity#
@@ -2772,6 +3445,7 @@
 // Source: c:@S@SelectMgr_ViewerSelector@F@DepthTolerance#1
 // Source: c:@S@SelectMgr_ViewerSelector@F@DepthToleranceType#1
 // Source: c:@S@SelectMgr_ViewerSelector@F@DisplaySensitive#&1$@N@opencascade@S@handle>#$@S@V3d_View#
+// Source: c:@S@SelectMgr_ViewerSelector@F@DynamicType#1
 // Source: c:@S@SelectMgr_ViewerSelector@F@IsActive#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#1
 // Source: c:@S@SelectMgr_ViewerSelector@F@IsInside#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#I#1
 // Source: c:@S@SelectMgr_ViewerSelector@F@MoveSelectableObject#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#
@@ -2780,6 +3454,7 @@
 // Source: c:@S@SelectMgr_ViewerSelector@F@Pick#I#I#&1$@N@opencascade@S@handle>#$@S@V3d_View#
 // Source: c:@S@SelectMgr_ViewerSelector@F@Pick#I#I#I#I#&1$@N@opencascade@S@handle>#$@S@V3d_View#
 // Source: c:@S@SelectMgr_ViewerSelector@F@Picked#I#1
+// Source: c:@S@SelectMgr_ViewerSelector@F@PickedEntity#I#1
 // Source: c:@S@SelectMgr_ViewerSelector@F@PickedPoint#I#1
 // Source: c:@S@SelectMgr_ViewerSelector@F@PixelTolerance#1
 // Source: c:@S@SelectMgr_ViewerSelector@F@QueueBVHBuild#&1$@N@opencascade@S@handle>#$@S@Select3D_SensitiveEntity#
@@ -2802,13 +3477,20 @@
 // Source: c:@S@SelectMgr_ViewerSelector@F@WaitForBVHBuild#
 // Source: c:@S@StdPrs_BRepFont@F@Ascender#1
 // Source: c:@S@StdPrs_BRepFont@F@Descender#1
+// Source: c:@S@StdPrs_BRepFont@F@DynamicType#1
+// Source: c:@S@StdPrs_BRepFont@F@FTFont#1
 // Source: c:@S@StdPrs_BRepFont@F@LineSpacing#1
 // Source: c:@S@StdPrs_BRepFont@F@PointSize#1
 // Source: c:@S@StdPrs_BRepFont@F@Release#
 // Source: c:@S@StdPrs_BRepFont@F@Scale#1
 // Source: c:@S@StdPrs_BRepFont@F@SetCompositeCurveMode#b#
+// Source: c:@S@StdPrs_BRepFont@F@SetWidthScaling#f#
 // Source: c:@S@StdPrs_BRepFont@F@StdPrs_BRepFont#
+// Source: c:@S@StdPrs_HLRPolyShape@F@DynamicType#1
+// Source: c:@S@StdPrs_HLRShape@F@DynamicType#1
+// Source: c:@S@StdPrs_HLRShapeI@F@DynamicType#1
 // Source: c:@S@StdSelect_BRepOwner@F@Clear#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
+// Source: c:@S@StdSelect_BRepOwner@F@DynamicType#1
 // Source: c:@S@StdSelect_BRepOwner@F@HasHilightMode#1
 // Source: c:@S@StdSelect_BRepOwner@F@HasShape#1
 // Source: c:@S@StdSelect_BRepOwner@F@HilightMode#1
@@ -2820,16 +3502,20 @@
 // Source: c:@S@StdSelect_BRepOwner@F@Unhilight#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@StdSelect_BRepOwner@F@UpdateHighlightTrsf#&1$@N@opencascade@S@handle>#$@S@V3d_Viewer#&1$@N@opencascade@S@handle>#$@S@PrsMgr_PresentationManager#I#
 // Source: c:@S@StdSelect_EdgeFilter@F@ActsOn#$@E@TopAbs_ShapeEnum#1
+// Source: c:@S@StdSelect_EdgeFilter@F@DynamicType#1
 // Source: c:@S@StdSelect_EdgeFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@StdSelect_EdgeFilter@F@SetType#$@E@StdSelect_TypeOfEdge#
 // Source: c:@S@StdSelect_EdgeFilter@F@StdSelect_EdgeFilter#$@E@StdSelect_TypeOfEdge#
 // Source: c:@S@StdSelect_EdgeFilter@F@Type#1
 // Source: c:@S@StdSelect_FaceFilter@F@ActsOn#$@E@TopAbs_ShapeEnum#1
+// Source: c:@S@StdSelect_FaceFilter@F@DynamicType#1
 // Source: c:@S@StdSelect_FaceFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@StdSelect_FaceFilter@F@SetType#$@E@StdSelect_TypeOfFace#
 // Source: c:@S@StdSelect_FaceFilter@F@StdSelect_FaceFilter#$@E@StdSelect_TypeOfFace#
 // Source: c:@S@StdSelect_FaceFilter@F@Type#1
+// Source: c:@S@StdSelect_Shape@F@DynamicType#1
 // Source: c:@S@StdSelect_ShapeTypeFilter@F@ActsOn#$@E@TopAbs_ShapeEnum#1
+// Source: c:@S@StdSelect_ShapeTypeFilter@F@DynamicType#1
 // Source: c:@S@StdSelect_ShapeTypeFilter@F@IsOk#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#1
 // Source: c:@S@StdSelect_ShapeTypeFilter@F@StdSelect_ShapeTypeFilter#$@E@TopAbs_ShapeEnum#
 // Source: c:@S@StdSelect_ShapeTypeFilter@F@Type#1
@@ -2843,6 +3529,7 @@
 // Source: c:@S@TPrsStd_AISPresentation@F@BeforeUndo#&1$@N@opencascade@S@handle>#$@S@TDF_AttributeDelta#b#
 // Source: c:@S@TPrsStd_AISPresentation@F@Color#1
 // Source: c:@S@TPrsStd_AISPresentation@F@Display#b#
+// Source: c:@S@TPrsStd_AISPresentation@F@DynamicType#1
 // Source: c:@S@TPrsStd_AISPresentation@F@Erase#b#
 // Source: c:@S@TPrsStd_AISPresentation@F@GetAIS#1
 // Source: c:@S@TPrsStd_AISPresentation@F@GetNbSelectionModes#1
@@ -2876,6 +3563,7 @@
 // Source: c:@S@TPrsStd_AISPresentation@F@UnsetWidth#
 // Source: c:@S@TPrsStd_AISPresentation@F@Update#
 // Source: c:@S@TPrsStd_AISPresentation@F@Width#1
+// Source: c:@S@TPrsStd_AISViewer@F@DynamicType#1
 // Source: c:@S@TPrsStd_AISViewer@F@GetInteractiveContext#1
 // Source: c:@S@TPrsStd_AISViewer@F@NewEmpty#1
 // Source: c:@S@TPrsStd_AISViewer@F@Paste#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#&1$@N@opencascade@S@handle>#$@S@TDF_RelocationTable#1
@@ -2883,34 +3571,55 @@
 // Source: c:@S@TPrsStd_AISViewer@F@SetInteractiveContext#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveContext#
 // Source: c:@S@TPrsStd_AISViewer@F@TPrsStd_AISViewer#
 // Source: c:@S@TPrsStd_AISViewer@F@Update#1
+// Source: c:@S@TPrsStd_AxisDriver@F@DynamicType#1
 // Source: c:@S@TPrsStd_AxisDriver@F@TPrsStd_AxisDriver#
+// Source: c:@S@TPrsStd_ConstraintDriver@F@DynamicType#1
 // Source: c:@S@TPrsStd_ConstraintDriver@F@TPrsStd_ConstraintDriver#
+// Source: c:@S@TPrsStd_Driver@F@DynamicType#1
 // Source: c:@S@TPrsStd_DriverTable@F@Clear#
+// Source: c:@S@TPrsStd_DriverTable@F@DynamicType#1
 // Source: c:@S@TPrsStd_DriverTable@F@InitStandardDrivers#
 // Source: c:@S@TPrsStd_DriverTable@F@TPrsStd_DriverTable#
+// Source: c:@S@TPrsStd_GeometryDriver@F@DynamicType#1
 // Source: c:@S@TPrsStd_GeometryDriver@F@TPrsStd_GeometryDriver#
+// Source: c:@S@TPrsStd_NamedShapeDriver@F@DynamicType#1
 // Source: c:@S@TPrsStd_NamedShapeDriver@F@TPrsStd_NamedShapeDriver#
+// Source: c:@S@TPrsStd_PlaneDriver@F@DynamicType#1
 // Source: c:@S@TPrsStd_PlaneDriver@F@TPrsStd_PlaneDriver#
+// Source: c:@S@TPrsStd_PointDriver@F@DynamicType#1
 // Source: c:@S@TPrsStd_PointDriver@F@TPrsStd_PointDriver#
+// Source: c:@S@V3d_AmbientLight@F@DynamicType#1
 // Source: c:@S@V3d_CircularGrid@F@Display#
+// Source: c:@S@V3d_CircularGrid@F@DynamicType#1
 // Source: c:@S@V3d_CircularGrid@F@Erase#1
 // Source: c:@S@V3d_CircularGrid@F@IsDisplayed#1
 // Source: c:@S@V3d_CircularGrid@F@SetGraphicValues#d#d#
+// Source: c:@S@V3d_DirectionalLight@F@DynamicType#1
 // Source: c:@S@V3d_DirectionalLight@F@SetDirection#$@E@V3d_TypeOfOrientation#
+// Source: c:@S@V3d_Plane@F@ClipPlane#1
+// Source: c:@S@V3d_Plane@F@DynamicType#1
 // Source: c:@S@V3d_Plane@F@Erase#
 // Source: c:@S@V3d_Plane@F@IsDisplayed#1
 // Source: c:@S@V3d_Plane@F@SetPlane#d#d#d#d#
 // Source: c:@S@V3d_Plane@F@V3d_Plane#d#d#d#d#
+// Source: c:@S@V3d_PositionLight@F@DynamicType#1
+// Source: c:@S@V3d_PositionalLight@F@DynamicType#1
 // Source: c:@S@V3d_RectangularGrid@F@Display#
+// Source: c:@S@V3d_RectangularGrid@F@DynamicType#1
 // Source: c:@S@V3d_RectangularGrid@F@Erase#1
 // Source: c:@S@V3d_RectangularGrid@F@IsDisplayed#1
 // Source: c:@S@V3d_RectangularGrid@F@SetGraphicValues#d#d#d#
+// Source: c:@S@V3d_SpotLight@F@DynamicType#1
 // Source: c:@S@V3d_SpotLight@F@SetDirection#$@E@V3d_TypeOfOrientation#
+// Source: c:@S@V3d_Trihedron@F@ArrowAspect#$@E@V3d_TypeOfAxe#1
 // Source: c:@S@V3d_Trihedron@F@ArrowDiameter#1
 // Source: c:@S@V3d_Trihedron@F@Display#&1$@N@opencascade@S@handle>#$@S@V3d_View#
+// Source: c:@S@V3d_Trihedron@F@DynamicType#1
 // Source: c:@S@V3d_Trihedron@F@Erase#
 // Source: c:@S@V3d_Trihedron@F@IsWireframe#1
+// Source: c:@S@V3d_Trihedron@F@LabelAspect#$@E@V3d_TypeOfAxe#1
 // Source: c:@S@V3d_Trihedron@F@NbFacets#1
+// Source: c:@S@V3d_Trihedron@F@OriginAspect#1
 // Source: c:@S@V3d_Trihedron@F@Scale#1
 // Source: c:@S@V3d_Trihedron@F@SetArrowDiameter#d#
 // Source: c:@S@V3d_Trihedron@F@SetNbFacets#I#
@@ -2929,12 +3638,15 @@
 // Source: c:@S@V3d_View@F@AxialScale#I#I#$@E@V3d_TypeOfAxe#
 // Source: c:@S@V3d_View@F@BackFacingModel#1
 // Source: c:@S@V3d_View@F@ClearPBREnvironment#b#
+// Source: c:@S@V3d_View@F@ClipPlanes#1
 // Source: c:@S@V3d_View@F@ComputedMode#1
 // Source: c:@S@V3d_View@F@Convert#I#1
 // Source: c:@S@V3d_View@F@Convert#d#1
+// Source: c:@S@V3d_View@F@DefaultCamera#1
 // Source: c:@S@V3d_View@F@Depth#1
 // Source: c:@S@V3d_View@F@DepthFitAll#d#d#
 // Source: c:@S@V3d_View@F@DoMapping#
+// Source: c:@S@V3d_View@F@DynamicType#1
 // Source: c:@S@V3d_View@F@FitAll#d#b#
 // Source: c:@S@V3d_View@F@FitAll#d#d#d#d#
 // Source: c:@S@V3d_View@F@Focale#1
@@ -3027,6 +3739,7 @@
 // Source: c:@S@V3d_View@F@Translate#d#b#
 // Source: c:@S@V3d_View@F@Translate#d#d#d#b#
 // Source: c:@S@V3d_View@F@TriedronErase#
+// Source: c:@S@V3d_View@F@Trihedron#b#
 // Source: c:@S@V3d_View@F@Turn#$@E@V3d_TypeOfAxe#d#b#
 // Source: c:@S@V3d_View@F@Turn#d#b#
 // Source: c:@S@V3d_View@F@Turn#d#d#d#b#
@@ -3038,6 +3751,7 @@
 // Source: c:@S@V3d_View@F@V3d_View#&1$@N@opencascade@S@handle>#$@S@V3d_Viewer#&1$@N@opencascade@S@handle>#$@S@V3d_View#
 // Source: c:@S@V3d_View@F@Viewer#1
 // Source: c:@S@V3d_View@F@Visualization#1
+// Source: c:@S@V3d_View@F@Window#1
 // Source: c:@S@V3d_View@F@WindowFit#I#I#I#I#
 // Source: c:@S@V3d_View@F@WindowFitAll#I#I#I#I#
 // Source: c:@S@V3d_View@F@ZFitAll#d#1
@@ -3045,6 +3759,7 @@
 // Source: c:@S@V3d_View@F@Zoom#I#I#I#I#
 // Source: c:@S@V3d_View@F@ZoomAtPoint#I#I#I#I#
 // Source: c:@S@V3d_Viewer@F@ActivateGrid#$@E@Aspect_GridType#$@E@Aspect_GridDrawMode#
+// Source: c:@S@V3d_Viewer@F@ActiveView#1
 // Source: c:@S@V3d_Viewer@F@ComputedMode#1
 // Source: c:@S@V3d_Viewer@F@CreateView#
 // Source: c:@S@V3d_Viewer@F@DeactivateGrid#
@@ -3054,7 +3769,10 @@
 // Source: c:@S@V3d_Viewer@F@DefaultViewProj#1
 // Source: c:@S@V3d_Viewer@F@DefaultViewSize#1
 // Source: c:@S@V3d_Viewer@F@DefaultVisualization#1
+// Source: c:@S@V3d_Viewer@F@DefinedView#1
 // Source: c:@S@V3d_Viewer@F@DisplayPrivilegedPlane#b#d#
+// Source: c:@S@V3d_Viewer@F@Driver#1
+// Source: c:@S@V3d_Viewer@F@DynamicType#1
 // Source: c:@S@V3d_Viewer@F@Erase#1
 // Source: c:@S@V3d_Viewer@F@Grid#$@E@Aspect_GridType#b#
 // Source: c:@S@V3d_Viewer@F@Grid#b#
@@ -3108,18 +3826,22 @@
 // Source: c:@S@V3d_Viewer@F@Update#
 // Source: c:@S@V3d_Viewer@F@UpdateLights#
 // Source: c:@S@V3d_Viewer@F@V3d_Viewer#&1$@N@opencascade@S@handle>#$@S@Graphic3d_GraphicDriver#
+// Source: c:@S@WNT_WClass@F@DynamicType#1
 // Source: c:@S@WNT_Window@F@DoMapping#1
 // Source: c:@S@WNT_Window@F@DoResize#
+// Source: c:@S@WNT_Window@F@DynamicType#1
 // Source: c:@S@WNT_Window@F@InvalidateContent#&1$@N@opencascade@S@handle>#$@S@Aspect_DisplayConnection#
 // Source: c:@S@WNT_Window@F@IsMapped#1
 // Source: c:@S@WNT_Window@F@Map#1
 // Source: c:@S@WNT_Window@F@Map#I#1
 // Source: c:@S@WNT_Window@F@Ratio#1
+// Source: c:@S@WNT_Window@F@RegisterRawInputDevices#i#
 // Source: c:@S@WNT_Window@F@SetPos#I#I#I#I#
 // Source: c:@S@WNT_Window@F@Unmap#1
 // Source: c:@S@Wasm_Window@F@DevicePixelRatio#1
 // Source: c:@S@Wasm_Window@F@DoMapping#1
 // Source: c:@S@Wasm_Window@F@DoResize#
+// Source: c:@S@Wasm_Window@F@DynamicType#1
 // Source: c:@S@Wasm_Window@F@InvalidateContent#&1$@N@opencascade@S@handle>#$@S@Aspect_DisplayConnection#
 // Source: c:@S@Wasm_Window@F@IsMapped#1
 // Source: c:@S@Wasm_Window@F@Map#1
@@ -3128,6 +3850,7 @@
 // Source: c:@S@Wasm_Window@F@Unmap#1
 // Source: c:@S@Xw_Window@F@DoMapping#1
 // Source: c:@S@Xw_Window@F@DoResize#
+// Source: c:@S@Xw_Window@F@DynamicType#1
 // Source: c:@S@Xw_Window@F@InvalidateContent#&1$@N@opencascade@S@handle>#$@S@Aspect_DisplayConnection#
 // Source: c:@S@Xw_Window@F@IsMapped#1
 // Source: c:@S@Xw_Window@F@Map#1
@@ -5322,6 +6045,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISAnimationMethodDuration0(AISAnimationHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_animation_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISAnimationMethodDynamicType0(AISAnimationHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_animation_method_elapsed_time_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISAnimationMethodElapsedTime0(AISAnimationHandle handle, out double resultValue);
@@ -5378,6 +6105,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISAnimationMethodStop0(AISAnimationHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_animation_method_timer_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISAnimationMethodTimer0(AISAnimationHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_animation_method_update_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISAnimationMethodUpdate0(AISAnimationHandle handle, double thePts, out int resultValue);
@@ -5409,6 +6140,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void AISAnimationRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_animation_axis_rotation_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISAnimationAxisRotationMethodDynamicType0(AISAnimationAxisRotationHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_animation_axis_rotation_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISAnimationAxisRotationClone(AISAnimationAxisRotationHandle source, out nint handle);
@@ -5428,6 +6163,18 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void AISAnimationAxisRotationRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_animation_camera_method_camera_end_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISAnimationCameraMethodCameraEnd0(AISAnimationCameraHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_animation_camera_method_camera_start_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISAnimationCameraMethodCameraStart0(AISAnimationCameraHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_animation_camera_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISAnimationCameraMethodDynamicType0(AISAnimationCameraHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_animation_camera_method_set_camera_end_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISAnimationCameraMethodSetCameraEnd0(AISAnimationCameraHandle handle, nint theCameraEnd);
@@ -5439,6 +6186,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_animation_camera_method_set_view_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISAnimationCameraMethodSetView0(AISAnimationCameraHandle handle, nint theView);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_animation_camera_method_view_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISAnimationCameraMethodView0(AISAnimationCameraHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_animation_camera_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -5458,6 +6209,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_animation_camera_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void AISAnimationCameraRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_animation_object_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISAnimationObjectMethodDynamicType0(AISAnimationObjectHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_animation_object_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -5489,6 +6244,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_attribute_filter_create_2")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISAttributeFilterCreate2(double aWidth, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_attribute_filter_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISAttributeFilterMethodDynamicType0(AISAttributeFilterHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_attribute_filter_method_has_color_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -5552,6 +6311,18 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_axis_method_accept_display_mode_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISAxisMethodAcceptDisplayMode0(AISAxisHandle handle, int aMode, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_axis_method_axis2_placement_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISAxisMethodAxis2Placement0(AISAxisHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_axis_method_component_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISAxisMethodComponent0(AISAxisHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_axis_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISAxisMethodDynamicType0(AISAxisHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_axis_method_is_xyzaxis_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -5628,6 +6399,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISBadEdgeFilterMethodActsOn0(AISBadEdgeFilterHandle handle, int aType, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_bad_edge_filter_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISBadEdgeFilterMethodDynamicType0(AISBadEdgeFilterHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_bad_edge_filter_method_is_ok_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISBadEdgeFilterMethodIsOk0(AISBadEdgeFilterHandle handle, nint eO, out int resultValue);
@@ -5659,6 +6434,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void AISBadEdgeFilterRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_base_animation_object_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISBaseAnimationObjectMethodDynamicType0(AISBaseAnimationObjectHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_base_animation_object_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISBaseAnimationObjectClone(AISBaseAnimationObjectHandle source, out nint handle);
@@ -5681,6 +6460,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_c0_regularity_filter_method_acts_on_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISC0RegularityFilterMethodActsOn0(AISC0RegularityFilterHandle handle, int aType, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_c0_regularity_filter_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISC0RegularityFilterMethodDynamicType0(AISC0RegularityFilterHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_c0_regularity_filter_method_is_ok_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -5712,6 +6495,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_camera_frustum_method_accept_display_mode_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISCameraFrustumMethodAcceptDisplayMode0(AISCameraFrustumHandle handle, int theMode, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_camera_frustum_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISCameraFrustumMethodDynamicType0(AISCameraFrustumHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_camera_frustum_method_set_camera_frustum_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -5751,6 +6538,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_circle_create_1")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISCircleCreate1(nint theCircle, double theUStart, double theUEnd, int theIsFilledCircleSens, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_circle_method_circle_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISCircleMethodCircle0(AISCircleHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_circle_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISCircleMethodDynamicType0(AISCircleHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_circle_method_is_filled_circle_sens_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -5822,6 +6617,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_color_scale_method_compute_selection_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISColorScaleMethodComputeSelection0(AISColorScaleHandle handle, nint value0, int value1);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_color_scale_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISColorScaleMethodDynamicType0(AISColorScaleHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_color_scale_method_get_breadth_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -6002,6 +6801,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISColoredDrawerCreate0(nint theLink, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_colored_drawer_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISColoredDrawerMethodDynamicType0(AISColoredDrawerHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_colored_drawer_method_has_own_color_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISColoredDrawerMethodHasOwnColor0(AISColoredDrawerHandle handle, out int resultValue);
@@ -6081,6 +6884,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISColoredShapeMethodClearCustomAspects0(AISColoredShapeHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_colored_shape_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISColoredShapeMethodDynamicType0(AISColoredShapeHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_colored_shape_method_set_transparency_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISColoredShapeMethodSetTransparency0(AISColoredShapeHandle handle, double theValue);
@@ -6136,9 +6943,17 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISConnectedInteractiveMethodConnect1(AISConnectedInteractiveHandle handle, nint theAnotherObj, nint theLocation);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_connected_interactive_method_connected_to_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISConnectedInteractiveMethodConnectedTo0(AISConnectedInteractiveHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_connected_interactive_method_disconnect_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISConnectedInteractiveMethodDisconnect0(AISConnectedInteractiveHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_connected_interactive_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISConnectedInteractiveMethodDynamicType0(AISConnectedInteractiveHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_connected_interactive_method_has_connection_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -6194,6 +7009,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_exclusion_filter_method_clear_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISExclusionFilterMethodClear0(AISExclusionFilterHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_exclusion_filter_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISExclusionFilterMethodDynamicType0(AISExclusionFilterHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_exclusion_filter_method_is_exclusion_flag_on_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -6253,6 +7072,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_global_status_method_display_mode_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISGlobalStatusMethodDisplayMode0(AISGlobalStatusHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_global_status_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISGlobalStatusMethodDynamicType0(AISGlobalStatusHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_global_status_method_hilight_style_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISGlobalStatusMethodHilightStyle0(AISGlobalStatusHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_global_status_method_is_hilighted_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -6377,6 +7204,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodCurrent0(AISInteractiveContextHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_context_method_current_viewer_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodCurrentViewer0(AISInteractiveContextHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_context_method_deactivate_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodDeactivate0(AISInteractiveContextHandle handle);
@@ -6393,6 +7224,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodDeactivate3(AISInteractiveContextHandle handle, nint theObj, int theMode);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_context_method_default_drawer_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodDefaultDrawer0(AISInteractiveContextHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_context_method_detected_current_object_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodDetectedCurrentObject0(AISInteractiveContextHandle handle, out nint handleValue);
@@ -6404,6 +7239,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_context_method_detected_interactive_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodDetectedInteractive0(AISInteractiveContextHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_context_method_detected_owner_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodDetectedOwner0(AISInteractiveContextHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_context_method_deviation_angle_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -6465,6 +7304,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodDrawHiddenLine0(AISInteractiveContextHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_context_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodDynamicType0(AISInteractiveContextHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_context_method_enable_draw_hidden_line_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodEnableDrawHiddenLine0(AISInteractiveContextHandle handle);
@@ -6513,6 +7356,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodGetZLayer0(AISInteractiveContextHandle handle, nint theIObj, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_context_method_global_filter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodGlobalFilter0(AISInteractiveContextHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_context_method_gravity_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodGravityPoint0(AISInteractiveContextHandle handle, nint theView, out Point3dRaw resultValue);
@@ -6548,6 +7395,18 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_context_method_has_selected_shape_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodHasSelectedShape0(AISInteractiveContextHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_context_method_hidden_line_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodHiddenLineAspect0(AISInteractiveContextHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_context_method_highlight_style_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodHighlightStyle0(AISInteractiveContextHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_context_method_highlight_style_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodHighlightStyle1(AISInteractiveContextHandle handle, int theStyleType, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_context_method_hilight_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -6657,6 +7516,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodLoad1(AISInteractiveContextHandle handle, nint theObj, int theSelectionMode, int value2);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_context_method_main_prs_mgr_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodMainPrsMgr0(AISInteractiveContextHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_context_method_more_current_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodMoreCurrent0(AISInteractiveContextHandle handle, out int resultValue);
@@ -6765,6 +7628,18 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodSelectedOwner0(AISInteractiveContextHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_context_method_selection_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodSelection0(AISInteractiveContextHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_context_method_selection_manager_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodSelectionManager0(AISInteractiveContextHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_context_method_selection_style_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodSelectionStyle0(AISInteractiveContextHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_context_method_set_angle_and_deviation_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodSetAngleAndDeviation0(AISInteractiveContextHandle handle, nint theIObj, double theAngle, int theToUpdateViewer);
@@ -6860,6 +7735,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_context_method_set_plane_size_1")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodSetPlaneSize1(AISInteractiveContextHandle handle, double theSizeX, double theSizeY, int theToUpdateViewer);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_context_method_set_polygon_offsets_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveContextMethodSetPolygonOffsets0(AISInteractiveContextHandle handle, nint theIObj, int theMode, float theFactor, float theUnits, int theToUpdateViewer);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_context_method_set_selected_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -7024,9 +7903,17 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveObjectMethodClearOwner0(AISInteractiveObjectHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_object_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveObjectMethodDynamicType0(AISInteractiveObjectHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_object_method_get_context_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveObjectMethodGetContext0(AISInteractiveObjectHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_object_method_get_owner_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISInteractiveObjectMethodGetOwner0(AISInteractiveObjectHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_interactive_object_method_has_interactive_context_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -7091,9 +7978,21 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISLightSourceMethodArcSize0(AISLightSourceHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_light_source_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISLightSourceMethodDynamicType0(AISLightSourceHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_light_source_method_is_zoomable_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISLightSourceMethodIsZoomable0(AISLightSourceHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_light_source_method_light_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISLightSourceMethodLight0(AISLightSourceHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_light_source_method_marker_image_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISLightSourceMethodMarkerImage0(AISLightSourceHandle handle, int theIsEnabled, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_light_source_method_marker_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -7206,6 +8105,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISLightSourceOwnerCreate0(nint theObject, int thePriority, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_light_source_owner_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISLightSourceOwnerMethodDynamicType0(AISLightSourceOwnerHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_light_source_owner_method_hilight_with_color_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISLightSourceOwnerMethodHilightWithColor0(AISLightSourceOwnerHandle handle, nint thePrsMgr, nint theStyle, int theMode);
@@ -7241,6 +8144,18 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISLineCreate1(nint aStartPoint, nint aEndPoint, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_line_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISLineMethodDynamicType0(AISLineHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_line_method_end_point_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISLineMethodEndPoint0(AISLineHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_line_method_line_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISLineMethodLine0(AISLineHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_line_method_set_line_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISLineMethodSetLine0(AISLineHandle handle, nint theLine);
@@ -7256,6 +8171,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_line_method_signature_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISLineMethodSignature0(AISLineHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_line_method_start_point_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISLineMethodStartPoint0(AISLineHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_line_method_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -7315,6 +8234,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_manipulator_method_detach_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISManipulatorMethodDetach0(AISManipulatorHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_manipulator_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISManipulatorMethodDynamicType0(AISManipulatorHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_manipulator_method_enable_mode_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -7384,6 +8307,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISManipulatorMethodSetZoomPersistence0(AISManipulatorHandle handle, int theToEnable);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_manipulator_method_size_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISManipulatorMethodSize0(AISManipulatorHandle handle, out float resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_manipulator_method_skin_mode_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISManipulatorMethodSkinMode0(AISManipulatorHandle handle, out int resultValue);
@@ -7422,6 +8349,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_manipulator_owner_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISManipulatorOwnerCreate0(nint theSelObject, int theIndex, int theMode, int thePriority, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_manipulator_owner_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISManipulatorOwnerMethodDynamicType0(AISManipulatorOwnerHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_manipulator_owner_method_hilight_with_color_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -7470,9 +8401,17 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISMediaPlayerMethodDuration0(AISMediaPlayerHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_media_player_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISMediaPlayerMethodDynamicType0(AISMediaPlayerHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_media_player_method_play_pause_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISMediaPlayerMethodPlayPause0(AISMediaPlayerHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_media_player_method_player_context_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISMediaPlayerMethodPlayerContext0(AISMediaPlayerHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_media_player_method_set_close_player_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -7520,6 +8459,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_multiple_connected_interactive_method_disconnect_all_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISMultipleConnectedInteractiveMethodDisconnectAll0(AISMultipleConnectedInteractiveHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_multiple_connected_interactive_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISMultipleConnectedInteractiveMethodDynamicType0(AISMultipleConnectedInteractiveHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_multiple_connected_interactive_method_get_assembly_owner_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISMultipleConnectedInteractiveMethodGetAssemblyOwner0(AISMultipleConnectedInteractiveHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_multiple_connected_interactive_method_global_sel_owner_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -7584,6 +8531,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISPlaneMethodAxis2Placement0(AISPlaneHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_plane_method_center_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISPlaneMethodCenter0(AISPlaneHandle handle, out Point3dRaw resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_plane_method_component_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISPlaneMethodComponent0(AISPlaneHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_plane_method_compute_selection_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISPlaneMethodComputeSelection0(AISPlaneHandle handle, nint theSelection, int theMode);
@@ -7591,6 +8546,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_plane_method_current_mode_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISPlaneMethodCurrentMode0(AISPlaneHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_plane_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISPlaneMethodDynamicType0(AISPlaneHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_plane_method_has_minimum_size_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -7703,6 +8662,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISPlaneTrihedronMethodComponent0(AISPlaneTrihedronHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_plane_trihedron_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISPlaneTrihedronMethodDynamicType0(AISPlaneTrihedronHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_plane_trihedron_method_get_length_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISPlaneTrihedronMethodGetLength0(AISPlaneTrihedronHandle handle, out double resultValue);
@@ -7766,6 +8729,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISPointMethodComponent0(AISPointHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_point_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISPointMethodDynamicType0(AISPointHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_point_method_has_marker_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISPointMethodHasMarker0(AISPointHandle handle, out int resultValue);
@@ -7817,6 +8784,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISPointCloudCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_point_cloud_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISPointCloudMethodDynamicType0(AISPointCloudHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_point_cloud_method_get_points_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISPointCloudMethodGetPoints0(AISPointCloudHandle handle, out nint handleValue);
@@ -7860,6 +8831,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISPointCloudOwnerMethodClear0(AISPointCloudOwnerHandle handle, nint thePrsMgr, int theMode);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_point_cloud_owner_method_detected_points_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISPointCloudOwnerMethodDetectedPoints0(AISPointCloudOwnerHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_point_cloud_owner_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISPointCloudOwnerMethodDynamicType0(AISPointCloudOwnerHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_point_cloud_owner_method_hilight_with_color_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISPointCloudOwnerMethodHilightWithColor0(AISPointCloudOwnerHandle handle, nint thePrsMgr, nint theStyle, int theMode);
@@ -7867,6 +8846,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_point_cloud_owner_method_is_forced_hilight_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISPointCloudOwnerMethodIsForcedHilight0(AISPointCloudOwnerHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_point_cloud_owner_method_selected_points_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISPointCloudOwnerMethodSelectedPoints0(AISPointCloudOwnerHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_point_cloud_owner_method_unhilight_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -7898,6 +8881,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_rubber_band_method_clear_points_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISRubberBandMethodClearPoints0(AISRubberBandHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_rubber_band_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISRubberBandMethodDynamicType0(AISRubberBandHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_rubber_band_method_fill_transparency_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -7982,6 +8969,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISSelectionMethodClearAndSelect0(AISSelectionHandle handle, nint theObject, nint theFilter, int theIsDetected);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_selection_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISSelectionMethodDynamicType0(AISSelectionHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_selection_method_extent_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISSelectionMethodExtent0(AISSelectionHandle handle, out int resultValue);
@@ -8010,6 +9001,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISSelectionMethodSelect0(AISSelectionHandle handle, nint theOwner, nint theFilter, int theSelScheme, int theIsDetected, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_selection_method_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISSelectionMethodValue0(AISSelectionHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_selection_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISSelectionClone(AISSelectionHandle source, out nint handle);
@@ -8036,6 +9031,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_shape_method_accept_shape_decomposition_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISShapeMethodAcceptShapeDecomposition0(AISShapeHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_shape_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISShapeMethodDynamicType0(AISShapeHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_shape_method_material_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -8132,6 +9131,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISSignatureFilterCreate0(int aGivenKind, int aGivenSignature, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_signature_filter_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISSignatureFilterMethodDynamicType0(AISSignatureFilterHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_signature_filter_method_is_ok_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISSignatureFilterMethodIsOk0(AISSignatureFilterHandle handle, nint anobj, out int resultValue);
@@ -8163,6 +9166,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISTextLabelMethodAcceptDisplayMode0(AISTextLabelHandle handle, int theMode, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_text_label_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISTextLabelMethodDynamicType0(AISTextLabelHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_text_label_method_font_aspect_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISTextLabelMethodFontAspect0(AISTextLabelHandle handle, out int resultValue);
@@ -8178,6 +9185,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_text_label_method_has_own_anchor_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISTextLabelMethodHasOwnAnchorPoint0(AISTextLabelHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_text_label_method_position_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISTextLabelMethodPosition0(AISTextLabelHandle handle, out Point3dRaw resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_text_label_method_set_angle_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -8227,6 +9238,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISTextLabelMethodSetZoomable0(AISTextLabelHandle handle, int theIsZoomable);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_text_label_method_text_formatter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISTextLabelMethodTextFormatter0(AISTextLabelHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_text_label_method_unset_orientation3_d_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISTextLabelMethodUnsetOrientation3D0(AISTextLabelHandle handle);
@@ -8261,6 +9276,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_textured_shape_method_disable_texture_modulate_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISTexturedShapeMethodDisableTextureModulate0(AISTexturedShapeHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_textured_shape_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISTexturedShapeMethodDynamicType0(AISTexturedShapeHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_textured_shape_method_enable_texture_modulate_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -8309,6 +9328,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_textured_shape_method_texture_origin_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISTexturedShapeMethodTextureOrigin0(AISTexturedShapeHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_textured_shape_method_texture_pix_map_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISTexturedShapeMethodTexturePixMap0(AISTexturedShapeHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_textured_shape_method_texture_repeat_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -8377,6 +9400,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISTriangulationCreate0(nint aTriangulation, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_triangulation_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISTriangulationMethodDynamicType0(AISTriangulationHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_triangulation_method_get_triangulation_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISTriangulationMethodGetTriangulation0(AISTriangulationHandle handle, out nint handleValue);
@@ -8428,9 +9455,17 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISTrihedronMethodClearSelected0(AISTrihedronHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_trihedron_method_component_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISTrihedronMethodComponent0(AISTrihedronHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_trihedron_method_datum_display_mode_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISTrihedronMethodDatumDisplayMode0(AISTrihedronHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_trihedron_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISTrihedronMethodDynamicType0(AISTrihedronHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_trihedron_method_has_arrow_color_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -8523,6 +9558,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISTrihedronOwnerMethodDatumPart0(AISTrihedronOwnerHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_trihedron_owner_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISTrihedronOwnerMethodDynamicType0(AISTrihedronOwnerHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_trihedron_owner_method_hilight_with_color_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISTrihedronOwnerMethodHilightWithColor0(AISTrihedronOwnerHandle handle, nint thePM, nint theStyle, int theMode);
@@ -8557,6 +9596,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_type_filter_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISTypeFilterCreate0(int aGivenKind, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_type_filter_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISTypeFilterMethodDynamicType0(AISTypeFilterHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_type_filter_method_is_ok_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -8609,6 +9652,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISViewCubeMethodBoxCornerMinSize0(AISViewCubeHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_view_cube_method_box_corner_style_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISViewCubeMethodBoxCornerStyle0(AISViewCubeHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_view_cube_method_box_edge_gap_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISViewCubeMethodBoxEdgeGap0(AISViewCubeHandle handle, out double resultValue);
@@ -8617,9 +9664,17 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISViewCubeMethodBoxEdgeMinSize0(AISViewCubeHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_view_cube_method_box_edge_style_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISViewCubeMethodBoxEdgeStyle0(AISViewCubeHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_view_cube_method_box_facet_extension_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISViewCubeMethodBoxFacetExtension0(AISViewCubeHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_view_cube_method_box_side_style_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISViewCubeMethodBoxSideStyle0(AISViewCubeHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_view_cube_method_box_transparency_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -8636,6 +9691,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_view_cube_method_duration_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISViewCubeMethodDuration0(AISViewCubeHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_view_cube_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISViewCubeMethodDynamicType0(AISViewCubeHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_view_cube_method_font_height_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -8825,6 +9884,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISViewCubeMethodUpdateAnimation0(AISViewCubeHandle handle, int theToUpdate, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_view_cube_method_view_animation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISViewCubeMethodViewAnimation0(AISViewCubeHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_view_cube_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISViewCubeClone(AISViewCubeHandle source, out nint handle);
@@ -8847,6 +9910,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_view_cube_owner_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISViewCubeOwnerCreate0(nint theObject, int theOrient, int thePriority, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_view_cube_owner_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISViewCubeOwnerMethodDynamicType0(AISViewCubeOwnerHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_view_cube_owner_method_is_forced_hilight_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -8879,6 +9946,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISViewCubeSensitiveCreate0(nint theOwner, nint theTris, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_view_cube_sensitive_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISViewCubeSensitiveMethodDynamicType0(AISViewCubeSensitiveHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_view_cube_sensitive_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISViewCubeSensitiveClone(AISViewCubeSensitiveHandle source, out nint handle);
@@ -8906,13 +9977,33 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISXRTrackedDeviceCreate1(nint theTris, nint theTexture, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_xrtracked_device_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISXRTrackedDeviceMethodDynamicType0(AISXRTrackedDeviceHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_xrtracked_device_method_laser_length_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISXRTrackedDeviceMethodLaserLength0(AISXRTrackedDeviceHandle handle, out float resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_xrtracked_device_method_role_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISXRTrackedDeviceMethodRole0(AISXRTrackedDeviceHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_xrtracked_device_method_set_laser_length_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISXRTrackedDeviceMethodSetLaserLength0(AISXRTrackedDeviceHandle handle, float theLength);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_xrtracked_device_method_set_role_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AISXRTrackedDeviceMethodSetRole0(AISXRTrackedDeviceHandle handle, int theRole);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_xrtracked_device_method_set_unit_factor_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISXRTrackedDeviceMethodSetUnitFactor0(AISXRTrackedDeviceHandle handle, float theFactor);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_xrtracked_device_method_unit_factor_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AISXRTrackedDeviceMethodUnitFactor0(AISXRTrackedDeviceHandle handle, out float resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_xrtracked_device_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -8944,6 +10035,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_circular_grid_method_division_number_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AspectCircularGridMethodDivisionNumber0(AspectCircularGridHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_circular_grid_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AspectCircularGridMethodDynamicType0(AspectCircularGridHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_circular_grid_method_init_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9012,6 +10107,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AspectDisplayConnectionCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_display_connection_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AspectDisplayConnectionMethodDynamicType0(AspectDisplayConnectionHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_display_connection_method_get_atom_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AspectDisplayConnectionMethodGetAtom0(AspectDisplayConnectionHandle handle, int theAtom, out ulong resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_display_connection_method_is_own_display_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AspectDisplayConnectionMethodIsOwnDisplay0(AspectDisplayConnectionHandle handle, out int resultValue);
@@ -9046,6 +10149,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_grid_method_draw_mode_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AspectGridMethodDrawMode0(AspectGridHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_grid_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AspectGridMethodDynamicType0(AspectGridHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_grid_method_is_active_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9118,6 +10225,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AspectNeutralWindowMethodDoResize0(AspectNeutralWindowHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_neutral_window_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AspectNeutralWindowMethodDynamicType0(AspectNeutralWindowHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_neutral_window_method_is_mapped_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AspectNeutralWindowMethodIsMapped0(AspectNeutralWindowHandle handle, out int resultValue);
@@ -9173,6 +10284,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AspectOpenVRSessionMethodClose0(AspectOpenVRSessionHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_open_vrsession_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AspectOpenVRSessionMethodDynamicType0(AspectOpenVRSessionHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_open_vrsession_method_has_projection_frustums_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AspectOpenVRSessionMethodHasProjectionFrustums0(AspectOpenVRSessionHandle handle, out int resultValue);
@@ -9219,6 +10334,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_open_vrsession_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void AspectOpenVRSessionRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_rectangular_grid_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AspectRectangularGridMethodDynamicType0(AspectRectangularGridHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_rectangular_grid_method_first_angle_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9303,9 +10422,45 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AspectVKeySetCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_vkey_set_method_down_time_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AspectVKeySetMethodDownTime0(AspectVKeySetHandle handle, uint theKey, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_vkey_set_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AspectVKeySetMethodDynamicType0(AspectVKeySetHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_vkey_set_method_is_free_key_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AspectVKeySetMethodIsFreeKey0(AspectVKeySetHandle handle, uint theKey, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_vkey_set_method_is_key_down_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AspectVKeySetMethodIsKeyDown0(AspectVKeySetHandle handle, uint theKey, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_vkey_set_method_key_down_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AspectVKeySetMethodKeyDown0(AspectVKeySetHandle handle, uint theKey, double theTime, double thePressure);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_vkey_set_method_key_from_axis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AspectVKeySetMethodKeyFromAxis0(AspectVKeySetHandle handle, uint theNegative, uint thePositive, double theTime, double thePressure);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_vkey_set_method_key_up_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AspectVKeySetMethodKeyUp0(AspectVKeySetHandle handle, uint theKey, double theTime);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_vkey_set_method_modifiers_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AspectVKeySetMethodModifiers0(AspectVKeySetHandle handle, out uint resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_vkey_set_method_reset_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AspectVKeySetMethodReset0(AspectVKeySetHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_vkey_set_method_time_up_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AspectVKeySetMethodTimeUp0(AspectVKeySetHandle handle, uint theKey, out double resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_vkey_set_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9333,6 +10488,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_window_method_device_pixel_ratio_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AspectWindowMethodDevicePixelRatio0(AspectWindowHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_window_method_display_connection_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AspectWindowMethodDisplayConnection0(AspectWindowHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_window_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AspectWindowMethodDynamicType0(AspectWindowHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_window_method_invalidate_content_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9365,9 +10528,21 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void AspectWindowRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_xraction_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AspectXRActionMethodDynamicType0(AspectXRActionHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_xraction_method_is_valid_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AspectXRActionMethodIsValid0(AspectXRActionHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_xraction_method_raw_handle_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AspectXRActionMethodRawHandle0(AspectXRActionHandle handle, out ulong resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_xraction_method_set_raw_handle_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AspectXRActionMethodSetRawHandle0(AspectXRActionHandle handle, ulong theHande);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_xraction_method_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9396,6 +10571,18 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AspectXRActionSetMethodAddAction0(AspectXRActionSetHandle handle, nint theAction);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_xraction_set_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AspectXRActionSetMethodDynamicType0(AspectXRActionSetHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_xraction_set_method_raw_handle_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AspectXRActionSetMethodRawHandle0(AspectXRActionSetHandle handle, out ulong resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_xraction_set_method_set_raw_handle_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AspectXRActionSetMethodSetRawHandle0(AspectXRActionSetHandle handle, ulong theHande);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_xraction_set_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AspectXRActionSetClone(AspectXRActionSetHandle source, out nint handle);
@@ -9423,9 +10610,21 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AspectXRSessionMethodAspect0(AspectXRSessionHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_xrsession_method_display_frequency_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AspectXRSessionMethodDisplayFrequency0(AspectXRSessionHandle handle, out float resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_xrsession_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AspectXRSessionMethodDynamicType0(AspectXRSessionHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_xrsession_method_field_of_view_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AspectXRSessionMethodFieldOfView0(AspectXRSessionHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_xrsession_method_generic_action_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AspectXRSessionMethodGenericAction0(AspectXRSessionHandle handle, int theDevice, int theAction, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_xrsession_method_has_tracked_pose_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9478,6 +10677,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus CocoaWindowMethodDoResize0(CocoaWindowHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_cocoa_window_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus CocoaWindowMethodDynamicType0(CocoaWindowHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_cocoa_window_method_invalidate_content_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus CocoaWindowMethodInvalidateContent0(CocoaWindowHandle handle, nint theDisp);
@@ -9529,6 +10732,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus D3DHostFrameBufferMethodD3dFallback0(D3DHostFrameBufferHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_d3_dhost_frame_buffer_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus D3DHostFrameBufferMethodDynamicType0(D3DHostFrameBufferHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_d3_dhost_frame_buffer_method_is_srgbready_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus D3DHostFrameBufferMethodIsSRGBReady0(D3DHostFrameBufferHandle handle, out int resultValue);
@@ -9576,6 +10783,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus D3DHostGraphicDriverMethodCreateView0(D3DHostGraphicDriverHandle handle, nint theMgr, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_d3_dhost_graphic_driver_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus D3DHostGraphicDriverMethodDynamicType0(D3DHostGraphicDriverHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_d3_dhost_graphic_driver_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus D3DHostGraphicDriverClone(D3DHostGraphicDriverHandle source, out nint handle);
@@ -9603,6 +10814,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus D3DHostGraphicDriverFactoryMethodCreateDriver0(D3DHostGraphicDriverFactoryHandle handle, nint theDisp, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_d3_dhost_graphic_driver_factory_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus D3DHostGraphicDriverFactoryMethodDynamicType0(D3DHostGraphicDriverFactoryHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_d3_dhost_graphic_driver_factory_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus D3DHostGraphicDriverFactoryClone(D3DHostGraphicDriverFactoryHandle source, out nint handle);
@@ -9621,6 +10836,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_d3_dhost_graphic_driver_factory_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void D3DHostGraphicDriverFactoryRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_d3_dhost_view_method_d3d_wgl_buffer_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus D3DHostViewMethodD3dWglBuffer0(D3DHostViewHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_d3_dhost_view_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus D3DHostViewMethodDynamicType0(D3DHostViewHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_d3_dhost_view_method_is_d3d_ex_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9665,6 +10888,26 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus FontFTFontCreate0(nint theFTLib, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_ftfont_method_ascender_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FontFTFontMethodAscender0(FontFTFontHandle handle, out float resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_ftfont_method_descender_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FontFTFontMethodDescender0(FontFTFontHandle handle, out float resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_ftfont_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FontFTFontMethodDynamicType0(FontFTFontHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_ftfont_method_glyph_max_size_x_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FontFTFontMethodGlyphMaxSizeX0(FontFTFontHandle handle, int theToIncludeFallback, out uint resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_ftfont_method_glyph_max_size_y_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FontFTFontMethodGlyphMaxSizeY0(FontFTFontHandle handle, int theToIncludeFallback, out uint resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_ftfont_method_glyphs_number_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus FontFTFontMethodGlyphsNumber0(FontFTFontHandle handle, int theToIncludeFallback, out int resultValue);
@@ -9676,6 +10919,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_ftfont_method_is_valid_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus FontFTFontMethodIsValid0(FontFTFontHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_ftfont_method_line_spacing_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FontFTFontMethodLineSpacing0(FontFTFontHandle handle, out float resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_ftfont_method_point_size_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FontFTFontMethodPointSize0(FontFTFontHandle handle, out uint resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_ftfont_method_release_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9689,6 +10940,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus FontFTFontMethodSetUseUnicodeSubsetFallback0(FontFTFontHandle handle, int theToFallback);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_ftfont_method_set_width_scaling_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FontFTFontMethodSetWidthScaling0(FontFTFontHandle handle, float theScaleFactor);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_ftfont_method_to_synthesize_italic_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus FontFTFontMethodToSynthesizeItalic0(FontFTFontHandle handle, out int resultValue);
@@ -9696,6 +10951,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_ftfont_method_to_use_unicode_subset_fallback_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus FontFTFontMethodToUseUnicodeSubsetFallback0(FontFTFontHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_ftfont_method_width_scaling_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FontFTFontMethodWidthScaling0(FontFTFontHandle handle, out float resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_ftfont_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9719,6 +10978,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_ftlibrary_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus FontFTLibraryCreate0(out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_ftlibrary_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FontFTLibraryMethodDynamicType0(FontFTLibraryHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_ftlibrary_method_is_valid_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9746,6 +11009,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_font_mgr_method_clear_font_data_base_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus FontFontMgrMethodClearFontDataBase0(FontFontMgrHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_font_mgr_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FontFontMgrMethodDynamicType0(FontFontMgrHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_font_mgr_method_find_fallback_font_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9798,6 +11065,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void FontFontMgrRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_system_font_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FontSystemFontMethodDynamicType0(FontSystemFontHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_system_font_method_font_face_id_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus FontSystemFontMethodFontFaceId0(FontSystemFontHandle handle, int theAspect, out int resultValue);
@@ -9841,6 +11112,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus FontTextFormatterCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_text_formatter_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FontTextFormatterMethodDynamicType0(FontTextFormatterHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_text_formatter_method_first_position_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FontTextFormatterMethodFirstPosition0(FontTextFormatterHandle handle, out float resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_text_formatter_method_format_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus FontTextFormatterMethodFormat0(FontTextFormatterHandle handle);
@@ -9857,6 +11136,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus FontTextFormatterMethodIsLFSymbol0(FontTextFormatterHandle handle, int theIndex, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_text_formatter_method_line_height_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FontTextFormatterMethodLineHeight0(FontTextFormatterHandle handle, int theIndex, out float resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_text_formatter_method_line_index_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus FontTextFormatterMethodLineIndex0(FontTextFormatterHandle handle, int theIndex, out int resultValue);
@@ -9865,13 +11148,33 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus FontTextFormatterMethodLinePositionIndex0(FontTextFormatterHandle handle, int theIndex, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_text_formatter_method_line_width_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FontTextFormatterMethodLineWidth0(FontTextFormatterHandle handle, int theIndex, out float resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_text_formatter_method_maximum_symbol_width_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FontTextFormatterMethodMaximumSymbolWidth0(FontTextFormatterHandle handle, out float resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_text_formatter_method_reset_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus FontTextFormatterMethodReset0(FontTextFormatterHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_text_formatter_method_result_height_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FontTextFormatterMethodResultHeight0(FontTextFormatterHandle handle, out float resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_text_formatter_method_result_width_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FontTextFormatterMethodResultWidth0(FontTextFormatterHandle handle, out float resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_text_formatter_method_set_word_wrapping_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus FontTextFormatterMethodSetWordWrapping0(FontTextFormatterHandle handle, int theIsWordWrapping);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_text_formatter_method_set_wrapping_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FontTextFormatterMethodSetWrapping0(FontTextFormatterHandle handle, float theWidth);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_text_formatter_method_setup_alignment_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9888,6 +11191,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_text_formatter_method_word_wrapping_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus FontTextFormatterMethodWordWrapping0(FontTextFormatterHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_text_formatter_method_wrapping_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FontTextFormatterMethodWrapping0(FontTextFormatterHandle handle, out float resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_font_text_formatter_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9916,6 +11223,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfPointsCreate1(int theMaxVertexs, int theHasVColors, int theHasVNormals, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_points_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfPointsMethodDynamicType0(Graphic3dArrayOfPointsHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_points_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfPointsClone(Graphic3dArrayOfPointsHandle source, out nint handle);
@@ -9943,6 +11254,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfPolygonsCreate1(int theMaxVertexs, int theMaxBounds, int theMaxEdges, int theArrayFlags, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_polygons_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfPolygonsMethodDynamicType0(Graphic3dArrayOfPolygonsHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_polygons_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfPolygonsClone(Graphic3dArrayOfPolygonsHandle source, out nint handle);
@@ -9969,6 +11284,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_polylines_create_1")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfPolylinesCreate1(int theMaxVertexs, int theMaxBounds, int theMaxEdges, int theHasVColors, int theHasBColors, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_polylines_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfPolylinesMethodDynamicType0(Graphic3dArrayOfPolylinesHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_polylines_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10065,6 +11384,26 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfPrimitivesMethodAddVertex5(Graphic3dArrayOfPrimitivesHandle handle, Point3dRaw theVertex, int theColor32, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_primitives_method_add_vertex_6")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfPrimitivesMethodAddVertex6(Graphic3dArrayOfPrimitivesHandle handle, float theX, float theY, float theZ, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_primitives_method_add_vertex_7")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfPrimitivesMethodAddVertex7(Graphic3dArrayOfPrimitivesHandle handle, float theX, float theY, float theZ, float theTX, float theTY, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_primitives_method_add_vertex_8")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfPrimitivesMethodAddVertex8(Graphic3dArrayOfPrimitivesHandle handle, float theX, float theY, float theZ, float theNX, float theNY, float theNZ, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_primitives_method_add_vertex_9")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfPrimitivesMethodAddVertex9(Graphic3dArrayOfPrimitivesHandle handle, float theX, float theY, float theZ, float theNX, float theNY, float theNZ, float theTX, float theTY, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_primitives_method_attributes_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfPrimitivesMethodAttributes0(Graphic3dArrayOfPrimitivesHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_primitives_method_bound_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfPrimitivesMethodBound0(Graphic3dArrayOfPrimitivesHandle handle, int theRank, out int resultValue);
@@ -10076,6 +11415,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_primitives_method_bound_number_allocated_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfPrimitivesMethodBoundNumberAllocated0(Graphic3dArrayOfPrimitivesHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_primitives_method_bounds_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfPrimitivesMethodBounds0(Graphic3dArrayOfPrimitivesHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_primitives_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfPrimitivesMethodDynamicType0(Graphic3dArrayOfPrimitivesHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_primitives_method_edge_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10104,6 +11451,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_primitives_method_has_vertex_texels_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfPrimitivesMethodHasVertexTexels0(Graphic3dArrayOfPrimitivesHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_primitives_method_indices_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfPrimitivesMethodIndices0(Graphic3dArrayOfPrimitivesHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_primitives_method_is_valid_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10136,6 +11487,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_primitives_method_set_vertice_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfPrimitivesMethodSetVertice0(Graphic3dArrayOfPrimitivesHandle handle, int theIndex, Point3dRaw theVertex);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_primitives_method_set_vertice_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfPrimitivesMethodSetVertice1(Graphic3dArrayOfPrimitivesHandle handle, int theIndex, float theX, float theY, float theZ);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_primitives_method_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10180,6 +11535,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfQuadrangleStripsCreate1(int theMaxVertexs, int theMaxStrips, int theHasVNormals, int theHasVColors, int theHasSColors, int theHasVTexels, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_quadrangle_strips_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfQuadrangleStripsMethodDynamicType0(Graphic3dArrayOfQuadrangleStripsHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_quadrangle_strips_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfQuadrangleStripsClone(Graphic3dArrayOfQuadrangleStripsHandle source, out nint handle);
@@ -10206,6 +11565,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_quadrangles_create_1")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfQuadranglesCreate1(int theMaxVertexs, int theMaxEdges, int theHasVNormals, int theHasVColors, int theHasVTexels, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_quadrangles_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfQuadranglesMethodDynamicType0(Graphic3dArrayOfQuadranglesHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_quadrangles_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10234,6 +11597,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfSegmentsCreate1(int theMaxVertexs, int theMaxEdges, int theHasVColors, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_segments_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfSegmentsMethodDynamicType0(Graphic3dArrayOfSegmentsHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_segments_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfSegmentsClone(Graphic3dArrayOfSegmentsHandle source, out nint handle);
@@ -10260,6 +11627,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_triangle_fans_create_1")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfTriangleFansCreate1(int theMaxVertexs, int theMaxFans, int theHasVNormals, int theHasVColors, int theHasBColors, int theHasVTexels, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_triangle_fans_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfTriangleFansMethodDynamicType0(Graphic3dArrayOfTriangleFansHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_triangle_fans_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10288,6 +11659,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfTriangleStripsCreate1(int theMaxVertexs, int theMaxStrips, int theHasVNormals, int theHasVColors, int theHasBColors, int theHasVTexels, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_triangle_strips_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfTriangleStripsMethodDynamicType0(Graphic3dArrayOfTriangleStripsHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_triangle_strips_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfTriangleStripsClone(Graphic3dArrayOfTriangleStripsHandle source, out nint handle);
@@ -10315,6 +11690,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfTrianglesCreate1(int theMaxVertexs, int theMaxEdges, int theHasVNormals, int theHasVColors, int theHasVTexels, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_triangles_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfTrianglesMethodDynamicType0(Graphic3dArrayOfTrianglesHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_array_of_triangles_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dArrayOfTrianglesClone(Graphic3dArrayOfTrianglesHandle source, out nint handle);
@@ -10337,6 +11716,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspect_fill_area3d_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectFillArea3dCreate0(out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspect_fill_area3d_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectFillArea3dMethodDynamicType0(Graphic3dAspectFillArea3dHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspect_fill_area3d_method_edge_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10365,6 +11748,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectLine3dCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspect_line3d_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectLine3dMethodDynamicType0(Graphic3dAspectLine3dHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspect_line3d_method_set_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectLine3dMethodSetType0(Graphic3dAspectLine3dHandle handle, int theType);
@@ -10373,9 +11760,17 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectLine3dMethodSetWidth0(Graphic3dAspectLine3dHandle handle, double theWidth);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspect_line3d_method_set_width_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectLine3dMethodSetWidth1(Graphic3dAspectLine3dHandle handle, float theWidth);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspect_line3d_method_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectLine3dMethodType0(Graphic3dAspectLine3dHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspect_line3d_method_width_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectLine3dMethodWidth0(Graphic3dAspectLine3dHandle handle, out float resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspect_line3d_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10404,9 +11799,25 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectMarker3dCreate1(nint theTextureImage, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspect_marker3d_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectMarker3dMethodDynamicType0(Graphic3dAspectMarker3dHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspect_marker3d_method_get_marker_image_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectMarker3dMethodGetMarkerImage0(Graphic3dAspectMarker3dHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspect_marker3d_method_scale_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectMarker3dMethodScale0(Graphic3dAspectMarker3dHandle handle, out float resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspect_marker3d_method_set_scale_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectMarker3dMethodSetScale0(Graphic3dAspectMarker3dHandle handle, double theScale);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspect_marker3d_method_set_scale_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectMarker3dMethodSetScale1(Graphic3dAspectMarker3dHandle handle, float theScale);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspect_marker3d_method_set_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10442,6 +11853,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspect_text3d_method_display_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectText3dMethodDisplayType0(Graphic3dAspectText3dHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspect_text3d_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectText3dMethodDynamicType0(Graphic3dAspectText3dHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspect_text3d_method_get_text_angle_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectText3dMethodGetTextAngle0(Graphic3dAspectText3dHandle handle, out float resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspect_text3d_method_get_text_font_aspect_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10494,6 +11913,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodAllowBackFace0(Graphic3dAspectsHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_alpha_cutoff_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodAlphaCutoff0(Graphic3dAspectsHandle handle, out float resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_alpha_mode_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodAlphaMode0(Graphic3dAspectsHandle handle, out int resultValue);
@@ -10506,13 +11929,25 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodDistinguish0(Graphic3dAspectsHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodDynamicType0(Graphic3dAspectsHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_edge_line_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodEdgeLineType0(Graphic3dAspectsHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_edge_width_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodEdgeWidth0(Graphic3dAspectsHandle handle, out float resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_face_culling_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodFaceCulling0(Graphic3dAspectsHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_hatch_style_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodHatchStyle0(Graphic3dAspectsHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_interior_style_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10526,9 +11961,29 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodIsTextZoomable0(Graphic3dAspectsHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_line_pattern_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodLinePattern0(Graphic3dAspectsHandle handle, out ushort resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_line_stipple_factor_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodLineStippleFactor0(Graphic3dAspectsHandle handle, out ushort resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_line_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodLineType0(Graphic3dAspectsHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_line_width_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodLineWidth0(Graphic3dAspectsHandle handle, out float resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_marker_image_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodMarkerImage0(Graphic3dAspectsHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_marker_scale_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodMarkerScale0(Graphic3dAspectsHandle handle, out float resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_marker_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10586,17 +12041,37 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodSetInteriorStyle0(Graphic3dAspectsHandle handle, int theStyle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_set_line_pattern_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodSetLinePattern0(Graphic3dAspectsHandle handle, ushort thePattern);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_set_line_stipple_factor_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodSetLineStippleFactor0(Graphic3dAspectsHandle handle, ushort theFactor);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_set_line_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodSetLineType0(Graphic3dAspectsHandle handle, int theType);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_set_line_width_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodSetLineWidth0(Graphic3dAspectsHandle handle, float theWidth);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_set_marker_image_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodSetMarkerImage0(Graphic3dAspectsHandle handle, nint theImage);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_set_marker_scale_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodSetMarkerScale0(Graphic3dAspectsHandle handle, float theScale);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_set_marker_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodSetMarkerType0(Graphic3dAspectsHandle handle, int theType);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_set_polygon_offsets_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodSetPolygonOffsets0(Graphic3dAspectsHandle handle, int theMode, float theFactor, float theUnits);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_set_shader_program_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10613,6 +12088,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_set_suppress_back_faces_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodSetSuppressBackFaces0(Graphic3dAspectsHandle handle, int theToSuppress);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_set_text_angle_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodSetTextAngle0(Graphic3dAspectsHandle handle, float theAngle);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_set_text_display_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10658,6 +12137,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodSetUseVertexColorForBackFaces0(Graphic3dAspectsHandle handle, int theToUse);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_shader_program_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodShaderProgram0(Graphic3dAspectsHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_shading_model_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodShadingModel0(Graphic3dAspectsHandle handle, out int resultValue);
@@ -10666,9 +12149,17 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodSuppressBackFace0(Graphic3dAspectsHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_text_angle_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodTextAngle0(Graphic3dAspectsHandle handle, out float resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_text_display_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodTextDisplayType0(Graphic3dAspectsHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_text_font_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodTextFont0(Graphic3dAspectsHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_text_font_aspect_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10685,6 +12176,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_texture_map_state_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodTextureMapState0(Graphic3dAspectsHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_texture_set_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsMethodTextureSet0(Graphic3dAspectsHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_method_to_draw_edges_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10732,6 +12227,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_attrib_buffer_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAttribBufferCreate0(nint theAlloc, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_attrib_buffer_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dAttribBufferMethodDynamicType0(Graphic3dAttribBufferHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_attrib_buffer_method_invalidate_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10792,6 +12291,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dBoundBufferCreate0(nint theAlloc, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_bound_buffer_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dBoundBufferMethodDynamicType0(Graphic3dBoundBufferHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_bound_buffer_method_init_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dBoundBufferMethodInit0(Graphic3dBoundBufferHandle handle, int theNbBounds, int theHasColors, out int resultValue);
@@ -10822,6 +12325,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_buffer_method_attribute_offset_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dBufferMethodAttributeOffset0(Graphic3dBufferHandle handle, int theAttribIndex, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_buffer_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dBufferMethodDynamicType0(Graphic3dBufferHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_buffer_method_find_attribute_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10878,6 +12385,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCLightMethodCopyFrom0(Graphic3dCLightHandle handle, nint theLight);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_clight_method_display_position_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCLightMethodDisplayPosition0(Graphic3dCLightHandle handle, out Point3dRaw resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_clight_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCLightMethodDynamicType0(Graphic3dCLightHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_clight_method_has_range_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCLightMethodHasRange0(Graphic3dCLightHandle handle, out int resultValue);
@@ -10893,6 +12408,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_clight_method_is_headlight_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCLightMethodIsHeadlight0(Graphic3dCLightHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_clight_method_revision_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCLightMethodRevision0(Graphic3dCLightHandle handle, out ulong resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_clight_method_set_cast_shadows_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10921,6 +12440,18 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_clight_method_set_position_1")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCLightMethodSetPosition1(Graphic3dCLightHandle handle, double theX, double theY, double theZ);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_clight_method_set_smooth_angle_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCLightMethodSetSmoothAngle0(Graphic3dCLightHandle handle, float theValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_clight_method_set_smooth_radius_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCLightMethodSetSmoothRadius0(Graphic3dCLightHandle handle, float theValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_clight_method_smoothness_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCLightMethodSmoothness0(Graphic3dCLightHandle handle, out float resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_clight_method_to_cast_shadows_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10953,6 +12484,18 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCStructureMethodBndBoxClipCheck0(Graphic3dCStructureHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cstructure_method_clip_planes_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCStructureMethodClipPlanes0(Graphic3dCStructureHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cstructure_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCStructureMethodDynamicType0(Graphic3dCStructureHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cstructure_method_graphic_driver_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCStructureMethodGraphicDriver0(Graphic3dCStructureHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cstructure_method_has_group_flipping_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCStructureMethodHasGroupFlipping0(Graphic3dCStructureHandle handle, out int resultValue);
@@ -10960,6 +12503,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cstructure_method_has_group_transform_persistence_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCStructureMethodHasGroupTransformPersistence0(Graphic3dCStructureHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cstructure_method_highlight_style_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCStructureMethodHighlightStyle0(Graphic3dCStructureHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cstructure_method_identification_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -11033,6 +12580,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCStructureMethodSetZLayer0(Graphic3dCStructureHandle handle, int theLayerIndex);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cstructure_method_transform_persistence_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCStructureMethodTransformPersistence0(Graphic3dCStructureHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cstructure_method_transformation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCStructureMethodTransformation0(Graphic3dCStructureHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cstructure_method_update_layer_transformation_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCStructureMethodupdateLayerTransformation0(Graphic3dCStructureHandle handle);
@@ -11072,9 +12627,25 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCViewMethodBackfacingModel0(Graphic3dCViewHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cview_method_background_cube_map_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCViewMethodBackgroundCubeMap0(Graphic3dCViewHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cview_method_background_image_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCViewMethodBackgroundImage0(Graphic3dCViewHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cview_method_background_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCViewMethodBackgroundType0(Graphic3dCViewHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cview_method_base_xrcamera_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCViewMethodBaseXRCamera0(Graphic3dCViewHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cview_method_camera_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCViewMethodCamera0(Graphic3dCViewHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cview_method_compute_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -11096,6 +12667,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCViewMethodDeactivate0(Graphic3dCViewHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cview_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCViewMethodDynamicType0(Graphic3dCViewHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cview_method_graduated_trihedron_erase_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCViewMethodGraduatedTrihedronErase0(Graphic3dCViewHandle handle);
@@ -11103,6 +12678,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cview_method_grid_erase_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCViewMethodGridErase0(Graphic3dCViewHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cview_method_iblcube_map_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCViewMethodIBLCubeMap0(Graphic3dCViewHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cview_method_identification_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -11143,6 +12722,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cview_method_number_of_displayed_structures_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCViewMethodNumberOfDisplayedStructures0(Graphic3dCViewHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cview_method_posed_xrcamera_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCViewMethodPosedXRCamera0(Graphic3dCViewHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cview_method_process_xrinput_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -11228,6 +12811,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCViewMethodShadingModel0(Graphic3dCViewHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cview_method_structure_manager_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCViewMethodStructureManager0(Graphic3dCViewHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cview_method_subview_corner_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCViewMethodSubviewCorner0(Graphic3dCViewHandle handle, out int resultValue);
@@ -11243,6 +12830,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cview_method_synchronize_xrposed_to_base_camera_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCViewMethodSynchronizeXRPosedToBaseCamera0(Graphic3dCViewHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cview_method_texture_env_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCViewMethodTextureEnv0(Graphic3dCViewHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cview_method_to_flip_output_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -11263,6 +12854,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cview_method_visualization_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCViewMethodVisualizationType0(Graphic3dCViewHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cview_method_xrsession_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCViewMethodXRSession0(Graphic3dCViewHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cview_method_zlayer_redraw_mode_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -11339,6 +12934,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCameraMethodDistance0(Graphic3dCameraHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_camera_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCameraMethodDynamicType0(Graphic3dCameraHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_camera_method_fov2d_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCameraMethodFOV2d0(Graphic3dCameraHandle handle, out double resultValue);
@@ -11410,6 +13009,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_camera_method_project_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCameraMethodProject0(Graphic3dCameraHandle handle, Point3dRaw thePnt, out Point3dRaw resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_camera_method_projection_state_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCameraMethodProjectionState0(Graphic3dCameraHandle handle, out ulong resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_camera_method_projection_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -11483,6 +13086,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCameraMethodUnProject0(Graphic3dCameraHandle handle, Point3dRaw thePnt, out Point3dRaw resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_camera_method_world_view_state_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCameraMethodWorldViewState0(Graphic3dCameraHandle handle, out ulong resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_camera_method_zfar_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCameraMethodZFar0(Graphic3dCameraHandle handle, out double resultValue);
@@ -11522,6 +13129,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dClipPlaneCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_clip_plane_method_capping_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dClipPlaneMethodCappingAspect0(Graphic3dClipPlaneHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_clip_plane_method_capping_custom_hatch_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dClipPlaneMethodCappingCustomHatch0(Graphic3dClipPlaneHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_clip_plane_method_capping_hatch_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dClipPlaneMethodCappingHatch0(Graphic3dClipPlaneHandle handle, out int resultValue);
@@ -11530,6 +13145,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dClipPlaneMethodCappingTexture0(Graphic3dClipPlaneHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_clip_plane_method_chain_next_plane_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dClipPlaneMethodChainNextPlane0(Graphic3dClipPlaneHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_clip_plane_method_chain_previous_plane_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dClipPlaneMethodChainPreviousPlane0(Graphic3dClipPlaneHandle handle, out nint handleValue);
@@ -11537,6 +13156,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_clip_plane_method_clone_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dClipPlaneMethodOcctClone0(Graphic3dClipPlaneHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_clip_plane_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dClipPlaneMethodDynamicType0(Graphic3dClipPlaneHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_clip_plane_method_is_capping_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -11553,6 +13176,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_clip_plane_method_is_on_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dClipPlaneMethodIsOn0(Graphic3dClipPlaneHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_clip_plane_method_mcount_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dClipPlaneMethodMCountAspect0(Graphic3dClipPlaneHandle handle, out uint resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_clip_plane_method_mcount_equation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dClipPlaneMethodMCountEquation0(Graphic3dClipPlaneHandle handle, out uint resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_clip_plane_method_nb_chain_next_planes_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -11645,6 +13276,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCubeMapMethodCurrentSide0(Graphic3dCubeMapHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cube_map_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCubeMapMethodDynamicType0(Graphic3dCubeMapHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cube_map_method_has_mipmaps_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCubeMapMethodHasMipmaps0(Graphic3dCubeMapHandle handle, out int resultValue);
@@ -11692,6 +13327,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCubeMapPackedMethodCompressedValue0(Graphic3dCubeMapPackedHandle handle, nint theSupported, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cube_map_packed_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCubeMapPackedMethodDynamicType0(Graphic3dCubeMapPackedHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cube_map_packed_method_value_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCubeMapPackedMethodValue0(Graphic3dCubeMapPackedHandle handle, nint theSupported, out nint handleValue);
@@ -11718,6 +13357,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cube_map_separate_method_compressed_value_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCubeMapSeparateMethodCompressedValue0(Graphic3dCubeMapSeparateHandle handle, nint theSupported, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cube_map_separate_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dCubeMapSeparateMethodDynamicType0(Graphic3dCubeMapSeparateHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_cube_map_separate_method_get_image_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -11750,6 +13393,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void Graphic3dCubeMapSeparateRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_data_structure_manager_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dDataStructureManagerMethodDynamicType0(Graphic3dDataStructureManagerHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_data_structure_manager_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dDataStructureManagerClone(Graphic3dDataStructureManagerHandle source, out nint handle);
@@ -11769,6 +13416,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void Graphic3dDataStructureManagerRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_flipper_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dFlipperMethodDynamicType0(Graphic3dFlipperHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_flipper_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dFlipperClone(Graphic3dFlipperHandle source, out nint handle);
@@ -11787,6 +13438,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_flipper_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void Graphic3dFlipperRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_frame_stats_method_counter_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dFrameStatsMethodCounterValue0(Graphic3dFrameStatsHandle handle, int theCounter, out ulong resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_frame_stats_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dFrameStatsMethodDynamicType0(Graphic3dFrameStatsHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_frame_stats_method_frame_duration_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -11859,6 +13518,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void Graphic3dFrameStatsRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_graphic_driver_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dGraphicDriverMethodDynamicType0(Graphic3dGraphicDriverHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_graphic_driver_method_get_display_connection_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dGraphicDriverMethodGetDisplayConnection0(Graphic3dGraphicDriverHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_graphic_driver_method_inquire_light_limit_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dGraphicDriverMethodInquireLightLimit0(Graphic3dGraphicDriverHandle handle, out int resultValue);
@@ -11898,6 +13565,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void Graphic3dGraphicDriverRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_graphic_driver_factory_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dGraphicDriverFactoryMethodDynamicType0(Graphic3dGraphicDriverFactoryHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_graphic_driver_factory_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dGraphicDriverFactoryClone(Graphic3dGraphicDriverFactoryHandle source, out nint handle);
@@ -11933,6 +13604,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dGroupMethodClear0(Graphic3dGroupHandle handle, int theUpdateStructureMgr);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_group_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dGroupMethodDynamicType0(Graphic3dGroupHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_group_method_flipper_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dGroupMethodFlipper0(Graphic3dGroupHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_group_method_is_closed_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dGroupMethodIsClosed0(Graphic3dGroupHandle handle, out int resultValue);
@@ -11965,6 +13644,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dGroupMethodStructure0(Graphic3dGroupHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_group_method_transform_persistence_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dGroupMethodTransformPersistence0(Graphic3dGroupHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_group_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dGroupClone(Graphic3dGroupHandle source, out nint handle);
@@ -11992,6 +13675,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dHatchStyleCreate1(nint thePattern, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_hatch_style_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dHatchStyleMethodDynamicType0(Graphic3dHatchStyleHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_hatch_style_method_hatch_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dHatchStyleMethodHatchType0(Graphic3dHatchStyleHandle handle, out int resultValue);
@@ -12018,6 +13705,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_index_buffer_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dIndexBufferCreate0(nint theAlloc, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_index_buffer_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dIndexBufferMethodDynamicType0(Graphic3dIndexBufferHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_index_buffer_method_index_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -12053,6 +13744,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_layer_method_consider_zoom_persistence_objects_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dLayerMethodconsiderZoomPersistenceObjects0(Graphic3dLayerHandle handle, int theViewId, nint theCamera, int theWindowWidth, int theWindowHeight, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_layer_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dLayerMethodDynamicType0(Graphic3dLayerHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_layer_method_invalidate_bounding_box_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -12121,6 +13816,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dLightSetMethodContains0(Graphic3dLightSetHandle handle, nint theLight, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_light_set_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dLightSetMethodDynamicType0(Graphic3dLightSetHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_light_set_method_extent_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dLightSetMethodExtent0(Graphic3dLightSetHandle handle, out int resultValue);
@@ -12153,9 +13852,21 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dLightSetMethodRemove0(Graphic3dLightSetHandle handle, nint theLight, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_light_set_method_revision_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dLightSetMethodRevision0(Graphic3dLightSetHandle handle, out ulong resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_light_set_method_update_revision_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dLightSetMethodUpdateRevision0(Graphic3dLightSetHandle handle, out ulong resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_light_set_method_upper_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dLightSetMethodUpper0(Graphic3dLightSetHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_light_set_method_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dLightSetMethodValue0(Graphic3dLightSetHandle handle, int theIndex, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_light_set_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -12180,6 +13891,18 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dMarkerImageCreate0(nint theImage, nint theImageAlpha, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_marker_image_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dMarkerImageMethodDynamicType0(Graphic3dMarkerImageHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_marker_image_method_get_image_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dMarkerImageMethodGetImage0(Graphic3dMarkerImageHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_marker_image_method_get_image_alpha_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dMarkerImageMethodGetImageAlpha0(Graphic3dMarkerImageHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_marker_image_method_is_colored_image_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dMarkerImageMethodIsColoredImage0(Graphic3dMarkerImageHandle handle, out int resultValue);
@@ -12202,6 +13925,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_marker_image_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void Graphic3dMarkerImageRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_media_texture_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dMediaTextureMethodDynamicType0(Graphic3dMediaTextureHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_media_texture_method_frame_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dMediaTextureMethodFrame0(Graphic3dMediaTextureHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_media_texture_method_generate_new_id_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -12242,6 +13973,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dMediaTextureSetMethodDuration0(Graphic3dMediaTextureSetHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_media_texture_set_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dMediaTextureSetMethodDynamicType0(Graphic3dMediaTextureSetHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_media_texture_set_method_is_full_range_yuv_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dMediaTextureSetMethodIsFullRangeYUV0(Graphic3dMediaTextureSetHandle handle, out int resultValue);
@@ -12253,6 +13988,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_media_texture_set_method_notify_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dMediaTextureSetMethodNotify0(Graphic3dMediaTextureSetHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_media_texture_set_method_player_context_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dMediaTextureSetMethodPlayerContext0(Graphic3dMediaTextureSetHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_media_texture_set_method_progress_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -12288,6 +14027,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_mutable_index_buffer_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dMutableIndexBufferCreate0(nint theAlloc, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_mutable_index_buffer_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dMutableIndexBufferMethodDynamicType0(Graphic3dMutableIndexBufferHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_mutable_index_buffer_method_invalidate_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -12328,9 +14071,17 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dPresentationAttributesCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_presentation_attributes_method_basic_fill_area_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dPresentationAttributesMethodBasicFillAreaAspect0(Graphic3dPresentationAttributesHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_presentation_attributes_method_display_mode_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dPresentationAttributesMethodDisplayMode0(Graphic3dPresentationAttributesHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_presentation_attributes_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dPresentationAttributesMethodDynamicType0(Graphic3dPresentationAttributesHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_presentation_attributes_method_method_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -12348,9 +14099,17 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dPresentationAttributesMethodSetMethod0(Graphic3dPresentationAttributesHandle handle, int theMethod);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_presentation_attributes_method_set_transparency_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dPresentationAttributesMethodSetTransparency0(Graphic3dPresentationAttributesHandle handle, float theTranspCoef);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_presentation_attributes_method_set_zlayer_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dPresentationAttributesMethodSetZLayer0(Graphic3dPresentationAttributesHandle handle, int theLayer);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_presentation_attributes_method_transparency_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dPresentationAttributesMethodTransparency0(Graphic3dPresentationAttributesHandle handle, out float resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_presentation_attributes_method_zlayer_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -12386,6 +14145,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_sequence_of_hclip_plane_method_clear_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dSequenceOfHClipPlaneMethodClear0(Graphic3dSequenceOfHClipPlaneHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_sequence_of_hclip_plane_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dSequenceOfHClipPlaneMethodDynamicType0(Graphic3dSequenceOfHClipPlaneHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_sequence_of_hclip_plane_method_first_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dSequenceOfHClipPlaneMethodFirst0(Graphic3dSequenceOfHClipPlaneHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_sequence_of_hclip_plane_method_is_empty_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -12426,6 +14193,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void Graphic3dSequenceOfHClipPlaneRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_shader_attribute_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dShaderAttributeMethodDynamicType0(Graphic3dShaderAttributeHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_shader_attribute_method_location_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dShaderAttributeMethodLocation0(Graphic3dShaderAttributeHandle handle, out int resultValue);
@@ -12452,6 +14223,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_shader_manager_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dShaderManagerCreate0(int theGapi, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_shader_manager_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dShaderManagerMethodDynamicType0(Graphic3dShaderManagerHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_shader_manager_method_enable_glsl_extension_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -12524,6 +14299,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void Graphic3dShaderManagerRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_shader_object_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dShaderObjectMethodDynamicType0(Graphic3dShaderObjectHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_shader_object_method_is_done_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dShaderObjectMethodIsDone0(Graphic3dShaderObjectHandle handle, out int resultValue);
@@ -12566,6 +14345,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_shader_program_method_detach_shader_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dShaderProgramMethodDetachShader0(Graphic3dShaderProgramHandle handle, nint theShader, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_shader_program_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dShaderProgramMethodDynamicType0(Graphic3dShaderProgramHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_shader_program_method_has_alpha_test_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -12662,6 +14445,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void Graphic3dShaderProgramRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_shader_variable_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dShaderVariableMethodDynamicType0(Graphic3dShaderVariableHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_shader_variable_method_is_done_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dShaderVariableMethodIsDone0(Graphic3dShaderVariableHandle handle, out int resultValue);
@@ -12697,6 +14484,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dStructureMethodClear0(Graphic3dStructureHandle handle, int withDestruction);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_structure_method_clip_planes_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dStructureMethodClipPlanes0(Graphic3dStructureHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_structure_method_compute_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dStructureMethodCompute0(Graphic3dStructureHandle handle);
@@ -12708,6 +14499,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_structure_method_connect_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dStructureMethodConnect0(Graphic3dStructureHandle handle, nint thePrs);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_structure_method_cstructure_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dStructureMethodCStructure0(Graphic3dStructureHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_structure_method_current_group_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -12724,6 +14519,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_structure_method_display_priority_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dStructureMethodDisplayPriority0(Graphic3dStructureHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_structure_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dStructureMethodDynamicType0(Graphic3dStructureHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_structure_method_erase_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -12752,6 +14551,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_structure_method_highlight_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dStructureMethodHighlight0(Graphic3dStructureHandle handle, nint theStyle, int theToUpdateMgr);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_structure_method_highlight_style_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dStructureMethodHighlightStyle0(Graphic3dStructureHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_structure_method_hlrvalidation_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -12885,6 +14688,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dStructureMethodSetZoomLimit0(Graphic3dStructureHandle handle, double limitInf, double limitSup);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_structure_method_transform_persistence_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dStructureMethodTransformPersistence0(Graphic3dStructureHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_structure_method_transformation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dStructureMethodTransformation0(Graphic3dStructureHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_structure_method_un_highlight_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dStructureMethodUnHighlight0(Graphic3dStructureHandle handle);
@@ -12928,6 +14739,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dStructureManagerMethodDisplay0(Graphic3dStructureManagerHandle handle, nint theStructure);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_structure_manager_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dStructureManagerMethodDynamicType0(Graphic3dStructureManagerHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_structure_manager_method_erase_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dStructureManagerMethodErase0(Graphic3dStructureManagerHandle handle);
@@ -12935,6 +14750,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_structure_manager_method_erase_1")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dStructureManagerMethodErase1(Graphic3dStructureManagerHandle handle, nint theStructure);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_structure_manager_method_graphic_driver_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dStructureManagerMethodGraphicDriver0(Graphic3dStructureManagerHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_structure_manager_method_highlight_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -12951,6 +14770,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_structure_manager_method_max_num_of_views_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dStructureManagerMethodMaxNumOfViews0(Graphic3dStructureManagerHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_structure_manager_method_object_affinity_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dStructureManagerMethodObjectAffinity0(Graphic3dStructureManagerHandle handle, nint theObject, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_structure_manager_method_re_compute_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13015,6 +14838,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void Graphic3dStructureManagerRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_text_create_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextCreate0(float theHeight, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_text_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextMethodDynamicType0(Graphic3dTextHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_text_method_has_own_anchor_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextMethodHasOwnAnchorPoint0(Graphic3dTextHandle handle, out int resultValue);
@@ -13023,13 +14854,25 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextMethodHasPlane0(Graphic3dTextHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_text_method_height_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextMethodHeight0(Graphic3dTextHandle handle, out float resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_text_method_horizontal_alignment_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextMethodHorizontalAlignment0(Graphic3dTextHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_text_method_position_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextMethodPosition0(Graphic3dTextHandle handle, out Point3dRaw resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_text_method_reset_orientation_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextMethodResetOrientation0(Graphic3dTextHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_text_method_set_height_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextMethodSetHeight0(Graphic3dTextHandle handle, float theHeight);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_text_method_set_horizontal_alignment_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13050,6 +14893,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_text_method_set_vertical_alignment_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextMethodSetVerticalAlignment0(Graphic3dTextHandle handle, int theJustification);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_text_method_text_formatter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextMethodTextFormatter0(Graphic3dTextHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_text_method_vertical_alignment_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13073,6 +14920,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_text_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void Graphic3dTextRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture1_d_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTexture1DMethodDynamicType0(Graphic3dTexture1DHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture1_d_method_name_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13105,6 +14956,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTexture1DmanualCreate1(nint thePixMap, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture1_dmanual_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTexture1DmanualMethodDynamicType0(Graphic3dTexture1DmanualHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture1_dmanual_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTexture1DmanualClone(Graphic3dTexture1DmanualHandle source, out nint handle);
@@ -13132,6 +14987,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTexture1DsegmentCreate1(nint thePixMap, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture1_dsegment_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTexture1DsegmentMethodDynamicType0(Graphic3dTexture1DsegmentHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture1_dsegment_method_set_segment_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTexture1DsegmentMethodSetSegment0(Graphic3dTexture1DsegmentHandle handle, float theX1, float theY1, float theZ1, float theX2, float theY2, float theZ2);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture1_dsegment_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTexture1DsegmentClone(Graphic3dTexture1DsegmentHandle source, out nint handle);
@@ -13158,6 +15021,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture2_d_create_1")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTexture2DCreate1(nint thePixMap, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture2_d_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTexture2DMethodDynamicType0(Graphic3dTexture2DHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture2_d_method_name_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13194,6 +15061,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTexture2DplaneCreate1(nint thePixMap, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture2_dplane_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTexture2DplaneMethodDynamicType0(Graphic3dTexture2DplaneHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture2_dplane_method_plane_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTexture2DplaneMethodPlane0(Graphic3dTexture2DplaneHandle handle, out int resultValue);
@@ -13201,6 +15072,26 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture2_dplane_method_set_plane_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTexture2DplaneMethodSetPlane0(Graphic3dTexture2DplaneHandle handle, int thePlane);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture2_dplane_method_set_rotation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTexture2DplaneMethodSetRotation0(Graphic3dTexture2DplaneHandle handle, float theVal);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture2_dplane_method_set_scale_s_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTexture2DplaneMethodSetScaleS0(Graphic3dTexture2DplaneHandle handle, float theVal);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture2_dplane_method_set_scale_t_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTexture2DplaneMethodSetScaleT0(Graphic3dTexture2DplaneHandle handle, float theVal);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture2_dplane_method_set_translate_s_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTexture2DplaneMethodSetTranslateS0(Graphic3dTexture2DplaneHandle handle, float theVal);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture2_dplane_method_set_translate_t_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTexture2DplaneMethodSetTranslateT0(Graphic3dTexture2DplaneHandle handle, float theVal);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture2_dplane_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13224,6 +15115,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture3_d_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTexture3DCreate0(nint thePixMap, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture3_d_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTexture3DMethodDynamicType0(Graphic3dTexture3DHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture3_d_method_get_image_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13259,6 +15154,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture_env_create_1")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextureEnvCreate1(nint thePixMap, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture_env_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextureEnvMethodDynamicType0(Graphic3dTextureEnvHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture_env_method_name_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13298,6 +15197,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture_map_method_disable_smooth_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextureMapMethodDisableSmooth0(Graphic3dTextureMapHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture_map_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextureMapMethodDynamicType0(Graphic3dTextureMapHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture_map_method_enable_modulate_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13358,6 +15261,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextureParamsMethodBaseLevel0(Graphic3dTextureParamsHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture_params_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextureParamsMethodDynamicType0(Graphic3dTextureParamsHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture_params_method_filter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextureParamsMethodFilter0(Graphic3dTextureParamsHandle handle, out int resultValue);
@@ -13377,6 +15284,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture_params_method_max_level_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextureParamsMethodMaxLevel0(Graphic3dTextureParamsHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture_params_method_rotation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextureParamsMethodRotation0(Graphic3dTextureParamsHandle handle, out float resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture_params_method_sampler_revision_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextureParamsMethodSamplerRevision0(Graphic3dTextureParamsHandle handle, out uint resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture_params_method_set_aniso_filter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13425,6 +15340,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void Graphic3dTextureParamsRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture_root_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextureRootMethodDynamicType0(Graphic3dTextureRootHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture_root_method_get_compressed_image_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextureRootMethodGetCompressedImage0(Graphic3dTextureRootHandle handle, nint theSupported, out nint handleValue);
@@ -13432,6 +15351,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture_root_method_get_image_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextureRootMethodGetImage0(Graphic3dTextureRootHandle handle, nint theSupported, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture_root_method_get_params_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextureRootMethodGetParams0(Graphic3dTextureRootHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture_root_method_has_mipmaps_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13448,6 +15371,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture_root_method_is_top_down_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextureRootMethodIsTopDown0(Graphic3dTextureRootHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture_root_method_revision_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextureRootMethodRevision0(Graphic3dTextureRootHandle handle, out ulong resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture_root_method_set_color_map_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13496,6 +15423,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextureSetCreate2(int theNbTextures, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture_set_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextureSetMethodDynamicType0(Graphic3dTextureSetHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture_set_method_first_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextureSetMethodFirst0(Graphic3dTextureSetHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture_set_method_is_empty_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextureSetMethodIsEmpty0(Graphic3dTextureSetHandle handle, out int resultValue);
@@ -13519,6 +15454,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture_set_method_upper_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextureSetMethodUpper0(Graphic3dTextureSetHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture_set_method_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTextureSetMethodValue0(Graphic3dTextureSetHandle handle, int theIndex, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_texture_set_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13554,6 +15493,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_transform_pers_method_corner2d_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTransformPersMethodCorner2d0(Graphic3dTransformPersHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_transform_pers_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTransformPersMethodDynamicType0(Graphic3dTransformPersHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_transform_pers_method_flags_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13618,6 +15561,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTransformPersScaledAboveCreate0(double theScale, Point3dRaw thePnt, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_transform_pers_scaled_above_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTransformPersScaledAboveMethodDynamicType0(Graphic3dTransformPersScaledAboveHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_transform_pers_scaled_above_method_persistent_scale_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dTransformPersScaledAboveMethodpersistentScale0(Graphic3dTransformPersScaledAboveHandle handle, nint theCamera, int theViewportWidth, int theViewportHeight, out double resultValue);
@@ -13644,6 +15591,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_view_affinity_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dViewAffinityCreate0(out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_view_affinity_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Graphic3dViewAffinityMethodDynamicType0(Graphic3dViewAffinityHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_view_affinity_method_is_visible_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13688,6 +15639,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ImageAlienPixMapMethodClear0(ImageAlienPixMapHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_alien_pix_map_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImageAlienPixMapMethodDynamicType0(ImageAlienPixMapHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_alien_pix_map_method_init_trash_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImageAlienPixMapMethodInitTrash0(ImageAlienPixMapHandle handle, int thePixelFormat, ulong theSizeX, ulong theSizeY, ulong theSizeRowBytes, out int resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_alien_pix_map_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ImageAlienPixMapClone(ImageAlienPixMapHandle source, out nint handle);
@@ -13719,6 +15678,18 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ImageCompressedPixMapMethodCompressedFormat0(ImageCompressedPixMapHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_compressed_pix_map_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImageCompressedPixMapMethodDynamicType0(ImageCompressedPixMapHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_compressed_pix_map_method_face_bytes_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImageCompressedPixMapMethodFaceBytes0(ImageCompressedPixMapHandle handle, out ulong resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_compressed_pix_map_method_face_data_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImageCompressedPixMapMethodFaceData0(ImageCompressedPixMapHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_compressed_pix_map_method_is_complete_mip_map_set_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ImageCompressedPixMapMethodIsCompleteMipMapSet0(ImageCompressedPixMapHandle handle, out int resultValue);
@@ -13742,6 +15713,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_compressed_pix_map_method_set_compressed_format_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ImageCompressedPixMapMethodSetCompressedFormat0(ImageCompressedPixMapHandle handle, int theFormat);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_compressed_pix_map_method_set_face_bytes_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImageCompressedPixMapMethodSetFaceBytes0(ImageCompressedPixMapHandle handle, ulong theSize);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_compressed_pix_map_method_set_face_data_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13794,6 +15769,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ImageDiffMethodCompare0(ImageDiffHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_diff_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImageDiffMethodDynamicType0(ImageDiffHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_diff_method_init_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ImageDiffMethodInit0(ImageDiffHandle handle, nint theImageRef, nint theImageNew, int theToBlackWhite, out int resultValue);
@@ -13837,9 +15816,25 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ImagePixMapMethodClear0(ImagePixMapHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_pix_map_method_depth_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImagePixMapMethodDepth0(ImagePixMapHandle handle, out ulong resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_pix_map_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImagePixMapMethodDynamicType0(ImagePixMapHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_pix_map_method_format_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ImagePixMapMethodFormat0(ImagePixMapHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_pix_map_method_height_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImagePixMapMethodHeight0(ImagePixMapHandle handle, out ulong resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_pix_map_method_init_zero_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImagePixMapMethodInitZero0(ImagePixMapHandle handle, int thePixelFormat, ulong theSizeX, ulong theSizeY, ulong theSizeRowBytes, byte theValue, out int resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_pix_map_method_is_empty_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13849,9 +15844,17 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ImagePixMapMethodIsTopDown0(ImagePixMapHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_pix_map_method_max_row_aligment_bytes_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImagePixMapMethodMaxRowAligmentBytes0(ImagePixMapHandle handle, out ulong resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_pix_map_method_ratio_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ImagePixMapMethodRatio0(ImagePixMapHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_pix_map_method_row_extra_bytes_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImagePixMapMethodRowExtraBytes0(ImagePixMapHandle handle, out ulong resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_pix_map_method_set_format_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13860,6 +15863,34 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_pix_map_method_set_top_down_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ImagePixMapMethodSetTopDown0(ImagePixMapHandle handle, int theIsTopDown);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_pix_map_method_size_bytes_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImagePixMapMethodSizeBytes0(ImagePixMapHandle handle, out ulong resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_pix_map_method_size_pixel_bytes_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImagePixMapMethodSizePixelBytes0(ImagePixMapHandle handle, out ulong resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_pix_map_method_size_row_bytes_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImagePixMapMethodSizeRowBytes0(ImagePixMapHandle handle, out ulong resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_pix_map_method_size_slice_bytes_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImagePixMapMethodSizeSliceBytes0(ImagePixMapHandle handle, out ulong resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_pix_map_method_size_z_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImagePixMapMethodSizeZ0(ImagePixMapHandle handle, out ulong resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_pix_map_method_top_down_inc_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImagePixMapMethodTopDownInc0(ImagePixMapHandle handle, out ulong resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_pix_map_method_width_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImagePixMapMethodWidth0(ImagePixMapHandle handle, out ulong resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_pix_map_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13883,6 +15914,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_pix_map_data_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ImagePixMapDataCreate0(out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_pix_map_data_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImagePixMapDataMethodDynamicType0(ImagePixMapDataHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_pix_map_data_method_max_row_aligment_bytes_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImagePixMapDataMethodMaxRowAligmentBytes0(ImagePixMapDataHandle handle, out ulong resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_pix_map_data_method_set_top_down_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13927,6 +15966,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ImageSupportedFormatsMethodClear0(ImageSupportedFormatsHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_supported_formats_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImageSupportedFormatsMethodDynamicType0(ImageSupportedFormatsHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_supported_formats_method_has_compressed_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ImageSupportedFormatsMethodHasCompressed0(ImageSupportedFormatsHandle handle, out int resultValue);
@@ -13957,6 +16000,22 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_supported_formats_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void ImageSupportedFormatsRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_texture_method_data_buffer_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImageTextureMethodDataBuffer0(ImageTextureHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_texture_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImageTextureMethodDynamicType0(ImageTextureHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_texture_method_file_length_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImageTextureMethodFileLength0(ImageTextureHandle handle, out long resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_texture_method_file_offset_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImageTextureMethodFileOffset0(ImageTextureHandle handle, out long resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_texture_method_read_compressed_image_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13993,6 +16052,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ImageVideoRecorderMethodClose0(ImageVideoRecorderHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_video_recorder_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImageVideoRecorderMethodDynamicType0(ImageVideoRecorderHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_video_recorder_method_frame_count_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ImageVideoRecorderMethodFrameCount0(ImageVideoRecorderHandle handle, out long resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_image_video_recorder_method_push_frame_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ImageVideoRecorderMethodPushFrame0(ImageVideoRecorderHandle handle, out int resultValue);
@@ -14023,6 +16090,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_buffer_pool_method_buffer_size_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MediaBufferPoolMethodBufferSize0(MediaBufferPoolHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_buffer_pool_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MediaBufferPoolMethodDynamicType0(MediaBufferPoolHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_buffer_pool_method_init_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -14062,6 +16133,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_codec_context_method_close_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MediaCodecContextMethodClose0(MediaCodecContextHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_codec_context_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MediaCodecContextMethodDynamicType0(MediaCodecContextHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_codec_context_method_flush_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -14118,6 +16193,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MediaFormatContextMethodDuration0(MediaFormatContextHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_format_context_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MediaFormatContextMethodDynamicType0(MediaFormatContextHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_format_context_method_nb_steams_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MediaFormatContextMethodNbSteams0(MediaFormatContextHandle handle, out uint resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_format_context_method_pts_start_base_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MediaFormatContextMethodPtsStartBase0(MediaFormatContextHandle handle, out double resultValue);
@@ -14129,6 +16212,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_format_context_method_seek_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MediaFormatContextMethodSeek0(MediaFormatContextHandle handle, double theSeekPts, int toSeekBack, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_format_context_method_seek_stream_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MediaFormatContextMethodSeekStream0(MediaFormatContextHandle handle, uint theStreamId, double theSeekPts, int toSeekBack, out int resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_format_context_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -14152,6 +16239,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_frame_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MediaFrameCreate0(out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_frame_method_best_effort_timestamp_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MediaFrameMethodBestEffortTimestamp0(MediaFrameHandle handle, out long resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_frame_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MediaFrameMethodDynamicType0(MediaFrameHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_frame_method_format_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -14177,6 +16272,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MediaFrameMethodLineSize0(MediaFrameHandle handle, int thePlaneId, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_frame_method_pixel_aspect_ratio_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MediaFrameMethodPixelAspectRatio0(MediaFrameHandle handle, out float resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_frame_method_pts_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MediaFrameMethodPts0(MediaFrameHandle handle, out double resultValue);
@@ -14184,6 +16283,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_frame_method_set_locked_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MediaFrameMethodSetLocked0(MediaFrameHandle handle, int theToLock);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_frame_method_set_pixel_aspect_ratio_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MediaFrameMethodSetPixelAspectRatio0(MediaFrameHandle handle, float theRatio);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_frame_method_set_pts_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -14224,13 +16327,29 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MediaPacketCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_packet_method_dts_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MediaPacketMethodDts0(MediaPacketHandle handle, out long resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_packet_method_duration_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MediaPacketMethodDuration0(MediaPacketHandle handle, out long resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_packet_method_duration_seconds_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MediaPacketMethodDurationSeconds0(MediaPacketHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_packet_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MediaPacketMethodDynamicType0(MediaPacketHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_packet_method_is_key_frame_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MediaPacketMethodIsKeyFrame0(MediaPacketHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_packet_method_pts_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MediaPacketMethodPts0(MediaPacketHandle handle, out long resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_packet_method_set_duration_seconds_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -14270,6 +16389,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_packet_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void MediaPacketRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_player_context_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MediaPlayerContextMethodDynamicType0(MediaPlayerContextHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_player_context_method_pause_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -14318,6 +16441,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MediaScalerMethodConvert0(MediaScalerHandle handle, nint theSrc, nint theRes, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_scaler_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MediaScalerMethodDynamicType0(MediaScalerHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_scaler_method_is_valid_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MediaScalerMethodIsValid0(MediaScalerHandle handle, out int resultValue);
@@ -14348,6 +16475,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_timer_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MediaTimerCreate0(out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_timer_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MediaTimerMethodDynamicType0(MediaTimerHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_media_timer_method_elapsed_time_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -14412,6 +16543,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSCommonSensitiveEntityMethodCenterOfGeometry0(MeshVSCommonSensitiveEntityHandle handle, out Point3dRaw resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_common_sensitive_entity_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSCommonSensitiveEntityMethodDynamicType0(MeshVSCommonSensitiveEntityHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_common_sensitive_entity_method_get_connected_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSCommonSensitiveEntityMethodGetConnected0(MeshVSCommonSensitiveEntityHandle handle, out nint handleValue);
@@ -14447,6 +16582,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void MeshVSCommonSensitiveEntityRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_data_source_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSDataSourceMethodDynamicType0(MeshVSDataSourceHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_data_source_method_is_advanced_selection_enabled_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSDataSourceMethodIsAdvancedSelectionEnabled0(MeshVSDataSourceHandle handle, out int resultValue);
@@ -14470,6 +16609,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void MeshVSDataSourceRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_data_source3_d_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSDataSource3DMethodDynamicType0(MeshVSDataSource3DHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_data_source3_d_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSDataSource3DClone(MeshVSDataSource3DHandle source, out nint handle);
@@ -14492,6 +16635,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_deformed_data_source_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSDeformedDataSourceCreate0(nint theNonDeformDS, double theMagnify, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_deformed_data_source_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSDeformedDataSourceMethodDynamicType0(MeshVSDeformedDataSourceHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_deformed_data_source_method_get_magnify_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -14531,6 +16678,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_drawer_method_assign_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSDrawerMethodAssign0(MeshVSDrawerHandle handle, nint aDrawer);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_drawer_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSDrawerMethodDynamicType0(MeshVSDrawerHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_drawer_method_remove_ascii_string_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -14603,6 +16754,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSDummySensitiveEntityMethodClear0(MeshVSDummySensitiveEntityHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_dummy_sensitive_entity_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSDummySensitiveEntityMethodDynamicType0(MeshVSDummySensitiveEntityHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_dummy_sensitive_entity_method_has_init_location_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSDummySensitiveEntityMethodHasInitLocation0(MeshVSDummySensitiveEntityHandle handle, out int resultValue);
@@ -14637,6 +16792,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_elemental_color_prs_builder_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSElementalColorPrsBuilderCreate0(nint parent, int flags, nint dS, int id, int priority, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_elemental_color_prs_builder_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSElementalColorPrsBuilderMethodDynamicType0(MeshVSElementalColorPrsBuilderHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_elemental_color_prs_builder_method_has_colors1_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -14685,6 +16844,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSMeshMethodComputeSelection0(MeshVSMeshHandle handle, nint theSel, int theSelMode);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_mesh_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSMeshMethodDynamicType0(MeshVSMeshHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_mesh_method_find_builder_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSMeshMethodFindBuilder0(MeshVSMeshHandle handle, nint typeString, out nint handleValue);
@@ -14713,6 +16876,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSMeshMethodGetFreeId0(MeshVSMeshHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_mesh_method_get_hidden_elems_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSMeshMethodGetHiddenElems0(MeshVSMeshHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_mesh_method_get_hidden_nodes_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSMeshMethodGetHiddenNodes0(MeshVSMeshHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_mesh_method_get_hilighter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSMeshMethodGetHilighter0(MeshVSMeshHandle handle, out nint handleValue);
@@ -14720,6 +16891,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_mesh_method_get_mesh_sel_method_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSMeshMethodGetMeshSelMethod0(MeshVSMeshHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_mesh_method_get_selectable_nodes_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSMeshMethodGetSelectableNodes0(MeshVSMeshHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_mesh_method_hilight_owner_with_color_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -14816,6 +16991,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSMeshEntityOwnerMethodClear0(MeshVSMeshEntityOwnerHandle handle, nint pM, int mode);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_mesh_entity_owner_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSMeshEntityOwnerMethodDynamicType0(MeshVSMeshEntityOwnerHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_mesh_entity_owner_method_hilight_with_color_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSMeshEntityOwnerMethodHilightWithColor0(MeshVSMeshEntityOwnerHandle handle, nint thePM, nint theStyle, int theMode);
@@ -14867,6 +17046,30 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSMeshOwnerMethodClearSelectedEntities0(MeshVSMeshOwnerHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_mesh_owner_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSMeshOwnerMethodDynamicType0(MeshVSMeshOwnerHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_mesh_owner_method_get_data_source_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSMeshOwnerMethodGetDataSource0(MeshVSMeshOwnerHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_mesh_owner_method_get_detected_elements_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSMeshOwnerMethodGetDetectedElements0(MeshVSMeshOwnerHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_mesh_owner_method_get_detected_nodes_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSMeshOwnerMethodGetDetectedNodes0(MeshVSMeshOwnerHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_mesh_owner_method_get_selected_elements_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSMeshOwnerMethodGetSelectedElements0(MeshVSMeshOwnerHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_mesh_owner_method_get_selected_nodes_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSMeshOwnerMethodGetSelectedNodes0(MeshVSMeshOwnerHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_mesh_owner_method_hilight_with_color_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSMeshOwnerMethodHilightWithColor0(MeshVSMeshOwnerHandle handle, nint thePM, nint theColor, int theMode);
@@ -14906,6 +17109,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSMeshPrsBuilderCreate0(nint parent, int flags, nint dS, int id, int priority, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_mesh_prs_builder_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSMeshPrsBuilderMethodDynamicType0(MeshVSMeshPrsBuilderHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_mesh_prs_builder_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSMeshPrsBuilderClone(MeshVSMeshPrsBuilderHandle source, out nint handle);
@@ -14928,6 +17135,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_nodal_color_prs_builder_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSNodalColorPrsBuilderCreate0(nint parent, int flags, nint dS, int id, int priority, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_nodal_color_prs_builder_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSNodalColorPrsBuilderMethodDynamicType0(MeshVSNodalColorPrsBuilderHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_nodal_color_prs_builder_method_get_texture_coord_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -14971,6 +17182,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_prs_builder_method_custom_sensitive_entity_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSPrsBuilderMethodCustomSensitiveEntity0(MeshVSPrsBuilderHandle handle, nint owner, int selectMode, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_prs_builder_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSPrsBuilderMethodDynamicType0(MeshVSPrsBuilderHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_prs_builder_method_get_data_source_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15039,6 +17254,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void MeshVSPrsBuilderRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_sensitive_face_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSSensitiveFaceMethodDynamicType0(MeshVSSensitiveFaceHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_sensitive_face_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSSensitiveFaceClone(MeshVSSensitiveFaceHandle source, out nint handle);
@@ -15065,6 +17284,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_sensitive_mesh_method_center_of_geometry_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSSensitiveMeshMethodCenterOfGeometry0(MeshVSSensitiveMeshHandle handle, out Point3dRaw resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_sensitive_mesh_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSSensitiveMeshMethodDynamicType0(MeshVSSensitiveMeshHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_sensitive_mesh_method_get_connected_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15101,6 +17324,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSSensitivePolyhedronMethodCenterOfGeometry0(MeshVSSensitivePolyhedronHandle handle, out Point3dRaw resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_sensitive_polyhedron_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSSensitivePolyhedronMethodDynamicType0(MeshVSSensitivePolyhedronHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_sensitive_polyhedron_method_get_connected_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSSensitivePolyhedronMethodGetConnected0(MeshVSSensitivePolyhedronHandle handle, out nint handleValue);
@@ -15136,6 +17363,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSSensitiveQuadMethodCenterOfGeometry0(MeshVSSensitiveQuadHandle handle, out Point3dRaw resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_sensitive_quad_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSSensitiveQuadMethodDynamicType0(MeshVSSensitiveQuadHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_sensitive_quad_method_get_connected_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSSensitiveQuadMethodGetConnected0(MeshVSSensitiveQuadHandle handle, out nint handleValue);
@@ -15167,6 +17398,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSSensitiveSegmentCreate0(nint theOwner, Point3dRaw theFirstPnt, Point3dRaw theLastPnt, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_sensitive_segment_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSSensitiveSegmentMethodDynamicType0(MeshVSSensitiveSegmentHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_sensitive_segment_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MeshVSSensitiveSegmentClone(MeshVSSensitiveSegmentHandle source, out nint handle);
@@ -15185,6 +17420,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_sensitive_segment_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void MeshVSSensitiveSegmentRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_text_prs_builder_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSTextPrsBuilderMethodDynamicType0(MeshVSTextPrsBuilderHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_text_prs_builder_method_has_texts_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15208,6 +17447,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_text_prs_builder_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void MeshVSTextPrsBuilderRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_vector_prs_builder_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MeshVSVectorPrsBuilderMethodDynamicType0(MeshVSVectorPrsBuilderHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mesh_vs_vector_prs_builder_method_has_vectors_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15247,6 +17490,22 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_buffer_method_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlBufferMethodCreate0(OpenGlBufferHandle handle, nint theGlCtx, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_buffer_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlBufferMethodDynamicType0(OpenGlBufferHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_buffer_method_estimated_data_size_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlBufferMethodEstimatedDataSize0(OpenGlBufferHandle handle, out ulong resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_buffer_method_get_components_nb_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlBufferMethodGetComponentsNb0(OpenGlBufferHandle handle, out uint resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_buffer_method_get_data_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlBufferMethodGetDataType0(OpenGlBufferHandle handle, out uint resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_buffer_method_get_elems_nb_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15291,6 +17550,18 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlCappingPlaneResourceCreate0(nint thePlane, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_capping_plane_resource_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlCappingPlaneResourceMethodDynamicType0(OpenGlCappingPlaneResourceHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_capping_plane_resource_method_estimated_data_size_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlCappingPlaneResourceMethodEstimatedDataSize0(OpenGlCappingPlaneResourceHandle handle, out ulong resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_capping_plane_resource_method_plane_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlCappingPlaneResourceMethodPlane0(OpenGlCappingPlaneResourceHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_capping_plane_resource_method_update_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlCappingPlaneResourceMethodUpdate0(OpenGlCappingPlaneResourceHandle handle, nint theContext, nint theObjAspect);
@@ -15318,6 +17589,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlCapsCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_caps_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlCapsMethodDynamicType0(OpenGlCapsHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_caps_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlCapsClone(OpenGlCapsHandle source, out nint handle);
@@ -15341,6 +17616,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextCreate0(nint theCaps, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_active_program_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodActiveProgram0(OpenGlContextHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_active_textures_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodActiveTextures0(OpenGlContextHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_allow_sample_alpha_to_coverage_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodAllowSampleAlphaToCoverage0(OpenGlContextHandle handle, out int resultValue);
@@ -15361,6 +17644,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodApplyWorldViewMatrix0(OpenGlContextHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_available_memory_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodAvailableMemory0(OpenGlContextHandle handle, out ulong resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_bind_default_vao_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodBindDefaultVao0(OpenGlContextHandle handle);
@@ -15377,9 +17664,17 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodBindTextures1(OpenGlContextHandle handle, nint theTextures, nint theProgram, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_camera_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodCamera0(OpenGlContextHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_color_mask_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodColorMask0(OpenGlContextHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_default_frame_buffer_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodDefaultFrameBuffer0(OpenGlContextHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_depth_peeling_depth_tex_unit_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15397,9 +17692,17 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodDrawBuffer0(OpenGlContextHandle handle, int theIndex, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodDynamicType0(OpenGlContextHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_enable_features_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodEnableFeatures0(OpenGlContextHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_exclude_message_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodExcludeMessage0(OpenGlContextHandle handle, uint theSource, uint theId, out int resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_face_culling_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15412,6 +17715,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_forced_release_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodforcedRelease0(OpenGlContextHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_frame_stats_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodFrameStats0(OpenGlContextHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_graphics_library_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15456,6 +17763,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_has_texture_multisampling_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodHasTextureMultisampling0(OpenGlContextHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_include_message_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodIncludeMessage0(OpenGlContextHandle handle, uint theSource, uint theId, out int resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_init_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15505,6 +17816,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodIsWindowSRGB0(OpenGlContextHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_line_feather_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodLineFeather0(OpenGlContextHandle handle, out float resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_line_width_scale_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodLineWidthScale0(OpenGlContextHandle handle, out float resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_make_current_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodMakeCurrent0(OpenGlContextHandle handle, out int resultValue);
@@ -15549,6 +17868,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodMaxTextureUnitsFFP0(OpenGlContextHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_messenger_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodMessenger0(OpenGlContextHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_pbrdiff_iblmap_shtex_unit_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodPBRDiffIBLMapSHTexUnit0(OpenGlContextHandle handle, out int resultValue);
@@ -15577,9 +17900,25 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodReleaseDelayed0(OpenGlContextHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_render_scale_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodRenderScale0(OpenGlContextHandle handle, out float resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_render_scale_inv_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodRenderScaleInv0(OpenGlContextHandle handle, out float resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_reset_errors_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodResetErrors0(OpenGlContextHandle handle, int theToPrintErrors, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_resolution_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodResolution0(OpenGlContextHandle handle, out uint resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_resolution_ratio_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodResolutionRatio0(OpenGlContextHandle handle, out float resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_sample_alpha_to_coverage_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15625,6 +17964,26 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodSetGlNormalizeEnabled0(OpenGlContextHandle handle, int isEnabled, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_set_line_feather_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodSetLineFeather0(OpenGlContextHandle handle, float theValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_set_line_stipple_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodSetLineStipple0(OpenGlContextHandle handle, float theFactor, ushort thePattern);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_set_line_stipple_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodSetLineStipple1(OpenGlContextHandle handle, ushort thePattern);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_set_line_width_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodSetLineWidth0(OpenGlContextHandle handle, float theWidth);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_set_point_size_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodSetPointSize0(OpenGlContextHandle handle, float theSize);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_set_point_sprite_origin_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodSetPointSpriteOrigin0(OpenGlContextHandle handle);
@@ -15649,6 +18008,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodSetReadDrawBuffer0(OpenGlContextHandle handle, int theBuffer);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_set_resolution_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodSetResolution0(OpenGlContextHandle handle, uint theResolution, float theRatio, float theScale);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_set_resolution_ratio_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodSetResolutionRatio0(OpenGlContextHandle handle, float theRatio);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_set_sample_alpha_to_coverage_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodSetSampleAlphaToCoverage0(OpenGlContextHandle handle, int theToEnable, out int resultValue);
@@ -15665,9 +18032,17 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodSetTextureMatrix0(OpenGlContextHandle handle, nint theParams, int theIsTopDown);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_set_type_of_line_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodSetTypeOfLine0(OpenGlContextHandle handle, int theType, float theFactor);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_set_window_srgb_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodSetWindowSRGB0(OpenGlContextHandle handle, int theIsSRgb);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_shader_manager_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodShaderManager0(OpenGlContextHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_shadow_map_tex_unit_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15680,6 +18055,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_sprite_texture_unit_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodSpriteTextureUnit0(OpenGlContextHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_supported_texture_formats_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlContextMethodSupportedTextureFormats0(OpenGlContextHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_context_method_swap_buffers_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15736,9 +18115,21 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlDepthPeelingMethodAttachDepthTexture0(OpenGlDepthPeelingHandle handle, nint theCtx, nint theDepthStencilTexture);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_depth_peeling_method_blend_back_fbo_oit_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlDepthPeelingMethodBlendBackFboOit0(OpenGlDepthPeelingHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_depth_peeling_method_detach_depth_texture_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlDepthPeelingMethodDetachDepthTexture0(OpenGlDepthPeelingHandle handle, nint theCtx);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_depth_peeling_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlDepthPeelingMethodDynamicType0(OpenGlDepthPeelingHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_depth_peeling_method_estimated_data_size_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlDepthPeelingMethodEstimatedDataSize0(OpenGlDepthPeelingHandle handle, out ulong resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_depth_peeling_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15759,6 +18150,26 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void OpenGlDepthPeelingRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_font_method_ascender_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlFontMethodAscender0(OpenGlFontHandle handle, out float resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_font_method_descender_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlFontMethodDescender0(OpenGlFontHandle handle, out float resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_font_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlFontMethodDynamicType0(OpenGlFontHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_font_method_estimated_data_size_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlFontMethodEstimatedDataSize0(OpenGlFontHandle handle, out ulong resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_font_method_ftfont_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlFontMethodFTFont0(OpenGlFontHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_font_method_init_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlFontMethodInit0(OpenGlFontHandle handle, nint theCtx, out int resultValue);
@@ -15766,6 +18177,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_font_method_is_valid_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlFontMethodIsValid0(OpenGlFontHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_font_method_texture_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlFontMethodTexture0(OpenGlFontHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_font_method_was_initialized_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15806,6 +18221,30 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlFrameBufferMethodChangeViewport0(OpenGlFrameBufferHandle handle, int theVPSizeX, int theVPSizeY);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_frame_buffer_method_color_render_buffer_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlFrameBufferMethodColorRenderBuffer0(OpenGlFrameBufferHandle handle, out uint resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_frame_buffer_method_color_texture_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlFrameBufferMethodColorTexture0(OpenGlFrameBufferHandle handle, int theColorBufferIndex, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_frame_buffer_method_depth_stencil_render_buffer_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlFrameBufferMethodDepthStencilRenderBuffer0(OpenGlFrameBufferHandle handle, out uint resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_frame_buffer_method_depth_stencil_texture_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlFrameBufferMethodDepthStencilTexture0(OpenGlFrameBufferHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_frame_buffer_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlFrameBufferMethodDynamicType0(OpenGlFrameBufferHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_frame_buffer_method_estimated_data_size_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlFrameBufferMethodEstimatedDataSize0(OpenGlFrameBufferHandle handle, out ulong resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_frame_buffer_method_get_init_vpsize_x_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlFrameBufferMethodGetInitVPSizeX0(OpenGlFrameBufferHandle handle, out int resultValue);
@@ -15845,6 +18284,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_frame_buffer_method_init_lazy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlFrameBufferMethodInitLazy0(OpenGlFrameBufferHandle handle, nint theGlCtx, int theViewportSizeX, int theViewportSizeY, int theColorFormat, int theDepthFormat, int theNbSamples, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_frame_buffer_method_init_with_rb_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlFrameBufferMethodInitWithRB0(OpenGlFrameBufferHandle handle, nint theGlCtx, int theSizeX, int theSizeY, int theColorFormat, int theDepthFormat, uint theColorRBufferFromWindow, out int resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_frame_buffer_method_init_wrapper_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15901,6 +18344,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlFrameStatsCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_frame_stats_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlFrameStatsMethodDynamicType0(OpenGlFrameStatsHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_frame_stats_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlFrameStatsClone(OpenGlFrameStatsHandle source, out nint handle);
@@ -15932,9 +18379,21 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlGraphicDriverMethodCreateView0(OpenGlGraphicDriverHandle handle, nint theMgr, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_graphic_driver_method_default_text_height_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlGraphicDriverMethodDefaultTextHeight0(OpenGlGraphicDriverHandle handle, out float resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_graphic_driver_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlGraphicDriverMethodDynamicType0(OpenGlGraphicDriverHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_graphic_driver_method_enable_vbo_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlGraphicDriverMethodEnableVBO0(OpenGlGraphicDriverHandle handle, int theToTurnOn);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_graphic_driver_method_get_next_primitive_array_uid_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlGraphicDriverMethodGetNextPrimitiveArrayUID0(OpenGlGraphicDriverHandle handle, out ulong resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_graphic_driver_method_init_context_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15999,6 +18458,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlGraphicDriverFactoryMethodCreateDriver0(OpenGlGraphicDriverFactoryHandle handle, nint theDisp, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_graphic_driver_factory_method_default_options_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlGraphicDriverFactoryMethodDefaultOptions0(OpenGlGraphicDriverFactoryHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_graphic_driver_factory_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlGraphicDriverFactoryMethodDynamicType0(OpenGlGraphicDriverFactoryHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_graphic_driver_factory_method_set_default_options_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlGraphicDriverFactoryMethodSetDefaultOptions0(OpenGlGraphicDriverFactoryHandle handle, nint theOptions);
@@ -16041,6 +18508,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_group_method_clear_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlGroupMethodClear0(OpenGlGroupHandle handle, int theToUpdateStructureMgr);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_group_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlGroupMethodDynamicType0(OpenGlGroupHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_group_method_has_persistence_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16097,6 +18568,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlIndexBufferCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_index_buffer_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlIndexBufferMethodDynamicType0(OpenGlIndexBufferHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_index_buffer_method_get_target_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlIndexBufferMethodGetTarget0(OpenGlIndexBufferHandle handle, out uint resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_index_buffer_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlIndexBufferClone(OpenGlIndexBufferHandle source, out nint handle);
@@ -16120,6 +18599,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlLineAttributesCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_line_attributes_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlLineAttributesMethodDynamicType0(OpenGlLineAttributesHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_line_attributes_method_estimated_data_size_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlLineAttributesMethodEstimatedDataSize0(OpenGlLineAttributesHandle handle, out ulong resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_line_attributes_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlLineAttributesClone(OpenGlLineAttributesHandle source, out nint handle);
@@ -16138,6 +18625,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_line_attributes_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void OpenGlLineAttributesRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_named_resource_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlNamedResourceMethodDynamicType0(OpenGlNamedResourceHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_named_resource_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16158,9 +18649,21 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void OpenGlNamedResourceRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_pbrenvironment_method_bake_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlPBREnvironmentMethodBake0(OpenGlPBREnvironmentHandle handle, nint theCtx, nint theEnvMap, int theZIsInverted, int theIsTopDown, ulong theDiffMapNbSamples, ulong theSpecMapNbSamples, float theProbability);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_pbrenvironment_method_bind_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlPBREnvironmentMethodBind0(OpenGlPBREnvironmentHandle handle, nint theCtx);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_pbrenvironment_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlPBREnvironmentMethodDynamicType0(OpenGlPBREnvironmentHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_pbrenvironment_method_estimated_data_size_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlPBREnvironmentMethodEstimatedDataSize0(OpenGlPBREnvironmentHandle handle, out ulong resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_pbrenvironment_method_is_complete_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16169,6 +18672,18 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_pbrenvironment_method_is_needed_to_be_bound_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlPBREnvironmentMethodIsNeededToBeBound0(OpenGlPBREnvironmentHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_pbrenvironment_method_pow2_size_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlPBREnvironmentMethodPow2Size0(OpenGlPBREnvironmentHandle handle, out uint resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_pbrenvironment_method_sizes_are_different_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlPBREnvironmentMethodSizesAreDifferent0(OpenGlPBREnvironmentHandle handle, uint thePow2Size, uint theSpecMapLevelsNumber, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_pbrenvironment_method_spec_map_levels_number_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlPBREnvironmentMethodSpecMapLevelsNumber0(OpenGlPBREnvironmentHandle handle, out uint resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_pbrenvironment_method_unbind_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16197,6 +18712,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlPointSpriteMethodDrawBitmap0(OpenGlPointSpriteHandle handle, nint theCtx);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_point_sprite_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlPointSpriteMethodDynamicType0(OpenGlPointSpriteHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_point_sprite_method_is_display_list_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlPointSpriteMethodIsDisplayList0(OpenGlPointSpriteHandle handle, out int resultValue);
@@ -16208,6 +18727,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_point_sprite_method_is_valid_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlPointSpriteMethodIsValid0(OpenGlPointSpriteHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_point_sprite_method_set_display_list_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlPointSpriteMethodSetDisplayList0(OpenGlPointSpriteHandle handle, nint theCtx, uint theBitmapList);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_point_sprite_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16227,6 +18750,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_point_sprite_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void OpenGlPointSpriteRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_resource_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlResourceMethodDynamicType0(OpenGlResourceHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_resource_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16263,6 +18790,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlSamplerMethodCreate0(OpenGlSamplerHandle handle, nint theContext, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_sampler_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlSamplerMethodDynamicType0(OpenGlSamplerHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_sampler_method_estimated_data_size_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlSamplerMethodEstimatedDataSize0(OpenGlSamplerHandle handle, out ulong resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_sampler_method_is_immutable_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlSamplerMethodIsImmutable0(OpenGlSamplerHandle handle, out int resultValue);
@@ -16271,9 +18806,21 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlSamplerMethodIsValid0(OpenGlSamplerHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_sampler_method_parameters_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlSamplerMethodParameters0(OpenGlSamplerHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_sampler_method_sampler_id_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlSamplerMethodSamplerID0(OpenGlSamplerHandle handle, out uint resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_sampler_method_set_immutable_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlSamplerMethodSetImmutable0(OpenGlSamplerHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_sampler_method_set_parameter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlSamplerMethodSetParameter0(OpenGlSamplerHandle handle, nint theCtx, uint theTarget, uint theParam, int theValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_sampler_method_set_parameters_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16314,6 +18861,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlSetOfProgramsCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_set_of_programs_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlSetOfProgramsMethodDynamicType0(OpenGlSetOfProgramsHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_set_of_programs_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlSetOfProgramsClone(OpenGlSetOfProgramsHandle source, out nint handle);
@@ -16340,6 +18891,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_set_of_shader_programs_create_1")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlSetOfShaderProgramsCreate1(nint thePrograms, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_set_of_shader_programs_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlSetOfShaderProgramsMethodDynamicType0(OpenGlSetOfShaderProgramsHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_set_of_shader_programs_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16412,6 +18967,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShaderManagerMethodBindStereoProgram0(OpenGlShaderManagerHandle handle, int theStereoMode, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_manager_method_bound_box_vert_buffer_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShaderManagerMethodBoundBoxVertBuffer0(OpenGlShaderManagerHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_manager_method_choose_face_shading_model_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShaderManagerMethodChooseFaceShadingModel0(OpenGlShaderManagerHandle handle, int theCustomModel, int theHasNodalNormals, out int resultValue);
@@ -16427,6 +18986,22 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_manager_method_clear_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShaderManagerMethodclear0(OpenGlShaderManagerHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_manager_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShaderManagerMethodDynamicType0(OpenGlShaderManagerHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_manager_method_get_bg_cube_map_program_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShaderManagerMethodGetBgCubeMapProgram0(OpenGlShaderManagerHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_manager_method_get_bg_skydome_program_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShaderManagerMethodGetBgSkydomeProgram0(OpenGlShaderManagerHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_manager_method_get_colored_quad_program_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShaderManagerMethodGetColoredQuadProgram0(OpenGlShaderManagerHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_manager_method_is_empty_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16516,6 +19091,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShaderManagerMethodSetShadingModel0(OpenGlShaderManagerHandle handle, int theModel);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_manager_method_set_weighed_oit_state_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShaderManagerMethodSetWeighedOitState0(OpenGlShaderManagerHandle handle, float theDepthFactor);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_manager_method_shading_model_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShaderManagerMethodShadingModel0(OpenGlShaderManagerHandle handle, out int resultValue);
@@ -16559,6 +19138,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void OpenGlShaderManagerRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_object_create_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShaderObjectCreate0(uint theType, out nint handle);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_object_method_compile_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShaderObjectMethodCompile0(OpenGlShaderObjectHandle handle, nint theCtx, out int resultValue);
@@ -16566,6 +19149,18 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_object_method_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShaderObjectMethodCreate0(OpenGlShaderObjectHandle handle, nint theCtx, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_object_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShaderObjectMethodDynamicType0(OpenGlShaderObjectHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_object_method_estimated_data_size_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShaderObjectMethodEstimatedDataSize0(OpenGlShaderObjectHandle handle, out ulong resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_object_method_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShaderObjectMethodType0(OpenGlShaderObjectHandle handle, out uint resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_object_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16601,6 +19196,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_program_method_detach_shader_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShaderProgramMethodDetachShader0(OpenGlShaderProgramHandle handle, nint theCtx, nint theShader, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_program_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShaderProgramMethodDynamicType0(OpenGlShaderProgramHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_program_method_estimated_data_size_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShaderProgramMethodEstimatedDataSize0(OpenGlShaderProgramHandle handle, out ulong resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_program_method_has_alpha_test_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16638,6 +19241,18 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShaderProgramMethodOitOutput0(OpenGlShaderProgramHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_program_method_program_id_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShaderProgramMethodProgramId0(OpenGlShaderProgramHandle handle, out uint resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_program_method_proxy_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShaderProgramMethodProxy0(OpenGlShaderProgramHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_program_method_set_attribute_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShaderProgramMethodSetAttribute0(OpenGlShaderProgramHandle handle, nint theCtx, int theIndex, float theValue, out int resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_program_method_set_sampler_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShaderProgramMethodSetSampler0(OpenGlShaderProgramHandle handle, nint theCtx, int theLocation, int theTextureUnit, out int resultValue);
@@ -16645,6 +19260,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_program_method_set_uniform_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShaderProgramMethodSetUniform0(OpenGlShaderProgramHandle handle, nint theCtx, int theLocation, int theValue, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_program_method_set_uniform_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShaderProgramMethodSetUniform1(OpenGlShaderProgramHandle handle, nint theCtx, int theLocation, float theValue, out int resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shader_program_method_texture_set_bits_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16669,13 +19288,45 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void OpenGlShaderProgramRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shadow_map_method_camera_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShadowMapMethodCamera0(OpenGlShadowMapHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shadow_map_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShadowMapMethodDynamicType0(OpenGlShadowMapHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shadow_map_method_estimated_data_size_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShadowMapMethodEstimatedDataSize0(OpenGlShadowMapHandle handle, out ulong resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shadow_map_method_frame_buffer_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShadowMapMethodFrameBuffer0(OpenGlShadowMapHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shadow_map_method_is_valid_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShadowMapMethodIsValid0(OpenGlShadowMapHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shadow_map_method_light_source_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShadowMapMethodLightSource0(OpenGlShadowMapHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shadow_map_method_set_light_source_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShadowMapMethodSetLightSource0(OpenGlShadowMapHandle handle, nint theLight);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shadow_map_method_set_shadow_map_bias_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShadowMapMethodSetShadowMapBias0(OpenGlShadowMapHandle handle, float theBias);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shadow_map_method_shadow_map_bias_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShadowMapMethodShadowMapBias0(OpenGlShadowMapHandle handle, out float resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shadow_map_method_texture_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShadowMapMethodTexture0(OpenGlShadowMapHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shadow_map_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16699,6 +19350,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shadow_map_array_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShadowMapArrayCreate0(out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shadow_map_array_method_estimated_data_size_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlShadowMapArrayMethodEstimatedDataSize0(OpenGlShadowMapArrayHandle handle, out ulong resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_shadow_map_array_method_is_valid_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16735,6 +19390,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlStructureMethodClear1(OpenGlStructureHandle handle, nint theGlCtx);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_structure_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlStructureMethodDynamicType0(OpenGlStructureHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_structure_method_graphic_highlight_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlStructureMethodGraphicHighlight0(OpenGlStructureHandle handle, nint theStyle);
@@ -16742,6 +19401,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_structure_method_graphic_unhighlight_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlStructureMethodGraphicUnhighlight0(OpenGlStructureHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_structure_method_modification_state_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlStructureMethodModificationState0(OpenGlStructureHandle handle, out ulong resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_structure_method_new_group_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16814,6 +19477,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlStructureShadowCreate0(nint theManager, nint theStructure, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_structure_shadow_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlStructureShadowMethodDynamicType0(OpenGlStructureShadowHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_structure_shadow_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlStructureShadowClone(OpenGlStructureShadowHandle source, out nint handle);
@@ -16845,9 +19512,25 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureMethodCreate0(OpenGlTextureHandle handle, nint theCtx, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureMethodDynamicType0(OpenGlTextureHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_method_estimated_data_size_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureMethodEstimatedDataSize0(OpenGlTextureHandle handle, out ulong resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_method_generate_mipmaps_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureMethodGenerateMipmaps0(OpenGlTextureHandle handle, nint theCtx, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_method_get_format_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureMethodGetFormat0(OpenGlTextureHandle handle, out uint resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_method_get_target_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureMethodGetTarget0(OpenGlTextureHandle handle, out uint resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_method_has_mipmaps_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16860,6 +19543,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_method_init2_dmultisample_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureMethodInit2DMultisample0(OpenGlTextureHandle handle, nint theCtx, int theNbSamples, int theTextFormat, int theSizeX, int theSizeY, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_method_init_cube_map_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureMethodInitCubeMap0(OpenGlTextureHandle handle, nint theCtx, nint theCubeMap, ulong theSize, int theFormat, int theToGenMipmap, int theIsColorMap, out int resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_method_init_sampler_object_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16889,9 +19576,21 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureMethodNbSamples0(OpenGlTextureHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_method_revision_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureMethodRevision0(OpenGlTextureHandle handle, out ulong resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_method_sampler_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureMethodSampler0(OpenGlTextureHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_method_set_alpha_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureMethodSetAlpha0(OpenGlTextureHandle handle, int theValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_method_set_revision_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureMethodSetRevision0(OpenGlTextureHandle handle, ulong theRevision);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_method_set_sampler_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16916,6 +19615,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_method_sized_format_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureMethodSizedFormat0(OpenGlTextureHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_method_texture_id_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureMethodTextureId0(OpenGlTextureHandle handle, out uint resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_method_unbind_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16956,9 +19659,25 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureBufferMethodCreate0(OpenGlTextureBufferHandle handle, nint theGlCtx, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_buffer_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureBufferMethodDynamicType0(OpenGlTextureBufferHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_buffer_method_get_target_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureBufferMethodGetTarget0(OpenGlTextureBufferHandle handle, out uint resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_buffer_method_is_valid_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureBufferMethodIsValid0(OpenGlTextureBufferHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_buffer_method_texture_format_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureBufferMethodTextureFormat0(OpenGlTextureBufferHandle handle, out uint resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_buffer_method_texture_id_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureBufferMethodTextureId0(OpenGlTextureBufferHandle handle, out uint resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_buffer_method_unbind_texture_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16995,6 +19714,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureSetCreate2(int theNbTextures, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_set_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureSetMethodDynamicType0(OpenGlTextureSetHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_set_method_first_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureSetMethodFirst0(OpenGlTextureSetHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_set_method_first_unit_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureSetMethodFirstUnit0(OpenGlTextureSetHandle handle, out int resultValue);
@@ -17019,6 +19746,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureSetMethodIsModulate0(OpenGlTextureSetHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_set_method_last_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureSetMethodLast0(OpenGlTextureSetHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_set_method_last_unit_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureSetMethodLastUnit0(OpenGlTextureSetHandle handle, out int resultValue);
@@ -17038,6 +19769,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_set_method_upper_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureSetMethodUpper0(OpenGlTextureSetHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_set_method_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlTextureSetMethodValue0(OpenGlTextureSetHandle handle, int theIndex, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_texture_set_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -17061,6 +19796,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_uniform_buffer_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlUniformBufferCreate0(out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_uniform_buffer_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlUniformBufferMethodDynamicType0(OpenGlUniformBufferHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_uniform_buffer_method_get_target_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlUniformBufferMethodGetTarget0(OpenGlUniformBufferHandle handle, out uint resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_uniform_buffer_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -17097,6 +19840,18 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlVertexBufferMethodBindPositionAttribute0(OpenGlVertexBufferHandle handle, nint theGlCtx);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_vertex_buffer_method_bind_vertex_attrib_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlVertexBufferMethodBindVertexAttrib0(OpenGlVertexBufferHandle handle, nint theGlCtx, uint theAttribLoc);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_vertex_buffer_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlVertexBufferMethodDynamicType0(OpenGlVertexBufferHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_vertex_buffer_method_get_target_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlVertexBufferMethodGetTarget0(OpenGlVertexBufferHandle handle, out uint resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_vertex_buffer_method_has_color_attribute_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlVertexBufferMethodHasColorAttribute0(OpenGlVertexBufferHandle handle, out int resultValue);
@@ -17112,6 +19867,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_vertex_buffer_method_unbind_attribute_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlVertexBufferMethodUnbindAttribute0(OpenGlVertexBufferHandle handle, nint theCtx, int theMode);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_vertex_buffer_method_unbind_vertex_attrib_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlVertexBufferMethodUnbindVertexAttrib0(OpenGlVertexBufferHandle handle, nint theGlCtx, uint theAttribLoc);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_vertex_buffer_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -17136,6 +19895,18 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlViewMethodBackgroundImageStyle0(OpenGlViewHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_view_method_clip_planes_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlViewMethodClipPlanes0(OpenGlViewHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_view_method_depth_peeling_fbos_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlViewMethodDepthPeelingFbos0(OpenGlViewHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_view_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlViewMethodDynamicType0(OpenGlViewHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_view_method_fbo_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlViewMethodFBO0(OpenGlViewHandle handle, out nint handleValue);
@@ -17147,6 +19918,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_view_method_fbocreate_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlViewMethodFBOCreate0(OpenGlViewHandle handle, int theWidth, int theHeight, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_view_method_gl_texture_env_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlViewMethodGlTextureEnv0(OpenGlViewHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_view_method_gl_window_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlViewMethodGlWindow0(OpenGlViewHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_view_method_graduated_trihedron_erase_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -17179,6 +19958,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_view_method_layer_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlViewMethodLayer0(OpenGlViewHandle handle, int theLayerId, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_view_method_lights_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlViewMethodLights0(OpenGlViewHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_view_method_redraw_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -17240,6 +20023,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlViewMethodSetToFlipOutput0(OpenGlViewHandle handle, int theFlip);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_view_method_spec_iblmap_levels_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlViewMethodSpecIBLMapLevels0(OpenGlViewHandle handle, out uint resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_view_method_to_flip_output_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlViewMethodToFlipOutput0(OpenGlViewHandle handle, out int resultValue);
@@ -17279,9 +20066,21 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlWindowMethodActivate0(OpenGlWindowHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_window_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlWindowMethodDynamicType0(OpenGlWindowHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_window_method_get_gl_context_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlWindowMethodGetGlContext0(OpenGlWindowHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_window_method_height_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlWindowMethodHeight0(OpenGlWindowHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_window_method_platform_window_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlWindowMethodPlatformWindow0(OpenGlWindowHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_window_method_resize_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -17290,6 +20089,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_window_method_set_swap_interval_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlWindowMethodSetSwapInterval0(OpenGlWindowHandle handle, int theToForceNoSync);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_window_method_size_window_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlWindowMethodSizeWindow0(OpenGlWindowHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_window_method_width_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -17318,13 +20121,29 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlWorkspaceMethodActivate0(OpenGlWorkspaceHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_workspace_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlWorkspaceMethodDynamicType0(OpenGlWorkspaceHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_workspace_method_environment_texture_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlWorkspaceMethodEnvironmentTexture0(OpenGlWorkspaceHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_workspace_method_fbocreate_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlWorkspaceMethodFBOCreate0(OpenGlWorkspaceHandle handle, int theWidth, int theHeight, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_workspace_method_get_gl_context_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlWorkspaceMethodGetGlContext0(OpenGlWorkspaceHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_workspace_method_height_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlWorkspaceMethodHeight0(OpenGlWorkspaceHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_workspace_method_highlight_style_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlWorkspaceMethodHighlightStyle0(OpenGlWorkspaceHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_workspace_method_nb_skipped_transparent_elements_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -17357,6 +20176,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_workspace_method_set_use_zbuffer_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus OpenGlWorkspaceMethodSetUseZBuffer0(OpenGlWorkspaceHandle handle, int theToUse, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_workspace_method_texture_set_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus OpenGlWorkspaceMethodTextureSet0(OpenGlWorkspaceHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_open_gl_workspace_method_to_allow_face_culling_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -17405,6 +20228,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dArrowAspectMethodAngle0(Prs3dArrowAspectHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_arrow_aspect_method_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dArrowAspectMethodAspect0(Prs3dArrowAspectHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_arrow_aspect_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dArrowAspectMethodDynamicType0(Prs3dArrowAspectHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_arrow_aspect_method_is_zoomable_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dArrowAspectMethodIsZoomable0(Prs3dArrowAspectHandle handle, out int resultValue);
@@ -17448,6 +20279,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void Prs3dArrowAspectRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_basic_aspect_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dBasicAspectMethodDynamicType0(Prs3dBasicAspectHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_basic_aspect_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dBasicAspectClone(Prs3dBasicAspectHandle source, out nint handle);
@@ -17471,6 +20306,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDatumAspectCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_datum_aspect_method_arrow_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDatumAspectMethodArrowAspect0(Prs3dDatumAspectHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_datum_aspect_method_attribute_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDatumAspectMethodAttribute0(Prs3dDatumAspectHandle handle, int theType, out double resultValue);
@@ -17490,6 +20329,18 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_datum_aspect_method_draw_datum_part_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDatumAspectMethodDrawDatumPart0(Prs3dDatumAspectHandle handle, int thePart, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_datum_aspect_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDatumAspectMethodDynamicType0(Prs3dDatumAspectHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_datum_aspect_method_line_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDatumAspectMethodLineAspect0(Prs3dDatumAspectHandle handle, int thePart, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_datum_aspect_method_point_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDatumAspectMethodPointAspect0(Prs3dDatumAspectHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_datum_aspect_method_set_arrow_aspect_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -17527,6 +20378,18 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDatumAspectMethodSetToDrawLabels0(Prs3dDatumAspectHandle handle, int theToDraw);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_datum_aspect_method_shading_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDatumAspectMethodShadingAspect0(Prs3dDatumAspectHandle handle, int thePart, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_datum_aspect_method_text_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDatumAspectMethodTextAspect0(Prs3dDatumAspectHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_datum_aspect_method_text_aspect_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDatumAspectMethodTextAspect1(Prs3dDatumAspectHandle handle, int thePart, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_datum_aspect_method_to_draw_arrows_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDatumAspectMethodToDrawArrows0(Prs3dDatumAspectHandle handle, out int resultValue);
@@ -17558,6 +20421,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDimensionAspectCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_dimension_aspect_method_arrow_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDimensionAspectMethodArrowAspect0(Prs3dDimensionAspectHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_dimension_aspect_method_arrow_orientation_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDimensionAspectMethodArrowOrientation0(Prs3dDimensionAspectHandle handle, out int resultValue);
@@ -17565,6 +20432,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_dimension_aspect_method_arrow_tail_size_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDimensionAspectMethodArrowTailSize0(Prs3dDimensionAspectHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_dimension_aspect_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDimensionAspectMethodDynamicType0(Prs3dDimensionAspectHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_dimension_aspect_method_extension_size_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -17585,6 +20456,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_dimension_aspect_method_is_units_displayed_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDimensionAspectMethodIsUnitsDisplayed0(Prs3dDimensionAspectHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_dimension_aspect_method_line_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDimensionAspectMethodLineAspect0(Prs3dDimensionAspectHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_dimension_aspect_method_make_arrows3d_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -17634,6 +20509,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDimensionAspectMethodSetTextVerticalPosition0(Prs3dDimensionAspectHandle handle, int thePosition);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_dimension_aspect_method_text_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDimensionAspectMethodTextAspect0(Prs3dDimensionAspectHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_dimension_aspect_method_text_horizontal_position_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDimensionAspectMethodTextHorizontalPosition0(Prs3dDimensionAspectHandle handle, out int resultValue);
@@ -17665,9 +20544,17 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_arrow_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodArrowAspect0(Prs3dDrawerHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_clear_local_attributes_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodClearLocalAttributes0(Prs3dDrawerHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_datum_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodDatumAspect0(Prs3dDrawerHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_deviation_angle_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -17676,6 +20563,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_deviation_coefficient_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodDeviationCoefficient0(Prs3dDrawerHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_dimension_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodDimensionAspect0(Prs3dDrawerHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_disable_draw_hidden_line_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -17689,9 +20580,17 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodDrawHiddenLine0(Prs3dDrawerHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodDynamicType0(Prs3dDrawerHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_enable_draw_hidden_line_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodEnableDrawHiddenLine0(Prs3dDrawerHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_face_boundary_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodFaceBoundaryAspect0(Prs3dDrawerHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_face_boundary_draw_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -17700,6 +20599,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_face_boundary_upper_continuity_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodFaceBoundaryUpperContinuity0(Prs3dDrawerHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_free_boundary_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodFreeBoundaryAspect0(Prs3dDrawerHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_free_boundary_draw_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -17873,6 +20776,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodHasOwnWireDraw0(Prs3dDrawerHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_hidden_line_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodHiddenLineAspect0(Prs3dDrawerHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_hlrangle_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodHLRAngle0(Prs3dDrawerHandle handle, out double resultValue);
@@ -17893,9 +20800,17 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodLineArrowDraw0(Prs3dDrawerHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_line_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodLineAspect0(Prs3dDrawerHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_link_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodLink0(Prs3dDrawerHandle handle, nint theDrawer);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_link_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodLink1(Prs3dDrawerHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_maximal_chordial_deviation_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -17904,6 +20819,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_maximal_parameter_value_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodMaximalParameterValue0(Prs3dDrawerHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_plane_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodPlaneAspect0(Prs3dDrawerHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_point_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodPointAspect0(Prs3dDrawerHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_previous_deviation_angle_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -17916,6 +20839,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_previous_hlrdeviation_angle_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodPreviousHLRDeviationAngle0(Prs3dDrawerHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_section_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodSectionAspect0(Prs3dDrawerHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_seen_line_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodSeenLineAspect0(Prs3dDrawerHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_set_arrow_aspect_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -18109,6 +21040,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodSetupOwnShadingAspect0(Prs3dDrawerHandle handle, nint theDefaults, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_text_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodTextAspect0(Prs3dDrawerHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_type_of_deflection_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodTypeOfDeflection0(Prs3dDrawerHandle handle, out int resultValue);
@@ -18116,6 +21051,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_type_of_hlr_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodTypeOfHLR0(Prs3dDrawerHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_uiso_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodUIsoAspect0(Prs3dDrawerHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_un_free_boundary_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodUnFreeBoundaryAspect0(Prs3dDrawerHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_un_free_boundary_draw_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -18201,9 +21144,21 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodUpdatePreviousDeviationCoefficient0(Prs3dDrawerHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_vector_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodVectorAspect0(Prs3dDrawerHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_vertex_draw_mode_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodVertexDrawMode0(Prs3dDrawerHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_viso_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodVIsoAspect0(Prs3dDrawerHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_wire_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dDrawerMethodWireAspect0(Prs3dDrawerHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_method_wire_draw_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -18227,6 +21182,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_drawer_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void Prs3dDrawerRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_iso_aspect_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dIsoAspectMethodDynamicType0(Prs3dIsoAspectHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_iso_aspect_method_number_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -18258,6 +21217,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_line_aspect_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dLineAspectCreate0(nint theAspect, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_line_aspect_method_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dLineAspectMethodAspect0(Prs3dLineAspectHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_line_aspect_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dLineAspectMethodDynamicType0(Prs3dLineAspectHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_line_aspect_method_set_aspect_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -18294,6 +21261,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dPlaneAspectCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_plane_aspect_method_arrow_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dPlaneAspectMethodArrowAspect0(Prs3dPlaneAspectHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_plane_aspect_method_arrows_angle_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dPlaneAspectMethodArrowsAngle0(Prs3dPlaneAspectHandle handle, out double resultValue);
@@ -18321,6 +21292,18 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_plane_aspect_method_display_iso_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dPlaneAspectMethodDisplayIso0(Prs3dPlaneAspectHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_plane_aspect_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dPlaneAspectMethodDynamicType0(Prs3dPlaneAspectHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_plane_aspect_method_edges_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dPlaneAspectMethodEdgesAspect0(Prs3dPlaneAspectHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_plane_aspect_method_iso_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dPlaneAspectMethodIsoAspect0(Prs3dPlaneAspectHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_plane_aspect_method_iso_distance_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -18393,6 +21376,18 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dPointAspectCreate0(nint theAspect, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_point_aspect_method_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dPointAspectMethodAspect0(Prs3dPointAspectHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_point_aspect_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dPointAspectMethodDynamicType0(Prs3dPointAspectHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_point_aspect_method_get_texture_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dPointAspectMethodGetTexture0(Prs3dPointAspectHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_point_aspect_method_set_aspect_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dPointAspectMethodSetAspect0(Prs3dPointAspectHandle handle, nint theAspect);
@@ -18432,6 +21427,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dPresentationShadowMethodCalculateBoundBox0(Prs3dPresentationShadowHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_presentation_shadow_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dPresentationShadowMethodDynamicType0(Prs3dPresentationShadowHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_presentation_shadow_method_parent_affinity_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dPresentationShadowMethodParentAffinity0(Prs3dPresentationShadowHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_presentation_shadow_method_parent_id_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dPresentationShadowMethodParentId0(Prs3dPresentationShadowHandle handle, out int resultValue);
@@ -18462,6 +21465,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_shading_aspect_create_1")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dShadingAspectCreate1(nint theAspect, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_shading_aspect_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dShadingAspectMethodDynamicType0(Prs3dShadingAspectHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_shading_aspect_method_set_aspect_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -18513,6 +21520,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_text_aspect_method_angle_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Prs3dTextAspectMethodAngle0(Prs3dTextAspectHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_text_aspect_method_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dTextAspectMethodAspect0(Prs3dTextAspectHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_text_aspect_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Prs3dTextAspectMethodDynamicType0(Prs3dTextAspectHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_text_aspect_method_height_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -18577,6 +21592,18 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsDimAngleDimensionCreate0(Point3dRaw theFirstPoint, Point3dRaw theSecondPoint, Point3dRaw theThirdPoint, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_angle_dimension_method_center_point_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimAngleDimensionMethodCenterPoint0(PrsDimAngleDimensionHandle handle, out Point3dRaw resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_angle_dimension_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimAngleDimensionMethodDynamicType0(PrsDimAngleDimensionHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_angle_dimension_method_first_point_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimAngleDimensionMethodFirstPoint0(PrsDimAngleDimensionHandle handle, out Point3dRaw resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_angle_dimension_method_get_arrows_visibility_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsDimAngleDimensionMethodGetArrowsVisibility0(PrsDimAngleDimensionHandle handle, out int resultValue);
@@ -18588,6 +21615,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_angle_dimension_method_get_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsDimAngleDimensionMethodOcctGetType0(PrsDimAngleDimensionHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_angle_dimension_method_second_point_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimAngleDimensionMethodSecondPoint0(PrsDimAngleDimensionHandle handle, out Point3dRaw resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_angle_dimension_method_set_arrows_visibility_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -18624,6 +21655,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void PrsDimAngleDimensionRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_chamf2d_dimension_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimChamf2dDimensionMethodDynamicType0(PrsDimChamf2dDimensionHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_chamf2d_dimension_method_is_movable_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsDimChamf2dDimensionMethodIsMovable0(PrsDimChamf2dDimensionHandle handle, out int resultValue);
@@ -18650,6 +21685,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_chamf2d_dimension_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void PrsDimChamf2dDimensionRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_chamf3d_dimension_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimChamf3dDimensionMethodDynamicType0(PrsDimChamf3dDimensionHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_chamf3d_dimension_method_is_movable_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -18678,6 +21717,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void PrsDimChamf3dDimensionRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_concentric_relation_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimConcentricRelationMethodDynamicType0(PrsDimConcentricRelationHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_concentric_relation_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsDimConcentricRelationClone(PrsDimConcentricRelationHandle source, out nint handle);
@@ -18700,6 +21743,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_diameter_dimension_method_anchor_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsDimDiameterDimensionMethodAnchorPoint0(PrsDimDiameterDimensionHandle handle, out Point3dRaw resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_diameter_dimension_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimDiameterDimensionMethodDynamicType0(PrsDimDiameterDimensionHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_diameter_dimension_method_get_text_position_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -18739,6 +21786,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_dimension_method_display_special_symbol_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsDimDimensionMethodDisplaySpecialSymbol0(PrsDimDimensionHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_dimension_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimDimensionMethodDynamicType0(PrsDimDimensionHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_dimension_method_get_flyout_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -18835,6 +21886,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsDimDimensionOwnerCreate0(nint theSelObject, int theSelMode, int thePriority, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_dimension_owner_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimDimensionOwnerMethodDynamicType0(PrsDimDimensionOwnerHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_dimension_owner_method_hilight_with_color_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsDimDimensionOwnerMethodHilightWithColor0(PrsDimDimensionOwnerHandle handle, nint thePM, nint theStyle, int theMode);
@@ -18874,6 +21929,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsDimEllipseRadiusDimensionMethodComputeGeometry0(PrsDimEllipseRadiusDimensionHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_ellipse_radius_dimension_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimEllipseRadiusDimensionMethodDynamicType0(PrsDimEllipseRadiusDimensionHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_ellipse_radius_dimension_method_is_movable_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsDimEllipseRadiusDimensionMethodIsMovable0(PrsDimEllipseRadiusDimensionHandle handle, out int resultValue);
@@ -18901,6 +21960,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void PrsDimEllipseRadiusDimensionRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_equal_distance_relation_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimEqualDistanceRelationMethodDynamicType0(PrsDimEqualDistanceRelationHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_equal_distance_relation_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsDimEqualDistanceRelationClone(PrsDimEqualDistanceRelationHandle source, out nint handle);
@@ -18920,6 +21983,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void PrsDimEqualDistanceRelationRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_equal_radius_relation_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimEqualRadiusRelationMethodDynamicType0(PrsDimEqualRadiusRelationHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_equal_radius_relation_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsDimEqualRadiusRelationClone(PrsDimEqualRadiusRelationHandle source, out nint handle);
@@ -18938,6 +22005,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_equal_radius_relation_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void PrsDimEqualRadiusRelationRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_fix_relation_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimFixRelationMethodDynamicType0(PrsDimFixRelationHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_fix_relation_method_is_movable_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -18970,6 +22041,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsDimIdenticRelationMethodClearUsers0(PrsDimIdenticRelationHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_identic_relation_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimIdenticRelationMethodDynamicType0(PrsDimIdenticRelationHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_identic_relation_method_has_users_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsDimIdenticRelationMethodHasUsers0(PrsDimIdenticRelationHandle handle, out int resultValue);
@@ -19001,9 +22076,21 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsDimLengthDimensionCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_length_dimension_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimLengthDimensionMethodDynamicType0(PrsDimLengthDimensionHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_length_dimension_method_first_point_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimLengthDimensionMethodFirstPoint0(PrsDimLengthDimensionHandle handle, out Point3dRaw resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_length_dimension_method_get_text_position_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsDimLengthDimensionMethodGetTextPosition0(PrsDimLengthDimensionHandle handle, out Point3dRaw resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_length_dimension_method_second_point_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimLengthDimensionMethodSecondPoint0(PrsDimLengthDimensionHandle handle, out Point3dRaw resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_length_dimension_method_set_text_position_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -19028,6 +22115,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void PrsDimLengthDimensionRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_max_radius_dimension_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimMaxRadiusDimensionMethodDynamicType0(PrsDimMaxRadiusDimensionHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_max_radius_dimension_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsDimMaxRadiusDimensionClone(PrsDimMaxRadiusDimensionHandle source, out nint handle);
@@ -19046,6 +22137,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_max_radius_dimension_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void PrsDimMaxRadiusDimensionRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_mid_point_relation_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimMidPointRelationMethodDynamicType0(PrsDimMidPointRelationHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_mid_point_relation_method_is_movable_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -19070,6 +22165,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void PrsDimMidPointRelationRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_min_radius_dimension_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimMinRadiusDimensionMethodDynamicType0(PrsDimMinRadiusDimensionHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_min_radius_dimension_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsDimMinRadiusDimensionClone(PrsDimMinRadiusDimensionHandle source, out nint handle);
@@ -19088,6 +22187,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_min_radius_dimension_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void PrsDimMinRadiusDimensionRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_offset_dimension_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimOffsetDimensionMethodDynamicType0(PrsDimOffsetDimensionHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_offset_dimension_method_is_movable_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -19116,6 +22219,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void PrsDimOffsetDimensionRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_parallel_relation_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimParallelRelationMethodDynamicType0(PrsDimParallelRelationHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_parallel_relation_method_is_movable_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsDimParallelRelationMethodIsMovable0(PrsDimParallelRelationHandle handle, out int resultValue);
@@ -19139,6 +22246,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void PrsDimParallelRelationRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_perpendicular_relation_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimPerpendicularRelationMethodDynamicType0(PrsDimPerpendicularRelationHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_perpendicular_relation_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsDimPerpendicularRelationClone(PrsDimPerpendicularRelationHandle source, out nint handle);
@@ -19157,6 +22268,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_perpendicular_relation_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void PrsDimPerpendicularRelationRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_radius_dimension_method_anchor_point_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimRadiusDimensionMethodAnchorPoint0(PrsDimRadiusDimensionHandle handle, out Point3dRaw resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_radius_dimension_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimRadiusDimensionMethodDynamicType0(PrsDimRadiusDimensionHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_radius_dimension_method_get_text_position_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -19197,6 +22316,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsDimRelationMethodAutomaticPosition0(PrsDimRelationHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_relation_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimRelationMethodDynamicType0(PrsDimRelationHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_relation_method_ext_shape_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsDimRelationMethodExtShape0(PrsDimRelationHandle handle, out int resultValue);
@@ -19208,6 +22331,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_relation_method_kind_of_dimension_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsDimRelationMethodKindOfDimension0(PrsDimRelationHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_relation_method_plane_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimRelationMethodPlane0(PrsDimRelationHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_relation_method_position_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimRelationMethodPosition0(PrsDimRelationHandle handle, out Point3dRaw resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_relation_method_set_arrow_size_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -19280,6 +22411,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void PrsDimRelationRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_symmetric_relation_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimSymmetricRelationMethodDynamicType0(PrsDimSymmetricRelationHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_symmetric_relation_method_is_movable_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsDimSymmetricRelationMethodIsMovable0(PrsDimSymmetricRelationHandle handle, out int resultValue);
@@ -19302,6 +22437,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_symmetric_relation_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void PrsDimSymmetricRelationRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_tangent_relation_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsDimTangentRelationMethodDynamicType0(PrsDimTangentRelationHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_tangent_relation_method_extern_ref_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -19346,6 +22485,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentableObjectMethodAddClipPlane0(PrsMgrPresentableObjectHandle handle, nint thePlane);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentable_object_method_clip_planes_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentableObjectMethodClipPlanes0(PrsMgrPresentableObjectHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentable_object_method_combined_parent_transformation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentableObjectMethodCombinedParentTransformation0(PrsMgrPresentableObjectHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentable_object_method_current_facing_model_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentableObjectMethodCurrentFacingModel0(PrsMgrPresentableObjectHandle handle, out int resultValue);
@@ -19361,6 +22508,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentable_object_method_display_status_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentableObjectMethodDisplayStatus0(PrsMgrPresentableObjectHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentable_object_method_dynamic_hilight_attributes_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentableObjectMethodDynamicHilightAttributes0(PrsMgrPresentableObjectHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentable_object_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentableObjectMethodDynamicType0(PrsMgrPresentableObjectHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentable_object_method_has_color_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -19394,6 +22549,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentableObjectMethodHasWidth0(PrsMgrPresentableObjectHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentable_object_method_hilight_attributes_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentableObjectMethodHilightAttributes0(PrsMgrPresentableObjectHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentable_object_method_hilight_mode_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentableObjectMethodHilightMode0(PrsMgrPresentableObjectHandle handle, out int resultValue);
@@ -19409,6 +22568,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentable_object_method_is_transparent_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentableObjectMethodIsTransparent0(PrsMgrPresentableObjectHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentable_object_method_local_transformation_geom_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentableObjectMethodLocalTransformationGeom0(PrsMgrPresentableObjectHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentable_object_method_material_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -19478,6 +22641,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentableObjectMethodSetMutable0(PrsMgrPresentableObjectHandle handle, int theIsMutable);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentable_object_method_set_polygon_offsets_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentableObjectMethodSetPolygonOffsets0(PrsMgrPresentableObjectHandle handle, int aMode, float aFactor, float aUnits);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentable_object_method_set_propagate_visual_state_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentableObjectMethodSetPropagateVisualState0(PrsMgrPresentableObjectHandle handle, int theFlag);
@@ -19521,6 +22688,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentable_object_method_to_propagate_visual_state_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentableObjectMethodToPropagateVisualState0(PrsMgrPresentableObjectHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentable_object_method_transform_persistence_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentableObjectMethodTransformPersistence0(PrsMgrPresentableObjectHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentable_object_method_transformation_geom_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentableObjectMethodTransformationGeom0(PrsMgrPresentableObjectHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentable_object_method_transparency_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -19566,6 +22741,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentableObjectMethodUpdateTransformation0(PrsMgrPresentableObjectHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentable_object_method_view_affinity_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentableObjectMethodViewAffinity0(PrsMgrPresentableObjectHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentable_object_method_width_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentableObjectMethodWidth0(PrsMgrPresentableObjectHandle handle, out double resultValue);
@@ -19605,6 +22784,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentationMethodDisplay0(PrsMgrPresentationHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentation_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentationMethodDynamicType0(PrsMgrPresentationHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentation_method_erase_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentationMethodErase0(PrsMgrPresentationHandle handle);
@@ -19624,6 +22807,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentation_method_must_be_updated_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentationMethodMustBeUpdated0(PrsMgrPresentationHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentation_method_presentation_manager_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentationMethodPresentationManager0(PrsMgrPresentationHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentation_method_set_update_status_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -19684,6 +22871,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentationManagerMethodDisplayPriority0(PrsMgrPresentationManagerHandle handle, nint thePrsObject, int theMode, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentation_manager_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentationManagerMethodDynamicType0(PrsMgrPresentationManagerHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentation_manager_method_end_immediate_draw_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentationManagerMethodEndImmediateDraw0(PrsMgrPresentationManagerHandle handle, nint theViewer);
@@ -19732,6 +22923,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentationManagerMethodSetZLayer0(PrsMgrPresentationManagerHandle handle, nint thePrsObject, int theLayerId);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentation_manager_method_structure_manager_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentationManagerMethodStructureManager0(PrsMgrPresentationManagerHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_mgr_presentation_manager_method_transform_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PrsMgrPresentationManagerMethodTransform0(PrsMgrPresentationManagerHandle handle, nint thePrsObject, nint theTransformation, int theMode);
@@ -19770,6 +22965,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_bvhindex_buffer_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DBVHIndexBufferCreate0(nint theAlloc, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_bvhindex_buffer_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DBVHIndexBufferMethodDynamicType0(Select3DBVHIndexBufferHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_bvhindex_buffer_method_has_patches_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -19822,6 +23021,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DInteriorSensitivePointSetMethodCenterOfGeometry0(Select3DInteriorSensitivePointSetHandle handle, out Point3dRaw resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_interior_sensitive_point_set_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DInteriorSensitivePointSetMethodDynamicType0(Select3DInteriorSensitivePointSetHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_interior_sensitive_point_set_method_nb_sub_elements_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DInteriorSensitivePointSetMethodNbSubElements0(Select3DInteriorSensitivePointSetHandle handle, out int resultValue);
@@ -19861,6 +23064,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveBoxMethodCenterOfGeometry0(Select3DSensitiveBoxHandle handle, out Point3dRaw resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_box_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveBoxMethodDynamicType0(Select3DSensitiveBoxHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_box_method_get_connected_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveBoxMethodGetConnected0(Select3DSensitiveBoxHandle handle, out nint handleValue);
@@ -19895,6 +23102,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_circle_method_center_of_geometry_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveCircleMethodCenterOfGeometry0(Select3DSensitiveCircleHandle handle, out Point3dRaw resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_circle_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveCircleMethodDynamicType0(Select3DSensitiveCircleHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_circle_method_get_connected_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -19935,6 +23146,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveCurveCreate0(nint theOwnerId, nint theCurve, int theNbPnts, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveCurveMethodDynamicType0(Select3DSensitiveCurveHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_curve_method_get_connected_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveCurveMethodGetConnected0(Select3DSensitiveCurveHandle handle, out nint handleValue);
@@ -19965,6 +23180,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_cylinder_method_center_of_geometry_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveCylinderMethodCenterOfGeometry0(Select3DSensitiveCylinderHandle handle, out Point3dRaw resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_cylinder_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveCylinderMethodDynamicType0(Select3DSensitiveCylinderHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_cylinder_method_get_connected_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -20017,6 +23236,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveEntityMethodClear0(Select3DSensitiveEntityHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_entity_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveEntityMethodDynamicType0(Select3DSensitiveEntityHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_entity_method_flipper_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveEntityMethodFlipper0(Select3DSensitiveEntityHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_entity_method_get_connected_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveEntityMethodGetConnected0(Select3DSensitiveEntityHandle handle, out nint handleValue);
@@ -20024,6 +23251,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_entity_method_has_init_location_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveEntityMethodHasInitLocation0(Select3DSensitiveEntityHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_entity_method_owner_id_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveEntityMethodOwnerId0(Select3DSensitiveEntityHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_entity_method_sensitivity_factor_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -20044,6 +23275,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_entity_method_to_build_bvh_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveEntityMethodToBuildBVH0(Select3DSensitiveEntityHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_entity_method_transform_persistence_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveEntityMethodTransformPersistence0(Select3DSensitiveEntityHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_entity_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -20071,6 +23306,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_face_method_center_of_geometry_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveFaceMethodCenterOfGeometry0(Select3DSensitiveFaceHandle handle, out Point3dRaw resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_face_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveFaceMethodDynamicType0(Select3DSensitiveFaceHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_face_method_get_connected_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -20123,6 +23362,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveGroupMethodClear0(Select3DSensitiveGroupHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_group_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveGroupMethodDynamicType0(Select3DSensitiveGroupHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_group_method_get_connected_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveGroupMethodGetConnected0(Select3DSensitiveGroupHandle handle, out nint handleValue);
@@ -20167,6 +23410,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveGroupMethodSize0(Select3DSensitiveGroupHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_group_method_sub_entity_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveGroupMethodSubEntity0(Select3DSensitiveGroupHandle handle, int theIndex, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_group_method_swap_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveGroupMethodSwap0(Select3DSensitiveGroupHandle handle, int theIdx1, int theIdx2);
@@ -20202,6 +23449,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitivePointMethodCenterOfGeometry0(Select3DSensitivePointHandle handle, out Point3dRaw resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_point_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitivePointMethodDynamicType0(Select3DSensitivePointHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_point_method_get_connected_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitivePointMethodGetConnected0(Select3DSensitivePointHandle handle, out nint handleValue);
@@ -20209,6 +23460,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_point_method_nb_sub_elements_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitivePointMethodNbSubElements0(Select3DSensitivePointHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_point_method_point_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitivePointMethodPoint0(Select3DSensitivePointHandle handle, out Point3dRaw resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_point_method_to_build_bvh_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -20244,6 +23499,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_poly_method_center_of_geometry_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitivePolyMethodCenterOfGeometry0(Select3DSensitivePolyHandle handle, out Point3dRaw resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_poly_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitivePolyMethodDynamicType0(Select3DSensitivePolyHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_poly_method_get_point3d_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -20296,6 +23555,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitivePrimitiveArrayMethodCenterOfGeometry0(Select3DSensitivePrimitiveArrayHandle handle, out Point3dRaw resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_primitive_array_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitivePrimitiveArrayMethodDynamicType0(Select3DSensitivePrimitiveArrayHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_primitive_array_method_get_connected_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitivePrimitiveArrayMethodGetConnected0(Select3DSensitivePrimitiveArrayHandle handle, out nint handleValue);
@@ -20316,13 +23579,25 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitivePrimitiveArrayMethodLastDetectedElement0(Select3DSensitivePrimitiveArrayHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_primitive_array_method_last_detected_element_map_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitivePrimitiveArrayMethodLastDetectedElementMap0(Select3DSensitivePrimitiveArrayHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_primitive_array_method_last_detected_node_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitivePrimitiveArrayMethodLastDetectedNode0(Select3DSensitivePrimitiveArrayHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_primitive_array_method_last_detected_node_map_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitivePrimitiveArrayMethodLastDetectedNodeMap0(Select3DSensitivePrimitiveArrayHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_primitive_array_method_nb_sub_elements_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitivePrimitiveArrayMethodNbSubElements0(Select3DSensitivePrimitiveArrayHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_primitive_array_method_patch_distance_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitivePrimitiveArrayMethodPatchDistance0(Select3DSensitivePrimitiveArrayHandle handle, out float resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_primitive_array_method_patch_size_max_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -20355,6 +23630,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_primitive_array_method_set_min_max_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitivePrimitiveArrayMethodSetMinMax0(Select3DSensitivePrimitiveArrayHandle handle, double theMinX, double theMinY, double theMinZ, double theMaxX, double theMaxY, double theMaxZ);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_primitive_array_method_set_patch_distance_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitivePrimitiveArrayMethodSetPatchDistance0(Select3DSensitivePrimitiveArrayHandle handle, float thePatchDistMax);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_primitive_array_method_set_patch_size_max_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -20415,9 +23694,17 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveSegmentMethodCenterOfGeometry0(Select3DSensitiveSegmentHandle handle, out Point3dRaw resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_segment_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveSegmentMethodDynamicType0(Select3DSensitiveSegmentHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_segment_method_end_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveSegmentMethodEndPoint0(Select3DSensitiveSegmentHandle handle, Point3dRaw thePnt);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_segment_method_end_point_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveSegmentMethodEndPoint1(Select3DSensitiveSegmentHandle handle, out Point3dRaw resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_segment_method_get_connected_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -20438,6 +23725,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_segment_method_start_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveSegmentMethodStartPoint0(Select3DSensitiveSegmentHandle handle, Point3dRaw thePnt);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_segment_method_start_point_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveSegmentMethodStartPoint1(Select3DSensitiveSegmentHandle handle, out Point3dRaw resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_segment_method_to_build_bvh_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -20473,6 +23764,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_set_method_clear_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveSetMethodClear0(Select3DSensitiveSetHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_set_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveSetMethodDynamicType0(Select3DSensitiveSetHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_set_method_get_leaf_node_size_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -20513,9 +23808,17 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveSphereMethodCenterOfGeometry0(Select3DSensitiveSphereHandle handle, out Point3dRaw resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_sphere_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveSphereMethodDynamicType0(Select3DSensitiveSphereHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_sphere_method_get_connected_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveSphereMethodGetConnected0(Select3DSensitiveSphereHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_sphere_method_last_detected_point_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveSphereMethodLastDetectedPoint0(Select3DSensitiveSphereHandle handle, out Point3dRaw resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_sphere_method_nb_sub_elements_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -20564,6 +23867,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveTriangleMethodCenterOfGeometry0(Select3DSensitiveTriangleHandle handle, out Point3dRaw resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_triangle_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveTriangleMethodDynamicType0(Select3DSensitiveTriangleHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_triangle_method_get_connected_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveTriangleMethodGetConnected0(Select3DSensitiveTriangleHandle handle, out nint handleValue);
@@ -20603,6 +23910,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveTriangulationMethodCenterOfGeometry0(Select3DSensitiveTriangulationHandle handle, out Point3dRaw resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_triangulation_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveTriangulationMethodDynamicType0(Select3DSensitiveTriangulationHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_triangulation_method_get_connected_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveTriangulationMethodGetConnected0(Select3DSensitiveTriangulationHandle handle, out nint handleValue);
@@ -20626,6 +23937,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_triangulation_method_swap_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveTriangulationMethodSwap0(Select3DSensitiveTriangulationHandle handle, int theIdx1, int theIdx2);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_triangulation_method_triangulation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveTriangulationMethodTriangulation0(Select3DSensitiveTriangulationHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_triangulation_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -20661,6 +23976,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_wire_method_center_of_geometry_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveWireMethodCenterOfGeometry0(Select3DSensitiveWireHandle handle, out Point3dRaw resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_wire_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Select3DSensitiveWireMethodDynamicType0(Select3DSensitiveWireHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select3_d_sensitive_wire_method_get_connected_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -20709,6 +24028,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrAndFilterCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_and_filter_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrAndFilterMethodDynamicType0(SelectMgrAndFilterHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_and_filter_method_is_ok_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrAndFilterMethodIsOk0(SelectMgrAndFilterHandle handle, nint anobj, out int resultValue);
@@ -20735,6 +24058,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_and_or_filter_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrAndOrFilterCreate0(int theFilterType, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_and_or_filter_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrAndOrFilterMethodDynamicType0(SelectMgrAndOrFilterHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_and_or_filter_method_filter_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -20787,6 +24114,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrAxisIntersectorMethodDistToGeometryCenter0(SelectMgrAxisIntersectorHandle handle, Point3dRaw theCOG, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_axis_intersector_method_get_far_pnt_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrAxisIntersectorMethodGetFarPnt0(SelectMgrAxisIntersectorHandle handle, out Point3dRaw resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_axis_intersector_method_get_near_pnt_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrAxisIntersectorMethodGetNearPnt0(SelectMgrAxisIntersectorHandle handle, out Point3dRaw resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_axis_intersector_method_is_scalable_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrAxisIntersectorMethodIsScalable0(SelectMgrAxisIntersectorHandle handle, out int resultValue);
@@ -20826,6 +24161,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrBVHThreadPoolMethodAddEntity0(SelectMgrBVHThreadPoolHandle handle, nint theEntity);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_bvhthread_pool_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrBVHThreadPoolMethodDynamicType0(SelectMgrBVHThreadPoolHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_bvhthread_pool_method_stop_threads_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrBVHThreadPoolMethodStopThreads0(SelectMgrBVHThreadPoolHandle handle);
@@ -20852,6 +24191,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_bvhthread_pool_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void SelectMgrBVHThreadPoolRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_base_frustum_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrBaseFrustumMethodDynamicType0(SelectMgrBaseFrustumHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_base_frustum_method_set_builder_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -20892,6 +24235,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void SelectMgrBaseFrustumRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_base_intersector_method_camera_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrBaseIntersectorMethodCamera0(SelectMgrBaseIntersectorHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_base_intersector_method_detected_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrBaseIntersectorMethodDetectedPoint0(SelectMgrBaseIntersectorHandle handle, double theDepth, out Point3dRaw resultValue);
@@ -20899,6 +24246,18 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_base_intersector_method_dist_to_geometry_center_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrBaseIntersectorMethodDistToGeometryCenter0(SelectMgrBaseIntersectorHandle handle, Point3dRaw theCOG, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_base_intersector_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrBaseIntersectorMethodDynamicType0(SelectMgrBaseIntersectorHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_base_intersector_method_get_far_pnt_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrBaseIntersectorMethodGetFarPnt0(SelectMgrBaseIntersectorHandle handle, out Point3dRaw resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_base_intersector_method_get_near_pnt_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrBaseIntersectorMethodGetNearPnt0(SelectMgrBaseIntersectorHandle handle, out Point3dRaw resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_base_intersector_method_get_selection_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -20951,6 +24310,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrCompositionFilterMethodClear0(SelectMgrCompositionFilterHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_composition_filter_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrCompositionFilterMethodDynamicType0(SelectMgrCompositionFilterHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_composition_filter_method_is_empty_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrCompositionFilterMethodIsEmpty0(SelectMgrCompositionFilterHandle handle, out int resultValue);
@@ -21001,6 +24364,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_entity_owner_method_comes_from_decomposition_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrEntityOwnerMethodComesFromDecomposition0(SelectMgrEntityOwnerHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_entity_owner_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrEntityOwnerMethodDynamicType0(SelectMgrEntityOwnerHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_entity_owner_method_has_location_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -21113,6 +24480,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrFilterMethodActsOn0(SelectMgrFilterHandle handle, int aStandardMode, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_filter_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrFilterMethodDynamicType0(SelectMgrFilterHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_filter_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrFilterClone(SelectMgrFilterHandle source, out nint handle);
@@ -21135,6 +24506,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_frustum_builder_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrFrustumBuilderCreate0(out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_frustum_builder_method_camera_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrFrustumBuilderMethodCamera0(SelectMgrFrustumBuilderHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_frustum_builder_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrFrustumBuilderMethodDynamicType0(SelectMgrFrustumBuilderHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_frustum_builder_method_invalidate_viewport_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -21179,6 +24558,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrOrFilterCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_or_filter_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrOrFilterMethodDynamicType0(SelectMgrOrFilterHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_or_filter_method_is_ok_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrOrFilterMethodIsOk0(SelectMgrOrFilterHandle handle, nint anobj, out int resultValue);
@@ -21222,9 +24605,17 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrSelectableObjectMethodClearSelections0(SelectMgrSelectableObjectHandle handle, int update);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_selectable_object_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrSelectableObjectMethodDynamicType0(SelectMgrSelectableObjectHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_selectable_object_method_erase_presentations_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrSelectableObjectMethodErasePresentations0(SelectMgrSelectableObjectHandle handle, int theToRemove);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_selectable_object_method_get_assembly_owner_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrSelectableObjectMethodGetAssemblyOwner0(SelectMgrSelectableObjectHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_selectable_object_method_global_sel_owner_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -21257,6 +24648,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_selectable_object_method_reset_transformation_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrSelectableObjectMethodResetTransformation0(SelectMgrSelectableObjectHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_selectable_object_method_selection_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrSelectableObjectMethodSelection0(SelectMgrSelectableObjectHandle handle, int theMode, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_selectable_object_method_set_assembly_owner_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -21320,6 +24715,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_selection_method_destroy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrSelectionMethodDestroy0(SelectMgrSelectionHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_selection_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrSelectionMethodDynamicType0(SelectMgrSelectionHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_selection_method_get_selection_state_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -21419,6 +24818,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrSelectionManagerMethodDeactivate0(SelectMgrSelectionManagerHandle handle, nint theObject, int theMode);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_selection_manager_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrSelectionManagerMethodDynamicType0(SelectMgrSelectionManagerHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_selection_manager_method_is_activated_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrSelectionManagerMethodIsActivated0(SelectMgrSelectionManagerHandle handle, nint theObject, int theMode, out int resultValue);
@@ -21438,6 +24841,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_selection_manager_method_restore_selection_structures_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrSelectionManagerMethodRestoreSelectionStructures0(SelectMgrSelectionManagerHandle handle, nint theObj, int theMode);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_selection_manager_method_selector_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrSelectionManagerMethodSelector0(SelectMgrSelectionManagerHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_selection_manager_method_set_selection_sensitivity_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -21482,9 +24889,17 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrSensitiveEntityCreate0(nint theEntity, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_sensitive_entity_method_base_sensitive_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrSensitiveEntityMethodBaseSensitive0(SelectMgrSensitiveEntityHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_sensitive_entity_method_clear_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrSensitiveEntityMethodClear0(SelectMgrSensitiveEntityHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_sensitive_entity_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrSensitiveEntityMethodDynamicType0(SelectMgrSensitiveEntityHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_sensitive_entity_method_is_active_for_selection_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -21608,6 +25023,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrViewerSelectorMethodDisplaySensitive0(SelectMgrViewerSelectorHandle handle, nint theView);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_viewer_selector_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrViewerSelectorMethodDynamicType0(SelectMgrViewerSelectorHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_viewer_selector_method_is_active_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrViewerSelectorMethodIsActive0(SelectMgrViewerSelectorHandle handle, nint theSelectableObject, int theMode, out int resultValue);
@@ -21639,6 +25058,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_viewer_selector_method_picked_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrViewerSelectorMethodPicked0(SelectMgrViewerSelectorHandle handle, int theRank, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_viewer_selector_method_picked_entity_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus SelectMgrViewerSelectorMethodPickedEntity0(SelectMgrViewerSelectorHandle handle, int theRank, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_mgr_viewer_selector_method_picked_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -21747,6 +25170,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus StdPrsBRepFontMethodDescender0(StdPrsBRepFontHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_std_prs_brep_font_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus StdPrsBRepFontMethodDynamicType0(StdPrsBRepFontHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_std_prs_brep_font_method_ftfont_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus StdPrsBRepFontMethodFTFont0(StdPrsBRepFontHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_std_prs_brep_font_method_line_spacing_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus StdPrsBRepFontMethodLineSpacing0(StdPrsBRepFontHandle handle, out double resultValue);
@@ -21767,6 +25198,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus StdPrsBRepFontMethodSetCompositeCurveMode0(StdPrsBRepFontHandle handle, int theToConcatenate);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_std_prs_brep_font_method_set_width_scaling_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus StdPrsBRepFontMethodSetWidthScaling0(StdPrsBRepFontHandle handle, float theScaleFactor);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_std_prs_brep_font_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus StdPrsBRepFontClone(StdPrsBRepFontHandle source, out nint handle);
@@ -21785,6 +25220,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_std_prs_brep_font_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void StdPrsBRepFontRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_std_prs_hlrpoly_shape_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus StdPrsHLRPolyShapeMethodDynamicType0(StdPrsHLRPolyShapeHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_std_prs_hlrpoly_shape_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -21805,6 +25244,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void StdPrsHLRPolyShapeRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_std_prs_hlrshape_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus StdPrsHLRShapeMethodDynamicType0(StdPrsHLRShapeHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_std_prs_hlrshape_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus StdPrsHLRShapeClone(StdPrsHLRShapeHandle source, out nint handle);
@@ -21823,6 +25266,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_std_prs_hlrshape_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void StdPrsHLRShapeRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_std_prs_hlrshape_i_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus StdPrsHLRShapeIMethodDynamicType0(StdPrsHLRShapeIHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_std_prs_hlrshape_i_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -21850,6 +25297,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_std_select_brep_owner_method_clear_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus StdSelectBRepOwnerMethodClear0(StdSelectBRepOwnerHandle handle, nint aPM, int aMode);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_std_select_brep_owner_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus StdSelectBRepOwnerMethodDynamicType0(StdSelectBRepOwnerHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_std_select_brep_owner_method_has_hilight_mode_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -21914,6 +25365,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus StdSelectEdgeFilterMethodActsOn0(StdSelectEdgeFilterHandle handle, int aStandardMode, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_std_select_edge_filter_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus StdSelectEdgeFilterMethodDynamicType0(StdSelectEdgeFilterHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_std_select_edge_filter_method_is_ok_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus StdSelectEdgeFilterMethodIsOk0(StdSelectEdgeFilterHandle handle, nint anobj, out int resultValue);
@@ -21953,6 +25408,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus StdSelectFaceFilterMethodActsOn0(StdSelectFaceFilterHandle handle, int aStandardMode, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_std_select_face_filter_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus StdSelectFaceFilterMethodDynamicType0(StdSelectFaceFilterHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_std_select_face_filter_method_is_ok_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus StdSelectFaceFilterMethodIsOk0(StdSelectFaceFilterHandle handle, nint anobj, out int resultValue);
@@ -21984,6 +25443,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void StdSelectFaceFilterRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_std_select_shape_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus StdSelectShapeMethodDynamicType0(StdSelectShapeHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_std_select_shape_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus StdSelectShapeClone(StdSelectShapeHandle source, out nint handle);
@@ -22010,6 +25473,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_std_select_shape_type_filter_method_acts_on_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus StdSelectShapeTypeFilterMethodActsOn0(StdSelectShapeTypeFilterHandle handle, int aStandardMode, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_std_select_shape_type_filter_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus StdSelectShapeTypeFilterMethodDynamicType0(StdSelectShapeTypeFilterHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_std_select_shape_type_filter_method_is_ok_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -22081,6 +25548,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_tprs_std_aispresentation_method_display_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus TPrsStdAISPresentationMethodDisplay0(TPrsStdAISPresentationHandle handle, int update);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_tprs_std_aispresentation_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus TPrsStdAISPresentationMethodDynamicType0(TPrsStdAISPresentationHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_tprs_std_aispresentation_method_erase_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -22233,6 +25704,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus TPrsStdAISViewerCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_tprs_std_aisviewer_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus TPrsStdAISViewerMethodDynamicType0(TPrsStdAISViewerHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_tprs_std_aisviewer_method_get_interactive_context_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus TPrsStdAISViewerMethodGetInteractiveContext0(TPrsStdAISViewerHandle handle, out nint handleValue);
@@ -22280,6 +25755,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus TPrsStdAxisDriverCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_tprs_std_axis_driver_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus TPrsStdAxisDriverMethodDynamicType0(TPrsStdAxisDriverHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_tprs_std_axis_driver_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus TPrsStdAxisDriverClone(TPrsStdAxisDriverHandle source, out nint handle);
@@ -22303,6 +25782,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus TPrsStdConstraintDriverCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_tprs_std_constraint_driver_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus TPrsStdConstraintDriverMethodDynamicType0(TPrsStdConstraintDriverHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_tprs_std_constraint_driver_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus TPrsStdConstraintDriverClone(TPrsStdConstraintDriverHandle source, out nint handle);
@@ -22321,6 +25804,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_tprs_std_constraint_driver_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void TPrsStdConstraintDriverRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_tprs_std_driver_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus TPrsStdDriverMethodDynamicType0(TPrsStdDriverHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_tprs_std_driver_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -22349,6 +25836,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus TPrsStdDriverTableMethodClear0(TPrsStdDriverTableHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_tprs_std_driver_table_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus TPrsStdDriverTableMethodDynamicType0(TPrsStdDriverTableHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_tprs_std_driver_table_method_init_standard_drivers_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus TPrsStdDriverTableMethodInitStandardDrivers0(TPrsStdDriverTableHandle handle);
@@ -22376,6 +25867,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus TPrsStdGeometryDriverCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_tprs_std_geometry_driver_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus TPrsStdGeometryDriverMethodDynamicType0(TPrsStdGeometryDriverHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_tprs_std_geometry_driver_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus TPrsStdGeometryDriverClone(TPrsStdGeometryDriverHandle source, out nint handle);
@@ -22398,6 +25893,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_tprs_std_named_shape_driver_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus TPrsStdNamedShapeDriverCreate0(out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_tprs_std_named_shape_driver_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus TPrsStdNamedShapeDriverMethodDynamicType0(TPrsStdNamedShapeDriverHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_tprs_std_named_shape_driver_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -22422,6 +25921,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus TPrsStdPlaneDriverCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_tprs_std_plane_driver_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus TPrsStdPlaneDriverMethodDynamicType0(TPrsStdPlaneDriverHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_tprs_std_plane_driver_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus TPrsStdPlaneDriverClone(TPrsStdPlaneDriverHandle source, out nint handle);
@@ -22445,6 +25948,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus TPrsStdPointDriverCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_tprs_std_point_driver_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus TPrsStdPointDriverMethodDynamicType0(TPrsStdPointDriverHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_tprs_std_point_driver_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus TPrsStdPointDriverClone(TPrsStdPointDriverHandle source, out nint handle);
@@ -22463,6 +25970,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_tprs_std_point_driver_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void TPrsStdPointDriverRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_ambient_light_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus V3dAmbientLightMethodDynamicType0(V3dAmbientLightHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_ambient_light_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -22486,6 +25997,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_circular_grid_method_display_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus V3dCircularGridMethodDisplay0(V3dCircularGridHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_circular_grid_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus V3dCircularGridMethodDynamicType0(V3dCircularGridHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_circular_grid_method_erase_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -22518,6 +26033,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void V3dCircularGridRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_directional_light_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus V3dDirectionalLightMethodDynamicType0(V3dDirectionalLightHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_directional_light_method_set_direction_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus V3dDirectionalLightMethodSetDirection0(V3dDirectionalLightHandle handle, int theDirection);
@@ -22544,6 +26063,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_plane_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus V3dPlaneCreate0(double theA, double theB, double theC, double theD, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_plane_method_clip_plane_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus V3dPlaneMethodClipPlane0(V3dPlaneHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_plane_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus V3dPlaneMethodDynamicType0(V3dPlaneHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_plane_method_erase_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -22576,6 +26103,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void V3dPlaneRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_position_light_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus V3dPositionLightMethodDynamicType0(V3dPositionLightHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_position_light_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus V3dPositionLightClone(V3dPositionLightHandle source, out nint handle);
@@ -22594,6 +26125,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_position_light_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void V3dPositionLightRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_positional_light_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus V3dPositionalLightMethodDynamicType0(V3dPositionalLightHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_positional_light_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -22617,6 +26152,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_rectangular_grid_method_display_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus V3dRectangularGridMethodDisplay0(V3dRectangularGridHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_rectangular_grid_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus V3dRectangularGridMethodDynamicType0(V3dRectangularGridHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_rectangular_grid_method_erase_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -22649,6 +26188,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void V3dRectangularGridRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_spot_light_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus V3dSpotLightMethodDynamicType0(V3dSpotLightHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_spot_light_method_set_direction_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus V3dSpotLightMethodSetDirection0(V3dSpotLightHandle handle, int theOrientation);
@@ -22676,6 +26219,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus V3dTrihedronCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_trihedron_method_arrow_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus V3dTrihedronMethodArrowAspect0(V3dTrihedronHandle handle, int theAxis, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_trihedron_method_arrow_diameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus V3dTrihedronMethodArrowDiameter0(V3dTrihedronHandle handle, out double resultValue);
@@ -22683,6 +26230,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_trihedron_method_display_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus V3dTrihedronMethodDisplay0(V3dTrihedronHandle handle, nint theView);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_trihedron_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus V3dTrihedronMethodDynamicType0(V3dTrihedronHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_trihedron_method_erase_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -22692,9 +26243,17 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus V3dTrihedronMethodIsWireframe0(V3dTrihedronHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_trihedron_method_label_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus V3dTrihedronMethodLabelAspect0(V3dTrihedronHandle handle, int theAxis, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_trihedron_method_nb_facets_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus V3dTrihedronMethodNbFacets0(V3dTrihedronHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_trihedron_method_origin_aspect_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus V3dTrihedronMethodOriginAspect0(V3dTrihedronHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_trihedron_method_scale_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -22791,6 +26350,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus V3dViewMethodClearPBREnvironment0(V3dViewHandle handle, int theToUpdate);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_view_method_clip_planes_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus V3dViewMethodClipPlanes0(V3dViewHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_view_method_computed_mode_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus V3dViewMethodComputedMode0(V3dViewHandle handle, out int resultValue);
@@ -22803,6 +26366,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus V3dViewMethodConvert1(V3dViewHandle handle, double vv, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_view_method_default_camera_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus V3dViewMethodDefaultCamera0(V3dViewHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_view_method_depth_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus V3dViewMethodDepth0(V3dViewHandle handle, out double resultValue);
@@ -22814,6 +26381,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_view_method_do_mapping_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus V3dViewMethodDoMapping0(V3dViewHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_view_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus V3dViewMethodDynamicType0(V3dViewHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_view_method_fit_all_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -23183,6 +26754,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus V3dViewMethodTriedronErase0(V3dViewHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_view_method_trihedron_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus V3dViewMethodTrihedron0(V3dViewHandle handle, int theToCreate, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_view_method_turn_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus V3dViewMethodTurn0(V3dViewHandle handle, int axe, double angle, int start);
@@ -23218,6 +26793,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_view_method_visualization_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus V3dViewMethodVisualization0(V3dViewHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_view_method_window_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus V3dViewMethodWindow0(V3dViewHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_view_method_window_fit_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -23270,6 +26849,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus V3dViewerMethodActivateGrid0(V3dViewerHandle handle, int aGridType, int aGridDrawMode);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_viewer_method_active_view_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus V3dViewerMethodActiveView0(V3dViewerHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_viewer_method_computed_mode_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus V3dViewerMethodComputedMode0(V3dViewerHandle handle, out int resultValue);
@@ -23306,9 +26889,21 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus V3dViewerMethodDefaultVisualization0(V3dViewerHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_viewer_method_defined_view_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus V3dViewerMethodDefinedView0(V3dViewerHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_viewer_method_display_privileged_plane_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus V3dViewerMethodDisplayPrivilegedPlane0(V3dViewerHandle handle, int theOnOff, double theSize);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_viewer_method_driver_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus V3dViewerMethodDriver0(V3dViewerHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_viewer_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus V3dViewerMethodDynamicType0(V3dViewerHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_viewer_method_erase_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -23537,6 +27132,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void V3dViewerRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_wnt_wclass_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus WNTWClassMethodDynamicType0(WNTWClassHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_wnt_wclass_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus WNTWClassClone(WNTWClassHandle source, out nint handle);
@@ -23564,6 +27163,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus WNTWindowMethodDoResize0(WNTWindowHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_wnt_window_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus WNTWindowMethodDynamicType0(WNTWindowHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_wnt_window_method_invalidate_content_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus WNTWindowMethodInvalidateContent0(WNTWindowHandle handle, nint theDisp);
@@ -23583,6 +27186,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_wnt_window_method_ratio_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus WNTWindowMethodRatio0(WNTWindowHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_wnt_window_method_register_raw_input_devices_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus WNTWindowMethodRegisterRawInputDevices0(WNTWindowHandle handle, uint theRawDeviceMask, out int resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_wnt_window_method_set_pos_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -23622,6 +27229,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_wasm_window_method_do_resize_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus WasmWindowMethodDoResize0(WasmWindowHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_wasm_window_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus WasmWindowMethodDynamicType0(WasmWindowHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_wasm_window_method_invalidate_content_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -23673,6 +27284,10 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_xw_window_method_do_resize_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus XwWindowMethodDoResize0(XwWindowHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_xw_window_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus XwWindowMethodDynamicType0(XwWindowHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_xw_window_method_invalidate_content_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

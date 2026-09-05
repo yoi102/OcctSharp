@@ -15,6 +15,9 @@
 // Source: c:@S@BRepBuilderAPI@F@Precision#d#S
 // Source: c:@S@BRepGraph_Layer@F@KindBit#$@S@BRepGraph_NodeId@E@Kind#S
 // Source: c:@S@BRepGraph_Layer@F@RefKindBit#$@S@BRepGraph_RefId@E@Kind#S
+// Source: c:@S@BRepGraph_LayerParametric@F@GenerationMask#$@S@BRepGraph_LayerParametric@E@GenerationFlag#S
+// Source: c:@S@BRepGraph_LayerParametric@F@HasGenerationFlag#i#$@S@BRepGraph_LayerParametric@E@GenerationFlag#S
+// Source: c:@S@BRepGraph_LayerParametric@F@MeshQualityValue#$@S@BRepGraph_LayerParametric@E@MeshQuality#i#i#i#i#i#S
 // Source: c:@S@BRepGraph_NodeId@F@IsAssemblyKind#$@S@BRepGraph_NodeId@E@Kind#S
 // Source: c:@S@BRepGraph_NodeId@F@IsTopologyKind#$@S@BRepGraph_NodeId@E@Kind#S
 // Source: c:@S@BRepGraph_NodeId@F@IsValidKind#$@S@BRepGraph_NodeId@E@Kind#S
@@ -124,6 +127,30 @@ internal static partial class ModelingGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_brep_graph_layer_ref_kind_bit_static_ref_kind_bit_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial int BRepGraphLayerStaticRefKindBit0(int theKind);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_brep_graph_layer_parametric_generation_mask_static_generation_mask_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus BRepGraphLayerParametricStaticGenerationMask0Checked(int theFlag, out uint generatedResult);
+    internal static uint BRepGraphLayerParametricStaticGenerationMask0(int theFlag)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(BRepGraphLayerParametricStaticGenerationMask0Checked(theFlag, out uint generatedResult), "occtsharp_generated_brep_graph_layer_parametric_generation_mask_static_generation_mask_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_brep_graph_layer_parametric_has_generation_flag_static_has_generation_flag_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus BRepGraphLayerParametricStaticHasGenerationFlag0Checked(uint theFlags, int theFlag, out int generatedResult);
+    internal static int BRepGraphLayerParametricStaticHasGenerationFlag0(uint theFlags, int theFlag)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(BRepGraphLayerParametricStaticHasGenerationFlag0Checked(theFlags, theFlag, out int generatedResult), "occtsharp_generated_brep_graph_layer_parametric_has_generation_flag_static_has_generation_flag_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_brep_graph_layer_parametric_mesh_quality_value_static_mesh_quality_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus BRepGraphLayerParametricStaticMeshQualityValue0Checked(int theQuality, uint theVeryCoarse, uint theCoarse, uint theMedium, uint theFine, uint theVeryFine, out uint generatedResult);
+    internal static uint BRepGraphLayerParametricStaticMeshQualityValue0(int theQuality, uint theVeryCoarse, uint theCoarse, uint theMedium, uint theFine, uint theVeryFine)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(BRepGraphLayerParametricStaticMeshQualityValue0Checked(theQuality, theVeryCoarse, theCoarse, theMedium, theFine, theVeryFine, out uint generatedResult), "occtsharp_generated_brep_graph_layer_parametric_mesh_quality_value_static_mesh_quality_value_0");
+        return generatedResult;
+    }
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_brep_graph_node_id_is_assembly_kind_static_is_assembly_kind_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

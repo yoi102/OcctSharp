@@ -9,6 +9,7 @@
 // Source: c:@F@ATanh#d#
 // Source: c:@F@Abs#I#
 // Source: c:@F@Abs#d#
+// Source: c:@F@Abs#f#
 // Source: c:@F@Ceiling#d#
 // Source: c:@F@Cos#d#
 // Source: c:@F@Cosh#d#
@@ -27,8 +28,10 @@
 // Source: c:@F@Log10#d#
 // Source: c:@F@Max#I#I#
 // Source: c:@F@Max#d#d#
+// Source: c:@F@Max#f#f#
 // Source: c:@F@Min#I#I#
 // Source: c:@F@Min#d#d#
+// Source: c:@F@Min#f#f#
 // Source: c:@F@Modulus#I#I#
 // Source: c:@F@NextAfter#d#d#
 // Source: c:@F@OCCT_Version_Double
@@ -45,13 +48,18 @@
 // Source: c:@F@RealSize#
 // Source: c:@F@RealSmall#
 // Source: c:@F@RealToInt#d#
+// Source: c:@F@RealToShortReal#d#
 // Source: c:@F@Round#d#
 // Source: c:@F@ShortRealDigits#
+// Source: c:@F@ShortRealEpsilon#
+// Source: c:@F@ShortRealFirst#
 // Source: c:@F@ShortRealFirst10Exp#
+// Source: c:@F@ShortRealLast#
 // Source: c:@F@ShortRealLast10Exp#
 // Source: c:@F@ShortRealMantissa#
 // Source: c:@F@ShortRealRadix#
 // Source: c:@F@ShortRealSize#
+// Source: c:@F@ShortRealSmall#
 // Source: c:@F@Sign#d#d#
 // Source: c:@F@Sin#d#
 // Source: c:@F@Sinh#d#
@@ -82,6 +90,7 @@
 // Source: c:@S@OSD_Parallel@F@SetUseOcctThreads#b#S
 // Source: c:@S@OSD_Parallel@F@ToUseOcctThreads#S
 // Source: c:@S@OSD_PerfMeter@F@ResetALL#S
+// Source: c:@S@OSD_Thread@F@Current#S
 // Source: c:@S@OSD_Timer@F@GetWallClockTime#S
 // Source: c:@S@Precision@F@Angular#S
 // Source: c:@S@Precision@F@Approximation#S
@@ -104,7 +113,11 @@
 // Source: c:@S@Precision@F@SquareConfusion#S
 // Source: c:@S@Precision@F@SquarePConfusion#S
 // Source: c:@S@Quantity_Color@F@Convert_LinearRGB_To_sRGB#d#S
+// Source: c:@S@Quantity_Color@F@Convert_LinearRGB_To_sRGB#f#S
+// Source: c:@S@Quantity_Color@F@Convert_LinearRGB_To_sRGB_approx22#f#S
 // Source: c:@S@Quantity_Color@F@Convert_sRGB_To_LinearRGB#d#S
+// Source: c:@S@Quantity_Color@F@Convert_sRGB_To_LinearRGB#f#S
+// Source: c:@S@Quantity_Color@F@Convert_sRGB_To_LinearRGB_approx22#f#S
 // Source: c:@S@Quantity_Color@F@Epsilon#S
 // Source: c:@S@Quantity_Color@F@Name#d#d#d#S
 // Source: c:@S@Quantity_Color@F@SetEpsilon#d#S
@@ -175,6 +188,8 @@ OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_standard_standard_integ
 OCCTSHARP_API double OCCTSHARP_CALL occtsharp_generated_standard_standard_real_abs_static_bs_0(
   double theValue);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_standard_standard_short_real_abs_static_bs_0(float theValue, float* generatedResult);
+
 OCCTSHARP_API double OCCTSHARP_CALL occtsharp_generated_standard_standard_real_ceiling_static_eiling_0(
   double theValue);
 
@@ -229,6 +244,8 @@ OCCTSHARP_API double OCCTSHARP_CALL occtsharp_generated_standard_standard_real_m
   double theValue1,
   double theValue2);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_standard_standard_short_real_max_static_ax_0(float theValue1, float theValue2, float* generatedResult);
+
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_standard_standard_integer_min_static_in_0(
   int32_t theValue1,
   int32_t theValue2);
@@ -236,6 +253,8 @@ OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_standard_standard_integ
 OCCTSHARP_API double OCCTSHARP_CALL occtsharp_generated_standard_standard_real_min_static_in_0(
   double theValue1,
   double theValue2);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_standard_standard_short_real_min_static_in_0(float theValue1, float theValue2, float* generatedResult);
 
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_standard_standard_integer_modulus_static_odulus_0(
   int32_t theValue,
@@ -277,12 +296,20 @@ OCCTSHARP_API double OCCTSHARP_CALL occtsharp_generated_standard_standard_real_r
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_standard_standard_real_real_to_int_static_eal_to_int_0(
   double theValue);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_standard_standard_real_real_to_short_real_static_eal_to_short_real_0(double theValue, float* generatedResult);
+
 OCCTSHARP_API double OCCTSHARP_CALL occtsharp_generated_standard_standard_real_round_static_ound_0(
   double theValue);
 
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_standard_standard_short_real_short_real_digits_static_hort_real_digits_0(void);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_standard_standard_short_real_short_real_epsilon_static_hort_real_epsilon_0(float* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_standard_standard_short_real_short_real_first_static_hort_real_first_0(float* generatedResult);
+
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_standard_standard_short_real_short_real_first10_exp_static_hort_real_first10_exp_0(void);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_standard_standard_short_real_short_real_last_static_hort_real_last_0(float* generatedResult);
 
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_standard_standard_short_real_short_real_last10_exp_static_hort_real_last10_exp_0(void);
 
@@ -291,6 +318,8 @@ OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_standard_standard_short
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_standard_standard_short_real_short_real_radix_static_hort_real_radix_0(void);
 
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_standard_standard_short_real_short_real_size_static_hort_real_size_0(void);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_standard_standard_short_real_short_real_small_static_hort_real_small_0(float* generatedResult);
 
 OCCTSHARP_API double OCCTSHARP_CALL occtsharp_generated_standard_standard_real_sign_static_ign_0(
   double theMagnitude,
@@ -376,6 +405,8 @@ OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_osd_parallel_to_use_occ
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_osd_perf_meter_reset_all_static_reset_all_0(void);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_osd_thread_current_static_current_0(uint64_t* generatedResult);
+
 OCCTSHARP_API double OCCTSHARP_CALL occtsharp_generated_osd_timer_get_wall_clock_time_static_get_wall_clock_time_0(void);
 
 OCCTSHARP_API double OCCTSHARP_CALL occtsharp_generated_precision_static_angular_0(void);
@@ -430,8 +461,16 @@ OCCTSHARP_API double OCCTSHARP_CALL occtsharp_generated_precision_static_square_
 OCCTSHARP_API double OCCTSHARP_CALL occtsharp_generated_quantity_color_convert_linear_rgb_to_s_rgb_static_convert__linear_rgb__to_s_rgb_0(
   double theLinearValue);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_quantity_color_convert_linear_rgb_to_s_rgb_static_convert__linear_rgb__to_s_rgb_1(float theLinearValue, float* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_quantity_color_convert_linear_rgb_to_s_rgb_approx22_static_convert__linear_rgb__to_s_rgb_approx22_0(float theLinearValue, float* generatedResult);
+
 OCCTSHARP_API double OCCTSHARP_CALL occtsharp_generated_quantity_color_convert_s_rgb_to_linear_rgb_static_convert_s_rgb__to__linear_rgb_0(
   double thesRGBValue);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_quantity_color_convert_s_rgb_to_linear_rgb_static_convert_s_rgb__to__linear_rgb_1(float thesRGBValue, float* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_quantity_color_convert_s_rgb_to_linear_rgb_approx22_static_convert_s_rgb__to__linear_rgb_approx22_0(float thesRGBValue, float* generatedResult);
 
 OCCTSHARP_API double OCCTSHARP_CALL occtsharp_generated_quantity_color_epsilon_static_epsilon_0(void);
 

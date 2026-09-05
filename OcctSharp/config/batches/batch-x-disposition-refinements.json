@@ -1,0 +1,520 @@
+{
+  "schemaVersion": "1.0",
+  "baselineInventorySha256": "260AE9A603E7B68F717C38C3FAF9C68A83F866D0154E84E1CD7FD811DB0C6A2C",
+  "purpose": "Audited Blocked-to-Blocked reason refinements only; none counts as migrated and this file does not override classification.",
+  "declarations": [
+    {
+      "stableId": "c:@N@opencascade@N@FNVHash@F@FNVHash1A#*1v#I#i#",
+      "nativeName": "opencascade::FNVHash::FNVHash1A",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Numeric or copied return/input now maps, but a raw pointer parameter still needs an explicit buffer or lifetime contract."
+    },
+    {
+      "stableId": "c:@N@opencascade@N@FNVHash@F@FNVHash64A#*1v#I#k#",
+      "nativeName": "opencascade::FNVHash::FNVHash64A",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Numeric or copied return/input now maps, but a raw pointer parameter still needs an explicit buffer or lifetime contract."
+    },
+    {
+      "stableId": "c:@N@opencascade@N@MurmurHash@F@MurmurHash2A#*1v#I#i#",
+      "nativeName": "opencascade::MurmurHash::MurmurHash2A",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Numeric or copied return/input now maps, but a raw pointer parameter still needs an explicit buffer or lifetime contract."
+    },
+    {
+      "stableId": "c:@N@opencascade@N@MurmurHash@F@MurmurHash64A#*1v#I#k#",
+      "nativeName": "opencascade::MurmurHash::MurmurHash64A",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Numeric or copied return/input now maps, but a raw pointer parameter still needs an explicit buffer or lifetime contract."
+    },
+    {
+      "stableId": "c:@S@Aspect_VKeySet@F@HoldDuration#i#d#&d#",
+      "nativeName": "Aspect_VKeySet::HoldDuration",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Numeric input now maps, but mutable/output or stream references still require an explicit contract."
+    },
+    {
+      "stableId": "c:@S@Aspect_VKeySet@F@HoldDuration#i#d#&d#S0_#",
+      "nativeName": "Aspect_VKeySet::HoldDuration",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Numeric input now maps, but mutable/output or stream references still require an explicit contract."
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_FastSewing@F@GetStatuses#*$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "BRepBuilderAPI_FastSewing::GetStatuses",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Numeric or copied return/input now maps, but a raw pointer parameter still needs an explicit buffer or lifetime contract."
+    },
+    {
+      "stableId": "c:@S@BRepGraph_CacheMesh@F@ClearCoEdgeMesh#i#$@S@BRepGraph_NodeId@S@Typed>#V$@S@BRepGraph_NodeId@E@Kind8#",
+      "nativeName": "BRepGraph_CacheMesh::ClearCoEdgeMesh",
+      "beforeCode": "BL208",
+      "afterCode": "BL206",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "TemplateInstantiationProjection",
+      "reason": "Numeric slot identifier now maps, but the typed BRepGraph ID template requires a separate projection."
+    },
+    {
+      "stableId": "c:@S@BRepGraph_CacheMesh@F@ClearEdgeMesh#i#$@S@BRepGraph_NodeId@S@Typed>#V$@S@BRepGraph_NodeId@E@Kind4#",
+      "nativeName": "BRepGraph_CacheMesh::ClearEdgeMesh",
+      "beforeCode": "BL208",
+      "afterCode": "BL206",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "TemplateInstantiationProjection",
+      "reason": "Numeric slot identifier now maps, but the typed BRepGraph ID template requires a separate projection."
+    },
+    {
+      "stableId": "c:@S@BRepGraph_CacheMesh@F@ClearFaceMesh#i#$@S@BRepGraph_NodeId@S@Typed>#V$@S@BRepGraph_NodeId@E@Kind2#",
+      "nativeName": "BRepGraph_CacheMesh::ClearFaceMesh",
+      "beforeCode": "BL208",
+      "afterCode": "BL206",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "TemplateInstantiationProjection",
+      "reason": "Numeric slot identifier now maps, but the typed BRepGraph ID template requires a separate projection."
+    },
+    {
+      "stableId": "c:@S@BRepGraph_CacheMesh@F@HasCoEdgeMesh#i#$@S@BRepGraph_NodeId@S@Typed>#V$@S@BRepGraph_NodeId@E@Kind8#1",
+      "nativeName": "BRepGraph_CacheMesh::HasCoEdgeMesh",
+      "beforeCode": "BL208",
+      "afterCode": "BL206",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "TemplateInstantiationProjection",
+      "reason": "Numeric slot identifier now maps, but the typed BRepGraph ID template requires a separate projection."
+    },
+    {
+      "stableId": "c:@S@BRepGraph_CacheMesh@F@HasEdgeMesh#i#$@S@BRepGraph_NodeId@S@Typed>#V$@S@BRepGraph_NodeId@E@Kind4#1",
+      "nativeName": "BRepGraph_CacheMesh::HasEdgeMesh",
+      "beforeCode": "BL208",
+      "afterCode": "BL206",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "TemplateInstantiationProjection",
+      "reason": "Numeric slot identifier now maps, but the typed BRepGraph ID template requires a separate projection."
+    },
+    {
+      "stableId": "c:@S@BRepGraph_CacheMesh@F@HasFaceMesh#i#$@S@BRepGraph_NodeId@S@Typed>#V$@S@BRepGraph_NodeId@E@Kind2#1",
+      "nativeName": "BRepGraph_CacheMesh::HasFaceMesh",
+      "beforeCode": "BL208",
+      "afterCode": "BL206",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "TemplateInstantiationProjection",
+      "reason": "Numeric slot identifier now maps, but the typed BRepGraph ID template requires a separate projection."
+    },
+    {
+      "stableId": "c:@S@BRepGraph_CacheMesh@F@RegisterDriver#i#&1$@N@opencascade@S@handle>#$@S@BRepGraph_CacheMesh@S@Driver#",
+      "nativeName": "BRepGraph_CacheMesh::RegisterDriver",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Numeric slot identifier now maps, but the Driver handle target is outside selected generated owners."
+    },
+    {
+      "stableId": "c:@S@BRepMeshData_Edge@F@AddPCurve#&1*$@S@IMeshData_Face#$@E@TopAbs_Orientation#",
+      "nativeName": "BRepMeshData_Edge::AddPCurve",
+      "beforeCode": "BL204",
+      "afterCode": "BL208",
+      "beforeCategory": "BorrowedOrOutputReference",
+      "afterCategory": "UnmappedValueType",
+      "reason": "Const reference return now maps, but a remaining geometry, topology, string, or mesh-pointer value parameter has no automatic projection."
+    },
+    {
+      "stableId": "c:@S@BRepMeshData_Edge@F@GetPCurve#&1*$@S@IMeshData_Face#$@E@TopAbs_Orientation#1",
+      "nativeName": "BRepMeshData_Edge::GetPCurve",
+      "beforeCode": "BL204",
+      "afterCode": "BL208",
+      "beforeCategory": "BorrowedOrOutputReference",
+      "afterCategory": "UnmappedValueType",
+      "reason": "Const reference return now maps, but a remaining geometry, topology, string, or mesh-pointer value parameter has no automatic projection."
+    },
+    {
+      "stableId": "c:@S@BRepMeshData_Face@F@AddWire#&1$@S@TopoDS_Wire#I#",
+      "nativeName": "BRepMeshData_Face::AddWire",
+      "beforeCode": "BL204",
+      "afterCode": "BL208",
+      "beforeCategory": "BorrowedOrOutputReference",
+      "afterCategory": "UnmappedValueType",
+      "reason": "Const reference return now maps, but a remaining geometry, topology, string, or mesh-pointer value parameter has no automatic projection."
+    },
+    {
+      "stableId": "c:@S@BRepMeshData_Model@F@AddEdge#&1$@S@TopoDS_Edge#",
+      "nativeName": "BRepMeshData_Model::AddEdge",
+      "beforeCode": "BL204",
+      "afterCode": "BL208",
+      "beforeCategory": "BorrowedOrOutputReference",
+      "afterCategory": "UnmappedValueType",
+      "reason": "Const reference return now maps, but a remaining geometry, topology, string, or mesh-pointer value parameter has no automatic projection."
+    },
+    {
+      "stableId": "c:@S@BRepMeshData_Model@F@AddFace#&1$@S@TopoDS_Face#",
+      "nativeName": "BRepMeshData_Model::AddFace",
+      "beforeCode": "BL204",
+      "afterCode": "BL208",
+      "beforeCategory": "BorrowedOrOutputReference",
+      "afterCategory": "UnmappedValueType",
+      "reason": "Const reference return now maps, but a remaining geometry, topology, string, or mesh-pointer value parameter has no automatic projection."
+    },
+    {
+      "stableId": "c:@S@BinDrivers_DocumentRetrievalDriver@F@CheckShapeSection#&1L#&$@N@std@S@basic_istream>#C#$@N@std@S@char_traits>#C#",
+      "nativeName": "BinDrivers_DocumentRetrievalDriver::CheckShapeSection",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Numeric input now maps, but mutable/output or stream references still require an explicit contract."
+    },
+    {
+      "stableId": "c:@S@BinMDF_ADriverTable@F@AddDerivedDriver#*1C#",
+      "nativeName": "BinMDF_ADriverTable::AddDerivedDriver",
+      "beforeCode": "BL204",
+      "afterCode": "BL202",
+      "beforeCategory": "BorrowedOrOutputReference",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Numeric or copied return/input now maps, but a raw pointer parameter still needs an explicit buffer or lifetime contract."
+    },
+    {
+      "stableId": "c:@S@FSD_Base64@F@Decode#*c#k#*1C#k#S",
+      "nativeName": "FSD_Base64::Decode",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Numeric or copied return/input now maps, but a raw pointer parameter still needs an explicit buffer or lifetime contract."
+    },
+    {
+      "stableId": "c:@S@FSD_Base64@F@Encode#*C#k#*1c#k#S",
+      "nativeName": "FSD_Base64::Encode",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Numeric or copied return/input now maps, but a raw pointer parameter still needs an explicit buffer or lifetime contract."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@EvalRepresentation#1",
+      "nativeName": "Geom_BSplineCurve::EvalRepresentation",
+      "beforeCode": "BL204",
+      "afterCode": "BL104",
+      "beforeCategory": "BorrowedOrOutputReference",
+      "afterCategory": "CallableEligibilityInvariant",
+      "reason": "Return target is a nested GeomEval descriptor type excluded by SharedHandlePackageScopeExpander.IsSimpleIdentifier; no selected generated target owner exists."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@EvalRepresentation#1",
+      "nativeName": "Geom_BSplineSurface::EvalRepresentation",
+      "beforeCode": "BL204",
+      "afterCode": "BL104",
+      "beforeCategory": "BorrowedOrOutputReference",
+      "afterCategory": "CallableEligibilityInvariant",
+      "reason": "Return target is a nested GeomEval descriptor type excluded by SharedHandlePackageScopeExpander.IsSimpleIdentifier; no selected generated target owner exists."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierCurve@F@EvalRepresentation#1",
+      "nativeName": "Geom_BezierCurve::EvalRepresentation",
+      "beforeCode": "BL204",
+      "afterCode": "BL104",
+      "beforeCategory": "BorrowedOrOutputReference",
+      "afterCategory": "CallableEligibilityInvariant",
+      "reason": "Return target is a nested GeomEval descriptor type excluded by SharedHandlePackageScopeExpander.IsSimpleIdentifier; no selected generated target owner exists."
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@EvalRepresentation#1",
+      "nativeName": "Geom_BezierSurface::EvalRepresentation",
+      "beforeCode": "BL204",
+      "afterCode": "BL104",
+      "beforeCategory": "BorrowedOrOutputReference",
+      "afterCategory": "CallableEligibilityInvariant",
+      "reason": "Return target is a nested GeomEval descriptor type excluded by SharedHandlePackageScopeExpander.IsSimpleIdentifier; no selected generated target owner exists."
+    },
+    {
+      "stableId": "c:@S@Geom_OffsetCurve@F@EvalRepresentation#1",
+      "nativeName": "Geom_OffsetCurve::EvalRepresentation",
+      "beforeCode": "BL204",
+      "afterCode": "BL104",
+      "beforeCategory": "BorrowedOrOutputReference",
+      "afterCategory": "CallableEligibilityInvariant",
+      "reason": "Return target is a nested GeomEval descriptor type excluded by SharedHandlePackageScopeExpander.IsSimpleIdentifier; no selected generated target owner exists."
+    },
+    {
+      "stableId": "c:@S@Geom_OffsetSurface@F@EvalRepresentation#1",
+      "nativeName": "Geom_OffsetSurface::EvalRepresentation",
+      "beforeCode": "BL204",
+      "afterCode": "BL104",
+      "beforeCategory": "BorrowedOrOutputReference",
+      "afterCategory": "CallableEligibilityInvariant",
+      "reason": "Return target is a nested GeomEval descriptor type excluded by SharedHandlePackageScopeExpander.IsSimpleIdentifier; no selected generated target owner exists."
+    },
+    {
+      "stableId": "c:@S@Geom_SurfaceOfLinearExtrusion@F@EvalRepresentation#1",
+      "nativeName": "Geom_SurfaceOfLinearExtrusion::EvalRepresentation",
+      "beforeCode": "BL204",
+      "afterCode": "BL104",
+      "beforeCategory": "BorrowedOrOutputReference",
+      "afterCategory": "CallableEligibilityInvariant",
+      "reason": "Return target is a nested GeomEval descriptor type excluded by SharedHandlePackageScopeExpander.IsSimpleIdentifier; no selected generated target owner exists."
+    },
+    {
+      "stableId": "c:@S@Geom_SurfaceOfRevolution@F@EvalRepresentation#1",
+      "nativeName": "Geom_SurfaceOfRevolution::EvalRepresentation",
+      "beforeCode": "BL204",
+      "afterCode": "BL104",
+      "beforeCategory": "BorrowedOrOutputReference",
+      "afterCategory": "CallableEligibilityInvariant",
+      "reason": "Return target is a nested GeomEval descriptor type excluded by SharedHandlePackageScopeExpander.IsSimpleIdentifier; no selected generated target owner exists."
+    },
+    {
+      "stableId": "c:@S@HLRBRep_ThePolygonToolOfInterCSurf@F@BeginOfSeg#&1$@S@HLRBRep_ThePolygonOfInterCSurf#I#S",
+      "nativeName": "HLRBRep_ThePolygonToolOfInterCSurf::BeginOfSeg",
+      "beforeCode": "BL204",
+      "afterCode": "BL208",
+      "beforeCategory": "BorrowedOrOutputReference",
+      "afterCategory": "UnmappedValueType",
+      "reason": "Const reference return now maps, but a remaining geometry, topology, string, or mesh-pointer value parameter has no automatic projection."
+    },
+    {
+      "stableId": "c:@S@HLRBRep_ThePolygonToolOfInterCSurf@F@EndOfSeg#&1$@S@HLRBRep_ThePolygonOfInterCSurf#I#S",
+      "nativeName": "HLRBRep_ThePolygonToolOfInterCSurf::EndOfSeg",
+      "beforeCode": "BL204",
+      "afterCode": "BL208",
+      "beforeCategory": "BorrowedOrOutputReference",
+      "afterCategory": "UnmappedValueType",
+      "reason": "Const reference return now maps, but a remaining geometry, topology, string, or mesh-pointer value parameter has no automatic projection."
+    },
+    {
+      "stableId": "c:@S@HLRBRep_ThePolyhedronToolOfInterCSurf@F@Point#&1$@S@HLRBRep_ThePolyhedronOfInterCSurf#I#S",
+      "nativeName": "HLRBRep_ThePolyhedronToolOfInterCSurf::Point",
+      "beforeCode": "BL204",
+      "afterCode": "BL208",
+      "beforeCategory": "BorrowedOrOutputReference",
+      "afterCategory": "UnmappedValueType",
+      "reason": "Const reference return now maps, but a remaining geometry, topology, string, or mesh-pointer value parameter has no automatic projection."
+    },
+    {
+      "stableId": "c:@S@IntCurveSurface_ThePolygonToolOfHInter@F@BeginOfSeg#&1$@S@IntCurveSurface_ThePolygonOfHInter#I#S",
+      "nativeName": "IntCurveSurface_ThePolygonToolOfHInter::BeginOfSeg",
+      "beforeCode": "BL204",
+      "afterCode": "BL208",
+      "beforeCategory": "BorrowedOrOutputReference",
+      "afterCategory": "UnmappedValueType",
+      "reason": "Const reference return now maps, but a remaining geometry, topology, string, or mesh-pointer value parameter has no automatic projection."
+    },
+    {
+      "stableId": "c:@S@IntCurveSurface_ThePolygonToolOfHInter@F@EndOfSeg#&1$@S@IntCurveSurface_ThePolygonOfHInter#I#S",
+      "nativeName": "IntCurveSurface_ThePolygonToolOfHInter::EndOfSeg",
+      "beforeCode": "BL204",
+      "afterCode": "BL208",
+      "beforeCategory": "BorrowedOrOutputReference",
+      "afterCategory": "UnmappedValueType",
+      "reason": "Const reference return now maps, but a remaining geometry, topology, string, or mesh-pointer value parameter has no automatic projection."
+    },
+    {
+      "stableId": "c:@S@IntCurveSurface_ThePolyhedronToolOfHInter@F@Point#&1$@S@IntCurveSurface_ThePolyhedronOfHInter#I#S",
+      "nativeName": "IntCurveSurface_ThePolyhedronToolOfHInter::Point",
+      "beforeCode": "BL204",
+      "afterCode": "BL208",
+      "beforeCategory": "BorrowedOrOutputReference",
+      "afterCategory": "UnmappedValueType",
+      "reason": "Const reference return now maps, but a remaining geometry, topology, string, or mesh-pointer value parameter has no automatic projection."
+    },
+    {
+      "stableId": "c:@S@IntPatch_PolyhedronTool@F@Point#&1$@S@IntPatch_Polyhedron#I#S",
+      "nativeName": "IntPatch_PolyhedronTool::Point",
+      "beforeCode": "BL204",
+      "afterCode": "BL208",
+      "beforeCategory": "BorrowedOrOutputReference",
+      "afterCategory": "UnmappedValueType",
+      "reason": "Const reference return now maps, but a remaining geometry, topology, string, or mesh-pointer value parameter has no automatic projection."
+    },
+    {
+      "stableId": "c:@S@OpenGl_Context@F@GetBufferSubData#i#K#K#*v#",
+      "nativeName": "OpenGl_Context::GetBufferSubData",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Numeric or copied return/input now maps, but a raw pointer parameter still needs an explicit buffer or lifetime contract."
+    },
+    {
+      "stableId": "c:@S@OpenGl_Context@F@GetResource#&1$@S@TCollection_AsciiString#1",
+      "nativeName": "OpenGl_Context::GetResource",
+      "beforeCode": "BL204",
+      "afterCode": "BL208",
+      "beforeCategory": "BorrowedOrOutputReference",
+      "afterCategory": "UnmappedValueType",
+      "reason": "Const reference return now maps, but a remaining geometry, topology, string, or mesh-pointer value parameter has no automatic projection."
+    },
+    {
+      "stableId": "c:@S@ShapeExtend_CompositeSurface@F@Patch#&1$@S@gp_Pnt2d#1",
+      "nativeName": "ShapeExtend_CompositeSurface::Patch",
+      "beforeCode": "BL204",
+      "afterCode": "BL208",
+      "beforeCategory": "BorrowedOrOutputReference",
+      "afterCategory": "UnmappedValueType",
+      "reason": "Const reference return now maps, but a remaining geometry, topology, string, or mesh-pointer value parameter has no automatic projection."
+    },
+    {
+      "stableId": "c:@S@VrmlData_ArrayVec3d@F@SetValues#k#*1$@S@gp_XYZ#",
+      "nativeName": "VrmlData_ArrayVec3d::SetValues",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Numeric or copied return/input now maps, but a raw pointer parameter still needs an explicit buffer or lifetime contract."
+    },
+    {
+      "stableId": "c:@S@VrmlData_Color@F@SetColors#k#*1$@S@gp_XYZ#",
+      "nativeName": "VrmlData_Color::SetColors",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Numeric or copied return/input now maps, but a raw pointer parameter still needs an explicit buffer or lifetime contract."
+    },
+    {
+      "stableId": "c:@S@VrmlData_IndexedFaceSet@F@ArrayColorInd#&**1I#1",
+      "nativeName": "VrmlData_IndexedFaceSet::ArrayColorInd",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Numeric or copied return/input now maps, but a raw pointer parameter still needs an explicit buffer or lifetime contract."
+    },
+    {
+      "stableId": "c:@S@VrmlData_IndexedFaceSet@F@ArrayNormalInd#&**1I#1",
+      "nativeName": "VrmlData_IndexedFaceSet::ArrayNormalInd",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Numeric or copied return/input now maps, but a raw pointer parameter still needs an explicit buffer or lifetime contract."
+    },
+    {
+      "stableId": "c:@S@VrmlData_IndexedFaceSet@F@ArrayTextureCoordInd#&**1I#1",
+      "nativeName": "VrmlData_IndexedFaceSet::ArrayTextureCoordInd",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Numeric or copied return/input now maps, but a raw pointer parameter still needs an explicit buffer or lifetime contract."
+    },
+    {
+      "stableId": "c:@S@VrmlData_IndexedFaceSet@F@Polygons#&**1I#1",
+      "nativeName": "VrmlData_IndexedFaceSet::Polygons",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Numeric or copied return/input now maps, but a raw pointer parameter still needs an explicit buffer or lifetime contract."
+    },
+    {
+      "stableId": "c:@S@VrmlData_IndexedFaceSet@F@SetColorInd#k#**1I#",
+      "nativeName": "VrmlData_IndexedFaceSet::SetColorInd",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Numeric or copied return/input now maps, but a raw pointer parameter still needs an explicit buffer or lifetime contract."
+    },
+    {
+      "stableId": "c:@S@VrmlData_IndexedFaceSet@F@SetNormalInd#k#**1I#",
+      "nativeName": "VrmlData_IndexedFaceSet::SetNormalInd",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Numeric or copied return/input now maps, but a raw pointer parameter still needs an explicit buffer or lifetime contract."
+    },
+    {
+      "stableId": "c:@S@VrmlData_IndexedFaceSet@F@SetPolygons#k#**1I#",
+      "nativeName": "VrmlData_IndexedFaceSet::SetPolygons",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Numeric or copied return/input now maps, but a raw pointer parameter still needs an explicit buffer or lifetime contract."
+    },
+    {
+      "stableId": "c:@S@VrmlData_IndexedFaceSet@F@SetTextureCoordInd#k#**1I#",
+      "nativeName": "VrmlData_IndexedFaceSet::SetTextureCoordInd",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Numeric or copied return/input now maps, but a raw pointer parameter still needs an explicit buffer or lifetime contract."
+    },
+    {
+      "stableId": "c:@S@VrmlData_IndexedLineSet@F@ArrayColorInd#&**1I#1",
+      "nativeName": "VrmlData_IndexedLineSet::ArrayColorInd",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Numeric or copied return/input now maps, but a raw pointer parameter still needs an explicit buffer or lifetime contract."
+    },
+    {
+      "stableId": "c:@S@VrmlData_IndexedLineSet@F@Polygons#&**1I#1",
+      "nativeName": "VrmlData_IndexedLineSet::Polygons",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Numeric or copied return/input now maps, but a raw pointer parameter still needs an explicit buffer or lifetime contract."
+    },
+    {
+      "stableId": "c:@S@VrmlData_IndexedLineSet@F@SetColorInd#k#**1I#",
+      "nativeName": "VrmlData_IndexedLineSet::SetColorInd",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Numeric or copied return/input now maps, but a raw pointer parameter still needs an explicit buffer or lifetime contract."
+    },
+    {
+      "stableId": "c:@S@VrmlData_IndexedLineSet@F@SetPolygons#k#**1I#",
+      "nativeName": "VrmlData_IndexedLineSet::SetPolygons",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Numeric or copied return/input now maps, but a raw pointer parameter still needs an explicit buffer or lifetime contract."
+    },
+    {
+      "stableId": "c:@S@VrmlData_TextureCoordinate@F@SetPoints#k#*1$@S@gp_XY#",
+      "nativeName": "VrmlData_TextureCoordinate::SetPoints",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Numeric or copied return/input now maps, but a raw pointer parameter still needs an explicit buffer or lifetime contract."
+    },
+    {
+      "stableId": "c:@S@XmlMDF_ADriverTable@F@AddDerivedDriver#*1C#",
+      "nativeName": "XmlMDF_ADriverTable::AddDerivedDriver",
+      "beforeCode": "BL204",
+      "afterCode": "BL202",
+      "beforeCategory": "BorrowedOrOutputReference",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Numeric or copied return/input now maps, but a raw pointer parameter still needs an explicit buffer or lifetime contract."
+    }
+  ]
+}

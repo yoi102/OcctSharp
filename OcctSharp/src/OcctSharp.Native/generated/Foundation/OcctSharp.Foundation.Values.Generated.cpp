@@ -9,6 +9,7 @@
 // Source: c:@F@ATanh#d#
 // Source: c:@F@Abs#I#
 // Source: c:@F@Abs#d#
+// Source: c:@F@Abs#f#
 // Source: c:@F@Ceiling#d#
 // Source: c:@F@Cos#d#
 // Source: c:@F@Cosh#d#
@@ -27,8 +28,10 @@
 // Source: c:@F@Log10#d#
 // Source: c:@F@Max#I#I#
 // Source: c:@F@Max#d#d#
+// Source: c:@F@Max#f#f#
 // Source: c:@F@Min#I#I#
 // Source: c:@F@Min#d#d#
+// Source: c:@F@Min#f#f#
 // Source: c:@F@Modulus#I#I#
 // Source: c:@F@NextAfter#d#d#
 // Source: c:@F@OCCT_Version_Double
@@ -45,13 +48,18 @@
 // Source: c:@F@RealSize#
 // Source: c:@F@RealSmall#
 // Source: c:@F@RealToInt#d#
+// Source: c:@F@RealToShortReal#d#
 // Source: c:@F@Round#d#
 // Source: c:@F@ShortRealDigits#
+// Source: c:@F@ShortRealEpsilon#
+// Source: c:@F@ShortRealFirst#
 // Source: c:@F@ShortRealFirst10Exp#
+// Source: c:@F@ShortRealLast#
 // Source: c:@F@ShortRealLast10Exp#
 // Source: c:@F@ShortRealMantissa#
 // Source: c:@F@ShortRealRadix#
 // Source: c:@F@ShortRealSize#
+// Source: c:@F@ShortRealSmall#
 // Source: c:@F@Sign#d#d#
 // Source: c:@F@Sin#d#
 // Source: c:@F@Sinh#d#
@@ -82,6 +90,7 @@
 // Source: c:@S@OSD_Parallel@F@SetUseOcctThreads#b#S
 // Source: c:@S@OSD_Parallel@F@ToUseOcctThreads#S
 // Source: c:@S@OSD_PerfMeter@F@ResetALL#S
+// Source: c:@S@OSD_Thread@F@Current#S
 // Source: c:@S@OSD_Timer@F@GetWallClockTime#S
 // Source: c:@S@Precision@F@Angular#S
 // Source: c:@S@Precision@F@Approximation#S
@@ -104,7 +113,11 @@
 // Source: c:@S@Precision@F@SquareConfusion#S
 // Source: c:@S@Precision@F@SquarePConfusion#S
 // Source: c:@S@Quantity_Color@F@Convert_LinearRGB_To_sRGB#d#S
+// Source: c:@S@Quantity_Color@F@Convert_LinearRGB_To_sRGB#f#S
+// Source: c:@S@Quantity_Color@F@Convert_LinearRGB_To_sRGB_approx22#f#S
 // Source: c:@S@Quantity_Color@F@Convert_sRGB_To_LinearRGB#d#S
+// Source: c:@S@Quantity_Color@F@Convert_sRGB_To_LinearRGB#f#S
+// Source: c:@S@Quantity_Color@F@Convert_sRGB_To_LinearRGB_approx22#f#S
 // Source: c:@S@Quantity_Color@F@Epsilon#S
 // Source: c:@S@Quantity_Color@F@Name#d#d#d#S
 // Source: c:@S@Quantity_Color@F@SetEpsilon#d#S
@@ -135,6 +148,16 @@
 // Source: c:@S@math@F@GaussPointsMax#S
 // Source: c:@S@math@F@KronrodPointsMax#S
 #include "OcctSharp.Foundation.Values.Generated.h"
+#include <climits>
+#include <cstdint>
+#include <limits>
+static_assert(CHAR_BIT == 8 && sizeof(short) == 2 && sizeof(int) == 4);
+static_assert(sizeof(long) == 4 && sizeof(long long) == 8 && sizeof(size_t) == 8);
+static_assert(sizeof(float) == 4 && std::numeric_limits<float>::is_iec559);
+static_assert(sizeof(double) == 8 && std::numeric_limits<double>::is_iec559);
+#include <Standard_Failure.hxx>
+#include <exception>
+#include "../../include/OcctSharp.Native.Internal.hxx"
 
 #include <Expr.hxx>
 #include <Message_AttributeMeter.hxx>
@@ -142,6 +165,7 @@
 #include <OSD.hxx>
 #include <OSD_Parallel.hxx>
 #include <OSD_PerfMeter.hxx>
+#include <OSD_Thread.hxx>
 #include <OSD_Timer.hxx>
 #include <Precision.hxx>
 #include <Quantity_Color.hxx>
@@ -221,6 +245,21 @@ double OCCTSHARP_CALL occtsharp_generated_standard_standard_real_abs_static_bs_0
   const double theValue)
 {
   return Abs(theValue);
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_standard_standard_short_real_abs_static_bs_0(float theValue, float* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = Abs(static_cast<const float>(theValue));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
 }
 
 double OCCTSHARP_CALL occtsharp_generated_standard_standard_real_ceiling_static_eiling_0(
@@ -331,6 +370,21 @@ double OCCTSHARP_CALL occtsharp_generated_standard_standard_real_max_static_ax_0
   return Max(theValue1, theValue2);
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_standard_standard_short_real_max_static_ax_0(float theValue1, float theValue2, float* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = Max(static_cast<const float>(theValue1), static_cast<const float>(theValue2));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
 int32_t OCCTSHARP_CALL occtsharp_generated_standard_standard_integer_min_static_in_0(
   const int32_t theValue1,
   const int32_t theValue2)
@@ -343,6 +397,21 @@ double OCCTSHARP_CALL occtsharp_generated_standard_standard_real_min_static_in_0
   const double theValue2)
 {
   return Min(theValue1, theValue2);
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_standard_standard_short_real_min_static_in_0(float theValue1, float theValue2, float* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = Min(static_cast<const float>(theValue1), static_cast<const float>(theValue2));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
 }
 
 int32_t OCCTSHARP_CALL occtsharp_generated_standard_standard_integer_modulus_static_odulus_0(
@@ -433,6 +502,21 @@ int32_t OCCTSHARP_CALL occtsharp_generated_standard_standard_real_real_to_int_st
   return RealToInt(theValue);
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_standard_standard_real_real_to_short_real_static_eal_to_short_real_0(double theValue, float* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = RealToShortReal(theValue);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
 double OCCTSHARP_CALL occtsharp_generated_standard_standard_real_round_static_ound_0(
   const double theValue)
 {
@@ -444,9 +528,54 @@ int32_t OCCTSHARP_CALL occtsharp_generated_standard_standard_short_real_short_re
   return ShortRealDigits();
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_standard_standard_short_real_short_real_epsilon_static_hort_real_epsilon_0(float* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = ShortRealEpsilon();
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_standard_standard_short_real_short_real_first_static_hort_real_first_0(float* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = ShortRealFirst();
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
 int32_t OCCTSHARP_CALL occtsharp_generated_standard_standard_short_real_short_real_first10_exp_static_hort_real_first10_exp_0(void)
 {
   return ShortRealFirst10Exp();
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_standard_standard_short_real_short_real_last_static_hort_real_last_0(float* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = ShortRealLast();
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
 }
 
 int32_t OCCTSHARP_CALL occtsharp_generated_standard_standard_short_real_short_real_last10_exp_static_hort_real_last10_exp_0(void)
@@ -467,6 +596,21 @@ int32_t OCCTSHARP_CALL occtsharp_generated_standard_standard_short_real_short_re
 int32_t OCCTSHARP_CALL occtsharp_generated_standard_standard_short_real_short_real_size_static_hort_real_size_0(void)
 {
   return ShortRealSize();
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_standard_standard_short_real_short_real_small_static_hort_real_small_0(float* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = ShortRealSmall();
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
 }
 
 double OCCTSHARP_CALL occtsharp_generated_standard_standard_real_sign_static_ign_0(
@@ -643,6 +787,21 @@ void OCCTSHARP_CALL occtsharp_generated_osd_perf_meter_reset_all_static_reset_al
   return OSD_PerfMeter::ResetALL();
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_osd_thread_current_static_current_0(uint64_t* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OSD_Thread::Current();
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
 double OCCTSHARP_CALL occtsharp_generated_osd_timer_get_wall_clock_time_static_get_wall_clock_time_0(void)
 {
   return OSD_Timer::GetWallClockTime();
@@ -763,10 +922,70 @@ double OCCTSHARP_CALL occtsharp_generated_quantity_color_convert_linear_rgb_to_s
   return Quantity_Color::Convert_LinearRGB_To_sRGB(theLinearValue);
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_quantity_color_convert_linear_rgb_to_s_rgb_static_convert__linear_rgb__to_s_rgb_1(float theLinearValue, float* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = Quantity_Color::Convert_LinearRGB_To_sRGB(static_cast<float>(theLinearValue));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_quantity_color_convert_linear_rgb_to_s_rgb_approx22_static_convert__linear_rgb__to_s_rgb_approx22_0(float theLinearValue, float* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = Quantity_Color::Convert_LinearRGB_To_sRGB_approx22(static_cast<float>(theLinearValue));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
 double OCCTSHARP_CALL occtsharp_generated_quantity_color_convert_s_rgb_to_linear_rgb_static_convert_s_rgb__to__linear_rgb_0(
   const double thesRGBValue)
 {
   return Quantity_Color::Convert_sRGB_To_LinearRGB(thesRGBValue);
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_quantity_color_convert_s_rgb_to_linear_rgb_static_convert_s_rgb__to__linear_rgb_1(float thesRGBValue, float* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = Quantity_Color::Convert_sRGB_To_LinearRGB(static_cast<float>(thesRGBValue));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_quantity_color_convert_s_rgb_to_linear_rgb_approx22_static_convert_s_rgb__to__linear_rgb_approx22_0(float thesRGBValue, float* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = Quantity_Color::Convert_sRGB_To_LinearRGB_approx22(static_cast<float>(thesRGBValue));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
 }
 
 double OCCTSHARP_CALL occtsharp_generated_quantity_color_epsilon_static_epsilon_0(void)

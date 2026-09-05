@@ -4,6 +4,14 @@ Execution cadence and task sizing follow [WORKFLOW](WORKFLOW.md) under ADR-0091.
 The technical boundaries below remain applicable; their historical batch counts and
 validation numbers are evidence snapshots. Current progress is maintained in [STATUS](STATUS.md).
 
+## Batch X generated projection boundary
+
+ADR-0092 broadens the centralized type map and emitters across existing modules. An
+embedded Preview.22 stable-ID epoch preserves old overload identities. Numeric values
+and known const references cross as fixed-width copies or independent retained handles;
+new static entry points use the same status/error channel as checked shared calls.
+There is no new module, native DLL, registry owner or general borrowed-reference model.
+
 ## Batch W review boundary
 
 ADR-0090 retains the existing Viewer owner, creating thread, modules and native DLL.

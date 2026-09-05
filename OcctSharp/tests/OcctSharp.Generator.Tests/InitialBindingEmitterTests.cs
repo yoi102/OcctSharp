@@ -9,6 +9,31 @@ public sealed class InitialBindingEmitterTests
     private const string TestStableId = "test:gp-pnt-three-coordinates";
 
     [Fact]
+    public void NewScalarOverloadAppendsWithoutChangingExistingAbiAndContainsExceptions()
+    {
+        DiscoveryReport basis = CreateReport();
+        BindingDeclaration oldMethod = CreatePrecisionMethod(
+            "c:@S@Precision@F@PApproximation#d#S", "Precision::PApproximation", "Z existing double",
+            CreateValueType("double", false), [new(0, "value", CreateValueType("double", false), false)]);
+        BindingDeclaration newMethod = CreatePrecisionMethod(
+            "x:new-float-overload", "Precision::PApproximation", "A new float sorts before old double",
+            CreateValueType("double", false), [new(0, "value", CreateValueType("float", false), false)]);
+        GeneratedBindingSet emitted = InitialBindingEmitter.Emit(basis with
+        {
+            Model = new BindingModel([.. basis.Model.Declarations, newMethod, oldMethod]),
+        });
+        string native = Assert.Single(emitted.Files, file => file.RelativePath.EndsWith("Foundation.Values.Generated.cpp", StringComparison.Ordinal)).Content;
+        Assert.Contains("double OCCTSHARP_CALL occtsharp_generated_precision_static_p_approximation_0(", native, StringComparison.Ordinal);
+        Assert.Contains("OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_precision_static_p_approximation_1(float value, double* generatedResult)", native, StringComparison.Ordinal);
+        Assert.Contains("static_cast<float>(value)", native, StringComparison.Ordinal);
+        Assert.Contains("catch (const Standard_Failure& error)", native, StringComparison.Ordinal);
+        Assert.Contains("if (generatedResult == nullptr)", native, StringComparison.Ordinal);
+        string managed = Assert.Single(emitted.Files, file => file.RelativePath.EndsWith("Foundation.ScalarRaw.Generated.cs", StringComparison.Ordinal)).Content;
+        Assert.Contains("internal static partial double PrecisionStaticPApproximation0(double value)", managed, StringComparison.Ordinal);
+        Assert.Contains("NativeError.ThrowIfFailed(PrecisionStaticPApproximation1Checked", managed, StringComparison.Ordinal);
+    }
+
+    [Fact]
     public void EmitsDeterministicNativeAndManagedPointBinding()
     {
         DiscoveryReport report = CreateReport();
@@ -43,19 +68,19 @@ public sealed class InitialBindingEmitterTests
         [
             .. baseReport.Model.Declarations,
             CreatePrecisionMethod(
-                "precision:p-approximation-no-arguments",
+                "c:@S@Precision@F@PApproximation#S",
                 "Precision::PApproximation",
                 "Precision::PApproximation: double ()",
                 real,
                 []),
             CreatePrecisionMethod(
-                "precision:p-approximation-with-value",
+                "c:@S@Precision@F@PApproximation#d#S",
                 "Precision::PApproximation",
                 "Precision::PApproximation: double (const double)",
                 real,
                 [new BindingParameter(0, "value", constReal, false)]),
             CreatePrecisionMethod(
-                "precision:is-infinite",
+                "c:@S@Precision@F@IsInfinite#d#S",
                 "Precision::IsInfinite",
                 "Precision::IsInfinite: bool (const double)",
                 boolean,
@@ -247,7 +272,7 @@ public sealed class InitialBindingEmitterTests
     {
         DiscoveryReport baseReport = CreateReport();
         BindingDeclaration function = new(
-            "standard:assert-no-op",
+            "c:@F@Standard_ASSERT_DO_NOTHING#",
             "Standard_ASSERT_DO_NOTHING",
             BindingDeclarationKind.Function,
             "Standard_Assert.hxx",

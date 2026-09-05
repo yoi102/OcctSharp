@@ -1,5 +1,22 @@
 # Special Cases
 
+## SC-061: Batch X declaration-level reference and artifact exceptions
+
+The generic X type rules do not override SDK-specific return semantics or binary availability.
+
+- `c:@S@BSplCLib@F@FlatBezierKnots#I#S`: BSplCLib.hxx documents a pointer to a
+  statically allocated flat-knot array despite the `const double&` spelling. Keep
+  Blocked/BL209 (ReferenceSequenceContract), not a scalar getter. A future sized buffer
+  projection must include degree bounds and all knots. No Manual ID is counted here.
+- `c:@S@Cocoa_Window@F@VirtualKeyFromNative#I#S`: X exposed this unsigned return
+  signature, but the Windows link fails with LNK2019 for
+  `?VirtualKeyFromNative@Cocoa_Window@@SAIH@Z`; an exact scan of the 62 bundled Release
+  DLL export tables found zero matches. Exclude only this declaration as SK008 /
+  ArtifactUnavailable. No Cocoa family or other overload is excluded.
+
+Evidence: `artifacts/batch-x-reference-audit.json`, `batch-x-release-second.log` and
+the entry/exit accounting. The new wrappers are generated, not a manual migration wave.
+
 ## SC-060: Viewer-owned rendering resources and copied frames
 
 ADR-0090 keeps lights, textures, environment images, appearance and layers within the

@@ -9,6 +9,7 @@
 // Source: c:@F@ATanh#d#
 // Source: c:@F@Abs#I#
 // Source: c:@F@Abs#d#
+// Source: c:@F@Abs#f#
 // Source: c:@F@Ceiling#d#
 // Source: c:@F@Cos#d#
 // Source: c:@F@Cosh#d#
@@ -27,8 +28,10 @@
 // Source: c:@F@Log10#d#
 // Source: c:@F@Max#I#I#
 // Source: c:@F@Max#d#d#
+// Source: c:@F@Max#f#f#
 // Source: c:@F@Min#I#I#
 // Source: c:@F@Min#d#d#
+// Source: c:@F@Min#f#f#
 // Source: c:@F@Modulus#I#I#
 // Source: c:@F@NextAfter#d#d#
 // Source: c:@F@OCCT_Version_Double
@@ -45,13 +48,18 @@
 // Source: c:@F@RealSize#
 // Source: c:@F@RealSmall#
 // Source: c:@F@RealToInt#d#
+// Source: c:@F@RealToShortReal#d#
 // Source: c:@F@Round#d#
 // Source: c:@F@ShortRealDigits#
+// Source: c:@F@ShortRealEpsilon#
+// Source: c:@F@ShortRealFirst#
 // Source: c:@F@ShortRealFirst10Exp#
+// Source: c:@F@ShortRealLast#
 // Source: c:@F@ShortRealLast10Exp#
 // Source: c:@F@ShortRealMantissa#
 // Source: c:@F@ShortRealRadix#
 // Source: c:@F@ShortRealSize#
+// Source: c:@F@ShortRealSmall#
 // Source: c:@F@Sign#d#d#
 // Source: c:@F@Sin#d#
 // Source: c:@F@Sinh#d#
@@ -82,6 +90,7 @@
 // Source: c:@S@OSD_Parallel@F@SetUseOcctThreads#b#S
 // Source: c:@S@OSD_Parallel@F@ToUseOcctThreads#S
 // Source: c:@S@OSD_PerfMeter@F@ResetALL#S
+// Source: c:@S@OSD_Thread@F@Current#S
 // Source: c:@S@OSD_Timer@F@GetWallClockTime#S
 // Source: c:@S@Precision@F@Angular#S
 // Source: c:@S@Precision@F@Approximation#S
@@ -104,7 +113,11 @@
 // Source: c:@S@Precision@F@SquareConfusion#S
 // Source: c:@S@Precision@F@SquarePConfusion#S
 // Source: c:@S@Quantity_Color@F@Convert_LinearRGB_To_sRGB#d#S
+// Source: c:@S@Quantity_Color@F@Convert_LinearRGB_To_sRGB#f#S
+// Source: c:@S@Quantity_Color@F@Convert_LinearRGB_To_sRGB_approx22#f#S
 // Source: c:@S@Quantity_Color@F@Convert_sRGB_To_LinearRGB#d#S
+// Source: c:@S@Quantity_Color@F@Convert_sRGB_To_LinearRGB#f#S
+// Source: c:@S@Quantity_Color@F@Convert_sRGB_To_LinearRGB_approx22#f#S
 // Source: c:@S@Quantity_Color@F@Epsilon#S
 // Source: c:@S@Quantity_Color@F@Name#d#d#d#S
 // Source: c:@S@Quantity_Color@F@SetEpsilon#d#S
@@ -181,6 +194,14 @@ internal static partial class FoundationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_standard_standard_real_abs_static_bs_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial double StandardStandardRealStaticbs0(double theValue);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_standard_standard_short_real_abs_static_bs_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus StandardStandardShortRealStaticbs0Checked(float theValue, out float generatedResult);
+    internal static float StandardStandardShortRealStaticbs0(float theValue)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(StandardStandardShortRealStaticbs0Checked(theValue, out float generatedResult), "occtsharp_generated_standard_standard_short_real_abs_static_bs_0");
+        return generatedResult;
+    }
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_standard_standard_real_ceiling_static_eiling_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -253,6 +274,14 @@ internal static partial class FoundationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_standard_standard_real_max_static_ax_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial double StandardStandardRealStaticax0(double theValue1, double theValue2);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_standard_standard_short_real_max_static_ax_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus StandardStandardShortRealStaticax0Checked(float theValue1, float theValue2, out float generatedResult);
+    internal static float StandardStandardShortRealStaticax0(float theValue1, float theValue2)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(StandardStandardShortRealStaticax0Checked(theValue1, theValue2, out float generatedResult), "occtsharp_generated_standard_standard_short_real_max_static_ax_0");
+        return generatedResult;
+    }
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_standard_standard_integer_min_static_in_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -261,6 +290,14 @@ internal static partial class FoundationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_standard_standard_real_min_static_in_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial double StandardStandardRealStaticin0(double theValue1, double theValue2);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_standard_standard_short_real_min_static_in_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus StandardStandardShortRealStaticin0Checked(float theValue1, float theValue2, out float generatedResult);
+    internal static float StandardStandardShortRealStaticin0(float theValue1, float theValue2)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(StandardStandardShortRealStaticin0Checked(theValue1, theValue2, out float generatedResult), "occtsharp_generated_standard_standard_short_real_min_static_in_0");
+        return generatedResult;
+    }
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_standard_standard_integer_modulus_static_odulus_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -325,6 +362,14 @@ internal static partial class FoundationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_standard_standard_real_real_to_int_static_eal_to_int_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial int StandardStandardRealStaticealToInt0(double theValue);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_standard_standard_real_real_to_short_real_static_eal_to_short_real_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus StandardStandardRealStaticealToShortReal0Checked(double theValue, out float generatedResult);
+    internal static float StandardStandardRealStaticealToShortReal0(double theValue)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(StandardStandardRealStaticealToShortReal0Checked(theValue, out float generatedResult), "occtsharp_generated_standard_standard_real_real_to_short_real_static_eal_to_short_real_0");
+        return generatedResult;
+    }
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_standard_standard_real_round_static_ound_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -333,10 +378,34 @@ internal static partial class FoundationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_standard_standard_short_real_short_real_digits_static_hort_real_digits_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial int StandardStandardShortRealStatichortRealDigits0();
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_standard_standard_short_real_short_real_epsilon_static_hort_real_epsilon_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus StandardStandardShortRealStatichortRealEpsilon0Checked(out float generatedResult);
+    internal static float StandardStandardShortRealStatichortRealEpsilon0()
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(StandardStandardShortRealStatichortRealEpsilon0Checked(out float generatedResult), "occtsharp_generated_standard_standard_short_real_short_real_epsilon_static_hort_real_epsilon_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_standard_standard_short_real_short_real_first_static_hort_real_first_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus StandardStandardShortRealStatichortRealFirst0Checked(out float generatedResult);
+    internal static float StandardStandardShortRealStatichortRealFirst0()
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(StandardStandardShortRealStatichortRealFirst0Checked(out float generatedResult), "occtsharp_generated_standard_standard_short_real_short_real_first_static_hort_real_first_0");
+        return generatedResult;
+    }
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_standard_standard_short_real_short_real_first10_exp_static_hort_real_first10_exp_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial int StandardStandardShortRealStatichortRealFirst10Exp0();
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_standard_standard_short_real_short_real_last_static_hort_real_last_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus StandardStandardShortRealStatichortRealLast0Checked(out float generatedResult);
+    internal static float StandardStandardShortRealStatichortRealLast0()
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(StandardStandardShortRealStatichortRealLast0Checked(out float generatedResult), "occtsharp_generated_standard_standard_short_real_short_real_last_static_hort_real_last_0");
+        return generatedResult;
+    }
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_standard_standard_short_real_short_real_last10_exp_static_hort_real_last10_exp_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -353,6 +422,14 @@ internal static partial class FoundationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_standard_standard_short_real_short_real_size_static_hort_real_size_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial int StandardStandardShortRealStatichortRealSize0();
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_standard_standard_short_real_short_real_small_static_hort_real_small_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus StandardStandardShortRealStatichortRealSmall0Checked(out float generatedResult);
+    internal static float StandardStandardShortRealStatichortRealSmall0()
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(StandardStandardShortRealStatichortRealSmall0Checked(out float generatedResult), "occtsharp_generated_standard_standard_short_real_short_real_small_static_hort_real_small_0");
+        return generatedResult;
+    }
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_standard_standard_real_sign_static_ign_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -473,6 +550,14 @@ internal static partial class FoundationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_osd_perf_meter_reset_all_static_reset_all_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void OSDPerfMeterStaticResetALL0();
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_osd_thread_current_static_current_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus OSDThreadStaticCurrent0Checked(out ulong generatedResult);
+    internal static ulong OSDThreadStaticCurrent0()
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(OSDThreadStaticCurrent0Checked(out ulong generatedResult), "occtsharp_generated_osd_thread_current_static_current_0");
+        return generatedResult;
+    }
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_osd_timer_get_wall_clock_time_static_get_wall_clock_time_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -561,10 +646,42 @@ internal static partial class FoundationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_quantity_color_convert_linear_rgb_to_s_rgb_static_convert__linear_rgb__to_s_rgb_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial double QuantityColorStaticConvert_LinearRGB_To_sRGB0(double theLinearValue);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_quantity_color_convert_linear_rgb_to_s_rgb_static_convert__linear_rgb__to_s_rgb_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus QuantityColorStaticConvert_LinearRGB_To_sRGB1Checked(float theLinearValue, out float generatedResult);
+    internal static float QuantityColorStaticConvert_LinearRGB_To_sRGB1(float theLinearValue)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(QuantityColorStaticConvert_LinearRGB_To_sRGB1Checked(theLinearValue, out float generatedResult), "occtsharp_generated_quantity_color_convert_linear_rgb_to_s_rgb_static_convert__linear_rgb__to_s_rgb_1");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_quantity_color_convert_linear_rgb_to_s_rgb_approx22_static_convert__linear_rgb__to_s_rgb_approx22_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus QuantityColorStaticConvert_LinearRGB_To_sRGB_approx220Checked(float theLinearValue, out float generatedResult);
+    internal static float QuantityColorStaticConvert_LinearRGB_To_sRGB_approx220(float theLinearValue)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(QuantityColorStaticConvert_LinearRGB_To_sRGB_approx220Checked(theLinearValue, out float generatedResult), "occtsharp_generated_quantity_color_convert_linear_rgb_to_s_rgb_approx22_static_convert__linear_rgb__to_s_rgb_approx22_0");
+        return generatedResult;
+    }
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_quantity_color_convert_s_rgb_to_linear_rgb_static_convert_s_rgb__to__linear_rgb_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial double QuantityColorStaticConvert_sRGB_To_LinearRGB0(double thesRGBValue);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_quantity_color_convert_s_rgb_to_linear_rgb_static_convert_s_rgb__to__linear_rgb_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus QuantityColorStaticConvert_sRGB_To_LinearRGB1Checked(float thesRGBValue, out float generatedResult);
+    internal static float QuantityColorStaticConvert_sRGB_To_LinearRGB1(float thesRGBValue)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(QuantityColorStaticConvert_sRGB_To_LinearRGB1Checked(thesRGBValue, out float generatedResult), "occtsharp_generated_quantity_color_convert_s_rgb_to_linear_rgb_static_convert_s_rgb__to__linear_rgb_1");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_quantity_color_convert_s_rgb_to_linear_rgb_approx22_static_convert_s_rgb__to__linear_rgb_approx22_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus QuantityColorStaticConvert_sRGB_To_LinearRGB_approx220Checked(float thesRGBValue, out float generatedResult);
+    internal static float QuantityColorStaticConvert_sRGB_To_LinearRGB_approx220(float thesRGBValue)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(QuantityColorStaticConvert_sRGB_To_LinearRGB_approx220Checked(thesRGBValue, out float generatedResult), "occtsharp_generated_quantity_color_convert_s_rgb_to_linear_rgb_approx22_static_convert_s_rgb__to__linear_rgb_approx22_0");
+        return generatedResult;
+    }
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_quantity_color_epsilon_static_epsilon_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

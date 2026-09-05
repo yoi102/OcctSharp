@@ -3,6 +3,9 @@
 // Source: c:@S@BinMDataXtd@F@SetDocumentVersion#I#S
 // Source: c:@S@FSD_BinaryFile@F@InverseInt#I#S
 // Source: c:@S@FSD_BinaryFile@F@InverseReal#d#S
+// Source: c:@S@FSD_BinaryFile@F@InverseShortReal#f#S
+// Source: c:@S@FSD_BinaryFile@F@InverseSize#k#S
+// Source: c:@S@FSD_BinaryFile@F@InverseUint64#k#S
 // Source: c:@S@TDataXtd_Presentation@F@getColorNameFromOldEnum#I#S
 // Source: c:@S@TDataXtd_Presentation@F@getOldColorNameFromNewEnum#$@E@Quantity_NameOfColor#S
 // Source: c:@S@TDocStd_Document@F@CurrentStorageFormatVersion#S
@@ -35,6 +38,30 @@ internal static partial class DocumentsGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fsd_binary_file_inverse_real_static_inverse_real_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial double FSDBinaryFileStaticInverseReal0(double theValue);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fsd_binary_file_inverse_short_real_static_inverse_short_real_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus FSDBinaryFileStaticInverseShortReal0Checked(float theValue, out float generatedResult);
+    internal static float FSDBinaryFileStaticInverseShortReal0(float theValue)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(FSDBinaryFileStaticInverseShortReal0Checked(theValue, out float generatedResult), "occtsharp_generated_fsd_binary_file_inverse_short_real_static_inverse_short_real_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fsd_binary_file_inverse_size_static_inverse_size_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus FSDBinaryFileStaticInverseSize0Checked(ulong theValue, out ulong generatedResult);
+    internal static ulong FSDBinaryFileStaticInverseSize0(ulong theValue)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(FSDBinaryFileStaticInverseSize0Checked(theValue, out ulong generatedResult), "occtsharp_generated_fsd_binary_file_inverse_size_static_inverse_size_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fsd_binary_file_inverse_uint64_static_inverse_uint64_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus FSDBinaryFileStaticInverseUint640Checked(ulong theValue, out ulong generatedResult);
+    internal static ulong FSDBinaryFileStaticInverseUint640(ulong theValue)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(FSDBinaryFileStaticInverseUint640Checked(theValue, out ulong generatedResult), "occtsharp_generated_fsd_binary_file_inverse_uint64_static_inverse_uint64_0");
+        return generatedResult;
+    }
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_tdata_xtd_presentation_get_color_name_from_old_enum_static_get_color_name_from_old_enum_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

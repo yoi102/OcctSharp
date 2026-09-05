@@ -3,6 +3,7 @@
 // Source: c:@S@Adaptor2d_Curve2d@F@Bezier#1
 // Source: c:@S@Adaptor2d_Curve2d@F@Continuity#1
 // Source: c:@S@Adaptor2d_Curve2d@F@Degree#1
+// Source: c:@S@Adaptor2d_Curve2d@F@DynamicType#1
 // Source: c:@S@Adaptor2d_Curve2d@F@FirstParameter#1
 // Source: c:@S@Adaptor2d_Curve2d@F@GetType#1
 // Source: c:@S@Adaptor2d_Curve2d@F@IsClosed#1
@@ -22,6 +23,7 @@
 // Source: c:@S@Adaptor2d_Line2d@F@Bezier#1
 // Source: c:@S@Adaptor2d_Line2d@F@Continuity#1
 // Source: c:@S@Adaptor2d_Line2d@F@Degree#1
+// Source: c:@S@Adaptor2d_Line2d@F@DynamicType#1
 // Source: c:@S@Adaptor2d_Line2d@F@FirstParameter#1
 // Source: c:@S@Adaptor2d_Line2d@F@GetType#1
 // Source: c:@S@Adaptor2d_Line2d@F@IsClosed#1
@@ -42,7 +44,9 @@
 // Source: c:@S@Adaptor2d_OffsetCurve@F@BSpline#1
 // Source: c:@S@Adaptor2d_OffsetCurve@F@Bezier#1
 // Source: c:@S@Adaptor2d_OffsetCurve@F@Continuity#1
+// Source: c:@S@Adaptor2d_OffsetCurve@F@Curve#1
 // Source: c:@S@Adaptor2d_OffsetCurve@F@Degree#1
+// Source: c:@S@Adaptor2d_OffsetCurve@F@DynamicType#1
 // Source: c:@S@Adaptor2d_OffsetCurve@F@FirstParameter#1
 // Source: c:@S@Adaptor2d_OffsetCurve@F@GetType#1
 // Source: c:@S@Adaptor2d_OffsetCurve@F@IsClosed#1
@@ -66,6 +70,7 @@
 // Source: c:@S@Adaptor3d_Curve@F@Bezier#1
 // Source: c:@S@Adaptor3d_Curve@F@Continuity#1
 // Source: c:@S@Adaptor3d_Curve@F@Degree#1
+// Source: c:@S@Adaptor3d_Curve@F@DynamicType#1
 // Source: c:@S@Adaptor3d_Curve@F@EvalD0#d#1
 // Source: c:@S@Adaptor3d_Curve@F@FirstParameter#1
 // Source: c:@S@Adaptor3d_Curve@F@GetType#1
@@ -89,8 +94,11 @@
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@Bezier#1
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@Continuity#1
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@Degree#1
+// Source: c:@S@Adaptor3d_CurveOnSurface@F@DynamicType#1
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@EvalD0#d#1
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@FirstParameter#1
+// Source: c:@S@Adaptor3d_CurveOnSurface@F@GetCurve#1
+// Source: c:@S@Adaptor3d_CurveOnSurface@F@GetSurface#1
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@GetType#1
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@IsClosed#1
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@IsPeriodic#1
@@ -107,6 +115,7 @@
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@ShallowCopy#1
 // Source: c:@S@Adaptor3d_CurveOnSurface@F@Trim#d#d#d#1
 // Source: c:@S@Adaptor3d_HVertex@F@Adaptor3d_HVertex#
+// Source: c:@S@Adaptor3d_HVertex@F@DynamicType#1
 // Source: c:@S@Adaptor3d_HVertex@F@IsSame#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_HVertex#
 // Source: c:@S@Adaptor3d_HVertex@F@Orientation#
 // Source: c:@S@Adaptor3d_HVertex@F@Parameter#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#
@@ -119,6 +128,7 @@
 // Source: c:@S@Adaptor3d_IsoCurve@F@Bezier#1
 // Source: c:@S@Adaptor3d_IsoCurve@F@Continuity#1
 // Source: c:@S@Adaptor3d_IsoCurve@F@Degree#1
+// Source: c:@S@Adaptor3d_IsoCurve@F@DynamicType#1
 // Source: c:@S@Adaptor3d_IsoCurve@F@EvalD0#d#1
 // Source: c:@S@Adaptor3d_IsoCurve@F@FirstParameter#1
 // Source: c:@S@Adaptor3d_IsoCurve@F@GetType#1
@@ -137,11 +147,13 @@
 // Source: c:@S@Adaptor3d_IsoCurve@F@Period#1
 // Source: c:@S@Adaptor3d_IsoCurve@F@Resolution#d#1
 // Source: c:@S@Adaptor3d_IsoCurve@F@ShallowCopy#1
+// Source: c:@S@Adaptor3d_IsoCurve@F@Surface#1
 // Source: c:@S@Adaptor3d_IsoCurve@F@Trim#d#d#d#1
 // Source: c:@S@Adaptor3d_Surface@F@BSpline#1
 // Source: c:@S@Adaptor3d_Surface@F@BasisCurve#1
 // Source: c:@S@Adaptor3d_Surface@F@BasisSurface#1
 // Source: c:@S@Adaptor3d_Surface@F@Bezier#1
+// Source: c:@S@Adaptor3d_Surface@F@DynamicType#1
 // Source: c:@S@Adaptor3d_Surface@F@EvalD0#d#d#1
 // Source: c:@S@Adaptor3d_Surface@F@FirstUParameter#1
 // Source: c:@S@Adaptor3d_Surface@F@FirstVParameter#1
@@ -178,6 +190,7 @@
 // Source: c:@S@Adaptor3d_TopolTool@F@BSplSamplePnts#d#I#I#
 // Source: c:@S@Adaptor3d_TopolTool@F@ComputeSamplePoints#
 // Source: c:@S@Adaptor3d_TopolTool@F@DomainIsInfinite#
+// Source: c:@S@Adaptor3d_TopolTool@F@DynamicType#1
 // Source: c:@S@Adaptor3d_TopolTool@F@Has3d#1
 // Source: c:@S@Adaptor3d_TopolTool@F@Identical#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_HVertex#S0_#
 // Source: c:@S@Adaptor3d_TopolTool@F@Init#
@@ -207,6 +220,7 @@
 // Source: c:@S@AdvApp2Var_Iso@F@ChangeDomain#d#d#
 // Source: c:@S@AdvApp2Var_Iso@F@ChangeDomain#d#d#d#d#
 // Source: c:@S@AdvApp2Var_Iso@F@Constante#1
+// Source: c:@S@AdvApp2Var_Iso@F@DynamicType#1
 // Source: c:@S@AdvApp2Var_Iso@F@HasResult#1
 // Source: c:@S@AdvApp2Var_Iso@F@IsApproximated#1
 // Source: c:@S@AdvApp2Var_Iso@F@NbCoeff#1
@@ -226,7 +240,9 @@
 // Source: c:@S@AdvApp2Var_Iso@F@VOrder#1
 // Source: c:@S@AdvApp2Var_Node@F@AdvApp2Var_Node#
 // Source: c:@S@AdvApp2Var_Node@F@AdvApp2Var_Node#I#I#
+// Source: c:@S@AdvApp2Var_Node@F@DynamicType#1
 // Source: c:@S@AdvApp2Var_Node@F@Error#I#I#1
+// Source: c:@S@AdvApp2Var_Node@F@Point#I#I#1
 // Source: c:@S@AdvApp2Var_Node@F@SetCoord#d#d#
 // Source: c:@S@AdvApp2Var_Node@F@SetError#I#I#d#
 // Source: c:@S@AdvApp2Var_Node@F@SetPoint#I#I#&1$@S@gp_Pnt#
@@ -238,6 +254,7 @@
 // Source: c:@S@AdvApp2Var_Patch@F@ChangeNbCoeff#I#I#
 // Source: c:@S@AdvApp2Var_Patch@F@CritValue#1
 // Source: c:@S@AdvApp2Var_Patch@F@CutSense#1
+// Source: c:@S@AdvApp2Var_Patch@F@DynamicType#1
 // Source: c:@S@AdvApp2Var_Patch@F@HasResult#1
 // Source: c:@S@AdvApp2Var_Patch@F@IsApproximated#1
 // Source: c:@S@AdvApp2Var_Patch@F@IsDiscretised#1
@@ -252,13 +269,16 @@
 // Source: c:@S@AdvApp2Var_Patch@F@V0#1
 // Source: c:@S@AdvApp2Var_Patch@F@V1#1
 // Source: c:@S@AdvApp2Var_Patch@F@VOrder#1
+// Source: c:@S@AppDef_LinearCriteria@F@DynamicType#1
 // Source: c:@S@AppDef_LinearCriteria@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@FEmTool_Curve#
 // Source: c:@S@AppDef_LinearCriteria@F@SetEstimation#d#d#d#
 // Source: c:@S@AppDef_LinearCriteria@F@SetWeight#d#d#d#d#d#
 // Source: c:@S@AppDef_SmoothCriterion@F@Curve#1
+// Source: c:@S@AppDef_SmoothCriterion@F@DynamicType#1
 // Source: c:@S@Approx_CurvlinFunc@F@Approx_CurvlinFunc#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#d#
 // Source: c:@S@Approx_CurvlinFunc@F@Approx_CurvlinFunc#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#S0_#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#S3_#d#
 // Source: c:@S@Approx_CurvlinFunc@F@Approx_CurvlinFunc#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#d#
+// Source: c:@S@Approx_CurvlinFunc@F@DynamicType#1
 // Source: c:@S@Approx_CurvlinFunc@F@FirstParameter#1
 // Source: c:@S@Approx_CurvlinFunc@F@GetLength#1
 // Source: c:@S@Approx_CurvlinFunc@F@GetSParameter#d#1
@@ -268,14 +288,18 @@
 // Source: c:@S@Approx_CurvlinFunc@F@SetTol#d#
 // Source: c:@S@Approx_CurvlinFunc@F@Trim#d#d#d#
 // Source: c:@S@Approx_SweepFunction@F@BarycentreOfSurf#1
+// Source: c:@S@Approx_SweepFunction@F@DynamicType#1
 // Source: c:@S@Approx_SweepFunction@F@MaximalSection#1
+// Source: c:@S@BSplCLib_Cache@F@DynamicType#1
 // Source: c:@S@BSplCLib_Cache@F@IsCacheValid#d#1
+// Source: c:@S@BSplSLib_Cache@F@DynamicType#1
 // Source: c:@S@BSplSLib_Cache@F@IsCacheValid#d#d#1
 // Source: c:@S@BiTgte_CurveOnEdge@F@BSpline#1
 // Source: c:@S@BiTgte_CurveOnEdge@F@Bezier#1
 // Source: c:@S@BiTgte_CurveOnEdge@F@BiTgte_CurveOnEdge#
 // Source: c:@S@BiTgte_CurveOnEdge@F@Continuity#1
 // Source: c:@S@BiTgte_CurveOnEdge@F@Degree#1
+// Source: c:@S@BiTgte_CurveOnEdge@F@DynamicType#1
 // Source: c:@S@BiTgte_CurveOnEdge@F@EvalD0#d#1
 // Source: c:@S@BiTgte_CurveOnEdge@F@FirstParameter#1
 // Source: c:@S@BiTgte_CurveOnEdge@F@GetType#1
@@ -295,6 +319,7 @@
 // Source: c:@S@BiTgte_CurveOnVertex@F@BiTgte_CurveOnVertex#
 // Source: c:@S@BiTgte_CurveOnVertex@F@Continuity#1
 // Source: c:@S@BiTgte_CurveOnVertex@F@Degree#1
+// Source: c:@S@BiTgte_CurveOnVertex@F@DynamicType#1
 // Source: c:@S@BiTgte_CurveOnVertex@F@EvalD0#d#1
 // Source: c:@S@BiTgte_CurveOnVertex@F@FirstParameter#1
 // Source: c:@S@BiTgte_CurveOnVertex@F@GetType#1
@@ -312,6 +337,7 @@
 // Source: c:@S@Bisector_BisecAna@F@Continuity#1
 // Source: c:@S@Bisector_BisecAna@F@Copy#1
 // Source: c:@S@Bisector_BisecAna@F@Dump#I#I#1
+// Source: c:@S@Bisector_BisecAna@F@DynamicType#1
 // Source: c:@S@Bisector_BisecAna@F@FirstParameter#1
 // Source: c:@S@Bisector_BisecAna@F@Geom2dCurve#1
 // Source: c:@S@Bisector_BisecAna@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom2d_TrimmedCurve#
@@ -336,6 +362,7 @@
 // Source: c:@S@Bisector_BisecCC@F@Copy#1
 // Source: c:@S@Bisector_BisecCC@F@Curve#I#1
 // Source: c:@S@Bisector_BisecCC@F@Dump#I#I#1
+// Source: c:@S@Bisector_BisecCC@F@DynamicType#1
 // Source: c:@S@Bisector_BisecCC@F@FirstParameter#1
 // Source: c:@S@Bisector_BisecCC@F@IntervalContinuity#1
 // Source: c:@S@Bisector_BisecCC@F@IntervalFirst#I#1
@@ -357,6 +384,7 @@
 // Source: c:@S@Bisector_BisecPC@F@Copy#1
 // Source: c:@S@Bisector_BisecPC@F@Distance#d#1
 // Source: c:@S@Bisector_BisecPC@F@Dump#I#I#1
+// Source: c:@S@Bisector_BisecPC@F@DynamicType#1
 // Source: c:@S@Bisector_BisecPC@F@FirstParameter#1
 // Source: c:@S@Bisector_BisecPC@F@IntervalContinuity#1
 // Source: c:@S@Bisector_BisecPC@F@IntervalFirst#I#1
@@ -373,6 +401,8 @@
 // Source: c:@S@Bisector_BisecPC@F@NbIntervals#1
 // Source: c:@S@Bisector_BisecPC@F@Reverse#
 // Source: c:@S@Bisector_BisecPC@F@ReversedParameter#d#1
+// Source: c:@S@Bisector_Curve@F@DynamicType#1
+// Source: c:@S@Extrema_ExtPExtS@F@DynamicType#1
 // Source: c:@S@Extrema_ExtPExtS@F@Extrema_ExtPExtS#
 // Source: c:@S@Extrema_ExtPExtS@F@Extrema_ExtPExtS#&1$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@GeomAdaptor_SurfaceOfLinearExtrusion#d#d#
 // Source: c:@S@Extrema_ExtPExtS@F@Extrema_ExtPExtS#&1$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@GeomAdaptor_SurfaceOfLinearExtrusion#d#d#d#d#d#d#
@@ -381,6 +411,7 @@
 // Source: c:@S@Extrema_ExtPExtS@F@NbExt#1
 // Source: c:@S@Extrema_ExtPExtS@F@Perform#&1$@S@gp_Pnt#
 // Source: c:@S@Extrema_ExtPExtS@F@SquareDistance#I#1
+// Source: c:@S@Extrema_ExtPRevS@F@DynamicType#1
 // Source: c:@S@Extrema_ExtPRevS@F@Extrema_ExtPRevS#
 // Source: c:@S@Extrema_ExtPRevS@F@Extrema_ExtPRevS#&1$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@GeomAdaptor_SurfaceOfRevolution#d#d#
 // Source: c:@S@Extrema_ExtPRevS@F@Extrema_ExtPRevS#&1$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@GeomAdaptor_SurfaceOfRevolution#d#d#d#d#d#d#
@@ -391,33 +422,49 @@
 // Source: c:@S@Extrema_ExtPRevS@F@SquareDistance#I#1
 // Source: c:@S@FEmTool_Curve@F@Degree#I#1
 // Source: c:@S@FEmTool_Curve@F@Dimension#1
+// Source: c:@S@FEmTool_Curve@F@DynamicType#1
 // Source: c:@S@FEmTool_Curve@F@NbElements#1
 // Source: c:@S@FEmTool_Curve@F@SetDegree#I#I#
+// Source: c:@S@FEmTool_ElementaryCriterion@F@DynamicType#1
 // Source: c:@S@FEmTool_ElementaryCriterion@F@Set#d#d#
+// Source: c:@S@FEmTool_LinearFlexion@F@DynamicType#1
 // Source: c:@S@FEmTool_LinearFlexion@F@FEmTool_LinearFlexion#I#$@E@GeomAbs_Shape#
 // Source: c:@S@FEmTool_LinearFlexion@F@Value#
+// Source: c:@S@FEmTool_LinearJerk@F@DynamicType#1
 // Source: c:@S@FEmTool_LinearJerk@F@FEmTool_LinearJerk#I#$@E@GeomAbs_Shape#
 // Source: c:@S@FEmTool_LinearJerk@F@Value#
+// Source: c:@S@FEmTool_LinearTension@F@DynamicType#1
 // Source: c:@S@FEmTool_LinearTension@F@FEmTool_LinearTension#I#$@E@GeomAbs_Shape#
 // Source: c:@S@FEmTool_LinearTension@F@Value#
 // Source: c:@S@FEmTool_ProfileMatrix@F@ColNumber#1
 // Source: c:@S@FEmTool_ProfileMatrix@F@Decompose#
+// Source: c:@S@FEmTool_ProfileMatrix@F@DynamicType#1
 // Source: c:@S@FEmTool_ProfileMatrix@F@Init#d#
 // Source: c:@S@FEmTool_ProfileMatrix@F@IsInProfile#I#I#1
 // Source: c:@S@FEmTool_ProfileMatrix@F@OutM#1
 // Source: c:@S@FEmTool_ProfileMatrix@F@OutS#1
 // Source: c:@S@FEmTool_ProfileMatrix@F@Prepare#
 // Source: c:@S@FEmTool_ProfileMatrix@F@RowNumber#1
+// Source: c:@S@FEmTool_SparseMatrix@F@DynamicType#1
 // Source: c:@S@GccInt_BCirc@F@ArcType#1
+// Source: c:@S@GccInt_BCirc@F@DynamicType#1
 // Source: c:@S@GccInt_BElips@F@ArcType#1
+// Source: c:@S@GccInt_BElips@F@DynamicType#1
 // Source: c:@S@GccInt_BHyper@F@ArcType#1
+// Source: c:@S@GccInt_BHyper@F@DynamicType#1
 // Source: c:@S@GccInt_BLine@F@ArcType#1
+// Source: c:@S@GccInt_BLine@F@DynamicType#1
 // Source: c:@S@GccInt_BParab@F@ArcType#1
+// Source: c:@S@GccInt_BParab@F@DynamicType#1
 // Source: c:@S@GccInt_BPoint@F@ArcType#1
+// Source: c:@S@GccInt_BPoint@F@DynamicType#1
+// Source: c:@S@GccInt_Bisec@F@DynamicType#1
 // Source: c:@S@Geom2dAdaptor_Curve@F@BSpline#1
 // Source: c:@S@Geom2dAdaptor_Curve@F@Bezier#1
 // Source: c:@S@Geom2dAdaptor_Curve@F@Continuity#1
+// Source: c:@S@Geom2dAdaptor_Curve@F@Curve#1
 // Source: c:@S@Geom2dAdaptor_Curve@F@Degree#1
+// Source: c:@S@Geom2dAdaptor_Curve@F@DynamicType#1
 // Source: c:@S@Geom2dAdaptor_Curve@F@FirstParameter#1
 // Source: c:@S@Geom2dAdaptor_Curve@F@Geom2dAdaptor_Curve#
 // Source: c:@S@Geom2dAdaptor_Curve@F@Geom2dAdaptor_Curve#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#
@@ -444,6 +491,7 @@
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@Beta#1
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@Copy#1
+// Source: c:@S@Geom2dEval_AHTBezierCurve@F@DynamicType#1
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@FirstParameter#1
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@IsCN#I#1
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@IsClosed#1
@@ -455,6 +503,7 @@
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@Copy#1
+// Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@DynamicType#1
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@FirstParameter#1
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@GrowthRate#1
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@InitialRadius#1
@@ -466,6 +515,7 @@
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@Copy#1
+// Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@DynamicType#1
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@FirstParameter#1
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@IsCN#I#1
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@IsClosed#1
@@ -476,6 +526,7 @@
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@Copy#1
+// Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@DynamicType#1
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@FirstParameter#1
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@GrowthExponent#1
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@IsCN#I#1
@@ -488,6 +539,7 @@
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Amplitude#1
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Copy#1
+// Source: c:@S@Geom2dEval_SineWaveCurve@F@DynamicType#1
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@FirstParameter#1
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@IsCN#I#1
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@IsClosed#1
@@ -500,6 +552,7 @@
 // Source: c:@S@Geom2dEval_TBezierCurve@F@Alpha#1
 // Source: c:@S@Geom2dEval_TBezierCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_TBezierCurve@F@Copy#1
+// Source: c:@S@Geom2dEval_TBezierCurve@F@DynamicType#1
 // Source: c:@S@Geom2dEval_TBezierCurve@F@FirstParameter#1
 // Source: c:@S@Geom2dEval_TBezierCurve@F@IsCN#I#1
 // Source: c:@S@Geom2dEval_TBezierCurve@F@IsClosed#1
@@ -512,12 +565,15 @@
 // Source: c:@S@Geom2dEval_TBezierCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_AxisPlacement@F@Angle#&1$@N@opencascade@S@handle>#$@S@Geom2d_AxisPlacement#1
 // Source: c:@S@Geom2d_AxisPlacement@F@Copy#1
+// Source: c:@S@Geom2d_AxisPlacement@F@DynamicType#1
 // Source: c:@S@Geom2d_AxisPlacement@F@Reverse#
 // Source: c:@S@Geom2d_AxisPlacement@F@Reversed#1
 // Source: c:@S@Geom2d_BSplineCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom2d_BSplineCurve@F@Continuity#1
 // Source: c:@S@Geom2d_BSplineCurve@F@Copy#1
 // Source: c:@S@Geom2d_BSplineCurve@F@Degree#1
+// Source: c:@S@Geom2d_BSplineCurve@F@DynamicType#1
+// Source: c:@S@Geom2d_BSplineCurve@F@EvalRepresentation#1
 // Source: c:@S@Geom2d_BSplineCurve@F@FirstParameter#1
 // Source: c:@S@Geom2d_BSplineCurve@F@FirstUKnotIndex#1
 // Source: c:@S@Geom2d_BSplineCurve@F@HasEvalRepresentation#1
@@ -555,6 +611,8 @@
 // Source: c:@S@Geom2d_BezierCurve@F@Continuity#1
 // Source: c:@S@Geom2d_BezierCurve@F@Copy#1
 // Source: c:@S@Geom2d_BezierCurve@F@Degree#1
+// Source: c:@S@Geom2d_BezierCurve@F@DynamicType#1
+// Source: c:@S@Geom2d_BezierCurve@F@EvalRepresentation#1
 // Source: c:@S@Geom2d_BezierCurve@F@FirstParameter#1
 // Source: c:@S@Geom2d_BezierCurve@F@HasEvalRepresentation#1
 // Source: c:@S@Geom2d_BezierCurve@F@Increase#I#
@@ -571,7 +629,9 @@
 // Source: c:@S@Geom2d_BezierCurve@F@SetEvalRepresentation#&1$@N@opencascade@S@handle>#$@N@Geom2dEval_RepCurveDesc@S@Base#
 // Source: c:@S@Geom2d_BezierCurve@F@SetWeight#I#d#
 // Source: c:@S@Geom2d_BezierCurve@F@Weight#I#1
+// Source: c:@S@Geom2d_BoundedCurve@F@DynamicType#1
 // Source: c:@S@Geom2d_CartesianPoint@F@Copy#1
+// Source: c:@S@Geom2d_CartesianPoint@F@DynamicType#1
 // Source: c:@S@Geom2d_CartesianPoint@F@Geom2d_CartesianPoint#d#d#
 // Source: c:@S@Geom2d_CartesianPoint@F@SetCoord#d#d#
 // Source: c:@S@Geom2d_CartesianPoint@F@SetX#d#
@@ -579,6 +639,7 @@
 // Source: c:@S@Geom2d_CartesianPoint@F@X#1
 // Source: c:@S@Geom2d_CartesianPoint@F@Y#1
 // Source: c:@S@Geom2d_Circle@F@Copy#1
+// Source: c:@S@Geom2d_Circle@F@DynamicType#1
 // Source: c:@S@Geom2d_Circle@F@Eccentricity#1
 // Source: c:@S@Geom2d_Circle@F@FirstParameter#1
 // Source: c:@S@Geom2d_Circle@F@IsClosed#1
@@ -588,12 +649,15 @@
 // Source: c:@S@Geom2d_Circle@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_Circle@F@SetRadius#d#
 // Source: c:@S@Geom2d_Conic@F@Continuity#1
+// Source: c:@S@Geom2d_Conic@F@DynamicType#1
 // Source: c:@S@Geom2d_Conic@F@IsCN#I#1
 // Source: c:@S@Geom2d_Conic@F@Reverse#
+// Source: c:@S@Geom2d_Curve@F@DynamicType#1
 // Source: c:@S@Geom2d_Curve@F@Period#1
 // Source: c:@S@Geom2d_Curve@F@Reversed#1
 // Source: c:@S@Geom2d_Direction@F@Copy#1
 // Source: c:@S@Geom2d_Direction@F@Crossed#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
+// Source: c:@S@Geom2d_Direction@F@DynamicType#1
 // Source: c:@S@Geom2d_Direction@F@Geom2d_Direction#d#d#
 // Source: c:@S@Geom2d_Direction@F@Magnitude#1
 // Source: c:@S@Geom2d_Direction@F@SetCoord#d#d#
@@ -601,6 +665,7 @@
 // Source: c:@S@Geom2d_Direction@F@SetY#d#
 // Source: c:@S@Geom2d_Direction@F@SquareMagnitude#1
 // Source: c:@S@Geom2d_Ellipse@F@Copy#1
+// Source: c:@S@Geom2d_Ellipse@F@DynamicType#1
 // Source: c:@S@Geom2d_Ellipse@F@Eccentricity#1
 // Source: c:@S@Geom2d_Ellipse@F@FirstParameter#1
 // Source: c:@S@Geom2d_Ellipse@F@Focal#1
@@ -613,7 +678,9 @@
 // Source: c:@S@Geom2d_Ellipse@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_Ellipse@F@SetMajorRadius#d#
 // Source: c:@S@Geom2d_Ellipse@F@SetMinorRadius#d#
+// Source: c:@S@Geom2d_Geometry@F@DynamicType#1
 // Source: c:@S@Geom2d_Hyperbola@F@Copy#1
+// Source: c:@S@Geom2d_Hyperbola@F@DynamicType#1
 // Source: c:@S@Geom2d_Hyperbola@F@Eccentricity#1
 // Source: c:@S@Geom2d_Hyperbola@F@FirstParameter#1
 // Source: c:@S@Geom2d_Hyperbola@F@Focal#1
@@ -628,6 +695,7 @@
 // Source: c:@S@Geom2d_Hyperbola@F@SetMinorRadius#d#
 // Source: c:@S@Geom2d_Line@F@Continuity#1
 // Source: c:@S@Geom2d_Line@F@Copy#1
+// Source: c:@S@Geom2d_Line@F@DynamicType#1
 // Source: c:@S@Geom2d_Line@F@FirstParameter#1
 // Source: c:@S@Geom2d_Line@F@IsCN#I#1
 // Source: c:@S@Geom2d_Line@F@IsClosed#1
@@ -639,6 +707,8 @@
 // Source: c:@S@Geom2d_OffsetCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom2d_OffsetCurve@F@Continuity#1
 // Source: c:@S@Geom2d_OffsetCurve@F@Copy#1
+// Source: c:@S@Geom2d_OffsetCurve@F@DynamicType#1
+// Source: c:@S@Geom2d_OffsetCurve@F@EvalRepresentation#1
 // Source: c:@S@Geom2d_OffsetCurve@F@FirstParameter#1
 // Source: c:@S@Geom2d_OffsetCurve@F@Geom2d_OffsetCurve#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#d#b#
 // Source: c:@S@Geom2d_OffsetCurve@F@GetBasisCurveContinuity#1
@@ -655,6 +725,7 @@
 // Source: c:@S@Geom2d_OffsetCurve@F@SetEvalRepresentation#&1$@N@opencascade@S@handle>#$@N@Geom2dEval_RepCurveDesc@S@Base#
 // Source: c:@S@Geom2d_OffsetCurve@F@SetOffsetValue#d#
 // Source: c:@S@Geom2d_Parabola@F@Copy#1
+// Source: c:@S@Geom2d_Parabola@F@DynamicType#1
 // Source: c:@S@Geom2d_Parabola@F@Eccentricity#1
 // Source: c:@S@Geom2d_Parabola@F@FirstParameter#1
 // Source: c:@S@Geom2d_Parabola@F@Focal#1
@@ -665,8 +736,10 @@
 // Source: c:@S@Geom2d_Parabola@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_Parabola@F@SetFocal#d#
 // Source: c:@S@Geom2d_Point@F@Distance#&1$@N@opencascade@S@handle>#$@S@Geom2d_Point#1
+// Source: c:@S@Geom2d_Point@F@DynamicType#1
 // Source: c:@S@Geom2d_Point@F@SquareDistance#&1$@N@opencascade@S@handle>#$@S@Geom2d_Point#1
 // Source: c:@S@Geom2d_Transformation@F@Copy#1
+// Source: c:@S@Geom2d_Transformation@F@DynamicType#1
 // Source: c:@S@Geom2d_Transformation@F@Form#1
 // Source: c:@S@Geom2d_Transformation@F@Geom2d_Transformation#
 // Source: c:@S@Geom2d_Transformation@F@Invert#
@@ -682,6 +755,7 @@
 // Source: c:@S@Geom2d_TrimmedCurve@F@BasisCurve#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@Continuity#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@Copy#1
+// Source: c:@S@Geom2d_TrimmedCurve@F@DynamicType#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@FirstParameter#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@Geom2d_TrimmedCurve#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#d#d#b#b#
 // Source: c:@S@Geom2d_TrimmedCurve@F@IsCN#I#1
@@ -694,6 +768,7 @@
 // Source: c:@S@Geom2d_TrimmedCurve@F@SetTrim#d#d#b#b#
 // Source: c:@S@Geom2d_Vector@F@Angle#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
 // Source: c:@S@Geom2d_Vector@F@Dot#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
+// Source: c:@S@Geom2d_Vector@F@DynamicType#1
 // Source: c:@S@Geom2d_Vector@F@Reverse#
 // Source: c:@S@Geom2d_Vector@F@Reversed#1
 // Source: c:@S@Geom2d_Vector@F@X#1
@@ -704,6 +779,7 @@
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@Crossed#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@Divide#d#
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@Divided#d#1
+// Source: c:@S@Geom2d_VectorWithMagnitude@F@DynamicType#1
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@Geom2d_VectorWithMagnitude#d#d#
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@Magnitude#1
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@Multiplied#d#1
@@ -719,7 +795,9 @@
 // Source: c:@S@GeomAdaptor_Curve@F@BSpline#1
 // Source: c:@S@GeomAdaptor_Curve@F@Bezier#1
 // Source: c:@S@GeomAdaptor_Curve@F@Continuity#1
+// Source: c:@S@GeomAdaptor_Curve@F@Curve#1
 // Source: c:@S@GeomAdaptor_Curve@F@Degree#1
+// Source: c:@S@GeomAdaptor_Curve@F@DynamicType#1
 // Source: c:@S@GeomAdaptor_Curve@F@EvalD0#d#1
 // Source: c:@S@GeomAdaptor_Curve@F@FirstParameter#1
 // Source: c:@S@GeomAdaptor_Curve@F@GeomAdaptor_Curve#
@@ -745,6 +823,7 @@
 // Source: c:@S@GeomAdaptor_Surface@F@BasisCurve#1
 // Source: c:@S@GeomAdaptor_Surface@F@BasisSurface#1
 // Source: c:@S@GeomAdaptor_Surface@F@Bezier#1
+// Source: c:@S@GeomAdaptor_Surface@F@DynamicType#1
 // Source: c:@S@GeomAdaptor_Surface@F@EvalD0#d#d#1
 // Source: c:@S@GeomAdaptor_Surface@F@FirstUParameter#1
 // Source: c:@S@GeomAdaptor_Surface@F@FirstVParameter#1
@@ -770,6 +849,7 @@
 // Source: c:@S@GeomAdaptor_Surface@F@NbVPoles#1
 // Source: c:@S@GeomAdaptor_Surface@F@OffsetValue#1
 // Source: c:@S@GeomAdaptor_Surface@F@ShallowCopy#1
+// Source: c:@S@GeomAdaptor_Surface@F@Surface#1
 // Source: c:@S@GeomAdaptor_Surface@F@ToleranceU#1
 // Source: c:@S@GeomAdaptor_Surface@F@ToleranceV#1
 // Source: c:@S@GeomAdaptor_Surface@F@UContinuity#1
@@ -785,6 +865,7 @@
 // Source: c:@S@GeomAdaptor_SurfaceOfLinearExtrusion@F@BSpline#1
 // Source: c:@S@GeomAdaptor_SurfaceOfLinearExtrusion@F@BasisCurve#1
 // Source: c:@S@GeomAdaptor_SurfaceOfLinearExtrusion@F@Bezier#1
+// Source: c:@S@GeomAdaptor_SurfaceOfLinearExtrusion@F@DynamicType#1
 // Source: c:@S@GeomAdaptor_SurfaceOfLinearExtrusion@F@FirstUParameter#1
 // Source: c:@S@GeomAdaptor_SurfaceOfLinearExtrusion@F@FirstVParameter#1
 // Source: c:@S@GeomAdaptor_SurfaceOfLinearExtrusion@F@GeomAdaptor_SurfaceOfLinearExtrusion#
@@ -815,6 +896,7 @@
 // Source: c:@S@GeomAdaptor_SurfaceOfRevolution@F@BSpline#1
 // Source: c:@S@GeomAdaptor_SurfaceOfRevolution@F@BasisCurve#1
 // Source: c:@S@GeomAdaptor_SurfaceOfRevolution@F@Bezier#1
+// Source: c:@S@GeomAdaptor_SurfaceOfRevolution@F@DynamicType#1
 // Source: c:@S@GeomAdaptor_SurfaceOfRevolution@F@FirstUParameter#1
 // Source: c:@S@GeomAdaptor_SurfaceOfRevolution@F@FirstVParameter#1
 // Source: c:@S@GeomAdaptor_SurfaceOfRevolution@F@GeomAdaptor_SurfaceOfRevolution#
@@ -847,9 +929,11 @@
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Bezier#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Continuity#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Degree#1
+// Source: c:@S@GeomAdaptor_TransformedCurve@F@DynamicType#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@EvalD0#d#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@FirstParameter#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@GeomAdaptor_TransformedCurve#
+// Source: c:@S@GeomAdaptor_TransformedCurve@F@GeomCurve#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@GetType#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Is3DCurve#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@IsClosed#1
@@ -872,10 +956,14 @@
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@BasisCurve#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@BasisSurface#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@Bezier#1
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@DynamicType#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@EvalD0#d#d#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@FirstUParameter#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@FirstVParameter#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomAdaptor_TransformedSurface#
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomSurface#1
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomSurfaceOriginal#1
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomSurfaceTransformed#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@GetType#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@HasTrsf#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@IsUClosed#1
@@ -911,6 +999,7 @@
 // Source: c:@S@GeomEval_AHTBezierCurve@F@Beta#1
 // Source: c:@S@GeomEval_AHTBezierCurve@F@Continuity#1
 // Source: c:@S@GeomEval_AHTBezierCurve@F@Copy#1
+// Source: c:@S@GeomEval_AHTBezierCurve@F@DynamicType#1
 // Source: c:@S@GeomEval_AHTBezierCurve@F@EndPoint#1
 // Source: c:@S@GeomEval_AHTBezierCurve@F@EvalD0#d#1
 // Source: c:@S@GeomEval_AHTBezierCurve@F@FirstParameter#1
@@ -931,6 +1020,7 @@
 // Source: c:@S@GeomEval_AHTBezierSurface@F@BetaV#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@Continuity#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@Copy#1
+// Source: c:@S@GeomEval_AHTBezierSurface@F@DynamicType#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@EvalD0#d#d#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@IsCNu#I#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@IsCNv#I#1
@@ -949,6 +1039,7 @@
 // Source: c:@S@GeomEval_AHTBezierSurface@F@VReverse#
 // Source: c:@S@GeomEval_AHTBezierSurface@F@VReversedParameter#d#1
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@Copy#1
+// Source: c:@S@GeomEval_CircularHelicoidSurface@F@DynamicType#1
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@EvalD0#d#d#1
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@IsUClosed#1
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@IsUPeriodic#1
@@ -964,6 +1055,7 @@
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@VReversedParameter#d#1
 // Source: c:@S@GeomEval_CircularHelixCurve@F@Continuity#1
 // Source: c:@S@GeomEval_CircularHelixCurve@F@Copy#1
+// Source: c:@S@GeomEval_CircularHelixCurve@F@DynamicType#1
 // Source: c:@S@GeomEval_CircularHelixCurve@F@EvalD0#d#1
 // Source: c:@S@GeomEval_CircularHelixCurve@F@FirstParameter#1
 // Source: c:@S@GeomEval_CircularHelixCurve@F@IsCN#I#1
@@ -975,6 +1067,7 @@
 // Source: c:@S@GeomEval_CircularHelixCurve@F@Reverse#
 // Source: c:@S@GeomEval_CircularHelixCurve@F@ReversedParameter#d#1
 // Source: c:@S@GeomEval_EllipsoidSurface@F@Copy#1
+// Source: c:@S@GeomEval_EllipsoidSurface@F@DynamicType#1
 // Source: c:@S@GeomEval_EllipsoidSurface@F@EvalD0#d#d#1
 // Source: c:@S@GeomEval_EllipsoidSurface@F@IsUClosed#1
 // Source: c:@S@GeomEval_EllipsoidSurface@F@IsUPeriodic#1
@@ -993,6 +1086,7 @@
 // Source: c:@S@GeomEval_EllipsoidSurface@F@VReverse#
 // Source: c:@S@GeomEval_EllipsoidSurface@F@VReversedParameter#d#1
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@Copy#1
+// Source: c:@S@GeomEval_HypParaboloidSurface@F@DynamicType#1
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@EvalD0#d#d#1
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@IsUClosed#1
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@IsUPeriodic#1
@@ -1009,6 +1103,7 @@
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@VReverse#
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@VReversedParameter#d#1
 // Source: c:@S@GeomEval_HyperboloidSurface@F@Copy#1
+// Source: c:@S@GeomEval_HyperboloidSurface@F@DynamicType#1
 // Source: c:@S@GeomEval_HyperboloidSurface@F@EvalD0#d#d#1
 // Source: c:@S@GeomEval_HyperboloidSurface@F@IsUClosed#1
 // Source: c:@S@GeomEval_HyperboloidSurface@F@IsUPeriodic#1
@@ -1027,6 +1122,7 @@
 // Source: c:@S@GeomEval_HyperboloidSurface@F@VReverse#
 // Source: c:@S@GeomEval_HyperboloidSurface@F@VReversedParameter#d#1
 // Source: c:@S@GeomEval_ParaboloidSurface@F@Copy#1
+// Source: c:@S@GeomEval_ParaboloidSurface@F@DynamicType#1
 // Source: c:@S@GeomEval_ParaboloidSurface@F@EvalD0#d#d#1
 // Source: c:@S@GeomEval_ParaboloidSurface@F@Focal#1
 // Source: c:@S@GeomEval_ParaboloidSurface@F@IsUClosed#1
@@ -1043,6 +1139,7 @@
 // Source: c:@S@GeomEval_SineWaveCurve@F@Amplitude#1
 // Source: c:@S@GeomEval_SineWaveCurve@F@Continuity#1
 // Source: c:@S@GeomEval_SineWaveCurve@F@Copy#1
+// Source: c:@S@GeomEval_SineWaveCurve@F@DynamicType#1
 // Source: c:@S@GeomEval_SineWaveCurve@F@EvalD0#d#1
 // Source: c:@S@GeomEval_SineWaveCurve@F@FirstParameter#1
 // Source: c:@S@GeomEval_SineWaveCurve@F@IsCN#I#1
@@ -1056,6 +1153,7 @@
 // Source: c:@S@GeomEval_TBezierCurve@F@Alpha#1
 // Source: c:@S@GeomEval_TBezierCurve@F@Continuity#1
 // Source: c:@S@GeomEval_TBezierCurve@F@Copy#1
+// Source: c:@S@GeomEval_TBezierCurve@F@DynamicType#1
 // Source: c:@S@GeomEval_TBezierCurve@F@EndPoint#1
 // Source: c:@S@GeomEval_TBezierCurve@F@EvalD0#d#1
 // Source: c:@S@GeomEval_TBezierCurve@F@FirstParameter#1
@@ -1073,6 +1171,7 @@
 // Source: c:@S@GeomEval_TBezierSurface@F@AlphaV#1
 // Source: c:@S@GeomEval_TBezierSurface@F@Continuity#1
 // Source: c:@S@GeomEval_TBezierSurface@F@Copy#1
+// Source: c:@S@GeomEval_TBezierSurface@F@DynamicType#1
 // Source: c:@S@GeomEval_TBezierSurface@F@EvalD0#d#d#1
 // Source: c:@S@GeomEval_TBezierSurface@F@IsCNu#I#1
 // Source: c:@S@GeomEval_TBezierSurface@F@IsCNv#I#1
@@ -1091,16 +1190,19 @@
 // Source: c:@S@GeomEval_TBezierSurface@F@VIso#d#1
 // Source: c:@S@GeomEval_TBezierSurface@F@VReverse#
 // Source: c:@S@GeomEval_TBezierSurface@F@VReversedParameter#d#1
+// Source: c:@S@GeomFill_BoundWithSurf@F@DynamicType#1
 // Source: c:@S@GeomFill_BoundWithSurf@F@HasNormals#1
 // Source: c:@S@GeomFill_BoundWithSurf@F@IsDegenerated#1
 // Source: c:@S@GeomFill_BoundWithSurf@F@Reparametrize#d#d#b#b#d#d#b#
 // Source: c:@S@GeomFill_BoundWithSurf@F@Value#d#1
+// Source: c:@S@GeomFill_Boundary@F@DynamicType#1
 // Source: c:@S@GeomFill_Boundary@F@HasNormals#1
 // Source: c:@S@GeomFill_Boundary@F@Tol3d#1
 // Source: c:@S@GeomFill_Boundary@F@Tol3d#d#
 // Source: c:@S@GeomFill_Boundary@F@Tolang#1
 // Source: c:@S@GeomFill_Boundary@F@Tolang#d#
 // Source: c:@S@GeomFill_CircularBlendFunc@F@BarycentreOfSurf#1
+// Source: c:@S@GeomFill_CircularBlendFunc@F@DynamicType#1
 // Source: c:@S@GeomFill_CircularBlendFunc@F@GeomFill_CircularBlendFunc#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#S0_#S0_#d#b#
 // Source: c:@S@GeomFill_CircularBlendFunc@F@IsRational#1
 // Source: c:@S@GeomFill_CircularBlendFunc@F@MaximalSection#1
@@ -1109,14 +1211,20 @@
 // Source: c:@S@GeomFill_CircularBlendFunc@F@SetInterval#d#d#
 // Source: c:@S@GeomFill_CircularBlendFunc@F@SetTolerance#d#d#
 // Source: c:@S@GeomFill_ConstantBiNormal@F@Copy#1
+// Source: c:@S@GeomFill_ConstantBiNormal@F@DynamicType#1
 // Source: c:@S@GeomFill_ConstantBiNormal@F@IsConstant#1
 // Source: c:@S@GeomFill_ConstantBiNormal@F@IsOnlyBy3dCurve#1
 // Source: c:@S@GeomFill_ConstantBiNormal@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@GeomFill_ConstantBiNormal@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
+// Source: c:@S@GeomFill_CoonsAlgPatch@F@Bound#I#1
+// Source: c:@S@GeomFill_CoonsAlgPatch@F@Corner#I#1
+// Source: c:@S@GeomFill_CoonsAlgPatch@F@DynamicType#1
+// Source: c:@S@GeomFill_CoonsAlgPatch@F@Func#I#1
 // Source: c:@S@GeomFill_CoonsAlgPatch@F@GeomFill_CoonsAlgPatch#&1$@N@opencascade@S@handle>#$@S@GeomFill_Boundary#S0_#S0_#S0_#
 // Source: c:@S@GeomFill_CoonsAlgPatch@F@SetFunc#&1$@N@opencascade@S@handle>#$@S@Law_Function#S0_#
 // Source: c:@S@GeomFill_CoonsAlgPatch@F@Value#d#d#1
 // Source: c:@S@GeomFill_CorrectedFrenet@F@Copy#1
+// Source: c:@S@GeomFill_CorrectedFrenet@F@DynamicType#1
 // Source: c:@S@GeomFill_CorrectedFrenet@F@EvaluateBestMode#
 // Source: c:@S@GeomFill_CorrectedFrenet@F@GeomFill_CorrectedFrenet#
 // Source: c:@S@GeomFill_CorrectedFrenet@F@GeomFill_CorrectedFrenet#b#
@@ -1126,21 +1234,26 @@
 // Source: c:@S@GeomFill_CorrectedFrenet@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
 // Source: c:@S@GeomFill_CorrectedFrenet@F@SetInterval#d#d#
 // Source: c:@S@GeomFill_CurveAndTrihedron@F@Copy#1
+// Source: c:@S@GeomFill_CurveAndTrihedron@F@DynamicType#1
 // Source: c:@S@GeomFill_CurveAndTrihedron@F@GeomFill_CurveAndTrihedron#&1$@N@opencascade@S@handle>#$@S@GeomFill_TrihedronLaw#
+// Source: c:@S@GeomFill_CurveAndTrihedron@F@GetCurve#1
 // Source: c:@S@GeomFill_CurveAndTrihedron@F@GetMaximalNorm#
 // Source: c:@S@GeomFill_CurveAndTrihedron@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@GeomFill_CurveAndTrihedron@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
 // Source: c:@S@GeomFill_CurveAndTrihedron@F@SetInterval#d#d#
 // Source: c:@S@GeomFill_Darboux@F@Copy#1
+// Source: c:@S@GeomFill_Darboux@F@DynamicType#1
 // Source: c:@S@GeomFill_Darboux@F@GeomFill_Darboux#
 // Source: c:@S@GeomFill_Darboux@F@IsConstant#1
 // Source: c:@S@GeomFill_Darboux@F@IsOnlyBy3dCurve#1
 // Source: c:@S@GeomFill_Darboux@F@NbIntervals#$@E@GeomAbs_Shape#1
+// Source: c:@S@GeomFill_DegeneratedBound@F@DynamicType#1
 // Source: c:@S@GeomFill_DegeneratedBound@F@GeomFill_DegeneratedBound#&1$@S@gp_Pnt#d#d#d#d#
 // Source: c:@S@GeomFill_DegeneratedBound@F@IsDegenerated#1
 // Source: c:@S@GeomFill_DegeneratedBound@F@Reparametrize#d#d#b#b#d#d#b#
 // Source: c:@S@GeomFill_DegeneratedBound@F@Value#d#1
 // Source: c:@S@GeomFill_DiscreteTrihedron@F@Copy#1
+// Source: c:@S@GeomFill_DiscreteTrihedron@F@DynamicType#1
 // Source: c:@S@GeomFill_DiscreteTrihedron@F@GeomFill_DiscreteTrihedron#
 // Source: c:@S@GeomFill_DiscreteTrihedron@F@Init#
 // Source: c:@S@GeomFill_DiscreteTrihedron@F@IsConstant#1
@@ -1148,6 +1261,7 @@
 // Source: c:@S@GeomFill_DiscreteTrihedron@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@GeomFill_DiscreteTrihedron@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
 // Source: c:@S@GeomFill_DraftTrihedron@F@Copy#1
+// Source: c:@S@GeomFill_DraftTrihedron@F@DynamicType#1
 // Source: c:@S@GeomFill_DraftTrihedron@F@IsConstant#1
 // Source: c:@S@GeomFill_DraftTrihedron@F@IsOnlyBy3dCurve#1
 // Source: c:@S@GeomFill_DraftTrihedron@F@NbIntervals#$@E@GeomAbs_Shape#1
@@ -1155,6 +1269,7 @@
 // Source: c:@S@GeomFill_EvolvedSection@F@BSplineSurface#1
 // Source: c:@S@GeomFill_EvolvedSection@F@BarycentreOfSurf#1
 // Source: c:@S@GeomFill_EvolvedSection@F@ConstantSection#1
+// Source: c:@S@GeomFill_EvolvedSection@F@DynamicType#1
 // Source: c:@S@GeomFill_EvolvedSection@F@GeomFill_EvolvedSection#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@N@opencascade@S@handle>#$@S@Law_Function#
 // Source: c:@S@GeomFill_EvolvedSection@F@IsRational#1
 // Source: c:@S@GeomFill_EvolvedSection@F@IsUPeriodic#1
@@ -1163,9 +1278,11 @@
 // Source: c:@S@GeomFill_EvolvedSection@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@GeomFill_EvolvedSection@F@SetInterval#d#d#
 // Source: c:@S@GeomFill_Fixed@F@Copy#1
+// Source: c:@S@GeomFill_Fixed@F@DynamicType#1
 // Source: c:@S@GeomFill_Fixed@F@IsConstant#1
 // Source: c:@S@GeomFill_Fixed@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@GeomFill_Frenet@F@Copy#1
+// Source: c:@S@GeomFill_Frenet@F@DynamicType#1
 // Source: c:@S@GeomFill_Frenet@F@GeomFill_Frenet#
 // Source: c:@S@GeomFill_Frenet@F@Init#
 // Source: c:@S@GeomFill_Frenet@F@IsConstant#1
@@ -1173,6 +1290,7 @@
 // Source: c:@S@GeomFill_Frenet@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@GeomFill_Frenet@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
 // Source: c:@S@GeomFill_GuideTrihedronAC@F@Copy#1
+// Source: c:@S@GeomFill_GuideTrihedronAC@F@DynamicType#1
 // Source: c:@S@GeomFill_GuideTrihedronAC@F@GeomFill_GuideTrihedronAC#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
 // Source: c:@S@GeomFill_GuideTrihedronAC@F@Guide#1
 // Source: c:@S@GeomFill_GuideTrihedronAC@F@IsConstant#1
@@ -1182,6 +1300,7 @@
 // Source: c:@S@GeomFill_GuideTrihedronAC@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
 // Source: c:@S@GeomFill_GuideTrihedronAC@F@SetInterval#d#d#
 // Source: c:@S@GeomFill_GuideTrihedronPlan@F@Copy#1
+// Source: c:@S@GeomFill_GuideTrihedronPlan@F@DynamicType#1
 // Source: c:@S@GeomFill_GuideTrihedronPlan@F@ErrorStatus#1
 // Source: c:@S@GeomFill_GuideTrihedronPlan@F@GeomFill_GuideTrihedronPlan#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
 // Source: c:@S@GeomFill_GuideTrihedronPlan@F@Guide#1
@@ -1191,11 +1310,14 @@
 // Source: c:@S@GeomFill_GuideTrihedronPlan@F@Origine#d#d#
 // Source: c:@S@GeomFill_GuideTrihedronPlan@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
 // Source: c:@S@GeomFill_GuideTrihedronPlan@F@SetInterval#d#d#
+// Source: c:@S@GeomFill_Line@F@DynamicType#1
 // Source: c:@S@GeomFill_Line@F@GeomFill_Line#
 // Source: c:@S@GeomFill_Line@F@GeomFill_Line#I#
 // Source: c:@S@GeomFill_Line@F@NbPoints#1
 // Source: c:@S@GeomFill_Line@F@Point#I#1
 // Source: c:@S@GeomFill_LocationDraft@F@Copy#1
+// Source: c:@S@GeomFill_LocationDraft@F@DynamicType#1
+// Source: c:@S@GeomFill_LocationDraft@F@GetCurve#1
 // Source: c:@S@GeomFill_LocationDraft@F@GetMaximalNorm#
 // Source: c:@S@GeomFill_LocationDraft@F@HasFirstRestriction#1
 // Source: c:@S@GeomFill_LocationDraft@F@HasLastRestriction#1
@@ -1207,9 +1329,11 @@
 // Source: c:@S@GeomFill_LocationDraft@F@SetStopSurf#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#
 // Source: c:@S@GeomFill_LocationDraft@F@TraceNumber#1
 // Source: c:@S@GeomFill_LocationGuide@F@Copy#1
+// Source: c:@S@GeomFill_LocationGuide@F@DynamicType#1
 // Source: c:@S@GeomFill_LocationGuide@F@EraseRotation#
 // Source: c:@S@GeomFill_LocationGuide@F@ErrorStatus#1
 // Source: c:@S@GeomFill_LocationGuide@F@GeomFill_LocationGuide#&1$@N@opencascade@S@handle>#$@S@GeomFill_TrihedronWithGuide#
+// Source: c:@S@GeomFill_LocationGuide@F@GetCurve#1
 // Source: c:@S@GeomFill_LocationGuide@F@GetMaximalNorm#
 // Source: c:@S@GeomFill_LocationGuide@F@Guide#1
 // Source: c:@S@GeomFill_LocationGuide@F@HasFirstRestriction#1
@@ -1221,6 +1345,7 @@
 // Source: c:@S@GeomFill_LocationGuide@F@SetOrigine#d#d#
 // Source: c:@S@GeomFill_LocationGuide@F@SetTolerance#d#d#
 // Source: c:@S@GeomFill_LocationGuide@F@TraceNumber#1
+// Source: c:@S@GeomFill_LocationLaw@F@DynamicType#1
 // Source: c:@S@GeomFill_LocationLaw@F@ErrorStatus#1
 // Source: c:@S@GeomFill_LocationLaw@F@HasFirstRestriction#1
 // Source: c:@S@GeomFill_LocationLaw@F@HasLastRestriction#1
@@ -1232,6 +1357,7 @@
 // Source: c:@S@GeomFill_NSections@F@CirclSection#d#1
 // Source: c:@S@GeomFill_NSections@F@ComputeSurface#
 // Source: c:@S@GeomFill_NSections@F@ConstantSection#1
+// Source: c:@S@GeomFill_NSections@F@DynamicType#1
 // Source: c:@S@GeomFill_NSections@F@IsRational#1
 // Source: c:@S@GeomFill_NSections@F@IsUPeriodic#1
 // Source: c:@S@GeomFill_NSections@F@IsVPeriodic#1
@@ -1243,7 +1369,9 @@
 // Source: c:@S@GeomFill_SectionLaw@F@BarycentreOfSurf#1
 // Source: c:@S@GeomFill_SectionLaw@F@CirclSection#d#1
 // Source: c:@S@GeomFill_SectionLaw@F@ConstantSection#1
+// Source: c:@S@GeomFill_SectionLaw@F@DynamicType#1
 // Source: c:@S@GeomFill_SectionLaw@F@SetTolerance#d#d#
+// Source: c:@S@GeomFill_SimpleBound@F@DynamicType#1
 // Source: c:@S@GeomFill_SimpleBound@F@GeomFill_SimpleBound#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#d#d#
 // Source: c:@S@GeomFill_SimpleBound@F@IsDegenerated#1
 // Source: c:@S@GeomFill_SimpleBound@F@Reparametrize#d#d#b#b#d#d#b#
@@ -1260,6 +1388,7 @@
 // Source: c:@S@GeomFill_SnglrFunc@F@SetRatio#d#
 // Source: c:@S@GeomFill_SnglrFunc@F@ShallowCopy#1
 // Source: c:@S@GeomFill_SweepFunction@F@BarycentreOfSurf#1
+// Source: c:@S@GeomFill_SweepFunction@F@DynamicType#1
 // Source: c:@S@GeomFill_SweepFunction@F@GeomFill_SweepFunction#&1$@N@opencascade@S@handle>#$@S@GeomFill_SectionLaw#&1$@N@opencascade@S@handle>#$@S@GeomFill_LocationLaw#d#d#d#
 // Source: c:@S@GeomFill_SweepFunction@F@IsRational#1
 // Source: c:@S@GeomFill_SweepFunction@F@MaximalSection#1
@@ -1267,18 +1396,23 @@
 // Source: c:@S@GeomFill_SweepFunction@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@GeomFill_SweepFunction@F@SetInterval#d#d#
 // Source: c:@S@GeomFill_SweepFunction@F@SetTolerance#d#d#
+// Source: c:@S@GeomFill_TgtField@F@DynamicType#1
 // Source: c:@S@GeomFill_TgtField@F@IsScalable#1
 // Source: c:@S@GeomFill_TgtField@F@Scale#&1$@N@opencascade@S@handle>#$@S@Law_BSpline#
+// Source: c:@S@GeomFill_TgtOnCoons@F@DynamicType#1
 // Source: c:@S@GeomFill_TgtOnCoons@F@GeomFill_TgtOnCoons#&1$@N@opencascade@S@handle>#$@S@GeomFill_CoonsAlgPatch#I#
+// Source: c:@S@GeomFill_TrihedronLaw@F@DynamicType#1
 // Source: c:@S@GeomFill_TrihedronLaw@F@ErrorStatus#1
 // Source: c:@S@GeomFill_TrihedronLaw@F@IsConstant#1
 // Source: c:@S@GeomFill_TrihedronLaw@F@IsOnlyBy3dCurve#1
 // Source: c:@S@GeomFill_TrihedronLaw@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#
 // Source: c:@S@GeomFill_TrihedronLaw@F@SetInterval#d#d#
 // Source: c:@S@GeomFill_TrihedronWithGuide@F@CurrentPointOnGuide#1
+// Source: c:@S@GeomFill_TrihedronWithGuide@F@DynamicType#1
 // Source: c:@S@GeomFill_UniformSection@F@BSplineSurface#1
 // Source: c:@S@GeomFill_UniformSection@F@BarycentreOfSurf#1
 // Source: c:@S@GeomFill_UniformSection@F@ConstantSection#1
+// Source: c:@S@GeomFill_UniformSection@F@DynamicType#1
 // Source: c:@S@GeomFill_UniformSection@F@GeomFill_UniformSection#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#d#
 // Source: c:@S@GeomFill_UniformSection@F@IsRational#1
 // Source: c:@S@GeomFill_UniformSection@F@IsUPeriodic#1
@@ -1288,6 +1422,7 @@
 // Source: c:@S@GeomFill_UniformSection@F@SetInterval#d#d#
 // Source: c:@S@GeomPlate_CurveConstraint@F@Curve2dOnSurf#1
 // Source: c:@S@GeomPlate_CurveConstraint@F@Curve3d#1
+// Source: c:@S@GeomPlate_CurveConstraint@F@DynamicType#1
 // Source: c:@S@GeomPlate_CurveConstraint@F@FirstParameter#1
 // Source: c:@S@GeomPlate_CurveConstraint@F@G0Criterion#d#1
 // Source: c:@S@GeomPlate_CurveConstraint@F@G1Criterion#d#1
@@ -1306,6 +1441,7 @@
 // Source: c:@S@GeomPlate_CurveConstraint@F@SetNbPoints#I#
 // Source: c:@S@GeomPlate_CurveConstraint@F@SetOrder#I#
 // Source: c:@S@GeomPlate_CurveConstraint@F@SetProjectedCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#d#d#
+// Source: c:@S@GeomPlate_PointConstraint@F@DynamicType#1
 // Source: c:@S@GeomPlate_PointConstraint@F@G0Criterion#1
 // Source: c:@S@GeomPlate_PointConstraint@F@G1Criterion#1
 // Source: c:@S@GeomPlate_PointConstraint@F@G2Criterion#1
@@ -1320,6 +1456,7 @@
 // Source: c:@S@GeomPlate_Surface@F@CallSurfinit#1
 // Source: c:@S@GeomPlate_Surface@F@Continuity#1
 // Source: c:@S@GeomPlate_Surface@F@Copy#1
+// Source: c:@S@GeomPlate_Surface@F@DynamicType#1
 // Source: c:@S@GeomPlate_Surface@F@EvalD0#d#d#1
 // Source: c:@S@GeomPlate_Surface@F@IsCNu#I#1
 // Source: c:@S@GeomPlate_Surface@F@IsCNv#I#1
@@ -1336,18 +1473,23 @@
 // Source: c:@S@GeomPlate_Surface@F@VPeriod#1
 // Source: c:@S@GeomPlate_Surface@F@VReverse#
 // Source: c:@S@GeomPlate_Surface@F@VReversedParameter#d#1
+// Source: c:@S@GeomTools_UndefinedTypeHandler@F@DynamicType#1
 // Source: c:@S@GeomTools_UndefinedTypeHandler@F@GeomTools_UndefinedTypeHandler#
 // Source: c:@S@Geom_Axis1Placement@F@Copy#1
+// Source: c:@S@Geom_Axis1Placement@F@DynamicType#1
 // Source: c:@S@Geom_Axis1Placement@F@Reverse#
 // Source: c:@S@Geom_Axis1Placement@F@Reversed#1
 // Source: c:@S@Geom_Axis2Placement@F@Copy#1
+// Source: c:@S@Geom_Axis2Placement@F@DynamicType#1
 // Source: c:@S@Geom_AxisPlacement@F@Angle#&1$@N@opencascade@S@handle>#$@S@Geom_AxisPlacement#1
+// Source: c:@S@Geom_AxisPlacement@F@DynamicType#1
 // Source: c:@S@Geom_AxisPlacement@F@Location#1
 // Source: c:@S@Geom_AxisPlacement@F@SetLocation#&1$@S@gp_Pnt#
 // Source: c:@S@Geom_BSplineCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_BSplineCurve@F@Continuity#1
 // Source: c:@S@Geom_BSplineCurve@F@Copy#1
 // Source: c:@S@Geom_BSplineCurve@F@Degree#1
+// Source: c:@S@Geom_BSplineCurve@F@DynamicType#1
 // Source: c:@S@Geom_BSplineCurve@F@EndPoint#1
 // Source: c:@S@Geom_BSplineCurve@F@EvalD0#d#1
 // Source: c:@S@Geom_BSplineCurve@F@FirstParameter#1
@@ -1391,6 +1533,7 @@
 // Source: c:@S@Geom_BSplineSurface@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_BSplineSurface@F@Continuity#1
 // Source: c:@S@Geom_BSplineSurface@F@Copy#1
+// Source: c:@S@Geom_BSplineSurface@F@DynamicType#1
 // Source: c:@S@Geom_BSplineSurface@F@EvalD0#d#d#1
 // Source: c:@S@Geom_BSplineSurface@F@ExchangeUV#
 // Source: c:@S@Geom_BSplineSurface@F@FirstUKnotIndex#1
@@ -1457,6 +1600,7 @@
 // Source: c:@S@Geom_BezierCurve@F@Continuity#1
 // Source: c:@S@Geom_BezierCurve@F@Copy#1
 // Source: c:@S@Geom_BezierCurve@F@Degree#1
+// Source: c:@S@Geom_BezierCurve@F@DynamicType#1
 // Source: c:@S@Geom_BezierCurve@F@EndPoint#1
 // Source: c:@S@Geom_BezierCurve@F@EvalD0#d#1
 // Source: c:@S@Geom_BezierCurve@F@FirstParameter#1
@@ -1484,6 +1628,7 @@
 // Source: c:@S@Geom_BezierSurface@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_BezierSurface@F@Continuity#1
 // Source: c:@S@Geom_BezierSurface@F@Copy#1
+// Source: c:@S@Geom_BezierSurface@F@DynamicType#1
 // Source: c:@S@Geom_BezierSurface@F@EvalD0#d#d#1
 // Source: c:@S@Geom_BezierSurface@F@ExchangeUV#
 // Source: c:@S@Geom_BezierSurface@F@HasEvalRepresentation#1
@@ -1513,7 +1658,10 @@
 // Source: c:@S@Geom_BezierSurface@F@VReverse#
 // Source: c:@S@Geom_BezierSurface@F@VReversedParameter#d#1
 // Source: c:@S@Geom_BezierSurface@F@Weight#I#I#1
+// Source: c:@S@Geom_BoundedCurve@F@DynamicType#1
+// Source: c:@S@Geom_BoundedSurface@F@DynamicType#1
 // Source: c:@S@Geom_CartesianPoint@F@Copy#1
+// Source: c:@S@Geom_CartesianPoint@F@DynamicType#1
 // Source: c:@S@Geom_CartesianPoint@F@Geom_CartesianPoint#&1$@S@gp_Pnt#
 // Source: c:@S@Geom_CartesianPoint@F@Geom_CartesianPoint#d#d#d#
 // Source: c:@S@Geom_CartesianPoint@F@Pnt#1
@@ -1526,6 +1674,7 @@
 // Source: c:@S@Geom_CartesianPoint@F@Y#1
 // Source: c:@S@Geom_CartesianPoint@F@Z#1
 // Source: c:@S@Geom_Circle@F@Copy#1
+// Source: c:@S@Geom_Circle@F@DynamicType#1
 // Source: c:@S@Geom_Circle@F@Eccentricity#1
 // Source: c:@S@Geom_Circle@F@EvalD0#d#1
 // Source: c:@S@Geom_Circle@F@FirstParameter#1
@@ -1536,11 +1685,14 @@
 // Source: c:@S@Geom_Circle@F@ReversedParameter#d#1
 // Source: c:@S@Geom_Circle@F@SetRadius#d#
 // Source: c:@S@Geom_Conic@F@Continuity#1
+// Source: c:@S@Geom_Conic@F@DynamicType#1
 // Source: c:@S@Geom_Conic@F@IsCN#I#1
+// Source: c:@S@Geom_Conic@F@Location#1
 // Source: c:@S@Geom_Conic@F@Reverse#
 // Source: c:@S@Geom_Conic@F@SetLocation#&1$@S@gp_Pnt#
 // Source: c:@S@Geom_ConicalSurface@F@Apex#1
 // Source: c:@S@Geom_ConicalSurface@F@Copy#1
+// Source: c:@S@Geom_ConicalSurface@F@DynamicType#1
 // Source: c:@S@Geom_ConicalSurface@F@EvalD0#d#d#1
 // Source: c:@S@Geom_ConicalSurface@F@IsUClosed#1
 // Source: c:@S@Geom_ConicalSurface@F@IsUPeriodic#1
@@ -1555,10 +1707,12 @@
 // Source: c:@S@Geom_ConicalSurface@F@VIso#d#1
 // Source: c:@S@Geom_ConicalSurface@F@VReverse#
 // Source: c:@S@Geom_ConicalSurface@F@VReversedParameter#d#1
+// Source: c:@S@Geom_Curve@F@DynamicType#1
 // Source: c:@S@Geom_Curve@F@Period#1
 // Source: c:@S@Geom_Curve@F@Reversed#1
 // Source: c:@S@Geom_Curve@F@Value#d#1
 // Source: c:@S@Geom_CylindricalSurface@F@Copy#1
+// Source: c:@S@Geom_CylindricalSurface@F@DynamicType#1
 // Source: c:@S@Geom_CylindricalSurface@F@EvalD0#d#d#1
 // Source: c:@S@Geom_CylindricalSurface@F@IsUClosed#1
 // Source: c:@S@Geom_CylindricalSurface@F@IsUPeriodic#1
@@ -1575,6 +1729,7 @@
 // Source: c:@S@Geom_Direction@F@CrossCross#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#S0_#
 // Source: c:@S@Geom_Direction@F@CrossCrossed#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#S0_#1
 // Source: c:@S@Geom_Direction@F@Crossed#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#1
+// Source: c:@S@Geom_Direction@F@DynamicType#1
 // Source: c:@S@Geom_Direction@F@Geom_Direction#d#d#d#
 // Source: c:@S@Geom_Direction@F@Magnitude#1
 // Source: c:@S@Geom_Direction@F@SetCoord#d#d#d#
@@ -1583,12 +1738,15 @@
 // Source: c:@S@Geom_Direction@F@SetZ#d#
 // Source: c:@S@Geom_Direction@F@SquareMagnitude#1
 // Source: c:@S@Geom_ElementarySurface@F@Continuity#1
+// Source: c:@S@Geom_ElementarySurface@F@DynamicType#1
 // Source: c:@S@Geom_ElementarySurface@F@IsCNu#I#1
 // Source: c:@S@Geom_ElementarySurface@F@IsCNv#I#1
+// Source: c:@S@Geom_ElementarySurface@F@Location#1
 // Source: c:@S@Geom_ElementarySurface@F@SetLocation#&1$@S@gp_Pnt#
 // Source: c:@S@Geom_ElementarySurface@F@UReverse#
 // Source: c:@S@Geom_ElementarySurface@F@VReverse#
 // Source: c:@S@Geom_Ellipse@F@Copy#1
+// Source: c:@S@Geom_Ellipse@F@DynamicType#1
 // Source: c:@S@Geom_Ellipse@F@Eccentricity#1
 // Source: c:@S@Geom_Ellipse@F@EvalD0#d#1
 // Source: c:@S@Geom_Ellipse@F@FirstParameter#1
@@ -1604,6 +1762,7 @@
 // Source: c:@S@Geom_Ellipse@F@ReversedParameter#d#1
 // Source: c:@S@Geom_Ellipse@F@SetMajorRadius#d#
 // Source: c:@S@Geom_Ellipse@F@SetMinorRadius#d#
+// Source: c:@S@Geom_Geometry@F@DynamicType#1
 // Source: c:@S@Geom_Geometry@F@Mirror#&1$@S@gp_Pnt#
 // Source: c:@S@Geom_Geometry@F@Mirrored#&1$@S@gp_Pnt#1
 // Source: c:@S@Geom_Geometry@F@Scale#&1$@S@gp_Pnt#d#
@@ -1611,6 +1770,7 @@
 // Source: c:@S@Geom_Geometry@F@Translate#&1$@S@gp_Pnt#S0_#
 // Source: c:@S@Geom_Geometry@F@Translated#&1$@S@gp_Pnt#S0_#1
 // Source: c:@S@Geom_Hyperbola@F@Copy#1
+// Source: c:@S@Geom_Hyperbola@F@DynamicType#1
 // Source: c:@S@Geom_Hyperbola@F@Eccentricity#1
 // Source: c:@S@Geom_Hyperbola@F@EvalD0#d#1
 // Source: c:@S@Geom_Hyperbola@F@FirstParameter#1
@@ -1628,6 +1788,7 @@
 // Source: c:@S@Geom_Hyperbola@F@SetMinorRadius#d#
 // Source: c:@S@Geom_Line@F@Continuity#1
 // Source: c:@S@Geom_Line@F@Copy#1
+// Source: c:@S@Geom_Line@F@DynamicType#1
 // Source: c:@S@Geom_Line@F@EvalD0#d#1
 // Source: c:@S@Geom_Line@F@FirstParameter#1
 // Source: c:@S@Geom_Line@F@IsCN#I#1
@@ -1641,6 +1802,7 @@
 // Source: c:@S@Geom_OffsetCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_OffsetCurve@F@Continuity#1
 // Source: c:@S@Geom_OffsetCurve@F@Copy#1
+// Source: c:@S@Geom_OffsetCurve@F@DynamicType#1
 // Source: c:@S@Geom_OffsetCurve@F@EvalD0#d#1
 // Source: c:@S@Geom_OffsetCurve@F@FirstParameter#1
 // Source: c:@S@Geom_OffsetCurve@F@GetBasisCurveContinuity#1
@@ -1655,9 +1817,11 @@
 // Source: c:@S@Geom_OffsetCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom_OffsetCurve@F@SetBasisCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#b#
 // Source: c:@S@Geom_OffsetCurve@F@SetOffsetValue#d#
+// Source: c:@S@Geom_OffsetSurface@F@BasisSurface#1
 // Source: c:@S@Geom_OffsetSurface@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_OffsetSurface@F@Continuity#1
 // Source: c:@S@Geom_OffsetSurface@F@Copy#1
+// Source: c:@S@Geom_OffsetSurface@F@DynamicType#1
 // Source: c:@S@Geom_OffsetSurface@F@EvalD0#d#d#1
 // Source: c:@S@Geom_OffsetSurface@F@Geom_OffsetSurface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#b#
 // Source: c:@S@Geom_OffsetSurface@F@GetBasisSurfContinuity#1
@@ -1681,6 +1845,7 @@
 // Source: c:@S@Geom_OffsetSurface@F@VReverse#
 // Source: c:@S@Geom_OffsetSurface@F@VReversedParameter#d#1
 // Source: c:@S@Geom_Parabola@F@Copy#1
+// Source: c:@S@Geom_Parabola@F@DynamicType#1
 // Source: c:@S@Geom_Parabola@F@Eccentricity#1
 // Source: c:@S@Geom_Parabola@F@EvalD0#d#1
 // Source: c:@S@Geom_Parabola@F@FirstParameter#1
@@ -1693,6 +1858,7 @@
 // Source: c:@S@Geom_Parabola@F@ReversedParameter#d#1
 // Source: c:@S@Geom_Parabola@F@SetFocal#d#
 // Source: c:@S@Geom_Plane@F@Copy#1
+// Source: c:@S@Geom_Plane@F@DynamicType#1
 // Source: c:@S@Geom_Plane@F@EvalD0#d#d#1
 // Source: c:@S@Geom_Plane@F@Geom_Plane#d#d#d#d#
 // Source: c:@S@Geom_Plane@F@IsUClosed#1
@@ -1706,10 +1872,12 @@
 // Source: c:@S@Geom_Plane@F@VReverse#
 // Source: c:@S@Geom_Plane@F@VReversedParameter#d#1
 // Source: c:@S@Geom_Point@F@Distance#&1$@N@opencascade@S@handle>#$@S@Geom_Point#1
+// Source: c:@S@Geom_Point@F@DynamicType#1
 // Source: c:@S@Geom_Point@F@SquareDistance#&1$@N@opencascade@S@handle>#$@S@Geom_Point#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@BasisSurface#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@Continuity#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@Copy#1
+// Source: c:@S@Geom_RectangularTrimmedSurface@F@DynamicType#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@EvalD0#d#d#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@Geom_RectangularTrimmedSurface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#b#b#
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@Geom_RectangularTrimmedSurface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#d#d#b#b#
@@ -1731,6 +1899,7 @@
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@VReversedParameter#d#1
 // Source: c:@S@Geom_SphericalSurface@F@Area#1
 // Source: c:@S@Geom_SphericalSurface@F@Copy#1
+// Source: c:@S@Geom_SphericalSurface@F@DynamicType#1
 // Source: c:@S@Geom_SphericalSurface@F@EvalD0#d#d#1
 // Source: c:@S@Geom_SphericalSurface@F@IsUClosed#1
 // Source: c:@S@Geom_SphericalSurface@F@IsUPeriodic#1
@@ -1743,6 +1912,7 @@
 // Source: c:@S@Geom_SphericalSurface@F@VIso#d#1
 // Source: c:@S@Geom_SphericalSurface@F@VReversedParameter#d#1
 // Source: c:@S@Geom_SphericalSurface@F@Volume#1
+// Source: c:@S@Geom_Surface@F@DynamicType#1
 // Source: c:@S@Geom_Surface@F@UPeriod#1
 // Source: c:@S@Geom_Surface@F@UReversed#1
 // Source: c:@S@Geom_Surface@F@VPeriod#1
@@ -1750,6 +1920,7 @@
 // Source: c:@S@Geom_Surface@F@Value#d#d#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@Copy#1
+// Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@DynamicType#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@EvalD0#d#d#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@HasEvalRepresentation#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@IsCNu#I#1
@@ -1767,6 +1938,7 @@
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@VReversedParameter#d#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@Copy#1
+// Source: c:@S@Geom_SurfaceOfRevolution@F@DynamicType#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@EvalD0#d#d#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@HasEvalRepresentation#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@IsCNu#I#1
@@ -1775,6 +1947,7 @@
 // Source: c:@S@Geom_SurfaceOfRevolution@F@IsUPeriodic#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@IsVClosed#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@IsVPeriodic#1
+// Source: c:@S@Geom_SurfaceOfRevolution@F@Location#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@SetBasisCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@SetLocation#&1$@S@gp_Pnt#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@UIso#d#1
@@ -1785,8 +1958,10 @@
 // Source: c:@S@Geom_SurfaceOfRevolution@F@VReversedParameter#d#1
 // Source: c:@S@Geom_SweptSurface@F@BasisCurve#1
 // Source: c:@S@Geom_SweptSurface@F@Continuity#1
+// Source: c:@S@Geom_SweptSurface@F@DynamicType#1
 // Source: c:@S@Geom_ToroidalSurface@F@Area#1
 // Source: c:@S@Geom_ToroidalSurface@F@Copy#1
+// Source: c:@S@Geom_ToroidalSurface@F@DynamicType#1
 // Source: c:@S@Geom_ToroidalSurface@F@EvalD0#d#d#1
 // Source: c:@S@Geom_ToroidalSurface@F@IsUClosed#1
 // Source: c:@S@Geom_ToroidalSurface@F@IsUPeriodic#1
@@ -1802,6 +1977,7 @@
 // Source: c:@S@Geom_ToroidalSurface@F@VReversedParameter#d#1
 // Source: c:@S@Geom_ToroidalSurface@F@Volume#1
 // Source: c:@S@Geom_Transformation@F@Copy#1
+// Source: c:@S@Geom_Transformation@F@DynamicType#1
 // Source: c:@S@Geom_Transformation@F@Form#1
 // Source: c:@S@Geom_Transformation@F@Geom_Transformation#
 // Source: c:@S@Geom_Transformation@F@Invert#
@@ -1820,6 +1996,7 @@
 // Source: c:@S@Geom_TrimmedCurve@F@BasisCurve#1
 // Source: c:@S@Geom_TrimmedCurve@F@Continuity#1
 // Source: c:@S@Geom_TrimmedCurve@F@Copy#1
+// Source: c:@S@Geom_TrimmedCurve@F@DynamicType#1
 // Source: c:@S@Geom_TrimmedCurve@F@EndPoint#1
 // Source: c:@S@Geom_TrimmedCurve@F@EvalD0#d#1
 // Source: c:@S@Geom_TrimmedCurve@F@FirstParameter#1
@@ -1837,6 +2014,7 @@
 // Source: c:@S@Geom_Vector@F@AngleWithRef#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#S0_#1
 // Source: c:@S@Geom_Vector@F@Dot#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#1
 // Source: c:@S@Geom_Vector@F@DotCross#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#S0_#1
+// Source: c:@S@Geom_Vector@F@DynamicType#1
 // Source: c:@S@Geom_Vector@F@Reverse#
 // Source: c:@S@Geom_Vector@F@Reversed#1
 // Source: c:@S@Geom_Vector@F@X#1
@@ -1851,6 +2029,7 @@
 // Source: c:@S@Geom_VectorWithMagnitude@F@Crossed#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#1
 // Source: c:@S@Geom_VectorWithMagnitude@F@Divide#d#
 // Source: c:@S@Geom_VectorWithMagnitude@F@Divided#d#1
+// Source: c:@S@Geom_VectorWithMagnitude@F@DynamicType#1
 // Source: c:@S@Geom_VectorWithMagnitude@F@Geom_VectorWithMagnitude#&1$@S@gp_Pnt#S0_#
 // Source: c:@S@Geom_VectorWithMagnitude@F@Geom_VectorWithMagnitude#d#d#d#
 // Source: c:@S@Geom_VectorWithMagnitude@F@Magnitude#1
@@ -1865,8 +2044,10 @@
 // Source: c:@S@Geom_VectorWithMagnitude@F@SquareMagnitude#1
 // Source: c:@S@Geom_VectorWithMagnitude@F@Subtract#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#
 // Source: c:@S@Geom_VectorWithMagnitude@F@Subtracted#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#1
+// Source: c:@S@GeometryTest_DrawableQualifiedCurve2d@F@DynamicType#1
 // Source: c:@S@Law_BSpFunc@F@Continuity#1
 // Source: c:@S@Law_BSpFunc@F@Curve#1
+// Source: c:@S@Law_BSpFunc@F@DynamicType#1
 // Source: c:@S@Law_BSpFunc@F@Law_BSpFunc#
 // Source: c:@S@Law_BSpFunc@F@Law_BSpFunc#&1$@N@opencascade@S@handle>#$@S@Law_BSpline#d#d#
 // Source: c:@S@Law_BSpFunc@F@NbIntervals#$@E@GeomAbs_Shape#1
@@ -1877,6 +2058,7 @@
 // Source: c:@S@Law_BSpline@F@Copy#1
 // Source: c:@S@Law_BSpline@F@DN#d#I#1
 // Source: c:@S@Law_BSpline@F@Degree#1
+// Source: c:@S@Law_BSpline@F@DynamicType#1
 // Source: c:@S@Law_BSpline@F@EndPoint#1
 // Source: c:@S@Law_BSpline@F@FirstParameter#1
 // Source: c:@S@Law_BSpline@F@FirstUKnotIndex#1
@@ -1915,6 +2097,7 @@
 // Source: c:@S@Law_BSpline@F@Value#d#1
 // Source: c:@S@Law_BSpline@F@Weight#I#1
 // Source: c:@S@Law_Composite@F@Continuity#1
+// Source: c:@S@Law_Composite@F@DynamicType#1
 // Source: c:@S@Law_Composite@F@IsPeriodic#1
 // Source: c:@S@Law_Composite@F@Law_Composite#
 // Source: c:@S@Law_Composite@F@Law_Composite#d#d#d#
@@ -1923,23 +2106,29 @@
 // Source: c:@S@Law_Composite@F@Trim#d#d#d#1
 // Source: c:@S@Law_Composite@F@Value#d#
 // Source: c:@S@Law_Constant@F@Continuity#1
+// Source: c:@S@Law_Constant@F@DynamicType#1
 // Source: c:@S@Law_Constant@F@Law_Constant#
 // Source: c:@S@Law_Constant@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@Law_Constant@F@Set#d#d#d#
 // Source: c:@S@Law_Constant@F@Trim#d#d#d#1
 // Source: c:@S@Law_Constant@F@Value#d#
+// Source: c:@S@Law_Function@F@DynamicType#1
+// Source: c:@S@Law_Interpol@F@DynamicType#1
 // Source: c:@S@Law_Interpol@F@Law_Interpol#
 // Source: c:@S@Law_Linear@F@Continuity#1
+// Source: c:@S@Law_Linear@F@DynamicType#1
 // Source: c:@S@Law_Linear@F@Law_Linear#
 // Source: c:@S@Law_Linear@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@Law_Linear@F@Set#d#d#d#d#
 // Source: c:@S@Law_Linear@F@Trim#d#d#d#1
 // Source: c:@S@Law_Linear@F@Value#d#
+// Source: c:@S@Law_S@F@DynamicType#1
 // Source: c:@S@Law_S@F@Law_S#
 // Source: c:@S@Law_S@F@Set#d#d#d#d#
 // Source: c:@S@Law_S@F@Set#d#d#d#d#d#d#
 // Source: c:@S@MAT2d_Circuit@F@Connexion#I#1
 // Source: c:@S@MAT2d_Circuit@F@ConnexionOn#I#1
+// Source: c:@S@MAT2d_Circuit@F@DynamicType#1
 // Source: c:@S@MAT2d_Circuit@F@LineLength#I#1
 // Source: c:@S@MAT2d_Circuit@F@MAT2d_Circuit#$@E@GeomAbs_JoinType#b#
 // Source: c:@S@MAT2d_Circuit@F@NumberOfItems#1
@@ -1947,6 +2136,7 @@
 // Source: c:@S@MAT2d_Connexion@F@Distance#1
 // Source: c:@S@MAT2d_Connexion@F@Distance#d#
 // Source: c:@S@MAT2d_Connexion@F@Dump#I#I#1
+// Source: c:@S@MAT2d_Connexion@F@DynamicType#1
 // Source: c:@S@MAT2d_Connexion@F@IndexFirstLine#1
 // Source: c:@S@MAT2d_Connexion@F@IndexFirstLine#I#
 // Source: c:@S@MAT2d_Connexion@F@IndexItemOnFirst#1
@@ -1962,6 +2152,7 @@
 // Source: c:@S@MAT2d_Connexion@F@ParameterOnSecond#1
 // Source: c:@S@MAT2d_Connexion@F@ParameterOnSecond#d#
 // Source: c:@S@MAT2d_Connexion@F@Reverse#1
+// Source: c:@S@MAT_Arc@F@DynamicType#1
 // Source: c:@S@MAT_Arc@F@FirstElement#1
 // Source: c:@S@MAT_Arc@F@FirstNode#1
 // Source: c:@S@MAT_Arc@F@GeomIndex#1
@@ -1981,6 +2172,7 @@
 // Source: c:@S@MAT_Arc@F@SetSecondElement#&1$@N@opencascade@S@handle>#$@S@MAT_BasicElt#
 // Source: c:@S@MAT_Arc@F@SetSecondNode#&1$@N@opencascade@S@handle>#$@S@MAT_Node#
 // Source: c:@S@MAT_Arc@F@TheOtherNode#&1$@N@opencascade@S@handle>#$@S@MAT_Node#1
+// Source: c:@S@MAT_BasicElt@F@DynamicType#1
 // Source: c:@S@MAT_BasicElt@F@EndArc#1
 // Source: c:@S@MAT_BasicElt@F@GeomIndex#1
 // Source: c:@S@MAT_BasicElt@F@Index#1
@@ -1996,6 +2188,7 @@
 // Source: c:@S@MAT_Bisector@F@DistIssuePoint#1
 // Source: c:@S@MAT_Bisector@F@DistIssuePoint#d#
 // Source: c:@S@MAT_Bisector@F@Dump#I#I#1
+// Source: c:@S@MAT_Bisector@F@DynamicType#1
 // Source: c:@S@MAT_Bisector@F@EndPoint#1
 // Source: c:@S@MAT_Bisector@F@EndPoint#I#
 // Source: c:@S@MAT_Bisector@F@FirstBisector#1
@@ -2023,6 +2216,7 @@
 // Source: c:@S@MAT_Edge@F@Distance#1
 // Source: c:@S@MAT_Edge@F@Distance#d#
 // Source: c:@S@MAT_Edge@F@Dump#I#I#1
+// Source: c:@S@MAT_Edge@F@DynamicType#1
 // Source: c:@S@MAT_Edge@F@EdgeNumber#1
 // Source: c:@S@MAT_Edge@F@EdgeNumber#I#
 // Source: c:@S@MAT_Edge@F@FirstBisector#&1$@N@opencascade@S@handle>#$@S@MAT_Bisector#
@@ -2037,6 +2231,7 @@
 // Source: c:@S@MAT_Graph@F@ChangeBasicElt#I#
 // Source: c:@S@MAT_Graph@F@CompactArcs#
 // Source: c:@S@MAT_Graph@F@CompactNodes#
+// Source: c:@S@MAT_Graph@F@DynamicType#1
 // Source: c:@S@MAT_Graph@F@MAT_Graph#
 // Source: c:@S@MAT_Graph@F@Node#I#1
 // Source: c:@S@MAT_Graph@F@NumberOfArcs#1
@@ -2049,6 +2244,7 @@
 // Source: c:@S@MAT_ListOfBisector@F@Current#&1$@N@opencascade@S@handle>#$@S@MAT_Bisector#1
 // Source: c:@S@MAT_ListOfBisector@F@Current#1
 // Source: c:@S@MAT_ListOfBisector@F@Dump#I#I#
+// Source: c:@S@MAT_ListOfBisector@F@DynamicType#1
 // Source: c:@S@MAT_ListOfBisector@F@First#
 // Source: c:@S@MAT_ListOfBisector@F@FirstItem#1
 // Source: c:@S@MAT_ListOfBisector@F@FrontAdd#&1$@N@opencascade@S@handle>#$@S@MAT_Bisector#
@@ -2074,6 +2270,7 @@
 // Source: c:@S@MAT_ListOfEdge@F@Current#&1$@N@opencascade@S@handle>#$@S@MAT_Edge#1
 // Source: c:@S@MAT_ListOfEdge@F@Current#1
 // Source: c:@S@MAT_ListOfEdge@F@Dump#I#I#
+// Source: c:@S@MAT_ListOfEdge@F@DynamicType#1
 // Source: c:@S@MAT_ListOfEdge@F@First#
 // Source: c:@S@MAT_ListOfEdge@F@FirstItem#1
 // Source: c:@S@MAT_ListOfEdge@F@FrontAdd#&1$@N@opencascade@S@handle>#$@S@MAT_Edge#
@@ -2095,6 +2292,7 @@
 // Source: c:@S@MAT_ListOfEdge@F@PreviousItem#1
 // Source: c:@S@MAT_ListOfEdge@F@Unlink#
 // Source: c:@S@MAT_Node@F@Distance#1
+// Source: c:@S@MAT_Node@F@DynamicType#1
 // Source: c:@S@MAT_Node@F@GeomIndex#1
 // Source: c:@S@MAT_Node@F@Index#1
 // Source: c:@S@MAT_Node@F@Infinite#1
@@ -2104,6 +2302,7 @@
 // Source: c:@S@MAT_Node@F@SetIndex#I#
 // Source: c:@S@MAT_Node@F@SetLinkedArc#&1$@N@opencascade@S@handle>#$@S@MAT_Arc#
 // Source: c:@S@MAT_TListNodeOfListOfBisector@F@Dummy#1
+// Source: c:@S@MAT_TListNodeOfListOfBisector@F@DynamicType#1
 // Source: c:@S@MAT_TListNodeOfListOfBisector@F@GetItem#1
 // Source: c:@S@MAT_TListNodeOfListOfBisector@F@MAT_TListNodeOfListOfBisector#
 // Source: c:@S@MAT_TListNodeOfListOfBisector@F@MAT_TListNodeOfListOfBisector#&1$@N@opencascade@S@handle>#$@S@MAT_Bisector#
@@ -2113,6 +2312,7 @@
 // Source: c:@S@MAT_TListNodeOfListOfBisector@F@Previous#1
 // Source: c:@S@MAT_TListNodeOfListOfBisector@F@SetItem#&1$@N@opencascade@S@handle>#$@S@MAT_Bisector#
 // Source: c:@S@MAT_TListNodeOfListOfEdge@F@Dummy#1
+// Source: c:@S@MAT_TListNodeOfListOfEdge@F@DynamicType#1
 // Source: c:@S@MAT_TListNodeOfListOfEdge@F@GetItem#1
 // Source: c:@S@MAT_TListNodeOfListOfEdge@F@MAT_TListNodeOfListOfEdge#
 // Source: c:@S@MAT_TListNodeOfListOfEdge@F@MAT_TListNodeOfListOfEdge#&1$@N@opencascade@S@handle>#$@S@MAT_Edge#
@@ -2122,12 +2322,14 @@
 // Source: c:@S@MAT_TListNodeOfListOfEdge@F@Previous#1
 // Source: c:@S@MAT_TListNodeOfListOfEdge@F@SetItem#&1$@N@opencascade@S@handle>#$@S@MAT_Edge#
 // Source: c:@S@MAT_Zone@F@ArcOnFrontier#I#1
+// Source: c:@S@MAT_Zone@F@DynamicType#1
 // Source: c:@S@MAT_Zone@F@Limited#1
 // Source: c:@S@MAT_Zone@F@MAT_Zone#
 // Source: c:@S@MAT_Zone@F@MAT_Zone#&1$@N@opencascade@S@handle>#$@S@MAT_BasicElt#
 // Source: c:@S@MAT_Zone@F@NoEmptyZone#1
 // Source: c:@S@MAT_Zone@F@NumberOfArcs#1
 // Source: c:@S@MAT_Zone@F@Perform#&1$@N@opencascade@S@handle>#$@S@MAT_BasicElt#
+// Source: c:@S@NLPlate_HGPPConstraint@F@DynamicType#1
 // Source: c:@S@NLPlate_HGPPConstraint@F@G0Criterion#1
 // Source: c:@S@NLPlate_HGPPConstraint@F@G1Criterion#1
 // Source: c:@S@NLPlate_HGPPConstraint@F@G2Criterion#1
@@ -2144,26 +2346,35 @@
 // Source: c:@S@NLPlate_HGPPConstraint@F@SetUVFreeSliding#b#
 // Source: c:@S@NLPlate_HGPPConstraint@F@UVFreeSliding#1
 // Source: c:@S@NLPlate_HPG0Constraint@F@ActiveOrder#1
+// Source: c:@S@NLPlate_HPG0Constraint@F@DynamicType#1
 // Source: c:@S@NLPlate_HPG0Constraint@F@IncrementalLoadAllowed#1
 // Source: c:@S@NLPlate_HPG0Constraint@F@IsG0#1
 // Source: c:@S@NLPlate_HPG0Constraint@F@SetIncrementalLoadAllowed#b#
 // Source: c:@S@NLPlate_HPG0Constraint@F@SetUVFreeSliding#b#
 // Source: c:@S@NLPlate_HPG0Constraint@F@UVFreeSliding#1
 // Source: c:@S@NLPlate_HPG0G1Constraint@F@ActiveOrder#1
+// Source: c:@S@NLPlate_HPG0G1Constraint@F@DynamicType#1
 // Source: c:@S@NLPlate_HPG0G1Constraint@F@Orientation#
 // Source: c:@S@NLPlate_HPG0G1Constraint@F@SetOrientation#I#
 // Source: c:@S@NLPlate_HPG0G2Constraint@F@ActiveOrder#1
+// Source: c:@S@NLPlate_HPG0G2Constraint@F@DynamicType#1
 // Source: c:@S@NLPlate_HPG0G3Constraint@F@ActiveOrder#1
+// Source: c:@S@NLPlate_HPG0G3Constraint@F@DynamicType#1
 // Source: c:@S@NLPlate_HPG1Constraint@F@ActiveOrder#1
+// Source: c:@S@NLPlate_HPG1Constraint@F@DynamicType#1
 // Source: c:@S@NLPlate_HPG1Constraint@F@IncrementalLoadAllowed#1
 // Source: c:@S@NLPlate_HPG1Constraint@F@IsG0#1
 // Source: c:@S@NLPlate_HPG1Constraint@F@Orientation#
 // Source: c:@S@NLPlate_HPG1Constraint@F@SetIncrementalLoadAllowed#b#
 // Source: c:@S@NLPlate_HPG1Constraint@F@SetOrientation#I#
 // Source: c:@S@NLPlate_HPG2Constraint@F@ActiveOrder#1
+// Source: c:@S@NLPlate_HPG2Constraint@F@DynamicType#1
 // Source: c:@S@NLPlate_HPG3Constraint@F@ActiveOrder#1
+// Source: c:@S@NLPlate_HPG3Constraint@F@DynamicType#1
 // Source: c:@S@ProjLib_CompProjectedCurve@F@Continuity#1
+// Source: c:@S@ProjLib_CompProjectedCurve@F@DynamicType#1
 // Source: c:@S@ProjLib_CompProjectedCurve@F@FirstParameter#1
+// Source: c:@S@ProjLib_CompProjectedCurve@F@GetCurve#1
 // Source: c:@S@ProjLib_CompProjectedCurve@F@GetProj2d#1
 // Source: c:@S@ProjLib_CompProjectedCurve@F@GetProj3d#1
 // Source: c:@S@ProjLib_CompProjectedCurve@F@GetResult2dC#I#1
@@ -2172,6 +2383,7 @@
 // Source: c:@S@ProjLib_CompProjectedCurve@F@GetResult3dApproxError#I#1
 // Source: c:@S@ProjLib_CompProjectedCurve@F@GetResult3dC#I#1
 // Source: c:@S@ProjLib_CompProjectedCurve@F@GetResult3dP#I#1
+// Source: c:@S@ProjLib_CompProjectedCurve@F@GetSurface#1
 // Source: c:@S@ProjLib_CompProjectedCurve@F@GetType#1
 // Source: c:@S@ProjLib_CompProjectedCurve@F@Init#
 // Source: c:@S@ProjLib_CompProjectedCurve@F@LastParameter#1
@@ -2200,6 +2412,8 @@
 // Source: c:@S@ProjLib_ProjectOnPlane@F@Degree#1
 // Source: c:@S@ProjLib_ProjectOnPlane@F@EvalD0#d#1
 // Source: c:@S@ProjLib_ProjectOnPlane@F@FirstParameter#1
+// Source: c:@S@ProjLib_ProjectOnPlane@F@GetCurve#1
+// Source: c:@S@ProjLib_ProjectOnPlane@F@GetResult#1
 // Source: c:@S@ProjLib_ProjectOnPlane@F@GetType#1
 // Source: c:@S@ProjLib_ProjectOnPlane@F@IsClosed#1
 // Source: c:@S@ProjLib_ProjectOnPlane@F@IsPeriodic#1
@@ -2218,7 +2432,10 @@
 // Source: c:@S@ProjLib_ProjectedCurve@F@Bezier#1
 // Source: c:@S@ProjLib_ProjectedCurve@F@Continuity#1
 // Source: c:@S@ProjLib_ProjectedCurve@F@Degree#1
+// Source: c:@S@ProjLib_ProjectedCurve@F@DynamicType#1
 // Source: c:@S@ProjLib_ProjectedCurve@F@FirstParameter#1
+// Source: c:@S@ProjLib_ProjectedCurve@F@GetCurve#1
+// Source: c:@S@ProjLib_ProjectedCurve@F@GetSurface#1
 // Source: c:@S@ProjLib_ProjectedCurve@F@GetTolerance#1
 // Source: c:@S@ProjLib_ProjectedCurve@F@GetType#1
 // Source: c:@S@ProjLib_ProjectedCurve@F@IsClosed#1
@@ -3592,6 +3809,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Adaptor2dCurve2dMethodDegree0(Adaptor2dCurve2dHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor2d_curve2d_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Adaptor2dCurve2dMethodDynamicType0(Adaptor2dCurve2dHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor2d_curve2d_method_first_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Adaptor2dCurve2dMethodFirstParameter0(Adaptor2dCurve2dHandle handle, out double resultValue);
@@ -3686,6 +3907,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor2d_line2d_method_degree_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Adaptor2dLine2dMethodDegree0(Adaptor2dLine2dHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor2d_line2d_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Adaptor2dLine2dMethodDynamicType0(Adaptor2dLine2dHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor2d_line2d_method_first_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -3786,9 +4011,17 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Adaptor2dOffsetCurveMethodContinuity0(Adaptor2dOffsetCurveHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor2d_offset_curve_method_curve_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Adaptor2dOffsetCurveMethodCurve0(Adaptor2dOffsetCurveHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor2d_offset_curve_method_degree_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Adaptor2dOffsetCurveMethodDegree0(Adaptor2dOffsetCurveHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor2d_offset_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Adaptor2dOffsetCurveMethodDynamicType0(Adaptor2dOffsetCurveHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor2d_offset_curve_method_first_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -3901,6 +4134,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Adaptor3dCurveMethodDegree0(Adaptor3dCurveHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor3d_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Adaptor3dCurveMethodDynamicType0(Adaptor3dCurveHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor3d_curve_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Adaptor3dCurveMethodEvalD00(Adaptor3dCurveHandle handle, double theU, out Point3dRaw resultValue);
@@ -4012,6 +4249,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Adaptor3dCurveOnSurfaceMethodDegree0(Adaptor3dCurveOnSurfaceHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor3d_curve_on_surface_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Adaptor3dCurveOnSurfaceMethodDynamicType0(Adaptor3dCurveOnSurfaceHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor3d_curve_on_surface_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Adaptor3dCurveOnSurfaceMethodEvalD00(Adaptor3dCurveOnSurfaceHandle handle, double theU, out Point3dRaw resultValue);
@@ -4019,6 +4260,14 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor3d_curve_on_surface_method_first_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Adaptor3dCurveOnSurfaceMethodFirstParameter0(Adaptor3dCurveOnSurfaceHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor3d_curve_on_surface_method_get_curve_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Adaptor3dCurveOnSurfaceMethodGetCurve0(Adaptor3dCurveOnSurfaceHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor3d_curve_on_surface_method_get_surface_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Adaptor3dCurveOnSurfaceMethodGetSurface0(Adaptor3dCurveOnSurfaceHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor3d_curve_on_surface_method_get_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -4103,6 +4352,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Adaptor3dHVertexCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor3d_hvertex_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Adaptor3dHVertexMethodDynamicType0(Adaptor3dHVertexHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor3d_hvertex_method_is_same_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Adaptor3dHVertexMethodIsSame0(Adaptor3dHVertexHandle handle, nint other, out int resultValue);
@@ -4169,6 +4422,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor3d_iso_curve_method_degree_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Adaptor3dIsoCurveMethodDegree0(Adaptor3dIsoCurveHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor3d_iso_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Adaptor3dIsoCurveMethodDynamicType0(Adaptor3dIsoCurveHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor3d_iso_curve_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -4242,6 +4499,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Adaptor3dIsoCurveMethodShallowCopy0(Adaptor3dIsoCurveHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor3d_iso_curve_method_surface_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Adaptor3dIsoCurveMethodSurface0(Adaptor3dIsoCurveHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor3d_iso_curve_method_trim_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Adaptor3dIsoCurveMethodTrim0(Adaptor3dIsoCurveHandle handle, double first, double last, double tol, out nint handleValue);
@@ -4280,6 +4541,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor3d_surface_method_bspline_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Adaptor3dSurfaceMethodBSpline0(Adaptor3dSurfaceHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor3d_surface_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Adaptor3dSurfaceMethodDynamicType0(Adaptor3dSurfaceHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor3d_surface_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -4444,6 +4709,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Adaptor3dTopolToolMethodDomainIsInfinite0(Adaptor3dTopolToolHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor3d_topol_tool_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Adaptor3dTopolToolMethodDynamicType0(Adaptor3dTopolToolHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor3d_topol_tool_method_has3d_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Adaptor3dTopolToolMethodHas3d0(Adaptor3dTopolToolHandle handle, out int resultValue);
@@ -4579,6 +4848,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AdvApp2VarIsoMethodConstante0(AdvApp2VarIsoHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adv_app2_var_iso_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AdvApp2VarIsoMethodDynamicType0(AdvApp2VarIsoHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adv_app2_var_iso_method_has_result_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AdvApp2VarIsoMethodHasResult0(AdvApp2VarIsoHandle handle, out int resultValue);
@@ -4674,9 +4947,17 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AdvApp2VarNodeCreate1(int iu, int iv, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adv_app2_var_node_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AdvApp2VarNodeMethodDynamicType0(AdvApp2VarNodeHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adv_app2_var_node_method_error_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AdvApp2VarNodeMethodError0(AdvApp2VarNodeHandle handle, int iu, int iv, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adv_app2_var_node_method_point_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AdvApp2VarNodeMethodPoint0(AdvApp2VarNodeHandle handle, int iu, int iv, out Point3dRaw resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adv_app2_var_node_method_set_coord_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -4740,6 +5021,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adv_app2_var_patch_method_cut_sense_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AdvApp2VarPatchMethodCutSense0(AdvApp2VarPatchHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adv_app2_var_patch_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AdvApp2VarPatchMethodDynamicType0(AdvApp2VarPatchHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adv_app2_var_patch_method_has_result_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -4816,6 +5101,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void AdvApp2VarPatchRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_app_def_linear_criteria_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AppDefLinearCriteriaMethodDynamicType0(AppDefLinearCriteriaHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_app_def_linear_criteria_method_set_curve_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AppDefLinearCriteriaMethodSetCurve0(AppDefLinearCriteriaHandle handle, nint c);
@@ -4851,6 +5140,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AppDefSmoothCriterionMethodCurve0(AppDefSmoothCriterionHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_app_def_smooth_criterion_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus AppDefSmoothCriterionMethodDynamicType0(AppDefSmoothCriterionHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_app_def_smooth_criterion_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus AppDefSmoothCriterionClone(AppDefSmoothCriterionHandle source, out nint handle);
@@ -4881,6 +5174,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_approx_curvlin_func_create_2")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ApproxCurvlinFuncCreate2(nint c, double tol, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_approx_curvlin_func_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ApproxCurvlinFuncMethodDynamicType0(ApproxCurvlinFuncHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_approx_curvlin_func_method_first_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -4937,6 +5234,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ApproxSweepFunctionMethodBarycentreOfSurf0(ApproxSweepFunctionHandle handle, out Point3dRaw resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_approx_sweep_function_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ApproxSweepFunctionMethodDynamicType0(ApproxSweepFunctionHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_approx_sweep_function_method_maximal_section_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ApproxSweepFunctionMethodMaximalSection0(ApproxSweepFunctionHandle handle, out double resultValue);
@@ -4960,6 +5261,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void ApproxSweepFunctionRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bspl_clib_cache_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus BSplCLibCacheMethodDynamicType0(BSplCLibCacheHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bspl_clib_cache_method_is_cache_valid_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus BSplCLibCacheMethodIsCacheValid0(BSplCLibCacheHandle handle, double theParameter, out int resultValue);
@@ -4982,6 +5287,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bspl_clib_cache_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void BSplCLibCacheRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bspl_slib_cache_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus BSplSLibCacheMethodDynamicType0(BSplSLibCacheHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bspl_slib_cache_method_is_cache_valid_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -5025,6 +5334,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bi_tgte_curve_on_edge_method_degree_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus BiTgteCurveOnEdgeMethodDegree0(BiTgteCurveOnEdgeHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bi_tgte_curve_on_edge_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus BiTgteCurveOnEdgeMethodDynamicType0(BiTgteCurveOnEdgeHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bi_tgte_curve_on_edge_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -5121,6 +5434,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus BiTgteCurveOnVertexMethodDegree0(BiTgteCurveOnVertexHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bi_tgte_curve_on_vertex_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus BiTgteCurveOnVertexMethodDynamicType0(BiTgteCurveOnVertexHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bi_tgte_curve_on_vertex_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus BiTgteCurveOnVertexMethodEvalD00(BiTgteCurveOnVertexHandle handle, double theU, out Point3dRaw resultValue);
@@ -5207,6 +5524,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bisector_bisec_ana_method_dump_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus BisectorBisecAnaMethodDump0(BisectorBisecAnaHandle handle, int deep, int offset);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bisector_bisec_ana_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus BisectorBisecAnaMethodDynamicType0(BisectorBisecAnaHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bisector_bisec_ana_method_first_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -5323,6 +5644,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus BisectorBisecCCMethodDump0(BisectorBisecCCHandle handle, int deep, int offset);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bisector_bisec_cc_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus BisectorBisecCCMethodDynamicType0(BisectorBisecCCHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bisector_bisec_cc_method_first_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus BisectorBisecCCMethodFirstParameter0(BisectorBisecCCHandle handle, out double resultValue);
@@ -5426,6 +5751,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus BisectorBisecPCMethodDump0(BisectorBisecPCHandle handle, int deep, int offset);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bisector_bisec_pc_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus BisectorBisecPCMethodDynamicType0(BisectorBisecPCHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bisector_bisec_pc_method_first_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus BisectorBisecPCMethodFirstParameter0(BisectorBisecPCHandle handle, out double resultValue);
@@ -5509,6 +5838,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void BisectorBisecPCRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bisector_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus BisectorCurveMethodDynamicType0(BisectorCurveHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bisector_curve_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus BisectorCurveClone(BisectorCurveHandle source, out nint handle);
@@ -5539,6 +5872,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_extrema_ext_pext_s_create_2")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ExtremaExtPExtSCreate2(Point3dRaw p, nint s, double umin, double usup, double vmin, double vsup, double tolU, double tolV, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_extrema_ext_pext_s_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ExtremaExtPExtSMethodDynamicType0(ExtremaExtPExtSHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_extrema_ext_pext_s_method_initialize_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -5591,6 +5928,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ExtremaExtPRevSCreate2(Point3dRaw p, nint s, double umin, double usup, double vmin, double vsup, double tolU, double tolV, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_extrema_ext_prev_s_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ExtremaExtPRevSMethodDynamicType0(ExtremaExtPRevSHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_extrema_ext_prev_s_method_initialize_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ExtremaExtPRevSMethodInitialize0(ExtremaExtPRevSHandle handle, nint s, double umin, double usup, double vmin, double vsup, double tolU, double tolV);
@@ -5638,6 +5979,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus FEmToolCurveMethodDimension0(FEmToolCurveHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolCurveMethodDynamicType0(FEmToolCurveHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_curve_method_nb_elements_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus FEmToolCurveMethodNbElements0(FEmToolCurveHandle handle, out int resultValue);
@@ -5664,6 +6009,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_curve_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void FEmToolCurveRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_elementary_criterion_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolElementaryCriterionMethodDynamicType0(FEmToolElementaryCriterionHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_elementary_criterion_method_set_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -5692,6 +6041,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus FEmToolLinearFlexionCreate0(int workDegree, int constraintOrder, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_flexion_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolLinearFlexionMethodDynamicType0(FEmToolLinearFlexionHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_flexion_method_value_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus FEmToolLinearFlexionMethodValue0(FEmToolLinearFlexionHandle handle, out double resultValue);
@@ -5719,6 +6072,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus FEmToolLinearJerkCreate0(int workDegree, int constraintOrder, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_jerk_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolLinearJerkMethodDynamicType0(FEmToolLinearJerkHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_jerk_method_value_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus FEmToolLinearJerkMethodValue0(FEmToolLinearJerkHandle handle, out double resultValue);
@@ -5745,6 +6102,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_tension_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus FEmToolLinearTensionCreate0(int workDegree, int constraintOrder, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_tension_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolLinearTensionMethodDynamicType0(FEmToolLinearTensionHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_tension_method_value_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -5776,6 +6137,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_profile_matrix_method_decompose_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus FEmToolProfileMatrixMethodDecompose0(FEmToolProfileMatrixHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_profile_matrix_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolProfileMatrixMethodDynamicType0(FEmToolProfileMatrixHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_profile_matrix_method_init_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -5820,6 +6185,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void FEmToolProfileMatrixRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_sparse_matrix_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolSparseMatrixMethodDynamicType0(FEmToolSparseMatrixHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_sparse_matrix_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus FEmToolSparseMatrixClone(FEmToolSparseMatrixHandle source, out nint handle);
@@ -5842,6 +6211,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gcc_int_bcirc_method_arc_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GccIntBCircMethodArcType0(GccIntBCircHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gcc_int_bcirc_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GccIntBCircMethodDynamicType0(GccIntBCircHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gcc_int_bcirc_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -5866,6 +6239,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GccIntBElipsMethodArcType0(GccIntBElipsHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gcc_int_belips_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GccIntBElipsMethodDynamicType0(GccIntBElipsHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gcc_int_belips_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GccIntBElipsClone(GccIntBElipsHandle source, out nint handle);
@@ -5888,6 +6265,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gcc_int_bhyper_method_arc_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GccIntBHyperMethodArcType0(GccIntBHyperHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gcc_int_bhyper_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GccIntBHyperMethodDynamicType0(GccIntBHyperHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gcc_int_bhyper_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -5912,6 +6293,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GccIntBLineMethodArcType0(GccIntBLineHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gcc_int_bline_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GccIntBLineMethodDynamicType0(GccIntBLineHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gcc_int_bline_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GccIntBLineClone(GccIntBLineHandle source, out nint handle);
@@ -5934,6 +6319,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gcc_int_bparab_method_arc_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GccIntBParabMethodArcType0(GccIntBParabHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gcc_int_bparab_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GccIntBParabMethodDynamicType0(GccIntBParabHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gcc_int_bparab_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -5958,6 +6347,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GccIntBPointMethodArcType0(GccIntBPointHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gcc_int_bpoint_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GccIntBPointMethodDynamicType0(GccIntBPointHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gcc_int_bpoint_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GccIntBPointClone(GccIntBPointHandle source, out nint handle);
@@ -5976,6 +6369,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gcc_int_bpoint_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void GccIntBPointRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gcc_int_bisec_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GccIntBisecMethodDynamicType0(GccIntBisecHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gcc_int_bisec_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -6020,9 +6417,17 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dAdaptorCurveMethodContinuity0(Geom2dAdaptorCurveHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_adaptor_curve_method_curve_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dAdaptorCurveMethodCurve0(Geom2dAdaptorCurveHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_adaptor_curve_method_degree_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dAdaptorCurveMethodDegree0(Geom2dAdaptorCurveHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_adaptor_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dAdaptorCurveMethodDynamicType0(Geom2dAdaptorCurveHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_adaptor_curve_method_first_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -6135,6 +6540,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalAHTBezierCurveMethodCopy0(Geom2dEvalAHTBezierCurveHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_ahtbezier_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalAHTBezierCurveMethodDynamicType0(Geom2dEvalAHTBezierCurveHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_ahtbezier_curve_method_first_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalAHTBezierCurveMethodFirstParameter0(Geom2dEvalAHTBezierCurveHandle handle, out double resultValue);
@@ -6197,6 +6606,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_archimedean_spiral_curve_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalArchimedeanSpiralCurveMethodCopy0(Geom2dEvalArchimedeanSpiralCurveHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_archimedean_spiral_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalArchimedeanSpiralCurveMethodDynamicType0(Geom2dEvalArchimedeanSpiralCurveHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_archimedean_spiral_curve_method_first_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -6261,6 +6674,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalCircleInvoluteCurveMethodCopy0(Geom2dEvalCircleInvoluteCurveHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_circle_involute_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalCircleInvoluteCurveMethodDynamicType0(Geom2dEvalCircleInvoluteCurveHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_circle_involute_curve_method_first_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalCircleInvoluteCurveMethodFirstParameter0(Geom2dEvalCircleInvoluteCurveHandle handle, out double resultValue);
@@ -6319,6 +6736,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_logarithmic_spiral_curve_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalLogarithmicSpiralCurveMethodCopy0(Geom2dEvalLogarithmicSpiralCurveHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_logarithmic_spiral_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalLogarithmicSpiralCurveMethodDynamicType0(Geom2dEvalLogarithmicSpiralCurveHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_logarithmic_spiral_curve_method_first_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -6406,6 +6827,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalSineWaveCurveMethodCopy0(Geom2dEvalSineWaveCurveHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_sine_wave_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalSineWaveCurveMethodDynamicType0(Geom2dEvalSineWaveCurveHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_sine_wave_curve_method_first_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalSineWaveCurveMethodFirstParameter0(Geom2dEvalSineWaveCurveHandle handle, out double resultValue);
@@ -6472,6 +6897,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_tbezier_curve_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalTBezierCurveMethodCopy0(Geom2dEvalTBezierCurveHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_tbezier_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalTBezierCurveMethodDynamicType0(Geom2dEvalTBezierCurveHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_tbezier_curve_method_first_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -6540,6 +6969,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dAxisPlacementMethodCopy0(Geom2dAxisPlacementHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_axis_placement_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dAxisPlacementMethodDynamicType0(Geom2dAxisPlacementHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_axis_placement_method_reverse_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dAxisPlacementMethodReverse0(Geom2dAxisPlacementHandle handle);
@@ -6582,6 +7015,14 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_bspline_curve_method_degree_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dBSplineCurveMethodDegree0(Geom2dBSplineCurveHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_bspline_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dBSplineCurveMethodDynamicType0(Geom2dBSplineCurveHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_bspline_curve_method_eval_representation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dBSplineCurveMethodEvalRepresentation0(Geom2dBSplineCurveHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_bspline_curve_method_first_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -6750,6 +7191,14 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dBezierCurveMethodDegree0(Geom2dBezierCurveHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_bezier_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dBezierCurveMethodDynamicType0(Geom2dBezierCurveHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_bezier_curve_method_eval_representation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dBezierCurveMethodEvalRepresentation0(Geom2dBezierCurveHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_bezier_curve_method_first_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dBezierCurveMethodFirstParameter0(Geom2dBezierCurveHandle handle, out double resultValue);
@@ -6833,6 +7282,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void Geom2dBezierCurveRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_bounded_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dBoundedCurveMethodDynamicType0(Geom2dBoundedCurveHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_bounded_curve_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dBoundedCurveClone(Geom2dBoundedCurveHandle source, out nint handle);
@@ -6859,6 +7312,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_cartesian_point_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dCartesianPointMethodCopy0(Geom2dCartesianPointHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_cartesian_point_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dCartesianPointMethodDynamicType0(Geom2dCartesianPointHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_cartesian_point_method_set_coord_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -6902,6 +7359,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_circle_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dCircleMethodCopy0(Geom2dCircleHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_circle_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dCircleMethodDynamicType0(Geom2dCircleHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_circle_method_eccentricity_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -6958,6 +7419,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dConicMethodContinuity0(Geom2dConicHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_conic_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dConicMethodDynamicType0(Geom2dConicHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_conic_method_is_cn_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dConicMethodIsCN0(Geom2dConicHandle handle, int n, out int resultValue);
@@ -6984,6 +7449,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_conic_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void Geom2dConicRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dCurveMethodDynamicType0(Geom2dCurveHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_curve_method_period_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -7023,6 +7492,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_direction_method_crossed_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dDirectionMethodCrossed0(Geom2dDirectionHandle handle, nint other, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_direction_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dDirectionMethodDynamicType0(Geom2dDirectionHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_direction_method_magnitude_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -7066,6 +7539,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_ellipse_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEllipseMethodCopy0(Geom2dEllipseHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_ellipse_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEllipseMethodDynamicType0(Geom2dEllipseHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_ellipse_method_eccentricity_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -7134,6 +7611,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void Geom2dEllipseRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_geometry_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dGeometryMethodDynamicType0(Geom2dGeometryHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_geometry_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dGeometryClone(Geom2dGeometryHandle source, out nint handle);
@@ -7156,6 +7637,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_hyperbola_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dHyperbolaMethodCopy0(Geom2dHyperbolaHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_hyperbola_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dHyperbolaMethodDynamicType0(Geom2dHyperbolaHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_hyperbola_method_eccentricity_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -7232,6 +7717,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dLineMethodCopy0(Geom2dLineHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_line_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dLineMethodDynamicType0(Geom2dLineHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_line_method_first_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dLineMethodFirstParameter0(Geom2dLineHandle handle, out double resultValue);
@@ -7298,6 +7787,14 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_offset_curve_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dOffsetCurveMethodCopy0(Geom2dOffsetCurveHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_offset_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dOffsetCurveMethodDynamicType0(Geom2dOffsetCurveHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_offset_curve_method_eval_representation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dOffsetCurveMethodEvalRepresentation0(Geom2dOffsetCurveHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_offset_curve_method_first_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -7378,6 +7875,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dParabolaMethodCopy0(Geom2dParabolaHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_parabola_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dParabolaMethodDynamicType0(Geom2dParabolaHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_parabola_method_eccentricity_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dParabolaMethodEccentricity0(Geom2dParabolaHandle handle, out double resultValue);
@@ -7437,6 +7938,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dPointMethodDistance0(Geom2dPointHandle handle, nint other, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_point_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dPointMethodDynamicType0(Geom2dPointHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_point_method_square_distance_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dPointMethodSquareDistance0(Geom2dPointHandle handle, nint other, out double resultValue);
@@ -7467,6 +7972,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_transformation_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dTransformationMethodCopy0(Geom2dTransformationHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_transformation_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dTransformationMethodDynamicType0(Geom2dTransformationHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_transformation_method_form_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -7547,6 +8056,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dTrimmedCurveMethodCopy0(Geom2dTrimmedCurveHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_trimmed_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dTrimmedCurveMethodDynamicType0(Geom2dTrimmedCurveHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_trimmed_curve_method_first_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dTrimmedCurveMethodFirstParameter0(Geom2dTrimmedCurveHandle handle, out double resultValue);
@@ -7610,6 +8123,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dVectorMethodDot0(Geom2dVectorHandle handle, nint other, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_vector_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dVectorMethodDynamicType0(Geom2dVectorHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_vector_method_reverse_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dVectorMethodReverse0(Geom2dVectorHandle handle);
@@ -7672,6 +8189,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_vector_with_magnitude_method_divided_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dVectorWithMagnitudeMethodDivided0(Geom2dVectorWithMagnitudeHandle handle, double scalar, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_vector_with_magnitude_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dVectorWithMagnitudeMethodDynamicType0(Geom2dVectorWithMagnitudeHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_vector_with_magnitude_method_magnitude_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -7760,9 +8281,17 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorCurveMethodContinuity0(GeomAdaptorCurveHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_curve_method_curve_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorCurveMethodCurve0(GeomAdaptorCurveHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_curve_method_degree_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorCurveMethodDegree0(GeomAdaptorCurveHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorCurveMethodDynamicType0(GeomAdaptorCurveHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_curve_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -7883,6 +8412,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorSurfaceMethodBSpline0(GeomAdaptorSurfaceHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_surface_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorSurfaceMethodDynamicType0(GeomAdaptorSurfaceHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_surface_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorSurfaceMethodEvalD00(GeomAdaptorSurfaceHandle handle, double theU, double theV, out Point3dRaw resultValue);
@@ -7971,6 +8504,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorSurfaceMethodShallowCopy0(GeomAdaptorSurfaceHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_surface_method_surface_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorSurfaceMethodSurface0(GeomAdaptorSurfaceHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_surface_method_tolerance_u_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorSurfaceMethodToleranceU0(GeomAdaptorSurfaceHandle handle, out double resultValue);
@@ -8057,6 +8594,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_surface_of_linear_extrusion_method_bspline_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorSurfaceOfLinearExtrusionMethodBSpline0(GeomAdaptorSurfaceOfLinearExtrusionHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_surface_of_linear_extrusion_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorSurfaceOfLinearExtrusionMethodDynamicType0(GeomAdaptorSurfaceOfLinearExtrusionHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_surface_of_linear_extrusion_method_first_uparameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -8196,6 +8737,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_surface_of_revolution_method_bspline_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorSurfaceOfRevolutionMethodBSpline0(GeomAdaptorSurfaceOfRevolutionHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_surface_of_revolution_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorSurfaceOfRevolutionMethodDynamicType0(GeomAdaptorSurfaceOfRevolutionHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_surface_of_revolution_method_first_uparameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -8340,6 +8885,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedCurveMethodDegree0(GeomAdaptorTransformedCurveHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedCurveMethodDynamicType0(GeomAdaptorTransformedCurveHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_curve_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedCurveMethodEvalD00(GeomAdaptorTransformedCurveHandle handle, double theU, out Point3dRaw resultValue);
@@ -8347,6 +8896,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_curve_method_first_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedCurveMethodFirstParameter0(GeomAdaptorTransformedCurveHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_curve_method_geom_curve_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedCurveMethodGeomCurve0(GeomAdaptorTransformedCurveHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_curve_method_get_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -8459,6 +9012,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedSurfaceMethodBSpline0(GeomAdaptorTransformedSurfaceHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_surface_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedSurfaceMethodDynamicType0(GeomAdaptorTransformedSurfaceHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_surface_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedSurfaceMethodEvalD00(GeomAdaptorTransformedSurfaceHandle handle, double theU, double theV, out Point3dRaw resultValue);
@@ -8470,6 +9027,18 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_surface_method_first_vparameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedSurfaceMethodFirstVParameter0(GeomAdaptorTransformedSurfaceHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_surface_method_geom_surface_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedSurfaceMethodGeomSurface0(GeomAdaptorTransformedSurfaceHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_surface_method_geom_surface_original_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedSurfaceMethodGeomSurfaceOriginal0(GeomAdaptorTransformedSurfaceHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_surface_method_geom_surface_transformed_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedSurfaceMethodGeomSurfaceTransformed0(GeomAdaptorTransformedSurfaceHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_surface_method_get_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -8630,6 +9199,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalAHTBezierCurveMethodCopy0(GeomEvalAHTBezierCurveHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_ahtbezier_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalAHTBezierCurveMethodDynamicType0(GeomEvalAHTBezierCurveHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_ahtbezier_curve_method_end_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalAHTBezierCurveMethodEndPoint0(GeomEvalAHTBezierCurveHandle handle, out Point3dRaw resultValue);
@@ -8729,6 +9302,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalAHTBezierSurfaceMethodCopy0(GeomEvalAHTBezierSurfaceHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_ahtbezier_surface_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalAHTBezierSurfaceMethodDynamicType0(GeomEvalAHTBezierSurfaceHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_ahtbezier_surface_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalAHTBezierSurfaceMethodEvalD00(GeomEvalAHTBezierSurfaceHandle handle, double u, double v, out Point3dRaw resultValue);
@@ -8820,6 +9397,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalCircularHelicoidSurfaceMethodCopy0(GeomEvalCircularHelicoidSurfaceHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_circular_helicoid_surface_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalCircularHelicoidSurfaceMethodDynamicType0(GeomEvalCircularHelicoidSurfaceHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_circular_helicoid_surface_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalCircularHelicoidSurfaceMethodEvalD00(GeomEvalCircularHelicoidSurfaceHandle handle, double u, double v, out Point3dRaw resultValue);
@@ -8899,6 +9480,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalCircularHelixCurveMethodCopy0(GeomEvalCircularHelixCurveHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_circular_helix_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalCircularHelixCurveMethodDynamicType0(GeomEvalCircularHelixCurveHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_circular_helix_curve_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalCircularHelixCurveMethodEvalD00(GeomEvalCircularHelixCurveHandle handle, double u, out Point3dRaw resultValue);
@@ -8961,6 +9546,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_ellipsoid_surface_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalEllipsoidSurfaceMethodCopy0(GeomEvalEllipsoidSurfaceHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_ellipsoid_surface_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalEllipsoidSurfaceMethodDynamicType0(GeomEvalEllipsoidSurfaceHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_ellipsoid_surface_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9053,6 +9642,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalHypParaboloidSurfaceMethodCopy0(GeomEvalHypParaboloidSurfaceHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_hyp_paraboloid_surface_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalHypParaboloidSurfaceMethodDynamicType0(GeomEvalHypParaboloidSurfaceHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_hyp_paraboloid_surface_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalHypParaboloidSurfaceMethodEvalD00(GeomEvalHypParaboloidSurfaceHandle handle, double u, double v, out Point3dRaw resultValue);
@@ -9135,6 +9728,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_hyperboloid_surface_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalHyperboloidSurfaceMethodCopy0(GeomEvalHyperboloidSurfaceHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_hyperboloid_surface_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalHyperboloidSurfaceMethodDynamicType0(GeomEvalHyperboloidSurfaceHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_hyperboloid_surface_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9227,6 +9824,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalParaboloidSurfaceMethodCopy0(GeomEvalParaboloidSurfaceHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_paraboloid_surface_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalParaboloidSurfaceMethodDynamicType0(GeomEvalParaboloidSurfaceHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_paraboloid_surface_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalParaboloidSurfaceMethodEvalD00(GeomEvalParaboloidSurfaceHandle handle, double u, double v, out Point3dRaw resultValue);
@@ -9310,6 +9911,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalSineWaveCurveMethodCopy0(GeomEvalSineWaveCurveHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_sine_wave_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalSineWaveCurveMethodDynamicType0(GeomEvalSineWaveCurveHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_sine_wave_curve_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalSineWaveCurveMethodEvalD00(GeomEvalSineWaveCurveHandle handle, double u, out Point3dRaw resultValue);
@@ -9380,6 +9985,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_tbezier_curve_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalTBezierCurveMethodCopy0(GeomEvalTBezierCurveHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_tbezier_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalTBezierCurveMethodDynamicType0(GeomEvalTBezierCurveHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_tbezier_curve_method_end_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9467,6 +10076,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_tbezier_surface_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalTBezierSurfaceMethodCopy0(GeomEvalTBezierSurfaceHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_tbezier_surface_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalTBezierSurfaceMethodDynamicType0(GeomEvalTBezierSurfaceHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_tbezier_surface_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9559,6 +10172,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void GeomEvalTBezierSurfaceRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_bound_with_surf_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillBoundWithSurfMethodDynamicType0(GeomFillBoundWithSurfHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_bound_with_surf_method_has_normals_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillBoundWithSurfMethodHasNormals0(GeomFillBoundWithSurfHandle handle, out int resultValue);
@@ -9593,6 +10210,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_bound_with_surf_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void GeomFillBoundWithSurfRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_boundary_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillBoundaryMethodDynamicType0(GeomFillBoundaryHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_boundary_method_has_normals_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9641,6 +10262,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillCircularBlendFuncMethodBarycentreOfSurf0(GeomFillCircularBlendFuncHandle handle, out Point3dRaw resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_circular_blend_func_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillCircularBlendFuncMethodDynamicType0(GeomFillCircularBlendFuncHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_circular_blend_func_method_is_rational_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillCircularBlendFuncMethodIsRational0(GeomFillCircularBlendFuncHandle handle, out int resultValue);
@@ -9688,6 +10313,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillConstantBiNormalMethodCopy0(GeomFillConstantBiNormalHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_constant_bi_normal_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillConstantBiNormalMethodDynamicType0(GeomFillConstantBiNormalHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_constant_bi_normal_method_is_constant_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillConstantBiNormalMethodIsConstant0(GeomFillConstantBiNormalHandle handle, out int resultValue);
@@ -9727,6 +10356,22 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillCoonsAlgPatchCreate0(nint b1, nint b2, nint b3, nint b4, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_coons_alg_patch_method_bound_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillCoonsAlgPatchMethodBound0(GeomFillCoonsAlgPatchHandle handle, int i, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_coons_alg_patch_method_corner_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillCoonsAlgPatchMethodCorner0(GeomFillCoonsAlgPatchHandle handle, int i, out Point3dRaw resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_coons_alg_patch_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillCoonsAlgPatchMethodDynamicType0(GeomFillCoonsAlgPatchHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_coons_alg_patch_method_func_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillCoonsAlgPatchMethodFunc0(GeomFillCoonsAlgPatchHandle handle, int i, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_coons_alg_patch_method_set_func_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillCoonsAlgPatchMethodSetFunc0(GeomFillCoonsAlgPatchHandle handle, nint f1, nint f2);
@@ -9765,6 +10410,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_corrected_frenet_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillCorrectedFrenetMethodCopy0(GeomFillCorrectedFrenetHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_corrected_frenet_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillCorrectedFrenetMethodDynamicType0(GeomFillCorrectedFrenetHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_corrected_frenet_method_evaluate_best_mode_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9817,6 +10466,14 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillCurveAndTrihedronMethodCopy0(GeomFillCurveAndTrihedronHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_curve_and_trihedron_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillCurveAndTrihedronMethodDynamicType0(GeomFillCurveAndTrihedronHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_curve_and_trihedron_method_get_curve_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillCurveAndTrihedronMethodGetCurve0(GeomFillCurveAndTrihedronHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_curve_and_trihedron_method_get_maximal_norm_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillCurveAndTrihedronMethodGetMaximalNorm0(GeomFillCurveAndTrihedronHandle handle, out double resultValue);
@@ -9860,6 +10517,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillDarbouxMethodCopy0(GeomFillDarbouxHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_darboux_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillDarbouxMethodDynamicType0(GeomFillDarbouxHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_darboux_method_is_constant_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillDarbouxMethodIsConstant0(GeomFillDarbouxHandle handle, out int resultValue);
@@ -9894,6 +10555,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_degenerated_bound_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillDegeneratedBoundCreate0(Point3dRaw point, double first, double last, double tol3d, double tolang, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_degenerated_bound_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillDegeneratedBoundMethodDynamicType0(GeomFillDegeneratedBoundHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_degenerated_bound_method_is_degenerated_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9933,6 +10598,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_discrete_trihedron_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillDiscreteTrihedronMethodCopy0(GeomFillDiscreteTrihedronHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_discrete_trihedron_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillDiscreteTrihedronMethodDynamicType0(GeomFillDiscreteTrihedronHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_discrete_trihedron_method_init_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9976,6 +10645,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_draft_trihedron_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillDraftTrihedronMethodCopy0(GeomFillDraftTrihedronHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_draft_trihedron_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillDraftTrihedronMethodDynamicType0(GeomFillDraftTrihedronHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_draft_trihedron_method_is_constant_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10028,6 +10701,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillEvolvedSectionMethodConstantSection0(GeomFillEvolvedSectionHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_evolved_section_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillEvolvedSectionMethodDynamicType0(GeomFillEvolvedSectionHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_evolved_section_method_is_rational_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillEvolvedSectionMethodIsRational0(GeomFillEvolvedSectionHandle handle, out int resultValue);
@@ -10075,6 +10752,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillFixedMethodCopy0(GeomFillFixedHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_fixed_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillFixedMethodDynamicType0(GeomFillFixedHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_fixed_method_is_constant_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillFixedMethodIsConstant0(GeomFillFixedHandle handle, out int resultValue);
@@ -10109,6 +10790,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_frenet_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillFrenetMethodCopy0(GeomFillFrenetHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_frenet_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillFrenetMethodDynamicType0(GeomFillFrenetHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_frenet_method_init_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10156,6 +10841,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_guide_trihedron_ac_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillGuideTrihedronACMethodCopy0(GeomFillGuideTrihedronACHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_guide_trihedron_ac_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillGuideTrihedronACMethodDynamicType0(GeomFillGuideTrihedronACHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_guide_trihedron_ac_method_guide_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10211,6 +10900,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_guide_trihedron_plan_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillGuideTrihedronPlanMethodCopy0(GeomFillGuideTrihedronPlanHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_guide_trihedron_plan_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillGuideTrihedronPlanMethodDynamicType0(GeomFillGuideTrihedronPlanHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_guide_trihedron_plan_method_error_status_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10271,6 +10964,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillLineCreate1(int nbPoints, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_line_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillLineMethodDynamicType0(GeomFillLineHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_line_method_nb_points_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillLineMethodNbPoints0(GeomFillLineHandle handle, out int resultValue);
@@ -10301,6 +10998,14 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_location_draft_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillLocationDraftMethodCopy0(GeomFillLocationDraftHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_location_draft_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillLocationDraftMethodDynamicType0(GeomFillLocationDraftHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_location_draft_method_get_curve_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillLocationDraftMethodGetCurve0(GeomFillLocationDraftHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_location_draft_method_get_maximal_norm_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10369,6 +11074,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillLocationGuideMethodCopy0(GeomFillLocationGuideHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_location_guide_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillLocationGuideMethodDynamicType0(GeomFillLocationGuideHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_location_guide_method_erase_rotation_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillLocationGuideMethodEraseRotation0(GeomFillLocationGuideHandle handle);
@@ -10376,6 +11085,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_location_guide_method_error_status_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillLocationGuideMethodErrorStatus0(GeomFillLocationGuideHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_location_guide_method_get_curve_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillLocationGuideMethodGetCurve0(GeomFillLocationGuideHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_location_guide_method_get_maximal_norm_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10440,6 +11153,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void GeomFillLocationGuideRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_location_law_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillLocationLawMethodDynamicType0(GeomFillLocationLawHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_location_law_method_error_status_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillLocationLawMethodErrorStatus0(GeomFillLocationLawHandle handle, out int resultValue);
@@ -10502,6 +11219,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_nsections_method_constant_section_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillNSectionsMethodConstantSection0(GeomFillNSectionsHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_nsections_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillNSectionsMethodDynamicType0(GeomFillNSectionsHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_nsections_method_is_rational_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10566,6 +11287,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillSectionLawMethodConstantSection0(GeomFillSectionLawHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_section_law_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillSectionLawMethodDynamicType0(GeomFillSectionLawHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_section_law_method_set_tolerance_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillSectionLawMethodSetTolerance0(GeomFillSectionLawHandle handle, double tol3d, double tol2d);
@@ -10592,6 +11317,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_simple_bound_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillSimpleBoundCreate0(nint curve, double tol3d, double tolang, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_simple_bound_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillSimpleBoundMethodDynamicType0(GeomFillSimpleBoundHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_simple_bound_method_is_degenerated_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10695,6 +11424,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillSweepFunctionMethodBarycentreOfSurf0(GeomFillSweepFunctionHandle handle, out Point3dRaw resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_sweep_function_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillSweepFunctionMethodDynamicType0(GeomFillSweepFunctionHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_sweep_function_method_is_rational_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillSweepFunctionMethodIsRational0(GeomFillSweepFunctionHandle handle, out int resultValue);
@@ -10738,6 +11471,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void GeomFillSweepFunctionRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_tgt_field_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillTgtFieldMethodDynamicType0(GeomFillTgtFieldHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_tgt_field_method_is_scalable_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillTgtFieldMethodIsScalable0(GeomFillTgtFieldHandle handle, out int resultValue);
@@ -10769,6 +11506,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillTgtOnCoonsCreate0(nint k, int i, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_tgt_on_coons_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillTgtOnCoonsMethodDynamicType0(GeomFillTgtOnCoonsHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_tgt_on_coons_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillTgtOnCoonsClone(GeomFillTgtOnCoonsHandle source, out nint handle);
@@ -10787,6 +11528,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_tgt_on_coons_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void GeomFillTgtOnCoonsRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_trihedron_law_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillTrihedronLawMethodDynamicType0(GeomFillTrihedronLawHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_trihedron_law_method_error_status_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10831,6 +11576,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillTrihedronWithGuideMethodCurrentPointOnGuide0(GeomFillTrihedronWithGuideHandle handle, out Point3dRaw resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_trihedron_with_guide_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillTrihedronWithGuideMethodDynamicType0(GeomFillTrihedronWithGuideHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_trihedron_with_guide_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillTrihedronWithGuideClone(GeomFillTrihedronWithGuideHandle source, out nint handle);
@@ -10865,6 +11614,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_uniform_section_method_constant_section_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomFillUniformSectionMethodConstantSection0(GeomFillUniformSectionHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_uniform_section_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomFillUniformSectionMethodDynamicType0(GeomFillUniformSectionHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_fill_uniform_section_method_is_rational_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10924,6 +11677,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_plate_curve_constraint_method_curve3d_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomPlateCurveConstraintMethodCurve3d0(GeomPlateCurveConstraintHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_plate_curve_constraint_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomPlateCurveConstraintMethodDynamicType0(GeomPlateCurveConstraintHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_plate_curve_constraint_method_first_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -11016,6 +11773,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomPlatePointConstraintCreate1(Point3dRaw pt, int order, double tolDist, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_plate_point_constraint_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomPlatePointConstraintMethodDynamicType0(GeomPlatePointConstraintHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_plate_point_constraint_method_g0_criterion_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomPlatePointConstraintMethodG0Criterion0(GeomPlatePointConstraintHandle handle, out double resultValue);
@@ -11082,6 +11843,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_plate_surface_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomPlateSurfaceMethodCopy0(GeomPlateSurfaceHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_plate_surface_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomPlateSurfaceMethodDynamicType0(GeomPlateSurfaceHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_plate_surface_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -11170,6 +11935,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomToolsUndefinedTypeHandlerCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_tools_undefined_type_handler_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomToolsUndefinedTypeHandlerMethodDynamicType0(GeomToolsUndefinedTypeHandlerHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_tools_undefined_type_handler_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomToolsUndefinedTypeHandlerClone(GeomToolsUndefinedTypeHandlerHandle source, out nint handle);
@@ -11192,6 +11961,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_axis1_placement_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAxis1PlacementMethodCopy0(GeomAxis1PlacementHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_axis1_placement_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomAxis1PlacementMethodDynamicType0(GeomAxis1PlacementHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_axis1_placement_method_reverse_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -11224,6 +11997,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAxis2PlacementMethodCopy0(GeomAxis2PlacementHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_axis2_placement_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomAxis2PlacementMethodDynamicType0(GeomAxis2PlacementHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_axis2_placement_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAxis2PlacementClone(GeomAxis2PlacementHandle source, out nint handle);
@@ -11246,6 +12023,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_axis_placement_method_angle_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAxisPlacementMethodAngle0(GeomAxisPlacementHandle handle, nint other, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_axis_placement_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomAxisPlacementMethodDynamicType0(GeomAxisPlacementHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_axis_placement_method_location_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -11289,6 +12070,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_bspline_curve_method_degree_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomBSplineCurveMethodDegree0(GeomBSplineCurveHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_bspline_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomBSplineCurveMethodDynamicType0(GeomBSplineCurveHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_bspline_curve_method_end_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -11480,6 +12265,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_bspline_surface_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomBSplineSurfaceMethodCopy0(GeomBSplineSurfaceHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_bspline_surface_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomBSplineSurfaceMethodDynamicType0(GeomBSplineSurfaceHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_bspline_surface_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -11764,6 +12553,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomBezierCurveMethodDegree0(GeomBezierCurveHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_bezier_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomBezierCurveMethodDynamicType0(GeomBezierCurveHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_bezier_curve_method_end_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomBezierCurveMethodEndPoint0(GeomBezierCurveHandle handle, out Point3dRaw resultValue);
@@ -11890,6 +12683,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_bezier_surface_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomBezierSurfaceMethodCopy0(GeomBezierSurfaceHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_bezier_surface_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomBezierSurfaceMethodDynamicType0(GeomBezierSurfaceHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_bezier_surface_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -12026,6 +12823,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void GeomBezierSurfaceRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_bounded_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomBoundedCurveMethodDynamicType0(GeomBoundedCurveHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_bounded_curve_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomBoundedCurveClone(GeomBoundedCurveHandle source, out nint handle);
@@ -12044,6 +12845,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_bounded_curve_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void GeomBoundedCurveRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_bounded_surface_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomBoundedSurfaceMethodDynamicType0(GeomBoundedSurfaceHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_bounded_surface_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -12075,6 +12880,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_cartesian_point_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomCartesianPointMethodCopy0(GeomCartesianPointHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_cartesian_point_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomCartesianPointMethodDynamicType0(GeomCartesianPointHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_cartesian_point_method_pnt_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -12135,6 +12944,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomCircleMethodCopy0(GeomCircleHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_circle_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomCircleMethodDynamicType0(GeomCircleHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_circle_method_eccentricity_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomCircleMethodEccentricity0(GeomCircleHandle handle, out double resultValue);
@@ -12194,9 +13007,17 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomConicMethodContinuity0(GeomConicHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_conic_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomConicMethodDynamicType0(GeomConicHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_conic_method_is_cn_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomConicMethodIsCN0(GeomConicHandle handle, int n, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_conic_method_location_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomConicMethodLocation0(GeomConicHandle handle, out Point3dRaw resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_conic_method_reverse_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -12232,6 +13053,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_conical_surface_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomConicalSurfaceMethodCopy0(GeomConicalSurfaceHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_conical_surface_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomConicalSurfaceMethodDynamicType0(GeomConicalSurfaceHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_conical_surface_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -12308,6 +13133,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void GeomConicalSurfaceRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomCurveMethodDynamicType0(GeomCurveHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_curve_method_period_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomCurveMethodPeriod0(GeomCurveHandle handle, out double resultValue);
@@ -12342,6 +13171,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_cylindrical_surface_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomCylindricalSurfaceMethodCopy0(GeomCylindricalSurfaceHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_cylindrical_surface_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomCylindricalSurfaceMethodDynamicType0(GeomCylindricalSurfaceHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_cylindrical_surface_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -12430,6 +13263,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomDirectionMethodCrossed0(GeomDirectionHandle handle, nint other, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_direction_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomDirectionMethodDynamicType0(GeomDirectionHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_direction_method_magnitude_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomDirectionMethodMagnitude0(GeomDirectionHandle handle, out double resultValue);
@@ -12477,6 +13314,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomElementarySurfaceMethodContinuity0(GeomElementarySurfaceHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_elementary_surface_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomElementarySurfaceMethodDynamicType0(GeomElementarySurfaceHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_elementary_surface_method_is_cnu_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomElementarySurfaceMethodIsCNu0(GeomElementarySurfaceHandle handle, int n, out int resultValue);
@@ -12484,6 +13325,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_elementary_surface_method_is_cnv_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomElementarySurfaceMethodIsCNv0(GeomElementarySurfaceHandle handle, int n, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_elementary_surface_method_location_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomElementarySurfaceMethodLocation0(GeomElementarySurfaceHandle handle, out Point3dRaw resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_elementary_surface_method_set_location_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -12519,6 +13364,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_ellipse_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEllipseMethodCopy0(GeomEllipseHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_ellipse_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomEllipseMethodDynamicType0(GeomEllipseHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_ellipse_method_eccentricity_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -12599,6 +13448,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void GeomEllipseRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_geometry_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomGeometryMethodDynamicType0(GeomGeometryHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_geometry_method_mirror_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomGeometryMethodMirror0(GeomGeometryHandle handle, Point3dRaw p);
@@ -12645,6 +13498,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_hyperbola_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomHyperbolaMethodCopy0(GeomHyperbolaHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_hyperbola_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomHyperbolaMethodDynamicType0(GeomHyperbolaHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_hyperbola_method_eccentricity_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -12733,6 +13590,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomLineMethodCopy0(GeomLineHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_line_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomLineMethodDynamicType0(GeomLineHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_line_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomLineMethodEvalD00(GeomLineHandle handle, double u, out Point3dRaw resultValue);
@@ -12803,6 +13664,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_offset_curve_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomOffsetCurveMethodCopy0(GeomOffsetCurveHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_offset_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomOffsetCurveMethodDynamicType0(GeomOffsetCurveHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_offset_curve_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -12883,6 +13748,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomOffsetSurfaceCreate0(nint s, double offset, int isNotCheckC0, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_offset_surface_method_basis_surface_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomOffsetSurfaceMethodBasisSurface0(GeomOffsetSurfaceHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_offset_surface_method_clear_eval_representation_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomOffsetSurfaceMethodClearEvalRepresentation0(GeomOffsetSurfaceHandle handle);
@@ -12894,6 +13763,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_offset_surface_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomOffsetSurfaceMethodCopy0(GeomOffsetSurfaceHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_offset_surface_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomOffsetSurfaceMethodDynamicType0(GeomOffsetSurfaceHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_offset_surface_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13002,6 +13875,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomParabolaMethodCopy0(GeomParabolaHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_parabola_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomParabolaMethodDynamicType0(GeomParabolaHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_parabola_method_eccentricity_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomParabolaMethodEccentricity0(GeomParabolaHandle handle, out double resultValue);
@@ -13073,6 +13950,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomPlaneMethodCopy0(GeomPlaneHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_plane_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomPlaneMethodDynamicType0(GeomPlaneHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_plane_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomPlaneMethodEvalD00(GeomPlaneHandle handle, double u, double v, out Point3dRaw resultValue);
@@ -13140,6 +14021,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomPointMethodDistance0(GeomPointHandle handle, nint other, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_point_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomPointMethodDynamicType0(GeomPointHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_point_method_square_distance_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomPointMethodSquareDistance0(GeomPointHandle handle, nint other, out double resultValue);
@@ -13182,6 +14067,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_rectangular_trimmed_surface_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomRectangularTrimmedSurfaceMethodCopy0(GeomRectangularTrimmedSurfaceHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_rectangular_trimmed_surface_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomRectangularTrimmedSurfaceMethodDynamicType0(GeomRectangularTrimmedSurfaceHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_rectangular_trimmed_surface_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13278,6 +14167,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomSphericalSurfaceMethodCopy0(GeomSphericalSurfaceHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_spherical_surface_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomSphericalSurfaceMethodDynamicType0(GeomSphericalSurfaceHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_spherical_surface_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomSphericalSurfaceMethodEvalD00(GeomSphericalSurfaceHandle handle, double u, double v, out Point3dRaw resultValue);
@@ -13345,6 +14238,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void GeomSphericalSurfaceRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_surface_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomSurfaceMethodDynamicType0(GeomSurfaceHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_surface_method_uperiod_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomSurfaceMethodUPeriod0(GeomSurfaceHandle handle, out double resultValue);
@@ -13391,6 +14288,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_surface_of_linear_extrusion_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomSurfaceOfLinearExtrusionMethodCopy0(GeomSurfaceOfLinearExtrusionHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_surface_of_linear_extrusion_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomSurfaceOfLinearExtrusionMethodDynamicType0(GeomSurfaceOfLinearExtrusionHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_surface_of_linear_extrusion_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13479,6 +14380,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomSurfaceOfRevolutionMethodCopy0(GeomSurfaceOfRevolutionHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_surface_of_revolution_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomSurfaceOfRevolutionMethodDynamicType0(GeomSurfaceOfRevolutionHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_surface_of_revolution_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomSurfaceOfRevolutionMethodEvalD00(GeomSurfaceOfRevolutionHandle handle, double u, double v, out Point3dRaw resultValue);
@@ -13510,6 +14415,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_surface_of_revolution_method_is_vperiodic_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomSurfaceOfRevolutionMethodIsVPeriodic0(GeomSurfaceOfRevolutionHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_surface_of_revolution_method_location_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomSurfaceOfRevolutionMethodLocation0(GeomSurfaceOfRevolutionHandle handle, out Point3dRaw resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_surface_of_revolution_method_set_basis_curve_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13570,6 +14479,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomSweptSurfaceMethodContinuity0(GeomSweptSurfaceHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_swept_surface_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomSweptSurfaceMethodDynamicType0(GeomSweptSurfaceHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_swept_surface_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomSweptSurfaceClone(GeomSweptSurfaceHandle source, out nint handle);
@@ -13596,6 +14509,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_toroidal_surface_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomToroidalSurfaceMethodCopy0(GeomToroidalSurfaceHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_toroidal_surface_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomToroidalSurfaceMethodDynamicType0(GeomToroidalSurfaceHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_toroidal_surface_method_eval_d0_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13679,6 +14596,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_transformation_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomTransformationMethodCopy0(GeomTransformationHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_transformation_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomTransformationMethodDynamicType0(GeomTransformationHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_transformation_method_form_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13771,6 +14692,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomTrimmedCurveMethodCopy0(GeomTrimmedCurveHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_trimmed_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomTrimmedCurveMethodDynamicType0(GeomTrimmedCurveHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_trimmed_curve_method_end_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomTrimmedCurveMethodEndPoint0(GeomTrimmedCurveHandle handle, out Point3dRaw resultValue);
@@ -13853,6 +14778,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_vector_method_dot_cross_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomVectorMethodDotCross0(GeomVectorHandle handle, nint v1, nint v2, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_vector_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomVectorMethodDynamicType0(GeomVectorHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_vector_method_reverse_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13937,6 +14866,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomVectorWithMagnitudeMethodDivided0(GeomVectorWithMagnitudeHandle handle, double scalar, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_vector_with_magnitude_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomVectorWithMagnitudeMethodDynamicType0(GeomVectorWithMagnitudeHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_vector_with_magnitude_method_magnitude_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomVectorWithMagnitudeMethodMagnitude0(GeomVectorWithMagnitudeHandle handle, out double resultValue);
@@ -14004,6 +14937,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void GeomVectorWithMagnitudeRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geometry_test_drawable_qualified_curve2d_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeometryTestDrawableQualifiedCurve2dMethodDynamicType0(GeometryTestDrawableQualifiedCurve2dHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geometry_test_drawable_qualified_curve2d_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeometryTestDrawableQualifiedCurve2dClone(GeometryTestDrawableQualifiedCurve2dHandle source, out nint handle);
@@ -14038,6 +14975,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bsp_func_method_curve_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus LawBSpFuncMethodCurve0(LawBSpFuncHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bsp_func_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSpFuncMethodDynamicType0(LawBSpFuncHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bsp_func_method_nb_intervals_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -14089,6 +15030,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_dn_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodDN0(LawBSplineHandle handle, double u, int n, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodDynamicType0(LawBSplineHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_end_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -14269,6 +15214,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus LawCompositeMethodContinuity0(LawCompositeHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_composite_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawCompositeMethodDynamicType0(LawCompositeHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_composite_method_is_periodic_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus LawCompositeMethodIsPeriodic0(LawCompositeHandle handle, out int resultValue);
@@ -14316,6 +15265,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus LawConstantMethodContinuity0(LawConstantHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_constant_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawConstantMethodDynamicType0(LawConstantHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_constant_method_nb_intervals_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus LawConstantMethodNbIntervals0(LawConstantHandle handle, int s, out int resultValue);
@@ -14351,6 +15304,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void LawConstantRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_function_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawFunctionMethodDynamicType0(LawFunctionHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_function_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus LawFunctionClone(LawFunctionHandle source, out nint handle);
@@ -14373,6 +15330,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_interpol_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus LawInterpolCreate0(out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_interpol_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawInterpolMethodDynamicType0(LawInterpolHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_interpol_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -14400,6 +15361,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_linear_method_continuity_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus LawLinearMethodContinuity0(LawLinearHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_linear_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawLinearMethodDynamicType0(LawLinearHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_linear_method_nb_intervals_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -14440,6 +15405,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus LawSCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_s_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawSMethodDynamicType0(LawSHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_s_method_set_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus LawSMethodSet0(LawSHandle handle, double pdeb, double valdeb, double pfin, double valfin);
@@ -14478,6 +15447,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat2d_circuit_method_connexion_on_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MAT2dCircuitMethodConnexionOn0(MAT2dCircuitHandle handle, int index, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat2d_circuit_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MAT2dCircuitMethodDynamicType0(MAT2dCircuitHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat2d_circuit_method_line_length_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -14525,6 +15498,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat2d_connexion_method_dump_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MAT2dConnexionMethodDump0(MAT2dConnexionHandle handle, int deep, int offset);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat2d_connexion_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MAT2dConnexionMethodDynamicType0(MAT2dConnexionHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat2d_connexion_method_index_first_line_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -14604,6 +15581,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat_arc_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MATArcCreate0(int arcIndex, int geomIndex, nint firstElement, nint secondElement, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat_arc_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MATArcMethodDynamicType0(MATArcHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat_arc_method_first_element_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -14700,6 +15681,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MATBasicEltCreate0(int anInteger, out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat_basic_elt_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MATBasicEltMethodDynamicType0(MATBasicEltHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat_basic_elt_method_end_arc_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MATBasicEltMethodEndArc0(MATBasicEltHandle handle, out nint handleValue);
@@ -14778,6 +15763,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat_bisector_method_dump_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MATBisectorMethodDump0(MATBisectorHandle handle, int ashift, int alevel);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat_bisector_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MATBisectorMethodDynamicType0(MATBisectorHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat_bisector_method_end_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -14906,6 +15895,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MATEdgeMethodDump0(MATEdgeHandle handle, int ashift, int alevel);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat_edge_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MATEdgeMethodDynamicType0(MATEdgeHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat_edge_method_edge_number_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MATEdgeMethodEdgeNumber0(MATEdgeHandle handle, out int resultValue);
@@ -14981,6 +15974,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MATGraphMethodCompactNodes0(MATGraphHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat_graph_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MATGraphMethodDynamicType0(MATGraphHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat_graph_method_node_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MATGraphMethodNode0(MATGraphHandle handle, int index, out nint handleValue);
@@ -15047,6 +16044,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat_list_of_bisector_method_dump_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MATListOfBisectorMethodDump0(MATListOfBisectorHandle handle, int ashift, int alevel);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat_list_of_bisector_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MATListOfBisectorMethodDynamicType0(MATListOfBisectorHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat_list_of_bisector_method_first_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15167,6 +16168,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MATListOfEdgeMethodDump0(MATListOfEdgeHandle handle, int ashift, int alevel);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat_list_of_edge_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MATListOfEdgeMethodDynamicType0(MATListOfEdgeHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat_list_of_edge_method_first_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MATListOfEdgeMethodFirst0(MATListOfEdgeHandle handle);
@@ -15270,6 +16275,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MATNodeMethodDistance0(MATNodeHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat_node_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MATNodeMethodDynamicType0(MATNodeHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat_node_method_geom_index_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MATNodeMethodGeomIndex0(MATNodeHandle handle, out int resultValue);
@@ -15329,6 +16338,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MATTListNodeOfListOfBisectorMethodDummy0(MATTListNodeOfListOfBisectorHandle handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat_tlist_node_of_list_of_bisector_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MATTListNodeOfListOfBisectorMethodDynamicType0(MATTListNodeOfListOfBisectorHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat_tlist_node_of_list_of_bisector_method_get_item_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MATTListNodeOfListOfBisectorMethodGetItem0(MATTListNodeOfListOfBisectorHandle handle, out nint handleValue);
@@ -15383,6 +16396,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat_tlist_node_of_list_of_edge_method_dummy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MATTListNodeOfListOfEdgeMethodDummy0(MATTListNodeOfListOfEdgeHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat_tlist_node_of_list_of_edge_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MATTListNodeOfListOfEdgeMethodDynamicType0(MATTListNodeOfListOfEdgeHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat_tlist_node_of_list_of_edge_method_get_item_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15439,6 +16456,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MATZoneMethodArcOnFrontier0(MATZoneHandle handle, int index, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat_zone_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus MATZoneMethodDynamicType0(MATZoneHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat_zone_method_limited_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus MATZoneMethodLimited0(MATZoneHandle handle, out int resultValue);
@@ -15473,6 +16494,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat_zone_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void MATZoneRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_nlplate_hgppconstraint_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus NLPlateHGPPConstraintMethodDynamicType0(NLPlateHGPPConstraintHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_nlplate_hgppconstraint_method_g0_criterion_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15557,6 +16582,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus NLPlateHPG0ConstraintMethodActiveOrder0(NLPlateHPG0ConstraintHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_nlplate_hpg0_constraint_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus NLPlateHPG0ConstraintMethodDynamicType0(NLPlateHPG0ConstraintHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_nlplate_hpg0_constraint_method_incremental_load_allowed_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus NLPlateHPG0ConstraintMethodIncrementalLoadAllowed0(NLPlateHPG0ConstraintHandle handle, out int resultValue);
@@ -15600,6 +16629,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus NLPlateHPG0G1ConstraintMethodActiveOrder0(NLPlateHPG0G1ConstraintHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_nlplate_hpg0_g1_constraint_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus NLPlateHPG0G1ConstraintMethodDynamicType0(NLPlateHPG0G1ConstraintHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_nlplate_hpg0_g1_constraint_method_orientation_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus NLPlateHPG0G1ConstraintMethodOrientation0(NLPlateHPG0G1ConstraintHandle handle, out int resultValue);
@@ -15631,6 +16664,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus NLPlateHPG0G2ConstraintMethodActiveOrder0(NLPlateHPG0G2ConstraintHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_nlplate_hpg0_g2_constraint_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus NLPlateHPG0G2ConstraintMethodDynamicType0(NLPlateHPG0G2ConstraintHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_nlplate_hpg0_g2_constraint_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus NLPlateHPG0G2ConstraintClone(NLPlateHPG0G2ConstraintHandle source, out nint handle);
@@ -15654,6 +16691,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus NLPlateHPG0G3ConstraintMethodActiveOrder0(NLPlateHPG0G3ConstraintHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_nlplate_hpg0_g3_constraint_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus NLPlateHPG0G3ConstraintMethodDynamicType0(NLPlateHPG0G3ConstraintHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_nlplate_hpg0_g3_constraint_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus NLPlateHPG0G3ConstraintClone(NLPlateHPG0G3ConstraintHandle source, out nint handle);
@@ -15676,6 +16717,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_nlplate_hpg1_constraint_method_active_order_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus NLPlateHPG1ConstraintMethodActiveOrder0(NLPlateHPG1ConstraintHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_nlplate_hpg1_constraint_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus NLPlateHPG1ConstraintMethodDynamicType0(NLPlateHPG1ConstraintHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_nlplate_hpg1_constraint_method_incremental_load_allowed_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15720,6 +16765,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus NLPlateHPG2ConstraintMethodActiveOrder0(NLPlateHPG2ConstraintHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_nlplate_hpg2_constraint_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus NLPlateHPG2ConstraintMethodDynamicType0(NLPlateHPG2ConstraintHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_nlplate_hpg2_constraint_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus NLPlateHPG2ConstraintClone(NLPlateHPG2ConstraintHandle source, out nint handle);
@@ -15742,6 +16791,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_nlplate_hpg3_constraint_method_active_order_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus NLPlateHPG3ConstraintMethodActiveOrder0(NLPlateHPG3ConstraintHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_nlplate_hpg3_constraint_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus NLPlateHPG3ConstraintMethodDynamicType0(NLPlateHPG3ConstraintHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_nlplate_hpg3_constraint_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15782,9 +16835,17 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ProjLibCompProjectedCurveMethodContinuity0(ProjLibCompProjectedCurveHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_comp_projected_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ProjLibCompProjectedCurveMethodDynamicType0(ProjLibCompProjectedCurveHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_comp_projected_curve_method_first_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ProjLibCompProjectedCurveMethodFirstParameter0(ProjLibCompProjectedCurveHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_comp_projected_curve_method_get_curve_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ProjLibCompProjectedCurveMethodGetCurve0(ProjLibCompProjectedCurveHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_comp_projected_curve_method_get_proj2d_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15817,6 +16878,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_comp_projected_curve_method_get_result3d_p_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ProjLibCompProjectedCurveMethodGetResult3dP0(ProjLibCompProjectedCurveHandle handle, int theIndex, out Point3dRaw resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_comp_projected_curve_method_get_surface_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ProjLibCompProjectedCurveMethodGetSurface0(ProjLibCompProjectedCurveHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_comp_projected_curve_method_get_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15937,6 +17002,14 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ProjLibProjectOnPlaneMethodFirstParameter0(ProjLibProjectOnPlaneHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_project_on_plane_method_get_curve_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ProjLibProjectOnPlaneMethodGetCurve0(ProjLibProjectOnPlaneHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_project_on_plane_method_get_result_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ProjLibProjectOnPlaneMethodGetResult0(ProjLibProjectOnPlaneHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_project_on_plane_method_get_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ProjLibProjectOnPlaneMethodOcctGetType0(ProjLibProjectOnPlaneHandle handle, out int resultValue);
@@ -16040,9 +17113,21 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ProjLibProjectedCurveMethodDegree0(ProjLibProjectedCurveHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_projected_curve_method_dynamic_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ProjLibProjectedCurveMethodDynamicType0(ProjLibProjectedCurveHandle handle, out nint handleValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_projected_curve_method_first_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ProjLibProjectedCurveMethodFirstParameter0(ProjLibProjectedCurveHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_projected_curve_method_get_curve_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ProjLibProjectedCurveMethodGetCurve0(ProjLibProjectedCurveHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_projected_curve_method_get_surface_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ProjLibProjectedCurveMethodGetSurface0(ProjLibProjectedCurveHandle handle, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_projected_curve_method_get_tolerance_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
