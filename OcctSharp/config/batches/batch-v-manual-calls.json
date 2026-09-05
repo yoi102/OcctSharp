@@ -1,0 +1,171 @@
+{
+  "schemaVersion": "1.0",
+  "batch": "V",
+  "specialCaseId": "SC-059",
+  "baselineInventorySha256": "77900ED81AE3D7BFB70201F8F8D9921F970F79AE3537050788C616848036252D",
+  "note": "Exact directly called partition, diagnostic, shell and volume overloads. Protected CellsBuilder maps and PrepareHistory are a checked native-local adapter, not public AddToResult migration. Existing manual overloads are reused.",
+  "calls": [
+    {
+      "stableId": "c:@S@BOPAlgo_Builder@F@Images#1",
+      "nativeName": "BOPAlgo_Builder::Images",
+      "header": "BOPAlgo_Builder.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_CellsBuilder@F@GetAllParts#1",
+      "nativeName": "BOPAlgo_CellsBuilder::GetAllParts",
+      "header": "BOPAlgo_CellsBuilder.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_CellsBuilder@F@MakeContainers#",
+      "nativeName": "BOPAlgo_CellsBuilder::MakeContainers",
+      "header": "BOPAlgo_CellsBuilder.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_CellsBuilder@F@RemoveAllFromResult#",
+      "nativeName": "BOPAlgo_CellsBuilder::RemoveAllFromResult",
+      "header": "BOPAlgo_CellsBuilder.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_CheckResult@F@GetCheckStatus#1",
+      "nativeName": "BOPAlgo_CheckResult::GetCheckStatus",
+      "header": "BOPAlgo_CheckResult.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_CheckResult@F@GetFaultyShapes1#1",
+      "nativeName": "BOPAlgo_CheckResult::GetFaultyShapes1",
+      "header": "BOPAlgo_CheckResult.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_MakerVolume@F@BOPAlgo_MakerVolume#",
+      "nativeName": "BOPAlgo_MakerVolume::BOPAlgo_MakerVolume",
+      "header": "BOPAlgo_MakerVolume.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_MakerVolume@F@Box#1",
+      "nativeName": "BOPAlgo_MakerVolume::Box",
+      "header": "BOPAlgo_MakerVolume.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_MakerVolume@F@Perform#&1$@S@Message_ProgressRange#",
+      "nativeName": "BOPAlgo_MakerVolume::Perform",
+      "header": "BOPAlgo_MakerVolume.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_MakerVolume@F@SetAvoidInternalShapes#b#",
+      "nativeName": "BOPAlgo_MakerVolume::SetAvoidInternalShapes",
+      "header": "BOPAlgo_MakerVolume.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_MakerVolume@F@SetIntersect#b#",
+      "nativeName": "BOPAlgo_MakerVolume::SetIntersect",
+      "header": "BOPAlgo_MakerVolume.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_Options@F@DumpErrors#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "BOPAlgo_Options::DumpErrors",
+      "header": "BOPAlgo_Options.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_Options@F@DumpWarnings#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "nativeName": "BOPAlgo_Options::DumpWarnings",
+      "header": "BOPAlgo_Options.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_ShellSplitter@F@AddStartElement#&1$@S@TopoDS_Shape#",
+      "nativeName": "BOPAlgo_ShellSplitter::AddStartElement",
+      "header": "BOPAlgo_ShellSplitter.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_ShellSplitter@F@BOPAlgo_ShellSplitter#",
+      "nativeName": "BOPAlgo_ShellSplitter::BOPAlgo_ShellSplitter",
+      "header": "BOPAlgo_ShellSplitter.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_ShellSplitter@F@Perform#&1$@S@Message_ProgressRange#",
+      "nativeName": "BOPAlgo_ShellSplitter::Perform",
+      "header": "BOPAlgo_ShellSplitter.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_ShellSplitter@F@Shells#1",
+      "nativeName": "BOPAlgo_ShellSplitter::Shells",
+      "header": "BOPAlgo_ShellSplitter.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Check@F@BRepAlgoAPI_Check#&1$@S@TopoDS_Shape#b#b#&1$@S@Message_ProgressRange#",
+      "nativeName": "BRepAlgoAPI_Check::BRepAlgoAPI_Check",
+      "header": "BRepAlgoAPI_Check.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Check@F@IsValid#",
+      "nativeName": "BRepAlgoAPI_Check::IsValid",
+      "header": "BRepAlgoAPI_Check.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Check@F@Result#",
+      "nativeName": "BRepAlgoAPI_Check::Result",
+      "header": "BRepAlgoAPI_Check.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeSolid@F@BRepBuilderAPI_MakeSolid#&1$@S@TopoDS_Shell#",
+      "nativeName": "BRepBuilderAPI_MakeSolid::BRepBuilderAPI_MakeSolid",
+      "header": "BRepBuilderAPI_MakeSolid.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeSolid@F@IsDone#1",
+      "nativeName": "BRepBuilderAPI_MakeSolid::IsDone",
+      "header": "BRepBuilderAPI_MakeSolid.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeSolid@F@Solid#",
+      "nativeName": "BRepBuilderAPI_MakeSolid::Solid",
+      "header": "BRepBuilderAPI_MakeSolid.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepClass3d_SClassifier@F@State#1",
+      "nativeName": "BRepClass3d_SClassifier::State",
+      "header": "BRepClass3d_SClassifier.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepClass3d_SolidClassifier@F@BRepClass3d_SolidClassifier#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepClass3d_SolidClassifier::BRepClass3d_SolidClassifier",
+      "header": "BRepClass3d_SolidClassifier.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepClass3d_SolidClassifier@F@BRepClass3d_SolidClassifier#&1$@S@TopoDS_Shape#&1$@S@gp_Pnt#d#",
+      "nativeName": "BRepClass3d_SolidClassifier::BRepClass3d_SolidClassifier",
+      "header": "BRepClass3d_SolidClassifier.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepClass3d_SolidClassifier@F@PerformInfinitePoint#d#",
+      "nativeName": "BRepClass3d_SolidClassifier::PerformInfinitePoint",
+      "header": "BRepClass3d_SolidClassifier.hxx",
+      "baselineState": "Blocked"
+    }
+  ]
+}

@@ -5,7 +5,7 @@ versioned native C ABI, generated low-level bindings, and friendly managed CAD A
 modeling, STEP/IGES/STL exchange, XDE assemblies and metadata, meshing, inspection, and
 Windows visualization.
 
-Current local preview target: `8.0.1-preview.20` for Windows x64 (validation status in
+Current local preview target: `8.0.1-preview.21` for Windows x64 (validation status in
 [STATUS](docs/STATUS.md)). The NuGet graph contains 12 managed
 modules, the `OcctSharp` compatibility/facade package, and one shared
 `OcctSharp.Native.win-x64` runtime package. The native package places the complete
@@ -15,17 +15,17 @@ or `PATH` change is required.
 ## Install
 
 ```powershell
-dotnet add package OcctSharp --version 8.0.1-preview.20 --source ./OcctSharp/artifacts/packages
+dotnet add package OcctSharp --version 8.0.1-preview.21 --source ./OcctSharp/artifacts/packages
 ```
 
 A narrow consumer can reference a module directly, for example:
 
 ```powershell
-dotnet add package OcctSharp.Modeling --version 8.0.1-preview.20 --source ./OcctSharp/artifacts/packages
+dotnet add package OcctSharp.Modeling --version 8.0.1-preview.21 --source ./OcctSharp/artifacts/packages
 ```
 
 The supported runtime baseline is .NET 10, Windows x64, and OCCT 8.0.1.
-Preview.20 is local-only; it is not published on NuGet.org. Create the
+Preview.21 is local-only; it is not published on NuGet.org. Create the
 local package feed with `OcctSharp/eng/pack.ps1` using the contributor toolchain, or run
 the repository samples directly with the committed runtime.
 
@@ -40,6 +40,23 @@ using Shape cylinder = ShapeFactory.CreateCylinder(6, 20);
 Console.WriteLine($"Box faces: {box.FaceCount}");
 Console.WriteLine($"Cylinder faces: {cylinder.FaceCount}");
 ```
+
+## Partition exact material regions
+
+```csharp
+using var left = ShapeFactory.CreateBox(10, 10, 10);
+using var right = left.Transformed(ShapeTransform.CreateTranslation(5, 0, 0));
+using var plan = PartitionPlan.Create([left, right]);
+using var result = plan.Build([
+    new RegionProgram("overlap", [new(RegionExpression.Input(0).Intersect(RegionExpression.Input(1)), 7)])
+]);
+using var overlap = result.CopyOutput("overlap"); // Independent owning topology.
+Console.WriteLine($"Full partition: {result.Cells.Count} cells; selected: {overlap.FaceCount} faces");
+```
+
+Cell and interface IDs belong to one result revision. See the
+[Batch V matrix](docs/BATCH_V_PARTITION_VOLUME_GAP_INVENTORY.md) for bounded volumes,
+point selection, atomic parametric outputs, XDE products and STEP/IGES format limits.
 
 ## Apply a source-bound variable-radius fillet
 
@@ -61,7 +78,7 @@ Console.WriteLine($"Sections: {sections.SimulatedSections.Count}; faces: {accept
 Recipes also support contour chamfers, per-face draft and explicit local-feature
 limits. Partial fillets are diagnostics, never accepted fallback geometry. Radius-law
 interpolation and pinned SDK limiter limitations are disclosed in
-[Preview.20 notes](docs/RELEASE_NOTES_8.0.1_PREVIEW_20.md).
+[Preview.21 notes](docs/RELEASE_NOTES_8.0.1_PREVIEW_20.md).
 
 ## Recompute a persisted parametric feature
 

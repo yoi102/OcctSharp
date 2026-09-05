@@ -1,5 +1,18 @@
 # Architecture
 
+## Batch V partition and bounded-volume boundary
+
+ADR-0089 adds immutable input/region programs and owning partition/volume results in
+Modeling. Three independent native units own partition selection, copied inspection
+and volume construction; Regions.hxx shares only private records/helpers. Five C calls
+reuse FeatureResult/Shape release and the existing registry. The facade composes Q
+repair, R mesh, T atomic named outputs, XDE products and thread-bound viewer review.
+Exact membership comes from the kernel index, not geometric guesses. Point selection
+returns an independent owner with explicit ON policy; unknown containment rejects.
+No managed project, reverse module dependency or Native DLL is added. V passes its
+complete local exit validation; see STATUS for executed gates and delivery evidence.
+
+
 ## Batch U local-feature boundary
 
 ADR-0088 adds copied source-bound contour, per-face draft and local-feature plans in
@@ -12,7 +25,7 @@ evaluation, XDE publication/exchange and parent/thread-bound viewer review.
 Protected acceptance uses Q budgets and exact unchanged correspondence. Partial
 fillets are diagnostic owners, never accepted output. Native-local checked Form/RibSlot
 adapters preserve absent mappings and final-result membership without exporting builders.
-Validation and remaining gates are reported in STATUS; V/W remain prepared.
+Validation and remaining gates are reported in STATUS; V is locally validated and W remains prepared.
 
 ## Batch T parametric execution boundary
 
@@ -69,8 +82,8 @@ features and V partition/volume work in cohesive Modeling units, and W lighting,
 appearance and frame capture in Visualization. T recipe execution remains higher-layer
 orchestration; Documents must not gain reverse dependencies. W CPU frame DTOs remain
 independent of WPF; the sample consumes copies. New viewer resource IDs stay within the
-existing context/thread lifetime. U is implemented in the boundary above and is being
-validated; V/W files/contracts remain planned. One Native DLL and the existing
+existing context/thread lifetime. U is locally validated; V is implemented in the
+boundary above and locally validated; W remains planned. One Native DLL and the existing
 module/source boundaries remain.
 
 ## Prepared Q-T source and dependency placement

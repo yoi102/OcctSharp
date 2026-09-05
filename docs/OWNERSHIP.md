@@ -1,5 +1,17 @@
 # Ownership and Lifetime
 
+## Batch V partition and volume contract (locally validated)
+
+ADR-0089 keeps builders/PaveFillers and their mutable material/history tables local
+to a call. The existing FeatureResult temporarily owns copied RegionData records and
+TopoDS values, released by its existing release operation. Managed plans capture one
+private input graph; managed results own private Shape values retaining exact sharing.
+Every public topology getter deep-copies; no mutable alias into a plan/result escapes.
+Copied cell/boundary IDs carry a new result revision and reject cross-result use.
+Multi-output failure releases the entire native-local result before publication.
+No new registry, allocator, project or DLL is introduced. V lifetime and atomicity
+regressions pass in Release/Debug and actual Debug-native; full exit gates are in STATUS.
+
 ## Batch U local-feature contract
 
 Modeling recipes own copied scalar programs and revision-bound selections. Limited,

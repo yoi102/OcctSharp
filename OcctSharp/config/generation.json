@@ -167,6 +167,114 @@
   ],
   "manualBindings": [
     {
+      "stableId": "c:@S@BOPAlgo_Builder@F@Images#1",
+      "specialCaseId": "SC-059"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_CellsBuilder@F@GetAllParts#1",
+      "specialCaseId": "SC-059"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_CellsBuilder@F@MakeContainers#",
+      "specialCaseId": "SC-059"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_CellsBuilder@F@RemoveAllFromResult#",
+      "specialCaseId": "SC-059"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_CheckResult@F@GetCheckStatus#1",
+      "specialCaseId": "SC-059"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_CheckResult@F@GetFaultyShapes1#1",
+      "specialCaseId": "SC-059"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_MakerVolume@F@BOPAlgo_MakerVolume#",
+      "specialCaseId": "SC-059"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_MakerVolume@F@Box#1",
+      "specialCaseId": "SC-059"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_MakerVolume@F@Perform#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-059"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_MakerVolume@F@SetAvoidInternalShapes#b#",
+      "specialCaseId": "SC-059"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_MakerVolume@F@SetIntersect#b#",
+      "specialCaseId": "SC-059"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_Options@F@DumpErrors#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "specialCaseId": "SC-059"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_Options@F@DumpWarnings#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#1",
+      "specialCaseId": "SC-059"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_ShellSplitter@F@AddStartElement#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-059"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_ShellSplitter@F@BOPAlgo_ShellSplitter#",
+      "specialCaseId": "SC-059"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_ShellSplitter@F@Perform#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-059"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_ShellSplitter@F@Shells#1",
+      "specialCaseId": "SC-059"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Check@F@BRepAlgoAPI_Check#&1$@S@TopoDS_Shape#b#b#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-059"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Check@F@IsValid#",
+      "specialCaseId": "SC-059"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Check@F@Result#",
+      "specialCaseId": "SC-059"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeSolid@F@BRepBuilderAPI_MakeSolid#&1$@S@TopoDS_Shell#",
+      "specialCaseId": "SC-059"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeSolid@F@IsDone#1",
+      "specialCaseId": "SC-059"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeSolid@F@Solid#",
+      "specialCaseId": "SC-059"
+    },
+    {
+      "stableId": "c:@S@BRepClass3d_SClassifier@F@State#1",
+      "specialCaseId": "SC-059"
+    },
+    {
+      "stableId": "c:@S@BRepClass3d_SolidClassifier@F@BRepClass3d_SolidClassifier#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-059"
+    },
+    {
+      "stableId": "c:@S@BRepClass3d_SolidClassifier@F@BRepClass3d_SolidClassifier#&1$@S@TopoDS_Shape#&1$@S@gp_Pnt#d#",
+      "specialCaseId": "SC-059"
+    },
+    {
+      "stableId": "c:@S@BRepClass3d_SolidClassifier@F@PerformInfinitePoint#d#",
+      "specialCaseId": "SC-059"
+    },
+    {
       "stableId": "c:@S@BRepBuilderAPI_MakeWire@F@BRepBuilderAPI_MakeWire#&1$@S@TopoDS_Edge#",
       "specialCaseId": "SC-058"
     },

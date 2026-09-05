@@ -6,7 +6,7 @@ evidence; creating files or generating a large method count is not sufficient.
 The retired B00–B20 capability milestones and future package boundaries are documented
 in [the complete migration plan](MIGRATION_PLAN.md). They all belong to the completed
 product-scale batch `B`; none is a separate current batch or commit boundary.
-Batch B through Batch U are locally validated for their accepted implementation scopes.
+Batch B through Batch V are locally validated for their accepted implementation scopes.
 Batch P closes one expanded 32-capability surface/UV workflow under ADR-0079/0080.
 It was not split into projection, seam, repair, exchange, viewer, or package checkpoints.
 
@@ -15,8 +15,8 @@ It was not split into projection, seam, repair, exchange, viewer, or package che
 [ADR-0083](adr/0083-extended-batches-and-continuous-execution.md) adds three more
 40-capability scopes: U advanced contour/limit-driven features, V exact partition and
 volume workflows, W light/material/texture and copied-frame review. Together with Q-T,
-scope preparation is 7/7; Q-U are 200/200 implemented and locally validated.
-Overall validated progress is 200/280 (71.4%). T retains its original forty rows under
+scope preparation is 7/7; Q-V are 240/240 implemented and locally validated.
+Overall validated progress is 240/280 (85.7%). T retains its original forty rows under
 ADR-0087 at Preview.19. Focused 40/40 and ten repeats, Runtime 313/313 in Release/Debug
 and actual Debug-native, both consumers, 94-file cold regeneration, 65-ID exact accounting
 and full local release-check pass. Final T document-package/commit evidence is in STATUS.
@@ -24,7 +24,10 @@ U retains all forty named assertion rows: focused 96/96 and ten repeats, Release
 Generator 91/91 and Runtime 409/409, actual Debug-native 409/409, 108-ID accounting,
 both consumers, 94-file cold regeneration, full release-check and final document-package
 verification pass. Preview.20 / ABI 1.64 / bridge 0.72.0 is locally validated.
-V/W Preview.21-22 remain prepared, not implemented. Completion commits and immediate
+V Preview.21 completes all forty rows under ADR-0089: focused 37/37 and ten repeats,
+Release/Debug and actual Debug-native Runtime 446/446, 27-ID exact accounting,
+94-file cold regeneration and full local release-check pass. Final document delivery
+and the local commit are recorded in STATUS. W Preview.22 remains prepared. Completion commits and immediate
 next-batch entry are tracked in STATUS and the continuous runbook.
 
 The [continuous runbook](BATCH_CONTINUOUS_EXECUTION.md) defines Q -> R -> S -> T -> U ->

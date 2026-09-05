@@ -61,4 +61,17 @@ if (!contourResult.RequireShape().IsValid || contourSections.SimulatedSections.C
     throw new InvalidOperationException("The facade-free Modeling consumer failed the owning law-driven fillet.");
 
 Console.WriteLine(
+    "Checking direct Modeling partition and volume workflows.");
+using Shape regionOther = box.Transformed(ShapeTransform.CreateTranslation(5, 0, 0));
+using PartitionPlan regionPlan = PartitionPlan.Create([box, regionOther]);
+using PartitionResult regionResult = regionPlan.Build([new("all", [new(RegionExpression.All, 1)])]);
+using Shape regionCopy = regionResult.CopyOutput("all");
+regionPlan.Dispose(); regionResult.Dispose();
+if (!regionCopy.IsValid) throw new InvalidOperationException("Direct Modeling partition copy lost ownership.");
+using VolumeConstructionPlan volumePlan = VolumeConstructionPlan.Create([box]);
+using VolumeConstructionResult volumeResult = volumePlan.Build();
+if (volumeResult.Volumes.Count != 1 || !volumeResult.HelperBoxExcluded)
+    throw new InvalidOperationException("Direct Modeling bounded-volume construction failed.");
+
+Console.WriteLine(
     $"Direct Modeling consumer passed: {box.Kind}, {box.FaceCount} faces, owning guided sweep, OCCT {runtime.OcctVersion}.");

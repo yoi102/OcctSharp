@@ -1,5 +1,14 @@
 # Native source responsibilities
 
+## Batch V additions
+
+Modeling adds PartitionRegions.cpp (selection/program finalization), RegionInspection.cpp
+(copied snapshots, diagnostics, measures and point classification), and
+VolumeConstruction.cpp (shell/solid construction and source correspondence). Regions.hxx
+owns the private copied payload shared through FeatureResult, without a new registry.
+The public Regions C companion adds five calls. Existing projects and one DLL remain;
+current source/binary/header validation belongs in STATUS.
+
 ## Batch U additions
 
 Modeling adds LocalFeatureData.cpp, ContourFinishing.cpp, ChamferContours.cpp,

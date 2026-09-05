@@ -1,6 +1,18 @@
 # Native ABI
 
-## ABI 1.64 / Preview.20 (Batch U, validation in progress)
+## ABI 1.65 / Preview.21 (Batch V, locally validated)
+
+Bridge 0.73.0 adds five calls in OcctSharp.Native.Regions.h: partition_build,
+volume_build, region_snapshot, region_item_shape and region_classify_solid.
+Fixed record sizes: RegionInfo/RegionItem/RegionRule 32 bytes, PartitionOptions and
+VolumeOptions 24 bytes, RegionOutput 16 bytes. Expressions are finite postfix tokens;
+counts, capacity, option flags and reserved fields are checked before output writes.
+Builders and protected storage never cross the C ABI. Temporary result owners reuse
+FeatureResult release; extracted topology reuses Shape release. Previous signatures,
+assembly/file 0.1.0.0 and schema 1.13 are unchanged. Full gate evidence is in STATUS.
+
+
+## ABI 1.64 / Preview.20 (Batch U, locally validated)
 
 Bridge 0.72.0 adds eleven C calls in OcctSharp.Native.LocalFeatures.h: fillet,
 chamfer, face/shell draft, prism/sweep, rib/slot, hole, copied snapshot/history and
@@ -13,7 +25,7 @@ ShellDraftOptions 72, LimitedFeatureOptions 96, RibSlotOptions 192 and HoleOptio
 History's last field is the exact final-result topology index or -1. It is not an
 index into diagnostic partials. Count/capacity checks precede every array write;
 failure clears outputs. Assembly/file 0.1.0.0 and binding schema 1.13 remain unchanged.
-The target identity is not a claim of passing whole-batch release validation; see STATUS.
+Whole-batch local release validation passes; see STATUS for evidence and publication limits.
 
 ## ABI 1.63 / Preview.19 (Batch T)
 

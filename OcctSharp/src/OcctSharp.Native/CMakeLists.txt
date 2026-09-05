@@ -18,6 +18,9 @@ set(OCCTSHARP_MANUAL_NATIVE_SOURCES
   src/Modeling/Construction.cpp
   src/Modeling/Drawing.cpp
   src/Modeling/Features.cpp
+  src/Modeling/PartitionRegions.cpp
+  src/Modeling/RegionInspection.cpp
+  src/Modeling/VolumeConstruction.cpp
   src/Modeling/LocalFeatureData.cpp
   src/Modeling/ContourFinishing.cpp
   src/Modeling/ChamferContours.cpp
@@ -96,6 +99,7 @@ add_library(OcctSharp.Native SHARED
   include/OcctSharp.Native.Authoring.h
   include/OcctSharp.Native.Parametric.h
   include/OcctSharp.Native.LocalFeatures.h
+  include/OcctSharp.Native.Regions.h
   src/Surfaces/SurfaceCommon.hxx
   ${OCCTSHARP_MANUAL_NATIVE_SOURCES}
   ${OCCTSHARP_GENERATED_NATIVE_SOURCES})

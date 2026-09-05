@@ -1,9 +1,19 @@
 # Batch V: Exact partition, material regions and volume construction
 
-- Status: scope prepared, implementation **0/40**. New API compile/runtime: **NOT RUN**.
+- Status: all original **40/40** capabilities implemented and locally validated under ADR-0089; final document-package delivery and local commit are tracked in STATUS.
+- Entry: committed U `2c48460`, Preview.20; fresh inventory matches `77900ED8`.
+  Two root audits match `1625F288`; 395 prior classification changes, 28 in V roots,
+  zero declaration/identity changes. The original Preview.15 evidence below is preserved.
+- Final focused runtime passes 37/37 (`artifacts/batch-v-final-focused.log`) and ten repeats.
+  Final Release/Debug and actual Debug-native pass Generator 91/91 and Runtime 446/446
+  where applicable. Both consumers, 27-ID accounting and compatibility pass.
+  Cold-source Generator 91/91 and Runtime 446/446 and 94 byte-identical generated files
+  also pass. The full release-check passes; final inventory repeats `91357F17`, with
+  exactly 27 SC-059 transitions and no other changes. Final document-package delivery
+  is tracked separately in STATUS; nothing is published.
 - Decision: [ADR-0083](adr/0083-extended-batches-and-continuous-execution.md).
 - Preparation commit: `eacd0ed`; product baseline remains Preview.15 / OCCT 8.0.1.
-- Planned local package slot: `8.0.1-preview.21`; current versions are unchanged.
+- Local validation target: `8.0.1-preview.21` / ABI 1.65 / bridge 0.73.0; not published.
 - Frozen roots: [batch-v-partition-volume-workflows.json](../OcctSharp/config/batches/batch-v-partition-volume-workflows.json).
 - Shared preparation: [U-W evidence](BATCH_U_W_PREPARATION.md).
 - Delivery: [continuous Q-W runbook](BATCH_CONTINUOUS_EXECUTION.md); one complete batch per local commit.
@@ -15,8 +25,8 @@ J already implements SelectBooleanCells with one take/avoid/material request, mu
 Located assembly inputs -> full partition/membership snapshot -> material selection program -> shared/external interfaces -> MakerVolume and user-bounded voids -> T atomic region outputs -> R grouped mesh and XDE exchange/viewer review.
 
 All 40 rows are one delivery unit. A row is a newly observable workflow, not a getter,
-test, overload or standalone family checkpoint. Acceptance below is future required
-evidence, not a claim of implementation. Existing lower generated wrappers are reused
+test, overload or standalone family checkpoint. Acceptance below is the frozen required
+evidence; executed coverage is mapped to named assertions below. Existing lower generated wrappers are reused
 where ownership permits; candidate root membership alone does not mean a missing API.
 
 ## Frozen capability matrix
@@ -64,7 +74,62 @@ where ownership permits; candidate root membership alone does not mean a missing
 | V-39 | Integration | Multi-region exact STEP/IGES delivery | Export/reopen supported separate volumes and metadata; preserve region semantics in application/OCAF data when a format cannot encode them. |
 | V-40 | Integration | Cell/interface/void review workflow | Select cells and shared interfaces, isolate voids in the user envelope and compare accepted outputs in the existing real-HWND viewer. |
 
+## Validated implementation assertion map
+
+Tests below are in `OcctSharp/tests/OcctSharp.Runtime.Tests/BatchV*Tests.cs`; shared
+exchange/HWND assertions also run in the clean facade consumer. A named assertion
+is supported by the whole-batch exit evidence recorded in STATUS. The frozen matrix above remains
+unchanged, including its forty-row denominator.
+
+| ID | Named assertion | Observable evidence |
+|---|---|---|
+| V-01 | `FullPartitionPrecedesSelectionAndReportsExactMembershipAndConservation` | Three unselected solid parts; no output program required. |
+| V-02 | `FullPartitionPrecedesSelectionAndReportsExactMembershipAndConservation` | Exact two-input overlap membership and per-input conservation. |
+| V-03 | `CellAndBoundaryIdsRejectForeignRevisionAndPublicCopiesOutliveEveryOwner` | Foreign revision IDs reject; detached copies survive all owners. |
+| V-04 | `OrderedRemovalClearsAssignmentBeforeReassignmentAndConflictsFailAtomically` | Ordered rule effects and remove-before-reassign semantics. |
+| V-05 | `MultiOutputExpressionProgramsRetainMaterialsAndOrientedSharedInterfaces` | Union/intersection/difference give 1500/500 volume. |
+| V-06 | `OrderedRemovalClearsAssignmentBeforeReassignmentAndConflictsFailAtomically` | Conflicting material fails the complete multi-output call. |
+| V-07 | `InternalRemovalAndTypedContainersRespectMaterialZero` | Material zero retains three solids; common positive material merges to one. |
+| V-08 | `MultiOutputExpressionProgramsRetainMaterialsAndOrientedSharedInterfaces` | Different materials retain one shared interface after removal. |
+| V-09 | `InternalRemovalAndTypedContainersRespectMaterialZero` | Exact compsolid composition; FaceAndEdgePartitionsExposeCorrectDimensionalMeasuresAndSharedEdges also checks one wire. |
+| V-10 | `CellAndBoundaryIdsRejectForeignRevisionAndPublicCopiesOutliveEveryOwner` | Repeated copied plan produces independent revisions and owners. |
+| V-11 | `MultiOutputExpressionProgramsRetainMaterialsAndOrientedSharedInterfaces` | Shared face has opposite oriented uses; FaceAndEdgePartitionsExposeCorrectDimensionalMeasuresAndSharedEdges checks shared edges. |
+| V-12 | `MultiOutputExpressionProgramsRetainMaterialsAndOrientedSharedInterfaces` | External boundaries carry one selected cell and original input indices. |
+| V-13 | `MultiOutputExpressionProgramsRetainMaterialsAndOrientedSharedInterfaces` | Two connected material groups remain separate. |
+| V-14 | `FullPartitionPrecedesSelectionAndReportsExactMembershipAndConservation` | Solid volumes conserve 1000 per input; face/edge fixture checks area 50 and length 5. |
+| V-15 | `SmallCellsAreExplicitSelectionsAndGrowthPolicyCanRejectValidPartition` | Two explicitly selected measure-one slivers; no automatic deletion. |
+| V-16 | `MixedDimensionsKeepTheirMeasuresAndRejectCrossDimensionRemoval` | Solid/edge dimensions retained; cross-dimension removal rejects. |
+| V-17 | `RawRegionBuffersRejectMalformedRulesCapacitiesAndStaleOwnersWithoutWritingSentinels` | Second required-output conflict clears owner after first output succeeds. |
+| V-18 | `SelfInterferingArgumentsExposeSourceFaultsAndNoSelectedOutput` | Original input index, faulty topology and status; no accepted output. |
+| V-19 | `SmallCellsAreExplicitSelectionsAndGrowthPolicyCanRejectValidPartition` | Valid topology still fails explicit growth budget without fuzzy retry. |
+| V-20 | `MultiOutputExpressionProgramsRetainMaterialsAndOrientedSharedInterfaces` | Solid history explicitly unavailable; BoundedRepeatedRegionLifecyclesKeepIndependentSnapshotsAndRejectForeignHistory checks mapped face history. |
+| V-21 | `IntersectingFaceVolumesHaveSourceCorrespondenceAndIndependentContainers` | Intersecting inputs produce three finite valid volumes of 500. |
+| V-22 | `VerifiedFastVolumeModeAcceptsSharedShellAndRejectsIntersectingArguments` | Verified shared topology succeeds; overlapping unchecked fast path rejects. |
+| V-23 | `ClosedShellCandidatesAndOutputCopiesSurviveInputAndResultDisposal` | Valid closed candidates and detached solid survive source disposal. |
+| V-24 | `VolumeConstructionBuildsFiniteBoxAndMapsEverySourceFace` | Six source inputs map to product faces; multi-volume fixture covers each solid. |
+| V-25 | `NestedFaceSetsProduceActualCavityShellClassificationAndPointOutcomes` | Native exterior/cavity shell classification and IN/OUT/ON queries. |
+| V-26 | `InternalEdgePolicyHasObservableInclusionAndExclusion` | Internal edge retained/excluded by explicit policy. |
+| V-27 | `OpenVolumeReportsZeroSolidsAndUnresolvedTopologyWithoutInventingBox` | Five faces return zero solids plus owning unresolved boundaries. |
+| V-28 | `VolumeConstructionBuildsFiniteBoxAndMapsEverySourceFace` | Helper exclusion and exact finite volume 120. |
+| V-29 | `BoundedVoidsRespectUserEnvelopeAndExcludeOutsideOccupiedMaterial` | Explicit bounded void volume 500; outside occupancy has no effect. |
+| V-30 | `PointSelectionOwnsOnlyMatchingVolumesWithExplicitBoundaryAndForeignIdRejection` | Owning selective extraction and include/exclude/reject ON policies. |
+| V-31 | `IntersectingFaceVolumesHaveSourceCorrespondenceAndIndependentContainers` | One compsolid with total 1500; detached output survives result. |
+| V-32 | `RepairVolumeWorkflowConsumesQAcceptanceOnlyAfterSolidSuccess` | Q preview consumed only on success; supported input-owner provenance, not invented subshape lineage. |
+| V-33 | `LocatedInstancesRemainDistinctAndPlacementRefreshInvalidatesOldCells` | Repeated definition remains two independently located inputs. |
+| V-34 | `LocatedInstancesRemainDistinctAndPlacementRefreshInvalidatesOldCells` | Per-occurrence versus shared-definition rule keys; geometry never collapsed. |
+| V-35 | `MultiRegionXdeProductsKeepExplicitKeysColorsProvenanceAndUndo` | Explicit product keys/colors/source metadata and document undo/redo. |
+| V-36 | `CancellationAfterMultiOutputCandidateAndUndoNeverPublishPartialGenerations` | Multi-output cancellation, rollback, undo/redo and duplication; four storage formats reexecute both recipes. |
+| V-37 | `LocatedInstancesRemainDistinctAndPlacementRefreshInvalidatesOldCells` | Placement refresh changes partition; stale publication and old IDs reject. |
+| V-38 | `ExactRegionMeshGroupsPreserveSharedInterfaceIdsAndMaterialKeys` | Every triangle group retains exact boundary/cell/material provenance. |
+| V-39 | `SeparateRegionExchangeAndRealHwndCellInterfaceVoidReview` | Real STEP/IGES geometry/area/colors; ProductBinXcafReopenRetainsRegionKeysAssignmentsAndSourceMetadata verifies nonportable semantics. |
+| V-40 | `SeparateRegionExchangeAndRealHwndCellInterfaceVoidReview` | Real HWND cell/interface selection, void isolation, replacement invalidation and thread rejection. |
+
+IGES limitation: this assembly path retains geometry, colors and the root assembly
+name, but not nested product names. STEP retains explicit body/product names. Region
+rules, material integers and correspondence remain application/OCAF metadata.
+
 ## Root, dependency and source closure
+
 
 | Root group | Exact decision roots |
 |---|---|

@@ -17,6 +17,6 @@
     <OcctSharpUseBundledNativeRuntime Condition="'$(OcctSharpUseBundledNativeRuntime)' == ''">false</OcctSharpUseBundledNativeRuntime>
     <OcctSharpNativeRuntimeDir Condition="'$(OcctSharpNativeRuntimeDir)' == '' and '$(OcctSharpUseBundledNativeRuntime)' == 'true'">$(OcctSharpBundledNativeRuntimeDir)</OcctSharpNativeRuntimeDir>
     <OcctSharpNativeRuntimeDir Condition="'$(OcctSharpNativeRuntimeDir)' == ''">$(MSBuildThisFileDirectory)artifacts\native\$(Configuration)</OcctSharpNativeRuntimeDir>
-    <OcctSharpPackageVersion Condition="'$(OcctSharpPackageVersion)' == ''">8.0.1-preview.20</OcctSharpPackageVersion>
+    <OcctSharpPackageVersion Condition="'$(OcctSharpPackageVersion)' == ''">8.0.1-preview.21</OcctSharpPackageVersion>
   </PropertyGroup>
 </Project>

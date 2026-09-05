@@ -18,6 +18,7 @@ struct OcctSharp_FeatureHistoryEntry
 };
 
 struct OcctSharp_LocalFeatureData;
+struct OcctSharp_RegionData;
 
 struct OcctSharp_FeatureResultHandle
 {
@@ -28,6 +29,7 @@ struct OcctSharp_FeatureResultHandle
   std::string Message;
   // Optional copied diagnostics owned by this existing result, never a builder or registry.
   std::shared_ptr<OcctSharp_LocalFeatureData> LocalFeature;
+  std::shared_ptr<OcctSharp_RegionData> Regions;
 };
 
 namespace OcctSharp::Native

@@ -165,6 +165,9 @@ public sealed partial class ParametricDocument
                 case ParametricFeatureKind.FaceDraft:
                 case ParametricFeatureKind.LimitedFeature:
                     return EvaluateLocalFeature(definition, Input, name => Length(name));
+                case ParametricFeatureKind.Partition:
+                case ParametricFeatureKind.VolumeConstruction:
+                    return EvaluateRegions(definition, Input);
                 default: throw new NotSupportedException("No built-in evaluator exists for this feature.");
             }
         }

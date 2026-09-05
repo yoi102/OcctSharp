@@ -5,7 +5,7 @@ namespace OcctSharp;
 
 #pragma warning disable CS1591
 public enum ParametricFeatureKind { SourceShape, Box, Cylinder, Placement, Extrusion, Revolution, Boolean, Repair, GuidedSweep, ConstrainedFill, Mesh, Scalar,
-    ContourFillet, ContourChamfer, FaceDraft, LimitedFeature }
+    ContourFillet, ContourChamfer, FaceDraft, LimitedFeature, Partition, VolumeConstruction }
 public enum ParametricOutputKind { ExactShape, Mesh, Scalar }
 public enum ParametricExecutionState { NotExecuted, Executing, Succeeded, Failed, Blocked }
 public enum ParametricRecomputeMode { Incremental, Full, Targeted }

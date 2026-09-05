@@ -5,6 +5,7 @@
     <Compile Include="Repair\**\*.cs" />
     <Compile Include="Authoring\**\*.cs" />
     <Compile Include="LocalFeatures\**\*.cs" />
+    <Compile Include="Regions\**\*.cs" />
     <Compile Include="Mesh\**\*.cs" />
     <Compile Include="..\OcctSharp\Generated\Modeling\**\*.cs" Link="Generated\%(RecursiveDir)%(Filename)%(Extension)" />
     <Compile Include="..\OcctSharp\Interop\**\*.cs" Exclude="..\OcctSharp\Interop\NativeError.cs;..\OcctSharp\Interop\NativeLibraryResolver.cs;..\OcctSharp\Interop\NativeStatus.cs" Link="Interop\%(RecursiveDir)%(Filename)%(Extension)" />

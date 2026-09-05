@@ -1,5 +1,26 @@
 # Special Cases
 
+## SC-059: Exact partition/material programs and bounded volumes
+
+ADR-0089 uses 27 exact directly called overloads recorded in
+[batch-v-manual-calls.json](../OcctSharp/config/batches/batch-v-manual-calls.json)
+and individually in generation.json. Existing Manual support is reused, not counted
+again. CellsBuilder protected index/material maps form a checked call-local adapter;
+this does not claim migration of public AddToResult or arbitrary persistent builders.
+For one input, a second container aliases the same copied topology to satisfy General
+Fuse's two-argument precondition, with explicit membership folding to input zero.
+No extra geometry is introduced. History is limited to supported vertex/edge/face
+relations; unmapped solid lineage remains unavailable. MakerVolume fast mode verifies
+whole-input interference; helper topology is excluded before acceptance.
+STEP products use explicit solid body leaves to preserve exact area and styles.
+IGES preserves geometry/colors/root assembly name on this path, not nested names;
+region keys/assignments/provenance remain application/OCAF metadata. Repair-to-volume
+composition identifies repaired input owners, not a fabricated full subshape chain.
+Exit inventory `91357F17` confirms exactly 27 SC-059 transitions and no other
+declaration/identity/classification changes; all three accounting negatives pass.
+Full validation remains tracked in STATUS.
+
+
 ## SC-058: Source-bound advanced local-feature programs
 
 ADR-0088 implements the original forty-row U scope through call-local fillet/chamfer,

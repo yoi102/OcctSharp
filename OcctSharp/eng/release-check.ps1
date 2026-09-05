@@ -1,7 +1,7 @@
 [CmdletBinding()]
 param(
     [string]$OcctRoot,
-    [string]$PackageVersion = '8.0.1-preview.20',
+    [string]$PackageVersion = '8.0.1-preview.21',
     [string]$ApiBaselineVersion = '0.1.0-alpha.38'
 )
 
@@ -17,6 +17,9 @@ $releaseDirectory = Join-Path $workspaceRoot 'artifacts\release'
 & (Join-Path $PSScriptRoot 'build.ps1') -Configuration Release -OcctRoot $OcctRoot
 & (Join-Path $PSScriptRoot 'build.ps1') -Configuration Debug -OcctRoot $OcctRoot
 & (Join-Path $PSScriptRoot 'verify-bundled-runtime.ps1') -CompareBuiltRuntime
+& dotnet run --project (Join-Path $workspaceRoot 'samples/OcctSharp.Samples/OcctSharp.Samples.csproj') `
+    --configuration Release --no-build -- --smoke
+if ($LASTEXITCODE -ne 0) { throw "Clone-and-run sample smoke failed with exit code $LASTEXITCODE." }
 & (Join-Path $PSScriptRoot 'verify-generated.ps1') -Configuration Release
 & (Join-Path $PSScriptRoot 'verify-package.ps1') -SkipBuild -OcctRoot $OcctRoot -PackageVersion $PackageVersion
 & (Join-Path $PSScriptRoot 'verify-clean-regeneration.ps1') -OcctRoot $OcctRoot

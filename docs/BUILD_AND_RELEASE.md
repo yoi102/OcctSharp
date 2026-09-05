@@ -13,6 +13,10 @@ Release evidence tooling is implemented inside batch B; public publication remai
 
 ## Clone-and-run sample
 
+The complete local release checker also runs the freshly built console `--smoke`
+path. A stale sample ABI/bridge assertion must fail the gate, even when library tests
+and clean package consumers succeed.
+
 No native developer configuration is required for the committed examples:
 
 ```powershell

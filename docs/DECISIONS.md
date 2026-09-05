@@ -89,7 +89,7 @@ Superseded ADRs remain available and point to their replacements.
 | [ADR-0080](adr/0080-expanded-surface-wave-and-native-source-boundaries.md) | Expand Batch P to 32 capabilities and separate new native source responsibilities while retaining the existing managed modules and one native DLL | Accepted and implemented |
 | [ADR-0081](adr/0081-native-source-responsibility-extraction.md) | Extract all historical native source responsibilities, preserving one DLL and the complete existing ABI/ownership contract | Accepted and implemented |
 | [ADR-0082](adr/0082-broad-batch-q-through-t-preparation.md) | Prepare Q-T as four 40-capability whole waves with exact-root audits, preserved source boundaries and explicit per-batch baseline revalidation | Accepted; Q-T 160/160 locally validated |
-| [ADR-0083](adr/0083-extended-batches-and-continuous-execution.md) | Add U-W and prepare continuous Q-W execution with full per-batch validation/local commits and automatic advancement after explicit start | Active continuous run; 160/280 locally validated |
+| [ADR-0083](adr/0083-extended-batches-and-continuous-execution.md) | Add U-W and prepare continuous Q-W execution with full per-batch validation/local commits and automatic advancement after explicit start | Active continuous run; 240/280 locally validated |
 | [ADR-0084](adr/0084-source-bound-repair-previews.md) | Source-bound copied repair snapshots, selected/protected stages, verified budgets and atomic publication | Accepted and locally validated |
 | [ADR-0085](adr/0085-immutable-authored-mesh-revisions.md) | Immutable attributed mesh revisions, exact index correspondence, call-local Poly editing and discrete delivery | Accepted and locally validated |
 | [ADR-0086](adr/0086-guided-authoring-laws-constraints-and-provenance.md) | Copied laws, owning guided/constraint graphs, independent residuals and exact provenance | Accepted and locally validated; final packaging/commit in STATUS |
@@ -97,6 +97,8 @@ Superseded ADRs remain available and point to their replacements.
 | [ADR-0087](adr/0087-parametric-recompute-and-persistent-selection.md) | Typed parametric DAG execution, atomic publication, durable generation history and fallible persistent selection | Accepted and locally validated; final package-content/commit evidence in STATUS |
 
 | [ADR-0088](adr/0088-source-bound-contour-and-local-feature-programs.md) | Source-bound copied contour programs, explicit local-feature limits and diagnostic-only partial results | Accepted and locally validated; final documentation delivery in STATUS |
+
+| [ADR-0089](adr/0089-exact-partition-and-volume-programs.md) | Exact partition/material programs and bounded volume construction with copied revisions and atomic named outputs | Accepted and locally validated |
 
 ## Pending decisions
 

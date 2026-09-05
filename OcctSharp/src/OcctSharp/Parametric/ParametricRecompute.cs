@@ -114,6 +114,14 @@ public sealed partial class ParametricDocument
                     storage.Record(value.ResultEntry, ParametricEvolutionKind.Primitive, [], [candidate.Shape]);
                 }
                 if (candidate.Scalar is { } scalar) Write(value.ResultEntry, "scalar", scalar);
+                Dictionary<string, string> regionOutputs = new(StringComparer.Ordinal);
+                foreach (var region in candidate.RegionOutputs)
+                {
+                    string entry = AddChild(value.ResultEntry);
+                    storage.Record(entry, ParametricEvolutionKind.Primitive, [], [region.Value]);
+                    regionOutputs.Add(region.Key, entry);
+                }
+                Write(value.ResultEntry, "regionOutputs", regionOutputs);
                 List<StoredAlgorithmHistory> associations = [];
                 foreach (var association in candidate.AlgorithmHistory)
                 {
@@ -187,7 +195,8 @@ public sealed partial class ParametricDocument
         internal ParametricQuantity? Scalar { get; } = scalar;
         internal List<ParametricAlgorithmHistory> AlgorithmHistory { get; } = [];
         internal List<string> Diagnostics { get; } = [];
-        public void Dispose() { Shape?.Dispose(); foreach (var item in AlgorithmHistory) item.Dispose(); }
+        internal Dictionary<string, Shape> RegionOutputs { get; } = new(StringComparer.Ordinal);
+        public void Dispose() { Shape?.Dispose(); foreach (var item in AlgorithmHistory) item.Dispose(); foreach (var shape in RegionOutputs.Values) shape.Dispose(); }
     }
     private sealed record StoredAlgorithmHistory(Guid SourceFeatureId, string Kind, string Entry, bool HasShape);
     private sealed record StoredHistoryRevision(Guid ResultRevision, string[] Entries);

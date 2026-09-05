@@ -56,7 +56,11 @@ foreach ($spec in $specs) {
         throw "Decision/support roots are not an exact disjoint partition for $letter."
     }
     $document = Get-Content "$repositoryRoot/docs/$($spec.matrix)" -Raw
-    $rows = @([regex]::Matches($document, "(?m)^\| $($spec.batch)-([0-9]{2}) \|"))
+    # Completed batches also have a named-assertion table containing the same IDs.
+    # Only the explicitly frozen capability section defines the denominator.
+    $matrices = @([regex]::Matches($document, '(?ms)^## Frozen capability(?: and acceptance)? matrix\r?\n(?<rows>.*?)(?=^## |\z)'))
+    if ($matrices.Count -ne 1) { throw "Expected one frozen capability section for $letter." }
+    $rows = @([regex]::Matches($matrices[0].Groups['rows'].Value, "(?m)^\| $($spec.batch)-([0-9]{2}) \|"))
     if ($rows.Count -ne 40 -or
         @(Compare-Object @($rows | ForEach-Object { [int]$_.Groups[1].Value }) @(1..40)).Count -ne 0) {
         throw "Capability matrix is not exactly $($spec.batch)-01 through $($spec.batch)-40."
