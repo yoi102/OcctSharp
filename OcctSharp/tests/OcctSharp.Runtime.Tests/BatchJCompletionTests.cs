@@ -4,6 +4,30 @@ namespace OcctSharp.Runtime.Tests;
 
 public sealed class BatchJCompletionTests
 {
+    [Fact]
+    public void ContainerHistoryUsesSupportedDescendantsWithoutNativeAssertions()
+    {
+        using Shape left = ShapeFactory.CreateBox(10, 10, 10);
+        using Shape rightBase = ShapeFactory.CreateBox(10, 10, 10);
+        using Shape right = rightBase.Transformed(ShapeTransform.CreateTranslation(5, 0, 0));
+        using Shape compound = ShapeFactory.CreateCompound([left]);
+        using FeatureOperationResult result = FeatureModeling.Boolean(
+            FeatureBooleanOperation.Fuse, [compound], [right], Robust);
+        Assert.True(result.Diagnostics.Succeeded, result.Diagnostics.StageMessage);
+        Assert.True(result.RequireShape().IsValid);
+        Assert.NotEmpty(result.History);
+
+        using BooleanOperationResult wireHistory = left.FuseWithHistory(right, ShapeKind.Wire);
+        Assert.True(wireHistory.Shape.IsValid);
+        Assert.True(wireHistory.History.Left.SourceCount > 0);
+        Assert.Equal(0, wireHistory.History.Left.ModifiedResultCount);
+
+        using Shape plane = FreeformAuthoring.CreateSurfaceFace(FreeformSurfaceDefinition.Bezier(2, 2,
+            [new(5, -1, -1), new(5, -1, 11), new(5, 11, -1), new(5, 11, 11)]));
+        using FreeformShapeResult split = FreeformAuthoring.SplitTopology([compound], [plane]);
+        Assert.True(split.Shape.IsValid);
+    }
+
     private static readonly FeatureModelingOptions Robust = new()
     {
         FuzzyTolerance = 1e-7,

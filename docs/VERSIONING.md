@@ -19,7 +19,7 @@ into one ambiguous version string.
 - Under ADR-0065, NuGet package versions align their numeric core with the supported
   OCCT version: `<OCCT major>.<minor>.<patch>-preview.<OcctSharp preview number>`.
 - The current line began at `8.0.1-preview.1`; the current package is
-  `8.0.1-preview.13`. Increment the preview counter for an
+  `8.0.1-preview.14`. Increment the preview counter for an
   OcctSharp package-visible change while the OCCT baseline remains 8.0.1. Reserve the
   stable `8.0.1` package version for public-release readiness.
 - A later OCCT baseline changes the three-part numeric core and restarts the preview
@@ -32,8 +32,9 @@ into one ambiguous version string.
 - Record the exact OCCT build identity in package metadata and runtime diagnostics.
 - Keep package, managed assembly, generator, native ABI, bridge, binding-model schema,
   configuration schema, and OCCT build identities independent. In particular, the
-  Preview.13 managed assembly identities remain `0.1.0.0`; native ABI is 1.57 and bridge
-  implementation is 0.65.0.
+  Preview.14 managed assembly identities remain `0.1.0.0`; native ABI is 1.58 and bridge
+  implementation is 0.66.0. Batch O keeps schema 1.13. Each batch is locally packaged
+  and checked; publication is not part of the completion workflow.
 
 ## Runtime identity
 

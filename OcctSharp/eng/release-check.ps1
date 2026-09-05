@@ -1,7 +1,7 @@
 [CmdletBinding()]
 param(
     [string]$OcctRoot,
-    [string]$PackageVersion = '8.0.1-preview.13',
+    [string]$PackageVersion = '8.0.1-preview.14',
     [string]$ApiBaselineVersion = '0.1.0-alpha.38'
 )
 
@@ -93,7 +93,7 @@ $gates = @(
     [ordered]@{ id = 'generated-freshness'; state = 'PASS'; evidence = "$generatedFileCount manifest-owned files current." },
     [ordered]@{ id = 'generated-shard-dependency-closure'; state = 'PASS'; evidence = "$dependencyEdgeCount observed cross-shard edges are fully resolved, target-graph compatible, and acyclic; managed shards are physically split while native DLL splitting remains deferred." },
     [ordered]@{ id = 'clean-regeneration'; state = 'PASS'; evidence = 'Fresh source copy build and byte comparison completed.' },
-    [ordered]@{ id = 'package-consumer'; state = 'PASS'; evidence = "$PackageVersion creates 14 packages with one $nativeDllCount-DLL native package and zero native duplication in 13 managed packages; the clean facade consumer runs the inherited Batch D-N workflows and the direct Modeling consumer creates topology without receiving OcctSharp.dll." },
+    [ordered]@{ id = 'package-consumer'; state = 'PASS'; evidence = "$PackageVersion creates 14 packages with one $nativeDllCount-DLL native package and zero native duplication in 13 managed packages; the clean facade consumer runs the Batch D-O workflows and the direct Modeling consumer creates topology without receiving OcctSharp.dll." },
     [ordered]@{ id = 'api-compatibility'; state = 'PASS'; evidence = 'Compared with the alpha.38 606-signature baseline; additive changes are allowed and removals are blocked.' },
     [ordered]@{ id = 'full-classification'; state = 'PASS'; evidence = "$declarationTotal declarations and $headerTotal headers classified; zero pending/HD099." },
     [ordered]@{ id = 'bindable-emission-completeness'; state = if ($remainingBindableCount -eq 0) { 'PASS' } else { 'BLOCKED' }; evidence = "$remainingBindableCount declarations remain SupportedUnselected; $emittedCount generated and $manualCount accepted manual stable IDs are reconciled." },
@@ -104,7 +104,7 @@ $gates = @(
     [ordered]@{ id = 'project-license'; state = if ($projectLicensePresent) { 'PASS' } else { 'BLOCKED' }; evidence = if ($projectLicensePresent) { 'Repository license exists.' } else { 'PD-012 requires the user to select the project license.' } },
     [ordered]@{ id = 'third-party-notices'; state = 'PASS'; evidence = 'OCCT, oneTBB, FreeImage, FreeType, OpenVR, FFmpeg, and jemalloc notices and license texts are committed and packaged; the unavailable jemalloc bundle version is disclosed.' },
     [ordered]@{ id = 'package-signing'; state = 'NOT RUN'; evidence = 'No signing certificate or authorization was provided.' },
-    [ordered]@{ id = 'nuget-publication'; state = 'NOT RUN'; evidence = 'No NuGet credential or publication authorization was provided.' }
+    [ordered]@{ id = 'nuget-publication'; state = 'NOT RUN'; evidence = 'Batch delivery is local pack, verification, and commit only; NuGet publication is excluded by user direction.' }
 )
 $localBatchGateIds = @(
     'local-release-debug',
@@ -134,24 +134,7 @@ $report = [ordered]@{
 $gatePath = Join-Path $releaseDirectory 'release-gates.json'
 [IO.File]::WriteAllText($gatePath, ($report | ConvertTo-Json -Depth 8) + [Environment]::NewLine, [Text.UTF8Encoding]::new($false))
 
-$packagePath = Join-Path $workspaceRoot "artifacts\packages\OcctSharp.$PackageVersion.nupkg"
-$checksumInputs = @(
-    (Join-Path $releaseDirectory 'api-diff.json'),
-    (Join-Path $releaseDirectory 'provenance.json'),
-    (Join-Path $releaseDirectory 'release-gates.json'),
-    (Join-Path $releaseDirectory 'sbom.cdx.json'),
-    $packagePath
-)
-$checksumLines = @($checksumInputs | ForEach-Object {
-    if (-not (Test-Path -LiteralPath $_ -PathType Leaf)) {
-        throw "Required checksum input is missing: '$($_)'."
-    }
-    "$(Get-FileHash -LiteralPath $_ -Algorithm SHA256 | Select-Object -ExpandProperty Hash)  $(Split-Path -Leaf $_)"
-})
-[IO.File]::WriteAllLines(
-    (Join-Path $releaseDirectory 'checksums.sha256'),
-    $checksumLines,
-    [Text.UTF8Encoding]::new($false))
+& (Join-Path $PSScriptRoot 'update-release-checksums.ps1') -PackageVersion $PackageVersion
 Write-Host "Release engineering checks completed. Public release ready: $($report.publicReleaseReady). Gate report: '$gatePath'."
 }
 finally {

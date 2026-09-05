@@ -17,7 +17,7 @@ a blocked declaration is not a package API.
 | Final declaration/header pending | 0 / 0 |
 | Unowned header fallback `HD099` | 0 |
 | Generated manifest stable IDs | 16,353 |
-| Accepted manual stable IDs | 557 |
+| Accepted manual stable IDs | 609 |
 | `SupportedUnselected` | 0 |
 | Broad `LT001`-`LT004` reasons | 0 |
 
@@ -26,10 +26,10 @@ The successful declarations have these final dispositions:
 | State | Count | Meaning |
 |---|---:|---|
 | `Emitted` | 16,353 | The generated manifest owns the declaration stable ID (`EM001`) |
-| `Manual` | 557 | Schema 1.13 links the stable ID to accepted manual behavior through SC-032/SC-033 and subsequent product-wave special cases through SC-051 (`MN001`) |
+| `Manual` | 609 | Schema 1.13 links the stable ID to accepted manual behavior through SC-032/SC-033 and subsequent product-wave special cases through SC-052 (`MN001`) |
 | `SupportedUnselected` | 0 | No declaration accepted by the active safe generator rules remains outside the manifest |
 | `Skipped` | 49,344 | Non-public/language-level exclusions or narrow accepted non-callable declarations |
-| `Blocked` | 50,018 | Public declarations with a specific unresolved ABI, export, type, or ownership boundary |
+| `Blocked` | 49,966 | Public declarations with a specific unresolved ABI, export, type, or ownership boundary |
 | `Pending` | 0 | No unowned declaration disposition remains |
 
 The former broad LT001-LT004 buckets are eliminated. Narrow blocker counts are:
@@ -38,14 +38,14 @@ The former broad LT001-LT004 buckets are eliminated. Narrow blocker counts are:
 |---|---|---:|
 | `BL002` | Missing toolkit provenance | 445 |
 | `BL003` | Unverified free-function export | 117 |
-| `BL102` | Non-transient receiver ownership | 18,990 |
-| `BL103` | Non-transient value construction | 6,608 |
+| `BL102` | Non-transient receiver ownership | 18,963 |
+| `BL103` | Non-transient value construction | 6,592 |
 | `BL202` | Raw pointer lifetime | 3,549 |
 | `BL203` | Rvalue-reference transfer | 1,277 |
-| `BL204` | Borrowed or output reference | 8,757 |
-| `BL205` | Unselected intrusive-handle target | 2,718 |
-| `BL206` | Template-instantiation projection | 610 |
-| `BL208` | Unmapped value type | 6,947 |
+| `BL204` | Borrowed or output reference | 8,756 |
+| `BL205` | Unselected intrusive-handle target | 2,717 |
+| `BL206` | Template-instantiation projection | 606 |
+| `BL208` | Unmapped value type | 6,944 |
 
 New accepted skip reasons are `SK012 TypeMetadata` 11,603, `SK013
 InternalHeaderFunction` 4, `SK014 DestructorLifecycleBoundary` 4,182, `SK015
@@ -66,7 +66,7 @@ machine-readable report.
 
 The manifest-aware BatchSize=128 report is
 `OcctSharp/artifacts/generator-reports/full-inventory.json`, SHA256
-`568E876122C63BA25548EBA2938201DC255F10F9756CEC288DF8A206B56057E3`.
+`176C37BFF338B3E0BA59EFB7CF7BA3803ABC0030B881D0A526873139F89AC2C5`.
 
 ## Interpretation
 

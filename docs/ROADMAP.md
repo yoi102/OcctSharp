@@ -6,22 +6,27 @@ evidence; creating files or generating a large method count is not sufficient.
 The retired B00–B20 capability milestones and future package boundaries are documented
 in [the complete migration plan](MIGRATION_PLAN.md). They all belong to the completed
 product-scale batch `B`; none is a separate current batch or commit boundary.
-Batch B through Batch N are complete for their accepted local implementation scopes.
-Batch N closes its one 24-capability metadata-aware IGES/XDE interoperability wave under
-ADR-0077. It was not split into reader, writer, metadata, path, viewer, or package
-checkpoints.
+Batch B through Batch O are complete for their accepted local implementation scopes.
+Batch O closes its one 24-capability copied-sketch/planar-modeling wave under ADR-0078.
+It was not split into curve, loop, feature, exchange, viewer, or package checkpoints.
 
-## Current priority: Batch O 2D sketch and planar modeling
+## Completed priority: Batch O 2D sketch and planar modeling
 
 ADR-0078 and [the Batch O gap inventory](BATCH_O_2D_SKETCH_PLANAR_MODELING_GAP_INVENTORY.md)
 lock one 24-capability copied-definition-to-owning-topology workflow across `gp_*2d`,
 Geom2d/Geom2dAPI, curve inspection/edit/intersection/offset, mixed loop validation,
 hole-aware faces, extrusion/revolution/add-cut features, XDE, STEP/IGES, real HWND, and
-clean packages. Preparation is complete and implementation is 0/24. The Preview.13
+clean packages. Preparation and implementation are complete at 24/24; the seven focused
+regression tests and complete local release checks pass. The Preview.13
 baseline audit covers exactly 24 roots and 849 declarations: 587 blocked, 93 emitted,
 14 manual, and 155 skipped. Only exact directly invoked blocked overloads may enter
-SC-052. Preview.14, ABI 1.58, bridge 0.66.0, and schema 1.13 are reserved; all Batch O
-compile/runtime/package/release gates are `NOT RUN` until implementation.
+SC-052. The implementation reconciles 52 exact blocked IDs and uses Preview.14,
+ABI 1.58, bridge 0.66.0, and schema 1.13. Generator 91/91 and Runtime 164/164 pass,
+including a real native Debug sweep and a clean source rebuild. All 94 generated files
+are byte-identical. API comparison is additive at 39,046 additions and zero removals.
+The 14 local packages, both clean consumers, full inventory, and release metadata pass.
+STATUS records the exact hashes. The next batch requires its own complete root audit and
+cross-family dependency closure before implementation.
 
 ## Completed priority: Batch N IGES/XDE interoperability
 
@@ -71,15 +76,16 @@ signing, and NuGet publication remain separate
 release-readiness work rather than
 unfinished batch implementation.
 
-## Current release priority: Preview.13 local completion
+## Current release priority: Preview.14 local completion
 
-ADR-0077 completes the package-visible Batch N wave while retaining ADR-0074's managed
-module graph and one-native-DLL architecture. Preview.13 adds metadata-aware IGESCAF/XDE,
-format-neutral STEP/IGES routing, Unicode-path staging, mixed composition, round-trip,
-and XDE-label viewer behavior. Release/Debug, real-file/HWND, 14-package isolation,
+ADR-0078 completes the package-visible Batch O wave while retaining ADR-0074's managed
+module graph and one-native-DLL architecture. Preview.14 adds copied 2D curves, inspection
+and edits, mixed loops and holes, planar topology and solid features, STEP/IGES, and
+viewer behavior. Release/Debug, real-file/HWND, 14-package isolation,
 committed-runtime identity, clean regeneration, local consumers, API/inventory, and
 release-metadata gates pass. Hosted full release execution, signing, NuGet publication/
-indexing, and a public-source consumer remain independent `NOT RUN` gates.
+indexing, and a public-source consumer remain independent `NOT RUN` gates. Every batch
+ends with local package verification and a local commit; no upload is part of that loop.
 
 ## Completed priority: Batch L digital mock-up interference and clearance
 

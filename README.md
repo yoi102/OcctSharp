@@ -5,7 +5,7 @@ versioned native C ABI, generated low-level bindings, and friendly managed CAD A
 modeling, STEP/IGES/STL exchange, XDE assemblies and metadata, meshing, inspection, and
 Windows visualization.
 
-Current preview: `8.0.1-preview.13` for Windows x64. The NuGet graph contains 12 managed
+Current local preview: `8.0.1-preview.14` for Windows x64. The NuGet graph contains 12 managed
 modules, the `OcctSharp` compatibility/facade package, and one shared
 `OcctSharp.Native.win-x64` runtime package. The native package places the complete
 62-DLL runtime in the application's `occt/` directory; no machine-wide OCCT installation
@@ -14,16 +14,19 @@ or `PATH` change is required.
 ## Install
 
 ```powershell
-dotnet add package OcctSharp --version 8.0.1-preview.13
+dotnet add package OcctSharp --version 8.0.1-preview.14 --source ./OcctSharp/artifacts/packages
 ```
 
 A narrow consumer can reference a module directly, for example:
 
 ```powershell
-dotnet add package OcctSharp.Modeling --version 8.0.1-preview.13
+dotnet add package OcctSharp.Modeling --version 8.0.1-preview.14 --source ./OcctSharp/artifacts/packages
 ```
 
 The supported runtime baseline is .NET 10, Windows x64, and OCCT 8.0.1.
+Preview.14 is built and checked locally; it is not published on NuGet.org. Create the
+local package feed with `OcctSharp/eng/pack.ps1` using the contributor toolchain, or run
+the repository samples directly with the committed runtime.
 
 ## Create a solid
 
@@ -36,6 +39,31 @@ using Shape cylinder = ShapeFactory.CreateCylinder(6, 20);
 Console.WriteLine($"Box faces: {box.FaceCount}");
 Console.WriteLine($"Cylinder faces: {cylinder.FaceCount}");
 ```
+
+## Build a 2D sketch with a hole and extrude it
+
+```csharp
+using OcctSharp;
+
+SketchCurveChain2d outer = SketchCurveChain2d.Create([
+    SketchCurve2d.Segment(new(0, 0), new(40, 0)),
+    SketchCurve2d.Segment(new(40, 0), new(40, 30)),
+    SketchCurve2d.Segment(new(40, 30), new(0, 30)),
+    SketchCurve2d.Segment(new(0, 30), new(0, 0))], requireClosed: true);
+SketchCurveChain2d hole = SketchCurveChain2d.Create([
+    SketchCurve2d.Circle(new(20, 15), 5)], requireClosed: true);
+SketchProfile2d profile = SketchProfile2d.Classify([hole, outer]);
+
+using Shape solid = profile.Extrude(SketchPlane.XY, 8);
+SketchProfile2d.WriteStep(solid, "sketch.step",
+    new XdePartMetadata("Sketch plate", new XdeColor(0.2, 0.7, 0.35), ["Sketch"]));
+```
+
+Sketch definitions own copied data. Curves support evaluation, projection,
+intersection, trim/split/reverse, translation, rotation, uniform scale, and mirror.
+Bezier and B-spline definitions support rational weights; `Interpolate` creates a
+degree-one, piecewise-linear B-spline. Wire/face/feature results are independent
+`IDisposable` shapes. The API does not include a parametric constraint solver.
 
 ## Read ordinary STEP geometry
 

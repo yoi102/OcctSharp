@@ -1,5 +1,14 @@
 # Architecture
 
+## Preview.14 sketch boundary
+
+ADR-0078 adds the Batch O copied 2D sketch workflow to the cross-family facade.
+SketchTypes contains copied definitions and explicit planes; SketchModeling composes
+inspection, validation, topology, features, XDE, and exchange. Native Geom2d algorithms
+stay call-local. Registered topology ownership, the twelve managed modules, the facade,
+and the single native DLL remain unchanged. Area is integrated over curve derivatives;
+containment is classified by OCCT; bounds include native topology tolerance.
+
 ## Purpose
 
 OcctSharp is an OCCT C++ to .NET binding generator and managed SDK. The system must
@@ -393,8 +402,9 @@ manifest are committed and must be changed by regeneration, not direct editing.
 
 Raw and friendly generated C# are physically partitioned below
 `Generated/<ProductModule>/`. Directory placement does not change namespaces: raw types
-remain internal `OcctSharp.Generated`, public generated wrappers remain `OcctSharp`, and
-all compile into the single `OcctSharp.dll`.
+remain internal `OcctSharp.Generated` and public generated wrappers remain `OcctSharp`.
+ADR-0074 compiles each product module into its owning assembly; the `OcctSharp.dll`
+facade retains compatibility through generated type forwarders.
 
 Referenced native enums are emitted as public typed managed enums from discovered
 enumerators while their raw ABI remains validated `int32_t`. Qualified and unqualified

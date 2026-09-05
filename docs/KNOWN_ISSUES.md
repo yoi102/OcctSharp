@@ -1,5 +1,19 @@
 # Known Issues
 
+## KI-030: Debug native history queries asserted for container topology
+
+- Status: Resolved in Preview.14; final Release-native and Debug-native Runtime 164/164 pass.
+- Area: Feature/Boolean/freeform copied history.
+- Reproduction: The Debug OCCT TKBRep runtime asserted in BRepTools_History.cxx:165
+  (`IsSupportedType(theInitial)`) during Batch J split/defeature/cell/recovery tests.
+  Catching Standard_Failure cannot contain this CRT assertion.
+- Resolution: Native history queries accept only vertex, edge, face, and solid inputs,
+  matching OCCT's contract. Feature and freeform container workflows inspect supported
+  descendants; basic container-kind summaries keep source counts without unsupported
+  change/deletion queries. No borrowed history data or new ownership category is exposed.
+- Regression: ContainerHistoryUsesSupportedDescendantsWithoutNativeAssertions exercises
+  a compound Boolean, wire-kind history, and freeform splitting under both native builds.
+
 ## KI-029: IGES exchange is geometry-only and does not preserve XDE metadata
 
 - Status: Resolved in Preview.13 at 24/24 under ADR-0077

@@ -23,8 +23,8 @@ if (nativeFiles.Length < 2)
 }
 
 OcctRuntimeInfo runtime = OcctRuntime.Info;
-if (runtime.AbiVersion != new Version(1, 57)
-    || runtime.BridgeVersion != "0.65.0"
+if (runtime.AbiVersion != new Version(1, 58)
+    || runtime.BridgeVersion != "0.66.0"
     || runtime.OcctVersion != "8.0.1")
 {
     throw new InvalidOperationException(
@@ -1767,6 +1767,63 @@ try
     using XdeDocument batchNReread = XdeDocument.ReadExchange(batchNRoundTrip);
     if (batchNReread.GetFreeShapes().Length != 2)
         throw new InvalidOperationException("The packaged Batch N mixed IGES round trip failed.");
+
+    SketchCurve2d batchOBottom = SketchCurve2d.Segment(new(0, 0), new(18, 0));
+    SketchCurve2d batchORight = SketchCurve2d.Bezier([new(18, 0), new(18, 4), new(18, 9)]);
+    SketchCurve2d batchOTop = SketchCurve2d.BSpline(
+        [new(18, 9), new(9, 9), new(0, 9)], [0.0, 1.0, 2.0], [2, 1, 2], 1);
+    SketchCurve2d batchOLeft = SketchCurve2d.Segment(new(0, 9), new(0, 0));
+    SketchCurveChain2d batchOOuter = SketchCurveChain2d.Create(
+        [batchOTop, batchOBottom, batchOLeft, batchORight], requireClosed: true);
+    SketchCurveChain2d batchOHole = SketchCurveChain2d.Create(
+        [SketchCurve2d.Circle(new(9, 4.5), 1.5)], requireClosed: true);
+    SketchProfile2d batchOProfile = SketchProfile2d.Classify([batchOHole, batchOOuter]);
+    SketchIntersection batchOCrossing = batchOBottom.Intersect(
+        SketchCurve2d.Segment(new(6, -2), new(6, 2))).Single();
+    if (batchOBottom.Evaluate(0.5).Point != new SketchPoint2d(9, 0)
+        || batchOBottom.Project(new(9, 2)).Single().Distance < 1.999999
+        || Math.Abs(batchOCrossing.Point.X - 6) > 1e-8
+        || batchOOuter.Inspect().Count != 0)
+        throw new InvalidOperationException("The packaged Batch O copied definition/inspection workflow failed.");
+
+    using Shape batchOOffset = batchOOuter.Offset(SketchPlane.XY, 0.5);
+    using Shape batchOFeature = batchOProfile.Extrude(SketchPlane.XY, 4);
+    if (!batchOOffset.IsValid || !batchOFeature.IsValid
+        || batchOFeature.InspectProperties(InspectionPropertyKind.Volume).Mass <= 0)
+        throw new InvalidOperationException("The packaged Batch O topology/feature workflow failed.");
+
+    XdePartMetadata batchOMetadata = new(
+        "Package Batch O planar feature", new XdeColor(0.2, 0.7, 0.35), ["Sketch", "Feature"]);
+    string batchOStep = SketchProfile2d.WriteStep(
+        batchOFeature, Path.Combine(exchangeDirectory, "package-batch-o.step"), batchOMetadata);
+    string batchOIges = SketchProfile2d.WriteIges(
+        batchOFeature, Path.Combine(exchangeDirectory, "package-batch-o.iges"), batchOMetadata);
+    using XdeDocument batchOStepDocument = XdeDocument.ReadStep(batchOStep);
+    using XdeDocument batchOIgesDocument = XdeDocument.ReadIges(batchOIges);
+    if (batchOStepDocument.GetFreeShapes().Length != 1
+        || batchOIgesDocument.GetFreeShapes().Length != 1)
+        throw new InvalidOperationException("The packaged Batch O STEP/IGES workflow failed.");
+
+    nint batchOWindow = PackageWindowMethods.CreateWindowEx(
+        0, "STATIC", "OcctSharp Batch O package sketch", 0x80000000u,
+        -32000, -32000, 320, 320, 0, 0, 0, 0);
+    if (batchOWindow == 0)
+        throw new InvalidOperationException("The Batch O package HWND could not be created.");
+    try
+    {
+        _ = PackageWindowMethods.ShowWindow(batchOWindow, 4);
+        _ = PackageWindowMethods.UpdateWindow(batchOWindow);
+        using OcctViewer batchOViewer = OcctViewer.Create(batchOWindow);
+        using ViewerPresentation batchOPresentation = batchOViewer.Display(batchOFeature);
+        batchOViewer.FitAll();
+        batchOViewer.MoveTo(160, 160);
+        batchOViewer.SelectAt(160, 160, ViewerSelectionMode.Replace);
+        string batchOImage = batchOViewer.SaveScreenshot(
+            Path.Combine(exchangeDirectory, "package-batch-o.png"), overwrite: true);
+        if (!File.Exists(batchOImage) || new FileInfo(batchOImage).Length == 0)
+            throw new InvalidOperationException("The packaged Batch O real-HWND workflow failed.");
+    }
+    finally { _ = PackageWindowMethods.DestroyWindow(batchOWindow); }
 }
 finally
 {

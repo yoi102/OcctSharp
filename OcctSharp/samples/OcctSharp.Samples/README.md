@@ -44,7 +44,7 @@ Use `--smoke` for a non-interactive clone-and-runtime check:
 dotnet run --project .\samples\OcctSharp.Samples --configuration Release -- --smoke
 ```
 
-The smoke path verifies the exact 62-DLL output closure, native ABI 1.57, bridge 0.65.0,
+The smoke path verifies the exact 62-DLL output closure, native ABI 1.58, bridge 0.66.0,
 OCCT 8.0.1, box topology, validity, and a non-empty detailed mesh. It returns a non-zero
 exit code if any expectation fails.
 

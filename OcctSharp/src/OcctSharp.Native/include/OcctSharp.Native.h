@@ -170,6 +170,60 @@ typedef struct OcctSharp_Xyz
   double y;
   double z;
 } OcctSharp_Xyz;
+
+typedef struct OcctSharp_SketchPoint2d
+{
+  double x;
+  double y;
+} OcctSharp_SketchPoint2d;
+
+typedef struct OcctSharp_SketchPlane
+{
+  OcctSharp_Xyz origin;
+  OcctSharp_Xyz x_direction;
+  OcctSharp_Xyz y_direction;
+} OcctSharp_SketchPlane;
+
+typedef struct OcctSharp_SketchCurve
+{
+  int32_t kind;
+  int32_t degree;
+  int32_t periodic;
+  int32_t rational;
+  int32_t reversed;
+  int32_t pole_count;
+  int32_t knot_count;
+  double first_parameter;
+  double last_parameter;
+  double major_radius;
+  double minor_radius;
+  double axis_angle;
+  const OcctSharp_SketchPoint2d* poles;
+  const double* weights;
+  const double* knots;
+  const int32_t* multiplicities;
+} OcctSharp_SketchCurve;
+
+typedef struct OcctSharp_SketchEvaluation
+{
+  OcctSharp_SketchPoint2d point;
+  OcctSharp_SketchPoint2d derivative;
+  double parameter;
+} OcctSharp_SketchEvaluation;
+
+typedef struct OcctSharp_SketchProjection
+{
+  OcctSharp_SketchPoint2d point;
+  double parameter;
+  double distance;
+} OcctSharp_SketchProjection;
+
+typedef struct OcctSharp_SketchIntersection
+{
+  OcctSharp_SketchPoint2d point;
+  double first_parameter;
+  double second_parameter;
+} OcctSharp_SketchIntersection;
 typedef struct OcctSharp_FreeformCurveInfo
 {
   int32_t kind;
@@ -2224,6 +2278,44 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_dump(
   const char* file_path,
   int32_t buffer_type);
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_viewer_release(OcctSharp_ViewerHandle* viewer);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_sketch_curve_evaluate(
+  const OcctSharp_SketchCurve* curve,
+  double parameter,
+  OcctSharp_SketchEvaluation* out_evaluation);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_sketch_curve_project(
+  const OcctSharp_SketchCurve* curve,
+  OcctSharp_SketchPoint2d point,
+  OcctSharp_SketchProjection* results,
+  int32_t capacity,
+  int32_t* out_count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_sketch_curve_intersect(
+    const OcctSharp_SketchCurve* first,
+    /* Null second requests self-intersections; coincident spans return their endpoints. */
+    const OcctSharp_SketchCurve* second,
+  double tolerance,
+  OcctSharp_SketchIntersection* results,
+  int32_t capacity,
+  int32_t* out_count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_sketch_curve_make_edge(
+  const OcctSharp_SketchCurve* curve,
+  const OcctSharp_SketchPlane* plane,
+  OcctSharp_ShapeHandle** out_shape);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_sketch_profile_make_face(
+  const OcctSharp_ShapeHandle* outer_wire,
+  const OcctSharp_ShapeHandle* const* inner_wires,
+  int32_t inner_wire_count,
+    OcctSharp_ShapeHandle** out_shape);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_sketch_wire_contains(
+    const OcctSharp_ShapeHandle* wire,
+    OcctSharp_SketchPoint2d point,
+    double tolerance,
+    int32_t* out_inside);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_sketch_make_wire(
+    const OcctSharp_ShapeHandle* const* edges,
+    int32_t edge_count,
+    double tolerance,
+    OcctSharp_ShapeHandle** out_shape);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_shape_release(OcctSharp_ShapeHandle* shape);
 

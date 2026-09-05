@@ -1,6 +1,6 @@
 # ADR-0078: Implement 2D sketch and planar modeling as Batch O
 
-- Status: Accepted for implementation
+- Status: Accepted and implemented
 - Date: 2026-09-03
 - Scope: Batch O product denominator, 2D geometry, planar topology/features, ownership, and validation
 
@@ -51,7 +51,7 @@ native bridge, and the shared 62-DLL runtime package.
 
 ## Consequences
 
-- Batch O preparation is complete at 0/24 with a 24-root, 849-candidate baseline audit.
+- Batch O implements all 24 capabilities following a 24-root, 849-candidate baseline audit.
 - Curves and algorithms remain native-local; definitions and diagnostics are copied;
   topology and features are independent owners.
 - Parametric constraints, DXF/DWG, D3DImage, cross-platform rendering, and physical
@@ -68,8 +68,11 @@ consumers; Release/Debug; generator/runtime suites; deterministic regeneration;
 compatibility/inventory/runtime hashes; SBOM/provenance/checksums; documentation; and
 Git whitespace gates.
 
-No implementation or validation beyond the Preview.13 inventory audit is claimed by
-this preparation decision.
+Preview.14 implements this decision. Focused Batch O tests pass 7/7, Generator 91/91,
+and Runtime 164/164 against both Release and Debug native bridges. SC-052 reconciles
+52 exact directly used blocked stable IDs. The 94-file clean regeneration, real XDE/
+STEP/IGES/HWND workflow, and local release checks pass; STATUS records the final package
+refresh, hashes, and commit boundary. Publication is excluded from batch delivery.
 
 ## Related decisions
 

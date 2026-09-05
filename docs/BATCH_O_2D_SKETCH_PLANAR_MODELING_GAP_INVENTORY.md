@@ -4,7 +4,8 @@ This document locks the product denominator, dependency closure, and exit eviden
 Batch O. It measures one useful 2D-definition-to-3D-CAD workflow, not isolated `gp_*2d`,
 `Geom2d`, curve, wire, face, feature, exchange, or viewer class counts.
 
-Preparation status: **COMPLETE**. Implementation status: **0/24 capabilities (0%)**.
+Preparation and implementation status: **COMPLETE, 24/24 (100%)**. The complete local
+release checks pass. Focused Batch O regression: **7/7 PASS**.
 The denominator below is immutable for Batch O.
 
 ## Product outcome
@@ -107,9 +108,29 @@ runtime facade and direct-module package consumers, deterministic generation, cl
 regeneration, compatibility/inventory/runtime hashes, SBOM/provenance/checksums,
 documentation, and `git diff --check` pass together.
 
-Preparation has run only the Preview.13 root audit above. Batch O implementation,
-native/managed compile, focused/runtime tests, package consumer, regeneration, inventory,
-compatibility, real-file/HWND evidence, and Preview.14 release check are **NOT RUN**.
+The seven focused tests cover the complete matrix, including similarity transforms and
+reverse/trim composition, negative-period conic projections, shuffled open chains,
+single-curve self intersections, overlap endpoints, precise near-boundary nesting,
+curve-integrated area, native conservative bounds, explicit gap tolerance on copied
+topology, real STEP/IGES colors/layers, and actual HWND selection. SC-052 reconciles
+52 exact blocked stable IDs (40 from the initial implementation and 12 from the final
+intersection/classifier/tolerance closure). Release/Debug build all 19 projects with zero
+code warnings/errors; Generator 91/91 and Runtime 164/164 pass. The actual native Debug
+bridge also passes 164/164, including the inherited container-history assertion regression.
+Clean regeneration reproduces all 94 files byte-for-byte and passes both test suites.
+Fourteen local packages pass asset isolation and clean facade/direct-module consumers.
+API comparison with alpha.38 reports 39,046 additions and zero removals. The full inventory
+classifies 116,272 declarations and 7,090 headers with 609 manual and 49,966 blocked
+declarations, zero pending/HD099, and no broad family promotion. The committed bridge is
+15,395,840 bytes, SHA256
+`0E4CA204356B83C158A40B74D99CA6047D59D9FB975A62C1168FF2A650979D90`.
+STATUS records final package hashes and release metadata; publication is not a batch gate.
+
+`Interpolate` is explicitly degree-one piecewise-linear interpolation. Higher-degree
+rational B-splines are provided by `BSpline`; no smoothing or constraint solver is implied.
+Projection returns bounded perpendicular solutions. Coincident spans return their
+boundary solutions, bounds include topology tolerance, and IGES layers can appear as
+numeric assignments on transferred sublabels.
 
 ## Explicit non-goals
 

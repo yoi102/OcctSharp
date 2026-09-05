@@ -2,7 +2,7 @@
 
 ## Current package set
 
-The current preview package version is `8.0.1-preview.13` for .NET 10 and
+The current local preview package version is `8.0.1-preview.14` for .NET 10 and
 Windows x64. ADR-0074 produces 14 packages:
 
 - 12 managed module packages: Runtime, Foundation, Geometry, MeshData, Modeling, Mesh,
@@ -23,7 +23,7 @@ contains a package hash and would make the artifact self-referential. Release no
 the stable architecture/topic documents are packaged; status remains authoritative in
 the repository.
 
-Preview.13 is packaged and validated locally but is not published. The release workstream produces
+Preview.14 is checked locally and is not published. The release workstream produces
 immutable native provenance, SBOM/checksum evidence, API diff, and CI configuration.
 The project license and bundled third-party notice layout are resolved by ADR-0059;
 hosted release execution and signing remain separate gates. Publication evidence is
@@ -97,6 +97,12 @@ Preview.13 additionally runs the complete Batch N IGESCAF/XDE metadata, option,
 diagnostic/unit, Unicode-path cleanup, mixed STEP/IGES, round-trip, lifetime, and
 real-HWND workflow.
 
+Preview.14 adds the complete Batch O copied-sketch to planar-feature workflow, including
+mixed analytic/freeform loops, a hole-aware extrusion, offset, projection/intersection,
+XDE metadata, STEP/IGES round-trip, and real-HWND review. The repository's focused tests
+also cover reversed trim, similarity transforms, exact nesting, self-intersections,
+overlap boundaries, numeric measurements, and explicit wire-gap tolerance.
+
 The direct module consumer creates and inspects a six-face box, verifies OCCT 8.0.1 and
 the same 62-DLL `occt/` closure, and fails if the `OcctSharp.dll` facade is present.
 
@@ -105,13 +111,13 @@ the same 62-DLL `occt/` closure, and fails if the `OcctSharp.dll` facade is pres
 Once a package source contains the package, an application uses the normal command:
 
 ```powershell
-dotnet add package OcctSharp --version 8.0.1-preview.13
+dotnet add package OcctSharp --version 8.0.1-preview.14 --source ./OcctSharp/artifacts/packages
 ```
 
 A narrow consumer can instead select a module, for example:
 
 ```powershell
-dotnet add package OcctSharp.Modeling --version 8.0.1-preview.13
+dotnet add package OcctSharp.Modeling --version 8.0.1-preview.14 --source ./OcctSharp/artifacts/packages
 ```
 
 The application must run as a Windows x64 process on the current compatibility matrix.
@@ -133,15 +139,21 @@ completed release tooling do not override a `BLOCKED` or `NOT RUN` publication g
 
 ## Managed split evidence
 
-Preview.13 package verification runs from the inner `OcctSharp/` workspace, where
+Preview.14 package verification runs from the inner `OcctSharp/` workspace, where
 `global.json` selects SDK 10.0.400. Direct nupkg inspection confirms 13 managed packages
 with one managed DLL and zero native DLLs each, plus one native package with exactly 62
 DLLs. Every nupkg contains the shared README and icon. Package and informational versions
-are `8.0.1-preview.13`; managed assembly/file identity remains `0.1.0.0`; ABI is 1.57
-and bridge is 0.65.0.
+are `8.0.1-preview.14`; managed assembly/file identity remains `0.1.0.0`; ABI is 1.58
+and bridge is 0.66.0.
 
-The compatibility consumer restores, publishes, and runs the inherited Batch D-N paths.
+The compatibility consumer restores, publishes, and runs the Batch D-O paths.
 The direct Modeling consumer proves module-only consumption without the facade. Both
 converge on one application-local `occt` directory. Toolkit-per-package fragmentation and
 native bridge splitting are not planned. Signing, hosted full release execution, NuGet
 publication/indexing, and the public-source consumer remain separate gates.
+
+Per the current delivery policy, a completed batch is locally packed, validated, and
+committed. No NuGet publication is performed as part of that workflow. The user's
+2026-09-05 instruction applies to every subsequent batch: check the local packages only.
+Any later publication requires a new explicit request for the exact version; earlier
+Preview.12 upload permission does not authorize another upload.

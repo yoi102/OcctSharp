@@ -1,5 +1,17 @@
 # Ownership and Lifetime
 
+## Preview.14 sketch ownership
+
+Batch O public definitions and arrays are immutable managed copies. Geom2d curves,
+intersectors, projectors, classifiers, and builders exist only during native calls;
+no borrowed OCCT curve or iterator escapes. Curve transformations and edits create
+new definitions. Their derivatives use the definition's native parameter direction.
+Each edge, wire, face, extrusion, revolution, or Boolean result is an independent
+registered Shape owner. Wire building copies topology before changing vertex tolerance.
+XDE labels remain document-parent-bound; viewer presentations remain viewer-parent-bound
+and thread-affine. SC-052 records the exact manual declarations. The physical module
+and one-native-DLL boundary from ADR-0074 is unchanged.
+
 Ownership rules are safety requirements. Coverage goals never override them.
 
 ## Ownership categories

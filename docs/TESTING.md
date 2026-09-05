@@ -1,5 +1,24 @@
 # Testing and Validation
 
+## Batch O final validation
+
+`BatchOCompletionTests` exercises all five curve families, reversed trim, similarity
+transforms, negative conic projection parameters, copied arrays, shuffled open/mixed
+chains, overlap and self-intersection, near-boundary hole nesting, numeric area/bounds,
+explicit gap tolerance, offset, hole-aware faces, extrusion/revolution/add-cut, lifetime,
+STEP/IGES colors and layers, and actual HWND selection/screenshots.
+Run it with `dotnet test tests/OcctSharp.Runtime.Tests --configuration Release --filter
+FullyQualifiedName~BatchOCompletionTests` from the inner workspace. The clean facade
+consumer repeats the end-to-end planar-feature/exchange/viewer workflow. Release/Debug,
+clean regeneration, inventory, package isolation, and compatibility remain required;
+STATUS records the checks actually completed. NuGet publication is not a batch step.
+
+Repository Debug builds normally consume the committed Release runtime, matching sample
+deployment. To test the native Debug build itself after building it, run
+`dotnet test tests/OcctSharp.Runtime.Tests --configuration Debug --no-restore
+-p:OcctSharpNativeRuntimeDir=<absolute-workspace>/artifacts/native/Debug`.
+This additional sweep exposed KI-030; its corrected suite passes 164/164.
+
 ## Evidence levels
 
 Validation status must be reported per layer. Passing one layer never implies that a

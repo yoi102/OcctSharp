@@ -151,14 +151,14 @@ Application Framework, Visualization, and required third-party DLL closure. See
 - Geometry and metadata-aware STEP/IGES read, import, compose, round-trip, and export;
   OCAF/XDE documents, stable parent-bound labels, transactions, history, persistence,
   assemblies, PMI, scene/mesh exchange, and the Windows HWND viewer.
-- Fourteen OCCT-aligned Preview.13 packages: 12 managed modules, the compatibility/facade
+- Fourteen OCCT-aligned Preview.14 packages: 12 managed modules, the compatibility/facade
   package, and one shared native package containing the manifest-verified 62-DLL runtime
   plus 11 third-party notice/license files. Local SBOM, provenance, checksums, isolation,
   and clean facade/direct-module consumers pass.
 
 The generated surface remains deliberately selective rather than full OCCT coverage,
 and unknown ownership still fails closed. Hosted full release execution, package signing,
-Preview.13 NuGet publication/indexing, and a public-source consumer are not implemented
+Preview.14 NuGet publication/indexing, and a public-source consumer are not implemented
 or run; local package creation and the complete local release evidence pipeline are.
 
 ## Build principles
@@ -262,8 +262,20 @@ and Git whitespace pass.
 
 ```powershell
 cd OcctSharp
-.\eng\release-check.ps1 -PackageVersion 8.0.1-preview.13
+.\eng\release-check.ps1 -PackageVersion 8.0.1-preview.14
 ```
 
 Release evidence is written below `OcctSharp/artifacts/release/`: `api-diff.json`,
 `sbom.cdx.json`, `provenance.json`, `release-gates.json`, and `checksums.sha256`.
+
+Preview.14 adds Batch O's complete sketch/planar-feature, STEP/IGES, and viewer consumer.
+The release-check command builds Release and Debug, verifies the committed runtime,
+regenerates a clean source copy, checks the 14 local packages with both consumers, and
+generates inventory/API/SBOM/provenance/checksum evidence. STATUS records the final
+run results. Completing a batch requires a local commit; NuGet upload and GitHub push
+are not part of the batch workflow.
+
+When final documentation changes package contents after the code gates pass, rerun
+`verify-package.ps1 -SkipBuild`, then `generate-release-metadata.ps1` and
+`update-release-checksums.ps1` for that exact package version. The checksum updater
+requires matching package, provenance, and gate identities and does not alter gate states.

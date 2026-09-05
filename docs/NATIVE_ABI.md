@@ -1,5 +1,19 @@
 # Native ABI
 
+## ABI 1.58 / Preview.14
+
+The additive Batch O boundary uses bridge 0.66.0 and schema 1.13. It adds
+`occtsharp_sketch_curve_evaluate/project/intersect/make_edge`,
+`occtsharp_sketch_make_wire`, `occtsharp_sketch_wire_contains`, and
+`occtsharp_sketch_profile_make_face`. Point2d, Plane, and Curve descriptors occupy
+16, 72, and 104 bytes on Windows x64. Pointers in a curve descriptor are borrowed only
+for the call. Output arrays follow count/capacity/copy semantics and topology outputs
+are independent registered owners. A null second intersection descriptor requests
+self-intersection. Coincident spans return their boundary points. Projection and
+intersection parameters are mapped into the caller's bounded/reversed domain.
+Native exceptions stay within the common Guard/status boundary. No Geom2d layout,
+mutable curve owner, or iterator crosses the ABI.
+
 ## Scope
 
 The native bridge is implemented in C++ and links to OCCT, but its exported surface

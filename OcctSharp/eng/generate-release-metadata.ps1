@@ -1,5 +1,5 @@
 [CmdletBinding()]
-param([string]$PackageVersion = '8.0.1-preview.13')
+param([string]$PackageVersion = '8.0.1-preview.14')
 
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
@@ -17,7 +17,7 @@ $nativeComponents = @(Get-ChildItem -LiteralPath $nativeDirectory -Filter '*.dll
     $isBridge = $_.Name -eq 'OcctSharp.Native.dll'
     $isOcct = $_.Name -like 'TK*.dll' -or $_.Name -eq 'TKernel.dll'
     $component = switch -Regex ($_.Name) {
-        '^OcctSharp\.Native\.dll$' { @{ version = '0.65.0'; license = 'MIT'; source = 'OcctSharp build' }; break }
+        '^OcctSharp\.Native\.dll$' { @{ version = '0.66.0'; license = 'MIT'; source = 'OcctSharp build' }; break }
         '^(TK.*|TKernel)\.dll$' { @{ version = '8.0.1'; license = 'LGPL-2.1-only WITH OCCT-exception-1.0'; source = 'Pinned OCCT distribution' }; break }
         '^tbb12\.dll$' { @{ version = '2021.13.0'; license = 'Apache-2.0'; source = 'Pinned OCCT third-party bundle' }; break }
         '^FreeImage\.dll$' { @{ version = '3.18.0'; license = 'LicenseRef-FreeImage'; source = 'Pinned OCCT third-party bundle' }; break }
@@ -68,8 +68,8 @@ $provenance = [ordered]@{
         dotnetSdk = (& dotnet --version).Trim()
         platform = 'windows-x64'
         configuration = 'Release'
-        nativeAbi = '1.57'
-        bridgeVersion = '0.65.0'
+        nativeAbi = '1.58'
+        bridgeVersion = '0.66.0'
         occtVersion = '8.0.1'
     }
     inputs = @($inputPaths | ForEach-Object {

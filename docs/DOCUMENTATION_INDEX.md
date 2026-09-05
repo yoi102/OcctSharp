@@ -9,7 +9,7 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
 - [Architecture](ARCHITECTURE.md) — system boundaries and component ownership.
 - [Repository layout](REPOSITORY_LAYOUT.md) — physical separation of documentation
   and code-related files.
-- [Roadmap](ROADMAP.md) — completed Batch B-N outcomes, active Batch O, and current release boundary.
+- [Roadmap](ROADMAP.md) — completed Batch B-O outcomes and current local-release boundary.
 - [Complete migration plan](MIGRATION_PLAN.md) — completed Batch C, Batch D, and Batch E
   matrices, large-wave rules, module/package boundaries, metrics,
   and product-scale gates.
@@ -44,7 +44,7 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   — completed immutable 24-capability metadata-aware IGES/XDE, Unicode-path, mixed-format,
   viewer, and clean-package denominator.
 - [Batch O 2D sketch and planar-modeling gap inventory](BATCH_O_2D_SKETCH_PLANAR_MODELING_GAP_INVENTORY.md)
-  — active immutable 24-capability copied 2D definition, inspection/edit, planar topology,
+  — completed immutable 24-capability copied 2D definition, inspection/edit, planar topology,
   solid-feature, STEP/IGES, viewer, and clean-package denominator.
 - [AI migration loop prompt](AI_MIGRATION_LOOP_PROMPT.md) — reusable re-entrant prompt
   for executing the largest coherent common-workflow wave instead of per-class tasks.
@@ -58,6 +58,8 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   C++/CLI, and platform-adapter availability and package boundaries.
 - [Full inventory classification](FULL_INVENTORY_CLASSIFICATION.md) — complete declaration
   and header dispositions, reason codes, and complete-versus-generated metrics.
+- [Preview.14 release notes](RELEASE_NOTES_8.0.1_PREVIEW_14.md) — Batch O copied sketch,
+  mixed loops, planar topology/features, STEP/IGES, and local validation contract.
 - [Preview.13 release notes](RELEASE_NOTES_8.0.1_PREVIEW_13.md) — complete Batch N
   IGESCAF/XDE metadata, Unicode paths, mixed-format composition, viewer, and local evidence.
 - [Preview.12 release notes](RELEASE_NOTES_8.0.1_PREVIEW_12.md) — STEP/XCAF style

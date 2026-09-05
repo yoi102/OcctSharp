@@ -1,5 +1,85 @@
 # Special Cases
 
+## SC-052: Copied 2D sketch and planar topology
+
+- Decision: ADR-0078; package `8.0.1-preview.14`, ABI 1.58, bridge 0.66.0,
+  and schema 1.13. The 24-row product contract is defined in the Batch O gap inventory.
+- Reason: gp/Geom2d definitions, trimmed domains, projectors, intersectors, classifiers,
+  and wire/face builders do not have the public copied-data and independent-topology
+  ownership contract required by a sketch workflow. They remain native-local.
+- Behavior: immutable 2D definitions; native-parameter derivatives; copied distance-sorted
+  projections and parameter-sorted intersections; coincident spans represented by their
+  endpoint solutions; self-intersection when a curve intersects itself. Negative and
+  reversed conic domains are mapped back to the definition's parameter interval.
+- Topology: wire construction copies input topology before changing vertex tolerances.
+  Faces, wires, edges, and features are independently registered owning shapes. Loop
+  containment uses BRepClass; area uses adaptive Green-integral quadrature with knot
+  breaks; bounds use OCCT's conservative optimal box including topology tolerance.
+- Scope limits: interpolation is degree-one piecewise linear; general rational B-splines
+  can be supplied explicitly. No parametric constraint solver or mutable Geom2d owner is
+  exposed. IGES may map names of layers to numeric assignments on transferred sublabels.
+- Validation: `BatchOCompletionTests`, the clean facade consumer, and the full local
+  release pipeline are the executable evidence; final results are recorded in STATUS.
+- Upgrade/removal: recheck periodic-domain mapping, reversed derivatives and edge
+  orientation, containment, overlap endpoints, vertex tolerance copy isolation, and
+  every stable ID below before changing OCCT. Replace this exception only when generated
+  bindings preserve the same result and lifetime contract.
+- Exact reconciliation: 52 unique directly invoked, previously blocked stable IDs;
+  previously emitted/manual declarations are reused without double-counting:
+
+1. `c:@S@Geom2dAPI_InterCurveCurve@F@Geom2dAPI_InterCurveCurve#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#d#`
+2. `c:@S@Geom2dAPI_InterCurveCurve@F@NbSegments#1`
+3. `c:@S@IntRes2d_Intersection@F@Segment#I#1`
+4. `c:@S@IntRes2d_IntersectionSegment@F@HasFirstPoint#1`
+5. `c:@S@IntRes2d_IntersectionSegment@F@HasLastPoint#1`
+6. `c:@S@IntRes2d_IntersectionSegment@F@FirstPoint#1`
+7. `c:@S@IntRes2d_IntersectionSegment@F@LastPoint#1`
+8. `c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@gp_Pln#&1$@S@TopoDS_Wire#b#`
+9. `c:@S@BRepClass_FaceClassifier@F@BRepClass_FaceClassifier#&1$@S@TopoDS_Face#&1$@S@gp_Pnt#d#b#d#`
+10. `c:@S@BRepClass_FClassifier@F@State#1`
+11. `c:@S@gp@F@XOY#S`
+12. `c:@S@gp_Pnt2d@F@gp_Pnt2d#`
+13. `c:@S@BRep_Builder@F@UpdateVertex#&1$@S@TopoDS_Vertex#d#1`
+14. `c:@S@gp_Pnt2d@F@gp_Pnt2d#d#d#`
+15. `c:@S@gp_Pnt2d@F@X#1`
+16. `c:@S@gp_Pnt2d@F@Y#1`
+17. `c:@S@gp_Vec2d@F@gp_Vec2d#`
+18. `c:@S@gp_Vec2d@F@gp_Vec2d#&1$@S@gp_Pnt2d#S0_#`
+19. `c:@S@gp_Vec2d@F@Magnitude#1`
+20. `c:@S@gp_Vec2d@F@Reverse#`
+21. `c:@S@gp_Vec2d@F@X#1`
+22. `c:@S@gp_Vec2d@F@Y#1`
+23. `c:@S@gp_Dir2d@F@gp_Dir2d#&1$@S@gp_Vec2d#`
+24. `c:@S@gp_Dir2d@F@gp_Dir2d#d#d#`
+25. `c:@S@gp_Ax22d@F@gp_Ax22d#&1$@S@gp_Pnt2d#&1$@S@gp_Dir2d#b#`
+26. `c:@S@gp_Circ2d@F@gp_Circ2d#&1$@S@gp_Ax22d#d#`
+27. `c:@S@gp_Elips2d@F@gp_Elips2d#&1$@S@gp_Ax22d#d#d#`
+28. `c:@S@gp_Lin2d@F@gp_Lin2d#&1$@S@gp_Pnt2d#&1$@S@gp_Dir2d#`
+29. `c:@S@Geom2d_Line@F@Geom2d_Line#&1$@S@gp_Lin2d#`
+30. `c:@S@Geom2d_Circle@F@Geom2d_Circle#&1$@S@gp_Circ2d#`
+31. `c:@S@Geom2d_Ellipse@F@Geom2d_Ellipse#&1$@S@gp_Elips2d#`
+32. `c:@S@Geom2d_BezierCurve@F@Geom2d_BezierCurve#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#`
+33. `c:@S@Geom2d_BezierCurve@F@Geom2d_BezierCurve#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#&1$@S@NCollection_Array1>#d#`
+34. `c:@S@Geom2d_BSplineCurve@F@Geom2d_BSplineCurve#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#I#b#`
+35. `c:@S@Geom2d_BSplineCurve@F@Geom2d_BSplineCurve#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#&1$@S@NCollection_Array1>#d#S3_#&1$@S@NCollection_Array1>#I#I#b#`
+36. `c:@S@Geom2dAPI_ProjectPointOnCurve@F@Geom2dAPI_ProjectPointOnCurve#&1$@S@gp_Pnt2d#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#d#d#`
+37. `c:@S@Geom2dAPI_ProjectPointOnCurve@F@NbPoints#1`
+38. `c:@S@Geom2dAPI_ProjectPointOnCurve@F@Point#I#1`
+39. `c:@S@Geom2dAPI_ProjectPointOnCurve@F@Parameter#I#1`
+40. `c:@S@Geom2dAPI_ProjectPointOnCurve@F@Distance#I#1`
+41. `c:@S@Geom2dAPI_InterCurveCurve@F@Geom2dAPI_InterCurveCurve#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#S0_#d#`
+42. `c:@S@Geom2dAPI_InterCurveCurve@F@NbPoints#1`
+43. `c:@S@Geom2dAPI_InterCurveCurve@F@Intersector#1`
+44. `c:@S@IntRes2d_Intersection@F@Point#I#1`
+45. `c:@S@IntRes2d_IntersectionPoint@F@Value#1`
+46. `c:@S@IntRes2d_IntersectionPoint@F@ParamOnFirst#1`
+47. `c:@S@IntRes2d_IntersectionPoint@F@ParamOnSecond#1`
+48. `c:@S@GeomAPI@F@To3d#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@S@gp_Pln#S`
+49. `c:@S@BRepBuilderAPI_MakeEdge@F@IsDone#1`
+50. `c:@S@BRepBuilderAPI_MakeEdge@F@Edge#`
+51. `c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@S@TopoDS_Wire#b#`
+52. `c:@S@BRepBuilderAPI_MakeFace@F@Add#&1$@S@TopoDS_Wire#`
+
 Manual bindings and exceptions to general generator rules are recorded here. A special
 case must be narrow, justified, tested, and linked to the generalized rule it cannot
 use.
@@ -1206,6 +1286,12 @@ rules or design:
   and owning-topology descriptors preserve the same lifetime and end-to-end evidence.
 
 ## SC-046: Batch J feature modeling, robust Boolean, history, and recovery closure
+
+- Preview.14 regression correction: history queries are restricted to OCCT-supported
+  vertex/edge/face/solid types. Container inputs use supported descendants in feature
+  and freeform history, while basic container-kind summaries report source counts with
+  no unsupported change/deletion query. This prevents a Debug TKBRep assertion in
+  BRepTools_History. No new stable ID or ownership category is introduced.
 
 - Status: Accepted and implemented for the complete 24-capability Batch J closure;
   final all-gates validation is recorded in `STATUS.md`.
