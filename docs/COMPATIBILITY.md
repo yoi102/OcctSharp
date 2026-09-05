@@ -1,5 +1,18 @@
 # Compatibility
 
+## Preview.18 additive guided authoring API
+
+S's managed comparison against R adds 500 signatures and removes none (41,331 total).
+Laws are owned by Geometry; plans/results by Modeling; existing Freeform DTOs keep
+their facade identity. Package 8.0.1-preview.18 uses ABI 1.62 and bridge 0.70.0 with
+unchanged schema 1.13 and assembly/file identity 0.1.0.0. Native comparison retains
+all 29,432 R exports and adds nine C functions plus two compiler-generated OCCT
+construction helpers. Release/Debug match at 29,443 names. Complete package gates
+are recorded in STATUS, not inferred from a managed diff.
+Default XDE Save now follows the existing Unicode-aware BinXCAF format overload.
+Filling no longer calls unsafe per-index SDK error getters; final-surface residual
+acceptance and nullable singular derivatives are explicit public contracts.
+
 ## Preview.17 additive authored mesh API
 
 R retains all 29,416 Q native export names and adds sixteen mesh functions; Release
@@ -32,6 +45,7 @@ reported as supported.
 
 | OcctSharp | Generator | Native ABI | OCCT | Platform | Compiler | .NET | Status |
 |---|---|---|---|---|---|---|---|
+| 8.0.1-preview.18 workspace | ClangSharp 21.1.8.4 | 1.62 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Release/Debug and actual Debug-native 273/273; final inventory/package evidence in STATUS |
 | 8.0.1-preview.17 workspace | ClangSharp 21.1.8.4 | 1.61 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Local native/managed regression verified |
 | 8.0.1-preview.9 workspace | ClangSharp 21.1.8.4 | 1.54 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |
 | 8.0.1-preview.8 workspace | ClangSharp 21.1.8.4 | 1.53 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |

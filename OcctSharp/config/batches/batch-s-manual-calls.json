@@ -1,0 +1,417 @@
+{
+  "schemaVersion": "1.0",
+  "batch": "S",
+  "specialCaseId": "SC-056",
+  "baselineInventorySha256": "4E90AB503456D7617CE81E21116CBAA0119042B2E63EEAD9A5C06CD20DE807E6",
+  "note": "Exact directly invoked Blocked overloads only. Existing Emitted/Manual and template-only dependencies are not reclassified. Law_BSpFunc, BRepFill_CompatibleWires, TopoDS_Builder and regular-surface qualification refine the frozen dependency closure without changing its 40 capabilities.",
+  "calls": [
+    {
+      "stableId": "c:@S@BRepFill_CompatibleWires@F@BRepFill_CompatibleWires#&1$@S@NCollection_Sequence>#$@S@TopoDS_Shape#",
+      "nativeName": "BRepFill_CompatibleWires::BRepFill_CompatibleWires",
+      "header": "BRepFill_CompatibleWires.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFill_CompatibleWires@F@Generated#1",
+      "nativeName": "BRepFill_CompatibleWires::Generated",
+      "header": "BRepFill_CompatibleWires.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFill_CompatibleWires@F@IsDone#1",
+      "nativeName": "BRepFill_CompatibleWires::IsDone",
+      "header": "BRepFill_CompatibleWires.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFill_CompatibleWires@F@Perform#b#",
+      "nativeName": "BRepFill_CompatibleWires::Perform",
+      "header": "BRepFill_CompatibleWires.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFill_CompatibleWires@F@Shape#1",
+      "nativeName": "BRepFill_CompatibleWires::Shape",
+      "header": "BRepFill_CompatibleWires.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeFilling@F@Add#&1$@S@TopoDS_Edge#$@E@GeomAbs_Shape#b#",
+      "nativeName": "BRepOffsetAPI_MakeFilling::Add",
+      "header": "BRepOffsetAPI_MakeFilling.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeFilling@F@Add#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#$@E@GeomAbs_Shape#b#",
+      "nativeName": "BRepOffsetAPI_MakeFilling::Add",
+      "header": "BRepOffsetAPI_MakeFilling.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeFilling@F@Add#&1$@S@gp_Pnt#",
+      "nativeName": "BRepOffsetAPI_MakeFilling::Add",
+      "header": "BRepOffsetAPI_MakeFilling.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeFilling@F@Add#d#d#&1$@S@TopoDS_Face#$@E@GeomAbs_Shape#",
+      "nativeName": "BRepOffsetAPI_MakeFilling::Add",
+      "header": "BRepOffsetAPI_MakeFilling.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeFilling@F@BRepOffsetAPI_MakeFilling#I#I#I#b#d#d#d#d#I#I#",
+      "nativeName": "BRepOffsetAPI_MakeFilling::BRepOffsetAPI_MakeFilling",
+      "header": "BRepOffsetAPI_MakeFilling.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeFilling@F@Build#&1$@S@Message_ProgressRange#",
+      "nativeName": "BRepOffsetAPI_MakeFilling::Build",
+      "header": "BRepOffsetAPI_MakeFilling.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeFilling@F@Generated#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepOffsetAPI_MakeFilling::Generated",
+      "header": "BRepOffsetAPI_MakeFilling.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeFilling@F@IsDone#1",
+      "nativeName": "BRepOffsetAPI_MakeFilling::IsDone",
+      "header": "BRepOffsetAPI_MakeFilling.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeFilling@F@LoadInitSurface#&1$@S@TopoDS_Face#",
+      "nativeName": "BRepOffsetAPI_MakeFilling::LoadInitSurface",
+      "header": "BRepOffsetAPI_MakeFilling.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@Add#&1$@S@TopoDS_Shape#&1$@S@TopoDS_Vertex#b#b#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::Add",
+      "header": "BRepOffsetAPI_MakePipeShell.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@FirstShape#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::FirstShape",
+      "header": "BRepOffsetAPI_MakePipeShell.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@Generated#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::Generated",
+      "header": "BRepOffsetAPI_MakePipeShell.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@LastShape#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::LastShape",
+      "header": "BRepOffsetAPI_MakePipeShell.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetDiscreteMode#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::SetDiscreteMode",
+      "header": "BRepOffsetAPI_MakePipeShell.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetIsBuildHistory#b#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::SetIsBuildHistory",
+      "header": "BRepOffsetAPI_MakePipeShell.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetLaw#&1$@S@TopoDS_Shape#&1$@N@opencascade@S@handle>#$@S@Law_Function#&1$@S@TopoDS_Vertex#b#b#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::SetLaw",
+      "header": "BRepOffsetAPI_MakePipeShell.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetLaw#&1$@S@TopoDS_Shape#&1$@N@opencascade@S@handle>#$@S@Law_Function#b#b#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::SetLaw",
+      "header": "BRepOffsetAPI_MakePipeShell.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetMode#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::SetMode",
+      "header": "BRepOffsetAPI_MakePipeShell.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetMode#&1$@S@TopoDS_Wire#b#$@E@BRepFill_TypeOfContact#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::SetMode",
+      "header": "BRepOffsetAPI_MakePipeShell.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetMode#&1$@S@gp_Ax2#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::SetMode",
+      "header": "BRepOffsetAPI_MakePipeShell.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetMode#&1$@S@gp_Dir#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::SetMode",
+      "header": "BRepOffsetAPI_MakePipeShell.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@Simulate#I#&$@S@NCollection_List>#$@S@TopoDS_Shape#",
+      "nativeName": "BRepOffsetAPI_MakePipeShell::Simulate",
+      "header": "BRepOffsetAPI_MakePipeShell.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@FirstShape#1",
+      "nativeName": "BRepOffsetAPI_ThruSections::FirstShape",
+      "header": "BRepOffsetAPI_ThruSections.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@Generated#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepOffsetAPI_ThruSections::Generated",
+      "header": "BRepOffsetAPI_ThruSections.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@LastShape#1",
+      "nativeName": "BRepOffsetAPI_ThruSections::LastShape",
+      "header": "BRepOffsetAPI_ThruSections.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@SetCriteriumWeight#d#d#d#",
+      "nativeName": "BRepOffsetAPI_ThruSections::SetCriteriumWeight",
+      "header": "BRepOffsetAPI_ThruSections.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@SetParType#$@E@Approx_ParametrizationType#",
+      "nativeName": "BRepOffsetAPI_ThruSections::SetParType",
+      "header": "BRepOffsetAPI_ThruSections.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepTools_WireExplorer@F@CurrentVertex#1",
+      "nativeName": "BRepTools_WireExplorer::CurrentVertex",
+      "header": "BRepTools_WireExplorer.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@Degenerated#&1$@S@TopoDS_Edge#b#1",
+      "nativeName": "BRep_Builder::Degenerated",
+      "header": "BRep_Builder.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@MakeEdge#&$@S@TopoDS_Edge#1",
+      "nativeName": "BRep_Builder::MakeEdge",
+      "header": "BRep_Builder.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnSurf@F@GeomAPI_ProjectPointOnSurf#&1$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#$@E@Extrema_ExtAlgo#",
+      "nativeName": "GeomAPI_ProjectPointOnSurf::GeomAPI_ProjectPointOnSurf",
+      "header": "GeomAPI_ProjectPointOnSurf.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@GeomConvert@F@CurveToBSplineCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#$@E@Convert_ParameterisationType#S",
+      "nativeName": "GeomConvert::CurveToBSplineCurve",
+      "header": "GeomConvert.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@GeomConvert_BSplineCurveToBezierCurve@F@Arc#I#",
+      "nativeName": "GeomConvert_BSplineCurveToBezierCurve::Arc",
+      "header": "GeomConvert_BSplineCurveToBezierCurve.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@GeomConvert_BSplineCurveToBezierCurve@F@GeomConvert_BSplineCurveToBezierCurve#&1$@N@opencascade@S@handle>#$@S@Geom_BSplineCurve#",
+      "nativeName": "GeomConvert_BSplineCurveToBezierCurve::GeomConvert_BSplineCurveToBezierCurve",
+      "header": "GeomConvert_BSplineCurveToBezierCurve.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@GeomConvert_BSplineCurveToBezierCurve@F@Knots#&$@S@NCollection_Array1>#d#1",
+      "nativeName": "GeomConvert_BSplineCurveToBezierCurve::Knots",
+      "header": "GeomConvert_BSplineCurveToBezierCurve.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@GeomConvert_BSplineCurveToBezierCurve@F@NbArcs#1",
+      "nativeName": "GeomConvert_BSplineCurveToBezierCurve::NbArcs",
+      "header": "GeomConvert_BSplineCurveToBezierCurve.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@GeomConvert_BSplineSurfaceToBezierSurface@F@GeomConvert_BSplineSurfaceToBezierSurface#&1$@N@opencascade@S@handle>#$@S@Geom_BSplineSurface#",
+      "nativeName": "GeomConvert_BSplineSurfaceToBezierSurface::GeomConvert_BSplineSurfaceToBezierSurface",
+      "header": "GeomConvert_BSplineSurfaceToBezierSurface.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@GeomConvert_BSplineSurfaceToBezierSurface@F@NbUPatches#1",
+      "nativeName": "GeomConvert_BSplineSurfaceToBezierSurface::NbUPatches",
+      "header": "GeomConvert_BSplineSurfaceToBezierSurface.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@GeomConvert_BSplineSurfaceToBezierSurface@F@NbVPatches#1",
+      "nativeName": "GeomConvert_BSplineSurfaceToBezierSurface::NbVPatches",
+      "header": "GeomConvert_BSplineSurfaceToBezierSurface.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@GeomConvert_BSplineSurfaceToBezierSurface@F@Patch#I#I#",
+      "nativeName": "GeomConvert_BSplineSurfaceToBezierSurface::Patch",
+      "header": "GeomConvert_BSplineSurfaceToBezierSurface.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@GeomConvert_BSplineSurfaceToBezierSurface@F@UKnots#&$@S@NCollection_Array1>#d#1",
+      "nativeName": "GeomConvert_BSplineSurfaceToBezierSurface::UKnots",
+      "header": "GeomConvert_BSplineSurfaceToBezierSurface.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@GeomConvert_BSplineSurfaceToBezierSurface@F@VKnots#&$@S@NCollection_Array1>#d#1",
+      "nativeName": "GeomConvert_BSplineSurfaceToBezierSurface::VKnots",
+      "header": "GeomConvert_BSplineSurfaceToBezierSurface.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@GeomConvert_CompCurveToBSplineCurve@F@Add#&1$@N@opencascade@S@handle>#$@S@Geom_BoundedCurve#d#b#b#I#",
+      "nativeName": "GeomConvert_CompCurveToBSplineCurve::Add",
+      "header": "GeomConvert_CompCurveToBSplineCurve.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@GeomConvert_CompCurveToBSplineCurve@F@BSplineCurve#1",
+      "nativeName": "GeomConvert_CompCurveToBSplineCurve::BSplineCurve",
+      "header": "GeomConvert_CompCurveToBSplineCurve.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@GeomConvert_CompCurveToBSplineCurve@F@GeomConvert_CompCurveToBSplineCurve#$@E@Convert_ParameterisationType#",
+      "nativeName": "GeomConvert_CompCurveToBSplineCurve::GeomConvert_CompCurveToBSplineCurve",
+      "header": "GeomConvert_CompCurveToBSplineCurve.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@GeomFill_BSplineCurves@F@GeomFill_BSplineCurves#",
+      "nativeName": "GeomFill_BSplineCurves::GeomFill_BSplineCurves",
+      "header": "GeomFill_BSplineCurves.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@GeomFill_BSplineCurves@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_BSplineCurve#S0_#$@E@GeomFill_FillingStyle#",
+      "nativeName": "GeomFill_BSplineCurves::Init",
+      "header": "GeomFill_BSplineCurves.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@GeomFill_BSplineCurves@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_BSplineCurve#S0_#S0_#$@E@GeomFill_FillingStyle#",
+      "nativeName": "GeomFill_BSplineCurves::Init",
+      "header": "GeomFill_BSplineCurves.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@GeomFill_BSplineCurves@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_BSplineCurve#S0_#S0_#S0_#$@E@GeomFill_FillingStyle#",
+      "nativeName": "GeomFill_BSplineCurves::Init",
+      "header": "GeomFill_BSplineCurves.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@GeomFill_BSplineCurves@F@Surface#1",
+      "nativeName": "GeomFill_BSplineCurves::Surface",
+      "header": "GeomFill_BSplineCurves.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@GeomFill_BezierCurves@F@GeomFill_BezierCurves#",
+      "nativeName": "GeomFill_BezierCurves::GeomFill_BezierCurves",
+      "header": "GeomFill_BezierCurves.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@GeomFill_BezierCurves@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_BezierCurve#S0_#$@E@GeomFill_FillingStyle#",
+      "nativeName": "GeomFill_BezierCurves::Init",
+      "header": "GeomFill_BezierCurves.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@GeomFill_BezierCurves@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_BezierCurve#S0_#S0_#$@E@GeomFill_FillingStyle#",
+      "nativeName": "GeomFill_BezierCurves::Init",
+      "header": "GeomFill_BezierCurves.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@GeomFill_BezierCurves@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_BezierCurve#S0_#S0_#S0_#$@E@GeomFill_FillingStyle#",
+      "nativeName": "GeomFill_BezierCurves::Init",
+      "header": "GeomFill_BezierCurves.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@GeomFill_BezierCurves@F@Surface#1",
+      "nativeName": "GeomFill_BezierCurves::Surface",
+      "header": "GeomFill_BezierCurves.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Geom_Surface@F@D1#d#d#&$@S@gp_Pnt#&$@S@gp_Vec#S2_#1",
+      "nativeName": "Geom_Surface::D1",
+      "header": "Geom_Surface.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Law_BSpline@F@Law_BSpline#&1$@S@NCollection_Array1>#d#S0_#&1$@S@NCollection_Array1>#I#I#b#",
+      "nativeName": "Law_BSpline::Law_BSpline",
+      "header": "Law_BSpline.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Law_Composite@F@ChangeLaws#",
+      "nativeName": "Law_Composite::ChangeLaws",
+      "header": "Law_Composite.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Law_Interpol@F@Set#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#b#",
+      "nativeName": "Law_Interpol::Set",
+      "header": "Law_Interpol.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Law_Interpol@F@Set#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#d#d#b#",
+      "nativeName": "Law_Interpol::Set",
+      "header": "Law_Interpol.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TopoDS_Builder@F@Add#&$@S@TopoDS_Shape#&1S1_#1",
+      "nativeName": "TopoDS_Builder::Add",
+      "header": "TopoDS_Builder.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TopoDS_Builder@F@MakeCompound#&$@S@TopoDS_Compound#1",
+      "nativeName": "TopoDS_Builder::MakeCompound",
+      "header": "TopoDS_Builder.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TopoDS_Builder@F@MakeWire#&$@S@TopoDS_Wire#1",
+      "nativeName": "TopoDS_Builder::MakeWire",
+      "header": "TopoDS_Builder.hxx",
+      "baselineState": "Blocked"
+    }
+  ]
+}

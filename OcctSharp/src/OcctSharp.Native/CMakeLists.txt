@@ -19,6 +19,10 @@ set(OCCTSHARP_MANUAL_NATIVE_SOURCES
   src/Modeling/Drawing.cpp
   src/Modeling/Features.cpp
   src/Modeling/Freeform.cpp
+  src/Modeling/ScalarLaws.cpp
+  src/Modeling/GuidedInputs.cpp
+  src/Modeling/GuidedSweep.cpp
+  src/Modeling/GuidedLoft.cpp
   src/Modeling/GeometryInspection.cpp
   src/Modeling/Inspection.cpp
   src/Modeling/Operations.cpp
@@ -59,6 +63,11 @@ set(OCCTSHARP_MANUAL_NATIVE_SOURCES
   src/Surfaces/SurfaceInspection.cpp
   src/Surfaces/SurfaceCurves.cpp
   src/Surfaces/SurfaceTopology.cpp)
+list(APPEND OCCTSHARP_MANUAL_NATIVE_SOURCES
+  src/Surfaces/ConstraintResiduals.cpp
+  src/Surfaces/ConstrainedFilling.cpp
+  src/Surfaces/PatchConversion.cpp
+  src/Surfaces/ConstraintContinuity.cpp)
 
 # Prove each manual responsibility declares its own dependencies. Generated shards
 # retain their existing PCH for build cost, but manual files cannot depend on it.
@@ -71,6 +80,7 @@ add_library(OcctSharp.Native SHARED
   include/OcctSharp.Native.Surface.h
   include/OcctSharp.Native.Repair.h
   include/OcctSharp.Native.Mesh.h
+  include/OcctSharp.Native.Authoring.h
   src/Surfaces/SurfaceCommon.hxx
   ${OCCTSHARP_MANUAL_NATIVE_SOURCES}
   ${OCCTSHARP_GENERATED_NATIVE_SOURCES})

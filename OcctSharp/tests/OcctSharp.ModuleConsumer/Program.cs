@@ -42,5 +42,14 @@ if (MeshTopology.IsSurfaceBacked(discreteCopy) || roundtripMesh.Triangles.Count 
     throw new InvalidOperationException("The facade-free Modeling consumer failed the authored mesh lifetime roundtrip.");
 }
 
+using Shape guidedSpine = ShapeFactory.CreatePolygonWire([new(0, 0, 0), new(0, 0, 10)]);
+using Shape guidedProfile = ShapeFactory.CreatePolygonWire([new(0, 0, 0), new(2, 0, 0), new(2, 2, 0), new(0, 2, 0)], true);
+using GuidedSweepPlan guidedPlan = GuidedSweepPlan.Create(guidedSpine, [new(guidedProfile)],
+    new() { SolidPolicy = SweepSolidPolicy.RequireSolid }, scaleLaw: ScalarLawDefinition.Constant(new(0, 1), 1));
+using AuthoringResult guidedResult = guidedPlan.Build();
+guidedPlan.Dispose(); guidedSpine.Dispose(); guidedProfile.Dispose();
+if (!guidedResult.Diagnostics.IsSolid || !guidedResult.RequireShape().IsValid || guidedResult.RequireShape().FaceCount != 6)
+    throw new InvalidOperationException("The facade-free Modeling consumer failed the owning guided sweep.");
+
 Console.WriteLine(
-    $"Direct Modeling consumer passed: {box.Kind}, {box.FaceCount} faces, OCCT {runtime.OcctVersion}.");
+    $"Direct Modeling consumer passed: {box.Kind}, {box.FaceCount} faces, owning guided sweep, OCCT {runtime.OcctVersion}.");

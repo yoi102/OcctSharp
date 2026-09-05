@@ -253,7 +253,7 @@ public sealed partial class XdeDocument : IDisposable
     }
 
     /// <summary>Saves this document as BinXCAF.</summary>
-    public string Save(string filePath) => WriteFile(filePath, NativeMethods.SaveOcafDocument, "xde_document_save");
+    public string Save(string filePath) => Save(filePath, DocumentStorageFormat.BinXcaf);
 
     /// <summary>Saves this XDE document as BinXCAF or XmlXCAF.</summary>
     public string Save(string filePath, DocumentStorageFormat format)

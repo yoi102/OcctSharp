@@ -1,5 +1,25 @@
 # Testing and Validation
 
+## Batch S authoring validation
+
+The unchanged 40-row matrix maps to BatchSAuthoringTests, BatchSClosureTests and
+BatchSConversionTests. `dotnet test tests/OcctSharp.Runtime.Tests -c Release --no-build
+--filter FullyQualifiedName~BatchS` runs all 44 cases, including 48 low-sampling,
+high-iteration G2 solves with owning history. Repeated full focused runs are required
+after the intermittent OCCT residual-getter overwrite fix; an earlier pass never
+overrides a later crash. Use the freshly built bridge, not a stale bundled copy.
+Shared BatchSGuidedWorkflow runs real BinXCAF Unicode/STEP/IGES/real-HWND acceptance
+both in repository tests and the clean facade package consumer. Optional evidence
+directory `OCCTSHARP_BATCH_S_EVIDENCE` retains three screenshots.
+
+After both configurations build, `eng/verify-debug-native-runtime.ps1` creates an
+isolated consumer with all 62 actual Debug DLLs and verifies their hashes before the
+full runtime suite. `eng/verify-native-exports.ps1` checks exact additive baseline
+counts and Debug/Release equality. `eng/test-batch-manual-accounting.ps1` verifies
+wrong-hash, overwrite and unimplemented-transition rejection without mutating inputs.
+These checks complement the existing strict headers, source-layout negatives,
+exact-ID inventory, clean regeneration, both package consumers and full release-check.
+
 ## Batch O final validation
 
 `BatchOCompletionTests` exercises all five curve families, reversed trim, similarity

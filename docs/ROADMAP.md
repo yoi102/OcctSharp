@@ -16,7 +16,9 @@ It was not split into projection, seam, repair, exchange, viewer, or package che
 40-capability scopes: U advanced contour/limit-driven features, V exact partition and
 volume workflows, W light/material/texture and copied-frame review. Together with Q-T,
 scope preparation is 7/7; Q/R are 80/80 implemented and locally validated, overall 80/280
-validated. Preview.20-22 extend the planned
+validated. S implements all original 40 rows and is running its complete exit gates
+at Preview.18; focused tests and 39 strict private-header checks pass. T-W follow S's
+whole-batch local commit automatically. Preview.20-22 extend the planned
 slots only; no package/API/DLL versions change during preparation.
 
 The [continuous runbook](BATCH_CONTINUOUS_EXECUTION.md) defines Q -> R -> S -> T -> U ->
@@ -44,7 +46,11 @@ both consumers, clean regeneration, inventory and all local release gates pass.
 R delivers Preview.17 / ABI 1.61 / bridge 0.69.0: focused 24/24, Release/Debug
 Generator 91/91, Runtime 229/229, actual Debug-native 229/229, both consumers,
 94-file clean regeneration, exact 48-ID accounting and full local release-check pass.
-Immediately after R's local completion commit, reconcile S's entry and implement S-W.
+S delivers Preview.18 / ABI 1.62 / bridge 0.70.0: all 40 capabilities implemented,
+focused 44/44 and ten repeats, Release/Debug and actual Debug-native Runtime 273/273,
+both consumers, 94-file cold regeneration, exact 68-ID accounting and full release-check
+pass. Final document/package byte verification and local commit are recorded in STATUS;
+then reconcile T's entry and continue T-W without routine confirmation.
 Keep the existing modules, facade, source boundaries and one native DLL; no automatic
 NuGet publication or GitHub push.
 

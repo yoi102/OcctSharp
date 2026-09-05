@@ -1,3 +1,5 @@
+using OcctSharp.Interop;
+
 namespace OcctSharp;
 
 /// <summary>Represents an XDE label by stable entry and remains parent-bound to its document.</summary>
@@ -13,6 +15,14 @@ public sealed class XdeLabel
 
     /// <summary>Gets the stable TDF entry.</summary>
     public string Entry { get; }
+
+    /// <summary>Creates a child metadata label inside the document's current transaction.</summary>
+    public XdeLabel AddChild()
+    {
+        Document.ThrowIfDisposed();
+        NativeError.ThrowIfFailed(NativeMethods.AddOcafChild(Document.Handle, Entry, out int tag), "ocaf_label_add_child");
+        return Document.GetLabel($"{Entry}:{tag}");
+    }
 
     /// <summary>Gets or sets the copied name attribute.</summary>
     public string? Name

@@ -2,10 +2,10 @@
   "schemaVersion": "1.0",
   "platform": "windows",
   "architecture": "x64",
-  "packageVersion": "8.0.1-preview.17",
+  "packageVersion": "8.0.1-preview.18",
   "occtVersion": "8.0.1",
-  "nativeAbi": "1.61",
-  "bridgeVersion": "0.69.0",
+  "nativeAbi": "1.62",
+  "bridgeVersion": "0.70.0",
   "files": [
     {
       "path": "licenses/ffmpeg/COPYING.LGPLv2.1",
@@ -89,8 +89,8 @@
     },
     {
       "path": "occt/OcctSharp.Native.dll",
-      "size": 15615488,
-      "sha256": "13DF60762BBF4BEE9EC92A63B2060C9D8EF1EC3088257DF507AB29D409CF6D18"
+      "size": 15706112,
+      "sha256": "B0B8BB697CF865C8D2F9E8A04269C02329D6916CD73EE31DF70CBDEAA5EBCB8E"
     },
     {
       "path": "occt/openvr_api.dll",

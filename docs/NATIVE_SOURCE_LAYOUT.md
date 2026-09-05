@@ -1,6 +1,19 @@
 # Native source responsibilities
 
-## Batch R additions
+## Batch S additions
+
+Eight units add `Modeling/ScalarLaws.cpp`, `GuidedInputs.cpp`, `GuidedSweep.cpp`,
+`GuidedLoft.cpp`, and `Surfaces/ConstraintResiduals.cpp`, `ConstrainedFilling.cpp`,
+`PatchConversion.cpp`, `ConstraintContinuity.cpp`. Three small private headers own
+law/input/residual helper contracts; the public Authoring companion owns fixed C
+records. Existing FeatureResult private storage gains copied authoring history;
+its registry/release owner is unchanged. Source audit passes with 63 units, 569
+manual C exports and 23 unique storage definitions; all 39 private headers pass
+standalone strict MSVC checks and six layout negatives pass. Release/Debug match
+at 29,443 exports: R's 29,432 plus nine C entries and two OCCT construction helpers.
+Full final validation is in STATUS. No manual PCH, unity, new project or DLL is added.
+
+## Batch R additions (locally validated historical checkpoint)
 
 R adds `Mesh/MeshAuthoring.cpp`, `Mesh/MeshEditing.cpp`, `Mesh/MeshTopology.cpp` and
 `Exchange/MeshExchange.cpp`, with the private `Mesh/MeshAuthoring.hxx` and public
@@ -9,7 +22,7 @@ triangulation, call-local Poly editing, existing-cache/owning-topology adapters,
 direct editable import/no-remesh format delivery respectively. No new registry/live
 set is introduced. Shared exact-face validation belongs to `Modeling/Topology`.
 
-The current source audit passes with 55 independent units, 36 private headers,
+The R source audit passes with 55 independent units, 36 private headers,
 560 manual C exports and 23 unique storage definitions; all six negative fixtures
 pass. Every private header passes standalone MSVC `/Zs /W4 /WX`, with no PCH/unity.
 Release and Debug have identical 29,432 export names, retaining all 29,416 Q names
@@ -50,11 +63,11 @@ implementation responsibilities, not independent allocators, ABI packages or DLL
 | Xde | Assembly structure, labels, metadata, presentation styles, PMI and saved views |
 | Exchange | Shape/session exchange, XDE STEP/IGES/mesh exchange and transfer recovery |
 | Visualization | Viewer lifecycle, presentations, selection, camera/input, clipping, dimensions and manipulators |
-| Surfaces | Batch P surface inspection, copied curves and supported topology |
+| Surfaces | Surface inspection, copied curves/topology, constrained filling, patch conversion and residual verification |
 
 Private headers own native-only handle layouts and the small helper contracts needed by
 other translation units. C++ helper visibility is internal to the bridge, while public
-C declarations stay in `include/OcctSharp.Native.h` and the Surface, Repair and Mesh companions.
+C declarations stay in `include/OcctSharp.Native.h` and the Surface, Repair, Mesh and Authoring companions.
 Generated code remains generator-owned and uses the unchanged Internal support header.
 
 ## Scope and unchanged boundaries

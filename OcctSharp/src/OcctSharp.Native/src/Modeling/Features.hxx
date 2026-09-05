@@ -13,6 +13,8 @@ struct OcctSharp_FeatureHistoryEntry
   int32_t SourceIndex = 0;
   int32_t Kind = 0;
   TopoDS_Shape Shape;
+  int32_t SubshapeIndex = -1;
+  int32_t SourceKind = -1;
 };
 
 struct OcctSharp_FeatureResultHandle

@@ -1,5 +1,16 @@
 # Architecture
 
+## Batch S guided authoring boundary
+
+ADR-0086 places copied immutable scalar laws in Geometry and owning dependency-graph
+plans/results in Modeling. Existing Freeform conversion DTOs keep their facade assembly
+identity; conversion, XDE recipe publication and viewer review stay above the modules.
+Eight cohesive Native units own laws, input graphs, sweep, loft, residual measurement,
+filling, conversion and continuity checks. Existing FeatureResult/Shape ownership and
+the single Native DLL are reused, with no new registry or project. OCCT algorithms
+and law handles remain call-local. Required final-surface residuals are independently
+sampled, never inferred from IsDone or unsafe per-index SDK error getters.
+
 ## Batch R authored mesh boundary
 
 ADR-0085 places immutable `AuthoredMesh`, optional channels, polylines and revision-bound
@@ -43,7 +54,7 @@ S in cohesive Modeling/Surfaces units, T storage/naming in Documents. T feature 
 and XDE/viewer coordination belong in the existing facade/higher owners, so Documents
 does not gain reverse dependencies on Mesh/XDE/Visualization. R MeshData similarly must
 not reference Modeling or XDE material objects. Q is now implemented as described above;
-R is implemented in the boundaries above; S/T placements remain planned. See [Q-T preparation](BATCH_Q_T_PREPARATION.md).
+R/S are implemented in the boundaries above; T placement remains planned. See [Q-T preparation](BATCH_Q_T_PREPARATION.md).
 
 ## Full historical native source extraction
 

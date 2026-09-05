@@ -1,9 +1,9 @@
 # Continuous implementation runbook: Q through W
 
-- Status: **CONTINUE — Batch Q COMMITTED; Batch R locally validated, completion commit pending**, explicitly started by the user on 2026-09-05.
+- Status: **CONTINUE — Batch Q/R COMMITTED; Batch S implementing**, explicitly started by the user on 2026-09-05.
 - Decision: [ADR-0083](adr/0083-extended-batches-and-continuous-execution.md).
 - Queue: **Q -> R -> S -> T -> U -> V -> W**, 40 capabilities each, **280 total**.
-- Current implementation and local validation: **80/280**; Q is committed as `1a3662a`. R's 40/40 passes all required local gates; commit R, then immediately enter S.
+- Current implementation and local validation: **80/280**; Q is committed as `1a3662a`. R is committed as `86e069c`; S entry is revalidated and full implementation is active.
 - Machine-readable queue: [continuous-plan.json](../OcctSharp/config/batches/continuous-plan.json).
 
 ## Start and continuation contract
@@ -81,8 +81,8 @@ paths/hash evidence; a short comment such as “tested” is insufficient.
 | Batch | State | Implementation | Entry baseline/delta | Exit evidence | Local completion commit |
 |---|---|---|---|---|---|
 | Q | COMMITTED | 40/40 | `3491c1e`; zero product delta from `6b04bd9`; frozen 52-root audit revalidated | Focused 25/25; Release/Debug Generator 91/91 and Runtime 205/205; actual Debug-native 205/205; full release-check, 14 packages/two consumers, 106-ID exact reconciliation; final documents and package bytes verified | `1a3662a` |
-| R | LOCALLY VALIDATED | 40/40 | `1a3662a` / Preview.16; fresh 128-header inventory matches `7917A78F`; 106 prior Blocked-to-Manual changes, nine within R roots, zero identity changes; entry reports match `1C8F1B3E` | Focused 24/24; final Release/Debug Generator 91/91 and Runtime 229/229; actual Debug-native 229/229; 36 standalone headers; 29,432 matching native exports, 404 additive managed signatures/no removals; exact 48-ID accounting; final full release-check PASS after OBJ hardening; 94-file clean regeneration and both consumers PASS | Completion commit pending |
-| S | PREPARED | 0/40 | Preview.15 frozen; pending post-R delta | NOT RUN | None |
+| R | COMMITTED | 40/40 | `1a3662a` / Preview.16; fresh 128-header inventory matches `7917A78F`; 106 prior Blocked-to-Manual changes, nine within R roots, zero identity changes; entry reports match `1C8F1B3E` | Focused 24/24; final Release/Debug Generator 91/91 and Runtime 229/229; actual Debug-native 229/229; 36 standalone headers; 29,432 matching native exports, 404 additive managed signatures/no removals; exact 48-ID accounting; final full release-check PASS after OBJ hardening; 94-file clean regeneration and both consumers PASS | `86e069c` |
+| S | VERIFYING FINAL PACKAGE | All 40 rows implemented and locally validated | `86e069c` / Preview.17; 154 prior transitions, 21 in S roots, zero identity changes; 52 roots / 2,432 candidates; repeat hash `71D65197` | Focused 44/44 and ten repeats; Release/Debug Generator 91/91 and Runtime 273/273; actual Debug-native 273/273; 39 strict headers, six layout negatives; 500 additive managed signatures/no removals; 68-ID exact accounting; 94-file cold regeneration, both consumers and full release-check PASS. Final document/package-byte check is in STATUS | Pending local completion commit |
 | T | PREPARED | 0/40 | Preview.15 frozen; pending post-S delta | NOT RUN | None |
 | U | PREPARED | 0/40 | Preview.15 frozen; pending post-T delta | NOT RUN | None |
 | V | PREPARED | 0/40 | Preview.15 frozen; pending post-U delta | NOT RUN | None |

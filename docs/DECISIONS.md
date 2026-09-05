@@ -92,6 +92,7 @@ Superseded ADRs remain available and point to their replacements.
 | [ADR-0083](adr/0083-extended-batches-and-continuous-execution.md) | Add U-W and prepare continuous Q-W execution with full per-batch validation/local commits and automatic advancement after explicit start | Active continuous run; 80/280 locally validated |
 | [ADR-0084](adr/0084-source-bound-repair-previews.md) | Source-bound copied repair snapshots, selected/protected stages, verified budgets and atomic publication | Accepted and locally validated |
 | [ADR-0085](adr/0085-immutable-authored-mesh-revisions.md) | Immutable attributed mesh revisions, exact index correspondence, call-local Poly editing and discrete delivery | Accepted and locally validated |
+| [ADR-0086](adr/0086-guided-authoring-laws-constraints-and-provenance.md) | Copied laws, owning guided/constraint graphs, independent residuals and exact provenance | Accepted and locally validated; final packaging/commit in STATUS |
 
 ## Pending decisions
 

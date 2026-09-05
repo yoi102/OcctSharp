@@ -1,9 +1,9 @@
 # Batch S: Guided sweeps and constrained surface authoring
 
-- Status: scope preparation complete; implementation **0/40**; new compile/runtime gates **NOT RUN**.
+- Status: all original 40/40 rows implemented and locally validated under ADR-0086; final package-byte audit and local commit are tracked in STATUS.
 - Decision: [ADR-0082](adr/0082-broad-batch-q-through-t-preparation.md).
 - Preparation baseline: commit `6b04bd9`, package `8.0.1-preview.15`, OCCT 8.0.1.
-- Planned local package slot: `8.0.1-preview.18`; not a version change or publication.
+- Local package: `8.0.1-preview.18`, ABI 1.62, bridge 0.70.0; no publication.
 - Execution contract and shared gates: [Q-T preparation](BATCH_Q_T_PREPARATION.md).
 - Frozen configuration: [batch-s-guided-sweep-constrained-surface.json](../OcctSharp/config/batches/batch-s-guided-sweep-constrained-surface.json).
 
@@ -25,8 +25,8 @@ existing public operations; they do not imply new OCCT class roots.
 
 ## Frozen capability and acceptance matrix
 
-All rows are prepared and unimplemented. Each acceptance statement is a required future
-test, not a report that it has passed. Shared lifetime/negative/package gates apply to
+All original rows remain unchanged. Their executable mapping follows this matrix;
+STATUS records actual passing gates. Shared lifetime/negative/package gates apply to
 every applicable row and are not counted as additional capabilities.
 
 | ID | Root group | New capability | Required observable acceptance |
@@ -71,6 +71,104 @@ every applicable row and are not counted as additional capabilities.
 | S-38 | Convert | Constraint-boundary continuity verification | Compare positional/tangent/curvature residuals along supported joins with undefined derivative flags, separate from P single-face evaluation. |
 | S-39 | Integration | Guide/constraint provenance in XDE delivery | Store result and recipe references, then STEP/IGES reopen geometry and supported metadata; OCAF-only recipe data is not promised in exchange formats. |
 | S-40 | Integration | Guided authoring preview and result review | Review simulated sections, unsatisfied constraints and accepted result in the existing viewer; accepted geometry survives all temporary inputs. |
+
+## Implementation-to-test acceptance map
+
+Numbers refer to the original S rows above, without adding capabilities. Test names
+belong to BatchSAuthoringTests, BatchSClosureTests or BatchSConversionTests. The shared
+public-only BatchSGuidedWorkflow also runs in the clean facade package consumer.
+
+| Row | Executable check | Observable assertion |
+|---:|---|---|
+| 01 | ScalarDefinitionsAreCopiedAndDomainDerivativesAreExplicit | Mutated caller arrays do not change law data; Geometry ownership |
+| 02 | ScalarDefinitionsAreCopiedAndDomainDerivativesAreExplicit | Constant/linear endpoints and derivatives |
+| 03 | ScalarDefinitionsAreCopiedAndDomainDerivativesAreExplicit; TrimmedCompositesAndMultipleKnotsPreserveDerivativeBoundaries | Endpoint tangencies, duplicate rejection, negative overshoot |
+| 04 | BSplineSmoothCompositeAndSamplingDoNotInventGlobalBounds | Knot/pole validation and numeric derivatives |
+| 05 | BSplineSmoothCompositeAndSamplingDoNotInventGlobalBounds | Smooth endpoint values/derivatives and chain rule |
+| 06 | TrimmedCompositesAndMultipleKnotsPreserveDerivativeBoundaries | Ordered active domains and discontinuity availability |
+| 07 | ScalarDefinitionsAreCopiedAndDomainDerivativesAreExplicit | Independent trim/map and reject/clamp policies |
+| 08 | BSplineSmoothCompositeAndSamplingDoNotInventGlobalBounds | Positive samples versus conservative control-hull bound |
+| 09 | AuthoringOwnersRejectReleasedInputsAndSurviveRepeatedDisposal | Frozen graph, source fingerprints and disposed plans |
+| 10 | FixedFrameAndScaleSimulationHaveMeasuredDimensions | Orientation, dimensions and five section positions |
+| 11 | SweepFramesSimulateBuildAndRetainOwningHistory; LawSweepRejectsGuideConflictAndUsesPositiveControlHull | Binormal success and parallel degeneracy |
+| 12 | SweepFramesSimulateBuildAndRetainOwningHistory | Discrete framing, valid solid and copied status |
+| 13 | SupportSurfaceRetainsRealPcurveDependencyAfterSourceRelease | Actual edge/face dependency and unsupported rejection |
+| 14 | AuxiliaryContactsBuildAndPreserveGuideIsolation | Guide release and measured result extent |
+| 15 | AuxiliaryContactsBuildAndPreserveGuideIsolation | Three contact modes, C0 limit and border planar guard |
+| 16 | FixedFrameAndScaleSimulationHaveMeasuredDimensions; LawSweepRejectsGuideConflictAndUsesPositiveControlHull | Doubled section size, positive bound and incompatible guide |
+| 17 | AttachedSectionsUseExactSpineVerticesAndRejectReverseOrdering | Exact vertices, ordering and generated edge identity |
+| 18 | AuthoringRawHandlesFailClosedAndHistoryOwnsItsCopies; AuxiliaryContactsBuildAndPreserveGuideIsolation | Wrong types, invalid profiles and readiness |
+| 19 | FixedFrameAndScaleSimulationHaveMeasuredDimensions | Owning equally spaced simulated sections |
+| 20 | SweepFramesSimulateBuildAndRetainOwningHistory | Separate done, validity, error and solid status |
+| 21 | SweepFramesSimulateBuildAndRetainOwningHistory | Generated and explicitly unmapped topology |
+| 22 | SolidificationFailureOnlyKeepsShellUnderExplicitPolicy | RequireSolid fails; explicit valid-shell fallback |
+| 23 | LoftActuallyCorrectsUnequalEdgeCountsAndReturnsExactEdgeProvenance | Real corrected edge counts/orientation and source isolation |
+| 24 | LoftCompatibilityReportsSectionsAndEndpointProvenance; LoftPunctualEndpointsRemainIndependentAndRejectInteriorVertices | Endpoint/edge history and punctual endpoints |
+| 25 | SupportedBoundaryAndUvConstraintsAreMeasuredOnFinalSurface | Individually measured G0/G1/G2 constraints |
+| 26 | RepeatedLowSamplingG2FillsHaveStableResidualsAndOwningHistory | Explicit supported edges and bounded tensor residuals |
+| 27 | MixedBoundaryInteriorAndSeedConstraintsAreIndividuallyVerified | Distinct interior edge and stable kernel index |
+| 28 | SupportedBoundaryAndUvConstraintsAreMeasuredOnFinalSurface | Surface-domain UV points, not world-coordinate assumptions |
+| 29 | MixedBoundaryInteriorAndSeedConstraintsAreIndividuallyVerified | Initial support surface and accepted residuals |
+| 30 | RepeatedLowSamplingG2FillsHaveStableResidualsAndOwningHistory; ConflictingRequiredConstraintsNeverBecomeAccepted | Low samples/high iterations, bounded limits and failed solve |
+| 31 | ConflictingRequiredConstraintsNeverBecomeAccepted | Required ignored/out-of-tolerance constraint blocks acceptance |
+| 32 | MixedBoundaryInteriorAndSeedConstraintsAreIndividuallyVerified | Owning face and generated boundary history |
+| 33 | BoundaryStylesReturnCopiedIndependentPatches; TwoAndThreeBoundaryPatchesCoverEligibleNonQuadrilateralInputs | All styles, 2/3/4 boundaries and numeric areas |
+| 34 | CurveAssemblyAndCopiedBezierSpansKeepParameterProvenance | Source/result parameter correspondence and disconnected rejection |
+| 35 | CurveAssemblyAndCopiedBezierSpansKeepParameterProvenance | Copied Bezier pieces match source evaluations |
+| 36 | SurfaceGridAndExtractedPatchPreserveUvOrientationAndCopies | UV grid, orientation and numeric sample correspondence |
+| 37 | SurfaceGridAndExtractedPatchPreserveUvOrientationAndCopies; CurveAssemblyAndCopiedBezierSpansKeepParameterProvenance | Independent extracted intervals and patches |
+| 38 | JoinsMeasurePositionAngleCurvatureAndDoNotInventSingularDerivatives | Position/angle/curvature and zero-speed nulls |
+| 39 | GuidedDeliveryRoundtripsRecipesExchangeAndRealViewer; AcceptedFillPublishesCopiedConstraintRecipe | BinXCAF Unicode/undo/redo, STEP/IGES area/scale/name/color |
+| 40 | GuidedDeliveryRoundtripsRecipesExchangeAndRealViewer | Real HWND simulation/failure/result captures, stale IDs and thread/parent guards |
+
+Shared raw ABI capacity/null/stale/history checks and lifetime loops apply across rows.
+No previous pass overrides a later failed run. Complete Release/Debug/actual Debug-native,
+exact manual accounting and package/source gates are required before claiming 40/40.
+
+## Post-R entry revalidation
+
+R is committed as `86e069c` at Preview.17. The separate
+[entry config](../OcctSharp/config/batches/batch-s-entry.json) pins inventory
+`4E90AB503456D7617CE81E21116CBAA0119042B2E63EEAD9A5C06CD20DE807E6`;
+the original frozen configuration and all 40 rows remain unchanged.
+Exact comparison finds 154 prior Blocked-to-Manual transitions, 21 in S roots,
+zero added/removed declarations and zero identity changes. Entry roots remain
+52 / 2,432 candidates: 1,042 Blocked, 611 Emitted, 179 Manual and 600 Skipped.
+Two audits are byte-identical at
+`71D65197222B212B36D6FDC8D11ECD9D4E35A7ADB510A2D4923D4AB0DAAFD9CD`.
+These are reused Q/R prerequisites, not newly implemented S APIs.
+[ADR-0086](adr/0086-guided-authoring-laws-constraints-and-provenance.md) records
+the copied-law, dependency-graph isolation, residual and result-ownership decisions.
+
+## Local validation evidence
+
+- Expanded focused tests pass 44/44, including ten consecutive complete runs after
+  fixing the unsafe per-index OCCT residual getter path. Each run includes 48
+  low-sampling/high-iteration G2 solves. Punctual-loft endpoints and foreign review
+  have explicit success/failure/ownership assertions. Earlier failing logs remain.
+- Release/Debug Generator 91/91 and Runtime 273/273 pass; isolated actual Debug-native
+  also passes 273/273 after all 62 DLL hashes are verified. The R affinity fixture
+  uses an actual distinct Thread, not a potentially inlined synchronously awaited Task.
+- Thirty-nine standalone strict headers, six layout negatives, 63 source units,
+  569 manual exports and 23 unique storage definitions pass. Native Release/Debug
+  match at 29,443 names (R plus nine C calls and two compiler-generated construction
+  helpers). Managed API adds 500 signatures and removes none, total 41,331.
+- `artifacts/batch-s-release-check-final.log` passes full local release-check,
+  14 package audits, both clean consumers and fresh-source regression with 94
+  byte-identical generated files. Real BinXCAF/STEP/IGES and inspected HWND captures
+  exercise recipes, undo/redo, geometry/scale/name/color and lifetime/thread failures.
+- Exact SC-056 accounting passes for 68 Blocked-to-Manual transitions with zero
+  other declaration/identity/classification changes; three fail-closed negatives pass.
+  Final 128-header inventory SHA256 is
+  `78F5F2380209C17EC0A2C5A164B485B821563757EE073ABC23598F5CB76CE0D1`:
+  116,272 declarations, 16,353 Emitted, 931 Manual, 49,644 Blocked, 49,344 Skipped;
+  zero pending/HD099. Exit inputs are frozen under
+  `artifacts/preparation-baselines/preview18-batch-s/` for T's post-commit entry.
+- Release bridge SHA256 is
+  `B0B8BB697CF865C8D2F9E8A04269C02329D6916CD73EE31DF70CBDEAA5EBCB8E`;
+  Debug is `5417E7F90A3867CDA10481886BB2B6537B72DF6165041F662FC5548D2E6645DA`.
+  Runtime/notice manifest matches. Final documentation repack/content provenance
+  is recorded in STATUS; no NuGet upload or GitHub push is authorized.
 
 ## Native decision roots and dependency closure
 

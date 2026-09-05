@@ -168,11 +168,15 @@ internal static class BatchRMeshWorkflow
             using MeshViewerReview review = new(viewer, mesh, Materials());
             review.SelectAndFit(mesh.Revision);
             Require(viewer.GetSelection().Contains(review.Presentation), "real native discrete selection");
-            bool wrongThread = Task.Run(() =>
+            // A synchronously awaited Task may execute inline on the caller's
+            // pool thread. Use an actual distinct thread for an affinity test.
+            bool wrongThread = false;
+            Thread otherThread = new(() =>
             {
-                try { review.SelectAndFit(mesh.Revision); return false; }
-                catch (InvalidOperationException) { return true; }
-            }).GetAwaiter().GetResult();
+                try { review.SelectAndFit(mesh.Revision); }
+                catch (InvalidOperationException) { wrongThread = true; }
+            });
+            otherThread.Start(); otherThread.Join();
             Require(wrongThread, "viewer thread affinity");
             viewer.ClearSelection(); viewer.Redraw();
             string groupedImage = viewer.SaveScreenshot(Path.Combine(directory, "mesh-groups.png"));

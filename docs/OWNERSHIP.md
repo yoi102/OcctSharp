@@ -1,5 +1,23 @@
 # Ownership and Lifetime
 
+## Batch S authoring implementation contract
+
+Scalar laws and conversion pieces own copied immutable data. Sweep and fill plans own
+one copied dependency graph, preserving profile/spine-vertex/support-face relationships.
+Builds copy that graph again so compatibility/filling cannot mutate a reusable plan.
+Plans reject disposed use and survive original argument disposal. Results and each
+history shape use registered Shape ownership and survive plan/input disposal. Temporary
+FeatureResult containers use the existing matching release; their private history adds
+source/subshape provenance without changing the existing feature-history ABI. Missing
+mapping is explicit and has no Shape. No registry, allocator, project or DLL is added.
+Source references are scoped to the plan identity; no nearest/count/address identity.
+Temporary compound assembly restores the source TShape.Free flag even on failure.
+Required residuals never call OCCT's unsafe per-index temporary-array getters.
+Forty-eight G2 lifetime loops run in every expanded focused suite; ten complete
+repeats and an isolated actual Debug-native 273/273 sweep pass. Final whole-batch
+acceptance evidence remains in STATUS, not inferred solely from those loops.
+
+
 ## Batch R authored mesh contract
 
 `AuthoredMesh` and its channels, groups, polylines, origins, selections and maps own

@@ -91,6 +91,8 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   projection, repair, trimmed topology and source-organization boundaries.
 - [Preview.16 release notes](RELEASE_NOTES_8.0.1_PREVIEW_16.md) — Batch Q source-bound
   repair previews, budgets, composed history, transactional publication and defect review.
+- [Preview.18 release notes](RELEASE_NOTES_8.0.1_PREVIEW_18.md) — Batch S copied laws,
+  guided authoring, constrained surfaces and provenance under [ADR-0086](adr/0086-guided-authoring-laws-constraints-and-provenance.md).
 - [Preview.17 release notes](RELEASE_NOTES_8.0.1_PREVIEW_17.md) — Batch R immutable mesh
   authoring, exact correspondence, attributed editing and discrete-model delivery.
 - [Preview.13 release notes](RELEASE_NOTES_8.0.1_PREVIEW_13.md) — complete Batch N

@@ -1,5 +1,24 @@
 # Native ABI
 
+## ABI 1.62 / Preview.18 (Batch S)
+
+Bridge 0.70.0 adds nine C exports in `OcctSharp.Native.Authoring.h`: law evaluation,
+dependency-graph copy, authoring history, guided sweep/loft, constrained filling,
+patch conversion and surface/curve join measurement. Previous signatures remain
+unchanged; schema stays 1.13. Temporary results reuse FeatureResult release; extracted
+history shapes have independent registered ownership. Numeric/definition buffers
+are borrowed only for the call. Failure transfers no result handle.
+
+Windows x64 sizes (bytes): LawSpan 96, LawInput 56, LawSample 40, AuthoringInfo 48,
+AuthoringHistoryInfo 16, SweepSection 16, SweepOptions 144, LoftOptions 64,
+FillConstraint 72, FillOptions 64, ConstraintResidual 48, PatchOptions 80, PatchSpan 64.
+Native static assertions and managed layout tests cover these fixed structures.
+Indices are zero-based except documented KernelIndex from OCCT; -1 means absent.
+Residual defined bits 1/2/4 indicate position/normal/curvature availability; absent
+required residuals cannot pass. Solver resource limits are enforced before allocation.
+OCCT's numeric filling derivative order is 0/1/2, not GeomAbs_G2's enum value 3.
+No C++ class/array, borrowed geometry, callback or new owner family crosses the ABI.
+
 ## ABI 1.61 / Preview.17 (Batch R verification)
 
 Bridge 0.69.0 adds sixteen mesh C exports in `OcctSharp.Native.Mesh.h`; all previous

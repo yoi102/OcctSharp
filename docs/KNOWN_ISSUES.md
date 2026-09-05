@@ -1,5 +1,22 @@
 # Known Issues
 
+## KI-031: OCCT 8.0.1 per-constraint filling residual getters corrupt temporary storage
+
+- Status: resolved in the Preview.18 bridge; final whole-batch evidence is in STATUS.
+- Severity: High; native heap overwrite/uninitialized residual read.
+- Evidence: an earlier focused 40/40 pass was followed by intermittent failure in
+  `artifacts/batch-s-repeat-8.log`; the pre-fix isolation run also crashed later.
+- Cause: GeomPlate_BuildPlateSurface per-index G0Error/G1Error/G2Error allocate the
+  initial per-curve count, while EcartContraintesMil writes refined curve intervals.
+  The exposed index space also does not accept point constraints.
+- Resolution: do not call these SDK getters. Independently measure position, normal
+  angle and curvature-tensor residuals on the final approximated surface with explicit
+  bounded samples and derivative availability. The three unsafe overloads stay Blocked.
+  No SDK DLL/source patch or disabled constraint-acceptance test is used.
+- Regression: twelve consecutive 40-case runs and ten expanded 44-case runs pass;
+  each expanded run includes 48 low-sampling/high-iteration G2 lifetime solves. This
+  is evidence for the exercised bridge path, not a claim that upstream OCCT is fixed.
+
 ## KI-030: Debug native history queries asserted for container topology
 
 - Status: Resolved in Preview.14; final Release-native and Debug-native Runtime 164/164 pass.

@@ -5,7 +5,7 @@ versioned native C ABI, generated low-level bindings, and friendly managed CAD A
 modeling, STEP/IGES/STL exchange, XDE assemblies and metadata, meshing, inspection, and
 Windows visualization.
 
-Current local preview: `8.0.1-preview.17` for Windows x64. The NuGet graph contains 12 managed
+Current local preview: `8.0.1-preview.18` for Windows x64. The NuGet graph contains 12 managed
 modules, the `OcctSharp` compatibility/facade package, and one shared
 `OcctSharp.Native.win-x64` runtime package. The native package places the complete
 62-DLL runtime in the application's `occt/` directory; no machine-wide OCCT installation
@@ -14,17 +14,17 @@ or `PATH` change is required.
 ## Install
 
 ```powershell
-dotnet add package OcctSharp --version 8.0.1-preview.17 --source ./OcctSharp/artifacts/packages
+dotnet add package OcctSharp --version 8.0.1-preview.18 --source ./OcctSharp/artifacts/packages
 ```
 
 A narrow consumer can reference a module directly, for example:
 
 ```powershell
-dotnet add package OcctSharp.Modeling --version 8.0.1-preview.17 --source ./OcctSharp/artifacts/packages
+dotnet add package OcctSharp.Modeling --version 8.0.1-preview.18 --source ./OcctSharp/artifacts/packages
 ```
 
 The supported runtime baseline is .NET 10, Windows x64, and OCCT 8.0.1.
-Preview.17 is a local-only build; it is not published on NuGet.org. Create the
+Preview.18 is a local-only build; it is not published on NuGet.org. Create the
 local package feed with `OcctSharp/eng/pack.ps1` using the contributor toolchain, or run
 the repository samples directly with the committed runtime.
 
@@ -156,6 +156,34 @@ supports styled display and revision replacement on the existing HWND viewer.
 Discrete shapes are not exact CAD solids and cannot be exported as exact STEP/IGES.
 See [Batch R's 40 capabilities](docs/BATCH_R_MESH_AUTHORING_EDITING_GAP_INVENTORY.md)
 and [Preview.17 notes](docs/RELEASE_NOTES_8.0.1_PREVIEW_17.md).
+
+## Preview and build a law-scaled guided sweep
+
+```csharp
+using OcctSharp;
+
+using Shape spine = ShapeFactory.CreatePolygonWire([new(0, 0, 0), new(0, 0, 10)]);
+using Shape profile = ShapeFactory.CreatePolygonWire(
+    [new(0, 0, 0), new(2, 0, 0), new(2, 2, 0), new(0, 2, 0)], true);
+ScalarLawDefinition scale = ScalarLawDefinition.Linear(new(0, 1), 1, 2);
+using GuidedSweepPlan plan = GuidedSweepPlan.Create(spine, [new(profile)],
+    new() { SolidPolicy = SweepSolidPolicy.RequireSolid }, scaleLaw: scale);
+using AuthoringResult preview = plan.Simulate(5);
+using AuthoringResult result = plan.Build();
+Console.WriteLine(result.Diagnostics.Message);
+ShapeExchange.WriteStep(result.RequireShape(), "guided.step");
+```
+
+Plans own a copied input dependency graph; results and history survive input disposal.
+Laws expose copied definitions, explicit domains and nullable derivatives. Guided
+frames, auxiliary contact, section simulation and compatible loft provenance are
+available alongside per-edge G0/G1/G2 filling, seed/support/UV constraints and copied
+Bezier/B-spline conversion. `ConstrainedFillResult.Accepted` checks validity and every
+required residual; successful kernel execution alone is insufficient. Residuals are
+bounded samples, not global error proofs. Auxiliary guides cannot combine with scale
+laws; keep-contact has a C0 limit. Recipes persist in BinXCAF, not generic STEP/IGES.
+See [Batch S's 40 capabilities](docs/BATCH_S_GUIDED_SWEEP_CONSTRAINED_SURFACE_GAP_INVENTORY.md)
+and [Preview.18 notes](docs/RELEASE_NOTES_8.0.1_PREVIEW_18.md).
 
 ## Read ordinary STEP geometry
 

@@ -1,11 +1,11 @@
 # Current Status
 
 - Last updated: 2026-09-05
-- Batch Q: 40/40 capabilities complete locally as one cross-family wave. Focused 25/25, Release/Debug Generator 91/91 and Runtime 205/205, actual Debug-native 205/205, both clean consumers, clean regeneration, exact inventory and full local release-check pass. Final documentation was repacked and both consumers passed again; this is the whole-batch completion checkpoint.
-- Active execution: continuous Q-W remains CONTINUE. Q is COMMITTED (40/40) as `1a3662a`; R is 40/40 locally validated, completion commit pending. Overall 80/280 locally validated. R's 24 final focused tests, Release/Debug Generator 91/91 and Runtime 229/229, actual Debug-native 229/229, both consumers, clean regeneration and complete local release-check pass. Preview.17 / ABI 1.61 / bridge 0.69.0 is the R checkpoint. Next: S entry delta and full implementation, then T-W. No NuGet publication or GitHub push.
-- Latest preparation workstream: ADR-0083 prepares seven whole 40-capability batches (280 rows). Q/R are locally validated; S-W remain prepared. The preparation-era zero implementation/no-code-change statements below are historical evidence, not the current product state.
+- Batch S: all original 40/40 capabilities complete locally. Focused 44/44 and ten repeats, Release/Debug Generator 91/91 and Runtime 273/273, actual Debug-native 273/273, both clean consumers, 94-file clean regeneration, 68-ID exact accounting and full local release-check pass. Final documentation was repacked and both consumers passed again; all package bytes/checksums/provenance match.
+- Active execution: continuous Q-W remains CONTINUE. Q is COMMITTED as `1a3662a`; R as `86e069c`; S is ready for its whole-batch completion commit. Overall 120/280 locally validated. Preview.18 / ABI 1.62 / bridge 0.70.0 is the S checkpoint. Immediately after committing S, revalidate and implement T, then U-W. No NuGet publication or GitHub push.
+- Latest preparation workstream: ADR-0083 prepares seven whole 40-capability batches (280 rows). Q/R/S are locally validated; T-W remain prepared. The preparation-era zero implementation/no-code-change statements below are historical evidence, not the current product state.
 - Latest architecture workstream: ADR-0081 full historical Native source extraction is complete locally. Release/Debug Generator 91/91 and Runtime 180/180 pass, as does isolated actual Debug-native Runtime 180/180. All 29,402 native exports match and the managed API has zero additions/removals. Batch P remains complete; no API/ABI/package version changes.
-- Current phase: B-R are complete locally. Immediately continue S's preparation delta and complete implementation after the R local commit; no routine reconfirmation, NuGet publication or GitHub push.
+- Current phase: B-S are complete locally. Commit S, then immediately perform T's post-S entry delta and complete implementation; no routine reconfirmation, NuGet publication or GitHub push.
 - Batch B engineering progress: 100% for the accepted local implementation scope (not a claim that every OCCT declaration is a managed API or that public release is ready)
 - Batch C implementation progress: 100% of the finite local implementation denominator; locked wave denominators are 14/14, 7/7, 8/8, and final 15/15 capabilities validated
 - Batch D implementation progress: 24/24 capabilities (100%); ADR-0064's one large cross-family wave passes all implementation, compile, runtime, real-HWND, clean-package, inventory, and local release gates
@@ -23,10 +23,56 @@
 - Batch P preparation and implementation progress: 32/32 capabilities (100%); reproducible 32-root/1,178-candidate preparation, focused 13/13, Generator 91/91, Runtime 177/177, actual Debug-native regression, and complete local release checks pass
 - Batch Q preparation and implementation progress: 40/40 capabilities (100%); exact 52-root preparation, 25 focused tests, full local gates and 106 exact SC-054 transitions pass.
 - Batch R preparation and implementation progress: 40/40 capabilities (100%); exact 46-root entry, 24 focused tests, all local gates and 48 exact SC-055 transitions pass.
-- Complete-migration batch progress: B through R are complete locally; retired B00-B20 and forbidden numbered/dotted labels are not counted as batches.
-- Accepted surface: 16,353 generated manifest IDs plus 863 accepted manual stable IDs; Release/Debug native/managed builds, Generator 91/91, Runtime 229/229, discovery/report determinism, generated dependency closure and dependency profiles 6/6 pass.
-- Last complete full inventory: 116,272 declarations and 7,090 headers have final dispositions; Emitted 16,353, Manual 863, SupportedUnselected 0, Skipped 49,344, Blocked 49,712, pending 0, HD099 0. SHA256 `4E90AB503456D7617CE81E21116CBAA0119042B2E63EEAD9A5C06CD20DE807E6`. 7,058 headers were semantically parsed; 32 retain their previous explicit exclusions. R exact accounting passes for 48 SC-055 transitions and zero other changes; final product regression is separate.
-- Overall state: Preview.17 validates Batch R with twelve module assemblies plus the compatibility/facade assembly, one Native DLL and one shared native runtime package. Identities: package 8.0.1-preview.17, assembly/file 0.1.0.0, ABI 1.61, bridge 0.69.0, schema 1.13. Physical Native DLL splitting, hosted CI, signing, NuGet publication and GitHub push are not included.
+- Batch S preparation and implementation progress: 40/40 capabilities (100%); exact 52-root entry, 44 focused cases, all local gates and 68 exact SC-056 transitions pass.
+- Complete-migration batch progress: B through S are complete locally; retired B00-B20 and forbidden numbered/dotted labels are not counted as batches.
+- Accepted surface: 16,353 generated manifest IDs plus 931 accepted manual stable IDs; Release/Debug native/managed builds, Generator 91/91, Runtime 273/273, discovery/report determinism, generated dependency closure and dependency profiles 6/6 pass.
+- Last complete full inventory: 116,272 declarations and 7,090 headers have final dispositions; Emitted 16,353, Manual 931, SupportedUnselected 0, Skipped 49,344, Blocked 49,644, pending 0, HD099 0. SHA256 `78F5F2380209C17EC0A2C5A164B485B821563757EE073ABC23598F5CB76CE0D1`. 7,058 headers were semantically parsed; 32 retain their previous explicit exclusions. S exact accounting passes for 68 SC-056 transitions and zero other changes; final product regression is separate.
+- Overall state: Preview.18 validates Batch S with twelve module assemblies plus the compatibility/facade assembly, one Native DLL and one shared native runtime package. Identities: package 8.0.1-preview.18, assembly/file 0.1.0.0, ABI 1.62, bridge 0.70.0, schema 1.13. Physical Native DLL splitting, hosted CI, signing, NuGet publication and GitHub push are not included.
+
+### Preview.18 Batch S local validation
+
+- All 40 original capabilities remain in scope. New Geometry laws, Modeling plans
+  and owning results, facade conversion/delivery/review and eight cohesive Native
+  units are implemented; no new project, native DLL or owner registry is introduced.
+- `artifacts/batch-s-residual-safety-build.log` passes Release native/managed compile
+  and deterministic generation. Twelve consecutive full 40-case focused runs pass
+  (`batch-s-safe-1.log` through `batch-s-safe-12.log`). This follows, and does not
+  erase, the earlier intermittent heap failures in `batch-s-repeat-8.log` and the
+  pre-fix isolation run. Unsafe OCCT per-index filling error getters were removed;
+  final-surface residuals are independently measured with explicit sampling limits.
+- Expanded focused regression now passes 44/44 and ten consecutive repeats
+  (`batch-s-stress-1.log` through `batch-s-stress-10.log`), including 48 low-sampling/
+  high-iteration G2 solves per run, punctual-loft endpoint provenance and foreign-review
+  atomicity. All 39 private headers pass standalone `/Zs /W4 /WX`; six layout negative
+  checks pass. Managed comparison against R adds 500 signatures and removes none.
+  Preview.18 / ABI 1.62 / bridge 0.70.0 are synchronized; bundled Release bridge
+  SHA256 is `B0B8BB697CF865C8D2F9E8A04269C02329D6916CD73EE31DF70CBDEAA5EBCB8E`.
+  All 62 DLLs and 11 notices/license files match the manifest. Release Generator
+  91/91 and Runtime 273/273 pass; isolated actual Debug-native also passes 273/273.
+  Debug bridge SHA256: `5417E7F90A3867CDA10481886BB2B6537B72DF6165041F662FC5548D2E6645DA`.
+- Native compatibility passes with 29,443 identical Release/Debug export names:
+  all 29,432 R names plus nine C functions and two MSVC/OCCT default-construction
+  helper symbols (`??_FBRepOffsetAPI_MakeFilling@@QEAAXXZ` and
+  `??_FGeomConvert_CompCurveToBSplineCurve@@QEAAXXZ`). Helpers are not managed APIs.
+  Exact-ID verifier negatives pass 3/3 with all inputs unchanged.
+- The first release-check failed at a flaky existing R wrong-thread fixture:
+  Task.Run plus synchronous waiting could inline on the creating thread. It now
+  uses an explicit distinct Thread; targeted Debug 7/7 passes. Final full gate
+  rerun is `artifacts/batch-s-release-check-final.log`. Final actual Debug-native
+  passes 273/273 again in `artifacts/batch-s-validation/actual-debug-final/result.json`.
+  Release/Debug Generator 91/91 and Runtime 273/273, 14 package asset audits, both
+  clean consumers, and cold-source Generator 91/91 plus Runtime 273/273 pass. All
+  94 generated files are byte-identical; only the known temporary-directory MSB8029
+  advisory is emitted by the fresh build. Console smoke and three inspected real-HWND
+  captures pass. Final full inventory and exact 68-ID accounting pass with no other
+  changes; three negative cases pass with original inputs unchanged.
+- Final documentation repack and both consumers pass in `artifacts/batch-s-package-final.log`.
+  Package-content verification confirms all 172 stable documents, 73 runtime/license
+  files, five checksums and final provenance. Final facade package SHA256 is
+  `7EFC4F7CC249B142E6C705473A499612B2F08C1F635C861298C9B320A732EE5A`.
+  Frozen S exit inventory/API/Release bridge are in `artifacts/preparation-baselines/preview18-batch-s/`.
+- S's whole-batch local validation is complete; its commit is the immediate next action.
+  Active Q-W remains CONTINUE at 120/280; T-W follow without routine confirmation.
 
 ### Preview.17 Batch R local validation
 
@@ -1704,8 +1750,8 @@ are excluded.
 ## Next tasks
 
 1. Preserve the completed ADR-0081 source boundaries and one native DLL in future work.
-2. Continue the active BATCH_CONTINUOUS_EXECUTION run: Q/R are locally validated;
-   after R's completion commit enter S -> T -> U -> V -> W. Revalidate each entry baseline, finish
+2. Continue the active BATCH_CONTINUOUS_EXECUTION run: Q/R/S are locally validated;
+   after S's completion commit enter T -> U -> V -> W. Revalidate each entry baseline, finish
    all 40 capabilities and gates, commit locally and proceed without routine confirmation.
    Preserve genuine external/authority stop boundaries; a local checkpoint is not a stop.
 3. Keep local pack/check/commit separate from publication. No NuGet upload or GitHub
@@ -1759,17 +1805,17 @@ The exact baseline hashes are recorded in the Preview.15 completion section abov
 ## Migration loop state
 
 ```text
-LOOP_STATE: CHECKPOINT_COMPLETE
+LOOP_STATE: ACTIVE_CONTINUOUS_RUN
 CURRENT_WORKSTREAM: ADR-0083 CONTINUOUS Q-W IMPLEMENTATION
-CURRENT_PRODUCT_BASELINE: B THROUGH R LOCALLY VALIDATED; Q COMMITTED 1a3662a; R COMPLETION COMMIT PENDING
+CURRENT_PRODUCT_BASELINE: B THROUGH S LOCALLY VALIDATED; Q COMMITTED 1a3662a; R COMMITTED 86e069c; S READY TO COMMIT
 ARCHITECTURE_PROGRESS: COMPLETE; INDEPENDENT COMPILE, ABI, RUNTIME, PACKAGE AND CLEAN-SOURCE GATES PASS
-PREPARATION_PROGRESS: Q/R/S/T/U/V/W 7/7; 40 CAPABILITIES EACH; LOCALLY VALIDATED 80/280
+PREPARATION_PROGRESS: Q/R/S/T/U/V/W 7/7; 40 CAPABILITIES EACH; LOCALLY VALIDATED 120/280
 CONTINUOUS_RUN: CONTINUE; Q -> R -> S -> T -> U -> V -> W
-NEXT_ACTION: COMMIT R, REVALIDATE S AND IMPLEMENT; FULL GATES AND LOCAL COMMIT PER BATCH, THEN ADVANCE WITHOUT ROUTINE CONFIRMATION
-NEXT_PRODUCT_BATCH: S; ALL FOLLOWING SCOPES REQUIRE EXPLICIT BASELINE DELTAS AFTER PRECEDING COMMITS
-BINDING_COVERAGE: 16353 GENERATED PLUS 863 ACCEPTED MANUAL STABLE IDS
-FULL_PROFILE_ACCOUNTING: 116272 CLASSIFIED; 49712 BLOCKED; 49344 SKIPPED; ZERO PENDING/HD099
-LAST_COMPLETED_PRODUCT_VALIDATION: PREVIEW.17 GENERATOR 91/91, RUNTIME 229/229, FOCUSED R 24/24, ACTUAL DEBUG NATIVE 229/229, CLEAN CONSUMERS AND LOCAL RELEASE GATES PASS
+NEXT_ACTION: LOCAL S COMPLETION COMMIT; THEN T ENTRY DELTA AND WHOLE-BATCH IMPLEMENTATION WITHOUT ROUTINE CONFIRMATION
+NEXT_PRODUCT_BATCH: T; ALL FOLLOWING SCOPES REQUIRE EXPLICIT BASELINE DELTAS AFTER PRECEDING COMMITS
+BINDING_COVERAGE: 16353 GENERATED PLUS 931 ACCEPTED MANUAL STABLE IDS
+FULL_PROFILE_ACCOUNTING: 116272 CLASSIFIED; 49644 BLOCKED; 49344 SKIPPED; ZERO PENDING/HD099
+LAST_COMPLETED_PRODUCT_VALIDATION: PREVIEW.18 GENERATOR 91/91, RUNTIME 273/273, FOCUSED S 44/44 PLUS TEN REPEATS, ACTUAL DEBUG NATIVE 273/273, FINAL CLEAN CONSUMERS/PACKAGE BYTES/LOCAL RELEASE GATES PASS
 LAST_COMPLETED_ARCHITECTURE_VALIDATION: ADR-0081 GENERATOR 91/91, RUNTIME 180/180, REAL DEBUG NATIVE 180/180; ZERO API/EXPORT CHANGES
 PUBLICATION: NOT RUN; NO NUGET UPLOAD OR GITHUB PUSH
 ```

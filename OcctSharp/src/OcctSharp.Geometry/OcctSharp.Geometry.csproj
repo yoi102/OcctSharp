@@ -2,6 +2,7 @@
   <Import Project="..\OcctSharp.Module.props" />
   <PropertyGroup><Description>OCCT geometry bindings for OcctSharp.</Description></PropertyGroup>
   <ItemGroup>
+    <Compile Include="Laws\**\*.cs" />
     <Compile Include="..\OcctSharp\Generated\Geometry\**\*.cs" Link="Generated\%(RecursiveDir)%(Filename)%(Extension)" />
     <Compile Include="..\OcctSharp\GpPoint.cs" Link="GpPoint.cs" />
   </ItemGroup>

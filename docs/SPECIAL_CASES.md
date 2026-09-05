@@ -1,5 +1,43 @@
 # Special Cases
 
+## SC-056: Copied laws, guided sweeps, constrained filling and patch provenance
+
+- Status: all 40 Batch S capabilities implemented and locally validated under ADR-0086;
+  focused 44/44 and ten repeats, Release/Debug and actual Debug-native 273/273,
+  full local release-check and exact accounting pass. Final package bytes in STATUS.
+- Scope: 68 directly invoked Blocked overloads in
+  [batch-s-manual-calls.json](../OcctSharp/config/batches/batch-s-manual-calls.json).
+  Exact reconciliation with frozen R passes: all 68 transitions and no other changes.
+- Geometry owns copied scalar definitions; Modeling owns input-graph snapshots and
+  owning authoring results. Existing FeatureResult registration/release is reused
+  only for bounded native result extraction; no new registry or native owner family.
+- Law_BSpFunc is an explicit dependency refinement: Law_BSpline does not inherit
+  Law_Function. Conservative control-hull positivity and sampled extrema are distinct.
+- BRepOffsetAPI_MakeFilling's OCCT 8.0.1 signature accepts GeomAbs_Shape, but
+  BRepFill_Filling forwards its numeric value to BRepFill_CurveConstraint and
+  GeomPlate_PointConstraint as derivative order 0/1/2. GeomAbs_G2 is 3 and fails.
+  The bridge therefore maps the public G0/G1/G2 request to those actual integer
+  orders. Failing-before evidence is `artifacts/batch-s-initial-focused.log`.
+- Never call OCCT 8.0.1 per-index G0Error/G1Error/G2Error: GeomPlate allocates the
+  initial curve sample count but EcartContraintesMil uses refined samples, causing
+  possible overwrites or uninitialized reads. These three overloads remain Blocked.
+  Independent bounded final-surface position/normal/curvature-tensor measurements
+  cover edges and points; unavailable required derivatives fail acceptance. This
+  is sampled acceptance, not a global error proof. The earlier intermittent heap
+  failure is retained in `artifacts/batch-s-repeat-8.log`; repaired repeated-run
+  evidence is `artifacts/batch-s-safe-1.log` through `batch-s-safe-12.log`.
+- InputGraph restores source TShape.Free after temporary compound insertion on both
+  success and failure. Loft uses explicit BRepFill_CompatibleWires working sections
+  and composes exact compatibility/loft history, not ThruSections input Wires().
+- Border contact requires one nondegenerate planar section before SDK Add, which
+  otherwise dereferences an absent plane. Coons boundaries are copied and exactly
+  degree-elevated to cubic; zero-speed join derivatives remain unavailable.
+- Default XdeDocument.Save delegates to the existing Unicode-aware BinXCAF format
+  path, avoiding a narrow-path temporary extension that OCCT would silently append.
+- Every listed blocked overload is reconciled exactly against R's frozen exit
+  inventory; listing a root here is not accepting all its declarations.
+
+
 ## SC-055: Immutable attributed mesh authoring and discrete delivery
 
 - Status: implemented for the unchanged 40-row R closure; full local gates in progress.
