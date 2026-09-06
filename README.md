@@ -363,6 +363,8 @@ SDK or native build toolchain.
 | `OcctSharp.Samples` | Interactive console menu covering solid creation, STEP/STL/IGES export, transformed XDE STEP assemblies, a native viewer window, and a complete BREP/topology/mesh/XDE workflow. It also provides the non-interactive `--smoke` clone/runtime check. | [Console sample README](https://github.com/yoi102/OcctSharp/blob/main/OcctSharp/samples/OcctSharp.Samples/README.md) |
 | `OcctSharpViewer.Wpf` | `CommunityToolkit.Mvvm` WPF viewer for STEP/STP and IGES/IGS with XDE presentation colors, standard views, shaded/wireframe display, selection, rotation, pan, and zoom. | [WPF viewer README](https://github.com/yoi102/OcctSharp/blob/main/OcctSharp/samples/OcctSharpViewer.Wpf/README.md) |
 
+https://github.com/user-attachments/assets/2f3e5b9b-bc01-4aeb-b36e-64ade2463fe4
+
 Run the console sample from the inner workspace:
 
 ```powershell
