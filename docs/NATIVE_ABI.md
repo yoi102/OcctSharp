@@ -1,5 +1,15 @@
 # Native ABI
 
+## ABI 1.69 / Preview.25 (Batch Z)
+
+Bridge 0.77.0 adds occtsharp_value_ constructor/instance exports. Receivers cross as
+explicit C records by value; mutations and non-void results use checked output pointers.
+Native exceptions map to the existing status/error channel. No output is published as
+successful until all conversions finish; managed ref receivers change only on success.
+Four new transform records use six/twelve row-major doubles, sized 48/96 bytes.
+Existing ABI signatures, struct layouts and opaque ownership remain unchanged.
+
+
 ## ABI 1.68 / Preview.24 (Batch Y)
 
 Bridge 0.76.0 adds checked geometric value inputs and copied results. Thirty fixed C

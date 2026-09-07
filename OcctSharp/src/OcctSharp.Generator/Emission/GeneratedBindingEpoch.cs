@@ -8,9 +8,10 @@ internal static class GeneratedBindingEpoch
 {
     private static readonly HashSet<string> Preview22Ids = ReadBaseline("preview22-stable-ids.json");
     private static readonly HashSet<string> Preview23Additions = ReadBaseline("preview23-added-stable-ids.json");
+    private static readonly HashSet<string> Preview24Additions = ReadBaseline("preview24-added-stable-ids.json");
 
     internal static int Order(BindingDeclaration declaration) =>
-        Preview22Ids.Contains(declaration.StableId) ? 0 : Preview23Additions.Contains(declaration.StableId) ? 1 : 2;
+        Preview22Ids.Contains(declaration.StableId) ? 0 : Preview23Additions.Contains(declaration.StableId) ? 1 : Preview24Additions.Contains(declaration.StableId) ? 2 : 3;
 
     private static HashSet<string> ReadBaseline(string resource)
     {

@@ -5,31 +5,30 @@ versioned native C ABI, generated low-level bindings, and friendly managed CAD A
 modeling, STEP/IGES/STL exchange, XDE assemblies and metadata, meshing, inspection, and
 Windows visualization.
 
-Current local preview target: `8.0.1-preview.24` for Windows x64 (validation status in
+Current local preview target: `8.0.1-preview.25` for Windows x64 (validation status in
 [STATUS](docs/STATUS.md)). The NuGet graph contains 12 managed
 modules, the `OcctSharp` compatibility/facade package, and one shared
 `OcctSharp.Native.win-x64` runtime package. The native package places the complete
 62-DLL runtime in the application's `occt/` directory; no machine-wide OCCT installation
 or `PATH` change is required.
 
-Preview.23 expands generated numeric and copied-reference bindings across existing
-modules, including image sizes, document bytes, mesh flags and retained runtime types.
-See [Batch X changes](docs/RELEASE_NOTES_8.0.1_PREVIEW_23.md) for scope and limitations.
+Preview.25 adds copied geometric constructors, queries, mutations and 2D/3D transforms.
+See [Batch Z changes](docs/RELEASE_NOTES_8.0.1_PREVIEW_25.md) for scope and limitations.
 
 ## Install
 
 ```powershell
-dotnet add package OcctSharp --version 8.0.1-preview.24 --source ./OcctSharp/artifacts/packages
+dotnet add package OcctSharp --version 8.0.1-preview.25 --source ./OcctSharp/artifacts/packages
 ```
 
 A narrow consumer can reference a module directly, for example:
 
 ```powershell
-dotnet add package OcctSharp.Modeling --version 8.0.1-preview.24 --source ./OcctSharp/artifacts/packages
+dotnet add package OcctSharp.Modeling --version 8.0.1-preview.25 --source ./OcctSharp/artifacts/packages
 ```
 
 The supported runtime baseline is .NET 10, Windows x64, and OCCT 8.0.1.
-Preview.23 is local-only; it is not published on NuGet.org. Create the
+Preview.25 is local-only; it is not published on NuGet.org. Create the
 local package feed with `OcctSharp/eng/pack.ps1` using the contributor toolchain, or run
 the repository samples directly with the committed runtime.
 

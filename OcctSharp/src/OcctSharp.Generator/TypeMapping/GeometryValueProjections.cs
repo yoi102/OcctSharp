@@ -59,6 +59,10 @@ internal static class GeometryValueProjections
         Primitive("gp_Cone", "Cone", "Axis3", "Position()", D("SemiAngle"), D("ReferenceRadius", "RefRadius()")),
         Primitive("gp_Sphere", "Sphere", "Axis3", "Position()", D("Radius")),
         Primitive("gp_Torus", "Torus", "Axis3", "Position()", D("MajorRadius"), D("MinorRadius")),
+        Transform("gp_Trsf2d", "Transform2d", 2, false),
+        Transform("gp_Trsf", "Transform3d", 3, false),
+        Transform("gp_GTrsf2d", "AffineTransform2d", 2, true),
+        Transform("gp_GTrsf", "AffineTransform3d", 3, true),
     ];
 
     internal static bool TryMap(string nativeType, out BindingTypeProjection? projection)
@@ -99,5 +103,29 @@ internal static class GeometryValueProjections
             ? "return gp_Mat2d(gp_XY(Check(value.M11), Check(value.M21)), gp_XY(Check(value.M12), Check(value.M22)));"
             : "return " + native + "(" + string.Join(", ", fields.Select(field => "Check(value." + field.Name + ")")) + ");";
         return new(native, name, fields, construct);
+    }
+
+    private static GeometryValueProjection Transform(string native, string name, int dimension, bool affine)
+    {
+        GeometryValueField[] fields = Enumerable.Range(1, dimension).SelectMany(row =>
+            Enumerable.Range(1, dimension + 1).Select(column => D($"M{row}{column}", $"Value({row}, {column})"))).ToArray();
+        string construct;
+        if (affine)
+        {
+            construct = native + " result;\n" + string.Join("\n", fields.Select(field =>
+                $"result.SetValue({field.Name[1]}, {field.Name[2]}, Check(value.{field.Name}));"));
+            // Recover a canonical similarity form when coefficients allow it. Otherwise
+            // retain the general matrix, including shear and singular transforms.
+            string similarity = dimension == 2 ? "Transform2d" : "Transform3d";
+            construct += "\ntry { return " + native + "(ToNative(OcctSharp_Value_" + similarity + "{"
+                + string.Join(", ", fields.Select(field => "value." + field.Name))
+                + "})); } catch (const Standard_Failure&) { /* general affine coefficients */ }";
+        }
+        else
+        {
+            construct = native + " result;\nresult.SetValues(" + string.Join(", ", fields.Select(field => "Check(value." + field.Name + ")")) + ");\n"
+                + string.Join("\n", fields.Select(field => $"if (!std::isfinite(result.{field.Accessor}) || std::abs(result.{field.Accessor} - value.{field.Name}) > 1e-12 * std::fmax(1.0, std::abs(value.{field.Name}))) throw Standard_DomainError(\"Transform is not a similarity matrix.\");"));
+        }
+        return new(native, name, fields, construct + "\nreturn result;");
     }
 }

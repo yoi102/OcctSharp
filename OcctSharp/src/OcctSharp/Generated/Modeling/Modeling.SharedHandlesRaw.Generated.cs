@@ -321,6 +321,7 @@
 // Source: c:@S@BRepTest_DrawableHistory@F@DynamicType#1
 // Source: c:@S@BRepTools_CopyModification@F@BRepTools_CopyModification#b#b#
 // Source: c:@S@BRepTools_CopyModification@F@DynamicType#1
+// Source: c:@S@BRepTools_GTrsfModification@F@BRepTools_GTrsfModification#&1$@S@gp_GTrsf#
 // Source: c:@S@BRepTools_GTrsfModification@F@DynamicType#1
 // Source: c:@S@BRepTools_History@F@BRepTools_History#
 // Source: c:@S@BRepTools_History@F@Clear#
@@ -336,6 +337,7 @@
 // Source: c:@S@BRepTools_ReShape@F@Clear#
 // Source: c:@S@BRepTools_ReShape@F@DynamicType#1
 // Source: c:@S@BRepTools_ReShape@F@History#1
+// Source: c:@S@BRepTools_TrsfModification@F@BRepTools_TrsfModification#&1$@S@gp_Trsf#
 // Source: c:@S@BRepTools_TrsfModification@F@DynamicType#1
 // Source: c:@S@BRepTopAdaptor_HVertex@F@DynamicType#1
 // Source: c:@S@BRepTopAdaptor_HVertex@F@IsSame#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_HVertex#
@@ -1245,6 +1247,7 @@
 // Source: c:@S@ShapeCustom_SweptToElementary@F@DynamicType#1
 // Source: c:@S@ShapeCustom_SweptToElementary@F@ShapeCustom_SweptToElementary#
 // Source: c:@S@ShapeCustom_TrsfModification@F@DynamicType#1
+// Source: c:@S@ShapeCustom_TrsfModification@F@ShapeCustom_TrsfModification#&1$@S@gp_Trsf#
 // Source: c:@S@ShapeExtend_BasicMsgRegistrator@F@DynamicType#1
 // Source: c:@S@ShapeExtend_BasicMsgRegistrator@F@ShapeExtend_BasicMsgRegistrator#
 // Source: c:@S@ShapeExtend_ComplexCurve@F@CheckConnectivity#d#
@@ -1258,6 +1261,7 @@
 // Source: c:@S@ShapeExtend_ComplexCurve@F@IsPeriodic#1
 // Source: c:@S@ShapeExtend_ComplexCurve@F@LastParameter#1
 // Source: c:@S@ShapeExtend_ComplexCurve@F@ReversedParameter#d#1
+// Source: c:@S@ShapeExtend_ComplexCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@ShapeExtend_CompositeSurface@F@CheckConnectivity#d#
 // Source: c:@S@ShapeExtend_CompositeSurface@F@ComputeJointValues#$@E@ShapeExtend_Parametrisation#
 // Source: c:@S@ShapeExtend_CompositeSurface@F@Continuity#1
@@ -1283,6 +1287,7 @@
 // Source: c:@S@ShapeExtend_CompositeSurface@F@SetUFirstValue#d#
 // Source: c:@S@ShapeExtend_CompositeSurface@F@SetVFirstValue#d#
 // Source: c:@S@ShapeExtend_CompositeSurface@F@ShapeExtend_CompositeSurface#
+// Source: c:@S@ShapeExtend_CompositeSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@ShapeExtend_CompositeSurface@F@UGlobalToLocal#I#I#d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@UIso#d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@UJointValue#I#1
@@ -1647,6 +1652,9 @@
 // Source: c:@S@TopLoc_Datum3D@F@DynamicType#1
 // Source: c:@S@TopLoc_Datum3D@F@Form#1
 // Source: c:@S@TopLoc_Datum3D@F@TopLoc_Datum3D#
+// Source: c:@S@TopLoc_Datum3D@F@TopLoc_Datum3D#&1$@S@gp_Trsf#
+// Source: c:@S@TopLoc_Datum3D@F@Transformation#1
+// Source: c:@S@TopLoc_Datum3D@F@Trsf#1
 // Source: c:@S@TopLoc_SListNodeOfItemLocation@F@DynamicType#1
 // Source: c:@S@TopOpeBRepBuild_HBuilder@F@Clear#
 // Source: c:@S@TopOpeBRepBuild_HBuilder@F@DataStructure#1
@@ -6488,6 +6496,10 @@ internal static partial class ModelingGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void BRepToolsCopyModificationRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_brep_tools_gtrsf_modification_create_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus BRepToolsGTrsfModificationCreate0(global::OcctSharp.Values.AffineTransform3d t, out nint handle);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_brep_tools_gtrsf_modification_method_dynamic_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus BRepToolsGTrsfModificationMethodDynamicType0(BRepToolsGTrsfModificationHandle handle, out nint handleValue);
@@ -6642,6 +6654,10 @@ internal static partial class ModelingGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_brep_tools_re_shape_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void BRepToolsReShapeRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_brep_tools_trsf_modification_create_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus BRepToolsTrsfModificationCreate0(global::OcctSharp.Values.Transform3d t, out nint handle);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_brep_tools_trsf_modification_method_dynamic_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -11795,6 +11811,10 @@ internal static partial class ModelingGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void ShapeCustomSweptToElementaryRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_shape_custom_trsf_modification_create_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ShapeCustomTrsfModificationCreate0(global::OcctSharp.Values.Transform3d t, out nint handle);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_shape_custom_trsf_modification_method_dynamic_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ShapeCustomTrsfModificationMethodDynamicType0(ShapeCustomTrsfModificationHandle handle, out nint handleValue);
@@ -11888,6 +11908,10 @@ internal static partial class ModelingGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_shape_extend_complex_curve_method_reversed_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ShapeExtendComplexCurveMethodReversedParameter0(ShapeExtendComplexCurveHandle handle, double u, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_shape_extend_complex_curve_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ShapeExtendComplexCurveMethodTransform0(ShapeExtendComplexCurveHandle handle, global::OcctSharp.Values.Transform3d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_shape_extend_complex_curve_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -12007,6 +12031,10 @@ internal static partial class ModelingGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_shape_extend_composite_surface_method_set_vfirst_value_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus ShapeExtendCompositeSurfaceMethodSetVFirstValue0(ShapeExtendCompositeSurfaceHandle handle, double vFirst);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_shape_extend_composite_surface_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus ShapeExtendCompositeSurfaceMethodTransform0(ShapeExtendCompositeSurfaceHandle handle, global::OcctSharp.Values.Transform3d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_shape_extend_composite_surface_method_uglobal_to_local_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -14292,6 +14320,10 @@ internal static partial class ModelingGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus TopLocDatum3DCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_top_loc_datum3_d_create_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus TopLocDatum3DCreate1(global::OcctSharp.Values.Transform3d t, out nint handle);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_top_loc_datum3_d_method_dynamic_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus TopLocDatum3DMethodDynamicType0(TopLocDatum3DHandle handle, out nint handleValue);
@@ -14299,6 +14331,14 @@ internal static partial class ModelingGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_top_loc_datum3_d_method_form_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus TopLocDatum3DMethodForm0(TopLocDatum3DHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_top_loc_datum3_d_method_transformation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus TopLocDatum3DMethodTransformation0(TopLocDatum3DHandle handle, out global::OcctSharp.Values.Transform3d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_top_loc_datum3_d_method_trsf_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus TopLocDatum3DMethodTrsf0(TopLocDatum3DHandle handle, out global::OcctSharp.Values.Transform3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_top_loc_datum3_d_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

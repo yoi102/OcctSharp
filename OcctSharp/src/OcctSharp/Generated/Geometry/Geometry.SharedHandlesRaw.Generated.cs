@@ -434,6 +434,7 @@
 // Source: c:@S@Bisector_BisecAna@F@ReversedParameter#d#1
 // Source: c:@S@Bisector_BisecAna@F@SetTrim#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#
 // Source: c:@S@Bisector_BisecAna@F@SetTrim#d#d#
+// Source: c:@S@Bisector_BisecAna@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Bisector_BisecCC@F@Bisector_BisecCC#
 // Source: c:@S@Bisector_BisecCC@F@Bisector_BisecCC#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#S0_#d#d#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@Bisector_BisecCC@F@ChangeGuide#1
@@ -462,6 +463,7 @@
 // Source: c:@S@Bisector_BisecCC@F@Perform#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#S0_#d#d#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@Bisector_BisecCC@F@Reverse#
 // Source: c:@S@Bisector_BisecCC@F@ReversedParameter#d#1
+// Source: c:@S@Bisector_BisecCC@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Bisector_BisecPC@F@Bisector_BisecPC#
 // Source: c:@S@Bisector_BisecPC@F@Bisector_BisecPC#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@S@gp_Pnt2d#d#d#
 // Source: c:@S@Bisector_BisecPC@F@Bisector_BisecPC#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@S@gp_Pnt2d#d#d#d#
@@ -490,6 +492,7 @@
 // Source: c:@S@Bisector_BisecPC@F@Perform#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@S@gp_Pnt2d#d#d#
 // Source: c:@S@Bisector_BisecPC@F@Reverse#
 // Source: c:@S@Bisector_BisecPC@F@ReversedParameter#d#1
+// Source: c:@S@Bisector_BisecPC@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Bisector_Curve@F@DynamicType#1
 // Source: c:@S@Extrema_ExtPExtS@F@DynamicType#1
 // Source: c:@S@Extrema_ExtPExtS@F@Extrema_ExtPExtS#
@@ -621,6 +624,7 @@
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@Reverse#
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@StartPoint#1
+// Source: c:@S@Geom2dEval_AHTBezierCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@Copy#1
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@DynamicType#1
@@ -637,6 +641,7 @@
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@Position#1
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@Reverse#
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@ReversedParameter#d#1
+// Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@Copy#1
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@DynamicType#1
@@ -652,6 +657,7 @@
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@Radius#1
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@Reverse#
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@ReversedParameter#d#1
+// Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@Copy#1
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@DynamicType#1
@@ -668,6 +674,7 @@
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@Reverse#
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@Scale#1
+// Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Amplitude#1
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Copy#1
@@ -685,6 +692,7 @@
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Position#1
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Reverse#
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@ReversedParameter#d#1
+// Source: c:@S@Geom2dEval_SineWaveCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2dEval_TBezierCurve@F@Alpha#1
 // Source: c:@S@Geom2dEval_TBezierCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_TBezierCurve@F@Copy#1
@@ -703,6 +711,7 @@
 // Source: c:@S@Geom2dEval_TBezierCurve@F@Reverse#
 // Source: c:@S@Geom2dEval_TBezierCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2dEval_TBezierCurve@F@StartPoint#1
+// Source: c:@S@Geom2dEval_TBezierCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_AxisPlacement@F@Angle#&1$@N@opencascade@S@handle>#$@S@Geom2d_AxisPlacement#1
 // Source: c:@S@Geom2d_AxisPlacement@F@Ax2d#1
 // Source: c:@S@Geom2d_AxisPlacement@F@Copy#1
@@ -716,6 +725,7 @@
 // Source: c:@S@Geom2d_AxisPlacement@F@SetAxis#&1$@S@gp_Ax2d#
 // Source: c:@S@Geom2d_AxisPlacement@F@SetDirection#&1$@S@gp_Dir2d#
 // Source: c:@S@Geom2d_AxisPlacement@F@SetLocation#&1$@S@gp_Pnt2d#
+// Source: c:@S@Geom2d_AxisPlacement@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_BSplineCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom2d_BSplineCurve@F@Continuity#1
 // Source: c:@S@Geom2d_BSplineCurve@F@Copy#1
@@ -765,6 +775,7 @@
 // Source: c:@S@Geom2d_BSplineCurve@F@SetPole#I#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@Geom2d_BSplineCurve@F@SetWeight#I#d#
 // Source: c:@S@Geom2d_BSplineCurve@F@StartPoint#1
+// Source: c:@S@Geom2d_BSplineCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_BSplineCurve@F@Weight#I#1
 // Source: c:@S@Geom2d_BezierCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom2d_BezierCurve@F@Continuity#1
@@ -796,6 +807,7 @@
 // Source: c:@S@Geom2d_BezierCurve@F@SetPole#I#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@Geom2d_BezierCurve@F@SetWeight#I#d#
 // Source: c:@S@Geom2d_BezierCurve@F@StartPoint#1
+// Source: c:@S@Geom2d_BezierCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_BezierCurve@F@Weight#I#1
 // Source: c:@S@Geom2d_BoundedCurve@F@DynamicType#1
 // Source: c:@S@Geom2d_CartesianPoint@F@Copy#1
@@ -807,6 +819,7 @@
 // Source: c:@S@Geom2d_CartesianPoint@F@SetPnt2d#&1$@S@gp_Pnt2d#
 // Source: c:@S@Geom2d_CartesianPoint@F@SetX#d#
 // Source: c:@S@Geom2d_CartesianPoint@F@SetY#d#
+// Source: c:@S@Geom2d_CartesianPoint@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_CartesianPoint@F@X#1
 // Source: c:@S@Geom2d_CartesianPoint@F@Y#1
 // Source: c:@S@Geom2d_Circle@F@Circ2d#1
@@ -825,6 +838,7 @@
 // Source: c:@S@Geom2d_Circle@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_Circle@F@SetCirc2d#&1$@S@gp_Circ2d#
 // Source: c:@S@Geom2d_Circle@F@SetRadius#d#
+// Source: c:@S@Geom2d_Circle@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_Conic@F@Continuity#1
 // Source: c:@S@Geom2d_Conic@F@DynamicType#1
 // Source: c:@S@Geom2d_Conic@F@IsCN#I#1
@@ -839,8 +853,10 @@
 // Source: c:@S@Geom2d_Conic@F@YAxis#1
 // Source: c:@S@Geom2d_Curve@F@DN#d#I#1
 // Source: c:@S@Geom2d_Curve@F@DynamicType#1
+// Source: c:@S@Geom2d_Curve@F@ParametricTransformation#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Curve@F@Period#1
 // Source: c:@S@Geom2d_Curve@F@Reversed#1
+// Source: c:@S@Geom2d_Curve@F@TransformedParameter#d#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Direction@F@Copy#1
 // Source: c:@S@Geom2d_Direction@F@Crossed#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
 // Source: c:@S@Geom2d_Direction@F@Dir2d#1
@@ -853,6 +869,7 @@
 // Source: c:@S@Geom2d_Direction@F@SetX#d#
 // Source: c:@S@Geom2d_Direction@F@SetY#d#
 // Source: c:@S@Geom2d_Direction@F@SquareMagnitude#1
+// Source: c:@S@Geom2d_Direction@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_Ellipse@F@Copy#1
 // Source: c:@S@Geom2d_Ellipse@F@Directrix1#1
 // Source: c:@S@Geom2d_Ellipse@F@Directrix2#1
@@ -877,6 +894,7 @@
 // Source: c:@S@Geom2d_Ellipse@F@SetElips2d#&1$@S@gp_Elips2d#
 // Source: c:@S@Geom2d_Ellipse@F@SetMajorRadius#d#
 // Source: c:@S@Geom2d_Ellipse@F@SetMinorRadius#d#
+// Source: c:@S@Geom2d_Ellipse@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_Geometry@F@DynamicType#1
 // Source: c:@S@Geom2d_Geometry@F@Mirror#&1$@S@gp_Ax2d#
 // Source: c:@S@Geom2d_Geometry@F@Mirror#&1$@S@gp_Pnt2d#
@@ -886,6 +904,7 @@
 // Source: c:@S@Geom2d_Geometry@F@Rotated#&1$@S@gp_Pnt2d#d#1
 // Source: c:@S@Geom2d_Geometry@F@Scale#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@Geom2d_Geometry@F@Scaled#&1$@S@gp_Pnt2d#d#1
+// Source: c:@S@Geom2d_Geometry@F@Transformed#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Geometry@F@Translate#&1$@S@gp_Pnt2d#S0_#
 // Source: c:@S@Geom2d_Geometry@F@Translate#&1$@S@gp_Vec2d#
 // Source: c:@S@Geom2d_Geometry@F@Translated#&1$@S@gp_Pnt2d#S0_#1
@@ -920,6 +939,7 @@
 // Source: c:@S@Geom2d_Hyperbola@F@SetHypr2d#&1$@S@gp_Hypr2d#
 // Source: c:@S@Geom2d_Hyperbola@F@SetMajorRadius#d#
 // Source: c:@S@Geom2d_Hyperbola@F@SetMinorRadius#d#
+// Source: c:@S@Geom2d_Hyperbola@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_Line@F@Continuity#1
 // Source: c:@S@Geom2d_Line@F@Copy#1
 // Source: c:@S@Geom2d_Line@F@Direction#1
@@ -936,6 +956,7 @@
 // Source: c:@S@Geom2d_Line@F@LastParameter#1
 // Source: c:@S@Geom2d_Line@F@Lin2d#1
 // Source: c:@S@Geom2d_Line@F@Location#1
+// Source: c:@S@Geom2d_Line@F@ParametricTransformation#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Line@F@Position#1
 // Source: c:@S@Geom2d_Line@F@Reverse#
 // Source: c:@S@Geom2d_Line@F@ReversedParameter#d#1
@@ -943,6 +964,8 @@
 // Source: c:@S@Geom2d_Line@F@SetLin2d#&1$@S@gp_Lin2d#
 // Source: c:@S@Geom2d_Line@F@SetLocation#&1$@S@gp_Pnt2d#
 // Source: c:@S@Geom2d_Line@F@SetPosition#&1$@S@gp_Ax2d#
+// Source: c:@S@Geom2d_Line@F@Transform#&1$@S@gp_Trsf2d#
+// Source: c:@S@Geom2d_Line@F@TransformedParameter#d#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_OffsetCurve@F@BasisCurve#1
 // Source: c:@S@Geom2d_OffsetCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom2d_OffsetCurve@F@Continuity#1
@@ -960,12 +983,15 @@
 // Source: c:@S@Geom2d_OffsetCurve@F@IsPeriodic#1
 // Source: c:@S@Geom2d_OffsetCurve@F@LastParameter#1
 // Source: c:@S@Geom2d_OffsetCurve@F@Offset#1
+// Source: c:@S@Geom2d_OffsetCurve@F@ParametricTransformation#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_OffsetCurve@F@Period#1
 // Source: c:@S@Geom2d_OffsetCurve@F@Reverse#
 // Source: c:@S@Geom2d_OffsetCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_OffsetCurve@F@SetBasisCurve#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#b#
 // Source: c:@S@Geom2d_OffsetCurve@F@SetEvalRepresentation#&1$@N@opencascade@S@handle>#$@N@Geom2dEval_RepCurveDesc@S@Base#
 // Source: c:@S@Geom2d_OffsetCurve@F@SetOffsetValue#d#
+// Source: c:@S@Geom2d_OffsetCurve@F@Transform#&1$@S@gp_Trsf2d#
+// Source: c:@S@Geom2d_OffsetCurve@F@TransformedParameter#d#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Parabola@F@Copy#1
 // Source: c:@S@Geom2d_Parabola@F@Directrix#1
 // Source: c:@S@Geom2d_Parabola@F@DynamicType#1
@@ -984,9 +1010,12 @@
 // Source: c:@S@Geom2d_Parabola@F@LastParameter#1
 // Source: c:@S@Geom2d_Parabola@F@Parab2d#1
 // Source: c:@S@Geom2d_Parabola@F@Parameter#1
+// Source: c:@S@Geom2d_Parabola@F@ParametricTransformation#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Parabola@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_Parabola@F@SetFocal#d#
 // Source: c:@S@Geom2d_Parabola@F@SetParab2d#&1$@S@gp_Parab2d#
+// Source: c:@S@Geom2d_Parabola@F@Transform#&1$@S@gp_Trsf2d#
+// Source: c:@S@Geom2d_Parabola@F@TransformedParameter#d#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Point@F@Distance#&1$@N@opencascade@S@handle>#$@S@Geom2d_Point#1
 // Source: c:@S@Geom2d_Point@F@DynamicType#1
 // Source: c:@S@Geom2d_Point@F@SquareDistance#&1$@N@opencascade@S@handle>#$@S@Geom2d_Point#1
@@ -994,6 +1023,7 @@
 // Source: c:@S@Geom2d_Transformation@F@DynamicType#1
 // Source: c:@S@Geom2d_Transformation@F@Form#1
 // Source: c:@S@Geom2d_Transformation@F@Geom2d_Transformation#
+// Source: c:@S@Geom2d_Transformation@F@Geom2d_Transformation#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_Transformation@F@Invert#
 // Source: c:@S@Geom2d_Transformation@F@Inverted#1
 // Source: c:@S@Geom2d_Transformation@F@IsNegative#1
@@ -1011,6 +1041,8 @@
 // Source: c:@S@Geom2d_Transformation@F@SetTransformation#&1$@S@gp_Ax2d#S0_#
 // Source: c:@S@Geom2d_Transformation@F@SetTranslation#&1$@S@gp_Pnt2d#S0_#
 // Source: c:@S@Geom2d_Transformation@F@SetTranslation#&1$@S@gp_Vec2d#
+// Source: c:@S@Geom2d_Transformation@F@SetTrsf2d#&1$@S@gp_Trsf2d#
+// Source: c:@S@Geom2d_Transformation@F@Trsf2d#1
 // Source: c:@S@Geom2d_Transformation@F@Value#I#I#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@BasisCurve#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@Continuity#1
@@ -1025,11 +1057,14 @@
 // Source: c:@S@Geom2d_TrimmedCurve@F@IsClosed#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@IsPeriodic#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@LastParameter#1
+// Source: c:@S@Geom2d_TrimmedCurve@F@ParametricTransformation#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@Period#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@Reverse#
 // Source: c:@S@Geom2d_TrimmedCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@SetTrim#d#d#b#b#
 // Source: c:@S@Geom2d_TrimmedCurve@F@StartPoint#1
+// Source: c:@S@Geom2d_TrimmedCurve@F@Transform#&1$@S@gp_Trsf2d#
+// Source: c:@S@Geom2d_TrimmedCurve@F@TransformedParameter#d#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Vector@F@Angle#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
 // Source: c:@S@Geom2d_Vector@F@Dot#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
 // Source: c:@S@Geom2d_Vector@F@DynamicType#1
@@ -1060,6 +1095,7 @@
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@SquareMagnitude#1
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@Subtract#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@Subtracted#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
+// Source: c:@S@Geom2d_VectorWithMagnitude@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@GeomAdaptor_Curve@F@BSpline#1
 // Source: c:@S@GeomAdaptor_Curve@F@Bezier#1
 // Source: c:@S@GeomAdaptor_Curve@F@Circle#1
@@ -1236,6 +1272,8 @@
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@EvalDN#d#I#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@FirstParameter#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@GeomAdaptor_TransformedCurve#
+// Source: c:@S@GeomAdaptor_TransformedCurve@F@GeomAdaptor_TransformedCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@gp_Trsf#
+// Source: c:@S@GeomAdaptor_TransformedCurve@F@GeomAdaptor_TransformedCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#d#&1$@S@gp_Trsf#
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@GeomCurve#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@GetType#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Hyperbola#1
@@ -1256,8 +1294,10 @@
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Parabola#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Period#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Resolution#d#1
+// Source: c:@S@GeomAdaptor_TransformedCurve@F@SetTrsf#&1$@S@gp_Trsf#
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@ShallowCopy#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Trim#d#d#d#1
+// Source: c:@S@GeomAdaptor_TransformedCurve@F@Trsf#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@AxeOfRevolution#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@BSpline#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@BasisCurve#1
@@ -1272,6 +1312,8 @@
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@FirstUParameter#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@FirstVParameter#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomAdaptor_TransformedSurface#
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomAdaptor_TransformedSurface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@gp_Trsf#
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomAdaptor_TransformedSurface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#d#d#&1$@S@gp_Trsf#d#d#
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomSurface#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomSurfaceOriginal#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomSurfaceTransformed#1
@@ -1285,6 +1327,8 @@
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@IsVRational#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@LastUParameter#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@LastVParameter#1
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@Load#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@gp_Trsf#
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@Load#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#d#d#&1$@S@gp_Trsf#d#d#
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@NbUIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@NbUKnots#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@NbUPoles#1
@@ -1293,11 +1337,13 @@
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@NbVPoles#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@OffsetValue#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@Plane#1
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@SetTrsf#&1$@S@gp_Trsf#
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@ShallowCopy#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@Sphere#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@ToleranceU#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@ToleranceV#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@Torus#1
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@Trsf#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@UContinuity#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@UDegree#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@UPeriod#1
@@ -1327,6 +1373,7 @@
 // Source: c:@S@GeomEval_AHTBezierCurve@F@Reverse#
 // Source: c:@S@GeomEval_AHTBezierCurve@F@ReversedParameter#d#1
 // Source: c:@S@GeomEval_AHTBezierCurve@F@StartPoint#1
+// Source: c:@S@GeomEval_AHTBezierCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_AHTBezierSurface@F@AlgDegreeU#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@AlgDegreeV#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@AlphaU#1
@@ -1348,6 +1395,7 @@
 // Source: c:@S@GeomEval_AHTBezierSurface@F@IsVRational#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@NbPolesU#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@NbPolesV#1
+// Source: c:@S@GeomEval_AHTBezierSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_AHTBezierSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@UReverse#
 // Source: c:@S@GeomEval_AHTBezierSurface@F@UReversedParameter#d#1
@@ -1365,6 +1413,7 @@
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@IsVPeriodic#1
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@Pitch#1
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@SetPitch#d#
+// Source: c:@S@GeomEval_CircularHelicoidSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@UReverse#
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@UReversedParameter#d#1
@@ -1387,6 +1436,7 @@
 // Source: c:@S@GeomEval_CircularHelixCurve@F@Radius#1
 // Source: c:@S@GeomEval_CircularHelixCurve@F@Reverse#
 // Source: c:@S@GeomEval_CircularHelixCurve@F@ReversedParameter#d#1
+// Source: c:@S@GeomEval_CircularHelixCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_EllipsoidSurface@F@Copy#1
 // Source: c:@S@GeomEval_EllipsoidSurface@F@DynamicType#1
 // Source: c:@S@GeomEval_EllipsoidSurface@F@EvalD0#d#d#1
@@ -1402,6 +1452,7 @@
 // Source: c:@S@GeomEval_EllipsoidSurface@F@SetSemiAxisA#d#
 // Source: c:@S@GeomEval_EllipsoidSurface@F@SetSemiAxisB#d#
 // Source: c:@S@GeomEval_EllipsoidSurface@F@SetSemiAxisC#d#
+// Source: c:@S@GeomEval_EllipsoidSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_EllipsoidSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_EllipsoidSurface@F@UReverse#
 // Source: c:@S@GeomEval_EllipsoidSurface@F@UReversedParameter#d#1
@@ -1421,6 +1472,7 @@
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@SemiAxisB#1
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@SetSemiAxisA#d#
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@SetSemiAxisB#d#
+// Source: c:@S@GeomEval_HypParaboloidSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@UReverse#
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@UReversedParameter#d#1
@@ -1442,6 +1494,7 @@
 // Source: c:@S@GeomEval_HyperboloidSurface@F@SetMode#$@S@GeomEval_HyperboloidSurface@E@SheetMode#
 // Source: c:@S@GeomEval_HyperboloidSurface@F@SetR1#d#
 // Source: c:@S@GeomEval_HyperboloidSurface@F@SetR2#d#
+// Source: c:@S@GeomEval_HyperboloidSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_HyperboloidSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_HyperboloidSurface@F@UReverse#
 // Source: c:@S@GeomEval_HyperboloidSurface@F@UReversedParameter#d#1
@@ -1459,6 +1512,7 @@
 // Source: c:@S@GeomEval_ParaboloidSurface@F@IsVClosed#1
 // Source: c:@S@GeomEval_ParaboloidSurface@F@IsVPeriodic#1
 // Source: c:@S@GeomEval_ParaboloidSurface@F@SetFocal#d#
+// Source: c:@S@GeomEval_ParaboloidSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_ParaboloidSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_ParaboloidSurface@F@UReverse#
 // Source: c:@S@GeomEval_ParaboloidSurface@F@UReversedParameter#d#1
@@ -1482,6 +1536,7 @@
 // Source: c:@S@GeomEval_SineWaveCurve@F@Position#1
 // Source: c:@S@GeomEval_SineWaveCurve@F@Reverse#
 // Source: c:@S@GeomEval_SineWaveCurve@F@ReversedParameter#d#1
+// Source: c:@S@GeomEval_SineWaveCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_TBezierCurve@F@Alpha#1
 // Source: c:@S@GeomEval_TBezierCurve@F@Continuity#1
 // Source: c:@S@GeomEval_TBezierCurve@F@Copy#1
@@ -1500,6 +1555,7 @@
 // Source: c:@S@GeomEval_TBezierCurve@F@Reverse#
 // Source: c:@S@GeomEval_TBezierCurve@F@ReversedParameter#d#1
 // Source: c:@S@GeomEval_TBezierCurve@F@StartPoint#1
+// Source: c:@S@GeomEval_TBezierCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_TBezierSurface@F@AlphaU#1
 // Source: c:@S@GeomEval_TBezierSurface@F@AlphaV#1
 // Source: c:@S@GeomEval_TBezierSurface@F@Continuity#1
@@ -1518,6 +1574,7 @@
 // Source: c:@S@GeomEval_TBezierSurface@F@NbVPoles#1
 // Source: c:@S@GeomEval_TBezierSurface@F@OrderU#1
 // Source: c:@S@GeomEval_TBezierSurface@F@OrderV#1
+// Source: c:@S@GeomEval_TBezierSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_TBezierSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_TBezierSurface@F@UReverse#
 // Source: c:@S@GeomEval_TBezierSurface@F@UReversedParameter#d#1
@@ -1817,7 +1874,9 @@
 // Source: c:@S@GeomPlate_Surface@F@IsUPeriodic#1
 // Source: c:@S@GeomPlate_Surface@F@IsVClosed#1
 // Source: c:@S@GeomPlate_Surface@F@IsVPeriodic#1
+// Source: c:@S@GeomPlate_Surface@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@GeomPlate_Surface@F@SetBounds#d#d#d#d#
+// Source: c:@S@GeomPlate_Surface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomPlate_Surface@F@UIso#d#1
 // Source: c:@S@GeomPlate_Surface@F@UPeriod#1
 // Source: c:@S@GeomPlate_Surface@F@UReverse#
@@ -1836,6 +1895,7 @@
 // Source: c:@S@Geom_Axis1Placement@F@Reverse#
 // Source: c:@S@Geom_Axis1Placement@F@Reversed#1
 // Source: c:@S@Geom_Axis1Placement@F@SetDirection#&1$@S@gp_Dir#
+// Source: c:@S@Geom_Axis1Placement@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Axis2Placement@F@Ax2#1
 // Source: c:@S@Geom_Axis2Placement@F@Copy#1
 // Source: c:@S@Geom_Axis2Placement@F@DynamicType#1
@@ -1845,6 +1905,7 @@
 // Source: c:@S@Geom_Axis2Placement@F@SetDirection#&1$@S@gp_Dir#
 // Source: c:@S@Geom_Axis2Placement@F@SetXDirection#&1$@S@gp_Dir#
 // Source: c:@S@Geom_Axis2Placement@F@SetYDirection#&1$@S@gp_Dir#
+// Source: c:@S@Geom_Axis2Placement@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Axis2Placement@F@XDirection#1
 // Source: c:@S@Geom_Axis2Placement@F@YDirection#1
 // Source: c:@S@Geom_AxisPlacement@F@Angle#&1$@N@opencascade@S@handle>#$@S@Geom_AxisPlacement#1
@@ -1899,6 +1960,7 @@
 // Source: c:@S@Geom_BSplineCurve@F@SetPole#I#&1$@S@gp_Pnt#d#
 // Source: c:@S@Geom_BSplineCurve@F@SetWeight#I#d#
 // Source: c:@S@Geom_BSplineCurve@F@StartPoint#1
+// Source: c:@S@Geom_BSplineCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_BSplineCurve@F@Weight#I#1
 // Source: c:@S@Geom_BSplineSurface@F@CheckAndSegment#d#d#d#d#d#d#
 // Source: c:@S@Geom_BSplineSurface@F@ClearEvalRepresentation#
@@ -1952,6 +2014,7 @@
 // Source: c:@S@Geom_BSplineSurface@F@SetVOrigin#I#
 // Source: c:@S@Geom_BSplineSurface@F@SetVPeriodic#
 // Source: c:@S@Geom_BSplineSurface@F@SetWeight#I#I#d#
+// Source: c:@S@Geom_BSplineSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_BSplineSurface@F@UDegree#1
 // Source: c:@S@Geom_BSplineSurface@F@UIso#d#1
 // Source: c:@S@Geom_BSplineSurface@F@UIso#d#b#1
@@ -1998,6 +2061,7 @@
 // Source: c:@S@Geom_BezierCurve@F@SetPole#I#&1$@S@gp_Pnt#d#
 // Source: c:@S@Geom_BezierCurve@F@SetWeight#I#d#
 // Source: c:@S@Geom_BezierCurve@F@StartPoint#1
+// Source: c:@S@Geom_BezierCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_BezierCurve@F@Weight#I#1
 // Source: c:@S@Geom_BezierSurface@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_BezierSurface@F@Continuity#1
@@ -2024,6 +2088,7 @@
 // Source: c:@S@Geom_BezierSurface@F@SetPole#I#I#&1$@S@gp_Pnt#
 // Source: c:@S@Geom_BezierSurface@F@SetPole#I#I#&1$@S@gp_Pnt#d#
 // Source: c:@S@Geom_BezierSurface@F@SetWeight#I#I#d#
+// Source: c:@S@Geom_BezierSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_BezierSurface@F@UDegree#1
 // Source: c:@S@Geom_BezierSurface@F@UIso#d#1
 // Source: c:@S@Geom_BezierSurface@F@UReverse#
@@ -2045,6 +2110,7 @@
 // Source: c:@S@Geom_CartesianPoint@F@SetX#d#
 // Source: c:@S@Geom_CartesianPoint@F@SetY#d#
 // Source: c:@S@Geom_CartesianPoint@F@SetZ#d#
+// Source: c:@S@Geom_CartesianPoint@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_CartesianPoint@F@X#1
 // Source: c:@S@Geom_CartesianPoint@F@Y#1
 // Source: c:@S@Geom_CartesianPoint@F@Z#1
@@ -2064,6 +2130,7 @@
 // Source: c:@S@Geom_Circle@F@ReversedParameter#d#1
 // Source: c:@S@Geom_Circle@F@SetCirc#&1$@S@gp_Circ#
 // Source: c:@S@Geom_Circle@F@SetRadius#d#
+// Source: c:@S@Geom_Circle@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Conic@F@Axis#1
 // Source: c:@S@Geom_Conic@F@Continuity#1
 // Source: c:@S@Geom_Conic@F@DynamicType#1
@@ -2087,11 +2154,13 @@
 // Source: c:@S@Geom_ConicalSurface@F@IsUPeriodic#1
 // Source: c:@S@Geom_ConicalSurface@F@IsVClosed#1
 // Source: c:@S@Geom_ConicalSurface@F@IsVPeriodic#1
+// Source: c:@S@Geom_ConicalSurface@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_ConicalSurface@F@RefRadius#1
 // Source: c:@S@Geom_ConicalSurface@F@SemiAngle#1
 // Source: c:@S@Geom_ConicalSurface@F@SetCone#&1$@S@gp_Cone#
 // Source: c:@S@Geom_ConicalSurface@F@SetRadius#d#
 // Source: c:@S@Geom_ConicalSurface@F@SetSemiAngle#d#
+// Source: c:@S@Geom_ConicalSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_ConicalSurface@F@UIso#d#1
 // Source: c:@S@Geom_ConicalSurface@F@UReversedParameter#d#1
 // Source: c:@S@Geom_ConicalSurface@F@VIso#d#1
@@ -2099,8 +2168,10 @@
 // Source: c:@S@Geom_ConicalSurface@F@VReversedParameter#d#1
 // Source: c:@S@Geom_Curve@F@DN#d#I#1
 // Source: c:@S@Geom_Curve@F@DynamicType#1
+// Source: c:@S@Geom_Curve@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Curve@F@Period#1
 // Source: c:@S@Geom_Curve@F@Reversed#1
+// Source: c:@S@Geom_Curve@F@TransformedParameter#d#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Curve@F@Value#d#1
 // Source: c:@S@Geom_CylindricalSurface@F@Copy#1
 // Source: c:@S@Geom_CylindricalSurface@F@Cylinder#1
@@ -2112,9 +2183,11 @@
 // Source: c:@S@Geom_CylindricalSurface@F@IsUPeriodic#1
 // Source: c:@S@Geom_CylindricalSurface@F@IsVClosed#1
 // Source: c:@S@Geom_CylindricalSurface@F@IsVPeriodic#1
+// Source: c:@S@Geom_CylindricalSurface@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_CylindricalSurface@F@Radius#1
 // Source: c:@S@Geom_CylindricalSurface@F@SetCylinder#&1$@S@gp_Cylinder#
 // Source: c:@S@Geom_CylindricalSurface@F@SetRadius#d#
+// Source: c:@S@Geom_CylindricalSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_CylindricalSurface@F@UIso#d#1
 // Source: c:@S@Geom_CylindricalSurface@F@UReversedParameter#d#1
 // Source: c:@S@Geom_CylindricalSurface@F@VIso#d#1
@@ -2135,6 +2208,7 @@
 // Source: c:@S@Geom_Direction@F@SetY#d#
 // Source: c:@S@Geom_Direction@F@SetZ#d#
 // Source: c:@S@Geom_Direction@F@SquareMagnitude#1
+// Source: c:@S@Geom_Direction@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_ElementarySurface@F@Axis#1
 // Source: c:@S@Geom_ElementarySurface@F@Continuity#1
 // Source: c:@S@Geom_ElementarySurface@F@DynamicType#1
@@ -2171,6 +2245,7 @@
 // Source: c:@S@Geom_Ellipse@F@SetElips#&1$@S@gp_Elips#
 // Source: c:@S@Geom_Ellipse@F@SetMajorRadius#d#
 // Source: c:@S@Geom_Ellipse@F@SetMinorRadius#d#
+// Source: c:@S@Geom_Ellipse@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Geometry@F@DynamicType#1
 // Source: c:@S@Geom_Geometry@F@Mirror#&1$@S@gp_Ax1#
 // Source: c:@S@Geom_Geometry@F@Mirror#&1$@S@gp_Ax2#
@@ -2215,6 +2290,7 @@
 // Source: c:@S@Geom_Hyperbola@F@SetHypr#&1$@S@gp_Hypr#
 // Source: c:@S@Geom_Hyperbola@F@SetMajorRadius#d#
 // Source: c:@S@Geom_Hyperbola@F@SetMinorRadius#d#
+// Source: c:@S@Geom_Hyperbola@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Line@F@Continuity#1
 // Source: c:@S@Geom_Line@F@Copy#1
 // Source: c:@S@Geom_Line@F@DynamicType#1
@@ -2229,6 +2305,7 @@
 // Source: c:@S@Geom_Line@F@IsPeriodic#1
 // Source: c:@S@Geom_Line@F@LastParameter#1
 // Source: c:@S@Geom_Line@F@Lin#1
+// Source: c:@S@Geom_Line@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Line@F@Position#1
 // Source: c:@S@Geom_Line@F@Reverse#
 // Source: c:@S@Geom_Line@F@ReversedParameter#d#1
@@ -2236,6 +2313,8 @@
 // Source: c:@S@Geom_Line@F@SetLin#&1$@S@gp_Lin#
 // Source: c:@S@Geom_Line@F@SetLocation#&1$@S@gp_Pnt#
 // Source: c:@S@Geom_Line@F@SetPosition#&1$@S@gp_Ax1#
+// Source: c:@S@Geom_Line@F@Transform#&1$@S@gp_Trsf#
+// Source: c:@S@Geom_Line@F@TransformedParameter#d#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_OffsetCurve@F@BasisCurve#1
 // Source: c:@S@Geom_OffsetCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_OffsetCurve@F@Continuity#1
@@ -2253,12 +2332,15 @@
 // Source: c:@S@Geom_OffsetCurve@F@IsPeriodic#1
 // Source: c:@S@Geom_OffsetCurve@F@LastParameter#1
 // Source: c:@S@Geom_OffsetCurve@F@Offset#1
+// Source: c:@S@Geom_OffsetCurve@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_OffsetCurve@F@Period#1
 // Source: c:@S@Geom_OffsetCurve@F@Reverse#
 // Source: c:@S@Geom_OffsetCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom_OffsetCurve@F@SetBasisCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#b#
 // Source: c:@S@Geom_OffsetCurve@F@SetDirection#&1$@S@gp_Dir#
 // Source: c:@S@Geom_OffsetCurve@F@SetOffsetValue#d#
+// Source: c:@S@Geom_OffsetCurve@F@Transform#&1$@S@gp_Trsf#
+// Source: c:@S@Geom_OffsetCurve@F@TransformedParameter#d#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_OffsetSurface@F@BasisSurface#1
 // Source: c:@S@Geom_OffsetSurface@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_OffsetSurface@F@Continuity#1
@@ -2276,9 +2358,11 @@
 // Source: c:@S@Geom_OffsetSurface@F@IsVClosed#1
 // Source: c:@S@Geom_OffsetSurface@F@IsVPeriodic#1
 // Source: c:@S@Geom_OffsetSurface@F@Offset#1
+// Source: c:@S@Geom_OffsetSurface@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_OffsetSurface@F@SetBasisSurface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#b#
 // Source: c:@S@Geom_OffsetSurface@F@SetOffsetValue#d#
 // Source: c:@S@Geom_OffsetSurface@F@Surface#1
+// Source: c:@S@Geom_OffsetSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_OffsetSurface@F@UIso#d#1
 // Source: c:@S@Geom_OffsetSurface@F@UPeriod#1
 // Source: c:@S@Geom_OffsetSurface@F@UReverse#
@@ -2304,9 +2388,12 @@
 // Source: c:@S@Geom_Parabola@F@LastParameter#1
 // Source: c:@S@Geom_Parabola@F@Parab#1
 // Source: c:@S@Geom_Parabola@F@Parameter#1
+// Source: c:@S@Geom_Parabola@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Parabola@F@ReversedParameter#d#1
 // Source: c:@S@Geom_Parabola@F@SetFocal#d#
 // Source: c:@S@Geom_Parabola@F@SetParab#&1$@S@gp_Parab#
+// Source: c:@S@Geom_Parabola@F@Transform#&1$@S@gp_Trsf#
+// Source: c:@S@Geom_Parabola@F@TransformedParameter#d#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Plane@F@Copy#1
 // Source: c:@S@Geom_Plane@F@DynamicType#1
 // Source: c:@S@Geom_Plane@F@EvalD0#d#d#1
@@ -2318,8 +2405,10 @@
 // Source: c:@S@Geom_Plane@F@IsUPeriodic#1
 // Source: c:@S@Geom_Plane@F@IsVClosed#1
 // Source: c:@S@Geom_Plane@F@IsVPeriodic#1
+// Source: c:@S@Geom_Plane@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Plane@F@Pln#1
 // Source: c:@S@Geom_Plane@F@SetPln#&1$@S@gp_Pln#
+// Source: c:@S@Geom_Plane@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Plane@F@UIso#d#1
 // Source: c:@S@Geom_Plane@F@UReverse#
 // Source: c:@S@Geom_Plane@F@UReversedParameter#d#1
@@ -2343,8 +2432,10 @@
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@IsUPeriodic#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@IsVClosed#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@IsVPeriodic#1
+// Source: c:@S@Geom_RectangularTrimmedSurface@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@SetTrim#d#d#b#b#
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@SetTrim#d#d#d#d#b#b#
+// Source: c:@S@Geom_RectangularTrimmedSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@UIso#d#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@UPeriod#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@UReverse#
@@ -2367,6 +2458,7 @@
 // Source: c:@S@Geom_SphericalSurface@F@SetRadius#d#
 // Source: c:@S@Geom_SphericalSurface@F@SetSphere#&1$@S@gp_Sphere#
 // Source: c:@S@Geom_SphericalSurface@F@Sphere#1
+// Source: c:@S@Geom_SphericalSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_SphericalSurface@F@UIso#d#1
 // Source: c:@S@Geom_SphericalSurface@F@UReversedParameter#d#1
 // Source: c:@S@Geom_SphericalSurface@F@VIso#d#1
@@ -2374,6 +2466,7 @@
 // Source: c:@S@Geom_SphericalSurface@F@Volume#1
 // Source: c:@S@Geom_Surface@F@DN#d#d#I#I#1
 // Source: c:@S@Geom_Surface@F@DynamicType#1
+// Source: c:@S@Geom_Surface@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Surface@F@UPeriod#1
 // Source: c:@S@Geom_Surface@F@UReversed#1
 // Source: c:@S@Geom_Surface@F@VPeriod#1
@@ -2392,8 +2485,10 @@
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@IsUPeriodic#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@IsVClosed#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@IsVPeriodic#1
+// Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@SetBasisCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@SetDirection#&1$@S@gp_Dir#
+// Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@UIso#d#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@UReverse#
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@UReversedParameter#d#1
@@ -2415,11 +2510,13 @@
 // Source: c:@S@Geom_SurfaceOfRevolution@F@IsVClosed#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@IsVPeriodic#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@Location#1
+// Source: c:@S@Geom_SurfaceOfRevolution@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@ReferencePlane#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@SetAxis#&1$@S@gp_Ax1#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@SetBasisCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@SetDirection#&1$@S@gp_Dir#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@SetLocation#&1$@S@gp_Pnt#
+// Source: c:@S@Geom_SurfaceOfRevolution@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@UIso#d#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@UReverse#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@UReversedParameter#d#1
@@ -2446,6 +2543,7 @@
 // Source: c:@S@Geom_ToroidalSurface@F@SetMinorRadius#d#
 // Source: c:@S@Geom_ToroidalSurface@F@SetTorus#&1$@S@gp_Torus#
 // Source: c:@S@Geom_ToroidalSurface@F@Torus#1
+// Source: c:@S@Geom_ToroidalSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_ToroidalSurface@F@UIso#d#1
 // Source: c:@S@Geom_ToroidalSurface@F@UReversedParameter#d#1
 // Source: c:@S@Geom_ToroidalSurface@F@VIso#d#1
@@ -2455,6 +2553,7 @@
 // Source: c:@S@Geom_Transformation@F@DynamicType#1
 // Source: c:@S@Geom_Transformation@F@Form#1
 // Source: c:@S@Geom_Transformation@F@Geom_Transformation#
+// Source: c:@S@Geom_Transformation@F@Geom_Transformation#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Transformation@F@Invert#
 // Source: c:@S@Geom_Transformation@F@Inverted#1
 // Source: c:@S@Geom_Transformation@F@IsNegative#1
@@ -2473,6 +2572,8 @@
 // Source: c:@S@Geom_Transformation@F@SetTransformation#&1$@S@gp_Ax3#S0_#
 // Source: c:@S@Geom_Transformation@F@SetTranslation#&1$@S@gp_Pnt#S0_#
 // Source: c:@S@Geom_Transformation@F@SetTranslation#&1$@S@gp_Vec#
+// Source: c:@S@Geom_Transformation@F@SetTrsf#&1$@S@gp_Trsf#
+// Source: c:@S@Geom_Transformation@F@Trsf#1
 // Source: c:@S@Geom_Transformation@F@Value#I#I#1
 // Source: c:@S@Geom_TrimmedCurve@F@BasisCurve#1
 // Source: c:@S@Geom_TrimmedCurve@F@Continuity#1
@@ -2487,11 +2588,14 @@
 // Source: c:@S@Geom_TrimmedCurve@F@IsClosed#1
 // Source: c:@S@Geom_TrimmedCurve@F@IsPeriodic#1
 // Source: c:@S@Geom_TrimmedCurve@F@LastParameter#1
+// Source: c:@S@Geom_TrimmedCurve@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_TrimmedCurve@F@Period#1
 // Source: c:@S@Geom_TrimmedCurve@F@Reverse#
 // Source: c:@S@Geom_TrimmedCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom_TrimmedCurve@F@SetTrim#d#d#b#b#
 // Source: c:@S@Geom_TrimmedCurve@F@StartPoint#1
+// Source: c:@S@Geom_TrimmedCurve@F@Transform#&1$@S@gp_Trsf#
+// Source: c:@S@Geom_TrimmedCurve@F@TransformedParameter#d#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Vector@F@Angle#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#1
 // Source: c:@S@Geom_Vector@F@AngleWithRef#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#S0_#1
 // Source: c:@S@Geom_Vector@F@Dot#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#1
@@ -2529,6 +2633,7 @@
 // Source: c:@S@Geom_VectorWithMagnitude@F@SquareMagnitude#1
 // Source: c:@S@Geom_VectorWithMagnitude@F@Subtract#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#
 // Source: c:@S@Geom_VectorWithMagnitude@F@Subtracted#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#1
+// Source: c:@S@Geom_VectorWithMagnitude@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeometryTest_DrawableQualifiedCurve2d@F@DynamicType#1
 // Source: c:@S@Law_BSpFunc@F@Continuity#1
 // Source: c:@S@Law_BSpFunc@F@Curve#1
@@ -6428,6 +6533,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus BisectorBisecAnaMethodSetTrim1(BisectorBisecAnaHandle handle, nint cu);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bisector_bisec_ana_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus BisectorBisecAnaMethodTransform0(BisectorBisecAnaHandle handle, global::OcctSharp.Values.Transform2d t);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bisector_bisec_ana_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus BisectorBisecAnaClone(BisectorBisecAnaHandle source, out nint handle);
@@ -6559,6 +6668,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus BisectorBisecCCMethodReversedParameter0(BisectorBisecCCHandle handle, double u, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bisector_bisec_cc_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus BisectorBisecCCMethodTransform0(BisectorBisecCCHandle handle, global::OcctSharp.Values.Transform2d t);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bisector_bisec_cc_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus BisectorBisecCCClone(BisectorBisecCCHandle source, out nint handle);
@@ -6689,6 +6802,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bisector_bisec_pc_method_reversed_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus BisectorBisecPCMethodReversedParameter0(BisectorBisecPCHandle handle, double u, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bisector_bisec_pc_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus BisectorBisecPCMethodTransform0(BisectorBisecPCHandle handle, global::OcctSharp.Values.Transform2d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bisector_bisec_pc_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -7575,6 +7692,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalAHTBezierCurveMethodStartPoint0(Geom2dEvalAHTBezierCurveHandle handle, out global::OcctSharp.Values.Point2d resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_ahtbezier_curve_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalAHTBezierCurveMethodTransform0(Geom2dEvalAHTBezierCurveHandle handle, global::OcctSharp.Values.Transform2d t);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_ahtbezier_curve_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalAHTBezierCurveClone(Geom2dEvalAHTBezierCurveHandle source, out nint handle);
@@ -7658,6 +7779,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalArchimedeanSpiralCurveMethodReversedParameter0(Geom2dEvalArchimedeanSpiralCurveHandle handle, double u, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_archimedean_spiral_curve_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalArchimedeanSpiralCurveMethodTransform0(Geom2dEvalArchimedeanSpiralCurveHandle handle, global::OcctSharp.Values.Transform2d t);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_archimedean_spiral_curve_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalArchimedeanSpiralCurveClone(Geom2dEvalArchimedeanSpiralCurveHandle source, out nint handle);
@@ -7736,6 +7861,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_circle_involute_curve_method_reversed_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalCircleInvoluteCurveMethodReversedParameter0(Geom2dEvalCircleInvoluteCurveHandle handle, double u, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_circle_involute_curve_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalCircleInvoluteCurveMethodTransform0(Geom2dEvalCircleInvoluteCurveHandle handle, global::OcctSharp.Values.Transform2d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_circle_involute_curve_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -7819,6 +7948,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_logarithmic_spiral_curve_method_scale_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalLogarithmicSpiralCurveMethodScale0(Geom2dEvalLogarithmicSpiralCurveHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_logarithmic_spiral_curve_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalLogarithmicSpiralCurveMethodTransform0(Geom2dEvalLogarithmicSpiralCurveHandle handle, global::OcctSharp.Values.Transform2d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_logarithmic_spiral_curve_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -7926,6 +8059,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalSineWaveCurveMethodReversedParameter0(Geom2dEvalSineWaveCurveHandle handle, double u, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_sine_wave_curve_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalSineWaveCurveMethodTransform0(Geom2dEvalSineWaveCurveHandle handle, global::OcctSharp.Values.Transform2d t);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_sine_wave_curve_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalSineWaveCurveClone(Geom2dEvalSineWaveCurveHandle source, out nint handle);
@@ -8017,6 +8154,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalTBezierCurveMethodStartPoint0(Geom2dEvalTBezierCurveHandle handle, out global::OcctSharp.Values.Point2d resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_tbezier_curve_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalTBezierCurveMethodTransform0(Geom2dEvalTBezierCurveHandle handle, global::OcctSharp.Values.Transform2d t);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_eval_tbezier_curve_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEvalTBezierCurveClone(Geom2dEvalTBezierCurveHandle source, out nint handle);
@@ -8087,6 +8228,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_axis_placement_method_set_location_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dAxisPlacementMethodSetLocation0(Geom2dAxisPlacementHandle handle, global::OcctSharp.Values.Point2d p);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_axis_placement_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dAxisPlacementMethodTransform0(Geom2dAxisPlacementHandle handle, global::OcctSharp.Values.Transform2d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_axis_placement_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -8303,6 +8448,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dBSplineCurveMethodStartPoint0(Geom2dBSplineCurveHandle handle, out global::OcctSharp.Values.Point2d resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_bspline_curve_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dBSplineCurveMethodTransform0(Geom2dBSplineCurveHandle handle, global::OcctSharp.Values.Transform2d t);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_bspline_curve_method_weight_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dBSplineCurveMethodWeight0(Geom2dBSplineCurveHandle handle, int index, out double resultValue);
@@ -8446,6 +8595,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dBezierCurveMethodStartPoint0(Geom2dBezierCurveHandle handle, out global::OcctSharp.Values.Point2d resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_bezier_curve_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dBezierCurveMethodTransform0(Geom2dBezierCurveHandle handle, global::OcctSharp.Values.Transform2d t);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_bezier_curve_method_weight_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dBezierCurveMethodWeight0(Geom2dBezierCurveHandle handle, int index, out double resultValue);
@@ -8527,6 +8680,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_cartesian_point_method_set_y_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dCartesianPointMethodSetY0(Geom2dCartesianPointHandle handle, double y);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_cartesian_point_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dCartesianPointMethodTransform0(Geom2dCartesianPointHandle handle, global::OcctSharp.Values.Transform2d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_cartesian_point_method_x_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -8618,6 +8775,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_circle_method_set_radius_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dCircleMethodSetRadius0(Geom2dCircleHandle handle, double r);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_circle_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dCircleMethodTransform0(Geom2dCircleHandle handle, global::OcctSharp.Values.Transform2d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_circle_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -8713,6 +8874,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dCurveMethodDynamicType0(Geom2dCurveHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_curve_method_parametric_transformation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dCurveMethodParametricTransformation0(Geom2dCurveHandle handle, global::OcctSharp.Values.Transform2d t, out double resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_curve_method_period_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dCurveMethodPeriod0(Geom2dCurveHandle handle, out double resultValue);
@@ -8720,6 +8885,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_curve_method_reversed_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dCurveMethodReversed0(Geom2dCurveHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_curve_method_transformed_parameter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dCurveMethodTransformedParameter0(Geom2dCurveHandle handle, double u, global::OcctSharp.Values.Transform2d t, out double resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_curve_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -8787,6 +8956,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_direction_method_square_magnitude_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dDirectionMethodSquareMagnitude0(Geom2dDirectionHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_direction_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dDirectionMethodTransform0(Geom2dDirectionHandle handle, global::OcctSharp.Values.Transform2d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_direction_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -8903,6 +9076,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEllipseMethodSetMinorRadius0(Geom2dEllipseHandle handle, double minorRadius);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_ellipse_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEllipseMethodTransform0(Geom2dEllipseHandle handle, global::OcctSharp.Values.Transform2d t);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_ellipse_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dEllipseClone(Geom2dEllipseHandle source, out nint handle);
@@ -8957,6 +9134,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_geometry_method_scaled_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dGeometryMethodScaled0(Geom2dGeometryHandle handle, global::OcctSharp.Values.Point2d p, double s, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_geometry_method_transformed_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dGeometryMethodTransformed0(Geom2dGeometryHandle handle, global::OcctSharp.Values.Transform2d t, out nint handleValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_geometry_method_translate_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9113,6 +9294,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dHyperbolaMethodSetMinorRadius0(Geom2dHyperbolaHandle handle, double minorRadius);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_hyperbola_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dHyperbolaMethodTransform0(Geom2dHyperbolaHandle handle, global::OcctSharp.Values.Transform2d t);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_hyperbola_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dHyperbolaClone(Geom2dHyperbolaHandle source, out nint handle);
@@ -9196,6 +9381,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dLineMethodLocation0(Geom2dLineHandle handle, out global::OcctSharp.Values.Point2d resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_line_method_parametric_transformation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dLineMethodParametricTransformation0(Geom2dLineHandle handle, global::OcctSharp.Values.Transform2d t, out double resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_line_method_position_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dLineMethodPosition0(Geom2dLineHandle handle, out global::OcctSharp.Values.Axis2d resultValue);
@@ -9223,6 +9412,14 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_line_method_set_position_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dLineMethodSetPosition0(Geom2dLineHandle handle, global::OcctSharp.Values.Axis2d a);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_line_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dLineMethodTransform0(Geom2dLineHandle handle, global::OcctSharp.Values.Transform2d t);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_line_method_transformed_parameter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dLineMethodTransformedParameter0(Geom2dLineHandle handle, double u, global::OcctSharp.Values.Transform2d t, out double resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_line_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9311,6 +9508,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dOffsetCurveMethodOffset0(Geom2dOffsetCurveHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_offset_curve_method_parametric_transformation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dOffsetCurveMethodParametricTransformation0(Geom2dOffsetCurveHandle handle, global::OcctSharp.Values.Transform2d t, out double resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_offset_curve_method_period_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dOffsetCurveMethodPeriod0(Geom2dOffsetCurveHandle handle, out double resultValue);
@@ -9334,6 +9535,14 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_offset_curve_method_set_offset_value_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dOffsetCurveMethodSetOffsetValue0(Geom2dOffsetCurveHandle handle, double d);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_offset_curve_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dOffsetCurveMethodTransform0(Geom2dOffsetCurveHandle handle, global::OcctSharp.Values.Transform2d t);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_offset_curve_method_transformed_parameter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dOffsetCurveMethodTransformedParameter0(Geom2dOffsetCurveHandle handle, double u, global::OcctSharp.Values.Transform2d t, out double resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_offset_curve_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9426,6 +9635,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dParabolaMethodParameter0(Geom2dParabolaHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_parabola_method_parametric_transformation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dParabolaMethodParametricTransformation0(Geom2dParabolaHandle handle, global::OcctSharp.Values.Transform2d t, out double resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_parabola_method_reversed_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dParabolaMethodReversedParameter0(Geom2dParabolaHandle handle, double u, out double resultValue);
@@ -9437,6 +9650,14 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_parabola_method_set_parab2d_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dParabolaMethodSetParab2d0(Geom2dParabolaHandle handle, global::OcctSharp.Values.Parabola2d prb);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_parabola_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dParabolaMethodTransform0(Geom2dParabolaHandle handle, global::OcctSharp.Values.Transform2d t);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_parabola_method_transformed_parameter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dParabolaMethodTransformedParameter0(Geom2dParabolaHandle handle, double u, global::OcctSharp.Values.Transform2d t, out double resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_parabola_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9491,6 +9712,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_transformation_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dTransformationCreate0(out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_transformation_create_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dTransformationCreate1(global::OcctSharp.Values.Transform2d t, out nint handle);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_transformation_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9572,6 +9797,14 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dTransformationMethodSetTranslation1(Geom2dTransformationHandle handle, global::OcctSharp.Values.Vector2d v);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_transformation_method_set_trsf2d_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dTransformationMethodSetTrsf2d0(Geom2dTransformationHandle handle, global::OcctSharp.Values.Transform2d t);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_transformation_method_trsf2d_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dTransformationMethodTrsf2d0(Geom2dTransformationHandle handle, out global::OcctSharp.Values.Transform2d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_transformation_method_value_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dTransformationMethodValue0(Geom2dTransformationHandle handle, int row, int col, out double resultValue);
@@ -9647,6 +9880,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dTrimmedCurveMethodLastParameter0(Geom2dTrimmedCurveHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_trimmed_curve_method_parametric_transformation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dTrimmedCurveMethodParametricTransformation0(Geom2dTrimmedCurveHandle handle, global::OcctSharp.Values.Transform2d t, out double resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_trimmed_curve_method_period_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dTrimmedCurveMethodPeriod0(Geom2dTrimmedCurveHandle handle, out double resultValue);
@@ -9666,6 +9903,14 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_trimmed_curve_method_start_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dTrimmedCurveMethodStartPoint0(Geom2dTrimmedCurveHandle handle, out global::OcctSharp.Values.Point2d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_trimmed_curve_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dTrimmedCurveMethodTransform0(Geom2dTrimmedCurveHandle handle, global::OcctSharp.Values.Transform2d t);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_trimmed_curve_method_transformed_parameter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dTrimmedCurveMethodTransformedParameter0(Geom2dTrimmedCurveHandle handle, double u, global::OcctSharp.Values.Transform2d t, out double resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_trimmed_curve_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -9824,6 +10069,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_vector_with_magnitude_method_subtracted_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus Geom2dVectorWithMagnitudeMethodSubtracted0(Geom2dVectorWithMagnitudeHandle handle, nint other, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_vector_with_magnitude_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus Geom2dVectorWithMagnitudeMethodTransform0(Geom2dVectorWithMagnitudeHandle handle, global::OcctSharp.Values.Transform2d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom2d_vector_with_magnitude_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10584,6 +10833,14 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedCurveCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_curve_create_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedCurveCreate1(nint theCurve, double theFirst, double theLast, global::OcctSharp.Values.Transform3d theTrsf, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_curve_create_2")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedCurveCreate2(nint theCurve, global::OcctSharp.Values.Transform3d theTrsf, out nint handle);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_curve_method_bezier_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedCurveMethodBezier0(GeomAdaptorTransformedCurveHandle handle, out nint handleValue);
@@ -10704,6 +10961,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedCurveMethodResolution0(GeomAdaptorTransformedCurveHandle handle, double theR3d, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_curve_method_set_trsf_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedCurveMethodSetTrsf0(GeomAdaptorTransformedCurveHandle handle, global::OcctSharp.Values.Transform3d theTrsf);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_curve_method_shallow_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedCurveMethodShallowCopy0(GeomAdaptorTransformedCurveHandle handle, out nint handleValue);
@@ -10711,6 +10972,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_curve_method_trim_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedCurveMethodTrim0(GeomAdaptorTransformedCurveHandle handle, double theFirst, double theLast, double theTol, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_curve_method_trsf_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedCurveMethodTrsf0(GeomAdaptorTransformedCurveHandle handle, out global::OcctSharp.Values.Transform3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_curve_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10734,6 +10999,14 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_surface_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedSurfaceCreate0(out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_surface_create_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedSurfaceCreate1(nint theSurface, double theUFirst, double theULast, double theVFirst, double theVLast, global::OcctSharp.Values.Transform3d theTrsf, double theTolU, double theTolV, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_surface_create_2")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedSurfaceCreate2(nint theSurface, global::OcctSharp.Values.Transform3d theTrsf, out nint handle);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_surface_method_axe_of_revolution_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -10839,6 +11112,14 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedSurfaceMethodLastVParameter0(GeomAdaptorTransformedSurfaceHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_surface_method_load_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedSurfaceMethodLoad0(GeomAdaptorTransformedSurfaceHandle handle, nint theSurface, double theUFirst, double theULast, double theVFirst, double theVLast, global::OcctSharp.Values.Transform3d theTrsf, double theTolU, double theTolV);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_surface_method_load_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedSurfaceMethodLoad1(GeomAdaptorTransformedSurfaceHandle handle, nint theSurface, global::OcctSharp.Values.Transform3d theTrsf);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_surface_method_nb_uintervals_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedSurfaceMethodNbUIntervals0(GeomAdaptorTransformedSurfaceHandle handle, int theS, out int resultValue);
@@ -10871,6 +11152,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedSurfaceMethodPlane0(GeomAdaptorTransformedSurfaceHandle handle, out global::OcctSharp.Values.Plane resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_surface_method_set_trsf_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedSurfaceMethodSetTrsf0(GeomAdaptorTransformedSurfaceHandle handle, global::OcctSharp.Values.Transform3d theTrsf);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_surface_method_shallow_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedSurfaceMethodShallowCopy0(GeomAdaptorTransformedSurfaceHandle handle, out nint handleValue);
@@ -10890,6 +11175,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_surface_method_torus_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedSurfaceMethodTorus0(GeomAdaptorTransformedSurfaceHandle handle, out global::OcctSharp.Values.Torus resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_surface_method_trsf_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomAdaptorTransformedSurfaceMethodTrsf0(GeomAdaptorTransformedSurfaceHandle handle, out global::OcctSharp.Values.Transform3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_adaptor_transformed_surface_method_ucontinuity_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -11026,6 +11315,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalAHTBezierCurveMethodStartPoint0(GeomEvalAHTBezierCurveHandle handle, out Point3dRaw resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_ahtbezier_curve_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalAHTBezierCurveMethodTransform0(GeomEvalAHTBezierCurveHandle handle, global::OcctSharp.Values.Transform3d t);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_ahtbezier_curve_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalAHTBezierCurveClone(GeomEvalAHTBezierCurveHandle source, out nint handle);
@@ -11129,6 +11422,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalAHTBezierSurfaceMethodNbPolesV0(GeomEvalAHTBezierSurfaceHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_ahtbezier_surface_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalAHTBezierSurfaceMethodTransform0(GeomEvalAHTBezierSurfaceHandle handle, global::OcctSharp.Values.Transform3d t);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_ahtbezier_surface_method_uiso_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalAHTBezierSurfaceMethodUIso0(GeomEvalAHTBezierSurfaceHandle handle, double u, out nint handleValue);
@@ -11215,6 +11512,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_circular_helicoid_surface_method_set_pitch_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalCircularHelicoidSurfaceMethodSetPitch0(GeomEvalCircularHelicoidSurfaceHandle handle, double thePitch);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_circular_helicoid_surface_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalCircularHelicoidSurfaceMethodTransform0(GeomEvalCircularHelicoidSurfaceHandle handle, global::OcctSharp.Values.Transform3d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_circular_helicoid_surface_method_uiso_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -11323,6 +11624,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalCircularHelixCurveMethodReversedParameter0(GeomEvalCircularHelixCurveHandle handle, double u, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_circular_helix_curve_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalCircularHelixCurveMethodTransform0(GeomEvalCircularHelixCurveHandle handle, global::OcctSharp.Values.Transform3d t);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_circular_helix_curve_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalCircularHelixCurveClone(GeomEvalCircularHelixCurveHandle source, out nint handle);
@@ -11401,6 +11706,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_ellipsoid_surface_method_set_semi_axis_c_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalEllipsoidSurfaceMethodSetSemiAxisC0(GeomEvalEllipsoidSurfaceHandle handle, double theC);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_ellipsoid_surface_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalEllipsoidSurfaceMethodTransform0(GeomEvalEllipsoidSurfaceHandle handle, global::OcctSharp.Values.Transform3d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_ellipsoid_surface_method_uiso_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -11496,6 +11805,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_hyp_paraboloid_surface_method_set_semi_axis_b_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalHypParaboloidSurfaceMethodSetSemiAxisB0(GeomEvalHypParaboloidSurfaceHandle handle, double theB);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_hyp_paraboloid_surface_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalHypParaboloidSurfaceMethodTransform0(GeomEvalHypParaboloidSurfaceHandle handle, global::OcctSharp.Values.Transform3d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_hyp_paraboloid_surface_method_uiso_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -11600,6 +11913,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalHyperboloidSurfaceMethodSetR20(GeomEvalHyperboloidSurfaceHandle handle, double theR2);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_hyperboloid_surface_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalHyperboloidSurfaceMethodTransform0(GeomEvalHyperboloidSurfaceHandle handle, global::OcctSharp.Values.Transform3d t);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_hyperboloid_surface_method_uiso_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalHyperboloidSurfaceMethodUIso0(GeomEvalHyperboloidSurfaceHandle handle, double u, out nint handleValue);
@@ -11686,6 +12003,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_paraboloid_surface_method_set_focal_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalParaboloidSurfaceMethodSetFocal0(GeomEvalParaboloidSurfaceHandle handle, double theFocal);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_paraboloid_surface_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalParaboloidSurfaceMethodTransform0(GeomEvalParaboloidSurfaceHandle handle, global::OcctSharp.Values.Transform3d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_paraboloid_surface_method_uiso_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -11798,6 +12119,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalSineWaveCurveMethodReversedParameter0(GeomEvalSineWaveCurveHandle handle, double u, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_sine_wave_curve_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalSineWaveCurveMethodTransform0(GeomEvalSineWaveCurveHandle handle, global::OcctSharp.Values.Transform3d t);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_sine_wave_curve_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalSineWaveCurveClone(GeomEvalSineWaveCurveHandle source, out nint handle);
@@ -11889,6 +12214,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalTBezierCurveMethodStartPoint0(GeomEvalTBezierCurveHandle handle, out Point3dRaw resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_tbezier_curve_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalTBezierCurveMethodTransform0(GeomEvalTBezierCurveHandle handle, global::OcctSharp.Values.Transform3d t);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_tbezier_curve_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalTBezierCurveClone(GeomEvalTBezierCurveHandle source, out nint handle);
@@ -11979,6 +12308,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_tbezier_surface_method_order_v_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalTBezierSurfaceMethodOrderV0(GeomEvalTBezierSurfaceHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_tbezier_surface_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomEvalTBezierSurfaceMethodTransform0(GeomEvalTBezierSurfaceHandle handle, global::OcctSharp.Values.Transform3d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_eval_tbezier_surface_method_uiso_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13803,9 +14136,17 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomPlateSurfaceMethodIsVPeriodic0(GeomPlateSurfaceHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_plate_surface_method_parametric_transformation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomPlateSurfaceMethodParametricTransformation0(GeomPlateSurfaceHandle handle, global::OcctSharp.Values.Transform3d t, out global::OcctSharp.Values.AffineTransform2d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_plate_surface_method_set_bounds_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomPlateSurfaceMethodSetBounds0(GeomPlateSurfaceHandle handle, double umin, double umax, double vmin, double vmax);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_plate_surface_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomPlateSurfaceMethodTransform0(GeomPlateSurfaceHandle handle, global::OcctSharp.Values.Transform3d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_plate_surface_method_uiso_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13917,6 +14258,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAxis1PlacementMethodSetDirection0(GeomAxis1PlacementHandle handle, global::OcctSharp.Values.Direction3d v);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_axis1_placement_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomAxis1PlacementMethodTransform0(GeomAxis1PlacementHandle handle, global::OcctSharp.Values.Transform3d t);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_axis1_placement_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAxis1PlacementClone(GeomAxis1PlacementHandle source, out nint handle);
@@ -13971,6 +14316,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_axis2_placement_method_set_ydirection_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomAxis2PlacementMethodSetYDirection0(GeomAxis2PlacementHandle handle, global::OcctSharp.Values.Direction3d vy);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_axis2_placement_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomAxis2PlacementMethodTransform0(GeomAxis2PlacementHandle handle, global::OcctSharp.Values.Transform3d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_axis2_placement_method_xdirection_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -14226,6 +14575,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomBSplineCurveMethodStartPoint0(GeomBSplineCurveHandle handle, out Point3dRaw resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_bspline_curve_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomBSplineCurveMethodTransform0(GeomBSplineCurveHandle handle, global::OcctSharp.Values.Transform3d t);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_bspline_curve_method_weight_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomBSplineCurveMethodWeight0(GeomBSplineCurveHandle handle, int index, out double resultValue);
@@ -14457,6 +14810,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomBSplineSurfaceMethodSetWeight0(GeomBSplineSurfaceHandle handle, int uIndex, int vIndex, double weight);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_bspline_surface_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomBSplineSurfaceMethodTransform0(GeomBSplineSurfaceHandle handle, global::OcctSharp.Values.Transform3d t);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_bspline_surface_method_udegree_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomBSplineSurfaceMethodUDegree0(GeomBSplineSurfaceHandle handle, out int resultValue);
@@ -14660,6 +15017,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomBezierCurveMethodStartPoint0(GeomBezierCurveHandle handle, out Point3dRaw resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_bezier_curve_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomBezierCurveMethodTransform0(GeomBezierCurveHandle handle, global::OcctSharp.Values.Transform3d t);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_bezier_curve_method_weight_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomBezierCurveMethodWeight0(GeomBezierCurveHandle handle, int index, out double resultValue);
@@ -14782,6 +15143,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_bezier_surface_method_set_weight_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomBezierSurfaceMethodSetWeight0(GeomBezierSurfaceHandle handle, int uIndex, int vIndex, double weight);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_bezier_surface_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomBezierSurfaceMethodTransform0(GeomBezierSurfaceHandle handle, global::OcctSharp.Values.Transform3d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_bezier_surface_method_udegree_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -14924,6 +15289,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomCartesianPointMethodSetZ0(GeomCartesianPointHandle handle, double z);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_cartesian_point_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomCartesianPointMethodTransform0(GeomCartesianPointHandle handle, global::OcctSharp.Values.Transform3d t);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_cartesian_point_method_x_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomCartesianPointMethodX0(GeomCartesianPointHandle handle, out double resultValue);
@@ -15018,6 +15387,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_circle_method_set_radius_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomCircleMethodSetRadius0(GeomCircleHandle handle, double r);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_circle_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomCircleMethodTransform0(GeomCircleHandle handle, global::OcctSharp.Values.Transform3d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_circle_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15149,6 +15522,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomConicalSurfaceMethodIsVPeriodic0(GeomConicalSurfaceHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_conical_surface_method_parametric_transformation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomConicalSurfaceMethodParametricTransformation0(GeomConicalSurfaceHandle handle, global::OcctSharp.Values.Transform3d t, out global::OcctSharp.Values.AffineTransform2d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_conical_surface_method_ref_radius_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomConicalSurfaceMethodRefRadius0(GeomConicalSurfaceHandle handle, out double resultValue);
@@ -15168,6 +15545,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_conical_surface_method_set_semi_angle_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomConicalSurfaceMethodSetSemiAngle0(GeomConicalSurfaceHandle handle, double ang);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_conical_surface_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomConicalSurfaceMethodTransform0(GeomConicalSurfaceHandle handle, global::OcctSharp.Values.Transform3d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_conical_surface_method_uiso_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15216,6 +15597,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomCurveMethodDynamicType0(GeomCurveHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_curve_method_parametric_transformation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomCurveMethodParametricTransformation0(GeomCurveHandle handle, global::OcctSharp.Values.Transform3d t, out double resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_curve_method_period_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomCurveMethodPeriod0(GeomCurveHandle handle, out double resultValue);
@@ -15223,6 +15608,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_curve_method_reversed_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomCurveMethodReversed0(GeomCurveHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_curve_method_transformed_parameter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomCurveMethodTransformedParameter0(GeomCurveHandle handle, double u, global::OcctSharp.Values.Transform3d t, out double resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_curve_method_value_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15287,6 +15676,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomCylindricalSurfaceMethodIsVPeriodic0(GeomCylindricalSurfaceHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_cylindrical_surface_method_parametric_transformation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomCylindricalSurfaceMethodParametricTransformation0(GeomCylindricalSurfaceHandle handle, global::OcctSharp.Values.Transform3d t, out global::OcctSharp.Values.AffineTransform2d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_cylindrical_surface_method_radius_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomCylindricalSurfaceMethodRadius0(GeomCylindricalSurfaceHandle handle, out double resultValue);
@@ -15298,6 +15691,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_cylindrical_surface_method_set_radius_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomCylindricalSurfaceMethodSetRadius0(GeomCylindricalSurfaceHandle handle, double r);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_cylindrical_surface_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomCylindricalSurfaceMethodTransform0(GeomCylindricalSurfaceHandle handle, global::OcctSharp.Values.Transform3d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_cylindrical_surface_method_uiso_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15397,6 +15794,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_direction_method_square_magnitude_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomDirectionMethodSquareMagnitude0(GeomDirectionHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_direction_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomDirectionMethodTransform0(GeomDirectionHandle handle, global::OcctSharp.Values.Transform3d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_direction_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15579,6 +15980,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_ellipse_method_set_minor_radius_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomEllipseMethodSetMinorRadius0(GeomEllipseHandle handle, double minorRadius);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_ellipse_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomEllipseMethodTransform0(GeomEllipseHandle handle, global::OcctSharp.Values.Transform3d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_ellipse_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15794,6 +16199,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomHyperbolaMethodSetMinorRadius0(GeomHyperbolaHandle handle, double minorRadius);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_hyperbola_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomHyperbolaMethodTransform0(GeomHyperbolaHandle handle, global::OcctSharp.Values.Transform3d t);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_hyperbola_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomHyperbolaClone(GeomHyperbolaHandle source, out nint handle);
@@ -15869,6 +16278,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomLineMethodLin0(GeomLineHandle handle, out global::OcctSharp.Values.Line3d resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_line_method_parametric_transformation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomLineMethodParametricTransformation0(GeomLineHandle handle, global::OcctSharp.Values.Transform3d t, out double resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_line_method_position_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomLineMethodPosition0(GeomLineHandle handle, out global::OcctSharp.Values.Axis1 resultValue);
@@ -15896,6 +16309,14 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_line_method_set_position_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomLineMethodSetPosition0(GeomLineHandle handle, global::OcctSharp.Values.Axis1 a1);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_line_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomLineMethodTransform0(GeomLineHandle handle, global::OcctSharp.Values.Transform3d t);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_line_method_transformed_parameter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomLineMethodTransformedParameter0(GeomLineHandle handle, double u, global::OcctSharp.Values.Transform3d t, out double resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_line_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -15984,6 +16405,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomOffsetCurveMethodOffset0(GeomOffsetCurveHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_offset_curve_method_parametric_transformation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomOffsetCurveMethodParametricTransformation0(GeomOffsetCurveHandle handle, global::OcctSharp.Values.Transform3d t, out double resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_offset_curve_method_period_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomOffsetCurveMethodPeriod0(GeomOffsetCurveHandle handle, out double resultValue);
@@ -16007,6 +16432,14 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_offset_curve_method_set_offset_value_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomOffsetCurveMethodSetOffsetValue0(GeomOffsetCurveHandle handle, double d);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_offset_curve_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomOffsetCurveMethodTransform0(GeomOffsetCurveHandle handle, global::OcctSharp.Values.Transform3d t);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_offset_curve_method_transformed_parameter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomOffsetCurveMethodTransformedParameter0(GeomOffsetCurveHandle handle, double u, global::OcctSharp.Values.Transform3d t, out double resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_offset_curve_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16095,6 +16528,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomOffsetSurfaceMethodOffset0(GeomOffsetSurfaceHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_offset_surface_method_parametric_transformation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomOffsetSurfaceMethodParametricTransformation0(GeomOffsetSurfaceHandle handle, global::OcctSharp.Values.Transform3d t, out global::OcctSharp.Values.AffineTransform2d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_offset_surface_method_set_basis_surface_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomOffsetSurfaceMethodSetBasisSurface0(GeomOffsetSurfaceHandle handle, nint s, int isNotCheckC0);
@@ -16106,6 +16543,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_offset_surface_method_surface_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomOffsetSurfaceMethodSurface0(GeomOffsetSurfaceHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_offset_surface_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomOffsetSurfaceMethodTransform0(GeomOffsetSurfaceHandle handle, global::OcctSharp.Values.Transform3d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_offset_surface_method_uiso_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16226,6 +16667,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomParabolaMethodParameter0(GeomParabolaHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_parabola_method_parametric_transformation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomParabolaMethodParametricTransformation0(GeomParabolaHandle handle, global::OcctSharp.Values.Transform3d t, out double resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_parabola_method_reversed_parameter_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomParabolaMethodReversedParameter0(GeomParabolaHandle handle, double u, out double resultValue);
@@ -16237,6 +16682,14 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_parabola_method_set_parab_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomParabolaMethodSetParab0(GeomParabolaHandle handle, global::OcctSharp.Values.Parabola3d prb);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_parabola_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomParabolaMethodTransform0(GeomParabolaHandle handle, global::OcctSharp.Values.Transform3d t);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_parabola_method_transformed_parameter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomParabolaMethodTransformedParameter0(GeomParabolaHandle handle, double u, global::OcctSharp.Values.Transform3d t, out double resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_parabola_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16301,6 +16754,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomPlaneMethodIsVPeriodic0(GeomPlaneHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_plane_method_parametric_transformation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomPlaneMethodParametricTransformation0(GeomPlaneHandle handle, global::OcctSharp.Values.Transform3d t, out global::OcctSharp.Values.AffineTransform2d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_plane_method_pln_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomPlaneMethodPln0(GeomPlaneHandle handle, out global::OcctSharp.Values.Plane resultValue);
@@ -16308,6 +16765,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_plane_method_set_pln_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomPlaneMethodSetPln0(GeomPlaneHandle handle, global::OcctSharp.Values.Plane pl);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_plane_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomPlaneMethodTransform0(GeomPlaneHandle handle, global::OcctSharp.Values.Transform3d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_plane_method_uiso_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16439,6 +16900,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomRectangularTrimmedSurfaceMethodIsVPeriodic0(GeomRectangularTrimmedSurfaceHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_rectangular_trimmed_surface_method_parametric_transformation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomRectangularTrimmedSurfaceMethodParametricTransformation0(GeomRectangularTrimmedSurfaceHandle handle, global::OcctSharp.Values.Transform3d t, out global::OcctSharp.Values.AffineTransform2d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_rectangular_trimmed_surface_method_set_trim_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomRectangularTrimmedSurfaceMethodSetTrim0(GeomRectangularTrimmedSurfaceHandle handle, double param1, double param2, int uTrim, int sense);
@@ -16446,6 +16911,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_rectangular_trimmed_surface_method_set_trim_1")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomRectangularTrimmedSurfaceMethodSetTrim1(GeomRectangularTrimmedSurfaceHandle handle, double u1, double u2, double v1, double v2, int uSense, int vSense);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_rectangular_trimmed_surface_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomRectangularTrimmedSurfaceMethodTransform0(GeomRectangularTrimmedSurfaceHandle handle, global::OcctSharp.Values.Transform3d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_rectangular_trimmed_surface_method_uiso_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16554,6 +17023,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomSphericalSurfaceMethodSphere0(GeomSphericalSurfaceHandle handle, out global::OcctSharp.Values.Sphere resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_spherical_surface_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomSphericalSurfaceMethodTransform0(GeomSphericalSurfaceHandle handle, global::OcctSharp.Values.Transform3d t);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_spherical_surface_method_uiso_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomSphericalSurfaceMethodUIso0(GeomSphericalSurfaceHandle handle, double u, out nint handleValue);
@@ -16600,6 +17073,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_surface_method_dynamic_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomSurfaceMethodDynamicType0(GeomSurfaceHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_surface_method_parametric_transformation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomSurfaceMethodParametricTransformation0(GeomSurfaceHandle handle, global::OcctSharp.Values.Transform3d t, out global::OcctSharp.Values.AffineTransform2d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_surface_method_uperiod_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16692,6 +17169,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomSurfaceOfLinearExtrusionMethodIsVPeriodic0(GeomSurfaceOfLinearExtrusionHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_surface_of_linear_extrusion_method_parametric_transformation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomSurfaceOfLinearExtrusionMethodParametricTransformation0(GeomSurfaceOfLinearExtrusionHandle handle, global::OcctSharp.Values.Transform3d t, out global::OcctSharp.Values.AffineTransform2d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_surface_of_linear_extrusion_method_set_basis_curve_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomSurfaceOfLinearExtrusionMethodSetBasisCurve0(GeomSurfaceOfLinearExtrusionHandle handle, nint c);
@@ -16699,6 +17180,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_surface_of_linear_extrusion_method_set_direction_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomSurfaceOfLinearExtrusionMethodSetDirection0(GeomSurfaceOfLinearExtrusionHandle handle, global::OcctSharp.Values.Direction3d v);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_surface_of_linear_extrusion_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomSurfaceOfLinearExtrusionMethodTransform0(GeomSurfaceOfLinearExtrusionHandle handle, global::OcctSharp.Values.Transform3d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_surface_of_linear_extrusion_method_uiso_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16803,6 +17288,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomSurfaceOfRevolutionMethodLocation0(GeomSurfaceOfRevolutionHandle handle, out Point3dRaw resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_surface_of_revolution_method_parametric_transformation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomSurfaceOfRevolutionMethodParametricTransformation0(GeomSurfaceOfRevolutionHandle handle, global::OcctSharp.Values.Transform3d t, out global::OcctSharp.Values.AffineTransform2d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_surface_of_revolution_method_reference_plane_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomSurfaceOfRevolutionMethodReferencePlane0(GeomSurfaceOfRevolutionHandle handle, out global::OcctSharp.Values.Axis2 resultValue);
@@ -16822,6 +17311,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_surface_of_revolution_method_set_location_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomSurfaceOfRevolutionMethodSetLocation0(GeomSurfaceOfRevolutionHandle handle, Point3dRaw p);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_surface_of_revolution_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomSurfaceOfRevolutionMethodTransform0(GeomSurfaceOfRevolutionHandle handle, global::OcctSharp.Values.Transform3d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_surface_of_revolution_method_uiso_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -16965,6 +17458,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomToroidalSurfaceMethodTorus0(GeomToroidalSurfaceHandle handle, out global::OcctSharp.Values.Torus resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_toroidal_surface_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomToroidalSurfaceMethodTransform0(GeomToroidalSurfaceHandle handle, global::OcctSharp.Values.Transform3d t);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_toroidal_surface_method_uiso_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomToroidalSurfaceMethodUIso0(GeomToroidalSurfaceHandle handle, double u, out nint handleValue);
@@ -17007,6 +17504,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_transformation_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomTransformationCreate0(out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_transformation_create_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomTransformationCreate1(global::OcctSharp.Values.Transform3d t, out nint handle);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_transformation_method_copy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -17092,6 +17593,14 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomTransformationMethodSetTranslation1(GeomTransformationHandle handle, global::OcctSharp.Values.Vector3d theVec);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_transformation_method_set_trsf_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomTransformationMethodSetTrsf0(GeomTransformationHandle handle, global::OcctSharp.Values.Transform3d theTrsf);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_transformation_method_trsf_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomTransformationMethodTrsf0(GeomTransformationHandle handle, out global::OcctSharp.Values.Transform3d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_transformation_method_value_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomTransformationMethodValue0(GeomTransformationHandle handle, int theRow, int theCol, out double resultValue);
@@ -17167,6 +17676,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomTrimmedCurveMethodLastParameter0(GeomTrimmedCurveHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_trimmed_curve_method_parametric_transformation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomTrimmedCurveMethodParametricTransformation0(GeomTrimmedCurveHandle handle, global::OcctSharp.Values.Transform3d t, out double resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_trimmed_curve_method_period_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomTrimmedCurveMethodPeriod0(GeomTrimmedCurveHandle handle, out double resultValue);
@@ -17186,6 +17699,14 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_trimmed_curve_method_start_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomTrimmedCurveMethodStartPoint0(GeomTrimmedCurveHandle handle, out Point3dRaw resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_trimmed_curve_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomTrimmedCurveMethodTransform0(GeomTrimmedCurveHandle handle, global::OcctSharp.Values.Transform3d t);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_trimmed_curve_method_transformed_parameter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomTrimmedCurveMethodTransformedParameter0(GeomTrimmedCurveHandle handle, double u, global::OcctSharp.Values.Transform3d t, out double resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_trimmed_curve_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -17372,6 +17893,10 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_vector_with_magnitude_method_subtracted_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus GeomVectorWithMagnitudeMethodSubtracted0(GeomVectorWithMagnitudeHandle handle, nint other, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_vector_with_magnitude_method_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus GeomVectorWithMagnitudeMethodTransform0(GeomVectorWithMagnitudeHandle handle, global::OcctSharp.Values.Transform3d t);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_vector_with_magnitude_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

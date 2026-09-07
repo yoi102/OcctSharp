@@ -999,6 +999,7 @@
 // Source: c:@S@IGESData_IGESEntity@F@Associate#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
 // Source: c:@S@IGESData_IGESEntity@F@BlankStatus#1
 // Source: c:@S@IGESData_IGESEntity@F@Color#1
+// Source: c:@S@IGESData_IGESEntity@F@CompoundLocation#1
 // Source: c:@S@IGESData_IGESEntity@F@DefColor#1
 // Source: c:@S@IGESData_IGESEntity@F@DefLevel#1
 // Source: c:@S@IGESData_IGESEntity@F@DefLineFont#1
@@ -1029,6 +1030,7 @@
 // Source: c:@S@IGESData_IGESEntity@F@LineFont#1
 // Source: c:@S@IGESData_IGESEntity@F@LineWeight#1
 // Source: c:@S@IGESData_IGESEntity@F@LineWeightNumber#1
+// Source: c:@S@IGESData_IGESEntity@F@Location#1
 // Source: c:@S@IGESData_IGESEntity@F@NameValue#1
 // Source: c:@S@IGESData_IGESEntity@F@NbAssociativities#1
 // Source: c:@S@IGESData_IGESEntity@F@NbProperties#1
@@ -1050,6 +1052,7 @@
 // Source: c:@S@IGESData_IGESEntity@F@TypedProperty#&1$@N@opencascade@S@handle>#$@S@Standard_Type#I#1
 // Source: c:@S@IGESData_IGESEntity@F@UniqueParent#1
 // Source: c:@S@IGESData_IGESEntity@F@UseFlag#1
+// Source: c:@S@IGESData_IGESEntity@F@VectorLocation#1
 // Source: c:@S@IGESData_IGESEntity@F@View#1
 // Source: c:@S@IGESData_IGESEntity@F@ViewList#1
 // Source: c:@S@IGESData_IGESModel@F@ClearHeader#
@@ -1105,6 +1108,8 @@
 // Source: c:@S@IGESData_SpecificModule@F@DynamicType#1
 // Source: c:@S@IGESData_SpecificModule@F@OwnCorrect#I#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
 // Source: c:@S@IGESData_ToolLocation@F@DynamicType#1
+// Source: c:@S@IGESData_ToolLocation@F@EffectiveLocation#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
+// Source: c:@S@IGESData_ToolLocation@F@ExplicitLocation#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
 // Source: c:@S@IGESData_ToolLocation@F@HasParent#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
 // Source: c:@S@IGESData_ToolLocation@F@HasParentByAssociativity#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
 // Source: c:@S@IGESData_ToolLocation@F@HasTransf#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
@@ -1114,6 +1119,7 @@
 // Source: c:@S@IGESData_ToolLocation@F@IsTransf#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
 // Source: c:@S@IGESData_ToolLocation@F@Load#
 // Source: c:@S@IGESData_ToolLocation@F@Parent#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
+// Source: c:@S@IGESData_ToolLocation@F@ParentLocation#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
 // Source: c:@S@IGESData_ToolLocation@F@ResetDependences#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#
 // Source: c:@S@IGESData_ToolLocation@F@SetOwnAsDependent#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#
 // Source: c:@S@IGESData_ToolLocation@F@SetParentAssoc#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#S0_#
@@ -1950,6 +1956,7 @@
 // Source: c:@S@IGESGeom_TransformationMatrix@F@DynamicType#1
 // Source: c:@S@IGESGeom_TransformationMatrix@F@IGESGeom_TransformationMatrix#
 // Source: c:@S@IGESGeom_TransformationMatrix@F@SetFormNumber#I#
+// Source: c:@S@IGESGeom_TransformationMatrix@F@Value#1
 // Source: c:@S@IGESGeom_TrimmedSurface@F@DynamicType#1
 // Source: c:@S@IGESGeom_TrimmedSurface@F@HasOuterContour#1
 // Source: c:@S@IGESGeom_TrimmedSurface@F@IGESGeom_TrimmedSurface#
@@ -7436,8 +7443,10 @@
 // Source: c:@S@VrmlData_Geometry@F@DynamicType#1
 // Source: c:@S@VrmlData_Group@F@Clone#&1$@N@opencascade@S@handle>#$@S@VrmlData_Node#1
 // Source: c:@S@VrmlData_Group@F@DynamicType#1
+// Source: c:@S@VrmlData_Group@F@GetTransform#1
 // Source: c:@S@VrmlData_Group@F@IsTransform#1
 // Source: c:@S@VrmlData_Group@F@RemoveNode#&1$@N@opencascade@S@handle>#$@S@VrmlData_Node#
+// Source: c:@S@VrmlData_Group@F@SetTransform#&1$@S@gp_Trsf#
 // Source: c:@S@VrmlData_Group@F@VrmlData_Group#b#
 // Source: c:@S@VrmlData_ImageTexture@F@Clone#&1$@N@opencascade@S@handle>#$@S@VrmlData_Node#1
 // Source: c:@S@VrmlData_ImageTexture@F@DynamicType#1
@@ -23606,6 +23615,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDataIGESEntityMethodColor0(IGESDataIGESEntityHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdata_igesentity_method_compound_location_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDataIGESEntityMethodCompoundLocation0(IGESDataIGESEntityHandle handle, out global::OcctSharp.Values.AffineTransform3d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdata_igesentity_method_def_color_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDataIGESEntityMethodDefColor0(IGESDataIGESEntityHandle handle, out int resultValue);
@@ -23726,6 +23739,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDataIGESEntityMethodLineWeightNumber0(IGESDataIGESEntityHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdata_igesentity_method_location_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDataIGESEntityMethodLocation0(IGESDataIGESEntityHandle handle, out global::OcctSharp.Values.AffineTransform3d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdata_igesentity_method_name_value_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDataIGESEntityMethodNameValue0(IGESDataIGESEntityHandle handle, out nint handleValue);
@@ -23809,6 +23826,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdata_igesentity_method_use_flag_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDataIGESEntityMethodUseFlag0(IGESDataIGESEntityHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdata_igesentity_method_vector_location_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDataIGESEntityMethodVectorLocation0(IGESDataIGESEntityHandle handle, out global::OcctSharp.Values.AffineTransform3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdata_igesentity_method_view_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -24281,6 +24302,14 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDataToolLocationMethodDynamicType0(IGESDataToolLocationHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdata_tool_location_method_effective_location_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDataToolLocationMethodEffectiveLocation0(IGESDataToolLocationHandle handle, nint ent, out global::OcctSharp.Values.AffineTransform3d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdata_tool_location_method_explicit_location_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDataToolLocationMethodExplicitLocation0(IGESDataToolLocationHandle handle, nint ent, out global::OcctSharp.Values.AffineTransform3d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdata_tool_location_method_has_parent_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDataToolLocationMethodHasParent0(IGESDataToolLocationHandle handle, nint ent, out int resultValue);
@@ -24312,6 +24341,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdata_tool_location_method_parent_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDataToolLocationMethodParent0(IGESDataToolLocationHandle handle, nint ent, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdata_tool_location_method_parent_location_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDataToolLocationMethodParentLocation0(IGESDataToolLocationHandle handle, nint ent, out global::OcctSharp.Values.AffineTransform3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdata_tool_location_method_reset_dependences_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -29290,6 +29323,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_transformation_matrix_method_set_form_number_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomTransformationMatrixMethodSetFormNumber0(IGESGeomTransformationMatrixHandle handle, int form);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_transformation_matrix_method_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomTransformationMatrixMethodValue0(IGESGeomTransformationMatrixHandle handle, out global::OcctSharp.Values.AffineTransform3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_transformation_matrix_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -70030,6 +70067,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus VrmlDataGroupMethodDynamicType0(VrmlDataGroupHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_vrml_data_group_method_get_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus VrmlDataGroupMethodGetTransform0(VrmlDataGroupHandle handle, out global::OcctSharp.Values.Transform3d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_vrml_data_group_method_is_transform_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus VrmlDataGroupMethodIsTransform0(VrmlDataGroupHandle handle, out int resultValue);
@@ -70037,6 +70078,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_vrml_data_group_method_remove_node_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus VrmlDataGroupMethodRemoveNode0(VrmlDataGroupHandle handle, nint theNode, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_vrml_data_group_method_set_transform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus VrmlDataGroupMethodSetTransform0(VrmlDataGroupHandle handle, global::OcctSharp.Values.Transform3d theTrsf, out int resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_vrml_data_group_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

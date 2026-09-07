@@ -61,7 +61,7 @@ public sealed class SimpleBindingEligibilityPassTests
 
         Assert.Equal(BindingSupportState.Supported, Find(result, "ctor").SupportState);
         Assert.Equal(BindingSupportState.Supported, Find(result, "static").SupportState);
-        Assert.Equal(BindingSupportState.Pending, Find(result, "instance").SupportState);
+        Assert.Equal(BindingSupportState.Supported, Find(result, "instance").SupportState);
         Assert.Equal(BindingSupportState.Pending, Find(result, "pointer").SupportState);
         Assert.Equal(BindingSupportState.Skipped, Find(result, "private").SupportState);
         Assert.Equal("SK003", Find(result, "private").SkipReason?.Code);

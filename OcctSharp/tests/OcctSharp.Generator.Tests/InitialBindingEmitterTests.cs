@@ -8,6 +8,49 @@ public sealed class InitialBindingEmitterTests
 {
     private const string TestStableId = "test:gp-pnt-three-coordinates";
 
+    [Theory]
+    [InlineData("gp_Mat")]
+    [InlineData("gp_Mat2d")]
+    [InlineData("gp_GTrsf")]
+    [InlineData("gp_GTrsf2d")]
+    public void SingularInverseGuardsPrecedeKernelCalls(string owner)
+    {
+        DiscoveryReport basis = CreateReport();
+        BindingDeclaration invert = new("z:inverse:" + owner, owner + "::Invert", BindingDeclarationKind.Method, owner + ".hxx", 1, 1)
+        { Access = BindingAccess.Public, ReturnType = CreateValueType("void", false) };
+        BindingDeclaration power = invert with { StableId = "z:power:" + owner, NativeName = owner + "::Power",
+            Parameters = [new(0, "n", CreateValueType("int", false), false)] };
+        GeneratedBindingSet result = InitialBindingEmitter.Emit(basis with { Model = new([..basis.Model.Declarations, invert, power]) });
+        string native = Assert.Single(result.Files, f => f.RelativePath.EndsWith("ValueOperations.Generated.cpp", StringComparison.Ordinal)).Content;
+        Assert.Contains("if (arg0 < 0 && value.IsSingular())", native, StringComparison.Ordinal);
+        Assert.True(native.IndexOf("if (value.IsSingular())", StringComparison.Ordinal) < native.IndexOf("value.Invert();", StringComparison.Ordinal));
+    }
+
+    [Fact]
+    public void ValueOperationsCopyReceiversAndPublishMutationsOnlyAfterSuccess()
+    {
+        DiscoveryReport basis = CreateReport();
+        BindingDeclaration query = new("z:pnt-x", "gp_Pnt::X", BindingDeclarationKind.Method, "gp_Pnt.hxx", 1, 1)
+        { Access = BindingAccess.Public, IsConst = true, ReturnType = CreateValueType("double", false) };
+        BindingDeclaration mutate = query with { StableId = "z:pnt-set", NativeName = "gp_Pnt::SetX", IsConst = false,
+            ReturnType = CreateValueType("void", false), Parameters = [new(0, "x", CreateValueType("double", false), false)] };
+        BindingDeclaration manual = mutate with { StableId = "z:manual", NativeName = "gp_Pnt::SetY", SupportState = BindingSupportState.Manual };
+        BindingType pointer = new("double*", "double*", "double", "double", [new(BindingTypeLayerKind.PointerIndirection, false),new(BindingTypeLayerKind.Value,false)],null,[],false,null);
+        BindingDeclaration unsafeCall = mutate with { StableId = "z:pointer", Parameters = [new(0,"p",pointer,false)] };
+        GeneratedBindingSet result = InitialBindingEmitter.Emit(basis with { Model = new([..basis.Model.Declarations, query, mutate, manual, unsafeCall]) });
+        Assert.Contains(query.StableId, result.SourceStableIds);
+        Assert.Contains(mutate.StableId, result.SourceStableIds);
+        Assert.DoesNotContain(manual.StableId, result.SourceStableIds);
+        Assert.DoesNotContain(unsafeCall.StableId, result.SourceStableIds);
+        string native = Assert.Single(result.Files, f => f.RelativePath.EndsWith("ValueOperations.Generated.cpp", StringComparison.Ordinal)).Content;
+        string managed = Assert.Single(result.Files, f => f.RelativePath.EndsWith("ValueOperations.Generated.cs", StringComparison.Ordinal)).Content;
+        Assert.Contains("const auto value = gp_Pnt(", native, StringComparison.Ordinal);
+        Assert.Contains("*updated = {};", native, StringComparison.Ordinal);
+        Assert.Contains("const auto copiedReceiver =", native, StringComparison.Ordinal);
+        Assert.Contains("public static void SetX(ref Point3d receiver, double arg0)", managed, StringComparison.Ordinal);
+        Assert.True(managed.IndexOf("NativeError.ThrowIfFailed", StringComparison.Ordinal) < managed.IndexOf("receiver = new Point3d", StringComparison.Ordinal));
+    }
+
     [Fact]
     public void CheckedStaticParametersEscapeManagedKeywordsOnly()
     {

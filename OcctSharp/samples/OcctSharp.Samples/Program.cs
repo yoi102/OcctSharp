@@ -59,8 +59,8 @@ internal static class Program
         }
 
         OcctRuntimeInfo runtime = OcctRuntime.Info;
-        if (runtime.AbiVersion != new Version(1, 68)
-            || runtime.BridgeVersion != "0.76.0"
+        if (runtime.AbiVersion != new Version(1, 69)
+            || runtime.BridgeVersion != "0.77.0"
             || runtime.OcctVersion != "8.0.1")
         {
             throw new InvalidOperationException(

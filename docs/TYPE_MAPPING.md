@@ -1,5 +1,27 @@
 # Type Mapping
 
+## Batch Z copied operations and transformation coefficients (ADR-0094)
+
+TM009 additionally maps Transform2d, Transform3d, AffineTransform2d and
+AffineTransform3d. Their M11...M23 or M11...M34 fields are row-major coefficients,
+including the final translation column. These are not C++ memory layouts or form flags.
+Similarity inputs rebuild through SetValues; every accessor must be finite and match
+its input within 1e-12 * max(1, abs(input)). This rejects shear and invalid/singular
+similarity matrices. Affine inputs retain general coefficients, including singularity;
+when the same similarity check succeeds, they use a canonical similarity form.
+Native Form queries describe this reconstructed form, not the original object's cache.
+Native domain and numerical-resolution rules still apply to inversion and operations.
+Default zero records are not identity transforms; use Transform2dOperations.Create()
+or Transform3dOperations.Create() for identity values.
+
+EL011 selects public geometric constructors and instance calls with copied inputs and
+outputs. Geometry exposes them under OcctSharp.ValueOperations. Const receivers are
+passed by value; non-const receivers use ref and update only after successful status.
+Mutable-reference parameters/returns, operators, pointers, arrays and direct form-cache
+editing remain excluded. Existing manual stable IDs remain manual. The older Y scope
+below describes its thirty-record delivery, not the current transform restriction.
+
+
 ## Batch Y copied geometric values (ADR-0093)
 
 TM009 maps thirty gp types by value or const lvalue reference to explicit records:

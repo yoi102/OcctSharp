@@ -2,6 +2,7 @@ using OcctSharp;
 
 OcctSharp.Tests.Shared.BatchXProjectionWorkflow.Run();
 OcctSharp.Tests.Shared.BatchYGeometryWorkflow.Run();
+OcctSharp.Tests.Shared.BatchZValueWorkflow.Run();
 
 string nativeDirectory = Path.Combine(AppContext.BaseDirectory, "occt");
 string nativeBridge = Path.Combine(nativeDirectory, "OcctSharp.Native.dll");
@@ -26,8 +27,8 @@ if (nativeFiles.Length < 2)
 }
 
 OcctRuntimeInfo runtime = OcctRuntime.Info;
-if (runtime.AbiVersion != new Version(1, 68)
-    || runtime.BridgeVersion != "0.76.0"
+if (runtime.AbiVersion != new Version(1, 69)
+    || runtime.BridgeVersion != "0.77.0"
     || runtime.OcctVersion != "8.0.1")
 {
     throw new InvalidOperationException(

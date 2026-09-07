@@ -434,6 +434,7 @@
 // Source: c:@S@Bisector_BisecAna@F@ReversedParameter#d#1
 // Source: c:@S@Bisector_BisecAna@F@SetTrim#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#
 // Source: c:@S@Bisector_BisecAna@F@SetTrim#d#d#
+// Source: c:@S@Bisector_BisecAna@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Bisector_BisecCC@F@Bisector_BisecCC#
 // Source: c:@S@Bisector_BisecCC@F@Bisector_BisecCC#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#S0_#d#d#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@Bisector_BisecCC@F@ChangeGuide#1
@@ -462,6 +463,7 @@
 // Source: c:@S@Bisector_BisecCC@F@Perform#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#S0_#d#d#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@Bisector_BisecCC@F@Reverse#
 // Source: c:@S@Bisector_BisecCC@F@ReversedParameter#d#1
+// Source: c:@S@Bisector_BisecCC@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Bisector_BisecPC@F@Bisector_BisecPC#
 // Source: c:@S@Bisector_BisecPC@F@Bisector_BisecPC#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@S@gp_Pnt2d#d#d#
 // Source: c:@S@Bisector_BisecPC@F@Bisector_BisecPC#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@S@gp_Pnt2d#d#d#d#
@@ -490,6 +492,7 @@
 // Source: c:@S@Bisector_BisecPC@F@Perform#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@S@gp_Pnt2d#d#d#
 // Source: c:@S@Bisector_BisecPC@F@Reverse#
 // Source: c:@S@Bisector_BisecPC@F@ReversedParameter#d#1
+// Source: c:@S@Bisector_BisecPC@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Bisector_Curve@F@DynamicType#1
 // Source: c:@S@Extrema_ExtPExtS@F@DynamicType#1
 // Source: c:@S@Extrema_ExtPExtS@F@Extrema_ExtPExtS#
@@ -621,6 +624,7 @@
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@Reverse#
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@StartPoint#1
+// Source: c:@S@Geom2dEval_AHTBezierCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@Copy#1
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@DynamicType#1
@@ -637,6 +641,7 @@
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@Position#1
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@Reverse#
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@ReversedParameter#d#1
+// Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@Copy#1
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@DynamicType#1
@@ -652,6 +657,7 @@
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@Radius#1
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@Reverse#
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@ReversedParameter#d#1
+// Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@Copy#1
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@DynamicType#1
@@ -668,6 +674,7 @@
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@Reverse#
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@Scale#1
+// Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Amplitude#1
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Copy#1
@@ -685,6 +692,7 @@
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Position#1
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Reverse#
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@ReversedParameter#d#1
+// Source: c:@S@Geom2dEval_SineWaveCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2dEval_TBezierCurve@F@Alpha#1
 // Source: c:@S@Geom2dEval_TBezierCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_TBezierCurve@F@Copy#1
@@ -703,6 +711,7 @@
 // Source: c:@S@Geom2dEval_TBezierCurve@F@Reverse#
 // Source: c:@S@Geom2dEval_TBezierCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2dEval_TBezierCurve@F@StartPoint#1
+// Source: c:@S@Geom2dEval_TBezierCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_AxisPlacement@F@Angle#&1$@N@opencascade@S@handle>#$@S@Geom2d_AxisPlacement#1
 // Source: c:@S@Geom2d_AxisPlacement@F@Ax2d#1
 // Source: c:@S@Geom2d_AxisPlacement@F@Copy#1
@@ -716,6 +725,7 @@
 // Source: c:@S@Geom2d_AxisPlacement@F@SetAxis#&1$@S@gp_Ax2d#
 // Source: c:@S@Geom2d_AxisPlacement@F@SetDirection#&1$@S@gp_Dir2d#
 // Source: c:@S@Geom2d_AxisPlacement@F@SetLocation#&1$@S@gp_Pnt2d#
+// Source: c:@S@Geom2d_AxisPlacement@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_BSplineCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom2d_BSplineCurve@F@Continuity#1
 // Source: c:@S@Geom2d_BSplineCurve@F@Copy#1
@@ -765,6 +775,7 @@
 // Source: c:@S@Geom2d_BSplineCurve@F@SetPole#I#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@Geom2d_BSplineCurve@F@SetWeight#I#d#
 // Source: c:@S@Geom2d_BSplineCurve@F@StartPoint#1
+// Source: c:@S@Geom2d_BSplineCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_BSplineCurve@F@Weight#I#1
 // Source: c:@S@Geom2d_BezierCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom2d_BezierCurve@F@Continuity#1
@@ -796,6 +807,7 @@
 // Source: c:@S@Geom2d_BezierCurve@F@SetPole#I#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@Geom2d_BezierCurve@F@SetWeight#I#d#
 // Source: c:@S@Geom2d_BezierCurve@F@StartPoint#1
+// Source: c:@S@Geom2d_BezierCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_BezierCurve@F@Weight#I#1
 // Source: c:@S@Geom2d_BoundedCurve@F@DynamicType#1
 // Source: c:@S@Geom2d_CartesianPoint@F@Copy#1
@@ -807,6 +819,7 @@
 // Source: c:@S@Geom2d_CartesianPoint@F@SetPnt2d#&1$@S@gp_Pnt2d#
 // Source: c:@S@Geom2d_CartesianPoint@F@SetX#d#
 // Source: c:@S@Geom2d_CartesianPoint@F@SetY#d#
+// Source: c:@S@Geom2d_CartesianPoint@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_CartesianPoint@F@X#1
 // Source: c:@S@Geom2d_CartesianPoint@F@Y#1
 // Source: c:@S@Geom2d_Circle@F@Circ2d#1
@@ -825,6 +838,7 @@
 // Source: c:@S@Geom2d_Circle@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_Circle@F@SetCirc2d#&1$@S@gp_Circ2d#
 // Source: c:@S@Geom2d_Circle@F@SetRadius#d#
+// Source: c:@S@Geom2d_Circle@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_Conic@F@Continuity#1
 // Source: c:@S@Geom2d_Conic@F@DynamicType#1
 // Source: c:@S@Geom2d_Conic@F@IsCN#I#1
@@ -839,8 +853,10 @@
 // Source: c:@S@Geom2d_Conic@F@YAxis#1
 // Source: c:@S@Geom2d_Curve@F@DN#d#I#1
 // Source: c:@S@Geom2d_Curve@F@DynamicType#1
+// Source: c:@S@Geom2d_Curve@F@ParametricTransformation#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Curve@F@Period#1
 // Source: c:@S@Geom2d_Curve@F@Reversed#1
+// Source: c:@S@Geom2d_Curve@F@TransformedParameter#d#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Direction@F@Copy#1
 // Source: c:@S@Geom2d_Direction@F@Crossed#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
 // Source: c:@S@Geom2d_Direction@F@Dir2d#1
@@ -853,6 +869,7 @@
 // Source: c:@S@Geom2d_Direction@F@SetX#d#
 // Source: c:@S@Geom2d_Direction@F@SetY#d#
 // Source: c:@S@Geom2d_Direction@F@SquareMagnitude#1
+// Source: c:@S@Geom2d_Direction@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_Ellipse@F@Copy#1
 // Source: c:@S@Geom2d_Ellipse@F@Directrix1#1
 // Source: c:@S@Geom2d_Ellipse@F@Directrix2#1
@@ -877,6 +894,7 @@
 // Source: c:@S@Geom2d_Ellipse@F@SetElips2d#&1$@S@gp_Elips2d#
 // Source: c:@S@Geom2d_Ellipse@F@SetMajorRadius#d#
 // Source: c:@S@Geom2d_Ellipse@F@SetMinorRadius#d#
+// Source: c:@S@Geom2d_Ellipse@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_Geometry@F@DynamicType#1
 // Source: c:@S@Geom2d_Geometry@F@Mirror#&1$@S@gp_Ax2d#
 // Source: c:@S@Geom2d_Geometry@F@Mirror#&1$@S@gp_Pnt2d#
@@ -886,6 +904,7 @@
 // Source: c:@S@Geom2d_Geometry@F@Rotated#&1$@S@gp_Pnt2d#d#1
 // Source: c:@S@Geom2d_Geometry@F@Scale#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@Geom2d_Geometry@F@Scaled#&1$@S@gp_Pnt2d#d#1
+// Source: c:@S@Geom2d_Geometry@F@Transformed#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Geometry@F@Translate#&1$@S@gp_Pnt2d#S0_#
 // Source: c:@S@Geom2d_Geometry@F@Translate#&1$@S@gp_Vec2d#
 // Source: c:@S@Geom2d_Geometry@F@Translated#&1$@S@gp_Pnt2d#S0_#1
@@ -920,6 +939,7 @@
 // Source: c:@S@Geom2d_Hyperbola@F@SetHypr2d#&1$@S@gp_Hypr2d#
 // Source: c:@S@Geom2d_Hyperbola@F@SetMajorRadius#d#
 // Source: c:@S@Geom2d_Hyperbola@F@SetMinorRadius#d#
+// Source: c:@S@Geom2d_Hyperbola@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_Line@F@Continuity#1
 // Source: c:@S@Geom2d_Line@F@Copy#1
 // Source: c:@S@Geom2d_Line@F@Direction#1
@@ -936,6 +956,7 @@
 // Source: c:@S@Geom2d_Line@F@LastParameter#1
 // Source: c:@S@Geom2d_Line@F@Lin2d#1
 // Source: c:@S@Geom2d_Line@F@Location#1
+// Source: c:@S@Geom2d_Line@F@ParametricTransformation#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Line@F@Position#1
 // Source: c:@S@Geom2d_Line@F@Reverse#
 // Source: c:@S@Geom2d_Line@F@ReversedParameter#d#1
@@ -943,6 +964,8 @@
 // Source: c:@S@Geom2d_Line@F@SetLin2d#&1$@S@gp_Lin2d#
 // Source: c:@S@Geom2d_Line@F@SetLocation#&1$@S@gp_Pnt2d#
 // Source: c:@S@Geom2d_Line@F@SetPosition#&1$@S@gp_Ax2d#
+// Source: c:@S@Geom2d_Line@F@Transform#&1$@S@gp_Trsf2d#
+// Source: c:@S@Geom2d_Line@F@TransformedParameter#d#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_OffsetCurve@F@BasisCurve#1
 // Source: c:@S@Geom2d_OffsetCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom2d_OffsetCurve@F@Continuity#1
@@ -960,12 +983,15 @@
 // Source: c:@S@Geom2d_OffsetCurve@F@IsPeriodic#1
 // Source: c:@S@Geom2d_OffsetCurve@F@LastParameter#1
 // Source: c:@S@Geom2d_OffsetCurve@F@Offset#1
+// Source: c:@S@Geom2d_OffsetCurve@F@ParametricTransformation#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_OffsetCurve@F@Period#1
 // Source: c:@S@Geom2d_OffsetCurve@F@Reverse#
 // Source: c:@S@Geom2d_OffsetCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_OffsetCurve@F@SetBasisCurve#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#b#
 // Source: c:@S@Geom2d_OffsetCurve@F@SetEvalRepresentation#&1$@N@opencascade@S@handle>#$@N@Geom2dEval_RepCurveDesc@S@Base#
 // Source: c:@S@Geom2d_OffsetCurve@F@SetOffsetValue#d#
+// Source: c:@S@Geom2d_OffsetCurve@F@Transform#&1$@S@gp_Trsf2d#
+// Source: c:@S@Geom2d_OffsetCurve@F@TransformedParameter#d#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Parabola@F@Copy#1
 // Source: c:@S@Geom2d_Parabola@F@Directrix#1
 // Source: c:@S@Geom2d_Parabola@F@DynamicType#1
@@ -984,9 +1010,12 @@
 // Source: c:@S@Geom2d_Parabola@F@LastParameter#1
 // Source: c:@S@Geom2d_Parabola@F@Parab2d#1
 // Source: c:@S@Geom2d_Parabola@F@Parameter#1
+// Source: c:@S@Geom2d_Parabola@F@ParametricTransformation#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Parabola@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_Parabola@F@SetFocal#d#
 // Source: c:@S@Geom2d_Parabola@F@SetParab2d#&1$@S@gp_Parab2d#
+// Source: c:@S@Geom2d_Parabola@F@Transform#&1$@S@gp_Trsf2d#
+// Source: c:@S@Geom2d_Parabola@F@TransformedParameter#d#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Point@F@Distance#&1$@N@opencascade@S@handle>#$@S@Geom2d_Point#1
 // Source: c:@S@Geom2d_Point@F@DynamicType#1
 // Source: c:@S@Geom2d_Point@F@SquareDistance#&1$@N@opencascade@S@handle>#$@S@Geom2d_Point#1
@@ -994,6 +1023,7 @@
 // Source: c:@S@Geom2d_Transformation@F@DynamicType#1
 // Source: c:@S@Geom2d_Transformation@F@Form#1
 // Source: c:@S@Geom2d_Transformation@F@Geom2d_Transformation#
+// Source: c:@S@Geom2d_Transformation@F@Geom2d_Transformation#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_Transformation@F@Invert#
 // Source: c:@S@Geom2d_Transformation@F@Inverted#1
 // Source: c:@S@Geom2d_Transformation@F@IsNegative#1
@@ -1011,6 +1041,8 @@
 // Source: c:@S@Geom2d_Transformation@F@SetTransformation#&1$@S@gp_Ax2d#S0_#
 // Source: c:@S@Geom2d_Transformation@F@SetTranslation#&1$@S@gp_Pnt2d#S0_#
 // Source: c:@S@Geom2d_Transformation@F@SetTranslation#&1$@S@gp_Vec2d#
+// Source: c:@S@Geom2d_Transformation@F@SetTrsf2d#&1$@S@gp_Trsf2d#
+// Source: c:@S@Geom2d_Transformation@F@Trsf2d#1
 // Source: c:@S@Geom2d_Transformation@F@Value#I#I#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@BasisCurve#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@Continuity#1
@@ -1025,11 +1057,14 @@
 // Source: c:@S@Geom2d_TrimmedCurve@F@IsClosed#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@IsPeriodic#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@LastParameter#1
+// Source: c:@S@Geom2d_TrimmedCurve@F@ParametricTransformation#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@Period#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@Reverse#
 // Source: c:@S@Geom2d_TrimmedCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@SetTrim#d#d#b#b#
 // Source: c:@S@Geom2d_TrimmedCurve@F@StartPoint#1
+// Source: c:@S@Geom2d_TrimmedCurve@F@Transform#&1$@S@gp_Trsf2d#
+// Source: c:@S@Geom2d_TrimmedCurve@F@TransformedParameter#d#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Vector@F@Angle#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
 // Source: c:@S@Geom2d_Vector@F@Dot#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
 // Source: c:@S@Geom2d_Vector@F@DynamicType#1
@@ -1060,6 +1095,7 @@
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@SquareMagnitude#1
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@Subtract#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@Subtracted#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
+// Source: c:@S@Geom2d_VectorWithMagnitude@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@GeomAdaptor_Curve@F@BSpline#1
 // Source: c:@S@GeomAdaptor_Curve@F@Bezier#1
 // Source: c:@S@GeomAdaptor_Curve@F@Circle#1
@@ -1236,6 +1272,8 @@
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@EvalDN#d#I#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@FirstParameter#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@GeomAdaptor_TransformedCurve#
+// Source: c:@S@GeomAdaptor_TransformedCurve@F@GeomAdaptor_TransformedCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@gp_Trsf#
+// Source: c:@S@GeomAdaptor_TransformedCurve@F@GeomAdaptor_TransformedCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#d#&1$@S@gp_Trsf#
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@GeomCurve#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@GetType#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Hyperbola#1
@@ -1256,8 +1294,10 @@
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Parabola#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Period#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Resolution#d#1
+// Source: c:@S@GeomAdaptor_TransformedCurve@F@SetTrsf#&1$@S@gp_Trsf#
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@ShallowCopy#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Trim#d#d#d#1
+// Source: c:@S@GeomAdaptor_TransformedCurve@F@Trsf#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@AxeOfRevolution#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@BSpline#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@BasisCurve#1
@@ -1272,6 +1312,8 @@
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@FirstUParameter#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@FirstVParameter#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomAdaptor_TransformedSurface#
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomAdaptor_TransformedSurface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@gp_Trsf#
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomAdaptor_TransformedSurface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#d#d#&1$@S@gp_Trsf#d#d#
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomSurface#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomSurfaceOriginal#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomSurfaceTransformed#1
@@ -1285,6 +1327,8 @@
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@IsVRational#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@LastUParameter#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@LastVParameter#1
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@Load#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@gp_Trsf#
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@Load#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#d#d#&1$@S@gp_Trsf#d#d#
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@NbUIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@NbUKnots#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@NbUPoles#1
@@ -1293,11 +1337,13 @@
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@NbVPoles#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@OffsetValue#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@Plane#1
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@SetTrsf#&1$@S@gp_Trsf#
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@ShallowCopy#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@Sphere#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@ToleranceU#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@ToleranceV#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@Torus#1
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@Trsf#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@UContinuity#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@UDegree#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@UPeriod#1
@@ -1327,6 +1373,7 @@
 // Source: c:@S@GeomEval_AHTBezierCurve@F@Reverse#
 // Source: c:@S@GeomEval_AHTBezierCurve@F@ReversedParameter#d#1
 // Source: c:@S@GeomEval_AHTBezierCurve@F@StartPoint#1
+// Source: c:@S@GeomEval_AHTBezierCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_AHTBezierSurface@F@AlgDegreeU#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@AlgDegreeV#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@AlphaU#1
@@ -1348,6 +1395,7 @@
 // Source: c:@S@GeomEval_AHTBezierSurface@F@IsVRational#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@NbPolesU#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@NbPolesV#1
+// Source: c:@S@GeomEval_AHTBezierSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_AHTBezierSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@UReverse#
 // Source: c:@S@GeomEval_AHTBezierSurface@F@UReversedParameter#d#1
@@ -1365,6 +1413,7 @@
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@IsVPeriodic#1
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@Pitch#1
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@SetPitch#d#
+// Source: c:@S@GeomEval_CircularHelicoidSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@UReverse#
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@UReversedParameter#d#1
@@ -1387,6 +1436,7 @@
 // Source: c:@S@GeomEval_CircularHelixCurve@F@Radius#1
 // Source: c:@S@GeomEval_CircularHelixCurve@F@Reverse#
 // Source: c:@S@GeomEval_CircularHelixCurve@F@ReversedParameter#d#1
+// Source: c:@S@GeomEval_CircularHelixCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_EllipsoidSurface@F@Copy#1
 // Source: c:@S@GeomEval_EllipsoidSurface@F@DynamicType#1
 // Source: c:@S@GeomEval_EllipsoidSurface@F@EvalD0#d#d#1
@@ -1402,6 +1452,7 @@
 // Source: c:@S@GeomEval_EllipsoidSurface@F@SetSemiAxisA#d#
 // Source: c:@S@GeomEval_EllipsoidSurface@F@SetSemiAxisB#d#
 // Source: c:@S@GeomEval_EllipsoidSurface@F@SetSemiAxisC#d#
+// Source: c:@S@GeomEval_EllipsoidSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_EllipsoidSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_EllipsoidSurface@F@UReverse#
 // Source: c:@S@GeomEval_EllipsoidSurface@F@UReversedParameter#d#1
@@ -1421,6 +1472,7 @@
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@SemiAxisB#1
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@SetSemiAxisA#d#
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@SetSemiAxisB#d#
+// Source: c:@S@GeomEval_HypParaboloidSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@UReverse#
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@UReversedParameter#d#1
@@ -1442,6 +1494,7 @@
 // Source: c:@S@GeomEval_HyperboloidSurface@F@SetMode#$@S@GeomEval_HyperboloidSurface@E@SheetMode#
 // Source: c:@S@GeomEval_HyperboloidSurface@F@SetR1#d#
 // Source: c:@S@GeomEval_HyperboloidSurface@F@SetR2#d#
+// Source: c:@S@GeomEval_HyperboloidSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_HyperboloidSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_HyperboloidSurface@F@UReverse#
 // Source: c:@S@GeomEval_HyperboloidSurface@F@UReversedParameter#d#1
@@ -1459,6 +1512,7 @@
 // Source: c:@S@GeomEval_ParaboloidSurface@F@IsVClosed#1
 // Source: c:@S@GeomEval_ParaboloidSurface@F@IsVPeriodic#1
 // Source: c:@S@GeomEval_ParaboloidSurface@F@SetFocal#d#
+// Source: c:@S@GeomEval_ParaboloidSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_ParaboloidSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_ParaboloidSurface@F@UReverse#
 // Source: c:@S@GeomEval_ParaboloidSurface@F@UReversedParameter#d#1
@@ -1482,6 +1536,7 @@
 // Source: c:@S@GeomEval_SineWaveCurve@F@Position#1
 // Source: c:@S@GeomEval_SineWaveCurve@F@Reverse#
 // Source: c:@S@GeomEval_SineWaveCurve@F@ReversedParameter#d#1
+// Source: c:@S@GeomEval_SineWaveCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_TBezierCurve@F@Alpha#1
 // Source: c:@S@GeomEval_TBezierCurve@F@Continuity#1
 // Source: c:@S@GeomEval_TBezierCurve@F@Copy#1
@@ -1500,6 +1555,7 @@
 // Source: c:@S@GeomEval_TBezierCurve@F@Reverse#
 // Source: c:@S@GeomEval_TBezierCurve@F@ReversedParameter#d#1
 // Source: c:@S@GeomEval_TBezierCurve@F@StartPoint#1
+// Source: c:@S@GeomEval_TBezierCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_TBezierSurface@F@AlphaU#1
 // Source: c:@S@GeomEval_TBezierSurface@F@AlphaV#1
 // Source: c:@S@GeomEval_TBezierSurface@F@Continuity#1
@@ -1518,6 +1574,7 @@
 // Source: c:@S@GeomEval_TBezierSurface@F@NbVPoles#1
 // Source: c:@S@GeomEval_TBezierSurface@F@OrderU#1
 // Source: c:@S@GeomEval_TBezierSurface@F@OrderV#1
+// Source: c:@S@GeomEval_TBezierSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_TBezierSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_TBezierSurface@F@UReverse#
 // Source: c:@S@GeomEval_TBezierSurface@F@UReversedParameter#d#1
@@ -1817,7 +1874,9 @@
 // Source: c:@S@GeomPlate_Surface@F@IsUPeriodic#1
 // Source: c:@S@GeomPlate_Surface@F@IsVClosed#1
 // Source: c:@S@GeomPlate_Surface@F@IsVPeriodic#1
+// Source: c:@S@GeomPlate_Surface@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@GeomPlate_Surface@F@SetBounds#d#d#d#d#
+// Source: c:@S@GeomPlate_Surface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomPlate_Surface@F@UIso#d#1
 // Source: c:@S@GeomPlate_Surface@F@UPeriod#1
 // Source: c:@S@GeomPlate_Surface@F@UReverse#
@@ -1836,6 +1895,7 @@
 // Source: c:@S@Geom_Axis1Placement@F@Reverse#
 // Source: c:@S@Geom_Axis1Placement@F@Reversed#1
 // Source: c:@S@Geom_Axis1Placement@F@SetDirection#&1$@S@gp_Dir#
+// Source: c:@S@Geom_Axis1Placement@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Axis2Placement@F@Ax2#1
 // Source: c:@S@Geom_Axis2Placement@F@Copy#1
 // Source: c:@S@Geom_Axis2Placement@F@DynamicType#1
@@ -1845,6 +1905,7 @@
 // Source: c:@S@Geom_Axis2Placement@F@SetDirection#&1$@S@gp_Dir#
 // Source: c:@S@Geom_Axis2Placement@F@SetXDirection#&1$@S@gp_Dir#
 // Source: c:@S@Geom_Axis2Placement@F@SetYDirection#&1$@S@gp_Dir#
+// Source: c:@S@Geom_Axis2Placement@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Axis2Placement@F@XDirection#1
 // Source: c:@S@Geom_Axis2Placement@F@YDirection#1
 // Source: c:@S@Geom_AxisPlacement@F@Angle#&1$@N@opencascade@S@handle>#$@S@Geom_AxisPlacement#1
@@ -1899,6 +1960,7 @@
 // Source: c:@S@Geom_BSplineCurve@F@SetPole#I#&1$@S@gp_Pnt#d#
 // Source: c:@S@Geom_BSplineCurve@F@SetWeight#I#d#
 // Source: c:@S@Geom_BSplineCurve@F@StartPoint#1
+// Source: c:@S@Geom_BSplineCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_BSplineCurve@F@Weight#I#1
 // Source: c:@S@Geom_BSplineSurface@F@CheckAndSegment#d#d#d#d#d#d#
 // Source: c:@S@Geom_BSplineSurface@F@ClearEvalRepresentation#
@@ -1952,6 +2014,7 @@
 // Source: c:@S@Geom_BSplineSurface@F@SetVOrigin#I#
 // Source: c:@S@Geom_BSplineSurface@F@SetVPeriodic#
 // Source: c:@S@Geom_BSplineSurface@F@SetWeight#I#I#d#
+// Source: c:@S@Geom_BSplineSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_BSplineSurface@F@UDegree#1
 // Source: c:@S@Geom_BSplineSurface@F@UIso#d#1
 // Source: c:@S@Geom_BSplineSurface@F@UIso#d#b#1
@@ -1998,6 +2061,7 @@
 // Source: c:@S@Geom_BezierCurve@F@SetPole#I#&1$@S@gp_Pnt#d#
 // Source: c:@S@Geom_BezierCurve@F@SetWeight#I#d#
 // Source: c:@S@Geom_BezierCurve@F@StartPoint#1
+// Source: c:@S@Geom_BezierCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_BezierCurve@F@Weight#I#1
 // Source: c:@S@Geom_BezierSurface@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_BezierSurface@F@Continuity#1
@@ -2024,6 +2088,7 @@
 // Source: c:@S@Geom_BezierSurface@F@SetPole#I#I#&1$@S@gp_Pnt#
 // Source: c:@S@Geom_BezierSurface@F@SetPole#I#I#&1$@S@gp_Pnt#d#
 // Source: c:@S@Geom_BezierSurface@F@SetWeight#I#I#d#
+// Source: c:@S@Geom_BezierSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_BezierSurface@F@UDegree#1
 // Source: c:@S@Geom_BezierSurface@F@UIso#d#1
 // Source: c:@S@Geom_BezierSurface@F@UReverse#
@@ -2045,6 +2110,7 @@
 // Source: c:@S@Geom_CartesianPoint@F@SetX#d#
 // Source: c:@S@Geom_CartesianPoint@F@SetY#d#
 // Source: c:@S@Geom_CartesianPoint@F@SetZ#d#
+// Source: c:@S@Geom_CartesianPoint@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_CartesianPoint@F@X#1
 // Source: c:@S@Geom_CartesianPoint@F@Y#1
 // Source: c:@S@Geom_CartesianPoint@F@Z#1
@@ -2064,6 +2130,7 @@
 // Source: c:@S@Geom_Circle@F@ReversedParameter#d#1
 // Source: c:@S@Geom_Circle@F@SetCirc#&1$@S@gp_Circ#
 // Source: c:@S@Geom_Circle@F@SetRadius#d#
+// Source: c:@S@Geom_Circle@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Conic@F@Axis#1
 // Source: c:@S@Geom_Conic@F@Continuity#1
 // Source: c:@S@Geom_Conic@F@DynamicType#1
@@ -2087,11 +2154,13 @@
 // Source: c:@S@Geom_ConicalSurface@F@IsUPeriodic#1
 // Source: c:@S@Geom_ConicalSurface@F@IsVClosed#1
 // Source: c:@S@Geom_ConicalSurface@F@IsVPeriodic#1
+// Source: c:@S@Geom_ConicalSurface@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_ConicalSurface@F@RefRadius#1
 // Source: c:@S@Geom_ConicalSurface@F@SemiAngle#1
 // Source: c:@S@Geom_ConicalSurface@F@SetCone#&1$@S@gp_Cone#
 // Source: c:@S@Geom_ConicalSurface@F@SetRadius#d#
 // Source: c:@S@Geom_ConicalSurface@F@SetSemiAngle#d#
+// Source: c:@S@Geom_ConicalSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_ConicalSurface@F@UIso#d#1
 // Source: c:@S@Geom_ConicalSurface@F@UReversedParameter#d#1
 // Source: c:@S@Geom_ConicalSurface@F@VIso#d#1
@@ -2099,8 +2168,10 @@
 // Source: c:@S@Geom_ConicalSurface@F@VReversedParameter#d#1
 // Source: c:@S@Geom_Curve@F@DN#d#I#1
 // Source: c:@S@Geom_Curve@F@DynamicType#1
+// Source: c:@S@Geom_Curve@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Curve@F@Period#1
 // Source: c:@S@Geom_Curve@F@Reversed#1
+// Source: c:@S@Geom_Curve@F@TransformedParameter#d#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Curve@F@Value#d#1
 // Source: c:@S@Geom_CylindricalSurface@F@Copy#1
 // Source: c:@S@Geom_CylindricalSurface@F@Cylinder#1
@@ -2112,9 +2183,11 @@
 // Source: c:@S@Geom_CylindricalSurface@F@IsUPeriodic#1
 // Source: c:@S@Geom_CylindricalSurface@F@IsVClosed#1
 // Source: c:@S@Geom_CylindricalSurface@F@IsVPeriodic#1
+// Source: c:@S@Geom_CylindricalSurface@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_CylindricalSurface@F@Radius#1
 // Source: c:@S@Geom_CylindricalSurface@F@SetCylinder#&1$@S@gp_Cylinder#
 // Source: c:@S@Geom_CylindricalSurface@F@SetRadius#d#
+// Source: c:@S@Geom_CylindricalSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_CylindricalSurface@F@UIso#d#1
 // Source: c:@S@Geom_CylindricalSurface@F@UReversedParameter#d#1
 // Source: c:@S@Geom_CylindricalSurface@F@VIso#d#1
@@ -2135,6 +2208,7 @@
 // Source: c:@S@Geom_Direction@F@SetY#d#
 // Source: c:@S@Geom_Direction@F@SetZ#d#
 // Source: c:@S@Geom_Direction@F@SquareMagnitude#1
+// Source: c:@S@Geom_Direction@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_ElementarySurface@F@Axis#1
 // Source: c:@S@Geom_ElementarySurface@F@Continuity#1
 // Source: c:@S@Geom_ElementarySurface@F@DynamicType#1
@@ -2171,6 +2245,7 @@
 // Source: c:@S@Geom_Ellipse@F@SetElips#&1$@S@gp_Elips#
 // Source: c:@S@Geom_Ellipse@F@SetMajorRadius#d#
 // Source: c:@S@Geom_Ellipse@F@SetMinorRadius#d#
+// Source: c:@S@Geom_Ellipse@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Geometry@F@DynamicType#1
 // Source: c:@S@Geom_Geometry@F@Mirror#&1$@S@gp_Ax1#
 // Source: c:@S@Geom_Geometry@F@Mirror#&1$@S@gp_Ax2#
@@ -2215,6 +2290,7 @@
 // Source: c:@S@Geom_Hyperbola@F@SetHypr#&1$@S@gp_Hypr#
 // Source: c:@S@Geom_Hyperbola@F@SetMajorRadius#d#
 // Source: c:@S@Geom_Hyperbola@F@SetMinorRadius#d#
+// Source: c:@S@Geom_Hyperbola@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Line@F@Continuity#1
 // Source: c:@S@Geom_Line@F@Copy#1
 // Source: c:@S@Geom_Line@F@DynamicType#1
@@ -2229,6 +2305,7 @@
 // Source: c:@S@Geom_Line@F@IsPeriodic#1
 // Source: c:@S@Geom_Line@F@LastParameter#1
 // Source: c:@S@Geom_Line@F@Lin#1
+// Source: c:@S@Geom_Line@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Line@F@Position#1
 // Source: c:@S@Geom_Line@F@Reverse#
 // Source: c:@S@Geom_Line@F@ReversedParameter#d#1
@@ -2236,6 +2313,8 @@
 // Source: c:@S@Geom_Line@F@SetLin#&1$@S@gp_Lin#
 // Source: c:@S@Geom_Line@F@SetLocation#&1$@S@gp_Pnt#
 // Source: c:@S@Geom_Line@F@SetPosition#&1$@S@gp_Ax1#
+// Source: c:@S@Geom_Line@F@Transform#&1$@S@gp_Trsf#
+// Source: c:@S@Geom_Line@F@TransformedParameter#d#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_OffsetCurve@F@BasisCurve#1
 // Source: c:@S@Geom_OffsetCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_OffsetCurve@F@Continuity#1
@@ -2253,12 +2332,15 @@
 // Source: c:@S@Geom_OffsetCurve@F@IsPeriodic#1
 // Source: c:@S@Geom_OffsetCurve@F@LastParameter#1
 // Source: c:@S@Geom_OffsetCurve@F@Offset#1
+// Source: c:@S@Geom_OffsetCurve@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_OffsetCurve@F@Period#1
 // Source: c:@S@Geom_OffsetCurve@F@Reverse#
 // Source: c:@S@Geom_OffsetCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom_OffsetCurve@F@SetBasisCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#b#
 // Source: c:@S@Geom_OffsetCurve@F@SetDirection#&1$@S@gp_Dir#
 // Source: c:@S@Geom_OffsetCurve@F@SetOffsetValue#d#
+// Source: c:@S@Geom_OffsetCurve@F@Transform#&1$@S@gp_Trsf#
+// Source: c:@S@Geom_OffsetCurve@F@TransformedParameter#d#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_OffsetSurface@F@BasisSurface#1
 // Source: c:@S@Geom_OffsetSurface@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_OffsetSurface@F@Continuity#1
@@ -2276,9 +2358,11 @@
 // Source: c:@S@Geom_OffsetSurface@F@IsVClosed#1
 // Source: c:@S@Geom_OffsetSurface@F@IsVPeriodic#1
 // Source: c:@S@Geom_OffsetSurface@F@Offset#1
+// Source: c:@S@Geom_OffsetSurface@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_OffsetSurface@F@SetBasisSurface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#b#
 // Source: c:@S@Geom_OffsetSurface@F@SetOffsetValue#d#
 // Source: c:@S@Geom_OffsetSurface@F@Surface#1
+// Source: c:@S@Geom_OffsetSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_OffsetSurface@F@UIso#d#1
 // Source: c:@S@Geom_OffsetSurface@F@UPeriod#1
 // Source: c:@S@Geom_OffsetSurface@F@UReverse#
@@ -2304,9 +2388,12 @@
 // Source: c:@S@Geom_Parabola@F@LastParameter#1
 // Source: c:@S@Geom_Parabola@F@Parab#1
 // Source: c:@S@Geom_Parabola@F@Parameter#1
+// Source: c:@S@Geom_Parabola@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Parabola@F@ReversedParameter#d#1
 // Source: c:@S@Geom_Parabola@F@SetFocal#d#
 // Source: c:@S@Geom_Parabola@F@SetParab#&1$@S@gp_Parab#
+// Source: c:@S@Geom_Parabola@F@Transform#&1$@S@gp_Trsf#
+// Source: c:@S@Geom_Parabola@F@TransformedParameter#d#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Plane@F@Copy#1
 // Source: c:@S@Geom_Plane@F@DynamicType#1
 // Source: c:@S@Geom_Plane@F@EvalD0#d#d#1
@@ -2318,8 +2405,10 @@
 // Source: c:@S@Geom_Plane@F@IsUPeriodic#1
 // Source: c:@S@Geom_Plane@F@IsVClosed#1
 // Source: c:@S@Geom_Plane@F@IsVPeriodic#1
+// Source: c:@S@Geom_Plane@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Plane@F@Pln#1
 // Source: c:@S@Geom_Plane@F@SetPln#&1$@S@gp_Pln#
+// Source: c:@S@Geom_Plane@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Plane@F@UIso#d#1
 // Source: c:@S@Geom_Plane@F@UReverse#
 // Source: c:@S@Geom_Plane@F@UReversedParameter#d#1
@@ -2343,8 +2432,10 @@
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@IsUPeriodic#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@IsVClosed#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@IsVPeriodic#1
+// Source: c:@S@Geom_RectangularTrimmedSurface@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@SetTrim#d#d#b#b#
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@SetTrim#d#d#d#d#b#b#
+// Source: c:@S@Geom_RectangularTrimmedSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@UIso#d#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@UPeriod#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@UReverse#
@@ -2367,6 +2458,7 @@
 // Source: c:@S@Geom_SphericalSurface@F@SetRadius#d#
 // Source: c:@S@Geom_SphericalSurface@F@SetSphere#&1$@S@gp_Sphere#
 // Source: c:@S@Geom_SphericalSurface@F@Sphere#1
+// Source: c:@S@Geom_SphericalSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_SphericalSurface@F@UIso#d#1
 // Source: c:@S@Geom_SphericalSurface@F@UReversedParameter#d#1
 // Source: c:@S@Geom_SphericalSurface@F@VIso#d#1
@@ -2374,6 +2466,7 @@
 // Source: c:@S@Geom_SphericalSurface@F@Volume#1
 // Source: c:@S@Geom_Surface@F@DN#d#d#I#I#1
 // Source: c:@S@Geom_Surface@F@DynamicType#1
+// Source: c:@S@Geom_Surface@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Surface@F@UPeriod#1
 // Source: c:@S@Geom_Surface@F@UReversed#1
 // Source: c:@S@Geom_Surface@F@VPeriod#1
@@ -2392,8 +2485,10 @@
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@IsUPeriodic#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@IsVClosed#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@IsVPeriodic#1
+// Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@SetBasisCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@SetDirection#&1$@S@gp_Dir#
+// Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@UIso#d#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@UReverse#
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@UReversedParameter#d#1
@@ -2415,11 +2510,13 @@
 // Source: c:@S@Geom_SurfaceOfRevolution@F@IsVClosed#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@IsVPeriodic#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@Location#1
+// Source: c:@S@Geom_SurfaceOfRevolution@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@ReferencePlane#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@SetAxis#&1$@S@gp_Ax1#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@SetBasisCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@SetDirection#&1$@S@gp_Dir#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@SetLocation#&1$@S@gp_Pnt#
+// Source: c:@S@Geom_SurfaceOfRevolution@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@UIso#d#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@UReverse#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@UReversedParameter#d#1
@@ -2446,6 +2543,7 @@
 // Source: c:@S@Geom_ToroidalSurface@F@SetMinorRadius#d#
 // Source: c:@S@Geom_ToroidalSurface@F@SetTorus#&1$@S@gp_Torus#
 // Source: c:@S@Geom_ToroidalSurface@F@Torus#1
+// Source: c:@S@Geom_ToroidalSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_ToroidalSurface@F@UIso#d#1
 // Source: c:@S@Geom_ToroidalSurface@F@UReversedParameter#d#1
 // Source: c:@S@Geom_ToroidalSurface@F@VIso#d#1
@@ -2455,6 +2553,7 @@
 // Source: c:@S@Geom_Transformation@F@DynamicType#1
 // Source: c:@S@Geom_Transformation@F@Form#1
 // Source: c:@S@Geom_Transformation@F@Geom_Transformation#
+// Source: c:@S@Geom_Transformation@F@Geom_Transformation#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Transformation@F@Invert#
 // Source: c:@S@Geom_Transformation@F@Inverted#1
 // Source: c:@S@Geom_Transformation@F@IsNegative#1
@@ -2473,6 +2572,8 @@
 // Source: c:@S@Geom_Transformation@F@SetTransformation#&1$@S@gp_Ax3#S0_#
 // Source: c:@S@Geom_Transformation@F@SetTranslation#&1$@S@gp_Pnt#S0_#
 // Source: c:@S@Geom_Transformation@F@SetTranslation#&1$@S@gp_Vec#
+// Source: c:@S@Geom_Transformation@F@SetTrsf#&1$@S@gp_Trsf#
+// Source: c:@S@Geom_Transformation@F@Trsf#1
 // Source: c:@S@Geom_Transformation@F@Value#I#I#1
 // Source: c:@S@Geom_TrimmedCurve@F@BasisCurve#1
 // Source: c:@S@Geom_TrimmedCurve@F@Continuity#1
@@ -2487,11 +2588,14 @@
 // Source: c:@S@Geom_TrimmedCurve@F@IsClosed#1
 // Source: c:@S@Geom_TrimmedCurve@F@IsPeriodic#1
 // Source: c:@S@Geom_TrimmedCurve@F@LastParameter#1
+// Source: c:@S@Geom_TrimmedCurve@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_TrimmedCurve@F@Period#1
 // Source: c:@S@Geom_TrimmedCurve@F@Reverse#
 // Source: c:@S@Geom_TrimmedCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom_TrimmedCurve@F@SetTrim#d#d#b#b#
 // Source: c:@S@Geom_TrimmedCurve@F@StartPoint#1
+// Source: c:@S@Geom_TrimmedCurve@F@Transform#&1$@S@gp_Trsf#
+// Source: c:@S@Geom_TrimmedCurve@F@TransformedParameter#d#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Vector@F@Angle#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#1
 // Source: c:@S@Geom_Vector@F@AngleWithRef#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#S0_#1
 // Source: c:@S@Geom_Vector@F@Dot#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#1
@@ -2529,6 +2633,7 @@
 // Source: c:@S@Geom_VectorWithMagnitude@F@SquareMagnitude#1
 // Source: c:@S@Geom_VectorWithMagnitude@F@Subtract#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#
 // Source: c:@S@Geom_VectorWithMagnitude@F@Subtracted#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#1
+// Source: c:@S@Geom_VectorWithMagnitude@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeometryTest_DrawableQualifiedCurve2d@F@DynamicType#1
 // Source: c:@S@Law_BSpFunc@F@Continuity#1
 // Source: c:@S@Law_BSpFunc@F@Curve#1
@@ -15603,6 +15708,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_bisec_ana_method_se
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_bisec_ana_method_transform_0(
+  const OcctSharp_BisectorBisecAnaHandle* handle,
+  OcctSharp_Value_Transform2d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateBisectorBisecAna(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_bisec_ana_clone(
   const OcctSharp_BisectorBisecAnaHandle* source,
   OcctSharp_BisectorBisecAnaHandle** out_handle)
@@ -16005,6 +16120,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_bisec_cc_method_rev
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_bisec_cc_method_transform_0(
+  const OcctSharp_BisectorBisecCCHandle* handle,
+  OcctSharp_Value_Transform2d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateBisectorBisecCC(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_bisec_cc_clone(
   const OcctSharp_BisectorBisecCCHandle* source,
   OcctSharp_BisectorBisecCCHandle** out_handle)
@@ -16403,6 +16528,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_bisec_pc_method_rev
   return GeneratedGuard([&]
   {
     *out_value = ValidateBisectorBisecPC(handle)->Value->ReversedParameter(u);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_bisec_pc_method_transform_0(
+  const OcctSharp_BisectorBisecPCHandle* handle,
+  OcctSharp_Value_Transform2d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateBisectorBisecPC(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -18924,6 +19059,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_ahtbezier_curve_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_ahtbezier_curve_method_transform_0(
+  const OcctSharp_Geom2dEvalAHTBezierCurveHandle* handle,
+  OcctSharp_Value_Transform2d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeom2dEvalAHTBezierCurve(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_ahtbezier_curve_clone(
   const OcctSharp_Geom2dEvalAHTBezierCurveHandle* source,
   OcctSharp_Geom2dEvalAHTBezierCurveHandle** out_handle)
@@ -19169,6 +19314,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_archimedean_spir
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_archimedean_spiral_curve_method_transform_0(
+  const OcctSharp_Geom2dEvalArchimedeanSpiralCurveHandle* handle,
+  OcctSharp_Value_Transform2d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeom2dEvalArchimedeanSpiralCurve(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_archimedean_spiral_curve_clone(
   const OcctSharp_Geom2dEvalArchimedeanSpiralCurveHandle* source,
   OcctSharp_Geom2dEvalArchimedeanSpiralCurveHandle** out_handle)
@@ -19398,6 +19553,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_circle_involute_
   return GeneratedGuard([&]
   {
     *out_value = ValidateGeom2dEvalCircleInvoluteCurve(handle)->Value->ReversedParameter(u);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_circle_involute_curve_method_transform_0(
+  const OcctSharp_Geom2dEvalCircleInvoluteCurveHandle* handle,
+  OcctSharp_Value_Transform2d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeom2dEvalCircleInvoluteCurve(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -19643,6 +19808,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_logarithmic_spir
   return GeneratedGuard([&]
   {
     *out_value = ValidateGeom2dEvalLogarithmicSpiralCurve(handle)->Value->Scale();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_logarithmic_spiral_curve_method_transform_0(
+  const OcctSharp_Geom2dEvalLogarithmicSpiralCurveHandle* handle,
+  OcctSharp_Value_Transform2d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeom2dEvalLogarithmicSpiralCurve(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -19950,6 +20125,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_sine_wave_curve_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_sine_wave_curve_method_transform_0(
+  const OcctSharp_Geom2dEvalSineWaveCurveHandle* handle,
+  OcctSharp_Value_Transform2d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeom2dEvalSineWaveCurve(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_sine_wave_curve_clone(
   const OcctSharp_Geom2dEvalSineWaveCurveHandle* source,
   OcctSharp_Geom2dEvalSineWaveCurveHandle** out_handle)
@@ -20216,6 +20401,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_tbezier_curve_me
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_tbezier_curve_method_transform_0(
+  const OcctSharp_Geom2dEvalTBezierCurveHandle* handle,
+  OcctSharp_Value_Transform2d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeom2dEvalTBezierCurve(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_tbezier_curve_clone(
   const OcctSharp_Geom2dEvalTBezierCurveHandle* source,
   OcctSharp_Geom2dEvalTBezierCurveHandle** out_handle)
@@ -20413,6 +20608,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_axis_placement_method
   return GeneratedGuard([&]
   {
     ValidateGeom2dAxisPlacement(handle)->Value->SetLocation(OcctSharp_GeometryValues::ToNative(p));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_axis_placement_method_transform_0(
+  const OcctSharp_Geom2dAxisPlacementHandle* handle,
+  OcctSharp_Value_Transform2d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeom2dAxisPlacement(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -21050,6 +21255,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_bspline_curve_method_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_bspline_curve_method_transform_0(
+  const OcctSharp_Geom2dBSplineCurveHandle* handle,
+  OcctSharp_Value_Transform2d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeom2dBSplineCurve(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_bspline_curve_method_weight_0(
   const OcctSharp_Geom2dBSplineCurveHandle* handle,
   int32_t index,
@@ -21463,6 +21678,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_bezier_curve_method_s
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_bezier_curve_method_transform_0(
+  const OcctSharp_Geom2dBezierCurveHandle* handle,
+  OcctSharp_Value_Transform2d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeom2dBezierCurve(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_bezier_curve_method_weight_0(
   const OcctSharp_Geom2dBezierCurveHandle* handle,
   int32_t index,
@@ -21684,6 +21909,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_cartesian_point_metho
   return GeneratedGuard([&]
   {
     ValidateGeom2dCartesianPoint(handle)->Value->SetY(y);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_cartesian_point_method_transform_0(
+  const OcctSharp_Geom2dCartesianPointHandle* handle,
+  OcctSharp_Value_Transform2d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeom2dCartesianPoint(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -21956,6 +22191,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_circle_method_set_rad
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_circle_method_transform_0(
+  const OcctSharp_Geom2dCircleHandle* handle,
+  OcctSharp_Value_Transform2d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeom2dCircle(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_circle_clone(
   const OcctSharp_Geom2dCircleHandle* source,
   OcctSharp_Geom2dCircleHandle** out_handle)
@@ -22210,6 +22455,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_curve_method_dynamic_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_curve_method_parametric_transformation_0(
+  const OcctSharp_Geom2dCurveHandle* handle,
+  OcctSharp_Value_Transform2d t,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Geom2d_Curve*>(ValidateGeom2dCurve(handle)->Value.get())->ParametricTransformation(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_curve_method_period_0(
   const OcctSharp_Geom2dCurveHandle* handle,
   double* out_value)
@@ -22232,6 +22490,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_curve_method_reversed
   {
     opencascade::handle<Geom2d_Curve> returnedHandle = ValidateGeom2dCurve(handle)->Value->Reversed();
     if (!returnedHandle.IsNull()) *out_handle = AllocateGeom2dCurve(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_curve_method_transformed_parameter_0(
+  const OcctSharp_Geom2dCurveHandle* handle,
+  double u,
+  OcctSharp_Value_Transform2d t,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Geom2d_Curve*>(ValidateGeom2dCurve(handle)->Value.get())->TransformedParameter(u, OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -22421,6 +22693,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_direction_method_squa
   return GeneratedGuard([&]
   {
     *out_value = ValidateGeom2dDirection(handle)->Value->SquareMagnitude();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_direction_method_transform_0(
+  const OcctSharp_Geom2dDirectionHandle* handle,
+  OcctSharp_Value_Transform2d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeom2dDirection(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -22765,6 +23047,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_ellipse_method_set_mi
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_ellipse_method_transform_0(
+  const OcctSharp_Geom2dEllipseHandle* handle,
+  OcctSharp_Value_Transform2d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeom2dEllipse(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_ellipse_clone(
   const OcctSharp_Geom2dEllipseHandle* source,
   OcctSharp_Geom2dEllipseHandle** out_handle)
@@ -22920,6 +23212,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_geometry_method_scale
   return GeneratedGuard([&]
   {
     opencascade::handle<Geom2d_Geometry> returnedHandle = static_cast<const Geom2d_Geometry*>(ValidateGeom2dGeometry(handle)->Value.get())->Scaled(OcctSharp_GeometryValues::ToNative(p), s);
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGeom2dGeometry(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_geometry_method_transformed_0(
+  const OcctSharp_Geom2dGeometryHandle* handle,
+  OcctSharp_Value_Transform2d t,
+  OcctSharp_Geom2dGeometryHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Geom2d_Geometry> returnedHandle = static_cast<const Geom2d_Geometry*>(ValidateGeom2dGeometry(handle)->Value.get())->Transformed(OcctSharp_GeometryValues::ToNative(t));
     if (!returnedHandle.IsNull()) *out_handle = AllocateGeom2dGeometry(std::move(returnedHandle));
   });
 }
@@ -23388,6 +23694,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_hyperbola_method_set_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_hyperbola_method_transform_0(
+  const OcctSharp_Geom2dHyperbolaHandle* handle,
+  OcctSharp_Value_Transform2d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeom2dHyperbola(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_hyperbola_clone(
   const OcctSharp_Geom2dHyperbolaHandle* source,
   OcctSharp_Geom2dHyperbolaHandle** out_handle)
@@ -23636,6 +23952,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_line_method_location_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_line_method_parametric_transformation_0(
+  const OcctSharp_Geom2dLineHandle* handle,
+  OcctSharp_Value_Transform2d t,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Geom2d_Line*>(ValidateGeom2dLine(handle)->Value.get())->ParametricTransformation(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_line_method_position_0(
   const OcctSharp_Geom2dLineHandle* handle,
   OcctSharp_Value_Axis2d* out_value)
@@ -23707,6 +24036,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_line_method_set_posit
   return GeneratedGuard([&]
   {
     ValidateGeom2dLine(handle)->Value->SetPosition(OcctSharp_GeometryValues::ToNative(a));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_line_method_transform_0(
+  const OcctSharp_Geom2dLineHandle* handle,
+  OcctSharp_Value_Transform2d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeom2dLine(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_line_method_transformed_parameter_0(
+  const OcctSharp_Geom2dLineHandle* handle,
+  double u,
+  OcctSharp_Value_Transform2d t,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Geom2d_Line*>(ValidateGeom2dLine(handle)->Value.get())->TransformedParameter(u, OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -23968,6 +24321,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_offset_curve_method_o
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_offset_curve_method_parametric_transformation_0(
+  const OcctSharp_Geom2dOffsetCurveHandle* handle,
+  OcctSharp_Value_Transform2d t,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Geom2d_OffsetCurve*>(ValidateGeom2dOffsetCurve(handle)->Value.get())->ParametricTransformation(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_offset_curve_method_period_0(
   const OcctSharp_Geom2dOffsetCurveHandle* handle,
   double* out_value)
@@ -24030,6 +24396,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_offset_curve_method_s
   return GeneratedGuard([&]
   {
     ValidateGeom2dOffsetCurve(handle)->Value->SetOffsetValue(d);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_offset_curve_method_transform_0(
+  const OcctSharp_Geom2dOffsetCurveHandle* handle,
+  OcctSharp_Value_Transform2d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeom2dOffsetCurve(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_offset_curve_method_transformed_parameter_0(
+  const OcctSharp_Geom2dOffsetCurveHandle* handle,
+  double u,
+  OcctSharp_Value_Transform2d t,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Geom2d_OffsetCurve*>(ValidateGeom2dOffsetCurve(handle)->Value.get())->TransformedParameter(u, OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -24308,6 +24698,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_parabola_method_param
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_parabola_method_parametric_transformation_0(
+  const OcctSharp_Geom2dParabolaHandle* handle,
+  OcctSharp_Value_Transform2d t,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Geom2d_Parabola*>(ValidateGeom2dParabola(handle)->Value.get())->ParametricTransformation(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_parabola_method_reversed_parameter_0(
   const OcctSharp_Geom2dParabolaHandle* handle,
   double u,
@@ -24338,6 +24741,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_parabola_method_set_p
   return GeneratedGuard([&]
   {
     ValidateGeom2dParabola(handle)->Value->SetParab2d(OcctSharp_GeometryValues::ToNative(prb));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_parabola_method_transform_0(
+  const OcctSharp_Geom2dParabolaHandle* handle,
+  OcctSharp_Value_Transform2d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeom2dParabola(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_parabola_method_transformed_parameter_0(
+  const OcctSharp_Geom2dParabolaHandle* handle,
+  double u,
+  OcctSharp_Value_Transform2d t,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Geom2d_Parabola*>(ValidateGeom2dParabola(handle)->Value.get())->TransformedParameter(u, OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -24480,6 +24907,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_transformation_create
   return GeneratedGuard([&]
   {
     opencascade::handle<Geom2d_Transformation> createdHandle = new Geom2d_Transformation();
+    *out_handle = AllocateGeom2dTransformation(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_transformation_create_1(
+  OcctSharp_Value_Transform2d t,
+  OcctSharp_Geom2dTransformationHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Geom2d_Transformation> createdHandle = new Geom2d_Transformation(OcctSharp_GeometryValues::ToNative(t));
     *out_handle = AllocateGeom2dTransformation(std::move(createdHandle));
   });
 }
@@ -24707,6 +25147,28 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_transformation_method
   return GeneratedGuard([&]
   {
     ValidateGeom2dTransformation(handle)->Value->SetTranslation(OcctSharp_GeometryValues::ToNative(v));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_transformation_method_set_trsf2d_0(
+  const OcctSharp_Geom2dTransformationHandle* handle,
+  OcctSharp_Value_Transform2d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeom2dTransformation(handle)->Value->SetTrsf2d(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_transformation_method_trsf2d_0(
+  const OcctSharp_Geom2dTransformationHandle* handle,
+  OcctSharp_Value_Transform2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const Geom2d_Transformation*>(ValidateGeom2dTransformation(handle)->Value.get())->Trsf2d());
   });
 }
 
@@ -24938,6 +25400,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_trimmed_curve_method_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_trimmed_curve_method_parametric_transformation_0(
+  const OcctSharp_Geom2dTrimmedCurveHandle* handle,
+  OcctSharp_Value_Transform2d t,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Geom2d_TrimmedCurve*>(ValidateGeom2dTrimmedCurve(handle)->Value.get())->ParametricTransformation(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_trimmed_curve_method_period_0(
   const OcctSharp_Geom2dTrimmedCurveHandle* handle,
   double* out_value)
@@ -24994,6 +25469,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_trimmed_curve_method_
   return GeneratedGuard([&]
   {
     *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const Geom2d_TrimmedCurve*>(ValidateGeom2dTrimmedCurve(handle)->Value.get())->StartPoint());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_trimmed_curve_method_transform_0(
+  const OcctSharp_Geom2dTrimmedCurveHandle* handle,
+  OcctSharp_Value_Transform2d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeom2dTrimmedCurve(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_trimmed_curve_method_transformed_parameter_0(
+  const OcctSharp_Geom2dTrimmedCurveHandle* handle,
+  double u,
+  OcctSharp_Value_Transform2d t,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Geom2d_TrimmedCurve*>(ValidateGeom2dTrimmedCurve(handle)->Value.get())->TransformedParameter(u, OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -25446,6 +25945,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_vector_with_magnitude
   {
     opencascade::handle<Geom2d_VectorWithMagnitude> returnedHandle = ValidateGeom2dVectorWithMagnitude(handle)->Value->Subtracted((other == nullptr ? opencascade::handle<Geom2d_Vector>() : ValidateGeom2dVector(other)->Value));
     if (!returnedHandle.IsNull()) *out_handle = AllocateGeom2dVectorWithMagnitude(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_vector_with_magnitude_method_transform_0(
+  const OcctSharp_Geom2dVectorWithMagnitudeHandle* handle,
+  OcctSharp_Value_Transform2d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeom2dVectorWithMagnitude(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -27754,6 +28263,36 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_cur
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_curve_create_1(
+  const OcctSharp_GeomCurveHandle* theCurve,
+  double theFirst,
+  double theLast,
+  OcctSharp_Value_Transform3d theTrsf,
+  OcctSharp_GeomAdaptorTransformedCurveHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<GeomAdaptor_TransformedCurve> createdHandle = new GeomAdaptor_TransformedCurve((theCurve == nullptr ? opencascade::handle<Geom_Curve>() : ValidateGeomCurve(theCurve)->Value), theFirst, theLast, OcctSharp_GeometryValues::ToNative(theTrsf));
+    *out_handle = AllocateGeomAdaptorTransformedCurve(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_curve_create_2(
+  const OcctSharp_GeomCurveHandle* theCurve,
+  OcctSharp_Value_Transform3d theTrsf,
+  OcctSharp_GeomAdaptorTransformedCurveHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<GeomAdaptor_TransformedCurve> createdHandle = new GeomAdaptor_TransformedCurve((theCurve == nullptr ? opencascade::handle<Geom_Curve>() : ValidateGeomCurve(theCurve)->Value), OcctSharp_GeometryValues::ToNative(theTrsf));
+    *out_handle = AllocateGeomAdaptorTransformedCurve(std::move(createdHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_curve_method_bezier_0(
   const OcctSharp_GeomAdaptorTransformedCurveHandle* handle,
   OcctSharp_GeomBezierCurveHandle** out_handle)
@@ -28121,6 +28660,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_cur
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_curve_method_set_trsf_0(
+  const OcctSharp_GeomAdaptorTransformedCurveHandle* handle,
+  OcctSharp_Value_Transform3d theTrsf)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomAdaptorTransformedCurve(handle)->Value->SetTrsf(OcctSharp_GeometryValues::ToNative(theTrsf));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_curve_method_shallow_copy_0(
   const OcctSharp_GeomAdaptorTransformedCurveHandle* handle,
   OcctSharp_Adaptor3dCurveHandle** out_handle)
@@ -28147,6 +28696,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_cur
   {
     opencascade::handle<Adaptor3d_Curve> returnedHandle = ValidateGeomAdaptorTransformedCurve(handle)->Value->Trim(theFirst, theLast, theTol);
     if (!returnedHandle.IsNull()) *out_handle = AllocateAdaptor3dCurve(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_curve_method_trsf_0(
+  const OcctSharp_GeomAdaptorTransformedCurveHandle* handle,
+  OcctSharp_Value_Transform3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const GeomAdaptor_TransformedCurve*>(ValidateGeomAdaptorTransformedCurve(handle)->Value.get())->Trsf());
   });
 }
 
@@ -28204,6 +28765,40 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_sur
   return GeneratedGuard([&]
   {
     opencascade::handle<GeomAdaptor_TransformedSurface> createdHandle = new GeomAdaptor_TransformedSurface();
+    *out_handle = AllocateGeomAdaptorTransformedSurface(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_surface_create_1(
+  const OcctSharp_GeomSurfaceHandle* theSurface,
+  double theUFirst,
+  double theULast,
+  double theVFirst,
+  double theVLast,
+  OcctSharp_Value_Transform3d theTrsf,
+  double theTolU,
+  double theTolV,
+  OcctSharp_GeomAdaptorTransformedSurfaceHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<GeomAdaptor_TransformedSurface> createdHandle = new GeomAdaptor_TransformedSurface((theSurface == nullptr ? opencascade::handle<Geom_Surface>() : ValidateGeomSurface(theSurface)->Value), theUFirst, theULast, theVFirst, theVLast, OcctSharp_GeometryValues::ToNative(theTrsf), theTolU, theTolV);
+    *out_handle = AllocateGeomAdaptorTransformedSurface(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_surface_create_2(
+  const OcctSharp_GeomSurfaceHandle* theSurface,
+  OcctSharp_Value_Transform3d theTrsf,
+  OcctSharp_GeomAdaptorTransformedSurfaceHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<GeomAdaptor_TransformedSurface> createdHandle = new GeomAdaptor_TransformedSurface((theSurface == nullptr ? opencascade::handle<Geom_Surface>() : ValidateGeomSurface(theSurface)->Value), OcctSharp_GeometryValues::ToNative(theTrsf));
     *out_handle = AllocateGeomAdaptorTransformedSurface(std::move(createdHandle));
   });
 }
@@ -28535,6 +29130,34 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_sur
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_surface_method_load_0(
+  const OcctSharp_GeomAdaptorTransformedSurfaceHandle* handle,
+  const OcctSharp_GeomSurfaceHandle* theSurface,
+  double theUFirst,
+  double theULast,
+  double theVFirst,
+  double theVLast,
+  OcctSharp_Value_Transform3d theTrsf,
+  double theTolU,
+  double theTolV)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomAdaptorTransformedSurface(handle)->Value->Load((theSurface == nullptr ? opencascade::handle<Geom_Surface>() : ValidateGeomSurface(theSurface)->Value), theUFirst, theULast, theVFirst, theVLast, OcctSharp_GeometryValues::ToNative(theTrsf), theTolU, theTolV);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_surface_method_load_1(
+  const OcctSharp_GeomAdaptorTransformedSurfaceHandle* handle,
+  const OcctSharp_GeomSurfaceHandle* theSurface,
+  OcctSharp_Value_Transform3d theTrsf)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomAdaptorTransformedSurface(handle)->Value->Load((theSurface == nullptr ? opencascade::handle<Geom_Surface>() : ValidateGeomSurface(theSurface)->Value), OcctSharp_GeometryValues::ToNative(theTrsf));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_surface_method_nb_uintervals_0(
   const OcctSharp_GeomAdaptorTransformedSurfaceHandle* handle,
   int32_t theS,
@@ -28633,6 +29256,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_sur
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_surface_method_set_trsf_0(
+  const OcctSharp_GeomAdaptorTransformedSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d theTrsf)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomAdaptorTransformedSurface(handle)->Value->SetTrsf(OcctSharp_GeometryValues::ToNative(theTrsf));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_surface_method_shallow_copy_0(
   const OcctSharp_GeomAdaptorTransformedSurfaceHandle* handle,
   OcctSharp_Adaptor3dSurfaceHandle** out_handle)
@@ -28691,6 +29324,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_sur
   return GeneratedGuard([&]
   {
     *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const GeomAdaptor_TransformedSurface*>(ValidateGeomAdaptorTransformedSurface(handle)->Value.get())->Torus());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_surface_method_trsf_0(
+  const OcctSharp_GeomAdaptorTransformedSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const GeomAdaptor_TransformedSurface*>(ValidateGeomAdaptorTransformedSurface(handle)->Value.get())->Trsf());
   });
 }
 
@@ -29105,6 +29750,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_ahtbezier_curve_me
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_ahtbezier_curve_method_transform_0(
+  const OcctSharp_GeomEvalAHTBezierCurveHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomEvalAHTBezierCurve(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_ahtbezier_curve_clone(
   const OcctSharp_GeomEvalAHTBezierCurveHandle* source,
   OcctSharp_GeomEvalAHTBezierCurveHandle** out_handle)
@@ -29414,6 +30069,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_ahtbezier_surface_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_ahtbezier_surface_method_transform_0(
+  const OcctSharp_GeomEvalAHTBezierSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomEvalAHTBezierSurface(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_ahtbezier_surface_method_uiso_0(
   const OcctSharp_GeomEvalAHTBezierSurfaceHandle* handle,
   double u,
@@ -29670,6 +30335,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_circular_helicoid_
   return GeneratedGuard([&]
   {
     ValidateGeomEvalCircularHelicoidSurface(handle)->Value->SetPitch(thePitch);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_circular_helicoid_surface_method_transform_0(
+  const OcctSharp_GeomEvalCircularHelicoidSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomEvalCircularHelicoidSurface(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -29991,6 +30666,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_circular_helix_cur
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_circular_helix_curve_method_transform_0(
+  const OcctSharp_GeomEvalCircularHelixCurveHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomEvalCircularHelixCurve(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_circular_helix_curve_clone(
   const OcctSharp_GeomEvalCircularHelixCurveHandle* source,
   OcctSharp_GeomEvalCircularHelixCurveHandle** out_handle)
@@ -30221,6 +30906,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_ellipsoid_surface_
   return GeneratedGuard([&]
   {
     ValidateGeomEvalEllipsoidSurface(handle)->Value->SetSemiAxisC(theC);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_ellipsoid_surface_method_transform_0(
+  const OcctSharp_GeomEvalEllipsoidSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomEvalEllipsoidSurface(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -30503,6 +31198,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_hyp_paraboloid_sur
   return GeneratedGuard([&]
   {
     ValidateGeomEvalHypParaboloidSurface(handle)->Value->SetSemiAxisB(theB);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_hyp_paraboloid_surface_method_transform_0(
+  const OcctSharp_GeomEvalHypParaboloidSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomEvalHypParaboloidSurface(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -30811,6 +31516,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_hyperboloid_surfac
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_hyperboloid_surface_method_transform_0(
+  const OcctSharp_GeomEvalHyperboloidSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomEvalHyperboloidSurface(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_hyperboloid_surface_method_uiso_0(
   const OcctSharp_GeomEvalHyperboloidSurfaceHandle* handle,
   double u,
@@ -31067,6 +31782,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_paraboloid_surface
   return GeneratedGuard([&]
   {
     ValidateGeomEvalParaboloidSurface(handle)->Value->SetFocal(theFocal);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_paraboloid_surface_method_transform_0(
+  const OcctSharp_GeomEvalParaboloidSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomEvalParaboloidSurface(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -31401,6 +32126,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_sine_wave_curve_me
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_sine_wave_curve_method_transform_0(
+  const OcctSharp_GeomEvalSineWaveCurveHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomEvalSineWaveCurve(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_sine_wave_curve_clone(
   const OcctSharp_GeomEvalSineWaveCurveHandle* source,
   OcctSharp_GeomEvalSineWaveCurveHandle** out_handle)
@@ -31667,6 +32402,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_tbezier_curve_meth
   {
     const gp_Pnt nativeValue = ValidateGeomEvalTBezierCurve(handle)->Value->StartPoint();
     *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_tbezier_curve_method_transform_0(
+  const OcctSharp_GeomEvalTBezierCurveHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomEvalTBezierCurve(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -31940,6 +32685,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_tbezier_surface_me
   return GeneratedGuard([&]
   {
     *out_value = ValidateGeomEvalTBezierSurface(handle)->Value->OrderV();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_tbezier_surface_method_transform_0(
+  const OcctSharp_GeomEvalTBezierSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomEvalTBezierSurface(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -37190,6 +37945,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plate_surface_method_is
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plate_surface_method_parametric_transformation_0(
+  const OcctSharp_GeomPlateSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  OcctSharp_Value_AffineTransform2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const GeomPlate_Surface*>(ValidateGeomPlateSurface(handle)->Value.get())->ParametricTransformation(OcctSharp_GeometryValues::ToNative(t)));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plate_surface_method_set_bounds_0(
   const OcctSharp_GeomPlateSurfaceHandle* handle,
   double umin,
@@ -37200,6 +37968,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plate_surface_method_se
   return GeneratedGuard([&]
   {
     ValidateGeomPlateSurface(handle)->Value->SetBounds(umin, umax, vmin, vmax);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plate_surface_method_transform_0(
+  const OcctSharp_GeomPlateSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomPlateSurface(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -37513,6 +38291,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_axis1_placement_method_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_axis1_placement_method_transform_0(
+  const OcctSharp_GeomAxis1PlacementHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomAxis1Placement(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_axis1_placement_clone(
   const OcctSharp_GeomAxis1PlacementHandle* source,
   OcctSharp_GeomAxis1PlacementHandle** out_handle)
@@ -37662,6 +38450,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_axis2_placement_method_
   return GeneratedGuard([&]
   {
     ValidateGeomAxis2Placement(handle)->Value->SetYDirection(OcctSharp_GeometryValues::ToNative(vy));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_axis2_placement_method_transform_0(
+  const OcctSharp_GeomAxis2PlacementHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomAxis2Placement(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -38412,6 +39210,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bspline_curve_method_st
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bspline_curve_method_transform_0(
+  const OcctSharp_GeomBSplineCurveHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomBSplineCurve(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bspline_curve_method_weight_0(
   const OcctSharp_GeomBSplineCurveHandle* handle,
   int32_t index,
@@ -39109,6 +39917,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bspline_surface_method_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bspline_surface_method_transform_0(
+  const OcctSharp_GeomBSplineSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomBSplineSurface(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bspline_surface_method_udegree_0(
   const OcctSharp_GeomBSplineSurfaceHandle* handle,
   int32_t* out_value)
@@ -39714,6 +40532,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bezier_curve_method_sta
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bezier_curve_method_transform_0(
+  const OcctSharp_GeomBezierCurveHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomBezierCurve(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bezier_curve_method_weight_0(
   const OcctSharp_GeomBezierCurveHandle* handle,
   int32_t index,
@@ -40072,6 +40900,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bezier_surface_method_s
   return GeneratedGuard([&]
   {
     ValidateGeomBezierSurface(handle)->Value->SetWeight(uIndex, vIndex, weight);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bezier_surface_method_transform_0(
+  const OcctSharp_GeomBezierSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomBezierSurface(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -40468,6 +41306,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_cartesian_point_method_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_cartesian_point_method_transform_0(
+  const OcctSharp_GeomCartesianPointHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomCartesianPoint(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_cartesian_point_method_x_0(
   const OcctSharp_GeomCartesianPointHandle* handle,
   double* out_value)
@@ -40745,6 +41593,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_circle_method_set_radiu
   return GeneratedGuard([&]
   {
     ValidateGeomCircle(handle)->Value->SetRadius(r);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_circle_method_transform_0(
+  const OcctSharp_GeomCircleHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomCircle(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -41121,6 +41979,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_conical_surface_method_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_conical_surface_method_parametric_transformation_0(
+  const OcctSharp_GeomConicalSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  OcctSharp_Value_AffineTransform2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const Geom_ConicalSurface*>(ValidateGeomConicalSurface(handle)->Value.get())->ParametricTransformation(OcctSharp_GeometryValues::ToNative(t)));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_conical_surface_method_ref_radius_0(
   const OcctSharp_GeomConicalSurfaceHandle* handle,
   double* out_value)
@@ -41172,6 +42043,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_conical_surface_method_
   return GeneratedGuard([&]
   {
     ValidateGeomConicalSurface(handle)->Value->SetSemiAngle(ang);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_conical_surface_method_transform_0(
+  const OcctSharp_GeomConicalSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomConicalSurface(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -41311,6 +42192,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_curve_method_dynamic_ty
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_curve_method_parametric_transformation_0(
+  const OcctSharp_GeomCurveHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Geom_Curve*>(ValidateGeomCurve(handle)->Value.get())->ParametricTransformation(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_curve_method_period_0(
   const OcctSharp_GeomCurveHandle* handle,
   double* out_value)
@@ -41333,6 +42227,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_curve_method_reversed_0
   {
     opencascade::handle<Geom_Curve> returnedHandle = ValidateGeomCurve(handle)->Value->Reversed();
     if (!returnedHandle.IsNull()) *out_handle = AllocateGeomCurve(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_curve_method_transformed_parameter_0(
+  const OcctSharp_GeomCurveHandle* handle,
+  double u,
+  OcctSharp_Value_Transform3d t,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Geom_Curve*>(ValidateGeomCurve(handle)->Value.get())->TransformedParameter(u, OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -41526,6 +42434,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_cylindrical_surface_met
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_cylindrical_surface_method_parametric_transformation_0(
+  const OcctSharp_GeomCylindricalSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  OcctSharp_Value_AffineTransform2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const Geom_CylindricalSurface*>(ValidateGeomCylindricalSurface(handle)->Value.get())->ParametricTransformation(OcctSharp_GeometryValues::ToNative(t)));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_cylindrical_surface_method_radius_0(
   const OcctSharp_GeomCylindricalSurfaceHandle* handle,
   double* out_value)
@@ -41555,6 +42476,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_cylindrical_surface_met
   return GeneratedGuard([&]
   {
     ValidateGeomCylindricalSurface(handle)->Value->SetRadius(r);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_cylindrical_surface_method_transform_0(
+  const OcctSharp_GeomCylindricalSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomCylindricalSurface(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -41847,6 +42778,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_direction_method_square
   return GeneratedGuard([&]
   {
     *out_value = ValidateGeomDirection(handle)->Value->SquareMagnitude();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_direction_method_transform_0(
+  const OcctSharp_GeomDirectionHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomDirection(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -42370,6 +43311,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_ellipse_method_set_mino
   return GeneratedGuard([&]
   {
     ValidateGeomEllipse(handle)->Value->SetMinorRadius(minorRadius);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_ellipse_method_transform_0(
+  const OcctSharp_GeomEllipseHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomEllipse(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -43007,6 +43958,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_hyperbola_method_set_mi
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_hyperbola_method_transform_0(
+  const OcctSharp_GeomHyperbolaHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomHyperbola(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_hyperbola_clone(
   const OcctSharp_GeomHyperbolaHandle* source,
   OcctSharp_GeomHyperbolaHandle** out_handle)
@@ -43232,6 +44193,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_line_method_lin_0(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_line_method_parametric_transformation_0(
+  const OcctSharp_GeomLineHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Geom_Line*>(ValidateGeomLine(handle)->Value.get())->ParametricTransformation(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_line_method_position_0(
   const OcctSharp_GeomLineHandle* handle,
   OcctSharp_Value_Axis1* out_value)
@@ -43303,6 +44277,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_line_method_set_positio
   return GeneratedGuard([&]
   {
     ValidateGeomLine(handle)->Value->SetPosition(OcctSharp_GeometryValues::ToNative(a1));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_line_method_transform_0(
+  const OcctSharp_GeomLineHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomLine(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_line_method_transformed_parameter_0(
+  const OcctSharp_GeomLineHandle* handle,
+  double u,
+  OcctSharp_Value_Transform3d t,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Geom_Line*>(ValidateGeomLine(handle)->Value.get())->TransformedParameter(u, OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -43565,6 +44563,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_curve_method_off
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_curve_method_parametric_transformation_0(
+  const OcctSharp_GeomOffsetCurveHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Geom_OffsetCurve*>(ValidateGeomOffsetCurve(handle)->Value.get())->ParametricTransformation(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_curve_method_period_0(
   const OcctSharp_GeomOffsetCurveHandle* handle,
   double* out_value)
@@ -43627,6 +44638,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_curve_method_set
   return GeneratedGuard([&]
   {
     ValidateGeomOffsetCurve(handle)->Value->SetOffsetValue(d);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_curve_method_transform_0(
+  const OcctSharp_GeomOffsetCurveHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomOffsetCurve(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_curve_method_transformed_parameter_0(
+  const OcctSharp_GeomOffsetCurveHandle* handle,
+  double u,
+  OcctSharp_Value_Transform3d t,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Geom_OffsetCurve*>(ValidateGeomOffsetCurve(handle)->Value.get())->TransformedParameter(u, OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -43892,6 +44927,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_surface_method_o
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_surface_method_parametric_transformation_0(
+  const OcctSharp_GeomOffsetSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  OcctSharp_Value_AffineTransform2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const Geom_OffsetSurface*>(ValidateGeomOffsetSurface(handle)->Value.get())->ParametricTransformation(OcctSharp_GeometryValues::ToNative(t)));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_surface_method_set_basis_surface_0(
   const OcctSharp_GeomOffsetSurfaceHandle* handle,
   const OcctSharp_GeomSurfaceHandle* s,
@@ -43923,6 +44971,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_surface_method_s
   {
     opencascade::handle<Geom_Surface> returnedHandle = ValidateGeomOffsetSurface(handle)->Value->Surface();
     if (!returnedHandle.IsNull()) *out_handle = AllocateGeomSurface(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_surface_method_transform_0(
+  const OcctSharp_GeomOffsetSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomOffsetSurface(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -44284,6 +45342,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_parabola_method_paramet
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_parabola_method_parametric_transformation_0(
+  const OcctSharp_GeomParabolaHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Geom_Parabola*>(ValidateGeomParabola(handle)->Value.get())->ParametricTransformation(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_parabola_method_reversed_parameter_0(
   const OcctSharp_GeomParabolaHandle* handle,
   double u,
@@ -44314,6 +45385,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_parabola_method_set_par
   return GeneratedGuard([&]
   {
     ValidateGeomParabola(handle)->Value->SetParab(OcctSharp_GeometryValues::ToNative(prb));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_parabola_method_transform_0(
+  const OcctSharp_GeomParabolaHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomParabola(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_parabola_method_transformed_parameter_0(
+  const OcctSharp_GeomParabolaHandle* handle,
+  double u,
+  OcctSharp_Value_Transform3d t,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Geom_Parabola*>(ValidateGeomParabola(handle)->Value.get())->TransformedParameter(u, OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -44511,6 +45606,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plane_method_is_vperiod
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plane_method_parametric_transformation_0(
+  const OcctSharp_GeomPlaneHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  OcctSharp_Value_AffineTransform2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const Geom_Plane*>(ValidateGeomPlane(handle)->Value.get())->ParametricTransformation(OcctSharp_GeometryValues::ToNative(t)));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plane_method_pln_0(
   const OcctSharp_GeomPlaneHandle* handle,
   OcctSharp_Value_Plane* out_value)
@@ -44530,6 +45638,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plane_method_set_pln_0(
   return GeneratedGuard([&]
   {
     ValidateGeomPlane(handle)->Value->SetPln(OcctSharp_GeometryValues::ToNative(pl));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plane_method_transform_0(
+  const OcctSharp_GeomPlaneHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomPlane(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -44928,6 +46046,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_rectangular_trimmed_sur
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_rectangular_trimmed_surface_method_parametric_transformation_0(
+  const OcctSharp_GeomRectangularTrimmedSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  OcctSharp_Value_AffineTransform2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const Geom_RectangularTrimmedSurface*>(ValidateGeomRectangularTrimmedSurface(handle)->Value.get())->ParametricTransformation(OcctSharp_GeometryValues::ToNative(t)));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_rectangular_trimmed_surface_method_set_trim_0(
   const OcctSharp_GeomRectangularTrimmedSurfaceHandle* handle,
   double param1,
@@ -44953,6 +46084,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_rectangular_trimmed_sur
   return GeneratedGuard([&]
   {
     ValidateGeomRectangularTrimmedSurface(handle)->Value->SetTrim(u1, u2, v1, v2, (uSense != 0), (vSense != 0));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_rectangular_trimmed_surface_method_transform_0(
+  const OcctSharp_GeomRectangularTrimmedSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomRectangularTrimmedSurface(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -45272,6 +46413,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_spherical_surface_metho
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_spherical_surface_method_transform_0(
+  const OcctSharp_GeomSphericalSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomSphericalSurface(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_spherical_surface_method_uiso_0(
   const OcctSharp_GeomSphericalSurfaceHandle* handle,
   double u,
@@ -45410,6 +46561,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_method_dynamic_
   {
     opencascade::handle<Standard_Type> returnedHandle = static_cast<const Geom_Surface*>(ValidateGeomSurface(handle)->Value.get())->DynamicType();
     if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_method_parametric_transformation_0(
+  const OcctSharp_GeomSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  OcctSharp_Value_AffineTransform2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const Geom_Surface*>(ValidateGeomSurface(handle)->Value.get())->ParametricTransformation(OcctSharp_GeometryValues::ToNative(t)));
   });
 }
 
@@ -45690,6 +46854,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_linear_extru
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_linear_extrusion_method_parametric_transformation_0(
+  const OcctSharp_GeomSurfaceOfLinearExtrusionHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  OcctSharp_Value_AffineTransform2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const Geom_SurfaceOfLinearExtrusion*>(ValidateGeomSurfaceOfLinearExtrusion(handle)->Value.get())->ParametricTransformation(OcctSharp_GeometryValues::ToNative(t)));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_linear_extrusion_method_set_basis_curve_0(
   const OcctSharp_GeomSurfaceOfLinearExtrusionHandle* handle,
   const OcctSharp_GeomCurveHandle* c)
@@ -45707,6 +46884,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_linear_extru
   return GeneratedGuard([&]
   {
     ValidateGeomSurfaceOfLinearExtrusion(handle)->Value->SetDirection(OcctSharp_GeometryValues::ToNative(v));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_linear_extrusion_method_transform_0(
+  const OcctSharp_GeomSurfaceOfLinearExtrusionHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomSurfaceOfLinearExtrusion(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -46019,6 +47206,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_revolution_m
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_revolution_method_parametric_transformation_0(
+  const OcctSharp_GeomSurfaceOfRevolutionHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  OcctSharp_Value_AffineTransform2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const Geom_SurfaceOfRevolution*>(ValidateGeomSurfaceOfRevolution(handle)->Value.get())->ParametricTransformation(OcctSharp_GeometryValues::ToNative(t)));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_revolution_method_reference_plane_0(
   const OcctSharp_GeomSurfaceOfRevolutionHandle* handle,
   OcctSharp_Value_Axis2* out_value)
@@ -46068,6 +47268,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_revolution_m
   return GeneratedGuard([&]
   {
     ValidateGeomSurfaceOfRevolution(handle)->Value->SetLocation(gp_Pnt(p.x, p.y, p.z));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_revolution_method_transform_0(
+  const OcctSharp_GeomSurfaceOfRevolutionHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomSurfaceOfRevolution(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -46481,6 +47691,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_toroidal_surface_method
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_toroidal_surface_method_transform_0(
+  const OcctSharp_GeomToroidalSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomToroidalSurface(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_toroidal_surface_method_uiso_0(
   const OcctSharp_GeomToroidalSurfaceHandle* handle,
   double u,
@@ -46601,6 +47821,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_transformation_create_0
   return GeneratedGuard([&]
   {
     opencascade::handle<Geom_Transformation> createdHandle = new Geom_Transformation();
+    *out_handle = AllocateGeomTransformation(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_transformation_create_1(
+  OcctSharp_Value_Transform3d t,
+  OcctSharp_GeomTransformationHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Geom_Transformation> createdHandle = new Geom_Transformation(OcctSharp_GeometryValues::ToNative(t));
     *out_handle = AllocateGeomTransformation(std::move(createdHandle));
   });
 }
@@ -46841,6 +48074,28 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_transformation_method_s
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_transformation_method_set_trsf_0(
+  const OcctSharp_GeomTransformationHandle* handle,
+  OcctSharp_Value_Transform3d theTrsf)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomTransformation(handle)->Value->SetTrsf(OcctSharp_GeometryValues::ToNative(theTrsf));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_transformation_method_trsf_0(
+  const OcctSharp_GeomTransformationHandle* handle,
+  OcctSharp_Value_Transform3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const Geom_Transformation*>(ValidateGeomTransformation(handle)->Value.get())->Trsf());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_transformation_method_value_0(
   const OcctSharp_GeomTransformationHandle* handle,
   int32_t theRow,
@@ -47071,6 +48326,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_trimmed_curve_method_la
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_trimmed_curve_method_parametric_transformation_0(
+  const OcctSharp_GeomTrimmedCurveHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Geom_TrimmedCurve*>(ValidateGeomTrimmedCurve(handle)->Value.get())->ParametricTransformation(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_trimmed_curve_method_period_0(
   const OcctSharp_GeomTrimmedCurveHandle* handle,
   double* out_value)
@@ -47128,6 +48396,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_trimmed_curve_method_st
   {
     const gp_Pnt nativeValue = ValidateGeomTrimmedCurve(handle)->Value->StartPoint();
     *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_trimmed_curve_method_transform_0(
+  const OcctSharp_GeomTrimmedCurveHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomTrimmedCurve(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_trimmed_curve_method_transformed_parameter_0(
+  const OcctSharp_GeomTrimmedCurveHandle* handle,
+  double u,
+  OcctSharp_Value_Transform3d t,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const Geom_TrimmedCurve*>(ValidateGeomTrimmedCurve(handle)->Value.get())->TransformedParameter(u, OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -47669,6 +48961,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_vector_with_magnitude_m
   {
     opencascade::handle<Geom_VectorWithMagnitude> returnedHandle = ValidateGeomVectorWithMagnitude(handle)->Value->Subtracted((other == nullptr ? opencascade::handle<Geom_Vector>() : ValidateGeomVector(other)->Value));
     if (!returnedHandle.IsNull()) *out_handle = AllocateGeomVectorWithMagnitude(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_vector_with_magnitude_method_transform_0(
+  const OcctSharp_GeomVectorWithMagnitudeHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateGeomVectorWithMagnitude(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 

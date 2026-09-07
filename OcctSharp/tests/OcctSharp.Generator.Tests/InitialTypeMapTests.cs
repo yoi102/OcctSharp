@@ -53,6 +53,10 @@ public sealed class InitialTypeMapTests
     [InlineData("gp_Cone")]
     [InlineData("gp_Sphere")]
     [InlineData("gp_Torus")]
+    [InlineData("gp_Trsf")]
+    [InlineData("gp_Trsf2d")]
+    [InlineData("gp_GTrsf")]
+    [InlineData("gp_GTrsf2d")]
     public void GeometryCopiesAcceptValuesAndConstReferencesOnly(string native)
     {
         InitialTypeMap map = new();
@@ -75,10 +79,11 @@ public sealed class InitialTypeMapTests
     {
         BindingDeclaration constructor = new("y:vector-ctor", "gp_Vec::gp_Vec", BindingDeclarationKind.Constructor, "gp_Vec.hxx", 1, 1);
         Assert.False(Transformation.SimpleBindingEligibilityPass.Assess(constructor, new InitialTypeMap()).IsEligible);
-        Assert.False(new InitialTypeMap().TryMap(CreateValueType("gp_Trsf", "gp_Trsf"), BindingTypeUsage.ReturnValue, out _));
+        Assert.True(new InitialTypeMap().TryMap(CreateValueType("gp_Trsf", "gp_Trsf"), BindingTypeUsage.ReturnValue, out _));
         BindingDeclaration pointFromXyz = constructor with { NativeName = "gp_Pnt::gp_Pnt",
             Parameters = [new(0, "xyz", CreateValueType("gp_XYZ", "gp_XYZ"), false)] };
         Assert.Equal("EL010", Transformation.SimpleBindingEligibilityPass.Assess(pointFromXyz, new InitialTypeMap()).Code);
+        Assert.True(Transformation.SimpleBindingEligibilityPass.Assess(pointFromXyz with { Access = BindingAccess.Public }, new InitialTypeMap()).IsEligible);
     }
 
     [Theory]

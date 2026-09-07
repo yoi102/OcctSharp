@@ -1,12 +1,18 @@
 #include "Foundation/OcctSharp.Foundation.GeometryValues.Generated.h"
 #include <limits>
 #include <stdexcept>
+#include <source_location>
+#include <cstdio>
 
 using namespace OcctSharp_GeometryValues;
-static void Require(bool value) { if (!value) throw std::runtime_error("Geometric projection mismatch"); }
+static void Require(bool value, std::source_location source = std::source_location::current())
+{
+  if (!value) throw std::runtime_error("Geometric projection mismatch at line " + std::to_string(source.line()));
+}
 
 int main()
 {
+  try {
   // Distinct, non-symmetric entries expose row/column transposition immediately.
   const auto m2 = ToNative(OcctSharp_Value_Matrix2x2{1, 2, 3, 5});
   Require(m2.Value(1, 2) == 2 && m2.Value(2, 1) == 3 && m2.Determinant() == -1);
@@ -28,5 +34,28 @@ int main()
   try { (void)ToNative(OcctSharp_Value_Matrix2x2{1,2,3,std::numeric_limits<double>::infinity()}); }
   catch (const Standard_DomainError&) { rejected = true; }
   Require(rejected);
+  const auto t2 = ToNative(OcctSharp_Value_Transform2d{0,-2,3, 2,0,5});
+  const auto tp2 = gp_Pnt2d(7,11).Transformed(t2);
+  Require(tp2.X() == -19 && tp2.Y() == 19);
+  const auto t3 = ToNative(OcctSharp_Value_Transform3d{0,-2,0,3, 2,0,0,5, 0,0,2,7});
+  const auto tp3 = gp_Pnt(7,11,13).Transformed(t3);
+  Require(tp3.X() == -19 && tp3.Y() == 19 && tp3.Z() == 33);
+  const auto a2 = ToNative(OcctSharp_Value_AffineTransform2d{1,2,3, 0,1,5});
+  const auto ap2 = a2.Transformed(gp_XY(7,11));
+  Require(ap2.X() == 32 && ap2.Y() == 16);
+  const auto a3 = ToNative(OcctSharp_Value_AffineTransform3d{1,2,0,3, 0,1,0,5, 0,0,1,7});
+  gp_XYZ ap3(7,11,13);
+  a3.Transforms(ap3);
+  Require(ap3.X() == 32 && ap3.Y() == 16 && ap3.Z() == 20);
+  Require(ToNative(OcctSharp_Value_AffineTransform3d{1,0,0,3, 0,1,0,5, 0,0,1,7}).Trsf().Value(1,4) == 3);
+  Require(ToNative(OcctSharp_Value_AffineTransform2d{1,0,3, 0,1,5}).Trsf2d().Value(1,3) == 3);
+  rejected = false;
+  try { (void)ToNative(OcctSharp_Value_Transform3d{1,2,0,0, 0,1,0,0, 0,0,1,0}); }
+  catch (const Standard_Failure&) { rejected = true; }
+  Require(rejected);
+  Require(ToNative(OcctSharp_Value_AffineTransform3d{1,2,3,4, 2,4,6,7, 3,6,9,10}).IsSingular());
   return 0;
+  }
+  catch (const Standard_Failure& error) { std::fprintf(stderr, "OCCT: %s\n", error.what()); return 1; }
+  catch (const std::exception& error) { std::fprintf(stderr, "%s\n", error.what()); return 1; }
 }

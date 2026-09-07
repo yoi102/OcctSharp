@@ -321,6 +321,7 @@
 // Source: c:@S@BRepTest_DrawableHistory@F@DynamicType#1
 // Source: c:@S@BRepTools_CopyModification@F@BRepTools_CopyModification#b#b#
 // Source: c:@S@BRepTools_CopyModification@F@DynamicType#1
+// Source: c:@S@BRepTools_GTrsfModification@F@BRepTools_GTrsfModification#&1$@S@gp_GTrsf#
 // Source: c:@S@BRepTools_GTrsfModification@F@DynamicType#1
 // Source: c:@S@BRepTools_History@F@BRepTools_History#
 // Source: c:@S@BRepTools_History@F@Clear#
@@ -336,6 +337,7 @@
 // Source: c:@S@BRepTools_ReShape@F@Clear#
 // Source: c:@S@BRepTools_ReShape@F@DynamicType#1
 // Source: c:@S@BRepTools_ReShape@F@History#1
+// Source: c:@S@BRepTools_TrsfModification@F@BRepTools_TrsfModification#&1$@S@gp_Trsf#
 // Source: c:@S@BRepTools_TrsfModification@F@DynamicType#1
 // Source: c:@S@BRepTopAdaptor_HVertex@F@DynamicType#1
 // Source: c:@S@BRepTopAdaptor_HVertex@F@IsSame#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_HVertex#
@@ -1245,6 +1247,7 @@
 // Source: c:@S@ShapeCustom_SweptToElementary@F@DynamicType#1
 // Source: c:@S@ShapeCustom_SweptToElementary@F@ShapeCustom_SweptToElementary#
 // Source: c:@S@ShapeCustom_TrsfModification@F@DynamicType#1
+// Source: c:@S@ShapeCustom_TrsfModification@F@ShapeCustom_TrsfModification#&1$@S@gp_Trsf#
 // Source: c:@S@ShapeExtend_BasicMsgRegistrator@F@DynamicType#1
 // Source: c:@S@ShapeExtend_BasicMsgRegistrator@F@ShapeExtend_BasicMsgRegistrator#
 // Source: c:@S@ShapeExtend_ComplexCurve@F@CheckConnectivity#d#
@@ -1258,6 +1261,7 @@
 // Source: c:@S@ShapeExtend_ComplexCurve@F@IsPeriodic#1
 // Source: c:@S@ShapeExtend_ComplexCurve@F@LastParameter#1
 // Source: c:@S@ShapeExtend_ComplexCurve@F@ReversedParameter#d#1
+// Source: c:@S@ShapeExtend_ComplexCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@ShapeExtend_CompositeSurface@F@CheckConnectivity#d#
 // Source: c:@S@ShapeExtend_CompositeSurface@F@ComputeJointValues#$@E@ShapeExtend_Parametrisation#
 // Source: c:@S@ShapeExtend_CompositeSurface@F@Continuity#1
@@ -1283,6 +1287,7 @@
 // Source: c:@S@ShapeExtend_CompositeSurface@F@SetUFirstValue#d#
 // Source: c:@S@ShapeExtend_CompositeSurface@F@SetVFirstValue#d#
 // Source: c:@S@ShapeExtend_CompositeSurface@F@ShapeExtend_CompositeSurface#
+// Source: c:@S@ShapeExtend_CompositeSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@ShapeExtend_CompositeSurface@F@UGlobalToLocal#I#I#d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@UIso#d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@UJointValue#I#1
@@ -1647,6 +1652,9 @@
 // Source: c:@S@TopLoc_Datum3D@F@DynamicType#1
 // Source: c:@S@TopLoc_Datum3D@F@Form#1
 // Source: c:@S@TopLoc_Datum3D@F@TopLoc_Datum3D#
+// Source: c:@S@TopLoc_Datum3D@F@TopLoc_Datum3D#&1$@S@gp_Trsf#
+// Source: c:@S@TopLoc_Datum3D@F@Transformation#1
+// Source: c:@S@TopLoc_Datum3D@F@Trsf#1
 // Source: c:@S@TopLoc_SListNodeOfItemLocation@F@DynamicType#1
 // Source: c:@S@TopOpeBRepBuild_HBuilder@F@Clear#
 // Source: c:@S@TopOpeBRepBuild_HBuilder@F@DataStructure#1
@@ -17937,6 +17945,19 @@ void OCCTSHARP_CALL occtsharp_generated_brep_tools_copy_modification_release(Occ
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_tools_gtrsf_modification_create_0(
+  OcctSharp_Value_AffineTransform3d t,
+  OcctSharp_BRepToolsGTrsfModificationHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<BRepTools_GTrsfModification> createdHandle = new BRepTools_GTrsfModification(OcctSharp_GeometryValues::ToNative(t));
+    *out_handle = AllocateBRepToolsGTrsfModification(std::move(createdHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_tools_gtrsf_modification_method_dynamic_type_0(
   const OcctSharp_BRepToolsGTrsfModificationHandle* handle,
   OcctSharp_StandardTypeHandle** out_handle)
@@ -18343,6 +18364,19 @@ void OCCTSHARP_CALL occtsharp_generated_brep_tools_re_shape_release(OcctSharp_BR
   bool removed = false;
   { std::lock_guard<std::mutex> lock(BRepToolsReShapeMutex); removed = LiveBRepToolsReShapeHandles.erase(handle) != 0; }
   if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_tools_trsf_modification_create_0(
+  OcctSharp_Value_Transform3d t,
+  OcctSharp_BRepToolsTrsfModificationHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<BRepTools_TrsfModification> createdHandle = new BRepTools_TrsfModification(OcctSharp_GeometryValues::ToNative(t));
+    *out_handle = AllocateBRepToolsTrsfModification(std::move(createdHandle));
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_tools_trsf_modification_method_dynamic_type_0(
@@ -32786,6 +32820,19 @@ void OCCTSHARP_CALL occtsharp_generated_shape_custom_swept_to_elementary_release
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_custom_trsf_modification_create_0(
+  OcctSharp_Value_Transform3d t,
+  OcctSharp_ShapeCustomTrsfModificationHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<ShapeCustom_TrsfModification> createdHandle = new ShapeCustom_TrsfModification(OcctSharp_GeometryValues::ToNative(t));
+    *out_handle = AllocateShapeCustomTrsfModification(std::move(createdHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_custom_trsf_modification_method_dynamic_type_0(
   const OcctSharp_ShapeCustomTrsfModificationHandle* handle,
   OcctSharp_StandardTypeHandle** out_handle)
@@ -33053,6 +33100,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_complex_curve_m
   return GeneratedGuard([&]
   {
     *out_value = ValidateShapeExtendComplexCurve(handle)->Value->ReversedParameter(u);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_complex_curve_method_transform_0(
+  const OcctSharp_ShapeExtendComplexCurveHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateShapeExtendComplexCurve(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -33421,6 +33478,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_composite_surfa
   return GeneratedGuard([&]
   {
     ValidateShapeExtendCompositeSurface(handle)->Value->SetVFirstValue(vFirst);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_composite_surface_method_transform_0(
+  const OcctSharp_ShapeExtendCompositeSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateShapeExtendCompositeSurface(handle)->Value->Transform(OcctSharp_GeometryValues::ToNative(t));
   });
 }
 
@@ -39669,6 +39736,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_top_loc_datum3_d_create_0(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_top_loc_datum3_d_create_1(
+  OcctSharp_Value_Transform3d t,
+  OcctSharp_TopLocDatum3DHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<TopLoc_Datum3D> createdHandle = new TopLoc_Datum3D(OcctSharp_GeometryValues::ToNative(t));
+    *out_handle = AllocateTopLocDatum3D(std::move(createdHandle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_top_loc_datum3_d_method_dynamic_type_0(
   const OcctSharp_TopLocDatum3DHandle* handle,
   OcctSharp_StandardTypeHandle** out_handle)
@@ -39691,6 +39771,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_top_loc_datum3_d_method_form
   return GeneratedGuard([&]
   {
     *out_value = static_cast<int32_t>(ValidateTopLocDatum3D(handle)->Value->Form());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_top_loc_datum3_d_method_transformation_0(
+  const OcctSharp_TopLocDatum3DHandle* handle,
+  OcctSharp_Value_Transform3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const TopLoc_Datum3D*>(ValidateTopLocDatum3D(handle)->Value.get())->Transformation());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_top_loc_datum3_d_method_trsf_0(
+  const OcctSharp_TopLocDatum3DHandle* handle,
+  OcctSharp_Value_Transform3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const TopLoc_Datum3D*>(ValidateTopLocDatum3D(handle)->Value.get())->Trsf());
   });
 }
 

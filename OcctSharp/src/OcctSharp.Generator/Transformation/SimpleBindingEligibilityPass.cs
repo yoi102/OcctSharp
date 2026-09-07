@@ -21,6 +21,8 @@ public static class SimpleBindingEligibilityPass
         ArgumentNullException.ThrowIfNull(typeMap);
 
         if (GetProjectionConstraint(declaration) is { } constraint) return constraint;
+        if (GeometricOperationEligibility.IsEligible(declaration, typeMap))
+            return new("EL011", "GeometricValueOperation", "Copied receiver and value inputs/outputs have an implemented operation emitter.", true);
 
         return declaration.Kind switch
         {

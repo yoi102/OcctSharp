@@ -14,6 +14,7 @@
 // Source: c:@S@Poly_CoherentTriangulation@F@Poly_CoherentTriangulation#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#
 // Source: c:@S@Poly_CoherentTriangulation@F@Poly_CoherentTriangulation#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#
 // Source: c:@S@Poly_CoherentTriangulation@F@SetDeflection#d#
+// Source: c:@S@Poly_MergeNodesTool@F@AddTriangulation#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#&1$@S@gp_Trsf#b#
 // Source: c:@S@Poly_MergeNodesTool@F@DynamicType#1
 // Source: c:@S@Poly_MergeNodesTool@F@ElementNodeIndex#I#1
 // Source: c:@S@Poly_MergeNodesTool@F@MergeAngle#1
@@ -311,6 +312,13 @@ public sealed class PolyMergeNodesTool : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyMergeNodesToolCreate0(theSmoothAngle, theMergeTolerance, theNbFacets, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "PolyMergeNodesToolCreate0");
+    }
+
+    /// <summary>Invokes OCCT Poly_MergeNodesTool::AddTriangulation.</summary>
+    public void AddTriangulation(PolyTriangulation? theTris, global::OcctSharp.Values.Transform3d theTrsf, bool theToReverse)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyMergeNodesToolMethodAddTriangulation0(handle, theTris is null ? nint.Zero : theTris.NativeHandle.DangerousGetHandle(), theTrsf, theToReverse ? 1 : 0), "occtsharp_generated_poly_merge_nodes_tool_method_add_triangulation_0");
     }
 
     /// <summary>Invokes OCCT Poly_MergeNodesTool::DynamicType.</summary>

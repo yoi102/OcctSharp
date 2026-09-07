@@ -1,6 +1,6 @@
 # Roadmap
 
-## Current planning policy (2026-09-06)
+## Current planning policy (2026-09-07)
 
 B-W and Q-W's 280/280 accepted capabilities are locally complete at `15fd671`.
 Batch X implements [ADR-0092](adr/0092-generated-numeric-and-copied-reference-expansion.md):
@@ -12,6 +12,7 @@ Batch Y completes [geometric value projections](BATCH_Y_GEOMETRIC_VALUE_EXPANSIO
 under ADR-0093: 968 generated additions across eight modules, thirty value records,
 and all local product gates passed. Remaining work includes explicit output/array
 contracts and unselected handle/constructor projections; no fixed-size queue is active.
+Batch Z implements [geometric operations and transforms](BATCH_Z_VALUE_OPERATIONS.md) under ADR-0094. Its delivery evidence and remaining work are tracked in STATUS.
 Follow [WORKFLOW](WORKFLOW.md) and ADR-0091: no fixed row/family count, flexible authorized
 intermediate commits, impact-based development checks and full product delivery gates.
 [STATUS](STATUS.md) owns current counts, active work and validation references.

@@ -999,6 +999,7 @@
 // Source: c:@S@IGESData_IGESEntity@F@Associate#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
 // Source: c:@S@IGESData_IGESEntity@F@BlankStatus#1
 // Source: c:@S@IGESData_IGESEntity@F@Color#1
+// Source: c:@S@IGESData_IGESEntity@F@CompoundLocation#1
 // Source: c:@S@IGESData_IGESEntity@F@DefColor#1
 // Source: c:@S@IGESData_IGESEntity@F@DefLevel#1
 // Source: c:@S@IGESData_IGESEntity@F@DefLineFont#1
@@ -1029,6 +1030,7 @@
 // Source: c:@S@IGESData_IGESEntity@F@LineFont#1
 // Source: c:@S@IGESData_IGESEntity@F@LineWeight#1
 // Source: c:@S@IGESData_IGESEntity@F@LineWeightNumber#1
+// Source: c:@S@IGESData_IGESEntity@F@Location#1
 // Source: c:@S@IGESData_IGESEntity@F@NameValue#1
 // Source: c:@S@IGESData_IGESEntity@F@NbAssociativities#1
 // Source: c:@S@IGESData_IGESEntity@F@NbProperties#1
@@ -1050,6 +1052,7 @@
 // Source: c:@S@IGESData_IGESEntity@F@TypedProperty#&1$@N@opencascade@S@handle>#$@S@Standard_Type#I#1
 // Source: c:@S@IGESData_IGESEntity@F@UniqueParent#1
 // Source: c:@S@IGESData_IGESEntity@F@UseFlag#1
+// Source: c:@S@IGESData_IGESEntity@F@VectorLocation#1
 // Source: c:@S@IGESData_IGESEntity@F@View#1
 // Source: c:@S@IGESData_IGESEntity@F@ViewList#1
 // Source: c:@S@IGESData_IGESModel@F@ClearHeader#
@@ -1105,6 +1108,8 @@
 // Source: c:@S@IGESData_SpecificModule@F@DynamicType#1
 // Source: c:@S@IGESData_SpecificModule@F@OwnCorrect#I#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
 // Source: c:@S@IGESData_ToolLocation@F@DynamicType#1
+// Source: c:@S@IGESData_ToolLocation@F@EffectiveLocation#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
+// Source: c:@S@IGESData_ToolLocation@F@ExplicitLocation#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
 // Source: c:@S@IGESData_ToolLocation@F@HasParent#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
 // Source: c:@S@IGESData_ToolLocation@F@HasParentByAssociativity#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
 // Source: c:@S@IGESData_ToolLocation@F@HasTransf#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
@@ -1114,6 +1119,7 @@
 // Source: c:@S@IGESData_ToolLocation@F@IsTransf#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
 // Source: c:@S@IGESData_ToolLocation@F@Load#
 // Source: c:@S@IGESData_ToolLocation@F@Parent#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
+// Source: c:@S@IGESData_ToolLocation@F@ParentLocation#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
 // Source: c:@S@IGESData_ToolLocation@F@ResetDependences#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#
 // Source: c:@S@IGESData_ToolLocation@F@SetOwnAsDependent#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#
 // Source: c:@S@IGESData_ToolLocation@F@SetParentAssoc#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#S0_#
@@ -1950,6 +1956,7 @@
 // Source: c:@S@IGESGeom_TransformationMatrix@F@DynamicType#1
 // Source: c:@S@IGESGeom_TransformationMatrix@F@IGESGeom_TransformationMatrix#
 // Source: c:@S@IGESGeom_TransformationMatrix@F@SetFormNumber#I#
+// Source: c:@S@IGESGeom_TransformationMatrix@F@Value#1
 // Source: c:@S@IGESGeom_TrimmedSurface@F@DynamicType#1
 // Source: c:@S@IGESGeom_TrimmedSurface@F@HasOuterContour#1
 // Source: c:@S@IGESGeom_TrimmedSurface@F@IGESGeom_TrimmedSurface#
@@ -7436,8 +7443,10 @@
 // Source: c:@S@VrmlData_Geometry@F@DynamicType#1
 // Source: c:@S@VrmlData_Group@F@Clone#&1$@N@opencascade@S@handle>#$@S@VrmlData_Node#1
 // Source: c:@S@VrmlData_Group@F@DynamicType#1
+// Source: c:@S@VrmlData_Group@F@GetTransform#1
 // Source: c:@S@VrmlData_Group@F@IsTransform#1
 // Source: c:@S@VrmlData_Group@F@RemoveNode#&1$@N@opencascade@S@handle>#$@S@VrmlData_Node#
+// Source: c:@S@VrmlData_Group@F@SetTransform#&1$@S@gp_Trsf#
 // Source: c:@S@VrmlData_Group@F@VrmlData_Group#b#
 // Source: c:@S@VrmlData_ImageTexture@F@Clone#&1$@N@opencascade@S@handle>#$@S@VrmlData_Node#1
 // Source: c:@S@VrmlData_ImageTexture@F@DynamicType#1
@@ -26257,6 +26266,14 @@ public sealed class IGESDataIGESEntity : IDisposable
         return global::OcctSharp.IGESDataColorEntity.FromNative(handleValue, "occtsharp_generated_igesdata_igesentity_method_color_0");
     }
 
+    /// <summary>Invokes OCCT IGESData_IGESEntity::CompoundLocation.</summary>
+    public global::OcctSharp.Values.AffineTransform3d CompoundLocation()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDataIGESEntityMethodCompoundLocation0(handle, out global::OcctSharp.Values.AffineTransform3d resultValue), "occtsharp_generated_igesdata_igesentity_method_compound_location_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IGESData_IGESEntity::DefColor.</summary>
     public IGESDataDefType DefColor()
     {
@@ -26488,6 +26505,14 @@ public sealed class IGESDataIGESEntity : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT IGESData_IGESEntity::Location.</summary>
+    public global::OcctSharp.Values.AffineTransform3d Location()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDataIGESEntityMethodLocation0(handle, out global::OcctSharp.Values.AffineTransform3d resultValue), "occtsharp_generated_igesdata_igesentity_method_location_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IGESData_IGESEntity::NameValue.</summary>
     public TCollectionHAsciiString? NameValue()
     {
@@ -26650,6 +26675,14 @@ public sealed class IGESDataIGESEntity : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDataIGESEntityMethodUseFlag0(handle, out int resultValue), "occtsharp_generated_igesdata_igesentity_method_use_flag_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESData_IGESEntity::VectorLocation.</summary>
+    public global::OcctSharp.Values.AffineTransform3d VectorLocation()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDataIGESEntityMethodVectorLocation0(handle, out global::OcctSharp.Values.AffineTransform3d resultValue), "occtsharp_generated_igesdata_igesentity_method_vector_location_0");
         return resultValue;
     }
 
@@ -27975,6 +28008,22 @@ public sealed class IGESDataToolLocation : IDisposable
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_igesdata_tool_location_method_dynamic_type_0");
     }
 
+    /// <summary>Invokes OCCT IGESData_ToolLocation::EffectiveLocation.</summary>
+    public global::OcctSharp.Values.AffineTransform3d EffectiveLocation(IGESDataIGESEntity? ent)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDataToolLocationMethodEffectiveLocation0(handle, ent is null ? nint.Zero : ent.NativeHandle.DangerousGetHandle(), out global::OcctSharp.Values.AffineTransform3d resultValue), "occtsharp_generated_igesdata_tool_location_method_effective_location_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESData_ToolLocation::ExplicitLocation.</summary>
+    public global::OcctSharp.Values.AffineTransform3d ExplicitLocation(IGESDataIGESEntity? ent)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDataToolLocationMethodExplicitLocation0(handle, ent is null ? nint.Zero : ent.NativeHandle.DangerousGetHandle(), out global::OcctSharp.Values.AffineTransform3d resultValue), "occtsharp_generated_igesdata_tool_location_method_explicit_location_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IGESData_ToolLocation::HasParent.</summary>
     public bool HasParent(IGESDataIGESEntity? ent)
     {
@@ -28036,6 +28085,14 @@ public sealed class IGESDataToolLocation : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDataToolLocationMethodParent0(handle, ent is null ? nint.Zero : ent.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_igesdata_tool_location_method_parent_0");
         return global::OcctSharp.IGESDataIGESEntity.FromNative(handleValue, "occtsharp_generated_igesdata_tool_location_method_parent_0");
+    }
+
+    /// <summary>Invokes OCCT IGESData_ToolLocation::ParentLocation.</summary>
+    public global::OcctSharp.Values.AffineTransform3d ParentLocation(IGESDataIGESEntity? ent)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDataToolLocationMethodParentLocation0(handle, ent is null ? nint.Zero : ent.NativeHandle.DangerousGetHandle(), out global::OcctSharp.Values.AffineTransform3d resultValue), "occtsharp_generated_igesdata_tool_location_method_parent_location_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT IGESData_ToolLocation::ResetDependences.</summary>
@@ -40519,6 +40576,14 @@ public sealed class IGESGeomTransformationMatrix : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomTransformationMatrixMethodSetFormNumber0(handle, form), "occtsharp_generated_igesgeom_transformation_matrix_method_set_form_number_0");
+    }
+
+    /// <summary>Invokes OCCT IGESGeom_TransformationMatrix::Value.</summary>
+    public global::OcctSharp.Values.AffineTransform3d Value()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomTransformationMatrixMethodValue0(handle, out global::OcctSharp.Values.AffineTransform3d resultValue), "occtsharp_generated_igesgeom_transformation_matrix_method_value_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -150102,6 +150167,14 @@ public sealed class VrmlDataGroup : IDisposable
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_vrml_data_group_method_dynamic_type_0");
     }
 
+    /// <summary>Invokes OCCT VrmlData_Group::GetTransform.</summary>
+    public global::OcctSharp.Values.Transform3d GetTransform()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.VrmlDataGroupMethodGetTransform0(handle, out global::OcctSharp.Values.Transform3d resultValue), "occtsharp_generated_vrml_data_group_method_get_transform_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT VrmlData_Group::IsTransform.</summary>
     public bool IsTransform()
     {
@@ -150115,6 +150188,14 @@ public sealed class VrmlDataGroup : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.VrmlDataGroupMethodRemoveNode0(handle, theNode is null ? nint.Zero : theNode.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_vrml_data_group_method_remove_node_0");
+        return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT VrmlData_Group::SetTransform.</summary>
+    public bool SetTransform(global::OcctSharp.Values.Transform3d theTrsf)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.VrmlDataGroupMethodSetTransform0(handle, theTrsf, out int resultValue), "occtsharp_generated_vrml_data_group_method_set_transform_0");
         return resultValue != 0;
     }
 

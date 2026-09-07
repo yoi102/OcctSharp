@@ -143,6 +143,50 @@ typedef struct OcctSharp_Value_Torus {
   double MajorRadius;
   double MinorRadius;
 } OcctSharp_Value_Torus;
+typedef struct OcctSharp_Value_Transform2d {
+  double M11;
+  double M12;
+  double M13;
+  double M21;
+  double M22;
+  double M23;
+} OcctSharp_Value_Transform2d;
+typedef struct OcctSharp_Value_Transform3d {
+  double M11;
+  double M12;
+  double M13;
+  double M14;
+  double M21;
+  double M22;
+  double M23;
+  double M24;
+  double M31;
+  double M32;
+  double M33;
+  double M34;
+} OcctSharp_Value_Transform3d;
+typedef struct OcctSharp_Value_AffineTransform2d {
+  double M11;
+  double M12;
+  double M13;
+  double M21;
+  double M22;
+  double M23;
+} OcctSharp_Value_AffineTransform2d;
+typedef struct OcctSharp_Value_AffineTransform3d {
+  double M11;
+  double M12;
+  double M13;
+  double M14;
+  double M21;
+  double M22;
+  double M23;
+  double M24;
+  double M31;
+  double M32;
+  double M33;
+  double M34;
+} OcctSharp_Value_AffineTransform3d;
 #ifdef __cplusplus
 #include <cmath>
 #include <Standard_DomainError.hxx>
@@ -177,6 +221,10 @@ typedef struct OcctSharp_Value_Torus {
 #include <gp_Cone.hxx>
 #include <gp_Sphere.hxx>
 #include <gp_Torus.hxx>
+#include <gp_Trsf2d.hxx>
+#include <gp_Trsf.hxx>
+#include <gp_GTrsf2d.hxx>
+#include <gp_GTrsf.hxx>
 static_assert(sizeof(OcctSharp_Value_Coordinates2d) == 16);
 static_assert(offsetof(OcctSharp_Value_Coordinates2d, X) == 0);
 static_assert(offsetof(OcctSharp_Value_Coordinates2d, Y) == 8);
@@ -289,6 +337,46 @@ static_assert(sizeof(OcctSharp_Value_Torus) == 112);
 static_assert(offsetof(OcctSharp_Value_Torus, Position) == 0);
 static_assert(offsetof(OcctSharp_Value_Torus, MajorRadius) == 96);
 static_assert(offsetof(OcctSharp_Value_Torus, MinorRadius) == 104);
+static_assert(sizeof(OcctSharp_Value_Transform2d) == 48);
+static_assert(offsetof(OcctSharp_Value_Transform2d, M11) == 0);
+static_assert(offsetof(OcctSharp_Value_Transform2d, M12) == 8);
+static_assert(offsetof(OcctSharp_Value_Transform2d, M13) == 16);
+static_assert(offsetof(OcctSharp_Value_Transform2d, M21) == 24);
+static_assert(offsetof(OcctSharp_Value_Transform2d, M22) == 32);
+static_assert(offsetof(OcctSharp_Value_Transform2d, M23) == 40);
+static_assert(sizeof(OcctSharp_Value_Transform3d) == 96);
+static_assert(offsetof(OcctSharp_Value_Transform3d, M11) == 0);
+static_assert(offsetof(OcctSharp_Value_Transform3d, M12) == 8);
+static_assert(offsetof(OcctSharp_Value_Transform3d, M13) == 16);
+static_assert(offsetof(OcctSharp_Value_Transform3d, M14) == 24);
+static_assert(offsetof(OcctSharp_Value_Transform3d, M21) == 32);
+static_assert(offsetof(OcctSharp_Value_Transform3d, M22) == 40);
+static_assert(offsetof(OcctSharp_Value_Transform3d, M23) == 48);
+static_assert(offsetof(OcctSharp_Value_Transform3d, M24) == 56);
+static_assert(offsetof(OcctSharp_Value_Transform3d, M31) == 64);
+static_assert(offsetof(OcctSharp_Value_Transform3d, M32) == 72);
+static_assert(offsetof(OcctSharp_Value_Transform3d, M33) == 80);
+static_assert(offsetof(OcctSharp_Value_Transform3d, M34) == 88);
+static_assert(sizeof(OcctSharp_Value_AffineTransform2d) == 48);
+static_assert(offsetof(OcctSharp_Value_AffineTransform2d, M11) == 0);
+static_assert(offsetof(OcctSharp_Value_AffineTransform2d, M12) == 8);
+static_assert(offsetof(OcctSharp_Value_AffineTransform2d, M13) == 16);
+static_assert(offsetof(OcctSharp_Value_AffineTransform2d, M21) == 24);
+static_assert(offsetof(OcctSharp_Value_AffineTransform2d, M22) == 32);
+static_assert(offsetof(OcctSharp_Value_AffineTransform2d, M23) == 40);
+static_assert(sizeof(OcctSharp_Value_AffineTransform3d) == 96);
+static_assert(offsetof(OcctSharp_Value_AffineTransform3d, M11) == 0);
+static_assert(offsetof(OcctSharp_Value_AffineTransform3d, M12) == 8);
+static_assert(offsetof(OcctSharp_Value_AffineTransform3d, M13) == 16);
+static_assert(offsetof(OcctSharp_Value_AffineTransform3d, M14) == 24);
+static_assert(offsetof(OcctSharp_Value_AffineTransform3d, M21) == 32);
+static_assert(offsetof(OcctSharp_Value_AffineTransform3d, M22) == 40);
+static_assert(offsetof(OcctSharp_Value_AffineTransform3d, M23) == 48);
+static_assert(offsetof(OcctSharp_Value_AffineTransform3d, M24) == 56);
+static_assert(offsetof(OcctSharp_Value_AffineTransform3d, M31) == 64);
+static_assert(offsetof(OcctSharp_Value_AffineTransform3d, M32) == 72);
+static_assert(offsetof(OcctSharp_Value_AffineTransform3d, M33) == 80);
+static_assert(offsetof(OcctSharp_Value_AffineTransform3d, M34) == 88);
 namespace OcctSharp_GeometryValues {
 inline double Check(double value) { if (!std::isfinite(value)) throw Standard_DomainError("Geometric value must be finite."); return value; }
 inline gp_XY ToNative(OcctSharp_Value_Coordinates2d value) {
@@ -487,6 +575,74 @@ return gp_Torus(ToNative(value.Position), Check(value.MajorRadius), Check(value.
 }
 inline OcctSharp_Value_Torus FromNative(const gp_Torus& value) {
   return {FromNative(value.Position()), value.MajorRadius(), value.MinorRadius()};
+}
+inline gp_Trsf2d ToNative(OcctSharp_Value_Transform2d value) {
+gp_Trsf2d result;
+result.SetValues(Check(value.M11), Check(value.M12), Check(value.M13), Check(value.M21), Check(value.M22), Check(value.M23));
+if (!std::isfinite(result.Value(1, 1)) || std::abs(result.Value(1, 1) - value.M11) > 1e-12 * std::fmax(1.0, std::abs(value.M11))) throw Standard_DomainError("Transform is not a similarity matrix.");
+if (!std::isfinite(result.Value(1, 2)) || std::abs(result.Value(1, 2) - value.M12) > 1e-12 * std::fmax(1.0, std::abs(value.M12))) throw Standard_DomainError("Transform is not a similarity matrix.");
+if (!std::isfinite(result.Value(1, 3)) || std::abs(result.Value(1, 3) - value.M13) > 1e-12 * std::fmax(1.0, std::abs(value.M13))) throw Standard_DomainError("Transform is not a similarity matrix.");
+if (!std::isfinite(result.Value(2, 1)) || std::abs(result.Value(2, 1) - value.M21) > 1e-12 * std::fmax(1.0, std::abs(value.M21))) throw Standard_DomainError("Transform is not a similarity matrix.");
+if (!std::isfinite(result.Value(2, 2)) || std::abs(result.Value(2, 2) - value.M22) > 1e-12 * std::fmax(1.0, std::abs(value.M22))) throw Standard_DomainError("Transform is not a similarity matrix.");
+if (!std::isfinite(result.Value(2, 3)) || std::abs(result.Value(2, 3) - value.M23) > 1e-12 * std::fmax(1.0, std::abs(value.M23))) throw Standard_DomainError("Transform is not a similarity matrix.");
+return result;
+}
+inline OcctSharp_Value_Transform2d FromNative(const gp_Trsf2d& value) {
+  return {value.Value(1, 1), value.Value(1, 2), value.Value(1, 3), value.Value(2, 1), value.Value(2, 2), value.Value(2, 3)};
+}
+inline gp_Trsf ToNative(OcctSharp_Value_Transform3d value) {
+gp_Trsf result;
+result.SetValues(Check(value.M11), Check(value.M12), Check(value.M13), Check(value.M14), Check(value.M21), Check(value.M22), Check(value.M23), Check(value.M24), Check(value.M31), Check(value.M32), Check(value.M33), Check(value.M34));
+if (!std::isfinite(result.Value(1, 1)) || std::abs(result.Value(1, 1) - value.M11) > 1e-12 * std::fmax(1.0, std::abs(value.M11))) throw Standard_DomainError("Transform is not a similarity matrix.");
+if (!std::isfinite(result.Value(1, 2)) || std::abs(result.Value(1, 2) - value.M12) > 1e-12 * std::fmax(1.0, std::abs(value.M12))) throw Standard_DomainError("Transform is not a similarity matrix.");
+if (!std::isfinite(result.Value(1, 3)) || std::abs(result.Value(1, 3) - value.M13) > 1e-12 * std::fmax(1.0, std::abs(value.M13))) throw Standard_DomainError("Transform is not a similarity matrix.");
+if (!std::isfinite(result.Value(1, 4)) || std::abs(result.Value(1, 4) - value.M14) > 1e-12 * std::fmax(1.0, std::abs(value.M14))) throw Standard_DomainError("Transform is not a similarity matrix.");
+if (!std::isfinite(result.Value(2, 1)) || std::abs(result.Value(2, 1) - value.M21) > 1e-12 * std::fmax(1.0, std::abs(value.M21))) throw Standard_DomainError("Transform is not a similarity matrix.");
+if (!std::isfinite(result.Value(2, 2)) || std::abs(result.Value(2, 2) - value.M22) > 1e-12 * std::fmax(1.0, std::abs(value.M22))) throw Standard_DomainError("Transform is not a similarity matrix.");
+if (!std::isfinite(result.Value(2, 3)) || std::abs(result.Value(2, 3) - value.M23) > 1e-12 * std::fmax(1.0, std::abs(value.M23))) throw Standard_DomainError("Transform is not a similarity matrix.");
+if (!std::isfinite(result.Value(2, 4)) || std::abs(result.Value(2, 4) - value.M24) > 1e-12 * std::fmax(1.0, std::abs(value.M24))) throw Standard_DomainError("Transform is not a similarity matrix.");
+if (!std::isfinite(result.Value(3, 1)) || std::abs(result.Value(3, 1) - value.M31) > 1e-12 * std::fmax(1.0, std::abs(value.M31))) throw Standard_DomainError("Transform is not a similarity matrix.");
+if (!std::isfinite(result.Value(3, 2)) || std::abs(result.Value(3, 2) - value.M32) > 1e-12 * std::fmax(1.0, std::abs(value.M32))) throw Standard_DomainError("Transform is not a similarity matrix.");
+if (!std::isfinite(result.Value(3, 3)) || std::abs(result.Value(3, 3) - value.M33) > 1e-12 * std::fmax(1.0, std::abs(value.M33))) throw Standard_DomainError("Transform is not a similarity matrix.");
+if (!std::isfinite(result.Value(3, 4)) || std::abs(result.Value(3, 4) - value.M34) > 1e-12 * std::fmax(1.0, std::abs(value.M34))) throw Standard_DomainError("Transform is not a similarity matrix.");
+return result;
+}
+inline OcctSharp_Value_Transform3d FromNative(const gp_Trsf& value) {
+  return {value.Value(1, 1), value.Value(1, 2), value.Value(1, 3), value.Value(1, 4), value.Value(2, 1), value.Value(2, 2), value.Value(2, 3), value.Value(2, 4), value.Value(3, 1), value.Value(3, 2), value.Value(3, 3), value.Value(3, 4)};
+}
+inline gp_GTrsf2d ToNative(OcctSharp_Value_AffineTransform2d value) {
+gp_GTrsf2d result;
+result.SetValue(1, 1, Check(value.M11));
+result.SetValue(1, 2, Check(value.M12));
+result.SetValue(1, 3, Check(value.M13));
+result.SetValue(2, 1, Check(value.M21));
+result.SetValue(2, 2, Check(value.M22));
+result.SetValue(2, 3, Check(value.M23));
+try { return gp_GTrsf2d(ToNative(OcctSharp_Value_Transform2d{value.M11, value.M12, value.M13, value.M21, value.M22, value.M23})); } catch (const Standard_Failure&) { /* general affine coefficients */ }
+return result;
+}
+inline OcctSharp_Value_AffineTransform2d FromNative(const gp_GTrsf2d& value) {
+  return {value.Value(1, 1), value.Value(1, 2), value.Value(1, 3), value.Value(2, 1), value.Value(2, 2), value.Value(2, 3)};
+}
+inline gp_GTrsf ToNative(OcctSharp_Value_AffineTransform3d value) {
+gp_GTrsf result;
+result.SetValue(1, 1, Check(value.M11));
+result.SetValue(1, 2, Check(value.M12));
+result.SetValue(1, 3, Check(value.M13));
+result.SetValue(1, 4, Check(value.M14));
+result.SetValue(2, 1, Check(value.M21));
+result.SetValue(2, 2, Check(value.M22));
+result.SetValue(2, 3, Check(value.M23));
+result.SetValue(2, 4, Check(value.M24));
+result.SetValue(3, 1, Check(value.M31));
+result.SetValue(3, 2, Check(value.M32));
+result.SetValue(3, 3, Check(value.M33));
+result.SetValue(3, 4, Check(value.M34));
+try { return gp_GTrsf(ToNative(OcctSharp_Value_Transform3d{value.M11, value.M12, value.M13, value.M14, value.M21, value.M22, value.M23, value.M24, value.M31, value.M32, value.M33, value.M34})); } catch (const Standard_Failure&) { /* general affine coefficients */ }
+return result;
+}
+inline OcctSharp_Value_AffineTransform3d FromNative(const gp_GTrsf& value) {
+  return {value.Value(1, 1), value.Value(1, 2), value.Value(1, 3), value.Value(1, 4), value.Value(2, 1), value.Value(2, 2), value.Value(2, 3), value.Value(2, 4), value.Value(3, 1), value.Value(3, 2), value.Value(3, 3), value.Value(3, 4)};
 }
 }
 #endif

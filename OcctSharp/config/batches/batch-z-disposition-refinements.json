@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0",
+  "declarations": [
+    {
+      "stableId": "c:@S@IGESData_ToolLocation@F@AnalyseLocation#&1$@S@gp_GTrsf#&$@S@gp_Trsf#1",
+      "nativeName": "IGESData_ToolLocation::AnalyseLocation",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Transform input now maps, but the mutable gp_Trsf output reference still needs a publication contract."
+    },
+    {
+      "stableId": "c:@S@IGESData_ToolLocation@F@ConvertLocation#d#&1$@S@gp_GTrsf#&$@S@gp_Trsf#d#S",
+      "nativeName": "IGESData_ToolLocation::ConvertLocation",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Transform input now maps, but the mutable gp_Trsf output reference still needs a publication contract."
+    },
+    {
+      "stableId": "c:@S@MeshVS_VectorPrsBuilder@F@DrawVector#&1$@S@gp_Trsf#d#d#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@Graphic3d_ArrayOfPrimitives#S5_#S5_#1",
+      "nativeName": "MeshVS_VectorPrsBuilder::DrawVector",
+      "beforeCode": "BL208",
+      "afterCode": "BL206",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "TemplateInstantiationProjection",
+      "reason": "Transform input now maps, but NCollection_Array1<gp_Pnt> still needs a sequence projection."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_AxisIntersector@F@OverlapsCircle#d#&1$@S@gp_Trsf#b#*b#1",
+      "nativeName": "SelectMgr_AxisIntersector::OverlapsCircle",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Transform input now maps, but the boolean pointer output still needs an explicit buffer/lifetime contract."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_AxisIntersector@F@OverlapsCylinder#d#d#d#&1$@S@gp_Trsf#b#*b#1",
+      "nativeName": "SelectMgr_AxisIntersector::OverlapsCylinder",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Transform input now maps, but the boolean pointer output still needs an explicit buffer/lifetime contract."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_TriangularFrustumSet@F@OverlapsCircle#d#&1$@S@gp_Trsf#b#*b#1",
+      "nativeName": "SelectMgr_TriangularFrustumSet::OverlapsCircle",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Transform input now maps, but the boolean pointer output still needs an explicit buffer/lifetime contract."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_TriangularFrustumSet@F@OverlapsCylinder#d#d#d#&1$@S@gp_Trsf#b#*b#1",
+      "nativeName": "SelectMgr_TriangularFrustumSet::OverlapsCylinder",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Transform input now maps, but the boolean pointer output still needs an explicit buffer/lifetime contract."
+    }
+  ]
+}

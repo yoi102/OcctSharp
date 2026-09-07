@@ -1,86 +1,57 @@
 # Current Status
 
-- Last updated: 2026-09-06.
-- Current batch: [Y](BATCH_Y_GEOMETRIC_VALUE_EXPANSION.md), implemented under
-  [ADR-0093](adr/0093-generated-geometric-value-projections.md) and WORKFLOW.
-- Locally validated: `8.0.1-preview.24`, ABI 1.68, bridge 0.76.0. Configuration 1.13,
-  binding model 1.3 and assembly/file 0.1.0.0 are unchanged.
-- Entry: Batch X `2cbe55e`; implementation checkpoint: `dda4c3b`.
-  [Preview.23 status history](STATUS_HISTORY_THROUGH_PREVIEW_23.md) retains X evidence.
-- Batch Y is locally complete: implementation, full product checks, final documentation
-  repack and package-content verification pass. This document accompanies its local
-  completion checkpoint.
+- Last updated: 2026-09-07.
+- Active batch: [Z](BATCH_Z_VALUE_OPERATIONS.md), implemented under
+  [ADR-0094](adr/0094-generated-geometric-value-operations.md).
+- Target: 8.0.1-preview.25 / ABI 1.69 / bridge 0.77.0. Full delivery checks are in progress.
+- Entry product: Y 2083f99, plus README update 845e3d6. Its validated evidence remains in
+  [Preview.24 history](STATUS_HISTORY_THROUGH_PREVIEW_24.md).
 - Twelve modules, one facade, one Native DLL and fourteen local packages remain.
   GitHub push and NuGet publication are NOT RUN, outside this task.
 
 ## Full-library accounting
 
-| Disposition | Preview.23 entry | Batch Y exit |
+| Disposition | Preview.24 entry | Batch Z |
 |---|---:|---:|
-| Emitted | 19,682 | 20,650 |
+| Emitted | 20,650 | 22,038 |
 | Accepted manual | 1,217 | 1,217 |
-| Blocked | 46,028 | 45,058 |
-| Skipped | 49,345 | 49,347 |
+| Blocked | 45,058 | 43,670 |
+| Skipped | 49,347 | 49,347 |
 | SupportedUnselected / pending / HD099 | 0 / 0 / 0 | 0 / 0 / 0 |
 | Total inventoried | 116,272 | 116,272 |
 
-Generated plus accepted manual declaration coverage rises from 17.97% to 18.81%.
+Generated plus accepted manual declaration coverage rises from 18.81% to 20.00%.
 This is declaration coverage, not functional completeness. Semantic discovery remains
-7,058/7,090 headers, with the same 32 explicit exclusions. Full OCCT migration remains
-incomplete; no retired Q-W capability count is reused as a full-library percentage.
+7,058/7,090 headers with the same 32 explicit exclusions. Full migration is incomplete.
 
-Y adds 968 generated IDs across eight modules and thirty geometric value records in
-Foundation. There are no generated removals or new manual IDs. The exact audit validates
-968 Blocked-to-Emitted transitions, two artifact exceptions and 223 Blocked-to-Blocked
-reason refinements. Refined reasons and the incidental SDK C++ export do not count as
-migration. SC-062 records the two remaining projection contracts and exact exclusions.
-Final inventory SHA256:
-`CCCD42562A55D0345518F446D8D0B5746CC047B88CAC849F3E0CE337793EE5FC`.
+Z adds 1,388 generated IDs and removes none. There are no new manual IDs or exclusions.
+The exact audit validates 1,388 Blocked-to-Emitted transitions and seven audited
+Blocked-to-Blocked reason refinements; refinements do not count as migration.
+Inventory SHA256: `C81FD10258895F765187AEC809FD3ECB337ED2776E70EF39669F27CF6EF1E75B`.
 
 ## Executed validation
 
-- PASS: full Release and Debug native/managed builds; Generator 144/144 and Runtime
-  493/493 in each configuration. Focused Y is 12/12. Evidence:
-  `artifacts/batch-y-release-check.log`, `batch-y-focused.log` and `batch-y-generator-tests.log`.
-- PASS: isolated actual Debug-native Runtime 493/493, all 62 DLLs hash-verified
-  (`artifacts/batch-y-actual-debug.log` and `batch-y-actual-debug/result.json`).
-- PASS: every one of 32,076 X generated native signatures/bodies preserved. Native
-  Release/Debug sets match at 33,789 names, zero removed: 968 new C bindings plus one
-  exact SDK inline C++ export audited in SC-062. Managed API against X adds 1,085
-  signatures, zero removed, 47,638 total. All 3,491 facade forwarders are current.
-  Evidence: `batch-y-source-compatibility.log`, `batch-y-native-exports.json`,
-  `batch-y-native-exports.log`, `batch-y-api-diff.json` under `OcctSharp/artifacts/`.
-- PASS: thirty native/managed size and field-offset contracts, non-symmetric matrix
-  semantics, and all 21 generated headers as strict C11 in both configurations
-  (`artifacts/batch-y-native-layout.log`). Geometry input/output, large directions,
-  handedness, derivatives, copied lifetime, Documents/XDE/IGES and error handling pass.
-- PASS: all 96 generated files pass freshness/determinism; a clean source copy builds
-  and passes Generator 144/144 and Runtime 493/493, with all 96 files byte-identical.
-  Generated dependencies remain resolved, acyclic and within the existing module graph.
-- PASS: fourteen Preview.24 local packages; clean facade and direct-module consumers,
-  including the shared Y geometric workflow. The direct consumer receives no facade DLL.
-  Both pass again after final stable-document repacking. Package content verifies
-  191 stable documents, 73 runtime/license files, five checksums and final provenance
-  (`artifacts/batch-y-document-package-final.log`, `artifacts/release/package-content.json`).
-  Final facade package SHA256:
-  `AD11D910FC99DC93A796B52DBF396C0F554EF02A9AB5F11F5FDDCD9966F920E6`.
-- PASS: exact accounting against the hash-pinned X baseline (`eng/verify-batch-y-accounting.ps1`
-  and `artifacts/batch-y-accounting.json`), with unchanged declaration identities/denominator
-  and all header classifications. Four negative fixtures reject a lost denominator,
-  unrelated reclassification, Blocked-to-Skipped refinement and header drift while
-  preserving the source input (`artifacts/batch-y-accounting-negatives.log`).
-- PASS: bundled Release closure matches the built bridge; all 62 DLLs and eleven
-  notices/licenses verify. Bridge size: 17,865,728 bytes; Release SHA256:
-  `7B84DBD5565AF41030E5E037A3921197B493A3FA36E52C0368FDF9E0DBE0338E`.
-  Debug SHA256: `8838247CA8820079B3BC3395727DCC230605BEE252492EBFFB7965DC70DEC34D`.
-- PASS: complete local release check, `batchImplementationComplete=true`.
-  Hosted CI, signing, NuGet publication and GitHub push are NOT RUN; public release
-  readiness remains false for these external gates.
+- PASS: Release native/managed build and deterministic generation/discovery; 99 files.
+- PASS: Generator Release 153/153 and full Runtime Release 517/517 (including 24 Z tests).
+- PASS: Release and Debug geometric ABI fixtures, 22 strict C11 headers, 34 record layouts.
+- PASS: 33,044 old generated native signatures/bodies unchanged; 1,487 managed API
+  additions with zero removals; 3,530 facade forwarders current.
+- PASS: 14 local packages and clean facade/direct-module consumers, including Z workflow.
+- PASS: exact inventory accounting and four rejection fixtures; unchanged denominator, header and manual-ID sets.
+- Pending: complete final Release/Debug suites, actual Debug-native, final export parity,
+  cold regeneration and full local release-check.
+  These delivery gates are NOT RUN to completion; Z is not yet a completed product batch.
+
+## Implemented scope
+
+35 copied geometric operation families cover constructors, queries and ref mutations.
+Four new 2D/3D similarity/affine coefficient records support translation, rotation,
+reflection, scale, composition and inverse workflows. Failed mutations preserve the
+managed receiver. SC-063 records explicit singular-inverse guards. Mutable output
+references, arrays, pointers, operators and native form-cache editing remain outside
+this rule. See [Batch Z](BATCH_Z_VALUE_OPERATIONS.md) and [type mapping](TYPE_MAPPING.md).
 
 ## Next action
 
-No Y implementation or local delivery gate remains. Documentation QA verifies 192
-documents, 432 local links and paired fences; whitespace checks pass. STATUS is excluded
-from the stable package documents to avoid a self-referential package hash. Future
-migration can address explicit output/array and unselected handle/constructor contracts;
-no further fixed-size migration queue is active.
+Finish Debug/runtime/export and cold/package release checks, record final evidence,
+repack current documentation and create the local completion commit.

@@ -32,7 +32,7 @@ try {
     $env:PATH = "$($settings.occtRoot)/win64/vc14/$binConfig;$workspace/artifacts/native/$Configuration;$env:PATH"
     & $exe
     if ($LASTEXITCODE) { throw 'Native geometry fixture failed.' }
-    Write-Host "Geometric ABI PASS: $Configuration, $($headers.Count) C11 headers, thirty native size/offset assertions, matrix/coordinate/direction semantics."
+    Write-Host "Geometric ABI PASS: $Configuration, $($headers.Count) C11 headers, thirty-four native size/offset assertions, matrix/coordinate/direction/transform semantics."
 }
 finally {
     foreach ($name in @([Environment]::GetEnvironmentVariables('Process').Keys)) {

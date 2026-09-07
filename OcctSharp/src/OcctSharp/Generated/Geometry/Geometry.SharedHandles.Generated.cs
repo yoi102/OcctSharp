@@ -434,6 +434,7 @@
 // Source: c:@S@Bisector_BisecAna@F@ReversedParameter#d#1
 // Source: c:@S@Bisector_BisecAna@F@SetTrim#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#
 // Source: c:@S@Bisector_BisecAna@F@SetTrim#d#d#
+// Source: c:@S@Bisector_BisecAna@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Bisector_BisecCC@F@Bisector_BisecCC#
 // Source: c:@S@Bisector_BisecCC@F@Bisector_BisecCC#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#S0_#d#d#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@Bisector_BisecCC@F@ChangeGuide#1
@@ -462,6 +463,7 @@
 // Source: c:@S@Bisector_BisecCC@F@Perform#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#S0_#d#d#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@Bisector_BisecCC@F@Reverse#
 // Source: c:@S@Bisector_BisecCC@F@ReversedParameter#d#1
+// Source: c:@S@Bisector_BisecCC@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Bisector_BisecPC@F@Bisector_BisecPC#
 // Source: c:@S@Bisector_BisecPC@F@Bisector_BisecPC#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@S@gp_Pnt2d#d#d#
 // Source: c:@S@Bisector_BisecPC@F@Bisector_BisecPC#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@S@gp_Pnt2d#d#d#d#
@@ -490,6 +492,7 @@
 // Source: c:@S@Bisector_BisecPC@F@Perform#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@S@gp_Pnt2d#d#d#
 // Source: c:@S@Bisector_BisecPC@F@Reverse#
 // Source: c:@S@Bisector_BisecPC@F@ReversedParameter#d#1
+// Source: c:@S@Bisector_BisecPC@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Bisector_Curve@F@DynamicType#1
 // Source: c:@S@Extrema_ExtPExtS@F@DynamicType#1
 // Source: c:@S@Extrema_ExtPExtS@F@Extrema_ExtPExtS#
@@ -621,6 +624,7 @@
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@Reverse#
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@StartPoint#1
+// Source: c:@S@Geom2dEval_AHTBezierCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@Copy#1
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@DynamicType#1
@@ -637,6 +641,7 @@
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@Position#1
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@Reverse#
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@ReversedParameter#d#1
+// Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@Copy#1
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@DynamicType#1
@@ -652,6 +657,7 @@
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@Radius#1
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@Reverse#
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@ReversedParameter#d#1
+// Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@Copy#1
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@DynamicType#1
@@ -668,6 +674,7 @@
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@Reverse#
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@Scale#1
+// Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Amplitude#1
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Copy#1
@@ -685,6 +692,7 @@
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Position#1
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Reverse#
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@ReversedParameter#d#1
+// Source: c:@S@Geom2dEval_SineWaveCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2dEval_TBezierCurve@F@Alpha#1
 // Source: c:@S@Geom2dEval_TBezierCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_TBezierCurve@F@Copy#1
@@ -703,6 +711,7 @@
 // Source: c:@S@Geom2dEval_TBezierCurve@F@Reverse#
 // Source: c:@S@Geom2dEval_TBezierCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2dEval_TBezierCurve@F@StartPoint#1
+// Source: c:@S@Geom2dEval_TBezierCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_AxisPlacement@F@Angle#&1$@N@opencascade@S@handle>#$@S@Geom2d_AxisPlacement#1
 // Source: c:@S@Geom2d_AxisPlacement@F@Ax2d#1
 // Source: c:@S@Geom2d_AxisPlacement@F@Copy#1
@@ -716,6 +725,7 @@
 // Source: c:@S@Geom2d_AxisPlacement@F@SetAxis#&1$@S@gp_Ax2d#
 // Source: c:@S@Geom2d_AxisPlacement@F@SetDirection#&1$@S@gp_Dir2d#
 // Source: c:@S@Geom2d_AxisPlacement@F@SetLocation#&1$@S@gp_Pnt2d#
+// Source: c:@S@Geom2d_AxisPlacement@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_BSplineCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom2d_BSplineCurve@F@Continuity#1
 // Source: c:@S@Geom2d_BSplineCurve@F@Copy#1
@@ -765,6 +775,7 @@
 // Source: c:@S@Geom2d_BSplineCurve@F@SetPole#I#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@Geom2d_BSplineCurve@F@SetWeight#I#d#
 // Source: c:@S@Geom2d_BSplineCurve@F@StartPoint#1
+// Source: c:@S@Geom2d_BSplineCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_BSplineCurve@F@Weight#I#1
 // Source: c:@S@Geom2d_BezierCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom2d_BezierCurve@F@Continuity#1
@@ -796,6 +807,7 @@
 // Source: c:@S@Geom2d_BezierCurve@F@SetPole#I#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@Geom2d_BezierCurve@F@SetWeight#I#d#
 // Source: c:@S@Geom2d_BezierCurve@F@StartPoint#1
+// Source: c:@S@Geom2d_BezierCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_BezierCurve@F@Weight#I#1
 // Source: c:@S@Geom2d_BoundedCurve@F@DynamicType#1
 // Source: c:@S@Geom2d_CartesianPoint@F@Copy#1
@@ -807,6 +819,7 @@
 // Source: c:@S@Geom2d_CartesianPoint@F@SetPnt2d#&1$@S@gp_Pnt2d#
 // Source: c:@S@Geom2d_CartesianPoint@F@SetX#d#
 // Source: c:@S@Geom2d_CartesianPoint@F@SetY#d#
+// Source: c:@S@Geom2d_CartesianPoint@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_CartesianPoint@F@X#1
 // Source: c:@S@Geom2d_CartesianPoint@F@Y#1
 // Source: c:@S@Geom2d_Circle@F@Circ2d#1
@@ -825,6 +838,7 @@
 // Source: c:@S@Geom2d_Circle@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_Circle@F@SetCirc2d#&1$@S@gp_Circ2d#
 // Source: c:@S@Geom2d_Circle@F@SetRadius#d#
+// Source: c:@S@Geom2d_Circle@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_Conic@F@Continuity#1
 // Source: c:@S@Geom2d_Conic@F@DynamicType#1
 // Source: c:@S@Geom2d_Conic@F@IsCN#I#1
@@ -839,8 +853,10 @@
 // Source: c:@S@Geom2d_Conic@F@YAxis#1
 // Source: c:@S@Geom2d_Curve@F@DN#d#I#1
 // Source: c:@S@Geom2d_Curve@F@DynamicType#1
+// Source: c:@S@Geom2d_Curve@F@ParametricTransformation#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Curve@F@Period#1
 // Source: c:@S@Geom2d_Curve@F@Reversed#1
+// Source: c:@S@Geom2d_Curve@F@TransformedParameter#d#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Direction@F@Copy#1
 // Source: c:@S@Geom2d_Direction@F@Crossed#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
 // Source: c:@S@Geom2d_Direction@F@Dir2d#1
@@ -853,6 +869,7 @@
 // Source: c:@S@Geom2d_Direction@F@SetX#d#
 // Source: c:@S@Geom2d_Direction@F@SetY#d#
 // Source: c:@S@Geom2d_Direction@F@SquareMagnitude#1
+// Source: c:@S@Geom2d_Direction@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_Ellipse@F@Copy#1
 // Source: c:@S@Geom2d_Ellipse@F@Directrix1#1
 // Source: c:@S@Geom2d_Ellipse@F@Directrix2#1
@@ -877,6 +894,7 @@
 // Source: c:@S@Geom2d_Ellipse@F@SetElips2d#&1$@S@gp_Elips2d#
 // Source: c:@S@Geom2d_Ellipse@F@SetMajorRadius#d#
 // Source: c:@S@Geom2d_Ellipse@F@SetMinorRadius#d#
+// Source: c:@S@Geom2d_Ellipse@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_Geometry@F@DynamicType#1
 // Source: c:@S@Geom2d_Geometry@F@Mirror#&1$@S@gp_Ax2d#
 // Source: c:@S@Geom2d_Geometry@F@Mirror#&1$@S@gp_Pnt2d#
@@ -886,6 +904,7 @@
 // Source: c:@S@Geom2d_Geometry@F@Rotated#&1$@S@gp_Pnt2d#d#1
 // Source: c:@S@Geom2d_Geometry@F@Scale#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@Geom2d_Geometry@F@Scaled#&1$@S@gp_Pnt2d#d#1
+// Source: c:@S@Geom2d_Geometry@F@Transformed#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Geometry@F@Translate#&1$@S@gp_Pnt2d#S0_#
 // Source: c:@S@Geom2d_Geometry@F@Translate#&1$@S@gp_Vec2d#
 // Source: c:@S@Geom2d_Geometry@F@Translated#&1$@S@gp_Pnt2d#S0_#1
@@ -920,6 +939,7 @@
 // Source: c:@S@Geom2d_Hyperbola@F@SetHypr2d#&1$@S@gp_Hypr2d#
 // Source: c:@S@Geom2d_Hyperbola@F@SetMajorRadius#d#
 // Source: c:@S@Geom2d_Hyperbola@F@SetMinorRadius#d#
+// Source: c:@S@Geom2d_Hyperbola@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_Line@F@Continuity#1
 // Source: c:@S@Geom2d_Line@F@Copy#1
 // Source: c:@S@Geom2d_Line@F@Direction#1
@@ -936,6 +956,7 @@
 // Source: c:@S@Geom2d_Line@F@LastParameter#1
 // Source: c:@S@Geom2d_Line@F@Lin2d#1
 // Source: c:@S@Geom2d_Line@F@Location#1
+// Source: c:@S@Geom2d_Line@F@ParametricTransformation#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Line@F@Position#1
 // Source: c:@S@Geom2d_Line@F@Reverse#
 // Source: c:@S@Geom2d_Line@F@ReversedParameter#d#1
@@ -943,6 +964,8 @@
 // Source: c:@S@Geom2d_Line@F@SetLin2d#&1$@S@gp_Lin2d#
 // Source: c:@S@Geom2d_Line@F@SetLocation#&1$@S@gp_Pnt2d#
 // Source: c:@S@Geom2d_Line@F@SetPosition#&1$@S@gp_Ax2d#
+// Source: c:@S@Geom2d_Line@F@Transform#&1$@S@gp_Trsf2d#
+// Source: c:@S@Geom2d_Line@F@TransformedParameter#d#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_OffsetCurve@F@BasisCurve#1
 // Source: c:@S@Geom2d_OffsetCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom2d_OffsetCurve@F@Continuity#1
@@ -960,12 +983,15 @@
 // Source: c:@S@Geom2d_OffsetCurve@F@IsPeriodic#1
 // Source: c:@S@Geom2d_OffsetCurve@F@LastParameter#1
 // Source: c:@S@Geom2d_OffsetCurve@F@Offset#1
+// Source: c:@S@Geom2d_OffsetCurve@F@ParametricTransformation#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_OffsetCurve@F@Period#1
 // Source: c:@S@Geom2d_OffsetCurve@F@Reverse#
 // Source: c:@S@Geom2d_OffsetCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_OffsetCurve@F@SetBasisCurve#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#b#
 // Source: c:@S@Geom2d_OffsetCurve@F@SetEvalRepresentation#&1$@N@opencascade@S@handle>#$@N@Geom2dEval_RepCurveDesc@S@Base#
 // Source: c:@S@Geom2d_OffsetCurve@F@SetOffsetValue#d#
+// Source: c:@S@Geom2d_OffsetCurve@F@Transform#&1$@S@gp_Trsf2d#
+// Source: c:@S@Geom2d_OffsetCurve@F@TransformedParameter#d#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Parabola@F@Copy#1
 // Source: c:@S@Geom2d_Parabola@F@Directrix#1
 // Source: c:@S@Geom2d_Parabola@F@DynamicType#1
@@ -984,9 +1010,12 @@
 // Source: c:@S@Geom2d_Parabola@F@LastParameter#1
 // Source: c:@S@Geom2d_Parabola@F@Parab2d#1
 // Source: c:@S@Geom2d_Parabola@F@Parameter#1
+// Source: c:@S@Geom2d_Parabola@F@ParametricTransformation#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Parabola@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_Parabola@F@SetFocal#d#
 // Source: c:@S@Geom2d_Parabola@F@SetParab2d#&1$@S@gp_Parab2d#
+// Source: c:@S@Geom2d_Parabola@F@Transform#&1$@S@gp_Trsf2d#
+// Source: c:@S@Geom2d_Parabola@F@TransformedParameter#d#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Point@F@Distance#&1$@N@opencascade@S@handle>#$@S@Geom2d_Point#1
 // Source: c:@S@Geom2d_Point@F@DynamicType#1
 // Source: c:@S@Geom2d_Point@F@SquareDistance#&1$@N@opencascade@S@handle>#$@S@Geom2d_Point#1
@@ -994,6 +1023,7 @@
 // Source: c:@S@Geom2d_Transformation@F@DynamicType#1
 // Source: c:@S@Geom2d_Transformation@F@Form#1
 // Source: c:@S@Geom2d_Transformation@F@Geom2d_Transformation#
+// Source: c:@S@Geom2d_Transformation@F@Geom2d_Transformation#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_Transformation@F@Invert#
 // Source: c:@S@Geom2d_Transformation@F@Inverted#1
 // Source: c:@S@Geom2d_Transformation@F@IsNegative#1
@@ -1011,6 +1041,8 @@
 // Source: c:@S@Geom2d_Transformation@F@SetTransformation#&1$@S@gp_Ax2d#S0_#
 // Source: c:@S@Geom2d_Transformation@F@SetTranslation#&1$@S@gp_Pnt2d#S0_#
 // Source: c:@S@Geom2d_Transformation@F@SetTranslation#&1$@S@gp_Vec2d#
+// Source: c:@S@Geom2d_Transformation@F@SetTrsf2d#&1$@S@gp_Trsf2d#
+// Source: c:@S@Geom2d_Transformation@F@Trsf2d#1
 // Source: c:@S@Geom2d_Transformation@F@Value#I#I#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@BasisCurve#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@Continuity#1
@@ -1025,11 +1057,14 @@
 // Source: c:@S@Geom2d_TrimmedCurve@F@IsClosed#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@IsPeriodic#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@LastParameter#1
+// Source: c:@S@Geom2d_TrimmedCurve@F@ParametricTransformation#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@Period#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@Reverse#
 // Source: c:@S@Geom2d_TrimmedCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@SetTrim#d#d#b#b#
 // Source: c:@S@Geom2d_TrimmedCurve@F@StartPoint#1
+// Source: c:@S@Geom2d_TrimmedCurve@F@Transform#&1$@S@gp_Trsf2d#
+// Source: c:@S@Geom2d_TrimmedCurve@F@TransformedParameter#d#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Vector@F@Angle#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
 // Source: c:@S@Geom2d_Vector@F@Dot#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
 // Source: c:@S@Geom2d_Vector@F@DynamicType#1
@@ -1060,6 +1095,7 @@
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@SquareMagnitude#1
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@Subtract#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@Subtracted#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
+// Source: c:@S@Geom2d_VectorWithMagnitude@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@GeomAdaptor_Curve@F@BSpline#1
 // Source: c:@S@GeomAdaptor_Curve@F@Bezier#1
 // Source: c:@S@GeomAdaptor_Curve@F@Circle#1
@@ -1236,6 +1272,8 @@
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@EvalDN#d#I#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@FirstParameter#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@GeomAdaptor_TransformedCurve#
+// Source: c:@S@GeomAdaptor_TransformedCurve@F@GeomAdaptor_TransformedCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@gp_Trsf#
+// Source: c:@S@GeomAdaptor_TransformedCurve@F@GeomAdaptor_TransformedCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#d#&1$@S@gp_Trsf#
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@GeomCurve#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@GetType#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Hyperbola#1
@@ -1256,8 +1294,10 @@
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Parabola#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Period#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Resolution#d#1
+// Source: c:@S@GeomAdaptor_TransformedCurve@F@SetTrsf#&1$@S@gp_Trsf#
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@ShallowCopy#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Trim#d#d#d#1
+// Source: c:@S@GeomAdaptor_TransformedCurve@F@Trsf#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@AxeOfRevolution#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@BSpline#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@BasisCurve#1
@@ -1272,6 +1312,8 @@
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@FirstUParameter#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@FirstVParameter#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomAdaptor_TransformedSurface#
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomAdaptor_TransformedSurface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@gp_Trsf#
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomAdaptor_TransformedSurface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#d#d#&1$@S@gp_Trsf#d#d#
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomSurface#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomSurfaceOriginal#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomSurfaceTransformed#1
@@ -1285,6 +1327,8 @@
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@IsVRational#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@LastUParameter#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@LastVParameter#1
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@Load#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@gp_Trsf#
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@Load#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#d#d#&1$@S@gp_Trsf#d#d#
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@NbUIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@NbUKnots#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@NbUPoles#1
@@ -1293,11 +1337,13 @@
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@NbVPoles#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@OffsetValue#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@Plane#1
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@SetTrsf#&1$@S@gp_Trsf#
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@ShallowCopy#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@Sphere#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@ToleranceU#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@ToleranceV#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@Torus#1
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@Trsf#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@UContinuity#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@UDegree#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@UPeriod#1
@@ -1327,6 +1373,7 @@
 // Source: c:@S@GeomEval_AHTBezierCurve@F@Reverse#
 // Source: c:@S@GeomEval_AHTBezierCurve@F@ReversedParameter#d#1
 // Source: c:@S@GeomEval_AHTBezierCurve@F@StartPoint#1
+// Source: c:@S@GeomEval_AHTBezierCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_AHTBezierSurface@F@AlgDegreeU#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@AlgDegreeV#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@AlphaU#1
@@ -1348,6 +1395,7 @@
 // Source: c:@S@GeomEval_AHTBezierSurface@F@IsVRational#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@NbPolesU#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@NbPolesV#1
+// Source: c:@S@GeomEval_AHTBezierSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_AHTBezierSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@UReverse#
 // Source: c:@S@GeomEval_AHTBezierSurface@F@UReversedParameter#d#1
@@ -1365,6 +1413,7 @@
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@IsVPeriodic#1
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@Pitch#1
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@SetPitch#d#
+// Source: c:@S@GeomEval_CircularHelicoidSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@UReverse#
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@UReversedParameter#d#1
@@ -1387,6 +1436,7 @@
 // Source: c:@S@GeomEval_CircularHelixCurve@F@Radius#1
 // Source: c:@S@GeomEval_CircularHelixCurve@F@Reverse#
 // Source: c:@S@GeomEval_CircularHelixCurve@F@ReversedParameter#d#1
+// Source: c:@S@GeomEval_CircularHelixCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_EllipsoidSurface@F@Copy#1
 // Source: c:@S@GeomEval_EllipsoidSurface@F@DynamicType#1
 // Source: c:@S@GeomEval_EllipsoidSurface@F@EvalD0#d#d#1
@@ -1402,6 +1452,7 @@
 // Source: c:@S@GeomEval_EllipsoidSurface@F@SetSemiAxisA#d#
 // Source: c:@S@GeomEval_EllipsoidSurface@F@SetSemiAxisB#d#
 // Source: c:@S@GeomEval_EllipsoidSurface@F@SetSemiAxisC#d#
+// Source: c:@S@GeomEval_EllipsoidSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_EllipsoidSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_EllipsoidSurface@F@UReverse#
 // Source: c:@S@GeomEval_EllipsoidSurface@F@UReversedParameter#d#1
@@ -1421,6 +1472,7 @@
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@SemiAxisB#1
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@SetSemiAxisA#d#
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@SetSemiAxisB#d#
+// Source: c:@S@GeomEval_HypParaboloidSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@UReverse#
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@UReversedParameter#d#1
@@ -1442,6 +1494,7 @@
 // Source: c:@S@GeomEval_HyperboloidSurface@F@SetMode#$@S@GeomEval_HyperboloidSurface@E@SheetMode#
 // Source: c:@S@GeomEval_HyperboloidSurface@F@SetR1#d#
 // Source: c:@S@GeomEval_HyperboloidSurface@F@SetR2#d#
+// Source: c:@S@GeomEval_HyperboloidSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_HyperboloidSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_HyperboloidSurface@F@UReverse#
 // Source: c:@S@GeomEval_HyperboloidSurface@F@UReversedParameter#d#1
@@ -1459,6 +1512,7 @@
 // Source: c:@S@GeomEval_ParaboloidSurface@F@IsVClosed#1
 // Source: c:@S@GeomEval_ParaboloidSurface@F@IsVPeriodic#1
 // Source: c:@S@GeomEval_ParaboloidSurface@F@SetFocal#d#
+// Source: c:@S@GeomEval_ParaboloidSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_ParaboloidSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_ParaboloidSurface@F@UReverse#
 // Source: c:@S@GeomEval_ParaboloidSurface@F@UReversedParameter#d#1
@@ -1482,6 +1536,7 @@
 // Source: c:@S@GeomEval_SineWaveCurve@F@Position#1
 // Source: c:@S@GeomEval_SineWaveCurve@F@Reverse#
 // Source: c:@S@GeomEval_SineWaveCurve@F@ReversedParameter#d#1
+// Source: c:@S@GeomEval_SineWaveCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_TBezierCurve@F@Alpha#1
 // Source: c:@S@GeomEval_TBezierCurve@F@Continuity#1
 // Source: c:@S@GeomEval_TBezierCurve@F@Copy#1
@@ -1500,6 +1555,7 @@
 // Source: c:@S@GeomEval_TBezierCurve@F@Reverse#
 // Source: c:@S@GeomEval_TBezierCurve@F@ReversedParameter#d#1
 // Source: c:@S@GeomEval_TBezierCurve@F@StartPoint#1
+// Source: c:@S@GeomEval_TBezierCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_TBezierSurface@F@AlphaU#1
 // Source: c:@S@GeomEval_TBezierSurface@F@AlphaV#1
 // Source: c:@S@GeomEval_TBezierSurface@F@Continuity#1
@@ -1518,6 +1574,7 @@
 // Source: c:@S@GeomEval_TBezierSurface@F@NbVPoles#1
 // Source: c:@S@GeomEval_TBezierSurface@F@OrderU#1
 // Source: c:@S@GeomEval_TBezierSurface@F@OrderV#1
+// Source: c:@S@GeomEval_TBezierSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_TBezierSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_TBezierSurface@F@UReverse#
 // Source: c:@S@GeomEval_TBezierSurface@F@UReversedParameter#d#1
@@ -1817,7 +1874,9 @@
 // Source: c:@S@GeomPlate_Surface@F@IsUPeriodic#1
 // Source: c:@S@GeomPlate_Surface@F@IsVClosed#1
 // Source: c:@S@GeomPlate_Surface@F@IsVPeriodic#1
+// Source: c:@S@GeomPlate_Surface@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@GeomPlate_Surface@F@SetBounds#d#d#d#d#
+// Source: c:@S@GeomPlate_Surface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomPlate_Surface@F@UIso#d#1
 // Source: c:@S@GeomPlate_Surface@F@UPeriod#1
 // Source: c:@S@GeomPlate_Surface@F@UReverse#
@@ -1836,6 +1895,7 @@
 // Source: c:@S@Geom_Axis1Placement@F@Reverse#
 // Source: c:@S@Geom_Axis1Placement@F@Reversed#1
 // Source: c:@S@Geom_Axis1Placement@F@SetDirection#&1$@S@gp_Dir#
+// Source: c:@S@Geom_Axis1Placement@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Axis2Placement@F@Ax2#1
 // Source: c:@S@Geom_Axis2Placement@F@Copy#1
 // Source: c:@S@Geom_Axis2Placement@F@DynamicType#1
@@ -1845,6 +1905,7 @@
 // Source: c:@S@Geom_Axis2Placement@F@SetDirection#&1$@S@gp_Dir#
 // Source: c:@S@Geom_Axis2Placement@F@SetXDirection#&1$@S@gp_Dir#
 // Source: c:@S@Geom_Axis2Placement@F@SetYDirection#&1$@S@gp_Dir#
+// Source: c:@S@Geom_Axis2Placement@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Axis2Placement@F@XDirection#1
 // Source: c:@S@Geom_Axis2Placement@F@YDirection#1
 // Source: c:@S@Geom_AxisPlacement@F@Angle#&1$@N@opencascade@S@handle>#$@S@Geom_AxisPlacement#1
@@ -1899,6 +1960,7 @@
 // Source: c:@S@Geom_BSplineCurve@F@SetPole#I#&1$@S@gp_Pnt#d#
 // Source: c:@S@Geom_BSplineCurve@F@SetWeight#I#d#
 // Source: c:@S@Geom_BSplineCurve@F@StartPoint#1
+// Source: c:@S@Geom_BSplineCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_BSplineCurve@F@Weight#I#1
 // Source: c:@S@Geom_BSplineSurface@F@CheckAndSegment#d#d#d#d#d#d#
 // Source: c:@S@Geom_BSplineSurface@F@ClearEvalRepresentation#
@@ -1952,6 +2014,7 @@
 // Source: c:@S@Geom_BSplineSurface@F@SetVOrigin#I#
 // Source: c:@S@Geom_BSplineSurface@F@SetVPeriodic#
 // Source: c:@S@Geom_BSplineSurface@F@SetWeight#I#I#d#
+// Source: c:@S@Geom_BSplineSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_BSplineSurface@F@UDegree#1
 // Source: c:@S@Geom_BSplineSurface@F@UIso#d#1
 // Source: c:@S@Geom_BSplineSurface@F@UIso#d#b#1
@@ -1998,6 +2061,7 @@
 // Source: c:@S@Geom_BezierCurve@F@SetPole#I#&1$@S@gp_Pnt#d#
 // Source: c:@S@Geom_BezierCurve@F@SetWeight#I#d#
 // Source: c:@S@Geom_BezierCurve@F@StartPoint#1
+// Source: c:@S@Geom_BezierCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_BezierCurve@F@Weight#I#1
 // Source: c:@S@Geom_BezierSurface@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_BezierSurface@F@Continuity#1
@@ -2024,6 +2088,7 @@
 // Source: c:@S@Geom_BezierSurface@F@SetPole#I#I#&1$@S@gp_Pnt#
 // Source: c:@S@Geom_BezierSurface@F@SetPole#I#I#&1$@S@gp_Pnt#d#
 // Source: c:@S@Geom_BezierSurface@F@SetWeight#I#I#d#
+// Source: c:@S@Geom_BezierSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_BezierSurface@F@UDegree#1
 // Source: c:@S@Geom_BezierSurface@F@UIso#d#1
 // Source: c:@S@Geom_BezierSurface@F@UReverse#
@@ -2045,6 +2110,7 @@
 // Source: c:@S@Geom_CartesianPoint@F@SetX#d#
 // Source: c:@S@Geom_CartesianPoint@F@SetY#d#
 // Source: c:@S@Geom_CartesianPoint@F@SetZ#d#
+// Source: c:@S@Geom_CartesianPoint@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_CartesianPoint@F@X#1
 // Source: c:@S@Geom_CartesianPoint@F@Y#1
 // Source: c:@S@Geom_CartesianPoint@F@Z#1
@@ -2064,6 +2130,7 @@
 // Source: c:@S@Geom_Circle@F@ReversedParameter#d#1
 // Source: c:@S@Geom_Circle@F@SetCirc#&1$@S@gp_Circ#
 // Source: c:@S@Geom_Circle@F@SetRadius#d#
+// Source: c:@S@Geom_Circle@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Conic@F@Axis#1
 // Source: c:@S@Geom_Conic@F@Continuity#1
 // Source: c:@S@Geom_Conic@F@DynamicType#1
@@ -2087,11 +2154,13 @@
 // Source: c:@S@Geom_ConicalSurface@F@IsUPeriodic#1
 // Source: c:@S@Geom_ConicalSurface@F@IsVClosed#1
 // Source: c:@S@Geom_ConicalSurface@F@IsVPeriodic#1
+// Source: c:@S@Geom_ConicalSurface@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_ConicalSurface@F@RefRadius#1
 // Source: c:@S@Geom_ConicalSurface@F@SemiAngle#1
 // Source: c:@S@Geom_ConicalSurface@F@SetCone#&1$@S@gp_Cone#
 // Source: c:@S@Geom_ConicalSurface@F@SetRadius#d#
 // Source: c:@S@Geom_ConicalSurface@F@SetSemiAngle#d#
+// Source: c:@S@Geom_ConicalSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_ConicalSurface@F@UIso#d#1
 // Source: c:@S@Geom_ConicalSurface@F@UReversedParameter#d#1
 // Source: c:@S@Geom_ConicalSurface@F@VIso#d#1
@@ -2099,8 +2168,10 @@
 // Source: c:@S@Geom_ConicalSurface@F@VReversedParameter#d#1
 // Source: c:@S@Geom_Curve@F@DN#d#I#1
 // Source: c:@S@Geom_Curve@F@DynamicType#1
+// Source: c:@S@Geom_Curve@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Curve@F@Period#1
 // Source: c:@S@Geom_Curve@F@Reversed#1
+// Source: c:@S@Geom_Curve@F@TransformedParameter#d#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Curve@F@Value#d#1
 // Source: c:@S@Geom_CylindricalSurface@F@Copy#1
 // Source: c:@S@Geom_CylindricalSurface@F@Cylinder#1
@@ -2112,9 +2183,11 @@
 // Source: c:@S@Geom_CylindricalSurface@F@IsUPeriodic#1
 // Source: c:@S@Geom_CylindricalSurface@F@IsVClosed#1
 // Source: c:@S@Geom_CylindricalSurface@F@IsVPeriodic#1
+// Source: c:@S@Geom_CylindricalSurface@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_CylindricalSurface@F@Radius#1
 // Source: c:@S@Geom_CylindricalSurface@F@SetCylinder#&1$@S@gp_Cylinder#
 // Source: c:@S@Geom_CylindricalSurface@F@SetRadius#d#
+// Source: c:@S@Geom_CylindricalSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_CylindricalSurface@F@UIso#d#1
 // Source: c:@S@Geom_CylindricalSurface@F@UReversedParameter#d#1
 // Source: c:@S@Geom_CylindricalSurface@F@VIso#d#1
@@ -2135,6 +2208,7 @@
 // Source: c:@S@Geom_Direction@F@SetY#d#
 // Source: c:@S@Geom_Direction@F@SetZ#d#
 // Source: c:@S@Geom_Direction@F@SquareMagnitude#1
+// Source: c:@S@Geom_Direction@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_ElementarySurface@F@Axis#1
 // Source: c:@S@Geom_ElementarySurface@F@Continuity#1
 // Source: c:@S@Geom_ElementarySurface@F@DynamicType#1
@@ -2171,6 +2245,7 @@
 // Source: c:@S@Geom_Ellipse@F@SetElips#&1$@S@gp_Elips#
 // Source: c:@S@Geom_Ellipse@F@SetMajorRadius#d#
 // Source: c:@S@Geom_Ellipse@F@SetMinorRadius#d#
+// Source: c:@S@Geom_Ellipse@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Geometry@F@DynamicType#1
 // Source: c:@S@Geom_Geometry@F@Mirror#&1$@S@gp_Ax1#
 // Source: c:@S@Geom_Geometry@F@Mirror#&1$@S@gp_Ax2#
@@ -2215,6 +2290,7 @@
 // Source: c:@S@Geom_Hyperbola@F@SetHypr#&1$@S@gp_Hypr#
 // Source: c:@S@Geom_Hyperbola@F@SetMajorRadius#d#
 // Source: c:@S@Geom_Hyperbola@F@SetMinorRadius#d#
+// Source: c:@S@Geom_Hyperbola@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Line@F@Continuity#1
 // Source: c:@S@Geom_Line@F@Copy#1
 // Source: c:@S@Geom_Line@F@DynamicType#1
@@ -2229,6 +2305,7 @@
 // Source: c:@S@Geom_Line@F@IsPeriodic#1
 // Source: c:@S@Geom_Line@F@LastParameter#1
 // Source: c:@S@Geom_Line@F@Lin#1
+// Source: c:@S@Geom_Line@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Line@F@Position#1
 // Source: c:@S@Geom_Line@F@Reverse#
 // Source: c:@S@Geom_Line@F@ReversedParameter#d#1
@@ -2236,6 +2313,8 @@
 // Source: c:@S@Geom_Line@F@SetLin#&1$@S@gp_Lin#
 // Source: c:@S@Geom_Line@F@SetLocation#&1$@S@gp_Pnt#
 // Source: c:@S@Geom_Line@F@SetPosition#&1$@S@gp_Ax1#
+// Source: c:@S@Geom_Line@F@Transform#&1$@S@gp_Trsf#
+// Source: c:@S@Geom_Line@F@TransformedParameter#d#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_OffsetCurve@F@BasisCurve#1
 // Source: c:@S@Geom_OffsetCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_OffsetCurve@F@Continuity#1
@@ -2253,12 +2332,15 @@
 // Source: c:@S@Geom_OffsetCurve@F@IsPeriodic#1
 // Source: c:@S@Geom_OffsetCurve@F@LastParameter#1
 // Source: c:@S@Geom_OffsetCurve@F@Offset#1
+// Source: c:@S@Geom_OffsetCurve@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_OffsetCurve@F@Period#1
 // Source: c:@S@Geom_OffsetCurve@F@Reverse#
 // Source: c:@S@Geom_OffsetCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom_OffsetCurve@F@SetBasisCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#b#
 // Source: c:@S@Geom_OffsetCurve@F@SetDirection#&1$@S@gp_Dir#
 // Source: c:@S@Geom_OffsetCurve@F@SetOffsetValue#d#
+// Source: c:@S@Geom_OffsetCurve@F@Transform#&1$@S@gp_Trsf#
+// Source: c:@S@Geom_OffsetCurve@F@TransformedParameter#d#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_OffsetSurface@F@BasisSurface#1
 // Source: c:@S@Geom_OffsetSurface@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_OffsetSurface@F@Continuity#1
@@ -2276,9 +2358,11 @@
 // Source: c:@S@Geom_OffsetSurface@F@IsVClosed#1
 // Source: c:@S@Geom_OffsetSurface@F@IsVPeriodic#1
 // Source: c:@S@Geom_OffsetSurface@F@Offset#1
+// Source: c:@S@Geom_OffsetSurface@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_OffsetSurface@F@SetBasisSurface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#b#
 // Source: c:@S@Geom_OffsetSurface@F@SetOffsetValue#d#
 // Source: c:@S@Geom_OffsetSurface@F@Surface#1
+// Source: c:@S@Geom_OffsetSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_OffsetSurface@F@UIso#d#1
 // Source: c:@S@Geom_OffsetSurface@F@UPeriod#1
 // Source: c:@S@Geom_OffsetSurface@F@UReverse#
@@ -2304,9 +2388,12 @@
 // Source: c:@S@Geom_Parabola@F@LastParameter#1
 // Source: c:@S@Geom_Parabola@F@Parab#1
 // Source: c:@S@Geom_Parabola@F@Parameter#1
+// Source: c:@S@Geom_Parabola@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Parabola@F@ReversedParameter#d#1
 // Source: c:@S@Geom_Parabola@F@SetFocal#d#
 // Source: c:@S@Geom_Parabola@F@SetParab#&1$@S@gp_Parab#
+// Source: c:@S@Geom_Parabola@F@Transform#&1$@S@gp_Trsf#
+// Source: c:@S@Geom_Parabola@F@TransformedParameter#d#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Plane@F@Copy#1
 // Source: c:@S@Geom_Plane@F@DynamicType#1
 // Source: c:@S@Geom_Plane@F@EvalD0#d#d#1
@@ -2318,8 +2405,10 @@
 // Source: c:@S@Geom_Plane@F@IsUPeriodic#1
 // Source: c:@S@Geom_Plane@F@IsVClosed#1
 // Source: c:@S@Geom_Plane@F@IsVPeriodic#1
+// Source: c:@S@Geom_Plane@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Plane@F@Pln#1
 // Source: c:@S@Geom_Plane@F@SetPln#&1$@S@gp_Pln#
+// Source: c:@S@Geom_Plane@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Plane@F@UIso#d#1
 // Source: c:@S@Geom_Plane@F@UReverse#
 // Source: c:@S@Geom_Plane@F@UReversedParameter#d#1
@@ -2343,8 +2432,10 @@
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@IsUPeriodic#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@IsVClosed#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@IsVPeriodic#1
+// Source: c:@S@Geom_RectangularTrimmedSurface@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@SetTrim#d#d#b#b#
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@SetTrim#d#d#d#d#b#b#
+// Source: c:@S@Geom_RectangularTrimmedSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@UIso#d#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@UPeriod#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@UReverse#
@@ -2367,6 +2458,7 @@
 // Source: c:@S@Geom_SphericalSurface@F@SetRadius#d#
 // Source: c:@S@Geom_SphericalSurface@F@SetSphere#&1$@S@gp_Sphere#
 // Source: c:@S@Geom_SphericalSurface@F@Sphere#1
+// Source: c:@S@Geom_SphericalSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_SphericalSurface@F@UIso#d#1
 // Source: c:@S@Geom_SphericalSurface@F@UReversedParameter#d#1
 // Source: c:@S@Geom_SphericalSurface@F@VIso#d#1
@@ -2374,6 +2466,7 @@
 // Source: c:@S@Geom_SphericalSurface@F@Volume#1
 // Source: c:@S@Geom_Surface@F@DN#d#d#I#I#1
 // Source: c:@S@Geom_Surface@F@DynamicType#1
+// Source: c:@S@Geom_Surface@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Surface@F@UPeriod#1
 // Source: c:@S@Geom_Surface@F@UReversed#1
 // Source: c:@S@Geom_Surface@F@VPeriod#1
@@ -2392,8 +2485,10 @@
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@IsUPeriodic#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@IsVClosed#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@IsVPeriodic#1
+// Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@SetBasisCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@SetDirection#&1$@S@gp_Dir#
+// Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@UIso#d#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@UReverse#
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@UReversedParameter#d#1
@@ -2415,11 +2510,13 @@
 // Source: c:@S@Geom_SurfaceOfRevolution@F@IsVClosed#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@IsVPeriodic#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@Location#1
+// Source: c:@S@Geom_SurfaceOfRevolution@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@ReferencePlane#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@SetAxis#&1$@S@gp_Ax1#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@SetBasisCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@SetDirection#&1$@S@gp_Dir#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@SetLocation#&1$@S@gp_Pnt#
+// Source: c:@S@Geom_SurfaceOfRevolution@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@UIso#d#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@UReverse#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@UReversedParameter#d#1
@@ -2446,6 +2543,7 @@
 // Source: c:@S@Geom_ToroidalSurface@F@SetMinorRadius#d#
 // Source: c:@S@Geom_ToroidalSurface@F@SetTorus#&1$@S@gp_Torus#
 // Source: c:@S@Geom_ToroidalSurface@F@Torus#1
+// Source: c:@S@Geom_ToroidalSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_ToroidalSurface@F@UIso#d#1
 // Source: c:@S@Geom_ToroidalSurface@F@UReversedParameter#d#1
 // Source: c:@S@Geom_ToroidalSurface@F@VIso#d#1
@@ -2455,6 +2553,7 @@
 // Source: c:@S@Geom_Transformation@F@DynamicType#1
 // Source: c:@S@Geom_Transformation@F@Form#1
 // Source: c:@S@Geom_Transformation@F@Geom_Transformation#
+// Source: c:@S@Geom_Transformation@F@Geom_Transformation#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Transformation@F@Invert#
 // Source: c:@S@Geom_Transformation@F@Inverted#1
 // Source: c:@S@Geom_Transformation@F@IsNegative#1
@@ -2473,6 +2572,8 @@
 // Source: c:@S@Geom_Transformation@F@SetTransformation#&1$@S@gp_Ax3#S0_#
 // Source: c:@S@Geom_Transformation@F@SetTranslation#&1$@S@gp_Pnt#S0_#
 // Source: c:@S@Geom_Transformation@F@SetTranslation#&1$@S@gp_Vec#
+// Source: c:@S@Geom_Transformation@F@SetTrsf#&1$@S@gp_Trsf#
+// Source: c:@S@Geom_Transformation@F@Trsf#1
 // Source: c:@S@Geom_Transformation@F@Value#I#I#1
 // Source: c:@S@Geom_TrimmedCurve@F@BasisCurve#1
 // Source: c:@S@Geom_TrimmedCurve@F@Continuity#1
@@ -2487,11 +2588,14 @@
 // Source: c:@S@Geom_TrimmedCurve@F@IsClosed#1
 // Source: c:@S@Geom_TrimmedCurve@F@IsPeriodic#1
 // Source: c:@S@Geom_TrimmedCurve@F@LastParameter#1
+// Source: c:@S@Geom_TrimmedCurve@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_TrimmedCurve@F@Period#1
 // Source: c:@S@Geom_TrimmedCurve@F@Reverse#
 // Source: c:@S@Geom_TrimmedCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom_TrimmedCurve@F@SetTrim#d#d#b#b#
 // Source: c:@S@Geom_TrimmedCurve@F@StartPoint#1
+// Source: c:@S@Geom_TrimmedCurve@F@Transform#&1$@S@gp_Trsf#
+// Source: c:@S@Geom_TrimmedCurve@F@TransformedParameter#d#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Vector@F@Angle#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#1
 // Source: c:@S@Geom_Vector@F@AngleWithRef#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#S0_#1
 // Source: c:@S@Geom_Vector@F@Dot#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#1
@@ -2529,6 +2633,7 @@
 // Source: c:@S@Geom_VectorWithMagnitude@F@SquareMagnitude#1
 // Source: c:@S@Geom_VectorWithMagnitude@F@Subtract#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#
 // Source: c:@S@Geom_VectorWithMagnitude@F@Subtracted#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#1
+// Source: c:@S@Geom_VectorWithMagnitude@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeometryTest_DrawableQualifiedCurve2d@F@DynamicType#1
 // Source: c:@S@Law_BSpFunc@F@Continuity#1
 // Source: c:@S@Law_BSpFunc@F@Curve#1
@@ -7781,6 +7886,13 @@ public sealed class BisectorBisecAna : IDisposable
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.BisectorBisecAnaMethodSetTrim1(handle, cu is null ? nint.Zero : cu.NativeHandle.DangerousGetHandle()), "occtsharp_generated_bisector_bisec_ana_method_set_trim_1");
     }
 
+    /// <summary>Invokes OCCT Bisector_BisecAna::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.BisectorBisecAnaMethodTransform0(handle, t), "occtsharp_generated_bisector_bisec_ana_method_transform_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -8070,6 +8182,13 @@ public sealed class BisectorBisecCC : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Bisector_BisecCC::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.BisectorBisecCCMethodTransform0(handle, t), "occtsharp_generated_bisector_bisec_cc_method_transform_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -8357,6 +8476,13 @@ public sealed class BisectorBisecPC : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.BisectorBisecPCMethodReversedParameter0(handle, u, out double resultValue), "occtsharp_generated_bisector_bisec_pc_method_reversed_parameter_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Bisector_BisecPC::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.BisectorBisecPCMethodTransform0(handle, t), "occtsharp_generated_bisector_bisec_pc_method_transform_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -10686,6 +10812,13 @@ public sealed class Geom2dEvalAHTBezierCurve : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom2dEval_AHTBezierCurve::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dEvalAHTBezierCurveMethodTransform0(handle, t), "occtsharp_generated_geom2d_eval_ahtbezier_curve_method_transform_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -10881,6 +11014,13 @@ public sealed class Geom2dEvalArchimedeanSpiralCurve : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom2dEval_ArchimedeanSpiralCurve::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dEvalArchimedeanSpiralCurveMethodTransform0(handle, t), "occtsharp_generated_geom2d_eval_archimedean_spiral_curve_method_transform_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -11066,6 +11206,13 @@ public sealed class Geom2dEvalCircleInvoluteCurve : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dEvalCircleInvoluteCurveMethodReversedParameter0(handle, u, out double resultValue), "occtsharp_generated_geom2d_eval_circle_involute_curve_method_reversed_parameter_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Geom2dEval_CircleInvoluteCurve::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dEvalCircleInvoluteCurveMethodTransform0(handle, t), "occtsharp_generated_geom2d_eval_circle_involute_curve_method_transform_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -11261,6 +11408,13 @@ public sealed class Geom2dEvalLogarithmicSpiralCurve : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dEvalLogarithmicSpiralCurveMethodScale0(handle, out double resultValue), "occtsharp_generated_geom2d_eval_logarithmic_spiral_curve_method_scale_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Geom2dEval_LogarithmicSpiralCurve::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dEvalLogarithmicSpiralCurveMethodTransform0(handle, t), "occtsharp_generated_geom2d_eval_logarithmic_spiral_curve_method_transform_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -11534,6 +11688,13 @@ public sealed class Geom2dEvalSineWaveCurve : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom2dEval_SineWaveCurve::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dEvalSineWaveCurveMethodTransform0(handle, t), "occtsharp_generated_geom2d_eval_sine_wave_curve_method_transform_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -11745,6 +11906,13 @@ public sealed class Geom2dEvalTBezierCurve : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom2dEval_TBezierCurve::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dEvalTBezierCurveMethodTransform0(handle, t), "occtsharp_generated_geom2d_eval_tbezier_curve_method_transform_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -11911,6 +12079,13 @@ public sealed class Geom2dAxisPlacement : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dAxisPlacementMethodSetLocation0(handle, p), "occtsharp_generated_geom2d_axis_placement_method_set_location_0");
+    }
+
+    /// <summary>Invokes OCCT Geom2d_AxisPlacement::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dAxisPlacementMethodTransform0(handle, t), "occtsharp_generated_geom2d_axis_placement_method_transform_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -12353,6 +12528,13 @@ public sealed class Geom2dBSplineCurve : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom2d_BSplineCurve::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dBSplineCurveMethodTransform0(handle, t), "occtsharp_generated_geom2d_bspline_curve_method_transform_0");
+    }
+
     /// <summary>Invokes OCCT Geom2d_BSplineCurve::Weight.</summary>
     public double Weight(int index)
     {
@@ -12658,6 +12840,13 @@ public sealed class Geom2dBezierCurve : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom2d_BezierCurve::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dBezierCurveMethodTransform0(handle, t), "occtsharp_generated_geom2d_bezier_curve_method_transform_0");
+    }
+
     /// <summary>Invokes OCCT Geom2d_BezierCurve::Weight.</summary>
     public double Weight(int index)
     {
@@ -12878,6 +13067,13 @@ public sealed class Geom2dCartesianPoint : IDisposable
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dCartesianPointMethodSetY0(handle, y), "occtsharp_generated_geom2d_cartesian_point_method_set_y_0");
     }
 
+    /// <summary>Invokes OCCT Geom2d_CartesianPoint::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dCartesianPointMethodTransform0(handle, t), "occtsharp_generated_geom2d_cartesian_point_method_transform_0");
+    }
+
     /// <summary>Invokes OCCT Geom2d_CartesianPoint::X.</summary>
     public double X()
     {
@@ -13086,6 +13282,13 @@ public sealed class Geom2dCircle : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dCircleMethodSetRadius0(handle, r), "occtsharp_generated_geom2d_circle_method_set_radius_0");
+    }
+
+    /// <summary>Invokes OCCT Geom2d_Circle::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dCircleMethodTransform0(handle, t), "occtsharp_generated_geom2d_circle_method_transform_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -13331,6 +13534,14 @@ public sealed class Geom2dCurve : IDisposable
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom2d_curve_method_dynamic_type_0");
     }
 
+    /// <summary>Invokes OCCT Geom2d_Curve::ParametricTransformation.</summary>
+    public double ParametricTransformation(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dCurveMethodParametricTransformation0(handle, t, out double resultValue), "occtsharp_generated_geom2d_curve_method_parametric_transformation_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Geom2d_Curve::Period.</summary>
     public double Period()
     {
@@ -13345,6 +13556,14 @@ public sealed class Geom2dCurve : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dCurveMethodReversed0(handle, out nint handleValue), "occtsharp_generated_geom2d_curve_method_reversed_0");
         return global::OcctSharp.Geom2dCurve.FromNative(handleValue, "occtsharp_generated_geom2d_curve_method_reversed_0");
+    }
+
+    /// <summary>Invokes OCCT Geom2d_Curve::TransformedParameter.</summary>
+    public double TransformedParameter(double u, global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dCurveMethodTransformedParameter0(handle, u, t, out double resultValue), "occtsharp_generated_geom2d_curve_method_transformed_parameter_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -13505,6 +13724,13 @@ public sealed class Geom2dDirection : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dDirectionMethodSquareMagnitude0(handle, out double resultValue), "occtsharp_generated_geom2d_direction_method_square_magnitude_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Geom2d_Direction::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dDirectionMethodTransform0(handle, t), "occtsharp_generated_geom2d_direction_method_transform_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -13764,6 +13990,13 @@ public sealed class Geom2dEllipse : IDisposable
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dEllipseMethodSetMinorRadius0(handle, minorRadius), "occtsharp_generated_geom2d_ellipse_method_set_minor_radius_0");
     }
 
+    /// <summary>Invokes OCCT Geom2d_Ellipse::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dEllipseMethodTransform0(handle, t), "occtsharp_generated_geom2d_ellipse_method_transform_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -13898,6 +14131,14 @@ public sealed class Geom2dGeometry : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dGeometryMethodScaled0(handle, p, s, out nint handleValue), "occtsharp_generated_geom2d_geometry_method_scaled_0");
         return global::OcctSharp.Geom2dGeometry.FromNative(handleValue, "occtsharp_generated_geom2d_geometry_method_scaled_0");
+    }
+
+    /// <summary>Invokes OCCT Geom2d_Geometry::Transformed.</summary>
+    public Geom2dGeometry? Transformed(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dGeometryMethodTransformed0(handle, t, out nint handleValue), "occtsharp_generated_geom2d_geometry_method_transformed_0");
+        return global::OcctSharp.Geom2dGeometry.FromNative(handleValue, "occtsharp_generated_geom2d_geometry_method_transformed_0");
     }
 
     /// <summary>Invokes OCCT Geom2d_Geometry::Translate.</summary>
@@ -14235,6 +14476,13 @@ public sealed class Geom2dHyperbola : IDisposable
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dHyperbolaMethodSetMinorRadius0(handle, minorRadius), "occtsharp_generated_geom2d_hyperbola_method_set_minor_radius_0");
     }
 
+    /// <summary>Invokes OCCT Geom2d_Hyperbola::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dHyperbolaMethodTransform0(handle, t), "occtsharp_generated_geom2d_hyperbola_method_transform_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -14431,6 +14679,14 @@ public sealed class Geom2dLine : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom2d_Line::ParametricTransformation.</summary>
+    public double ParametricTransformation(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dLineMethodParametricTransformation0(handle, t, out double resultValue), "occtsharp_generated_geom2d_line_method_parametric_transformation_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Geom2d_Line::Position.</summary>
     public global::OcctSharp.Values.Axis2d Position()
     {
@@ -14480,6 +14736,21 @@ public sealed class Geom2dLine : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dLineMethodSetPosition0(handle, a), "occtsharp_generated_geom2d_line_method_set_position_0");
+    }
+
+    /// <summary>Invokes OCCT Geom2d_Line::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dLineMethodTransform0(handle, t), "occtsharp_generated_geom2d_line_method_transform_0");
+    }
+
+    /// <summary>Invokes OCCT Geom2d_Line::TransformedParameter.</summary>
+    public double TransformedParameter(double u, global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dLineMethodTransformedParameter0(handle, u, t, out double resultValue), "occtsharp_generated_geom2d_line_method_transformed_parameter_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -14685,6 +14956,14 @@ public sealed class Geom2dOffsetCurve : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom2d_OffsetCurve::ParametricTransformation.</summary>
+    public double ParametricTransformation(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dOffsetCurveMethodParametricTransformation0(handle, t, out double resultValue), "occtsharp_generated_geom2d_offset_curve_method_parametric_transformation_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Geom2d_OffsetCurve::Period.</summary>
     public double Period()
     {
@@ -14727,6 +15006,21 @@ public sealed class Geom2dOffsetCurve : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dOffsetCurveMethodSetOffsetValue0(handle, d), "occtsharp_generated_geom2d_offset_curve_method_set_offset_value_0");
+    }
+
+    /// <summary>Invokes OCCT Geom2d_OffsetCurve::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dOffsetCurveMethodTransform0(handle, t), "occtsharp_generated_geom2d_offset_curve_method_transform_0");
+    }
+
+    /// <summary>Invokes OCCT Geom2d_OffsetCurve::TransformedParameter.</summary>
+    public double TransformedParameter(double u, global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dOffsetCurveMethodTransformedParameter0(handle, u, t, out double resultValue), "occtsharp_generated_geom2d_offset_curve_method_transformed_parameter_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -14941,6 +15235,14 @@ public sealed class Geom2dParabola : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom2d_Parabola::ParametricTransformation.</summary>
+    public double ParametricTransformation(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dParabolaMethodParametricTransformation0(handle, t, out double resultValue), "occtsharp_generated_geom2d_parabola_method_parametric_transformation_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Geom2d_Parabola::ReversedParameter.</summary>
     public double ReversedParameter(double u)
     {
@@ -14961,6 +15263,21 @@ public sealed class Geom2dParabola : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dParabolaMethodSetParab2d0(handle, prb), "occtsharp_generated_geom2d_parabola_method_set_parab2d_0");
+    }
+
+    /// <summary>Invokes OCCT Geom2d_Parabola::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dParabolaMethodTransform0(handle, t), "occtsharp_generated_geom2d_parabola_method_transform_0");
+    }
+
+    /// <summary>Invokes OCCT Geom2d_Parabola::TransformedParameter.</summary>
+    public double TransformedParameter(double u, global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dParabolaMethodTransformedParameter0(handle, u, t, out double resultValue), "occtsharp_generated_geom2d_parabola_method_transformed_parameter_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -15131,6 +15448,14 @@ public sealed class Geom2dTransformation : IDisposable
         handle = CreateHandle(nativeHandle, "Geom2dTransformationCreate0");
     }
 
+    /// <summary>Creates a retained OCCT Geom2d_Transformation shared object.</summary>
+    public Geom2dTransformation(global::OcctSharp.Values.Transform2d t)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dTransformationCreate1(t, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "Geom2dTransformationCreate1");
+    }
+
     /// <summary>Invokes OCCT Geom2d_Transformation::Copy.</summary>
     public Geom2dTransformation? Copy()
     {
@@ -15277,6 +15602,21 @@ public sealed class Geom2dTransformation : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dTransformationMethodSetTranslation1(handle, v), "occtsharp_generated_geom2d_transformation_method_set_translation_1");
+    }
+
+    /// <summary>Invokes OCCT Geom2d_Transformation::SetTrsf2d.</summary>
+    public void SetTrsf2d(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dTransformationMethodSetTrsf2d0(handle, t), "occtsharp_generated_geom2d_transformation_method_set_trsf2d_0");
+    }
+
+    /// <summary>Invokes OCCT Geom2d_Transformation::Trsf2d.</summary>
+    public global::OcctSharp.Values.Transform2d Trsf2d()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dTransformationMethodTrsf2d0(handle, out global::OcctSharp.Values.Transform2d resultValue), "occtsharp_generated_geom2d_transformation_method_trsf2d_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT Geom2d_Transformation::Value.</summary>
@@ -15459,6 +15799,14 @@ public sealed class Geom2dTrimmedCurve : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom2d_TrimmedCurve::ParametricTransformation.</summary>
+    public double ParametricTransformation(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dTrimmedCurveMethodParametricTransformation0(handle, t, out double resultValue), "occtsharp_generated_geom2d_trimmed_curve_method_parametric_transformation_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Geom2d_TrimmedCurve::Period.</summary>
     public double Period()
     {
@@ -15494,6 +15842,21 @@ public sealed class Geom2dTrimmedCurve : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dTrimmedCurveMethodStartPoint0(handle, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_geom2d_trimmed_curve_method_start_point_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Geom2d_TrimmedCurve::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dTrimmedCurveMethodTransform0(handle, t), "occtsharp_generated_geom2d_trimmed_curve_method_transform_0");
+    }
+
+    /// <summary>Invokes OCCT Geom2d_TrimmedCurve::TransformedParameter.</summary>
+    public double TransformedParameter(double u, global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dTrimmedCurveMethodTransformedParameter0(handle, u, t, out double resultValue), "occtsharp_generated_geom2d_trimmed_curve_method_transformed_parameter_0");
         return resultValue;
     }
 
@@ -15861,6 +16224,13 @@ public sealed class Geom2dVectorWithMagnitude : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dVectorWithMagnitudeMethodSubtracted0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_geom2d_vector_with_magnitude_method_subtracted_0");
         return global::OcctSharp.Geom2dVectorWithMagnitude.FromNative(handleValue, "occtsharp_generated_geom2d_vector_with_magnitude_method_subtracted_0");
+    }
+
+    /// <summary>Invokes OCCT Geom2d_VectorWithMagnitude::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform2d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.Geom2dVectorWithMagnitudeMethodTransform0(handle, t), "occtsharp_generated_geom2d_vector_with_magnitude_method_transform_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -17522,6 +17892,22 @@ public sealed class GeomAdaptorTransformedCurve : IDisposable
         handle = CreateHandle(nativeHandle, "GeomAdaptorTransformedCurveCreate0");
     }
 
+    /// <summary>Creates a retained OCCT GeomAdaptor_TransformedCurve shared object.</summary>
+    public GeomAdaptorTransformedCurve(GeomCurve? theCurve, double theFirst, double theLast, global::OcctSharp.Values.Transform3d theTrsf)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorTransformedCurveCreate1(theCurve is null ? nint.Zero : theCurve.NativeHandle.DangerousGetHandle(), theFirst, theLast, theTrsf, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "GeomAdaptorTransformedCurveCreate1");
+    }
+
+    /// <summary>Creates a retained OCCT GeomAdaptor_TransformedCurve shared object.</summary>
+    public GeomAdaptorTransformedCurve(GeomCurve? theCurve, global::OcctSharp.Values.Transform3d theTrsf)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorTransformedCurveCreate2(theCurve is null ? nint.Zero : theCurve.NativeHandle.DangerousGetHandle(), theTrsf, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "GeomAdaptorTransformedCurveCreate2");
+    }
+
     /// <summary>Invokes OCCT GeomAdaptor_TransformedCurve::Bezier.</summary>
     public GeomBezierCurve? Bezier()
     {
@@ -17759,6 +18145,13 @@ public sealed class GeomAdaptorTransformedCurve : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT GeomAdaptor_TransformedCurve::SetTrsf.</summary>
+    public void SetTrsf(global::OcctSharp.Values.Transform3d theTrsf)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorTransformedCurveMethodSetTrsf0(handle, theTrsf), "occtsharp_generated_geom_adaptor_transformed_curve_method_set_trsf_0");
+    }
+
     /// <summary>Invokes OCCT GeomAdaptor_TransformedCurve::ShallowCopy.</summary>
     public Adaptor3dCurve? ShallowCopy()
     {
@@ -17773,6 +18166,14 @@ public sealed class GeomAdaptorTransformedCurve : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorTransformedCurveMethodTrim0(handle, theFirst, theLast, theTol, out nint handleValue), "occtsharp_generated_geom_adaptor_transformed_curve_method_trim_0");
         return global::OcctSharp.Adaptor3dCurve.FromNative(handleValue, "occtsharp_generated_geom_adaptor_transformed_curve_method_trim_0");
+    }
+
+    /// <summary>Invokes OCCT GeomAdaptor_TransformedCurve::Trsf.</summary>
+    public global::OcctSharp.Values.Transform3d Trsf()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorTransformedCurveMethodTrsf0(handle, out global::OcctSharp.Values.Transform3d resultValue), "occtsharp_generated_geom_adaptor_transformed_curve_method_trsf_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -17849,6 +18250,22 @@ public sealed class GeomAdaptorTransformedSurface : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorTransformedSurfaceCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "GeomAdaptorTransformedSurfaceCreate0");
+    }
+
+    /// <summary>Creates a retained OCCT GeomAdaptor_TransformedSurface shared object.</summary>
+    public GeomAdaptorTransformedSurface(GeomSurface? theSurface, double theUFirst, double theULast, double theVFirst, double theVLast, global::OcctSharp.Values.Transform3d theTrsf, double theTolU, double theTolV)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorTransformedSurfaceCreate1(theSurface is null ? nint.Zero : theSurface.NativeHandle.DangerousGetHandle(), theUFirst, theULast, theVFirst, theVLast, theTrsf, theTolU, theTolV, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "GeomAdaptorTransformedSurfaceCreate1");
+    }
+
+    /// <summary>Creates a retained OCCT GeomAdaptor_TransformedSurface shared object.</summary>
+    public GeomAdaptorTransformedSurface(GeomSurface? theSurface, global::OcctSharp.Values.Transform3d theTrsf)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorTransformedSurfaceCreate2(theSurface is null ? nint.Zero : theSurface.NativeHandle.DangerousGetHandle(), theTrsf, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "GeomAdaptorTransformedSurfaceCreate2");
     }
 
     /// <summary>Invokes OCCT GeomAdaptor_TransformedSurface::AxeOfRevolution.</summary>
@@ -18059,6 +18476,20 @@ public sealed class GeomAdaptorTransformedSurface : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT GeomAdaptor_TransformedSurface::Load.</summary>
+    public void Load(GeomSurface? theSurface, double theUFirst, double theULast, double theVFirst, double theVLast, global::OcctSharp.Values.Transform3d theTrsf, double theTolU, double theTolV)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorTransformedSurfaceMethodLoad0(handle, theSurface is null ? nint.Zero : theSurface.NativeHandle.DangerousGetHandle(), theUFirst, theULast, theVFirst, theVLast, theTrsf, theTolU, theTolV), "occtsharp_generated_geom_adaptor_transformed_surface_method_load_0");
+    }
+
+    /// <summary>Invokes OCCT GeomAdaptor_TransformedSurface::Load.</summary>
+    public void Load(GeomSurface? theSurface, global::OcctSharp.Values.Transform3d theTrsf)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorTransformedSurfaceMethodLoad1(handle, theSurface is null ? nint.Zero : theSurface.NativeHandle.DangerousGetHandle(), theTrsf), "occtsharp_generated_geom_adaptor_transformed_surface_method_load_1");
+    }
+
     /// <summary>Invokes OCCT GeomAdaptor_TransformedSurface::NbUIntervals.</summary>
     public int NbUIntervals(GeomAbsShape theS)
     {
@@ -18123,6 +18554,13 @@ public sealed class GeomAdaptorTransformedSurface : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT GeomAdaptor_TransformedSurface::SetTrsf.</summary>
+    public void SetTrsf(global::OcctSharp.Values.Transform3d theTrsf)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorTransformedSurfaceMethodSetTrsf0(handle, theTrsf), "occtsharp_generated_geom_adaptor_transformed_surface_method_set_trsf_0");
+    }
+
     /// <summary>Invokes OCCT GeomAdaptor_TransformedSurface::ShallowCopy.</summary>
     public Adaptor3dSurface? ShallowCopy()
     {
@@ -18160,6 +18598,14 @@ public sealed class GeomAdaptorTransformedSurface : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorTransformedSurfaceMethodTorus0(handle, out global::OcctSharp.Values.Torus resultValue), "occtsharp_generated_geom_adaptor_transformed_surface_method_torus_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT GeomAdaptor_TransformedSurface::Trsf.</summary>
+    public global::OcctSharp.Values.Transform3d Trsf()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAdaptorTransformedSurfaceMethodTrsf0(handle, out global::OcctSharp.Values.Transform3d resultValue), "occtsharp_generated_geom_adaptor_transformed_surface_method_trsf_0");
         return resultValue;
     }
 
@@ -18462,6 +18908,13 @@ public sealed class GeomEvalAHTBezierCurve : IDisposable
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
+    /// <summary>Invokes OCCT GeomEval_AHTBezierCurve::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalAHTBezierCurveMethodTransform0(handle, t), "occtsharp_generated_geom_eval_ahtbezier_curve_method_transform_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -18698,6 +19151,13 @@ public sealed class GeomEvalAHTBezierSurface : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT GeomEval_AHTBezierSurface::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalAHTBezierSurfaceMethodTransform0(handle, t), "occtsharp_generated_geom_eval_ahtbezier_surface_method_transform_0");
+    }
+
     /// <summary>Invokes OCCT GeomEval_AHTBezierSurface::UIso.</summary>
     public GeomCurve? UIso(double u)
     {
@@ -18897,6 +19357,13 @@ public sealed class GeomEvalCircularHelicoidSurface : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalCircularHelicoidSurfaceMethodSetPitch0(handle, thePitch), "occtsharp_generated_geom_eval_circular_helicoid_surface_method_set_pitch_0");
+    }
+
+    /// <summary>Invokes OCCT GeomEval_CircularHelicoidSurface::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalCircularHelicoidSurfaceMethodTransform0(handle, t), "occtsharp_generated_geom_eval_circular_helicoid_surface_method_transform_0");
     }
 
     /// <summary>Invokes OCCT GeomEval_CircularHelicoidSurface::UIso.</summary>
@@ -19140,6 +19607,13 @@ public sealed class GeomEvalCircularHelixCurve : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT GeomEval_CircularHelixCurve::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalCircularHelixCurveMethodTransform0(handle, t), "occtsharp_generated_geom_eval_circular_helix_curve_method_transform_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -19323,6 +19797,13 @@ public sealed class GeomEvalEllipsoidSurface : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalEllipsoidSurfaceMethodSetSemiAxisC0(handle, theC), "occtsharp_generated_geom_eval_ellipsoid_surface_method_set_semi_axis_c_0");
+    }
+
+    /// <summary>Invokes OCCT GeomEval_EllipsoidSurface::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalEllipsoidSurfaceMethodTransform0(handle, t), "occtsharp_generated_geom_eval_ellipsoid_surface_method_transform_0");
     }
 
     /// <summary>Invokes OCCT GeomEval_EllipsoidSurface::UIso.</summary>
@@ -19539,6 +20020,13 @@ public sealed class GeomEvalHypParaboloidSurface : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalHypParaboloidSurfaceMethodSetSemiAxisB0(handle, theB), "occtsharp_generated_geom_eval_hyp_paraboloid_surface_method_set_semi_axis_b_0");
+    }
+
+    /// <summary>Invokes OCCT GeomEval_HypParaboloidSurface::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalHypParaboloidSurfaceMethodTransform0(handle, t), "occtsharp_generated_geom_eval_hyp_paraboloid_surface_method_transform_0");
     }
 
     /// <summary>Invokes OCCT GeomEval_HypParaboloidSurface::UIso.</summary>
@@ -19772,6 +20260,13 @@ public sealed class GeomEvalHyperboloidSurface : IDisposable
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalHyperboloidSurfaceMethodSetR20(handle, theR2), "occtsharp_generated_geom_eval_hyperboloid_surface_method_set_r2_0");
     }
 
+    /// <summary>Invokes OCCT GeomEval_HyperboloidSurface::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalHyperboloidSurfaceMethodTransform0(handle, t), "occtsharp_generated_geom_eval_hyperboloid_surface_method_transform_0");
+    }
+
     /// <summary>Invokes OCCT GeomEval_HyperboloidSurface::UIso.</summary>
     public GeomCurve? UIso(double u)
     {
@@ -19971,6 +20466,13 @@ public sealed class GeomEvalParaboloidSurface : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalParaboloidSurfaceMethodSetFocal0(handle, theFocal), "occtsharp_generated_geom_eval_paraboloid_surface_method_set_focal_0");
+    }
+
+    /// <summary>Invokes OCCT GeomEval_ParaboloidSurface::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalParaboloidSurfaceMethodTransform0(handle, t), "occtsharp_generated_geom_eval_paraboloid_surface_method_transform_0");
     }
 
     /// <summary>Invokes OCCT GeomEval_ParaboloidSurface::UIso.</summary>
@@ -20222,6 +20724,13 @@ public sealed class GeomEvalSineWaveCurve : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT GeomEval_SineWaveCurve::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalSineWaveCurveMethodTransform0(handle, t), "occtsharp_generated_geom_eval_sine_wave_curve_method_transform_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -20431,6 +20940,13 @@ public sealed class GeomEvalTBezierCurve : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalTBezierCurveMethodStartPoint0(handle, out Point3dRaw resultValue), "occtsharp_generated_geom_eval_tbezier_curve_method_start_point_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT GeomEval_TBezierCurve::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalTBezierCurveMethodTransform0(handle, t), "occtsharp_generated_geom_eval_tbezier_curve_method_transform_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -20643,6 +21159,13 @@ public sealed class GeomEvalTBezierSurface : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalTBezierSurfaceMethodOrderV0(handle, out int resultValue), "occtsharp_generated_geom_eval_tbezier_surface_method_order_v_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT GeomEval_TBezierSurface::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEvalTBezierSurfaceMethodTransform0(handle, t), "occtsharp_generated_geom_eval_tbezier_surface_method_transform_0");
     }
 
     /// <summary>Invokes OCCT GeomEval_TBezierSurface::UIso.</summary>
@@ -25228,11 +25751,26 @@ public sealed class GeomPlateSurface : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT GeomPlate_Surface::ParametricTransformation.</summary>
+    public global::OcctSharp.Values.AffineTransform2d ParametricTransformation(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomPlateSurfaceMethodParametricTransformation0(handle, t, out global::OcctSharp.Values.AffineTransform2d resultValue), "occtsharp_generated_geom_plate_surface_method_parametric_transformation_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT GeomPlate_Surface::SetBounds.</summary>
     public void SetBounds(double umin, double umax, double vmin, double vmax)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomPlateSurfaceMethodSetBounds0(handle, umin, umax, vmin, vmax), "occtsharp_generated_geom_plate_surface_method_set_bounds_0");
+    }
+
+    /// <summary>Invokes OCCT GeomPlate_Surface::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomPlateSurfaceMethodTransform0(handle, t), "occtsharp_generated_geom_plate_surface_method_transform_0");
     }
 
     /// <summary>Invokes OCCT GeomPlate_Surface::UIso.</summary>
@@ -25511,6 +26049,13 @@ public sealed class GeomAxis1Placement : IDisposable
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAxis1PlacementMethodSetDirection0(handle, v), "occtsharp_generated_geom_axis1_placement_method_set_direction_0");
     }
 
+    /// <summary>Invokes OCCT Geom_Axis1Placement::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAxis1PlacementMethodTransform0(handle, t), "occtsharp_generated_geom_axis1_placement_method_transform_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -25645,6 +26190,13 @@ public sealed class GeomAxis2Placement : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAxis2PlacementMethodSetYDirection0(handle, vy), "occtsharp_generated_geom_axis2_placement_method_set_ydirection_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_Axis2Placement::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomAxis2PlacementMethodTransform0(handle, t), "occtsharp_generated_geom_axis2_placement_method_transform_0");
     }
 
     /// <summary>Invokes OCCT Geom_Axis2Placement::XDirection.</summary>
@@ -26196,6 +26748,13 @@ public sealed class GeomBSplineCurve : IDisposable
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
+    /// <summary>Invokes OCCT Geom_BSplineCurve::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomBSplineCurveMethodTransform0(handle, t), "occtsharp_generated_geom_bspline_curve_method_transform_0");
+    }
+
     /// <summary>Invokes OCCT Geom_BSplineCurve::Weight.</summary>
     public double Weight(int index)
     {
@@ -26662,6 +27221,13 @@ public sealed class GeomBSplineSurface : IDisposable
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomBSplineSurfaceMethodSetWeight0(handle, uIndex, vIndex, weight), "occtsharp_generated_geom_bspline_surface_method_set_weight_0");
     }
 
+    /// <summary>Invokes OCCT Geom_BSplineSurface::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomBSplineSurfaceMethodTransform0(handle, t), "occtsharp_generated_geom_bspline_surface_method_transform_0");
+    }
+
     /// <summary>Invokes OCCT Geom_BSplineSurface::UDegree.</summary>
     public int UDegree()
     {
@@ -27084,6 +27650,13 @@ public sealed class GeomBezierCurve : IDisposable
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
+    /// <summary>Invokes OCCT Geom_BezierCurve::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomBezierCurveMethodTransform0(handle, t), "occtsharp_generated_geom_bezier_curve_method_transform_0");
+    }
+
     /// <summary>Invokes OCCT Geom_BezierCurve::Weight.</summary>
     public double Weight(int index)
     {
@@ -27349,6 +27922,13 @@ public sealed class GeomBezierSurface : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomBezierSurfaceMethodSetWeight0(handle, uIndex, vIndex, weight), "occtsharp_generated_geom_bezier_surface_method_set_weight_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_BezierSurface::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomBezierSurfaceMethodTransform0(handle, t), "occtsharp_generated_geom_bezier_surface_method_transform_0");
     }
 
     /// <summary>Invokes OCCT Geom_BezierSurface::UDegree.</summary>
@@ -27716,6 +28296,13 @@ public sealed class GeomCartesianPoint : IDisposable
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomCartesianPointMethodSetZ0(handle, z), "occtsharp_generated_geom_cartesian_point_method_set_z_0");
     }
 
+    /// <summary>Invokes OCCT Geom_CartesianPoint::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomCartesianPointMethodTransform0(handle, t), "occtsharp_generated_geom_cartesian_point_method_transform_0");
+    }
+
     /// <summary>Invokes OCCT Geom_CartesianPoint::X.</summary>
     public double X()
     {
@@ -27932,6 +28519,13 @@ public sealed class GeomCircle : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomCircleMethodSetRadius0(handle, r), "occtsharp_generated_geom_circle_method_set_radius_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_Circle::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomCircleMethodTransform0(handle, t), "occtsharp_generated_geom_circle_method_transform_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -28250,6 +28844,14 @@ public sealed class GeomConicalSurface : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT Geom_ConicalSurface::ParametricTransformation.</summary>
+    public global::OcctSharp.Values.AffineTransform2d ParametricTransformation(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomConicalSurfaceMethodParametricTransformation0(handle, t, out global::OcctSharp.Values.AffineTransform2d resultValue), "occtsharp_generated_geom_conical_surface_method_parametric_transformation_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Geom_ConicalSurface::RefRadius.</summary>
     public double RefRadius()
     {
@@ -28285,6 +28887,13 @@ public sealed class GeomConicalSurface : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomConicalSurfaceMethodSetSemiAngle0(handle, ang), "occtsharp_generated_geom_conical_surface_method_set_semi_angle_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_ConicalSurface::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomConicalSurfaceMethodTransform0(handle, t), "occtsharp_generated_geom_conical_surface_method_transform_0");
     }
 
     /// <summary>Invokes OCCT Geom_ConicalSurface::UIso.</summary>
@@ -28410,6 +29019,14 @@ public sealed class GeomCurve : IDisposable
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_curve_method_dynamic_type_0");
     }
 
+    /// <summary>Invokes OCCT Geom_Curve::ParametricTransformation.</summary>
+    public double ParametricTransformation(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomCurveMethodParametricTransformation0(handle, t, out double resultValue), "occtsharp_generated_geom_curve_method_parametric_transformation_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Geom_Curve::Period.</summary>
     public double Period()
     {
@@ -28424,6 +29041,14 @@ public sealed class GeomCurve : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomCurveMethodReversed0(handle, out nint handleValue), "occtsharp_generated_geom_curve_method_reversed_0");
         return global::OcctSharp.GeomCurve.FromNative(handleValue, "occtsharp_generated_geom_curve_method_reversed_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_Curve::TransformedParameter.</summary>
+    public double TransformedParameter(double u, global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomCurveMethodTransformedParameter0(handle, u, t, out double resultValue), "occtsharp_generated_geom_curve_method_transformed_parameter_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT Geom_Curve::Value.</summary>
@@ -28582,6 +29207,14 @@ public sealed class GeomCylindricalSurface : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT Geom_CylindricalSurface::ParametricTransformation.</summary>
+    public global::OcctSharp.Values.AffineTransform2d ParametricTransformation(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomCylindricalSurfaceMethodParametricTransformation0(handle, t, out global::OcctSharp.Values.AffineTransform2d resultValue), "occtsharp_generated_geom_cylindrical_surface_method_parametric_transformation_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Geom_CylindricalSurface::Radius.</summary>
     public double Radius()
     {
@@ -28602,6 +29235,13 @@ public sealed class GeomCylindricalSurface : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomCylindricalSurfaceMethodSetRadius0(handle, r), "occtsharp_generated_geom_cylindrical_surface_method_set_radius_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_CylindricalSurface::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomCylindricalSurfaceMethodTransform0(handle, t), "occtsharp_generated_geom_cylindrical_surface_method_transform_0");
     }
 
     /// <summary>Invokes OCCT Geom_CylindricalSurface::UIso.</summary>
@@ -28823,6 +29463,13 @@ public sealed class GeomDirection : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomDirectionMethodSquareMagnitude0(handle, out double resultValue), "occtsharp_generated_geom_direction_method_square_magnitude_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Geom_Direction::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomDirectionMethodTransform0(handle, t), "occtsharp_generated_geom_direction_method_transform_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -29239,6 +29886,13 @@ public sealed class GeomEllipse : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEllipseMethodSetMinorRadius0(handle, minorRadius), "occtsharp_generated_geom_ellipse_method_set_minor_radius_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_Ellipse::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomEllipseMethodTransform0(handle, t), "occtsharp_generated_geom_ellipse_method_transform_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -29719,6 +30373,13 @@ public sealed class GeomHyperbola : IDisposable
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomHyperbolaMethodSetMinorRadius0(handle, minorRadius), "occtsharp_generated_geom_hyperbola_method_set_minor_radius_0");
     }
 
+    /// <summary>Invokes OCCT Geom_Hyperbola::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomHyperbolaMethodTransform0(handle, t), "occtsharp_generated_geom_hyperbola_method_transform_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -29899,6 +30560,14 @@ public sealed class GeomLine : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom_Line::ParametricTransformation.</summary>
+    public double ParametricTransformation(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomLineMethodParametricTransformation0(handle, t, out double resultValue), "occtsharp_generated_geom_line_method_parametric_transformation_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Geom_Line::Position.</summary>
     public global::OcctSharp.Values.Axis1 Position()
     {
@@ -29948,6 +30617,21 @@ public sealed class GeomLine : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomLineMethodSetPosition0(handle, a1), "occtsharp_generated_geom_line_method_set_position_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_Line::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomLineMethodTransform0(handle, t), "occtsharp_generated_geom_line_method_transform_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_Line::TransformedParameter.</summary>
+    public double TransformedParameter(double u, global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomLineMethodTransformedParameter0(handle, u, t, out double resultValue), "occtsharp_generated_geom_line_method_transformed_parameter_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -30153,6 +30837,14 @@ public sealed class GeomOffsetCurve : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom_OffsetCurve::ParametricTransformation.</summary>
+    public double ParametricTransformation(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomOffsetCurveMethodParametricTransformation0(handle, t, out double resultValue), "occtsharp_generated_geom_offset_curve_method_parametric_transformation_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Geom_OffsetCurve::Period.</summary>
     public double Period()
     {
@@ -30195,6 +30887,21 @@ public sealed class GeomOffsetCurve : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomOffsetCurveMethodSetOffsetValue0(handle, d), "occtsharp_generated_geom_offset_curve_method_set_offset_value_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_OffsetCurve::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomOffsetCurveMethodTransform0(handle, t), "occtsharp_generated_geom_offset_curve_method_transform_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_OffsetCurve::TransformedParameter.</summary>
+    public double TransformedParameter(double u, global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomOffsetCurveMethodTransformedParameter0(handle, u, t, out double resultValue), "occtsharp_generated_geom_offset_curve_method_transformed_parameter_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -30400,6 +31107,14 @@ public sealed class GeomOffsetSurface : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom_OffsetSurface::ParametricTransformation.</summary>
+    public global::OcctSharp.Values.AffineTransform2d ParametricTransformation(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomOffsetSurfaceMethodParametricTransformation0(handle, t, out global::OcctSharp.Values.AffineTransform2d resultValue), "occtsharp_generated_geom_offset_surface_method_parametric_transformation_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Geom_OffsetSurface::SetBasisSurface.</summary>
     public void SetBasisSurface(GeomSurface? s, bool isNotCheckC0)
     {
@@ -30420,6 +31135,13 @@ public sealed class GeomOffsetSurface : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomOffsetSurfaceMethodSurface0(handle, out nint handleValue), "occtsharp_generated_geom_offset_surface_method_surface_0");
         return global::OcctSharp.GeomSurface.FromNative(handleValue, "occtsharp_generated_geom_offset_surface_method_surface_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_OffsetSurface::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomOffsetSurfaceMethodTransform0(handle, t), "occtsharp_generated_geom_offset_surface_method_transform_0");
     }
 
     /// <summary>Invokes OCCT Geom_OffsetSurface::UIso.</summary>
@@ -30688,6 +31410,14 @@ public sealed class GeomParabola : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom_Parabola::ParametricTransformation.</summary>
+    public double ParametricTransformation(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomParabolaMethodParametricTransformation0(handle, t, out double resultValue), "occtsharp_generated_geom_parabola_method_parametric_transformation_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Geom_Parabola::ReversedParameter.</summary>
     public double ReversedParameter(double u)
     {
@@ -30708,6 +31438,21 @@ public sealed class GeomParabola : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomParabolaMethodSetParab0(handle, prb), "occtsharp_generated_geom_parabola_method_set_parab_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_Parabola::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomParabolaMethodTransform0(handle, t), "occtsharp_generated_geom_parabola_method_transform_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_Parabola::TransformedParameter.</summary>
+    public double TransformedParameter(double u, global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomParabolaMethodTransformedParameter0(handle, u, t, out double resultValue), "occtsharp_generated_geom_parabola_method_transformed_parameter_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -30866,6 +31611,14 @@ public sealed class GeomPlane : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT Geom_Plane::ParametricTransformation.</summary>
+    public global::OcctSharp.Values.AffineTransform2d ParametricTransformation(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomPlaneMethodParametricTransformation0(handle, t, out global::OcctSharp.Values.AffineTransform2d resultValue), "occtsharp_generated_geom_plane_method_parametric_transformation_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Geom_Plane::Pln.</summary>
     public global::OcctSharp.Values.Plane Pln()
     {
@@ -30879,6 +31632,13 @@ public sealed class GeomPlane : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomPlaneMethodSetPln0(handle, pl), "occtsharp_generated_geom_plane_method_set_pln_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_Plane::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomPlaneMethodTransform0(handle, t), "occtsharp_generated_geom_plane_method_transform_0");
     }
 
     /// <summary>Invokes OCCT Geom_Plane::UIso.</summary>
@@ -31199,6 +31959,14 @@ public sealed class GeomRectangularTrimmedSurface : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT Geom_RectangularTrimmedSurface::ParametricTransformation.</summary>
+    public global::OcctSharp.Values.AffineTransform2d ParametricTransformation(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomRectangularTrimmedSurfaceMethodParametricTransformation0(handle, t, out global::OcctSharp.Values.AffineTransform2d resultValue), "occtsharp_generated_geom_rectangular_trimmed_surface_method_parametric_transformation_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Geom_RectangularTrimmedSurface::SetTrim.</summary>
     public void SetTrim(double param1, double param2, bool uTrim, bool sense)
     {
@@ -31211,6 +31979,13 @@ public sealed class GeomRectangularTrimmedSurface : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomRectangularTrimmedSurfaceMethodSetTrim1(handle, u1, u2, v1, v2, uSense ? 1 : 0, vSense ? 1 : 0), "occtsharp_generated_geom_rectangular_trimmed_surface_method_set_trim_1");
+    }
+
+    /// <summary>Invokes OCCT Geom_RectangularTrimmedSurface::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomRectangularTrimmedSurfaceMethodTransform0(handle, t), "occtsharp_generated_geom_rectangular_trimmed_surface_method_transform_0");
     }
 
     /// <summary>Invokes OCCT Geom_RectangularTrimmedSurface::UIso.</summary>
@@ -31453,6 +32228,13 @@ public sealed class GeomSphericalSurface : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom_SphericalSurface::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomSphericalSurfaceMethodTransform0(handle, t), "occtsharp_generated_geom_spherical_surface_method_transform_0");
+    }
+
     /// <summary>Invokes OCCT Geom_SphericalSurface::UIso.</summary>
     public GeomCurve? UIso(double u)
     {
@@ -31575,6 +32357,14 @@ public sealed class GeomSurface : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomSurfaceMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_geom_surface_method_dynamic_type_0");
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_geom_surface_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_Surface::ParametricTransformation.</summary>
+    public global::OcctSharp.Values.AffineTransform2d ParametricTransformation(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomSurfaceMethodParametricTransformation0(handle, t, out global::OcctSharp.Values.AffineTransform2d resultValue), "occtsharp_generated_geom_surface_method_parametric_transformation_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT Geom_Surface::UPeriod.</summary>
@@ -31788,6 +32578,14 @@ public sealed class GeomSurfaceOfLinearExtrusion : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT Geom_SurfaceOfLinearExtrusion::ParametricTransformation.</summary>
+    public global::OcctSharp.Values.AffineTransform2d ParametricTransformation(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomSurfaceOfLinearExtrusionMethodParametricTransformation0(handle, t, out global::OcctSharp.Values.AffineTransform2d resultValue), "occtsharp_generated_geom_surface_of_linear_extrusion_method_parametric_transformation_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Geom_SurfaceOfLinearExtrusion::SetBasisCurve.</summary>
     public void SetBasisCurve(GeomCurve? c)
     {
@@ -31800,6 +32598,13 @@ public sealed class GeomSurfaceOfLinearExtrusion : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomSurfaceOfLinearExtrusionMethodSetDirection0(handle, v), "occtsharp_generated_geom_surface_of_linear_extrusion_method_set_direction_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_SurfaceOfLinearExtrusion::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomSurfaceOfLinearExtrusionMethodTransform0(handle, t), "occtsharp_generated_geom_surface_of_linear_extrusion_method_transform_0");
     }
 
     /// <summary>Invokes OCCT Geom_SurfaceOfLinearExtrusion::UIso.</summary>
@@ -32035,6 +32840,14 @@ public sealed class GeomSurfaceOfRevolution : IDisposable
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
+    /// <summary>Invokes OCCT Geom_SurfaceOfRevolution::ParametricTransformation.</summary>
+    public global::OcctSharp.Values.AffineTransform2d ParametricTransformation(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomSurfaceOfRevolutionMethodParametricTransformation0(handle, t, out global::OcctSharp.Values.AffineTransform2d resultValue), "occtsharp_generated_geom_surface_of_revolution_method_parametric_transformation_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Geom_SurfaceOfRevolution::ReferencePlane.</summary>
     public global::OcctSharp.Values.Axis2 ReferencePlane()
     {
@@ -32069,6 +32882,13 @@ public sealed class GeomSurfaceOfRevolution : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomSurfaceOfRevolutionMethodSetLocation0(handle, new Point3dRaw(p.X, p.Y, p.Z)), "occtsharp_generated_geom_surface_of_revolution_method_set_location_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_SurfaceOfRevolution::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomSurfaceOfRevolutionMethodTransform0(handle, t), "occtsharp_generated_geom_surface_of_revolution_method_transform_0");
     }
 
     /// <summary>Invokes OCCT Geom_SurfaceOfRevolution::UIso.</summary>
@@ -32410,6 +33230,13 @@ public sealed class GeomToroidalSurface : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom_ToroidalSurface::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomToroidalSurfaceMethodTransform0(handle, t), "occtsharp_generated_geom_toroidal_surface_method_transform_0");
+    }
+
     /// <summary>Invokes OCCT Geom_ToroidalSurface::UIso.</summary>
     public GeomCurve? UIso(double u)
     {
@@ -32524,6 +33351,14 @@ public sealed class GeomTransformation : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomTransformationCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "GeomTransformationCreate0");
+    }
+
+    /// <summary>Creates a retained OCCT Geom_Transformation shared object.</summary>
+    public GeomTransformation(global::OcctSharp.Values.Transform3d t)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomTransformationCreate1(t, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "GeomTransformationCreate1");
     }
 
     /// <summary>Invokes OCCT Geom_Transformation::Copy.</summary>
@@ -32679,6 +33514,21 @@ public sealed class GeomTransformation : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomTransformationMethodSetTranslation1(handle, theVec), "occtsharp_generated_geom_transformation_method_set_translation_1");
+    }
+
+    /// <summary>Invokes OCCT Geom_Transformation::SetTrsf.</summary>
+    public void SetTrsf(global::OcctSharp.Values.Transform3d theTrsf)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomTransformationMethodSetTrsf0(handle, theTrsf), "occtsharp_generated_geom_transformation_method_set_trsf_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_Transformation::Trsf.</summary>
+    public global::OcctSharp.Values.Transform3d Trsf()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomTransformationMethodTrsf0(handle, out global::OcctSharp.Values.Transform3d resultValue), "occtsharp_generated_geom_transformation_method_trsf_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT Geom_Transformation::Value.</summary>
@@ -32861,6 +33711,14 @@ public sealed class GeomTrimmedCurve : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Geom_TrimmedCurve::ParametricTransformation.</summary>
+    public double ParametricTransformation(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomTrimmedCurveMethodParametricTransformation0(handle, t, out double resultValue), "occtsharp_generated_geom_trimmed_curve_method_parametric_transformation_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Geom_TrimmedCurve::Period.</summary>
     public double Period()
     {
@@ -32897,6 +33755,21 @@ public sealed class GeomTrimmedCurve : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomTrimmedCurveMethodStartPoint0(handle, out Point3dRaw resultValue), "occtsharp_generated_geom_trimmed_curve_method_start_point_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT Geom_TrimmedCurve::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomTrimmedCurveMethodTransform0(handle, t), "occtsharp_generated_geom_trimmed_curve_method_transform_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_TrimmedCurve::TransformedParameter.</summary>
+    public double TransformedParameter(double u, global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomTrimmedCurveMethodTransformedParameter0(handle, u, t, out double resultValue), "occtsharp_generated_geom_trimmed_curve_method_transformed_parameter_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -33316,6 +34189,13 @@ public sealed class GeomVectorWithMagnitude : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomVectorWithMagnitudeMethodSubtracted0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_geom_vector_with_magnitude_method_subtracted_0");
         return global::OcctSharp.GeomVectorWithMagnitude.FromNative(handleValue, "occtsharp_generated_geom_vector_with_magnitude_method_subtracted_0");
+    }
+
+    /// <summary>Invokes OCCT Geom_VectorWithMagnitude::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(GeometryGeneratedNativeMethods.GeomVectorWithMagnitudeMethodTransform0(handle, t), "occtsharp_generated_geom_vector_with_magnitude_method_transform_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>

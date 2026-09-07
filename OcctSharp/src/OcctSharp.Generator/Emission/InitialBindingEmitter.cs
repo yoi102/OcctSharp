@@ -142,6 +142,9 @@ public static class InitialBindingEmitter
             topologyScopes);
         files.AddRange(topology.Files);
         sourceStableIds.AddRange(topology.SourceStableIds);
+        GeneratedBindingSet valueOperations = GeometricOperationEmitter.Emit(report.OcctVersion, eligibleModel, sourceStableIds.ToHashSet(StringComparer.Ordinal));
+        files.AddRange(valueOperations.Files);
+        sourceStableIds.AddRange(valueOperations.SourceStableIds);
         sourceStableIds.AddRange(eligibleModel.Declarations
             .Where(static declaration =>
                 declaration.Kind == BindingDeclarationKind.Enum

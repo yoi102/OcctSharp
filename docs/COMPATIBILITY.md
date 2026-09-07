@@ -1,5 +1,14 @@
 # Compatibility
 
+## Preview.25 geometric operations
+
+Batch Z preserves the Preview.24 managed API and native generated function bodies.
+Its new ValueOperations namespace avoids replacing existing owning wrappers. Four
+transform coefficient records are additive Foundation types; facade forwarders retain
+both old and new public identities. Native cache flags are not serialized into values;
+Form queries report the reconstructed canonical form. See ADR-0094 and TYPE_MAPPING.
+
+
 ## Preview.24 geometric projection expansion
 
 Y preserves both the 16,353 Preview.22 IDs and 3,329 Preview.23 additions in embedded

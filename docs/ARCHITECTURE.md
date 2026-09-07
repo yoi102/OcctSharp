@@ -1,5 +1,16 @@
 # Architecture
 
+## Batch Z geometric operation boundary
+
+ADR-0094 adds a reusable constructor/instance emitter for centrally mapped gp values
+and gp_Pnt. Public static operation classes live in Geometry's OcctSharp.ValueOperations
+namespace; Foundation owns the four additional transform coefficient records.
+The new occtsharp_value_ C exports use status returns and the existing shared error
+channel. Managed ref receivers publish only after success. Preview.24 stable-ID epochs
+preserve all earlier generated overload identities. There is no new module or native DLL.
+See TYPE_MAPPING and OWNERSHIP for coefficient reconstruction and copy guarantees.
+
+
 Execution cadence and task sizing follow [WORKFLOW](WORKFLOW.md) under ADR-0091.
 The technical boundaries below remain applicable; their historical batch counts and
 validation numbers are evidence snapshots. Current progress is maintained in [STATUS](STATUS.md).

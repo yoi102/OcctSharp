@@ -14,6 +14,7 @@
 // Source: c:@S@Poly_CoherentTriangulation@F@Poly_CoherentTriangulation#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#
 // Source: c:@S@Poly_CoherentTriangulation@F@Poly_CoherentTriangulation#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#
 // Source: c:@S@Poly_CoherentTriangulation@F@SetDeflection#d#
+// Source: c:@S@Poly_MergeNodesTool@F@AddTriangulation#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#&1$@S@gp_Trsf#b#
 // Source: c:@S@Poly_MergeNodesTool@F@DynamicType#1
 // Source: c:@S@Poly_MergeNodesTool@F@ElementNodeIndex#I#1
 // Source: c:@S@Poly_MergeNodesTool@F@MergeAngle#1
@@ -247,6 +248,10 @@ internal static partial class MeshDataGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_poly_merge_nodes_tool_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PolyMergeNodesToolCreate0(double theSmoothAngle, double theMergeTolerance, int theNbFacets, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_poly_merge_nodes_tool_method_add_triangulation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PolyMergeNodesToolMethodAddTriangulation0(PolyMergeNodesToolHandle handle, nint theTris, global::OcctSharp.Values.Transform3d theTrsf, int theToReverse);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_poly_merge_nodes_tool_method_dynamic_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

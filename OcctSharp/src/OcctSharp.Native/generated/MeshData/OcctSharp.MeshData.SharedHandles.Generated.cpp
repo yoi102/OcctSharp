@@ -14,6 +14,7 @@
 // Source: c:@S@Poly_CoherentTriangulation@F@Poly_CoherentTriangulation#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#
 // Source: c:@S@Poly_CoherentTriangulation@F@Poly_CoherentTriangulation#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#
 // Source: c:@S@Poly_CoherentTriangulation@F@SetDeflection#d#
+// Source: c:@S@Poly_MergeNodesTool@F@AddTriangulation#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#&1$@S@gp_Trsf#b#
 // Source: c:@S@Poly_MergeNodesTool@F@DynamicType#1
 // Source: c:@S@Poly_MergeNodesTool@F@ElementNodeIndex#I#1
 // Source: c:@S@Poly_MergeNodesTool@F@MergeAngle#1
@@ -620,6 +621,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_poly_merge_nodes_tool_create
   {
     opencascade::handle<Poly_MergeNodesTool> createdHandle = new Poly_MergeNodesTool(theSmoothAngle, theMergeTolerance, theNbFacets);
     *out_handle = AllocatePolyMergeNodesTool(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_poly_merge_nodes_tool_method_add_triangulation_0(
+  const OcctSharp_PolyMergeNodesToolHandle* handle,
+  const OcctSharp_PolyTriangulationHandle* theTris,
+  OcctSharp_Value_Transform3d theTrsf,
+  int32_t theToReverse)
+{
+  return GeneratedGuard([&]
+  {
+    ValidatePolyMergeNodesTool(handle)->Value->AddTriangulation((theTris == nullptr ? opencascade::handle<Poly_Triangulation>() : ValidatePolyTriangulation(theTris)->Value), OcctSharp_GeometryValues::ToNative(theTrsf), (theToReverse != 0));
   });
 }
 

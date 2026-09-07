@@ -1,5 +1,19 @@
 # Special Cases
 
+## SC-063: Batch Z singular value inverse preconditions
+
+The generated geometric-operation rule adds no manual stable IDs. On the pinned SDK,
+rank-deficient matrices can report IsSingular() but still return from Invert() without
+throwing. For gp_Mat, gp_Mat2d, gp_GTrsf and gp_GTrsf2d, the operation emitter explicitly
+rejects IsSingular() receivers before Invert/Inverted and before negative Power/Powered.
+This preserves failed-mutation atomicity without changing the stored affine coefficients.
+The native and managed singular fixtures retain evidence of this SDK boundary.
+
+Batch Z supersedes SC-062's historical transform/point-from-XYZ restrictions: four
+coefficient records and copied geometric constructors are implemented under ADR-0094.
+Its exact artifact and reverse-module exclusions remain unchanged. Native form-cache
+editing is excluded because copied coefficients do not serialize that cache.
+
 ## SC-062: Batch Y geometric value projection boundary
 
 TM009 adds generated field copies, not manual binding IDs. A gp_Mat2d has a column-based

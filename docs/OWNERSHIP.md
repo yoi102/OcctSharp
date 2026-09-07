@@ -1,5 +1,16 @@
 # Ownership and Lifetime
 
+## Batch Z receiver copies (ADR-0094)
+
+ValueOperations never allocate a persistent native owner. The receiver and arguments
+are reconstructed as local native values. A successful non-const operation publishes
+a complete copied receiver; native failure leaves the managed ref argument unchanged.
+Return conversions finish before any successful output is published. Const-reference
+returns copy a value before its native temporary dies. No reference, array-start address
+or cache state escapes, and no new lifetime/registry category is introduced. A ref
+argument still needs ordinary caller synchronization when shared between threads.
+
+
 ## Batch Y geometric copies
 
 ADR-0093 adds only ValueCopy projections. Geometric fields are copied during the

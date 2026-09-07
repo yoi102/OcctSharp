@@ -91,3 +91,15 @@ public readonly record struct Sphere(Axis3 Position, double Radius);
 /// <summary>Copied gp_Torus value. Native calls validate finite inputs and geometric domains; no native storage is borrowed.</summary>
 [StructLayout(LayoutKind.Sequential)]
 public readonly record struct Torus(Axis3 Position, double MajorRadius, double MinorRadius);
+/// <summary>Copied gp_Trsf2d value. Native calls validate finite inputs and geometric domains; no native storage is borrowed.</summary>
+[StructLayout(LayoutKind.Sequential)]
+public readonly record struct Transform2d(double M11, double M12, double M13, double M21, double M22, double M23);
+/// <summary>Copied gp_Trsf value. Native calls validate finite inputs and geometric domains; no native storage is borrowed.</summary>
+[StructLayout(LayoutKind.Sequential)]
+public readonly record struct Transform3d(double M11, double M12, double M13, double M14, double M21, double M22, double M23, double M24, double M31, double M32, double M33, double M34);
+/// <summary>Copied gp_GTrsf2d value. Native calls validate finite inputs and geometric domains; no native storage is borrowed.</summary>
+[StructLayout(LayoutKind.Sequential)]
+public readonly record struct AffineTransform2d(double M11, double M12, double M13, double M21, double M22, double M23);
+/// <summary>Copied gp_GTrsf value. Native calls validate finite inputs and geometric domains; no native storage is borrowed.</summary>
+[StructLayout(LayoutKind.Sequential)]
+public readonly record struct AffineTransform3d(double M11, double M12, double M13, double M14, double M21, double M22, double M23, double M24, double M31, double M32, double M33, double M34);

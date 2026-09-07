@@ -321,6 +321,7 @@
 // Source: c:@S@BRepTest_DrawableHistory@F@DynamicType#1
 // Source: c:@S@BRepTools_CopyModification@F@BRepTools_CopyModification#b#b#
 // Source: c:@S@BRepTools_CopyModification@F@DynamicType#1
+// Source: c:@S@BRepTools_GTrsfModification@F@BRepTools_GTrsfModification#&1$@S@gp_GTrsf#
 // Source: c:@S@BRepTools_GTrsfModification@F@DynamicType#1
 // Source: c:@S@BRepTools_History@F@BRepTools_History#
 // Source: c:@S@BRepTools_History@F@Clear#
@@ -336,6 +337,7 @@
 // Source: c:@S@BRepTools_ReShape@F@Clear#
 // Source: c:@S@BRepTools_ReShape@F@DynamicType#1
 // Source: c:@S@BRepTools_ReShape@F@History#1
+// Source: c:@S@BRepTools_TrsfModification@F@BRepTools_TrsfModification#&1$@S@gp_Trsf#
 // Source: c:@S@BRepTools_TrsfModification@F@DynamicType#1
 // Source: c:@S@BRepTopAdaptor_HVertex@F@DynamicType#1
 // Source: c:@S@BRepTopAdaptor_HVertex@F@IsSame#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_HVertex#
@@ -1245,6 +1247,7 @@
 // Source: c:@S@ShapeCustom_SweptToElementary@F@DynamicType#1
 // Source: c:@S@ShapeCustom_SweptToElementary@F@ShapeCustom_SweptToElementary#
 // Source: c:@S@ShapeCustom_TrsfModification@F@DynamicType#1
+// Source: c:@S@ShapeCustom_TrsfModification@F@ShapeCustom_TrsfModification#&1$@S@gp_Trsf#
 // Source: c:@S@ShapeExtend_BasicMsgRegistrator@F@DynamicType#1
 // Source: c:@S@ShapeExtend_BasicMsgRegistrator@F@ShapeExtend_BasicMsgRegistrator#
 // Source: c:@S@ShapeExtend_ComplexCurve@F@CheckConnectivity#d#
@@ -1258,6 +1261,7 @@
 // Source: c:@S@ShapeExtend_ComplexCurve@F@IsPeriodic#1
 // Source: c:@S@ShapeExtend_ComplexCurve@F@LastParameter#1
 // Source: c:@S@ShapeExtend_ComplexCurve@F@ReversedParameter#d#1
+// Source: c:@S@ShapeExtend_ComplexCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@ShapeExtend_CompositeSurface@F@CheckConnectivity#d#
 // Source: c:@S@ShapeExtend_CompositeSurface@F@ComputeJointValues#$@E@ShapeExtend_Parametrisation#
 // Source: c:@S@ShapeExtend_CompositeSurface@F@Continuity#1
@@ -1283,6 +1287,7 @@
 // Source: c:@S@ShapeExtend_CompositeSurface@F@SetUFirstValue#d#
 // Source: c:@S@ShapeExtend_CompositeSurface@F@SetVFirstValue#d#
 // Source: c:@S@ShapeExtend_CompositeSurface@F@ShapeExtend_CompositeSurface#
+// Source: c:@S@ShapeExtend_CompositeSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@ShapeExtend_CompositeSurface@F@UGlobalToLocal#I#I#d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@UIso#d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@UJointValue#I#1
@@ -1647,6 +1652,9 @@
 // Source: c:@S@TopLoc_Datum3D@F@DynamicType#1
 // Source: c:@S@TopLoc_Datum3D@F@Form#1
 // Source: c:@S@TopLoc_Datum3D@F@TopLoc_Datum3D#
+// Source: c:@S@TopLoc_Datum3D@F@TopLoc_Datum3D#&1$@S@gp_Trsf#
+// Source: c:@S@TopLoc_Datum3D@F@Transformation#1
+// Source: c:@S@TopLoc_Datum3D@F@Trsf#1
 // Source: c:@S@TopLoc_SListNodeOfItemLocation@F@DynamicType#1
 // Source: c:@S@TopOpeBRepBuild_HBuilder@F@Clear#
 // Source: c:@S@TopOpeBRepBuild_HBuilder@F@DataStructure#1
@@ -5299,6 +5307,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_tools_cop
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_tools_copy_modification_release(OcctSharp_BRepToolsCopyModificationHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_tools_gtrsf_modification_create_0(
+  OcctSharp_Value_AffineTransform3d t,
+  OcctSharp_BRepToolsGTrsfModificationHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_tools_gtrsf_modification_method_dynamic_type_0(
   const OcctSharp_BRepToolsGTrsfModificationHandle* handle,
   OcctSharp_StandardTypeHandle** out_handle);
@@ -5448,6 +5460,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_tools_re_
   int32_t* out_is_kind);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_tools_re_shape_release(OcctSharp_BRepToolsReShapeHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_tools_trsf_modification_create_0(
+  OcctSharp_Value_Transform3d t,
+  OcctSharp_BRepToolsTrsfModificationHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_tools_trsf_modification_method_dynamic_type_0(
   const OcctSharp_BRepToolsTrsfModificationHandle* handle,
@@ -10806,6 +10822,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_custom_s
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_shape_custom_swept_to_elementary_release(OcctSharp_ShapeCustomSweptToElementaryHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_custom_trsf_modification_create_0(
+  OcctSharp_Value_Transform3d t,
+  OcctSharp_ShapeCustomTrsfModificationHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_custom_trsf_modification_method_dynamic_type_0(
   const OcctSharp_ShapeCustomTrsfModificationHandle* handle,
   OcctSharp_StandardTypeHandle** out_handle);
@@ -10904,6 +10924,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_c
   const OcctSharp_ShapeExtendComplexCurveHandle* handle,
   double u,
   double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_complex_curve_method_transform_0(
+  const OcctSharp_ShapeExtendComplexCurveHandle* handle,
+  OcctSharp_Value_Transform3d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_complex_curve_clone(
   const OcctSharp_ShapeExtendComplexCurveHandle* source,
@@ -11044,6 +11068,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_c
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_composite_surface_method_set_vfirst_value_0(
   const OcctSharp_ShapeExtendCompositeSurfaceHandle* handle,
   double vFirst);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_composite_surface_method_transform_0(
+  const OcctSharp_ShapeExtendCompositeSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_composite_surface_method_uglobal_to_local_0(
   const OcctSharp_ShapeExtendCompositeSurfaceHandle* handle,
@@ -13360,6 +13388,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_shape_upgrade_wire_divide_
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_top_loc_datum3_d_create_0(
   OcctSharp_TopLocDatum3DHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_top_loc_datum3_d_create_1(
+  OcctSharp_Value_Transform3d t,
+  OcctSharp_TopLocDatum3DHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_top_loc_datum3_d_method_dynamic_type_0(
   const OcctSharp_TopLocDatum3DHandle* handle,
   OcctSharp_StandardTypeHandle** out_handle);
@@ -13367,6 +13399,14 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_top_loc_datum3
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_top_loc_datum3_d_method_form_0(
   const OcctSharp_TopLocDatum3DHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_top_loc_datum3_d_method_transformation_0(
+  const OcctSharp_TopLocDatum3DHandle* handle,
+  OcctSharp_Value_Transform3d* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_top_loc_datum3_d_method_trsf_0(
+  const OcctSharp_TopLocDatum3DHandle* handle,
+  OcctSharp_Value_Transform3d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_top_loc_datum3_d_clone(
   const OcctSharp_TopLocDatum3DHandle* source,

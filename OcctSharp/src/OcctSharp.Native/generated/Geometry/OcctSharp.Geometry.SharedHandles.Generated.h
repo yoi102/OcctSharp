@@ -434,6 +434,7 @@
 // Source: c:@S@Bisector_BisecAna@F@ReversedParameter#d#1
 // Source: c:@S@Bisector_BisecAna@F@SetTrim#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#
 // Source: c:@S@Bisector_BisecAna@F@SetTrim#d#d#
+// Source: c:@S@Bisector_BisecAna@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Bisector_BisecCC@F@Bisector_BisecCC#
 // Source: c:@S@Bisector_BisecCC@F@Bisector_BisecCC#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#S0_#d#d#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@Bisector_BisecCC@F@ChangeGuide#1
@@ -462,6 +463,7 @@
 // Source: c:@S@Bisector_BisecCC@F@Perform#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#S0_#d#d#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@Bisector_BisecCC@F@Reverse#
 // Source: c:@S@Bisector_BisecCC@F@ReversedParameter#d#1
+// Source: c:@S@Bisector_BisecCC@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Bisector_BisecPC@F@Bisector_BisecPC#
 // Source: c:@S@Bisector_BisecPC@F@Bisector_BisecPC#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@S@gp_Pnt2d#d#d#
 // Source: c:@S@Bisector_BisecPC@F@Bisector_BisecPC#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@S@gp_Pnt2d#d#d#d#
@@ -490,6 +492,7 @@
 // Source: c:@S@Bisector_BisecPC@F@Perform#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@S@gp_Pnt2d#d#d#
 // Source: c:@S@Bisector_BisecPC@F@Reverse#
 // Source: c:@S@Bisector_BisecPC@F@ReversedParameter#d#1
+// Source: c:@S@Bisector_BisecPC@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Bisector_Curve@F@DynamicType#1
 // Source: c:@S@Extrema_ExtPExtS@F@DynamicType#1
 // Source: c:@S@Extrema_ExtPExtS@F@Extrema_ExtPExtS#
@@ -621,6 +624,7 @@
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@Reverse#
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2dEval_AHTBezierCurve@F@StartPoint#1
+// Source: c:@S@Geom2dEval_AHTBezierCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@Copy#1
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@DynamicType#1
@@ -637,6 +641,7 @@
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@Position#1
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@Reverse#
 // Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@ReversedParameter#d#1
+// Source: c:@S@Geom2dEval_ArchimedeanSpiralCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@Copy#1
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@DynamicType#1
@@ -652,6 +657,7 @@
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@Radius#1
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@Reverse#
 // Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@ReversedParameter#d#1
+// Source: c:@S@Geom2dEval_CircleInvoluteCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@Copy#1
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@DynamicType#1
@@ -668,6 +674,7 @@
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@Reverse#
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@Scale#1
+// Source: c:@S@Geom2dEval_LogarithmicSpiralCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Amplitude#1
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Copy#1
@@ -685,6 +692,7 @@
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Position#1
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@Reverse#
 // Source: c:@S@Geom2dEval_SineWaveCurve@F@ReversedParameter#d#1
+// Source: c:@S@Geom2dEval_SineWaveCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2dEval_TBezierCurve@F@Alpha#1
 // Source: c:@S@Geom2dEval_TBezierCurve@F@Continuity#1
 // Source: c:@S@Geom2dEval_TBezierCurve@F@Copy#1
@@ -703,6 +711,7 @@
 // Source: c:@S@Geom2dEval_TBezierCurve@F@Reverse#
 // Source: c:@S@Geom2dEval_TBezierCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2dEval_TBezierCurve@F@StartPoint#1
+// Source: c:@S@Geom2dEval_TBezierCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_AxisPlacement@F@Angle#&1$@N@opencascade@S@handle>#$@S@Geom2d_AxisPlacement#1
 // Source: c:@S@Geom2d_AxisPlacement@F@Ax2d#1
 // Source: c:@S@Geom2d_AxisPlacement@F@Copy#1
@@ -716,6 +725,7 @@
 // Source: c:@S@Geom2d_AxisPlacement@F@SetAxis#&1$@S@gp_Ax2d#
 // Source: c:@S@Geom2d_AxisPlacement@F@SetDirection#&1$@S@gp_Dir2d#
 // Source: c:@S@Geom2d_AxisPlacement@F@SetLocation#&1$@S@gp_Pnt2d#
+// Source: c:@S@Geom2d_AxisPlacement@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_BSplineCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom2d_BSplineCurve@F@Continuity#1
 // Source: c:@S@Geom2d_BSplineCurve@F@Copy#1
@@ -765,6 +775,7 @@
 // Source: c:@S@Geom2d_BSplineCurve@F@SetPole#I#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@Geom2d_BSplineCurve@F@SetWeight#I#d#
 // Source: c:@S@Geom2d_BSplineCurve@F@StartPoint#1
+// Source: c:@S@Geom2d_BSplineCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_BSplineCurve@F@Weight#I#1
 // Source: c:@S@Geom2d_BezierCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom2d_BezierCurve@F@Continuity#1
@@ -796,6 +807,7 @@
 // Source: c:@S@Geom2d_BezierCurve@F@SetPole#I#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@Geom2d_BezierCurve@F@SetWeight#I#d#
 // Source: c:@S@Geom2d_BezierCurve@F@StartPoint#1
+// Source: c:@S@Geom2d_BezierCurve@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_BezierCurve@F@Weight#I#1
 // Source: c:@S@Geom2d_BoundedCurve@F@DynamicType#1
 // Source: c:@S@Geom2d_CartesianPoint@F@Copy#1
@@ -807,6 +819,7 @@
 // Source: c:@S@Geom2d_CartesianPoint@F@SetPnt2d#&1$@S@gp_Pnt2d#
 // Source: c:@S@Geom2d_CartesianPoint@F@SetX#d#
 // Source: c:@S@Geom2d_CartesianPoint@F@SetY#d#
+// Source: c:@S@Geom2d_CartesianPoint@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_CartesianPoint@F@X#1
 // Source: c:@S@Geom2d_CartesianPoint@F@Y#1
 // Source: c:@S@Geom2d_Circle@F@Circ2d#1
@@ -825,6 +838,7 @@
 // Source: c:@S@Geom2d_Circle@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_Circle@F@SetCirc2d#&1$@S@gp_Circ2d#
 // Source: c:@S@Geom2d_Circle@F@SetRadius#d#
+// Source: c:@S@Geom2d_Circle@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_Conic@F@Continuity#1
 // Source: c:@S@Geom2d_Conic@F@DynamicType#1
 // Source: c:@S@Geom2d_Conic@F@IsCN#I#1
@@ -839,8 +853,10 @@
 // Source: c:@S@Geom2d_Conic@F@YAxis#1
 // Source: c:@S@Geom2d_Curve@F@DN#d#I#1
 // Source: c:@S@Geom2d_Curve@F@DynamicType#1
+// Source: c:@S@Geom2d_Curve@F@ParametricTransformation#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Curve@F@Period#1
 // Source: c:@S@Geom2d_Curve@F@Reversed#1
+// Source: c:@S@Geom2d_Curve@F@TransformedParameter#d#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Direction@F@Copy#1
 // Source: c:@S@Geom2d_Direction@F@Crossed#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
 // Source: c:@S@Geom2d_Direction@F@Dir2d#1
@@ -853,6 +869,7 @@
 // Source: c:@S@Geom2d_Direction@F@SetX#d#
 // Source: c:@S@Geom2d_Direction@F@SetY#d#
 // Source: c:@S@Geom2d_Direction@F@SquareMagnitude#1
+// Source: c:@S@Geom2d_Direction@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_Ellipse@F@Copy#1
 // Source: c:@S@Geom2d_Ellipse@F@Directrix1#1
 // Source: c:@S@Geom2d_Ellipse@F@Directrix2#1
@@ -877,6 +894,7 @@
 // Source: c:@S@Geom2d_Ellipse@F@SetElips2d#&1$@S@gp_Elips2d#
 // Source: c:@S@Geom2d_Ellipse@F@SetMajorRadius#d#
 // Source: c:@S@Geom2d_Ellipse@F@SetMinorRadius#d#
+// Source: c:@S@Geom2d_Ellipse@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_Geometry@F@DynamicType#1
 // Source: c:@S@Geom2d_Geometry@F@Mirror#&1$@S@gp_Ax2d#
 // Source: c:@S@Geom2d_Geometry@F@Mirror#&1$@S@gp_Pnt2d#
@@ -886,6 +904,7 @@
 // Source: c:@S@Geom2d_Geometry@F@Rotated#&1$@S@gp_Pnt2d#d#1
 // Source: c:@S@Geom2d_Geometry@F@Scale#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@Geom2d_Geometry@F@Scaled#&1$@S@gp_Pnt2d#d#1
+// Source: c:@S@Geom2d_Geometry@F@Transformed#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Geometry@F@Translate#&1$@S@gp_Pnt2d#S0_#
 // Source: c:@S@Geom2d_Geometry@F@Translate#&1$@S@gp_Vec2d#
 // Source: c:@S@Geom2d_Geometry@F@Translated#&1$@S@gp_Pnt2d#S0_#1
@@ -920,6 +939,7 @@
 // Source: c:@S@Geom2d_Hyperbola@F@SetHypr2d#&1$@S@gp_Hypr2d#
 // Source: c:@S@Geom2d_Hyperbola@F@SetMajorRadius#d#
 // Source: c:@S@Geom2d_Hyperbola@F@SetMinorRadius#d#
+// Source: c:@S@Geom2d_Hyperbola@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_Line@F@Continuity#1
 // Source: c:@S@Geom2d_Line@F@Copy#1
 // Source: c:@S@Geom2d_Line@F@Direction#1
@@ -936,6 +956,7 @@
 // Source: c:@S@Geom2d_Line@F@LastParameter#1
 // Source: c:@S@Geom2d_Line@F@Lin2d#1
 // Source: c:@S@Geom2d_Line@F@Location#1
+// Source: c:@S@Geom2d_Line@F@ParametricTransformation#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Line@F@Position#1
 // Source: c:@S@Geom2d_Line@F@Reverse#
 // Source: c:@S@Geom2d_Line@F@ReversedParameter#d#1
@@ -943,6 +964,8 @@
 // Source: c:@S@Geom2d_Line@F@SetLin2d#&1$@S@gp_Lin2d#
 // Source: c:@S@Geom2d_Line@F@SetLocation#&1$@S@gp_Pnt2d#
 // Source: c:@S@Geom2d_Line@F@SetPosition#&1$@S@gp_Ax2d#
+// Source: c:@S@Geom2d_Line@F@Transform#&1$@S@gp_Trsf2d#
+// Source: c:@S@Geom2d_Line@F@TransformedParameter#d#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_OffsetCurve@F@BasisCurve#1
 // Source: c:@S@Geom2d_OffsetCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom2d_OffsetCurve@F@Continuity#1
@@ -960,12 +983,15 @@
 // Source: c:@S@Geom2d_OffsetCurve@F@IsPeriodic#1
 // Source: c:@S@Geom2d_OffsetCurve@F@LastParameter#1
 // Source: c:@S@Geom2d_OffsetCurve@F@Offset#1
+// Source: c:@S@Geom2d_OffsetCurve@F@ParametricTransformation#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_OffsetCurve@F@Period#1
 // Source: c:@S@Geom2d_OffsetCurve@F@Reverse#
 // Source: c:@S@Geom2d_OffsetCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_OffsetCurve@F@SetBasisCurve#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#b#
 // Source: c:@S@Geom2d_OffsetCurve@F@SetEvalRepresentation#&1$@N@opencascade@S@handle>#$@N@Geom2dEval_RepCurveDesc@S@Base#
 // Source: c:@S@Geom2d_OffsetCurve@F@SetOffsetValue#d#
+// Source: c:@S@Geom2d_OffsetCurve@F@Transform#&1$@S@gp_Trsf2d#
+// Source: c:@S@Geom2d_OffsetCurve@F@TransformedParameter#d#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Parabola@F@Copy#1
 // Source: c:@S@Geom2d_Parabola@F@Directrix#1
 // Source: c:@S@Geom2d_Parabola@F@DynamicType#1
@@ -984,9 +1010,12 @@
 // Source: c:@S@Geom2d_Parabola@F@LastParameter#1
 // Source: c:@S@Geom2d_Parabola@F@Parab2d#1
 // Source: c:@S@Geom2d_Parabola@F@Parameter#1
+// Source: c:@S@Geom2d_Parabola@F@ParametricTransformation#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Parabola@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_Parabola@F@SetFocal#d#
 // Source: c:@S@Geom2d_Parabola@F@SetParab2d#&1$@S@gp_Parab2d#
+// Source: c:@S@Geom2d_Parabola@F@Transform#&1$@S@gp_Trsf2d#
+// Source: c:@S@Geom2d_Parabola@F@TransformedParameter#d#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Point@F@Distance#&1$@N@opencascade@S@handle>#$@S@Geom2d_Point#1
 // Source: c:@S@Geom2d_Point@F@DynamicType#1
 // Source: c:@S@Geom2d_Point@F@SquareDistance#&1$@N@opencascade@S@handle>#$@S@Geom2d_Point#1
@@ -994,6 +1023,7 @@
 // Source: c:@S@Geom2d_Transformation@F@DynamicType#1
 // Source: c:@S@Geom2d_Transformation@F@Form#1
 // Source: c:@S@Geom2d_Transformation@F@Geom2d_Transformation#
+// Source: c:@S@Geom2d_Transformation@F@Geom2d_Transformation#&1$@S@gp_Trsf2d#
 // Source: c:@S@Geom2d_Transformation@F@Invert#
 // Source: c:@S@Geom2d_Transformation@F@Inverted#1
 // Source: c:@S@Geom2d_Transformation@F@IsNegative#1
@@ -1011,6 +1041,8 @@
 // Source: c:@S@Geom2d_Transformation@F@SetTransformation#&1$@S@gp_Ax2d#S0_#
 // Source: c:@S@Geom2d_Transformation@F@SetTranslation#&1$@S@gp_Pnt2d#S0_#
 // Source: c:@S@Geom2d_Transformation@F@SetTranslation#&1$@S@gp_Vec2d#
+// Source: c:@S@Geom2d_Transformation@F@SetTrsf2d#&1$@S@gp_Trsf2d#
+// Source: c:@S@Geom2d_Transformation@F@Trsf2d#1
 // Source: c:@S@Geom2d_Transformation@F@Value#I#I#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@BasisCurve#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@Continuity#1
@@ -1025,11 +1057,14 @@
 // Source: c:@S@Geom2d_TrimmedCurve@F@IsClosed#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@IsPeriodic#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@LastParameter#1
+// Source: c:@S@Geom2d_TrimmedCurve@F@ParametricTransformation#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@Period#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@Reverse#
 // Source: c:@S@Geom2d_TrimmedCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom2d_TrimmedCurve@F@SetTrim#d#d#b#b#
 // Source: c:@S@Geom2d_TrimmedCurve@F@StartPoint#1
+// Source: c:@S@Geom2d_TrimmedCurve@F@Transform#&1$@S@gp_Trsf2d#
+// Source: c:@S@Geom2d_TrimmedCurve@F@TransformedParameter#d#&1$@S@gp_Trsf2d#1
 // Source: c:@S@Geom2d_Vector@F@Angle#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
 // Source: c:@S@Geom2d_Vector@F@Dot#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
 // Source: c:@S@Geom2d_Vector@F@DynamicType#1
@@ -1060,6 +1095,7 @@
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@SquareMagnitude#1
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@Subtract#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#
 // Source: c:@S@Geom2d_VectorWithMagnitude@F@Subtracted#&1$@N@opencascade@S@handle>#$@S@Geom2d_Vector#1
+// Source: c:@S@Geom2d_VectorWithMagnitude@F@Transform#&1$@S@gp_Trsf2d#
 // Source: c:@S@GeomAdaptor_Curve@F@BSpline#1
 // Source: c:@S@GeomAdaptor_Curve@F@Bezier#1
 // Source: c:@S@GeomAdaptor_Curve@F@Circle#1
@@ -1236,6 +1272,8 @@
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@EvalDN#d#I#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@FirstParameter#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@GeomAdaptor_TransformedCurve#
+// Source: c:@S@GeomAdaptor_TransformedCurve@F@GeomAdaptor_TransformedCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@gp_Trsf#
+// Source: c:@S@GeomAdaptor_TransformedCurve@F@GeomAdaptor_TransformedCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#d#&1$@S@gp_Trsf#
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@GeomCurve#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@GetType#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Hyperbola#1
@@ -1256,8 +1294,10 @@
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Parabola#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Period#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Resolution#d#1
+// Source: c:@S@GeomAdaptor_TransformedCurve@F@SetTrsf#&1$@S@gp_Trsf#
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@ShallowCopy#1
 // Source: c:@S@GeomAdaptor_TransformedCurve@F@Trim#d#d#d#1
+// Source: c:@S@GeomAdaptor_TransformedCurve@F@Trsf#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@AxeOfRevolution#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@BSpline#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@BasisCurve#1
@@ -1272,6 +1312,8 @@
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@FirstUParameter#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@FirstVParameter#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomAdaptor_TransformedSurface#
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomAdaptor_TransformedSurface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@gp_Trsf#
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomAdaptor_TransformedSurface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#d#d#&1$@S@gp_Trsf#d#d#
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomSurface#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomSurfaceOriginal#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@GeomSurfaceTransformed#1
@@ -1285,6 +1327,8 @@
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@IsVRational#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@LastUParameter#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@LastVParameter#1
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@Load#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@gp_Trsf#
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@Load#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#d#d#&1$@S@gp_Trsf#d#d#
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@NbUIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@NbUKnots#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@NbUPoles#1
@@ -1293,11 +1337,13 @@
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@NbVPoles#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@OffsetValue#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@Plane#1
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@SetTrsf#&1$@S@gp_Trsf#
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@ShallowCopy#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@Sphere#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@ToleranceU#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@ToleranceV#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@Torus#1
+// Source: c:@S@GeomAdaptor_TransformedSurface@F@Trsf#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@UContinuity#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@UDegree#1
 // Source: c:@S@GeomAdaptor_TransformedSurface@F@UPeriod#1
@@ -1327,6 +1373,7 @@
 // Source: c:@S@GeomEval_AHTBezierCurve@F@Reverse#
 // Source: c:@S@GeomEval_AHTBezierCurve@F@ReversedParameter#d#1
 // Source: c:@S@GeomEval_AHTBezierCurve@F@StartPoint#1
+// Source: c:@S@GeomEval_AHTBezierCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_AHTBezierSurface@F@AlgDegreeU#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@AlgDegreeV#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@AlphaU#1
@@ -1348,6 +1395,7 @@
 // Source: c:@S@GeomEval_AHTBezierSurface@F@IsVRational#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@NbPolesU#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@NbPolesV#1
+// Source: c:@S@GeomEval_AHTBezierSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_AHTBezierSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_AHTBezierSurface@F@UReverse#
 // Source: c:@S@GeomEval_AHTBezierSurface@F@UReversedParameter#d#1
@@ -1365,6 +1413,7 @@
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@IsVPeriodic#1
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@Pitch#1
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@SetPitch#d#
+// Source: c:@S@GeomEval_CircularHelicoidSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@UReverse#
 // Source: c:@S@GeomEval_CircularHelicoidSurface@F@UReversedParameter#d#1
@@ -1387,6 +1436,7 @@
 // Source: c:@S@GeomEval_CircularHelixCurve@F@Radius#1
 // Source: c:@S@GeomEval_CircularHelixCurve@F@Reverse#
 // Source: c:@S@GeomEval_CircularHelixCurve@F@ReversedParameter#d#1
+// Source: c:@S@GeomEval_CircularHelixCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_EllipsoidSurface@F@Copy#1
 // Source: c:@S@GeomEval_EllipsoidSurface@F@DynamicType#1
 // Source: c:@S@GeomEval_EllipsoidSurface@F@EvalD0#d#d#1
@@ -1402,6 +1452,7 @@
 // Source: c:@S@GeomEval_EllipsoidSurface@F@SetSemiAxisA#d#
 // Source: c:@S@GeomEval_EllipsoidSurface@F@SetSemiAxisB#d#
 // Source: c:@S@GeomEval_EllipsoidSurface@F@SetSemiAxisC#d#
+// Source: c:@S@GeomEval_EllipsoidSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_EllipsoidSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_EllipsoidSurface@F@UReverse#
 // Source: c:@S@GeomEval_EllipsoidSurface@F@UReversedParameter#d#1
@@ -1421,6 +1472,7 @@
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@SemiAxisB#1
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@SetSemiAxisA#d#
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@SetSemiAxisB#d#
+// Source: c:@S@GeomEval_HypParaboloidSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@UReverse#
 // Source: c:@S@GeomEval_HypParaboloidSurface@F@UReversedParameter#d#1
@@ -1442,6 +1494,7 @@
 // Source: c:@S@GeomEval_HyperboloidSurface@F@SetMode#$@S@GeomEval_HyperboloidSurface@E@SheetMode#
 // Source: c:@S@GeomEval_HyperboloidSurface@F@SetR1#d#
 // Source: c:@S@GeomEval_HyperboloidSurface@F@SetR2#d#
+// Source: c:@S@GeomEval_HyperboloidSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_HyperboloidSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_HyperboloidSurface@F@UReverse#
 // Source: c:@S@GeomEval_HyperboloidSurface@F@UReversedParameter#d#1
@@ -1459,6 +1512,7 @@
 // Source: c:@S@GeomEval_ParaboloidSurface@F@IsVClosed#1
 // Source: c:@S@GeomEval_ParaboloidSurface@F@IsVPeriodic#1
 // Source: c:@S@GeomEval_ParaboloidSurface@F@SetFocal#d#
+// Source: c:@S@GeomEval_ParaboloidSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_ParaboloidSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_ParaboloidSurface@F@UReverse#
 // Source: c:@S@GeomEval_ParaboloidSurface@F@UReversedParameter#d#1
@@ -1482,6 +1536,7 @@
 // Source: c:@S@GeomEval_SineWaveCurve@F@Position#1
 // Source: c:@S@GeomEval_SineWaveCurve@F@Reverse#
 // Source: c:@S@GeomEval_SineWaveCurve@F@ReversedParameter#d#1
+// Source: c:@S@GeomEval_SineWaveCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_TBezierCurve@F@Alpha#1
 // Source: c:@S@GeomEval_TBezierCurve@F@Continuity#1
 // Source: c:@S@GeomEval_TBezierCurve@F@Copy#1
@@ -1500,6 +1555,7 @@
 // Source: c:@S@GeomEval_TBezierCurve@F@Reverse#
 // Source: c:@S@GeomEval_TBezierCurve@F@ReversedParameter#d#1
 // Source: c:@S@GeomEval_TBezierCurve@F@StartPoint#1
+// Source: c:@S@GeomEval_TBezierCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_TBezierSurface@F@AlphaU#1
 // Source: c:@S@GeomEval_TBezierSurface@F@AlphaV#1
 // Source: c:@S@GeomEval_TBezierSurface@F@Continuity#1
@@ -1518,6 +1574,7 @@
 // Source: c:@S@GeomEval_TBezierSurface@F@NbVPoles#1
 // Source: c:@S@GeomEval_TBezierSurface@F@OrderU#1
 // Source: c:@S@GeomEval_TBezierSurface@F@OrderV#1
+// Source: c:@S@GeomEval_TBezierSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomEval_TBezierSurface@F@UIso#d#1
 // Source: c:@S@GeomEval_TBezierSurface@F@UReverse#
 // Source: c:@S@GeomEval_TBezierSurface@F@UReversedParameter#d#1
@@ -1817,7 +1874,9 @@
 // Source: c:@S@GeomPlate_Surface@F@IsUPeriodic#1
 // Source: c:@S@GeomPlate_Surface@F@IsVClosed#1
 // Source: c:@S@GeomPlate_Surface@F@IsVPeriodic#1
+// Source: c:@S@GeomPlate_Surface@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@GeomPlate_Surface@F@SetBounds#d#d#d#d#
+// Source: c:@S@GeomPlate_Surface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeomPlate_Surface@F@UIso#d#1
 // Source: c:@S@GeomPlate_Surface@F@UPeriod#1
 // Source: c:@S@GeomPlate_Surface@F@UReverse#
@@ -1836,6 +1895,7 @@
 // Source: c:@S@Geom_Axis1Placement@F@Reverse#
 // Source: c:@S@Geom_Axis1Placement@F@Reversed#1
 // Source: c:@S@Geom_Axis1Placement@F@SetDirection#&1$@S@gp_Dir#
+// Source: c:@S@Geom_Axis1Placement@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Axis2Placement@F@Ax2#1
 // Source: c:@S@Geom_Axis2Placement@F@Copy#1
 // Source: c:@S@Geom_Axis2Placement@F@DynamicType#1
@@ -1845,6 +1905,7 @@
 // Source: c:@S@Geom_Axis2Placement@F@SetDirection#&1$@S@gp_Dir#
 // Source: c:@S@Geom_Axis2Placement@F@SetXDirection#&1$@S@gp_Dir#
 // Source: c:@S@Geom_Axis2Placement@F@SetYDirection#&1$@S@gp_Dir#
+// Source: c:@S@Geom_Axis2Placement@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Axis2Placement@F@XDirection#1
 // Source: c:@S@Geom_Axis2Placement@F@YDirection#1
 // Source: c:@S@Geom_AxisPlacement@F@Angle#&1$@N@opencascade@S@handle>#$@S@Geom_AxisPlacement#1
@@ -1899,6 +1960,7 @@
 // Source: c:@S@Geom_BSplineCurve@F@SetPole#I#&1$@S@gp_Pnt#d#
 // Source: c:@S@Geom_BSplineCurve@F@SetWeight#I#d#
 // Source: c:@S@Geom_BSplineCurve@F@StartPoint#1
+// Source: c:@S@Geom_BSplineCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_BSplineCurve@F@Weight#I#1
 // Source: c:@S@Geom_BSplineSurface@F@CheckAndSegment#d#d#d#d#d#d#
 // Source: c:@S@Geom_BSplineSurface@F@ClearEvalRepresentation#
@@ -1952,6 +2014,7 @@
 // Source: c:@S@Geom_BSplineSurface@F@SetVOrigin#I#
 // Source: c:@S@Geom_BSplineSurface@F@SetVPeriodic#
 // Source: c:@S@Geom_BSplineSurface@F@SetWeight#I#I#d#
+// Source: c:@S@Geom_BSplineSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_BSplineSurface@F@UDegree#1
 // Source: c:@S@Geom_BSplineSurface@F@UIso#d#1
 // Source: c:@S@Geom_BSplineSurface@F@UIso#d#b#1
@@ -1998,6 +2061,7 @@
 // Source: c:@S@Geom_BezierCurve@F@SetPole#I#&1$@S@gp_Pnt#d#
 // Source: c:@S@Geom_BezierCurve@F@SetWeight#I#d#
 // Source: c:@S@Geom_BezierCurve@F@StartPoint#1
+// Source: c:@S@Geom_BezierCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_BezierCurve@F@Weight#I#1
 // Source: c:@S@Geom_BezierSurface@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_BezierSurface@F@Continuity#1
@@ -2024,6 +2088,7 @@
 // Source: c:@S@Geom_BezierSurface@F@SetPole#I#I#&1$@S@gp_Pnt#
 // Source: c:@S@Geom_BezierSurface@F@SetPole#I#I#&1$@S@gp_Pnt#d#
 // Source: c:@S@Geom_BezierSurface@F@SetWeight#I#I#d#
+// Source: c:@S@Geom_BezierSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_BezierSurface@F@UDegree#1
 // Source: c:@S@Geom_BezierSurface@F@UIso#d#1
 // Source: c:@S@Geom_BezierSurface@F@UReverse#
@@ -2045,6 +2110,7 @@
 // Source: c:@S@Geom_CartesianPoint@F@SetX#d#
 // Source: c:@S@Geom_CartesianPoint@F@SetY#d#
 // Source: c:@S@Geom_CartesianPoint@F@SetZ#d#
+// Source: c:@S@Geom_CartesianPoint@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_CartesianPoint@F@X#1
 // Source: c:@S@Geom_CartesianPoint@F@Y#1
 // Source: c:@S@Geom_CartesianPoint@F@Z#1
@@ -2064,6 +2130,7 @@
 // Source: c:@S@Geom_Circle@F@ReversedParameter#d#1
 // Source: c:@S@Geom_Circle@F@SetCirc#&1$@S@gp_Circ#
 // Source: c:@S@Geom_Circle@F@SetRadius#d#
+// Source: c:@S@Geom_Circle@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Conic@F@Axis#1
 // Source: c:@S@Geom_Conic@F@Continuity#1
 // Source: c:@S@Geom_Conic@F@DynamicType#1
@@ -2087,11 +2154,13 @@
 // Source: c:@S@Geom_ConicalSurface@F@IsUPeriodic#1
 // Source: c:@S@Geom_ConicalSurface@F@IsVClosed#1
 // Source: c:@S@Geom_ConicalSurface@F@IsVPeriodic#1
+// Source: c:@S@Geom_ConicalSurface@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_ConicalSurface@F@RefRadius#1
 // Source: c:@S@Geom_ConicalSurface@F@SemiAngle#1
 // Source: c:@S@Geom_ConicalSurface@F@SetCone#&1$@S@gp_Cone#
 // Source: c:@S@Geom_ConicalSurface@F@SetRadius#d#
 // Source: c:@S@Geom_ConicalSurface@F@SetSemiAngle#d#
+// Source: c:@S@Geom_ConicalSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_ConicalSurface@F@UIso#d#1
 // Source: c:@S@Geom_ConicalSurface@F@UReversedParameter#d#1
 // Source: c:@S@Geom_ConicalSurface@F@VIso#d#1
@@ -2099,8 +2168,10 @@
 // Source: c:@S@Geom_ConicalSurface@F@VReversedParameter#d#1
 // Source: c:@S@Geom_Curve@F@DN#d#I#1
 // Source: c:@S@Geom_Curve@F@DynamicType#1
+// Source: c:@S@Geom_Curve@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Curve@F@Period#1
 // Source: c:@S@Geom_Curve@F@Reversed#1
+// Source: c:@S@Geom_Curve@F@TransformedParameter#d#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Curve@F@Value#d#1
 // Source: c:@S@Geom_CylindricalSurface@F@Copy#1
 // Source: c:@S@Geom_CylindricalSurface@F@Cylinder#1
@@ -2112,9 +2183,11 @@
 // Source: c:@S@Geom_CylindricalSurface@F@IsUPeriodic#1
 // Source: c:@S@Geom_CylindricalSurface@F@IsVClosed#1
 // Source: c:@S@Geom_CylindricalSurface@F@IsVPeriodic#1
+// Source: c:@S@Geom_CylindricalSurface@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_CylindricalSurface@F@Radius#1
 // Source: c:@S@Geom_CylindricalSurface@F@SetCylinder#&1$@S@gp_Cylinder#
 // Source: c:@S@Geom_CylindricalSurface@F@SetRadius#d#
+// Source: c:@S@Geom_CylindricalSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_CylindricalSurface@F@UIso#d#1
 // Source: c:@S@Geom_CylindricalSurface@F@UReversedParameter#d#1
 // Source: c:@S@Geom_CylindricalSurface@F@VIso#d#1
@@ -2135,6 +2208,7 @@
 // Source: c:@S@Geom_Direction@F@SetY#d#
 // Source: c:@S@Geom_Direction@F@SetZ#d#
 // Source: c:@S@Geom_Direction@F@SquareMagnitude#1
+// Source: c:@S@Geom_Direction@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_ElementarySurface@F@Axis#1
 // Source: c:@S@Geom_ElementarySurface@F@Continuity#1
 // Source: c:@S@Geom_ElementarySurface@F@DynamicType#1
@@ -2171,6 +2245,7 @@
 // Source: c:@S@Geom_Ellipse@F@SetElips#&1$@S@gp_Elips#
 // Source: c:@S@Geom_Ellipse@F@SetMajorRadius#d#
 // Source: c:@S@Geom_Ellipse@F@SetMinorRadius#d#
+// Source: c:@S@Geom_Ellipse@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Geometry@F@DynamicType#1
 // Source: c:@S@Geom_Geometry@F@Mirror#&1$@S@gp_Ax1#
 // Source: c:@S@Geom_Geometry@F@Mirror#&1$@S@gp_Ax2#
@@ -2215,6 +2290,7 @@
 // Source: c:@S@Geom_Hyperbola@F@SetHypr#&1$@S@gp_Hypr#
 // Source: c:@S@Geom_Hyperbola@F@SetMajorRadius#d#
 // Source: c:@S@Geom_Hyperbola@F@SetMinorRadius#d#
+// Source: c:@S@Geom_Hyperbola@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Line@F@Continuity#1
 // Source: c:@S@Geom_Line@F@Copy#1
 // Source: c:@S@Geom_Line@F@DynamicType#1
@@ -2229,6 +2305,7 @@
 // Source: c:@S@Geom_Line@F@IsPeriodic#1
 // Source: c:@S@Geom_Line@F@LastParameter#1
 // Source: c:@S@Geom_Line@F@Lin#1
+// Source: c:@S@Geom_Line@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Line@F@Position#1
 // Source: c:@S@Geom_Line@F@Reverse#
 // Source: c:@S@Geom_Line@F@ReversedParameter#d#1
@@ -2236,6 +2313,8 @@
 // Source: c:@S@Geom_Line@F@SetLin#&1$@S@gp_Lin#
 // Source: c:@S@Geom_Line@F@SetLocation#&1$@S@gp_Pnt#
 // Source: c:@S@Geom_Line@F@SetPosition#&1$@S@gp_Ax1#
+// Source: c:@S@Geom_Line@F@Transform#&1$@S@gp_Trsf#
+// Source: c:@S@Geom_Line@F@TransformedParameter#d#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_OffsetCurve@F@BasisCurve#1
 // Source: c:@S@Geom_OffsetCurve@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_OffsetCurve@F@Continuity#1
@@ -2253,12 +2332,15 @@
 // Source: c:@S@Geom_OffsetCurve@F@IsPeriodic#1
 // Source: c:@S@Geom_OffsetCurve@F@LastParameter#1
 // Source: c:@S@Geom_OffsetCurve@F@Offset#1
+// Source: c:@S@Geom_OffsetCurve@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_OffsetCurve@F@Period#1
 // Source: c:@S@Geom_OffsetCurve@F@Reverse#
 // Source: c:@S@Geom_OffsetCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom_OffsetCurve@F@SetBasisCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#b#
 // Source: c:@S@Geom_OffsetCurve@F@SetDirection#&1$@S@gp_Dir#
 // Source: c:@S@Geom_OffsetCurve@F@SetOffsetValue#d#
+// Source: c:@S@Geom_OffsetCurve@F@Transform#&1$@S@gp_Trsf#
+// Source: c:@S@Geom_OffsetCurve@F@TransformedParameter#d#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_OffsetSurface@F@BasisSurface#1
 // Source: c:@S@Geom_OffsetSurface@F@ClearEvalRepresentation#
 // Source: c:@S@Geom_OffsetSurface@F@Continuity#1
@@ -2276,9 +2358,11 @@
 // Source: c:@S@Geom_OffsetSurface@F@IsVClosed#1
 // Source: c:@S@Geom_OffsetSurface@F@IsVPeriodic#1
 // Source: c:@S@Geom_OffsetSurface@F@Offset#1
+// Source: c:@S@Geom_OffsetSurface@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_OffsetSurface@F@SetBasisSurface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#b#
 // Source: c:@S@Geom_OffsetSurface@F@SetOffsetValue#d#
 // Source: c:@S@Geom_OffsetSurface@F@Surface#1
+// Source: c:@S@Geom_OffsetSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_OffsetSurface@F@UIso#d#1
 // Source: c:@S@Geom_OffsetSurface@F@UPeriod#1
 // Source: c:@S@Geom_OffsetSurface@F@UReverse#
@@ -2304,9 +2388,12 @@
 // Source: c:@S@Geom_Parabola@F@LastParameter#1
 // Source: c:@S@Geom_Parabola@F@Parab#1
 // Source: c:@S@Geom_Parabola@F@Parameter#1
+// Source: c:@S@Geom_Parabola@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Parabola@F@ReversedParameter#d#1
 // Source: c:@S@Geom_Parabola@F@SetFocal#d#
 // Source: c:@S@Geom_Parabola@F@SetParab#&1$@S@gp_Parab#
+// Source: c:@S@Geom_Parabola@F@Transform#&1$@S@gp_Trsf#
+// Source: c:@S@Geom_Parabola@F@TransformedParameter#d#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Plane@F@Copy#1
 // Source: c:@S@Geom_Plane@F@DynamicType#1
 // Source: c:@S@Geom_Plane@F@EvalD0#d#d#1
@@ -2318,8 +2405,10 @@
 // Source: c:@S@Geom_Plane@F@IsUPeriodic#1
 // Source: c:@S@Geom_Plane@F@IsVClosed#1
 // Source: c:@S@Geom_Plane@F@IsVPeriodic#1
+// Source: c:@S@Geom_Plane@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Plane@F@Pln#1
 // Source: c:@S@Geom_Plane@F@SetPln#&1$@S@gp_Pln#
+// Source: c:@S@Geom_Plane@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Plane@F@UIso#d#1
 // Source: c:@S@Geom_Plane@F@UReverse#
 // Source: c:@S@Geom_Plane@F@UReversedParameter#d#1
@@ -2343,8 +2432,10 @@
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@IsUPeriodic#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@IsVClosed#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@IsVPeriodic#1
+// Source: c:@S@Geom_RectangularTrimmedSurface@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@SetTrim#d#d#b#b#
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@SetTrim#d#d#d#d#b#b#
+// Source: c:@S@Geom_RectangularTrimmedSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@UIso#d#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@UPeriod#1
 // Source: c:@S@Geom_RectangularTrimmedSurface@F@UReverse#
@@ -2367,6 +2458,7 @@
 // Source: c:@S@Geom_SphericalSurface@F@SetRadius#d#
 // Source: c:@S@Geom_SphericalSurface@F@SetSphere#&1$@S@gp_Sphere#
 // Source: c:@S@Geom_SphericalSurface@F@Sphere#1
+// Source: c:@S@Geom_SphericalSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_SphericalSurface@F@UIso#d#1
 // Source: c:@S@Geom_SphericalSurface@F@UReversedParameter#d#1
 // Source: c:@S@Geom_SphericalSurface@F@VIso#d#1
@@ -2374,6 +2466,7 @@
 // Source: c:@S@Geom_SphericalSurface@F@Volume#1
 // Source: c:@S@Geom_Surface@F@DN#d#d#I#I#1
 // Source: c:@S@Geom_Surface@F@DynamicType#1
+// Source: c:@S@Geom_Surface@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Surface@F@UPeriod#1
 // Source: c:@S@Geom_Surface@F@UReversed#1
 // Source: c:@S@Geom_Surface@F@VPeriod#1
@@ -2392,8 +2485,10 @@
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@IsUPeriodic#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@IsVClosed#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@IsVPeriodic#1
+// Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@SetBasisCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@SetDirection#&1$@S@gp_Dir#
+// Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@UIso#d#1
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@UReverse#
 // Source: c:@S@Geom_SurfaceOfLinearExtrusion@F@UReversedParameter#d#1
@@ -2415,11 +2510,13 @@
 // Source: c:@S@Geom_SurfaceOfRevolution@F@IsVClosed#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@IsVPeriodic#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@Location#1
+// Source: c:@S@Geom_SurfaceOfRevolution@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@ReferencePlane#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@SetAxis#&1$@S@gp_Ax1#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@SetBasisCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@SetDirection#&1$@S@gp_Dir#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@SetLocation#&1$@S@gp_Pnt#
+// Source: c:@S@Geom_SurfaceOfRevolution@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@UIso#d#1
 // Source: c:@S@Geom_SurfaceOfRevolution@F@UReverse#
 // Source: c:@S@Geom_SurfaceOfRevolution@F@UReversedParameter#d#1
@@ -2446,6 +2543,7 @@
 // Source: c:@S@Geom_ToroidalSurface@F@SetMinorRadius#d#
 // Source: c:@S@Geom_ToroidalSurface@F@SetTorus#&1$@S@gp_Torus#
 // Source: c:@S@Geom_ToroidalSurface@F@Torus#1
+// Source: c:@S@Geom_ToroidalSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_ToroidalSurface@F@UIso#d#1
 // Source: c:@S@Geom_ToroidalSurface@F@UReversedParameter#d#1
 // Source: c:@S@Geom_ToroidalSurface@F@VIso#d#1
@@ -2455,6 +2553,7 @@
 // Source: c:@S@Geom_Transformation@F@DynamicType#1
 // Source: c:@S@Geom_Transformation@F@Form#1
 // Source: c:@S@Geom_Transformation@F@Geom_Transformation#
+// Source: c:@S@Geom_Transformation@F@Geom_Transformation#&1$@S@gp_Trsf#
 // Source: c:@S@Geom_Transformation@F@Invert#
 // Source: c:@S@Geom_Transformation@F@Inverted#1
 // Source: c:@S@Geom_Transformation@F@IsNegative#1
@@ -2473,6 +2572,8 @@
 // Source: c:@S@Geom_Transformation@F@SetTransformation#&1$@S@gp_Ax3#S0_#
 // Source: c:@S@Geom_Transformation@F@SetTranslation#&1$@S@gp_Pnt#S0_#
 // Source: c:@S@Geom_Transformation@F@SetTranslation#&1$@S@gp_Vec#
+// Source: c:@S@Geom_Transformation@F@SetTrsf#&1$@S@gp_Trsf#
+// Source: c:@S@Geom_Transformation@F@Trsf#1
 // Source: c:@S@Geom_Transformation@F@Value#I#I#1
 // Source: c:@S@Geom_TrimmedCurve@F@BasisCurve#1
 // Source: c:@S@Geom_TrimmedCurve@F@Continuity#1
@@ -2487,11 +2588,14 @@
 // Source: c:@S@Geom_TrimmedCurve@F@IsClosed#1
 // Source: c:@S@Geom_TrimmedCurve@F@IsPeriodic#1
 // Source: c:@S@Geom_TrimmedCurve@F@LastParameter#1
+// Source: c:@S@Geom_TrimmedCurve@F@ParametricTransformation#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_TrimmedCurve@F@Period#1
 // Source: c:@S@Geom_TrimmedCurve@F@Reverse#
 // Source: c:@S@Geom_TrimmedCurve@F@ReversedParameter#d#1
 // Source: c:@S@Geom_TrimmedCurve@F@SetTrim#d#d#b#b#
 // Source: c:@S@Geom_TrimmedCurve@F@StartPoint#1
+// Source: c:@S@Geom_TrimmedCurve@F@Transform#&1$@S@gp_Trsf#
+// Source: c:@S@Geom_TrimmedCurve@F@TransformedParameter#d#&1$@S@gp_Trsf#1
 // Source: c:@S@Geom_Vector@F@Angle#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#1
 // Source: c:@S@Geom_Vector@F@AngleWithRef#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#S0_#1
 // Source: c:@S@Geom_Vector@F@Dot#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#1
@@ -2529,6 +2633,7 @@
 // Source: c:@S@Geom_VectorWithMagnitude@F@SquareMagnitude#1
 // Source: c:@S@Geom_VectorWithMagnitude@F@Subtract#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#
 // Source: c:@S@Geom_VectorWithMagnitude@F@Subtracted#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#1
+// Source: c:@S@Geom_VectorWithMagnitude@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@GeometryTest_DrawableQualifiedCurve2d@F@DynamicType#1
 // Source: c:@S@Law_BSpFunc@F@Continuity#1
 // Source: c:@S@Law_BSpFunc@F@Curve#1
@@ -5686,6 +5791,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_bisec
   const OcctSharp_BisectorBisecAnaHandle* handle,
   const OcctSharp_Geom2dCurveHandle* cu);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_bisec_ana_method_transform_0(
+  const OcctSharp_BisectorBisecAnaHandle* handle,
+  OcctSharp_Value_Transform2d t);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_bisec_ana_clone(
   const OcctSharp_BisectorBisecAnaHandle* source,
   OcctSharp_BisectorBisecAnaHandle** out_handle);
@@ -5837,6 +5946,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_bisec
   double u,
   double* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_bisec_cc_method_transform_0(
+  const OcctSharp_BisectorBisecCCHandle* handle,
+  OcctSharp_Value_Transform2d t);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_bisec_cc_clone(
   const OcctSharp_BisectorBisecCCHandle* source,
   OcctSharp_BisectorBisecCCHandle** out_handle);
@@ -5987,6 +6100,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_bisec
   const OcctSharp_BisectorBisecPCHandle* handle,
   double u,
   double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_bisec_pc_method_transform_0(
+  const OcctSharp_BisectorBisecPCHandle* handle,
+  OcctSharp_Value_Transform2d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_bisector_bisec_pc_clone(
   const OcctSharp_BisectorBisecPCHandle* source,
@@ -6928,6 +7045,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_ah
   const OcctSharp_Geom2dEvalAHTBezierCurveHandle* handle,
   OcctSharp_Value_Point2d* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_ahtbezier_curve_method_transform_0(
+  const OcctSharp_Geom2dEvalAHTBezierCurveHandle* handle,
+  OcctSharp_Value_Transform2d t);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_ahtbezier_curve_clone(
   const OcctSharp_Geom2dEvalAHTBezierCurveHandle* source,
   OcctSharp_Geom2dEvalAHTBezierCurveHandle** out_handle);
@@ -7017,6 +7138,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_ar
   double u,
   double* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_archimedean_spiral_curve_method_transform_0(
+  const OcctSharp_Geom2dEvalArchimedeanSpiralCurveHandle* handle,
+  OcctSharp_Value_Transform2d t);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_archimedean_spiral_curve_clone(
   const OcctSharp_Geom2dEvalArchimedeanSpiralCurveHandle* source,
   OcctSharp_Geom2dEvalArchimedeanSpiralCurveHandle** out_handle);
@@ -7100,6 +7225,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_ci
   const OcctSharp_Geom2dEvalCircleInvoluteCurveHandle* handle,
   double u,
   double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_circle_involute_curve_method_transform_0(
+  const OcctSharp_Geom2dEvalCircleInvoluteCurveHandle* handle,
+  OcctSharp_Value_Transform2d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_circle_involute_curve_clone(
   const OcctSharp_Geom2dEvalCircleInvoluteCurveHandle* source,
@@ -7189,6 +7318,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_lo
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_logarithmic_spiral_curve_method_scale_0(
   const OcctSharp_Geom2dEvalLogarithmicSpiralCurveHandle* handle,
   double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_logarithmic_spiral_curve_method_transform_0(
+  const OcctSharp_Geom2dEvalLogarithmicSpiralCurveHandle* handle,
+  OcctSharp_Value_Transform2d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_logarithmic_spiral_curve_clone(
   const OcctSharp_Geom2dEvalLogarithmicSpiralCurveHandle* source,
@@ -7303,6 +7436,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_si
   double u,
   double* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_sine_wave_curve_method_transform_0(
+  const OcctSharp_Geom2dEvalSineWaveCurveHandle* handle,
+  OcctSharp_Value_Transform2d t);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_sine_wave_curve_clone(
   const OcctSharp_Geom2dEvalSineWaveCurveHandle* source,
   OcctSharp_Geom2dEvalSineWaveCurveHandle** out_handle);
@@ -7398,6 +7535,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_tb
   const OcctSharp_Geom2dEvalTBezierCurveHandle* handle,
   OcctSharp_Value_Point2d* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_tbezier_curve_method_transform_0(
+  const OcctSharp_Geom2dEvalTBezierCurveHandle* handle,
+  OcctSharp_Value_Transform2d t);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_eval_tbezier_curve_clone(
   const OcctSharp_Geom2dEvalTBezierCurveHandle* source,
   OcctSharp_Geom2dEvalTBezierCurveHandle** out_handle);
@@ -7469,6 +7610,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_axis_pl
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_axis_placement_method_set_location_0(
   const OcctSharp_Geom2dAxisPlacementHandle* handle,
   OcctSharp_Value_Point2d p);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_axis_placement_method_transform_0(
+  const OcctSharp_Geom2dAxisPlacementHandle* handle,
+  OcctSharp_Value_Transform2d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_axis_placement_clone(
   const OcctSharp_Geom2dAxisPlacementHandle* source,
@@ -7722,6 +7867,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_bspline
   const OcctSharp_Geom2dBSplineCurveHandle* handle,
   OcctSharp_Value_Point2d* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_bspline_curve_method_transform_0(
+  const OcctSharp_Geom2dBSplineCurveHandle* handle,
+  OcctSharp_Value_Transform2d t);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_bspline_curve_method_weight_0(
   const OcctSharp_Geom2dBSplineCurveHandle* handle,
   int32_t index,
@@ -7879,6 +8028,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_bezier_
   const OcctSharp_Geom2dBezierCurveHandle* handle,
   OcctSharp_Value_Point2d* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_bezier_curve_method_transform_0(
+  const OcctSharp_Geom2dBezierCurveHandle* handle,
+  OcctSharp_Value_Transform2d t);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_bezier_curve_method_weight_0(
   const OcctSharp_Geom2dBezierCurveHandle* handle,
   int32_t index,
@@ -7963,6 +8116,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_cartesi
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_cartesian_point_method_set_y_0(
   const OcctSharp_Geom2dCartesianPointHandle* handle,
   double y);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_cartesian_point_method_transform_0(
+  const OcctSharp_Geom2dCartesianPointHandle* handle,
+  OcctSharp_Value_Transform2d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_cartesian_point_method_x_0(
   const OcctSharp_Geom2dCartesianPointHandle* handle,
@@ -8062,6 +8219,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_circle_
   const OcctSharp_Geom2dCircleHandle* handle,
   double r);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_circle_method_transform_0(
+  const OcctSharp_Geom2dCircleHandle* handle,
+  OcctSharp_Value_Transform2d t);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_circle_clone(
   const OcctSharp_Geom2dCircleHandle* source,
   OcctSharp_Geom2dCircleHandle** out_handle);
@@ -8158,6 +8319,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_curve_m
   const OcctSharp_Geom2dCurveHandle* handle,
   OcctSharp_StandardTypeHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_curve_method_parametric_transformation_0(
+  const OcctSharp_Geom2dCurveHandle* handle,
+  OcctSharp_Value_Transform2d t,
+  double* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_curve_method_period_0(
   const OcctSharp_Geom2dCurveHandle* handle,
   double* out_value);
@@ -8165,6 +8331,12 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_curve_m
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_curve_method_reversed_0(
   const OcctSharp_Geom2dCurveHandle* handle,
   OcctSharp_Geom2dCurveHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_curve_method_transformed_parameter_0(
+  const OcctSharp_Geom2dCurveHandle* handle,
+  double u,
+  OcctSharp_Value_Transform2d t,
+  double* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_curve_clone(
   const OcctSharp_Geom2dCurveHandle* source,
@@ -8235,6 +8407,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_directi
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_direction_method_square_magnitude_0(
   const OcctSharp_Geom2dDirectionHandle* handle,
   double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_direction_method_transform_0(
+  const OcctSharp_Geom2dDirectionHandle* handle,
+  OcctSharp_Value_Transform2d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_direction_clone(
   const OcctSharp_Geom2dDirectionHandle* source,
@@ -8360,6 +8536,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_ellipse
   const OcctSharp_Geom2dEllipseHandle* handle,
   double minorRadius);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_ellipse_method_transform_0(
+  const OcctSharp_Geom2dEllipseHandle* handle,
+  OcctSharp_Value_Transform2d t);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_ellipse_clone(
   const OcctSharp_Geom2dEllipseHandle* source,
   OcctSharp_Geom2dEllipseHandle** out_handle);
@@ -8421,6 +8601,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_geometr
   const OcctSharp_Geom2dGeometryHandle* handle,
   OcctSharp_Value_Point2d p,
   double s,
+  OcctSharp_Geom2dGeometryHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_geometry_method_transformed_0(
+  const OcctSharp_Geom2dGeometryHandle* handle,
+  OcctSharp_Value_Transform2d t,
   OcctSharp_Geom2dGeometryHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_geometry_method_translate_0(
@@ -8591,6 +8776,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_hyperbo
   const OcctSharp_Geom2dHyperbolaHandle* handle,
   double minorRadius);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_hyperbola_method_transform_0(
+  const OcctSharp_Geom2dHyperbolaHandle* handle,
+  OcctSharp_Value_Transform2d t);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_hyperbola_clone(
   const OcctSharp_Geom2dHyperbolaHandle* source,
   OcctSharp_Geom2dHyperbolaHandle** out_handle);
@@ -8680,6 +8869,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_line_me
   const OcctSharp_Geom2dLineHandle* handle,
   OcctSharp_Value_Point2d* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_line_method_parametric_transformation_0(
+  const OcctSharp_Geom2dLineHandle* handle,
+  OcctSharp_Value_Transform2d t,
+  double* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_line_method_position_0(
   const OcctSharp_Geom2dLineHandle* handle,
   OcctSharp_Value_Axis2d* out_value);
@@ -8707,6 +8901,16 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_line_me
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_line_method_set_position_0(
   const OcctSharp_Geom2dLineHandle* handle,
   OcctSharp_Value_Axis2d a);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_line_method_transform_0(
+  const OcctSharp_Geom2dLineHandle* handle,
+  OcctSharp_Value_Transform2d t);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_line_method_transformed_parameter_0(
+  const OcctSharp_Geom2dLineHandle* handle,
+  double u,
+  OcctSharp_Value_Transform2d t,
+  double* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_line_clone(
   const OcctSharp_Geom2dLineHandle* source,
@@ -8800,6 +9004,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_offset_
   const OcctSharp_Geom2dOffsetCurveHandle* handle,
   double* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_offset_curve_method_parametric_transformation_0(
+  const OcctSharp_Geom2dOffsetCurveHandle* handle,
+  OcctSharp_Value_Transform2d t,
+  double* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_offset_curve_method_period_0(
   const OcctSharp_Geom2dOffsetCurveHandle* handle,
   double* out_value);
@@ -8824,6 +9033,16 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_offset_
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_offset_curve_method_set_offset_value_0(
   const OcctSharp_Geom2dOffsetCurveHandle* handle,
   double d);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_offset_curve_method_transform_0(
+  const OcctSharp_Geom2dOffsetCurveHandle* handle,
+  OcctSharp_Value_Transform2d t);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_offset_curve_method_transformed_parameter_0(
+  const OcctSharp_Geom2dOffsetCurveHandle* handle,
+  double u,
+  OcctSharp_Value_Transform2d t,
+  double* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_offset_curve_clone(
   const OcctSharp_Geom2dOffsetCurveHandle* source,
@@ -8923,6 +9142,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_parabol
   const OcctSharp_Geom2dParabolaHandle* handle,
   double* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_parabola_method_parametric_transformation_0(
+  const OcctSharp_Geom2dParabolaHandle* handle,
+  OcctSharp_Value_Transform2d t,
+  double* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_parabola_method_reversed_parameter_0(
   const OcctSharp_Geom2dParabolaHandle* handle,
   double u,
@@ -8935,6 +9159,16 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_parabol
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_parabola_method_set_parab2d_0(
   const OcctSharp_Geom2dParabolaHandle* handle,
   OcctSharp_Value_Parabola2d prb);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_parabola_method_transform_0(
+  const OcctSharp_Geom2dParabolaHandle* handle,
+  OcctSharp_Value_Transform2d t);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_parabola_method_transformed_parameter_0(
+  const OcctSharp_Geom2dParabolaHandle* handle,
+  double u,
+  OcctSharp_Value_Transform2d t,
+  double* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_parabola_clone(
   const OcctSharp_Geom2dParabolaHandle* source,
@@ -8989,6 +9223,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_point_i
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom2d_point_release(OcctSharp_Geom2dPointHandle* handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_transformation_create_0(
+  OcctSharp_Geom2dTransformationHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_transformation_create_1(
+  OcctSharp_Value_Transform2d t,
   OcctSharp_Geom2dTransformationHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_transformation_method_copy_0(
@@ -9076,6 +9314,14 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_transfo
   const OcctSharp_Geom2dTransformationHandle* handle,
   OcctSharp_Value_Vector2d v);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_transformation_method_set_trsf2d_0(
+  const OcctSharp_Geom2dTransformationHandle* handle,
+  OcctSharp_Value_Transform2d t);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_transformation_method_trsf2d_0(
+  const OcctSharp_Geom2dTransformationHandle* handle,
+  OcctSharp_Value_Transform2d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_transformation_method_value_0(
   const OcctSharp_Geom2dTransformationHandle* handle,
   int32_t row,
@@ -9161,6 +9407,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_trimmed
   const OcctSharp_Geom2dTrimmedCurveHandle* handle,
   double* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_trimmed_curve_method_parametric_transformation_0(
+  const OcctSharp_Geom2dTrimmedCurveHandle* handle,
+  OcctSharp_Value_Transform2d t,
+  double* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_trimmed_curve_method_period_0(
   const OcctSharp_Geom2dTrimmedCurveHandle* handle,
   double* out_value);
@@ -9183,6 +9434,16 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_trimmed
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_trimmed_curve_method_start_point_0(
   const OcctSharp_Geom2dTrimmedCurveHandle* handle,
   OcctSharp_Value_Point2d* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_trimmed_curve_method_transform_0(
+  const OcctSharp_Geom2dTrimmedCurveHandle* handle,
+  OcctSharp_Value_Transform2d t);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_trimmed_curve_method_transformed_parameter_0(
+  const OcctSharp_Geom2dTrimmedCurveHandle* handle,
+  double u,
+  OcctSharp_Value_Transform2d t,
+  double* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_trimmed_curve_clone(
   const OcctSharp_Geom2dTrimmedCurveHandle* source,
@@ -9349,6 +9610,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_vector_
   const OcctSharp_Geom2dVectorWithMagnitudeHandle* handle,
   const OcctSharp_Geom2dVectorHandle* other,
   OcctSharp_Geom2dVectorWithMagnitudeHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_vector_with_magnitude_method_transform_0(
+  const OcctSharp_Geom2dVectorWithMagnitudeHandle* handle,
+  OcctSharp_Value_Transform2d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom2d_vector_with_magnitude_clone(
   const OcctSharp_Geom2dVectorWithMagnitudeHandle* source,
@@ -10165,6 +10430,18 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom_adaptor_surface_of_re
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_curve_create_0(
   OcctSharp_GeomAdaptorTransformedCurveHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_curve_create_1(
+  const OcctSharp_GeomCurveHandle* theCurve,
+  double theFirst,
+  double theLast,
+  OcctSharp_Value_Transform3d theTrsf,
+  OcctSharp_GeomAdaptorTransformedCurveHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_curve_create_2(
+  const OcctSharp_GeomCurveHandle* theCurve,
+  OcctSharp_Value_Transform3d theTrsf,
+  OcctSharp_GeomAdaptorTransformedCurveHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_curve_method_bezier_0(
   const OcctSharp_GeomAdaptorTransformedCurveHandle* handle,
   OcctSharp_GeomBezierCurveHandle** out_handle);
@@ -10292,6 +10569,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_t
   double theR3d,
   double* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_curve_method_set_trsf_0(
+  const OcctSharp_GeomAdaptorTransformedCurveHandle* handle,
+  OcctSharp_Value_Transform3d theTrsf);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_curve_method_shallow_copy_0(
   const OcctSharp_GeomAdaptorTransformedCurveHandle* handle,
   OcctSharp_Adaptor3dCurveHandle** out_handle);
@@ -10302,6 +10583,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_t
   double theLast,
   double theTol,
   OcctSharp_Adaptor3dCurveHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_curve_method_trsf_0(
+  const OcctSharp_GeomAdaptorTransformedCurveHandle* handle,
+  OcctSharp_Value_Transform3d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_curve_clone(
   const OcctSharp_GeomAdaptorTransformedCurveHandle* source,
@@ -10323,6 +10608,22 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_t
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_curve_release(OcctSharp_GeomAdaptorTransformedCurveHandle* handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_surface_create_0(
+  OcctSharp_GeomAdaptorTransformedSurfaceHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_surface_create_1(
+  const OcctSharp_GeomSurfaceHandle* theSurface,
+  double theUFirst,
+  double theULast,
+  double theVFirst,
+  double theVLast,
+  OcctSharp_Value_Transform3d theTrsf,
+  double theTolU,
+  double theTolV,
+  OcctSharp_GeomAdaptorTransformedSurfaceHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_surface_create_2(
+  const OcctSharp_GeomSurfaceHandle* theSurface,
+  OcctSharp_Value_Transform3d theTrsf,
   OcctSharp_GeomAdaptorTransformedSurfaceHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_surface_method_axe_of_revolution_0(
@@ -10435,6 +10736,22 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_t
   const OcctSharp_GeomAdaptorTransformedSurfaceHandle* handle,
   double* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_surface_method_load_0(
+  const OcctSharp_GeomAdaptorTransformedSurfaceHandle* handle,
+  const OcctSharp_GeomSurfaceHandle* theSurface,
+  double theUFirst,
+  double theULast,
+  double theVFirst,
+  double theVLast,
+  OcctSharp_Value_Transform3d theTrsf,
+  double theTolU,
+  double theTolV);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_surface_method_load_1(
+  const OcctSharp_GeomAdaptorTransformedSurfaceHandle* handle,
+  const OcctSharp_GeomSurfaceHandle* theSurface,
+  OcctSharp_Value_Transform3d theTrsf);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_surface_method_nb_uintervals_0(
   const OcctSharp_GeomAdaptorTransformedSurfaceHandle* handle,
   int32_t theS,
@@ -10469,6 +10786,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_t
   const OcctSharp_GeomAdaptorTransformedSurfaceHandle* handle,
   OcctSharp_Value_Plane* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_surface_method_set_trsf_0(
+  const OcctSharp_GeomAdaptorTransformedSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d theTrsf);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_surface_method_shallow_copy_0(
   const OcctSharp_GeomAdaptorTransformedSurfaceHandle* handle,
   OcctSharp_Adaptor3dSurfaceHandle** out_handle);
@@ -10488,6 +10809,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_t
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_surface_method_torus_0(
   const OcctSharp_GeomAdaptorTransformedSurfaceHandle* handle,
   OcctSharp_Value_Torus* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_surface_method_trsf_0(
+  const OcctSharp_GeomAdaptorTransformedSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_adaptor_transformed_surface_method_ucontinuity_0(
   const OcctSharp_GeomAdaptorTransformedSurfaceHandle* handle,
@@ -10636,6 +10961,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_ahtb
   const OcctSharp_GeomEvalAHTBezierCurveHandle* handle,
   OcctSharp_Point3d* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_ahtbezier_curve_method_transform_0(
+  const OcctSharp_GeomEvalAHTBezierCurveHandle* handle,
+  OcctSharp_Value_Transform3d t);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_ahtbezier_curve_clone(
   const OcctSharp_GeomEvalAHTBezierCurveHandle* source,
   OcctSharp_GeomEvalAHTBezierCurveHandle** out_handle);
@@ -10747,6 +11076,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_ahtb
   const OcctSharp_GeomEvalAHTBezierSurfaceHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_ahtbezier_surface_method_transform_0(
+  const OcctSharp_GeomEvalAHTBezierSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_ahtbezier_surface_method_uiso_0(
   const OcctSharp_GeomEvalAHTBezierSurfaceHandle* handle,
   double u,
@@ -10842,6 +11175,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_circ
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_circular_helicoid_surface_method_set_pitch_0(
   const OcctSharp_GeomEvalCircularHelicoidSurfaceHandle* handle,
   double thePitch);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_circular_helicoid_surface_method_transform_0(
+  const OcctSharp_GeomEvalCircularHelicoidSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_circular_helicoid_surface_method_uiso_0(
   const OcctSharp_GeomEvalCircularHelicoidSurfaceHandle* handle,
@@ -10958,6 +11295,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_circ
   double u,
   double* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_circular_helix_curve_method_transform_0(
+  const OcctSharp_GeomEvalCircularHelixCurveHandle* handle,
+  OcctSharp_Value_Transform3d t);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_circular_helix_curve_clone(
   const OcctSharp_GeomEvalCircularHelixCurveHandle* source,
   OcctSharp_GeomEvalCircularHelixCurveHandle** out_handle);
@@ -11045,6 +11386,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_elli
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_ellipsoid_surface_method_set_semi_axis_c_0(
   const OcctSharp_GeomEvalEllipsoidSurfaceHandle* handle,
   double theC);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_ellipsoid_surface_method_transform_0(
+  const OcctSharp_GeomEvalEllipsoidSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_ellipsoid_surface_method_uiso_0(
   const OcctSharp_GeomEvalEllipsoidSurfaceHandle* handle,
@@ -11150,6 +11495,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_hyp_
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_hyp_paraboloid_surface_method_set_semi_axis_b_0(
   const OcctSharp_GeomEvalHypParaboloidSurfaceHandle* handle,
   double theB);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_hyp_paraboloid_surface_method_transform_0(
+  const OcctSharp_GeomEvalHypParaboloidSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_hyp_paraboloid_surface_method_uiso_0(
   const OcctSharp_GeomEvalHypParaboloidSurfaceHandle* handle,
@@ -11265,6 +11614,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_hype
   const OcctSharp_GeomEvalHyperboloidSurfaceHandle* handle,
   double theR2);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_hyperboloid_surface_method_transform_0(
+  const OcctSharp_GeomEvalHyperboloidSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_hyperboloid_surface_method_uiso_0(
   const OcctSharp_GeomEvalHyperboloidSurfaceHandle* handle,
   double u,
@@ -11360,6 +11713,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_para
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_paraboloid_surface_method_set_focal_0(
   const OcctSharp_GeomEvalParaboloidSurfaceHandle* handle,
   double theFocal);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_paraboloid_surface_method_transform_0(
+  const OcctSharp_GeomEvalParaboloidSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_paraboloid_surface_method_uiso_0(
   const OcctSharp_GeomEvalParaboloidSurfaceHandle* handle,
@@ -11481,6 +11838,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_sine
   double u,
   double* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_sine_wave_curve_method_transform_0(
+  const OcctSharp_GeomEvalSineWaveCurveHandle* handle,
+  OcctSharp_Value_Transform3d t);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_sine_wave_curve_clone(
   const OcctSharp_GeomEvalSineWaveCurveHandle* source,
   OcctSharp_GeomEvalSineWaveCurveHandle** out_handle);
@@ -11575,6 +11936,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_tbez
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_tbezier_curve_method_start_point_0(
   const OcctSharp_GeomEvalTBezierCurveHandle* handle,
   OcctSharp_Point3d* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_tbezier_curve_method_transform_0(
+  const OcctSharp_GeomEvalTBezierCurveHandle* handle,
+  OcctSharp_Value_Transform3d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_tbezier_curve_clone(
   const OcctSharp_GeomEvalTBezierCurveHandle* source,
@@ -11674,6 +12039,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_tbez
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_tbezier_surface_method_order_v_0(
   const OcctSharp_GeomEvalTBezierSurfaceHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_tbezier_surface_method_transform_0(
+  const OcctSharp_GeomEvalTBezierSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_eval_tbezier_surface_method_uiso_0(
   const OcctSharp_GeomEvalTBezierSurfaceHandle* handle,
@@ -13632,12 +14001,21 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plate_sur
   const OcctSharp_GeomPlateSurfaceHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plate_surface_method_parametric_transformation_0(
+  const OcctSharp_GeomPlateSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  OcctSharp_Value_AffineTransform2d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plate_surface_method_set_bounds_0(
   const OcctSharp_GeomPlateSurfaceHandle* handle,
   double umin,
   double umax,
   double vmin,
   double vmax);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plate_surface_method_transform_0(
+  const OcctSharp_GeomPlateSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plate_surface_method_uiso_0(
   const OcctSharp_GeomPlateSurfaceHandle* handle,
@@ -13750,6 +14128,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_axis1_pla
   const OcctSharp_GeomAxis1PlacementHandle* handle,
   OcctSharp_Value_Direction3d v);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_axis1_placement_method_transform_0(
+  const OcctSharp_GeomAxis1PlacementHandle* handle,
+  OcctSharp_Value_Transform3d t);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_axis1_placement_clone(
   const OcctSharp_GeomAxis1PlacementHandle* source,
   OcctSharp_GeomAxis1PlacementHandle** out_handle);
@@ -13806,6 +14188,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_axis2_pla
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_axis2_placement_method_set_ydirection_0(
   const OcctSharp_GeomAxis2PlacementHandle* handle,
   OcctSharp_Value_Direction3d vy);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_axis2_placement_method_transform_0(
+  const OcctSharp_GeomAxis2PlacementHandle* handle,
+  OcctSharp_Value_Transform3d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_axis2_placement_method_xdirection_0(
   const OcctSharp_GeomAxis2PlacementHandle* handle,
@@ -14097,6 +14483,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bspline_c
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bspline_curve_method_start_point_0(
   const OcctSharp_GeomBSplineCurveHandle* handle,
   OcctSharp_Point3d* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bspline_curve_method_transform_0(
+  const OcctSharp_GeomBSplineCurveHandle* handle,
+  OcctSharp_Value_Transform3d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bspline_curve_method_weight_0(
   const OcctSharp_GeomBSplineCurveHandle* handle,
@@ -14392,6 +14782,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bspline_s
   int32_t vIndex,
   double weight);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bspline_surface_method_transform_0(
+  const OcctSharp_GeomBSplineSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bspline_surface_method_udegree_0(
   const OcctSharp_GeomBSplineSurfaceHandle* handle,
   int32_t* out_value);
@@ -14621,6 +15015,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bezier_cu
   const OcctSharp_GeomBezierCurveHandle* handle,
   OcctSharp_Point3d* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bezier_curve_method_transform_0(
+  const OcctSharp_GeomBezierCurveHandle* handle,
+  OcctSharp_Value_Transform3d t);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bezier_curve_method_weight_0(
   const OcctSharp_GeomBezierCurveHandle* handle,
   int32_t index,
@@ -14761,6 +15159,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bezier_su
   int32_t uIndex,
   int32_t vIndex,
   double weight);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bezier_surface_method_transform_0(
+  const OcctSharp_GeomBezierSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_bezier_surface_method_udegree_0(
   const OcctSharp_GeomBezierSurfaceHandle* handle,
@@ -14911,6 +15313,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_cartesian
   const OcctSharp_GeomCartesianPointHandle* handle,
   double z);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_cartesian_point_method_transform_0(
+  const OcctSharp_GeomCartesianPointHandle* handle,
+  OcctSharp_Value_Transform3d t);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_cartesian_point_method_x_0(
   const OcctSharp_GeomCartesianPointHandle* handle,
   double* out_value);
@@ -15010,6 +15416,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_circle_me
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_circle_method_set_radius_0(
   const OcctSharp_GeomCircleHandle* handle,
   double r);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_circle_method_transform_0(
+  const OcctSharp_GeomCircleHandle* handle,
+  OcctSharp_Value_Transform3d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_circle_clone(
   const OcctSharp_GeomCircleHandle* source,
@@ -15147,6 +15557,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_conical_s
   const OcctSharp_GeomConicalSurfaceHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_conical_surface_method_parametric_transformation_0(
+  const OcctSharp_GeomConicalSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  OcctSharp_Value_AffineTransform2d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_conical_surface_method_ref_radius_0(
   const OcctSharp_GeomConicalSurfaceHandle* handle,
   double* out_value);
@@ -15166,6 +15581,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_conical_s
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_conical_surface_method_set_semi_angle_0(
   const OcctSharp_GeomConicalSurfaceHandle* handle,
   double ang);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_conical_surface_method_transform_0(
+  const OcctSharp_GeomConicalSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_conical_surface_method_uiso_0(
   const OcctSharp_GeomConicalSurfaceHandle* handle,
@@ -15219,6 +15638,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_curve_met
   const OcctSharp_GeomCurveHandle* handle,
   OcctSharp_StandardTypeHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_curve_method_parametric_transformation_0(
+  const OcctSharp_GeomCurveHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  double* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_curve_method_period_0(
   const OcctSharp_GeomCurveHandle* handle,
   double* out_value);
@@ -15226,6 +15650,12 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_curve_met
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_curve_method_reversed_0(
   const OcctSharp_GeomCurveHandle* handle,
   OcctSharp_GeomCurveHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_curve_method_transformed_parameter_0(
+  const OcctSharp_GeomCurveHandle* handle,
+  double u,
+  OcctSharp_Value_Transform3d t,
+  double* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_curve_method_value_0(
   const OcctSharp_GeomCurveHandle* handle,
@@ -15297,6 +15727,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_cylindric
   const OcctSharp_GeomCylindricalSurfaceHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_cylindrical_surface_method_parametric_transformation_0(
+  const OcctSharp_GeomCylindricalSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  OcctSharp_Value_AffineTransform2d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_cylindrical_surface_method_radius_0(
   const OcctSharp_GeomCylindricalSurfaceHandle* handle,
   double* out_value);
@@ -15308,6 +15743,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_cylindric
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_cylindrical_surface_method_set_radius_0(
   const OcctSharp_GeomCylindricalSurfaceHandle* handle,
   double r);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_cylindrical_surface_method_transform_0(
+  const OcctSharp_GeomCylindricalSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_cylindrical_surface_method_uiso_0(
   const OcctSharp_GeomCylindricalSurfaceHandle* handle,
@@ -15419,6 +15858,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_direction
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_direction_method_square_magnitude_0(
   const OcctSharp_GeomDirectionHandle* handle,
   double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_direction_method_transform_0(
+  const OcctSharp_GeomDirectionHandle* handle,
+  OcctSharp_Value_Transform3d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_direction_clone(
   const OcctSharp_GeomDirectionHandle* source,
@@ -15607,6 +16050,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_ellipse_m
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_ellipse_method_set_minor_radius_0(
   const OcctSharp_GeomEllipseHandle* handle,
   double minorRadius);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_ellipse_method_transform_0(
+  const OcctSharp_GeomEllipseHandle* handle,
+  OcctSharp_Value_Transform3d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_ellipse_clone(
   const OcctSharp_GeomEllipseHandle* source,
@@ -15841,6 +16288,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_hyperbola
   const OcctSharp_GeomHyperbolaHandle* handle,
   double minorRadius);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_hyperbola_method_transform_0(
+  const OcctSharp_GeomHyperbolaHandle* handle,
+  OcctSharp_Value_Transform3d t);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_hyperbola_clone(
   const OcctSharp_GeomHyperbolaHandle* source,
   OcctSharp_GeomHyperbolaHandle** out_handle);
@@ -15921,6 +16372,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_line_meth
   const OcctSharp_GeomLineHandle* handle,
   OcctSharp_Value_Line3d* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_line_method_parametric_transformation_0(
+  const OcctSharp_GeomLineHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  double* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_line_method_position_0(
   const OcctSharp_GeomLineHandle* handle,
   OcctSharp_Value_Axis1* out_value);
@@ -15948,6 +16404,16 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_line_meth
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_line_method_set_position_0(
   const OcctSharp_GeomLineHandle* handle,
   OcctSharp_Value_Axis1 a1);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_line_method_transform_0(
+  const OcctSharp_GeomLineHandle* handle,
+  OcctSharp_Value_Transform3d t);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_line_method_transformed_parameter_0(
+  const OcctSharp_GeomLineHandle* handle,
+  double u,
+  OcctSharp_Value_Transform3d t,
+  double* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_line_clone(
   const OcctSharp_GeomLineHandle* source,
@@ -16042,6 +16508,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_cu
   const OcctSharp_GeomOffsetCurveHandle* handle,
   double* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_curve_method_parametric_transformation_0(
+  const OcctSharp_GeomOffsetCurveHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  double* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_curve_method_period_0(
   const OcctSharp_GeomOffsetCurveHandle* handle,
   double* out_value);
@@ -16066,6 +16537,16 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_cu
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_curve_method_set_offset_value_0(
   const OcctSharp_GeomOffsetCurveHandle* handle,
   double d);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_curve_method_transform_0(
+  const OcctSharp_GeomOffsetCurveHandle* handle,
+  OcctSharp_Value_Transform3d t);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_curve_method_transformed_parameter_0(
+  const OcctSharp_GeomOffsetCurveHandle* handle,
+  double u,
+  OcctSharp_Value_Transform3d t,
+  double* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_curve_clone(
   const OcctSharp_GeomOffsetCurveHandle* source,
@@ -16163,6 +16644,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_su
   const OcctSharp_GeomOffsetSurfaceHandle* handle,
   double* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_surface_method_parametric_transformation_0(
+  const OcctSharp_GeomOffsetSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  OcctSharp_Value_AffineTransform2d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_surface_method_set_basis_surface_0(
   const OcctSharp_GeomOffsetSurfaceHandle* handle,
   const OcctSharp_GeomSurfaceHandle* s,
@@ -16175,6 +16661,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_su
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_surface_method_surface_0(
   const OcctSharp_GeomOffsetSurfaceHandle* handle,
   OcctSharp_GeomSurfaceHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_surface_method_transform_0(
+  const OcctSharp_GeomOffsetSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_offset_surface_method_uiso_0(
   const OcctSharp_GeomOffsetSurfaceHandle* handle,
@@ -16302,6 +16792,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_parabola_
   const OcctSharp_GeomParabolaHandle* handle,
   double* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_parabola_method_parametric_transformation_0(
+  const OcctSharp_GeomParabolaHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  double* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_parabola_method_reversed_parameter_0(
   const OcctSharp_GeomParabolaHandle* handle,
   double u,
@@ -16314,6 +16809,16 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_parabola_
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_parabola_method_set_parab_0(
   const OcctSharp_GeomParabolaHandle* handle,
   OcctSharp_Value_Parabola3d prb);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_parabola_method_transform_0(
+  const OcctSharp_GeomParabolaHandle* handle,
+  OcctSharp_Value_Transform3d t);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_parabola_method_transformed_parameter_0(
+  const OcctSharp_GeomParabolaHandle* handle,
+  double u,
+  OcctSharp_Value_Transform3d t,
+  double* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_parabola_clone(
   const OcctSharp_GeomParabolaHandle* source,
@@ -16388,6 +16893,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plane_met
   const OcctSharp_GeomPlaneHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plane_method_parametric_transformation_0(
+  const OcctSharp_GeomPlaneHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  OcctSharp_Value_AffineTransform2d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plane_method_pln_0(
   const OcctSharp_GeomPlaneHandle* handle,
   OcctSharp_Value_Plane* out_value);
@@ -16395,6 +16905,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plane_met
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plane_method_set_pln_0(
   const OcctSharp_GeomPlaneHandle* handle,
   OcctSharp_Value_Plane pl);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plane_method_transform_0(
+  const OcctSharp_GeomPlaneHandle* handle,
+  OcctSharp_Value_Transform3d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_plane_method_uiso_0(
   const OcctSharp_GeomPlaneHandle* handle,
@@ -16548,6 +17062,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_rectangul
   const OcctSharp_GeomRectangularTrimmedSurfaceHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_rectangular_trimmed_surface_method_parametric_transformation_0(
+  const OcctSharp_GeomRectangularTrimmedSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  OcctSharp_Value_AffineTransform2d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_rectangular_trimmed_surface_method_set_trim_0(
   const OcctSharp_GeomRectangularTrimmedSurfaceHandle* handle,
   double param1,
@@ -16563,6 +17082,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_rectangul
   double v2,
   int32_t uSense,
   int32_t vSense);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_rectangular_trimmed_surface_method_transform_0(
+  const OcctSharp_GeomRectangularTrimmedSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_rectangular_trimmed_surface_method_uiso_0(
   const OcctSharp_GeomRectangularTrimmedSurfaceHandle* handle,
@@ -16679,6 +17202,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_spherical
   const OcctSharp_GeomSphericalSurfaceHandle* handle,
   OcctSharp_Value_Sphere* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_spherical_surface_method_transform_0(
+  const OcctSharp_GeomSphericalSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_spherical_surface_method_uiso_0(
   const OcctSharp_GeomSphericalSurfaceHandle* handle,
   double u,
@@ -16733,6 +17260,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_m
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_method_dynamic_type_0(
   const OcctSharp_GeomSurfaceHandle* handle,
   OcctSharp_StandardTypeHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_method_parametric_transformation_0(
+  const OcctSharp_GeomSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  OcctSharp_Value_AffineTransform2d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_method_uperiod_0(
   const OcctSharp_GeomSurfaceHandle* handle,
@@ -16835,6 +17367,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_o
   const OcctSharp_GeomSurfaceOfLinearExtrusionHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_linear_extrusion_method_parametric_transformation_0(
+  const OcctSharp_GeomSurfaceOfLinearExtrusionHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  OcctSharp_Value_AffineTransform2d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_linear_extrusion_method_set_basis_curve_0(
   const OcctSharp_GeomSurfaceOfLinearExtrusionHandle* handle,
   const OcctSharp_GeomCurveHandle* c);
@@ -16842,6 +17379,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_o
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_linear_extrusion_method_set_direction_0(
   const OcctSharp_GeomSurfaceOfLinearExtrusionHandle* handle,
   OcctSharp_Value_Direction3d v);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_linear_extrusion_method_transform_0(
+  const OcctSharp_GeomSurfaceOfLinearExtrusionHandle* handle,
+  OcctSharp_Value_Transform3d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_linear_extrusion_method_uiso_0(
   const OcctSharp_GeomSurfaceOfLinearExtrusionHandle* handle,
@@ -16956,6 +17497,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_o
   const OcctSharp_GeomSurfaceOfRevolutionHandle* handle,
   OcctSharp_Point3d* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_revolution_method_parametric_transformation_0(
+  const OcctSharp_GeomSurfaceOfRevolutionHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  OcctSharp_Value_AffineTransform2d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_revolution_method_reference_plane_0(
   const OcctSharp_GeomSurfaceOfRevolutionHandle* handle,
   OcctSharp_Value_Axis2* out_value);
@@ -16975,6 +17521,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_o
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_revolution_method_set_location_0(
   const OcctSharp_GeomSurfaceOfRevolutionHandle* handle,
   OcctSharp_Point3d p);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_revolution_method_transform_0(
+  const OcctSharp_GeomSurfaceOfRevolutionHandle* handle,
+  OcctSharp_Value_Transform3d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_surface_of_revolution_method_uiso_0(
   const OcctSharp_GeomSurfaceOfRevolutionHandle* handle,
@@ -17126,6 +17676,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_toroidal_
   const OcctSharp_GeomToroidalSurfaceHandle* handle,
   OcctSharp_Value_Torus* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_toroidal_surface_method_transform_0(
+  const OcctSharp_GeomToroidalSurfaceHandle* handle,
+  OcctSharp_Value_Transform3d t);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_toroidal_surface_method_uiso_0(
   const OcctSharp_GeomToroidalSurfaceHandle* handle,
   double u,
@@ -17170,6 +17724,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_toroidal_
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geom_toroidal_surface_release(OcctSharp_GeomToroidalSurfaceHandle* handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_transformation_create_0(
+  OcctSharp_GeomTransformationHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_transformation_create_1(
+  OcctSharp_Value_Transform3d t,
   OcctSharp_GeomTransformationHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_transformation_method_copy_0(
@@ -17261,6 +17819,14 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_transform
   const OcctSharp_GeomTransformationHandle* handle,
   OcctSharp_Value_Vector3d theVec);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_transformation_method_set_trsf_0(
+  const OcctSharp_GeomTransformationHandle* handle,
+  OcctSharp_Value_Transform3d theTrsf);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_transformation_method_trsf_0(
+  const OcctSharp_GeomTransformationHandle* handle,
+  OcctSharp_Value_Transform3d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_transformation_method_value_0(
   const OcctSharp_GeomTransformationHandle* handle,
   int32_t theRow,
@@ -17346,6 +17912,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_trimmed_c
   const OcctSharp_GeomTrimmedCurveHandle* handle,
   double* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_trimmed_curve_method_parametric_transformation_0(
+  const OcctSharp_GeomTrimmedCurveHandle* handle,
+  OcctSharp_Value_Transform3d t,
+  double* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_trimmed_curve_method_period_0(
   const OcctSharp_GeomTrimmedCurveHandle* handle,
   double* out_value);
@@ -17368,6 +17939,16 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_trimmed_c
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_trimmed_curve_method_start_point_0(
   const OcctSharp_GeomTrimmedCurveHandle* handle,
   OcctSharp_Point3d* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_trimmed_curve_method_transform_0(
+  const OcctSharp_GeomTrimmedCurveHandle* handle,
+  OcctSharp_Value_Transform3d t);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_trimmed_curve_method_transformed_parameter_0(
+  const OcctSharp_GeomTrimmedCurveHandle* handle,
+  double u,
+  OcctSharp_Value_Transform3d t,
+  double* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_trimmed_curve_clone(
   const OcctSharp_GeomTrimmedCurveHandle* source,
@@ -17571,6 +18152,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_vector_wi
   const OcctSharp_GeomVectorWithMagnitudeHandle* handle,
   const OcctSharp_GeomVectorHandle* other,
   OcctSharp_GeomVectorWithMagnitudeHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_vector_with_magnitude_method_transform_0(
+  const OcctSharp_GeomVectorWithMagnitudeHandle* handle,
+  OcctSharp_Value_Transform3d t);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geom_vector_with_magnitude_clone(
   const OcctSharp_GeomVectorWithMagnitudeHandle* source,

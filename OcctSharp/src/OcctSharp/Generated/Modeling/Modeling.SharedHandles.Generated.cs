@@ -321,6 +321,7 @@
 // Source: c:@S@BRepTest_DrawableHistory@F@DynamicType#1
 // Source: c:@S@BRepTools_CopyModification@F@BRepTools_CopyModification#b#b#
 // Source: c:@S@BRepTools_CopyModification@F@DynamicType#1
+// Source: c:@S@BRepTools_GTrsfModification@F@BRepTools_GTrsfModification#&1$@S@gp_GTrsf#
 // Source: c:@S@BRepTools_GTrsfModification@F@DynamicType#1
 // Source: c:@S@BRepTools_History@F@BRepTools_History#
 // Source: c:@S@BRepTools_History@F@Clear#
@@ -336,6 +337,7 @@
 // Source: c:@S@BRepTools_ReShape@F@Clear#
 // Source: c:@S@BRepTools_ReShape@F@DynamicType#1
 // Source: c:@S@BRepTools_ReShape@F@History#1
+// Source: c:@S@BRepTools_TrsfModification@F@BRepTools_TrsfModification#&1$@S@gp_Trsf#
 // Source: c:@S@BRepTools_TrsfModification@F@DynamicType#1
 // Source: c:@S@BRepTopAdaptor_HVertex@F@DynamicType#1
 // Source: c:@S@BRepTopAdaptor_HVertex@F@IsSame#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_HVertex#
@@ -1245,6 +1247,7 @@
 // Source: c:@S@ShapeCustom_SweptToElementary@F@DynamicType#1
 // Source: c:@S@ShapeCustom_SweptToElementary@F@ShapeCustom_SweptToElementary#
 // Source: c:@S@ShapeCustom_TrsfModification@F@DynamicType#1
+// Source: c:@S@ShapeCustom_TrsfModification@F@ShapeCustom_TrsfModification#&1$@S@gp_Trsf#
 // Source: c:@S@ShapeExtend_BasicMsgRegistrator@F@DynamicType#1
 // Source: c:@S@ShapeExtend_BasicMsgRegistrator@F@ShapeExtend_BasicMsgRegistrator#
 // Source: c:@S@ShapeExtend_ComplexCurve@F@CheckConnectivity#d#
@@ -1258,6 +1261,7 @@
 // Source: c:@S@ShapeExtend_ComplexCurve@F@IsPeriodic#1
 // Source: c:@S@ShapeExtend_ComplexCurve@F@LastParameter#1
 // Source: c:@S@ShapeExtend_ComplexCurve@F@ReversedParameter#d#1
+// Source: c:@S@ShapeExtend_ComplexCurve@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@ShapeExtend_CompositeSurface@F@CheckConnectivity#d#
 // Source: c:@S@ShapeExtend_CompositeSurface@F@ComputeJointValues#$@E@ShapeExtend_Parametrisation#
 // Source: c:@S@ShapeExtend_CompositeSurface@F@Continuity#1
@@ -1283,6 +1287,7 @@
 // Source: c:@S@ShapeExtend_CompositeSurface@F@SetUFirstValue#d#
 // Source: c:@S@ShapeExtend_CompositeSurface@F@SetVFirstValue#d#
 // Source: c:@S@ShapeExtend_CompositeSurface@F@ShapeExtend_CompositeSurface#
+// Source: c:@S@ShapeExtend_CompositeSurface@F@Transform#&1$@S@gp_Trsf#
 // Source: c:@S@ShapeExtend_CompositeSurface@F@UGlobalToLocal#I#I#d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@UIso#d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@UJointValue#I#1
@@ -1647,6 +1652,9 @@
 // Source: c:@S@TopLoc_Datum3D@F@DynamicType#1
 // Source: c:@S@TopLoc_Datum3D@F@Form#1
 // Source: c:@S@TopLoc_Datum3D@F@TopLoc_Datum3D#
+// Source: c:@S@TopLoc_Datum3D@F@TopLoc_Datum3D#&1$@S@gp_Trsf#
+// Source: c:@S@TopLoc_Datum3D@F@Transformation#1
+// Source: c:@S@TopLoc_Datum3D@F@Trsf#1
 // Source: c:@S@TopLoc_SListNodeOfItemLocation@F@DynamicType#1
 // Source: c:@S@TopOpeBRepBuild_HBuilder@F@Clear#
 // Source: c:@S@TopOpeBRepBuild_HBuilder@F@DataStructure#1
@@ -10147,6 +10155,14 @@ public sealed class BRepToolsGTrsfModification : IDisposable
 
     private BRepToolsGTrsfModification(BRepToolsGTrsfModificationHandle handle) => this.handle = handle;
 
+    /// <summary>Creates a retained OCCT BRepTools_GTrsfModification shared object.</summary>
+    public BRepToolsGTrsfModification(global::OcctSharp.Values.AffineTransform3d t)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.BRepToolsGTrsfModificationCreate0(t, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "BRepToolsGTrsfModificationCreate0");
+    }
+
     /// <summary>Invokes OCCT BRepTools_GTrsfModification::DynamicType.</summary>
     public StandardType? DynamicType()
     {
@@ -10603,6 +10619,14 @@ public sealed class BRepToolsTrsfModification : IDisposable
     private readonly BRepToolsTrsfModificationHandle handle;
 
     private BRepToolsTrsfModification(BRepToolsTrsfModificationHandle handle) => this.handle = handle;
+
+    /// <summary>Creates a retained OCCT BRepTools_TrsfModification shared object.</summary>
+    public BRepToolsTrsfModification(global::OcctSharp.Values.Transform3d t)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.BRepToolsTrsfModificationCreate0(t, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "BRepToolsTrsfModificationCreate0");
+    }
 
     /// <summary>Invokes OCCT BRepTools_TrsfModification::DynamicType.</summary>
     public StandardType? DynamicType()
@@ -23011,6 +23035,14 @@ public sealed class ShapeCustomTrsfModification : IDisposable
 
     private ShapeCustomTrsfModification(ShapeCustomTrsfModificationHandle handle) => this.handle = handle;
 
+    /// <summary>Creates a retained OCCT ShapeCustom_TrsfModification shared object.</summary>
+    public ShapeCustomTrsfModification(global::OcctSharp.Values.Transform3d t)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ShapeCustomTrsfModificationCreate0(t, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "ShapeCustomTrsfModificationCreate0");
+    }
+
     /// <summary>Invokes OCCT ShapeCustom_TrsfModification::DynamicType.</summary>
     public StandardType? DynamicType()
     {
@@ -23257,6 +23289,13 @@ public sealed class ShapeExtendComplexCurve : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ShapeExtendComplexCurveMethodReversedParameter0(handle, u, out double resultValue), "occtsharp_generated_shape_extend_complex_curve_method_reversed_parameter_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT ShapeExtend_ComplexCurve::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ShapeExtendComplexCurveMethodTransform0(handle, t), "occtsharp_generated_shape_extend_complex_curve_method_transform_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -23522,6 +23561,13 @@ public sealed class ShapeExtendCompositeSurface : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ShapeExtendCompositeSurfaceMethodSetVFirstValue0(handle, vFirst), "occtsharp_generated_shape_extend_composite_surface_method_set_vfirst_value_0");
+    }
+
+    /// <summary>Invokes OCCT ShapeExtend_CompositeSurface::Transform.</summary>
+    public void Transform(global::OcctSharp.Values.Transform3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ShapeExtendCompositeSurfaceMethodTransform0(handle, t), "occtsharp_generated_shape_extend_composite_surface_method_transform_0");
     }
 
     /// <summary>Invokes OCCT ShapeExtend_CompositeSurface::UGlobalToLocal.</summary>
@@ -29276,6 +29322,14 @@ public sealed class TopLocDatum3D : IDisposable
         handle = CreateHandle(nativeHandle, "TopLocDatum3DCreate0");
     }
 
+    /// <summary>Creates a retained OCCT TopLoc_Datum3D shared object.</summary>
+    public TopLocDatum3D(global::OcctSharp.Values.Transform3d t)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.TopLocDatum3DCreate1(t, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "TopLocDatum3DCreate1");
+    }
+
     /// <summary>Invokes OCCT TopLoc_Datum3D::DynamicType.</summary>
     public StandardType? DynamicType()
     {
@@ -29290,6 +29344,22 @@ public sealed class TopLocDatum3D : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.TopLocDatum3DMethodForm0(handle, out int resultValue), "occtsharp_generated_top_loc_datum3_d_method_form_0");
         return (GpTrsfForm)resultValue;
+    }
+
+    /// <summary>Invokes OCCT TopLoc_Datum3D::Transformation.</summary>
+    public global::OcctSharp.Values.Transform3d Transformation()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.TopLocDatum3DMethodTransformation0(handle, out global::OcctSharp.Values.Transform3d resultValue), "occtsharp_generated_top_loc_datum3_d_method_transformation_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT TopLoc_Datum3D::Trsf.</summary>
+    public global::OcctSharp.Values.Transform3d Trsf()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.TopLocDatum3DMethodTrsf0(handle, out global::OcctSharp.Values.Transform3d resultValue), "occtsharp_generated_top_loc_datum3_d_method_trsf_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
