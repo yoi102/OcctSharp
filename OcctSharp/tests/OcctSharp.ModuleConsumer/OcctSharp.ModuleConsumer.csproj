@@ -10,6 +10,7 @@
     <Compile Include="../Shared/BatchXProjectionWorkflow.cs" Link="BatchXProjectionWorkflow.cs" />
     <Compile Include="../Shared/BatchYGeometryWorkflow.cs" Link="BatchYGeometryWorkflow.cs" />
     <Compile Include="../Shared/BatchZValueWorkflow.cs" Link="BatchZValueWorkflow.cs" />
+    <Compile Include="../Shared/BatchAAReferenceWorkflow.cs" Link="BatchAAReferenceWorkflow.cs" />
     <PackageReference Include="OcctSharp.Visualization" Version="$(OcctSharpPackageVersion)" />
   </ItemGroup>
 </Project>

@@ -145,6 +145,10 @@ public static class InitialBindingEmitter
         GeneratedBindingSet valueOperations = GeometricOperationEmitter.Emit(report.OcctVersion, eligibleModel, sourceStableIds.ToHashSet(StringComparer.Ordinal));
         files.AddRange(valueOperations.Files);
         sourceStableIds.AddRange(valueOperations.SourceStableIds);
+        GeneratedBindingSet referenceOperations = ReferenceOperationEmitter.Emit(report.OcctVersion, eligibleModel,
+            sharedHandleScopes, sourceStableIds.ToHashSet(StringComparer.Ordinal), generatedPreambleHeaders);
+        files.AddRange(referenceOperations.Files);
+        sourceStableIds.AddRange(referenceOperations.SourceStableIds);
         sourceStableIds.AddRange(eligibleModel.Declarations
             .Where(static declaration =>
                 declaration.Kind == BindingDeclarationKind.Enum

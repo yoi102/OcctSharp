@@ -8,6 +8,35 @@ public sealed class InitialBindingEmitterTests
 {
     private const string TestStableId = "test:gp-pnt-three-coordinates";
 
+    [Fact]
+    public void AuditedReferencesPublishAllCopiesAfterSuccessAndRejectSignatureDrift()
+    {
+        DiscoveryReport basis = CreateReport();
+        BindingType reference = new("double &", "double &", "double", "double",
+            [new(BindingTypeLayerKind.LValueReference, false), new(BindingTypeLayerKind.Value, false)], null, [], false, null);
+        BindingDeclaration method = new("c:@S@gp_Pnt@F@Coord#&d#S0_#S0_#1", "gp_Pnt::Coord", BindingDeclarationKind.Method, "gp_Pnt.hxx", 1, 1)
+        {
+            NativeSignature = "gp_Pnt::Coord: void (double &, double &, double &) const noexcept",
+            Access = BindingAccess.Public, IsConst = true, ProductModule = OcctProductModule.Geometry,
+            ReturnType = CreateValueType("void", false),
+            Parameters = [new(0, "x", reference, false), new(1, "y", reference, false), new(2, "z", reference, false)],
+        };
+        GeneratedBindingSet Emit(BindingDeclaration declaration) => InitialBindingEmitter.Emit(basis with
+            { Model = new([..basis.Model.Declarations, declaration]) });
+        var result = Emit(method);
+        Assert.Contains(method.StableId, result.SourceStableIds);
+        string native = Assert.Single(result.Files, f => f.RelativePath.EndsWith("ReferenceOperations.Generated.cpp", StringComparison.Ordinal)).Content;
+        string managed = Assert.Single(result.Files, f => f.RelativePath.EndsWith("ReferenceOperations.Generated.cs", StringComparison.Ordinal)).Content;
+        Assert.True(native.IndexOf("const auto copied2", StringComparison.Ordinal) < native.IndexOf("*updatedArg0 = copied0", StringComparison.Ordinal));
+        Assert.True(managed.IndexOf("NativeError.ThrowIfFailed", StringComparison.Ordinal) < managed.IndexOf("arg0 = updatedArg0", StringComparison.Ordinal));
+        Assert.Contains("ref double arg0, ref double arg1, ref double arg2", managed, StringComparison.Ordinal);
+        Assert.Contains("return error.Status", native, StringComparison.Ordinal);
+        Assert.DoesNotContain(method.StableId, Emit(method with { NativeSignature = method.NativeSignature + " changed" }).SourceStableIds);
+        Assert.DoesNotContain(method.StableId, Emit(method with { IsConst = false }).SourceStableIds);
+        Assert.DoesNotContain(method.StableId, Emit(method with { SupportState = BindingSupportState.Manual }).SourceStableIds);
+        Assert.DoesNotContain("unlisted:reference", Emit(method with { StableId = "unlisted:reference" }).SourceStableIds);
+    }
+
     [Theory]
     [InlineData("gp_Mat")]
     [InlineData("gp_Mat2d")]

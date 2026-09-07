@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "1.0",
+  "excluded": [
+    {
+      "stableId": "c:@S@BSplCLib@F@AntiBoorScheme#d#I#&d#I#S0_#I#I#d#S",
+      "nativeName": "BSplCLib::AntiBoorScheme",
+      "signature": "BSplCLib::AntiBoorScheme: bool (const double, const int, double &, const int, double &, const int, const int, const double)",
+      "reason": "SDK documents references as dimensioned coefficient/knot/result array starts; a single-value in/out projection is invalid."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Bohm#d#I#I#&d#I#S0_#S",
+      "nativeName": "BSplCLib::Bohm",
+      "signature": "BSplCLib::Bohm: void (const double, const int, const int, double &, const int, double &)",
+      "reason": "SDK documents references as dimensioned coefficient/knot/result array starts; a single-value in/out projection is invalid."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@BoorScheme#d#I#&d#I#S0_#I#I#S",
+      "nativeName": "BSplCLib::BoorScheme",
+      "signature": "BSplCLib::BoorScheme: void (const double, const int, double &, const int, double &, const int, const int)",
+      "reason": "SDK documents references as dimensioned coefficient/knot/result array starts; a single-value in/out projection is invalid."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Derivative#I#&d#I#I#I#S0_#S",
+      "nativeName": "BSplCLib::Derivative",
+      "signature": "BSplCLib::Derivative: void (const int, double &, const int, const int, const int, double &)",
+      "reason": "SDK documents references as dimensioned coefficient/knot/result array starts; a single-value in/out projection is invalid."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@Eval#d#I#&d#I#S0_#S",
+      "nativeName": "BSplCLib::Eval",
+      "signature": "BSplCLib::Eval: void (const double, const int, double &, const int, double &)",
+      "reason": "SDK documents references as dimensioned coefficient/knot/result array starts; a single-value in/out projection is invalid."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@RationalDerivative#I#I#I#I#&d#S0_#b#S",
+      "nativeName": "BSplSLib::RationalDerivative",
+      "signature": "BSplSLib::RationalDerivative: void (const int, const int, const int, const int, double &, double &, const bool)",
+      "reason": "SDK documents references as dimensioned coefficient/knot/result array starts; a single-value in/out projection is invalid."
+    },
+    {
+      "stableId": "c:@S@Cocoa_Window@F@Position#&I#S0_#S0_#S0_#1",
+      "nativeName": "Cocoa_Window::Position",
+      "signature": "Cocoa_Window::Position: void (int &, int &, int &, int &) const",
+      "reason": "Outside the pinned Windows native receiver scope."
+    },
+    {
+      "stableId": "c:@S@Cocoa_Window@F@Size#&I#S0_#1",
+      "nativeName": "Cocoa_Window::Size",
+      "signature": "Cocoa_Window::Size: void (int &, int &) const",
+      "reason": "Outside the pinned Windows native receiver scope."
+    },
+    {
+      "stableId": "c:@S@PLib@F@EvalCubicHermite#d#I#I#&d#S0_#S0_#S0_#S",
+      "nativeName": "PLib::EvalCubicHermite",
+      "signature": "PLib::EvalCubicHermite: int (const double, const int, const int, double &, double &, double &, double &)",
+      "reason": "SDK documents references as dimensioned coefficient/knot/result array starts; a single-value in/out projection is invalid."
+    },
+    {
+      "stableId": "c:@S@PLib@F@EvalLagrange#d#I#I#I#&d#S0_#S0_#S",
+      "nativeName": "PLib::EvalLagrange",
+      "signature": "PLib::EvalLagrange: int (const double, const int, const int, const int, double &, double &, double &)",
+      "reason": "SDK documents references as dimensioned coefficient/knot/result array starts; a single-value in/out projection is invalid."
+    },
+    {
+      "stableId": "c:@S@PLib@F@EvalLength#I#I#&d#d#d#S0_#S",
+      "nativeName": "PLib::EvalLength",
+      "signature": "PLib::EvalLength: void (const int, const int, double &, const double, const double, double &)",
+      "reason": "SDK documents references as dimensioned coefficient/knot/result array starts; a single-value in/out projection is invalid."
+    },
+    {
+      "stableId": "c:@S@PLib@F@EvalLength#I#I#&d#d#d#d#S0_#S0_#S",
+      "nativeName": "PLib::EvalLength",
+      "signature": "PLib::EvalLength: void (const int, const int, double &, const double, const double, const double, double &, double &)",
+      "reason": "SDK documents references as dimensioned coefficient/knot/result array starts; a single-value in/out projection is invalid."
+    },
+    {
+      "stableId": "c:@S@PLib@F@EvalPoly2Var#d#d#I#I#I#I#I#&d#S0_#S",
+      "nativeName": "PLib::EvalPoly2Var",
+      "signature": "PLib::EvalPoly2Var: void (const double, const double, const int, const int, const int, const int, const int, double &, double &)",
+      "reason": "SDK documents references as dimensioned coefficient/knot/result array starts; a single-value in/out projection is invalid."
+    },
+    {
+      "stableId": "c:@S@PLib@F@EvalPolynomial#d#I#I#I#&1d#&d#S",
+      "nativeName": "PLib::EvalPolynomial",
+      "signature": "PLib::EvalPolynomial: void (const double, const int, const int, const int, const double &, double &)",
+      "reason": "SDK documents references as dimensioned coefficient/knot/result array starts; a single-value in/out projection is invalid."
+    },
+    {
+      "stableId": "c:@S@PLib@F@NoDerivativeEvalPolynomial#d#I#I#I#&1d#&d#S",
+      "nativeName": "PLib::NoDerivativeEvalPolynomial",
+      "signature": "PLib::NoDerivativeEvalPolynomial: void (const double, const int, const int, const int, const double &, double &)",
+      "reason": "SDK documents references as dimensioned coefficient/knot/result array starts; a single-value in/out projection is invalid."
+    },
+    {
+      "stableId": "c:@S@PLib@F@RationalDerivative#I#I#I#&d#S0_#b#S",
+      "nativeName": "PLib::RationalDerivative",
+      "signature": "PLib::RationalDerivative: void (const int, const int, const int, double &, double &, const bool)",
+      "reason": "SDK documents references as dimensioned coefficient/knot/result array starts; a single-value in/out projection is invalid."
+    },
+    {
+      "stableId": "c:@S@PLib@F@RationalDerivatives#I#I#&d#S0_#S0_#S",
+      "nativeName": "PLib::RationalDerivatives",
+      "signature": "PLib::RationalDerivatives: void (const int, const int, double &, double &, double &)",
+      "reason": "SDK documents references as dimensioned coefficient/knot/result array starts; a single-value in/out projection is invalid."
+    },
+    {
+      "stableId": "c:@S@Wasm_Window@F@Position#&I#S0_#S0_#S0_#1",
+      "nativeName": "Wasm_Window::Position",
+      "signature": "Wasm_Window::Position: void (int &, int &, int &, int &) const",
+      "reason": "Outside the pinned Windows native receiver scope."
+    },
+    {
+      "stableId": "c:@S@Wasm_Window@F@Size#&I#S0_#1",
+      "nativeName": "Wasm_Window::Size",
+      "signature": "Wasm_Window::Size: void (int &, int &) const",
+      "reason": "Outside the pinned Windows native receiver scope."
+    },
+    {
+      "stableId": "c:@S@Xw_Window@F@Position#&I#S0_#S0_#S0_#1",
+      "nativeName": "Xw_Window::Position",
+      "signature": "Xw_Window::Position: void (int &, int &, int &, int &) const",
+      "reason": "Outside the pinned Windows native receiver scope."
+    },
+    {
+      "stableId": "c:@S@Xw_Window@F@Size#&I#S0_#1",
+      "nativeName": "Xw_Window::Size",
+      "signature": "Xw_Window::Size: void (int &, int &) const",
+      "reason": "Outside the pinned Windows native receiver scope."
+    }
+  ]
+}

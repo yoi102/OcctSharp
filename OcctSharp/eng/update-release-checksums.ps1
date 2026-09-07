@@ -1,5 +1,5 @@
 [CmdletBinding()]
-param([string]$PackageVersion = '8.0.1-preview.25')
+param([string]$PackageVersion = '8.0.1-preview.26')
 
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest

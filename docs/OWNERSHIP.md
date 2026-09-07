@@ -1,5 +1,18 @@
 # Ownership and Lifetime
 
+## Batch AA copied references (ADR-0095)
+
+ReferenceOperations reconstruct initialized ref arguments as independent local native
+values. All output conversions finish before publication; managed assignments happen
+only after a successful status. A false boolean result still publishes successful
+outputs. Aliased refs are independent snapshots and assignments follow parameter order.
+Use distinct variables when native aliasing semantics matter. Shared receivers and
+inputs use typed SafeHandles for call-duration retention and registry validation;
+null or disposed shared inputs are rejected. No persistent owner is added. Native
+const queries may update caches; shared object rollback and concurrent access are not
+promised. Initialize geometric refs with valid values, including valid directions,
+frames and transforms, even for parameters normally used as outputs.
+
 ## Batch Z receiver copies (ADR-0094)
 
 ValueOperations never allocate a persistent native owner. The receiver and arguments

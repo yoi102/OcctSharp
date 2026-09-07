@@ -1,5 +1,16 @@
 # Type Mapping
 
+## Batch AA audited reference parameters (ADR-0095)
+
+The explicit reference-operation catalogue matches both stable ID and native signature.
+Only listed mutable lvalue-reference parameters may normalize to an existing ValueCopy
+projection. InitialTypeMap still rejects general mutable references. Each accepted
+parameter crosses the C ABI as an input value and a separate updated-value pointer;
+the public managed signature uses ref. Mutable reference returns, shared-handle refs,
+pointer/array parameters and dimensioned array-start references remain excluded.
+Only const shared/copy receivers and audited static methods participate. New exports
+and operation classes use separate files and preserve existing signatures and bodies.
+
 ## Batch Z copied operations and transformation coefficients (ADR-0094)
 
 TM009 additionally maps Transform2d, Transform3d, AffineTransform2d and

@@ -1,6 +1,11 @@
 # Current Status
 
 - Last updated: 2026-09-08.
+- Active batch: [AA](BATCH_AA_REFERENCE_OPERATIONS.md), audited copied reference operations
+  under [ADR-0095](adr/0095-generated-reference-operations.md). Generated additions: 598;
+  native/managed Release and Debug compile, generator 154/154 and runtime 528/528 pass.
+  Native/API compatibility and C11 headers pass. Full product delivery is in progress.
+  The completed product counts below remain the Batch Z baseline.
 - Completed local batch: [Z](BATCH_Z_VALUE_OPERATIONS.md), implemented under
   [ADR-0094](adr/0094-generated-geometric-value-operations.md).
 - Locally validated: 8.0.1-preview.25 / ABI 1.69 / bridge 0.77.0. All local product-delivery checks pass.

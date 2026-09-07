@@ -2,6 +2,10 @@
 
 ## Current planning policy (2026-09-07)
 
+Batch AA is implementing [audited copied reference operations](BATCH_AA_REFERENCE_OPERATIONS.md)
+under ADR-0095. Its 598 reviewed candidates exclude dimensioned array-start references;
+final migration counts depend on generation, compilation and semantic validation.
+
 B-W and Q-W's 280/280 accepted capabilities are locally complete at `15fd671`.
 Batch X implements [ADR-0092](adr/0092-generated-numeric-and-copied-reference-expansion.md):
 broad generated numeric mappings and copied/retained const-reference returns, with

@@ -125,21 +125,21 @@ internal static class GeometricOperationEmitter
         [new(BindingTypeLayerKind.Value, false)], null, [], false, null), BindingTypeUsage.ReturnValue, map);
     private static BindingTypeProjection Map(BindingType type, BindingTypeUsage usage, InitialTypeMap map) =>
         map.TryMap(type, usage, out BindingTypeProjection? result) ? result! : throw new InvalidDataException(type.CanonicalSpelling);
-    private static string RawType(BindingTypeProjection p) => p.RuleId == "TM005" ? "Point3dRaw" : p.ManagedRawType;
-    private static string ToRaw(string name, BindingTypeProjection p) => p.RuleId switch {
+    internal static string RawType(BindingTypeProjection p) => p.RuleId == "TM005" ? "Point3dRaw" : p.ManagedRawType;
+    internal static string ToRaw(string name, BindingTypeProjection p) => p.RuleId switch {
         "TM005" => "new Point3dRaw(" + name + ".X, " + name + ".Y, " + name + ".Z)",
         "TM004" => "(int)" + name, "TM003" => "(" + name + " ? 1 : 0)", _ => name };
-    private static string ToFriendly(string name, BindingTypeProjection p) => p.RuleId switch {
+    internal static string ToFriendly(string name, BindingTypeProjection p) => p.RuleId switch {
         "TM005" => "new Point3d(" + name + ".X, " + name + ".Y, " + name + ".Z)",
         "TM004" => "(" + p.ManagedFriendlyType + ")" + name, "TM003" => name + " != 0", _ => name };
-    private static string ToNative(string name, BindingTypeProjection p, string canonical) => p.RuleId switch {
+    internal static string ToNative(string name, BindingTypeProjection p, string canonical) => p.RuleId switch {
         "TM009" => "OcctSharp_GeometryValues::ToNative(" + name + ")",
         "TM005" => "gp_Pnt(OcctSharp_GeometryValues::Check(" + name + ".x), OcctSharp_GeometryValues::Check(" + name + ".y), OcctSharp_GeometryValues::Check(" + name + ".z))",
         "TM004" => "static_cast<" + canonical + ">(" + name + ")",
         "TM008" => "static_cast<" + canonical + ">(" + name + ")",
         "TM003" => "(" + name + " != 0)",
         "TM002" => "OcctSharp_GeometryValues::Check(" + name + ")", _ => name };
-    private static string FromNative(string name, BindingTypeProjection p) => p.RuleId switch {
+    internal static string FromNative(string name, BindingTypeProjection p) => p.RuleId switch {
         "TM009" => "OcctSharp_GeometryValues::FromNative(" + name + ")",
         "TM005" => "OcctSharp_Point3d{" + name + ".X(), " + name + ".Y(), " + name + ".Z()}",
         "TM004" => "static_cast<int32_t>(" + name + ")", "TM003" => "(" + name + " ? 1 : 0)", _ => name };

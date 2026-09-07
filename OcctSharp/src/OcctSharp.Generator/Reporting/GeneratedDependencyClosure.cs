@@ -1,6 +1,7 @@
 using OcctSharp.Generator.Emission;
 using OcctSharp.Generator.Model;
 using OcctSharp.Generator.TypeMapping;
+using OcctSharp.Generator.Transformation;
 
 namespace OcctSharp.Generator.Reporting;
 
@@ -210,7 +211,7 @@ public static class GeneratedDependencyClosureAnalyzer
         List<ResolvedReference> references,
         List<GeneratedDependencyIssue> issues)
     {
-        if (!typeMap.TryMap(type, usage, out BindingTypeProjection? projection) || projection is null)
+        if (!ReferenceOperationContract.TryMap(declaration, type, usage, typeMap, out BindingTypeProjection? projection) || projection is null)
         {
             issues.Add(Unresolved(declaration, referenceKind, type, "No accepted TypeMap projection exists for an emitted signature type."));
             return;

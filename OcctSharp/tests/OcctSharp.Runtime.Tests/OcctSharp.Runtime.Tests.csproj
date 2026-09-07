@@ -18,6 +18,7 @@
     <Compile Include="../Shared/BatchXProjectionWorkflow.cs" Link="BatchXProjectionWorkflow.cs" />
     <Compile Include="../Shared/BatchYGeometryWorkflow.cs" Link="BatchYGeometryWorkflow.cs" />
     <Compile Include="../Shared/BatchZValueWorkflow.cs" Link="BatchZValueWorkflow.cs" />
+    <Compile Include="../Shared/BatchAAReferenceWorkflow.cs" Link="BatchAAReferenceWorkflow.cs" />
     <Compile Include="../Shared/BatchPSurfaceWorkflow.cs" Link="BatchPSurfaceWorkflow.cs" />
     <Compile Include="../Shared/BatchQRepairWorkflow.cs" Link="BatchQRepairWorkflow.cs" />
     <Compile Include="../Shared/BatchRMeshWorkflow.cs" Link="BatchRMeshWorkflow.cs" />
