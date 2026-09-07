@@ -45,7 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\README.md" Pack="true" PackagePath="\" />
-    <None Include="..\..\assets\occtsharp-icon.png" Pack="true" PackagePath="\" />
+    <None Include="..\..\assets\occtsharp-package-icon.png" Link="occtsharp-icon.png" Pack="true" PackagePath="occtsharp-icon.png" />
     <None Include="..\..\..\LICENSE" Pack="true" PackagePath="\" />
     <None Include="..\..\..\docs\**\*.md"
           Exclude="..\..\..\docs\STATUS.md"

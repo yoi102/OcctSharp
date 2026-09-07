@@ -23,9 +23,9 @@
     <None Include="$(MSBuildThisFileDirectory)..\..\README.md"
           Pack="true"
           PackagePath="\" />
-    <None Include="$(MSBuildThisFileDirectory)..\assets\occtsharp-icon.png"
+    <None Include="$(MSBuildThisFileDirectory)..\assets\occtsharp-package-icon.png" Link="occtsharp-icon.png"
           Pack="true"
-          PackagePath="\" />
+          PackagePath="occtsharp-icon.png" />
   </ItemGroup>
   <ItemGroup>
     <InternalsVisibleTo Include="OcctSharp" />

@@ -1,9 +1,9 @@
 # Current Status
 
-- Last updated: 2026-09-07.
-- Active batch: [Z](BATCH_Z_VALUE_OPERATIONS.md), implemented under
+- Last updated: 2026-09-08.
+- Completed local batch: [Z](BATCH_Z_VALUE_OPERATIONS.md), implemented under
   [ADR-0094](adr/0094-generated-geometric-value-operations.md).
-- Target: 8.0.1-preview.25 / ABI 1.69 / bridge 0.77.0. Full delivery checks are in progress.
+- Locally validated: 8.0.1-preview.25 / ABI 1.69 / bridge 0.77.0. All local product-delivery checks pass.
 - Entry product: Y 2083f99, plus README update 845e3d6. Its validated evidence remains in
   [Preview.24 history](STATUS_HISTORY_THROUGH_PREVIEW_24.md).
 - Twelve modules, one facade, one Native DLL and fourteen local packages remain.
@@ -31,16 +31,21 @@ Inventory SHA256: `C81FD10258895F765187AEC809FD3ECB337ED2776E70EF39669F27CF6EF1E
 
 ## Executed validation
 
-- PASS: Release native/managed build and deterministic generation/discovery; 99 files.
-- PASS: Generator Release 153/153 and full Runtime Release 517/517 (including 24 Z tests).
+- PASS: Release/Debug native/managed builds and deterministic generation/discovery; 99 files.
+- PASS: Generator 153/153 and Runtime 517/517 in both Release and Debug (24 Z tests).
 - PASS: Release and Debug geometric ABI fixtures, 22 strict C11 headers, 34 record layouts.
 - PASS: 33,044 old generated native signatures/bodies unchanged; 1,487 managed API
   additions with zero removals; 3,530 facade forwarders current.
 - PASS: 14 local packages and clean facade/direct-module consumers, including Z workflow.
 - PASS: exact inventory accounting and four rejection fixtures; unchanged denominator, header and manual-ID sets.
-- Pending: complete final Release/Debug suites, actual Debug-native, final export parity,
-  cold regeneration and full local release-check.
-  These delivery gates are NOT RUN to completion; Z is not yet a completed product batch.
+- PASS: 35,177 native exports, +1,388, zero removals; Debug and Release match.
+- PASS: actual Debug-native Runtime 517/517, with all 62 DLLs hash-verified.
+- PASS: cold source copy builds and reproduces all 99 generated files byte-for-byte.
+- PASS: full local release-check reports batchImplementationComplete=true.
+- PASS: final documentation repack and content verification: 195 stable documents,
+  73 runtime/license files, final provenance and checksums; all 14 package icons match.
+- Implementation commit: d75082a. This document accompanies the local completion commit.
+- Final facade package SHA256: DFCE72E6530EA4DDE9C9F652C2F87F83F134A413B1AD7F346EA5E7BDC9D855E0.
 
 ## Implemented scope
 
@@ -53,5 +58,6 @@ this rule. See [Batch Z](BATCH_Z_VALUE_OPERATIONS.md) and [type mapping](TYPE_MA
 
 ## Next action
 
-Finish Debug/runtime/export and cold/package release checks, record final evidence,
-repack current documentation and create the local completion commit.
+Batch Z is locally complete. The next migration can address explicit output/sequence
+contracts and remaining non-transient receiver projections. Remote CI, signing, GitHub
+push and NuGet publication are NOT RUN.
