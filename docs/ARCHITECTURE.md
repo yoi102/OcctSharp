@@ -1,5 +1,17 @@
 # Architecture
 
+## Batch AA reference operation boundary
+
+ADR-0095 adds ReferenceOperationEmitter and an exact stable-ID/signature catalogue for
+fixed-value mutable-reference parameters. Nine modules expose static classes under
+OcctSharp.ReferenceOperations, using existing copied values and shared wrappers.
+New occtsharp_ref_ exports take copied input snapshots and separate output pointers;
+the managed ref arguments are assigned only after a successful native status. Typed
+SafeHandles retain shared inputs for the call and preserve registry validation.
+Existing generated exports, API identities, module boundaries and ownership categories
+remain unchanged. See [TYPE_MAPPING](TYPE_MAPPING.md), [OWNERSHIP](OWNERSHIP.md) and
+[Batch AA](BATCH_AA_REFERENCE_OPERATIONS.md) for aliasing and initialized-input rules.
+
 ## Batch Z geometric operation boundary
 
 ADR-0094 adds a reusable constructor/instance emitter for centrally mapped gp values

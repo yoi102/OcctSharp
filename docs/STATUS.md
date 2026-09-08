@@ -1,68 +1,72 @@
 # Current Status
 
 - Last updated: 2026-09-08.
-- Active batch: [AA](BATCH_AA_REFERENCE_OPERATIONS.md), audited copied reference operations
-  under [ADR-0095](adr/0095-generated-reference-operations.md). Generated additions: 598;
-  native/managed Release and Debug compile, generator 154/154 and runtime 528/528 pass.
-  Native/API compatibility and C11 headers pass. Full product delivery is in progress.
-  The completed product counts below remain the Batch Z baseline.
-- Completed local batch: [Z](BATCH_Z_VALUE_OPERATIONS.md), implemented under
-  [ADR-0094](adr/0094-generated-geometric-value-operations.md).
-- Locally validated: 8.0.1-preview.25 / ABI 1.69 / bridge 0.77.0. All local product-delivery checks pass.
-- Entry product: Y 2083f99, plus README update 845e3d6. Its validated evidence remains in
-  [Preview.24 history](STATUS_HISTORY_THROUGH_PREVIEW_24.md).
+- Completed local batch: [AA](BATCH_AA_REFERENCE_OPERATIONS.md), implementing
+  [ADR-0095](adr/0095-generated-reference-operations.md).
+- Validated product: 8.0.1-preview.26 / ABI 1.70 / bridge 0.78.0.
+  All local product-delivery gates and final package-content checks pass.
+- Entry product: Batch Z c80f09c. Its completed evidence is preserved in
+  [Preview.25 history](STATUS_HISTORY_THROUGH_PREVIEW_25.md).
 - Twelve modules, one facade, one Native DLL and fourteen local packages remain.
   GitHub push and NuGet publication are NOT RUN, outside this task.
 
 ## Full-library accounting
 
-| Disposition | Preview.24 entry | Batch Z |
+| Disposition | Preview.25 entry | Batch AA |
 |---|---:|---:|
-| Emitted | 20,650 | 22,038 |
+| Emitted | 22,038 | 22,636 |
 | Accepted manual | 1,217 | 1,217 |
-| Blocked | 45,058 | 43,670 |
+| Blocked | 43,670 | 43,072 |
 | Skipped | 49,347 | 49,347 |
 | SupportedUnselected / pending / HD099 | 0 / 0 / 0 | 0 / 0 / 0 |
 | Total inventoried | 116,272 | 116,272 |
 
-Generated plus accepted manual declaration coverage rises from 18.81% to 20.00%.
+Generated plus accepted manual declaration coverage rises from 20.00% to 20.51%.
 This is declaration coverage, not functional completeness. Semantic discovery remains
 7,058/7,090 headers with the same 32 explicit exclusions. Full migration is incomplete.
 
-Z adds 1,388 generated IDs and removes none. There are no new manual IDs or exclusions.
-The exact audit validates 1,388 Blocked-to-Emitted transitions and seven audited
-Blocked-to-Blocked reason refinements; refinements do not count as migration.
-Inventory SHA256: `C81FD10258895F765187AEC809FD3ECB337ED2776E70EF39669F27CF6EF1E75B`.
+AA adds exactly the 598 audited catalogue IDs and removes none. There are no new
+manual IDs or header exclusions. Every addition is Blocked-to-Emitted; there are no
+other disposition or discovery identity changes. Inventory batch size remains 128.
+Inventory SHA256: `AE0C2EA053355D9D94E2DD20F9FB0B2EF41A10E22610EF745C59EF7DA887966E`.
 
 ## Executed validation
 
-- PASS: Release/Debug native/managed builds and deterministic generation/discovery; 99 files.
-- PASS: Generator 153/153 and Runtime 517/517 in both Release and Debug (24 Z tests).
-- PASS: Release and Debug geometric ABI fixtures, 22 strict C11 headers, 34 record layouts.
-- PASS: 33,044 old generated native signatures/bodies unchanged; 1,487 managed API
-  additions with zero removals; 3,530 facade forwarders current.
-- PASS: 14 local packages and clean facade/direct-module consumers, including Z workflow.
-- PASS: exact inventory accounting and four rejection fixtures; unchanged denominator, header and manual-ID sets.
-- PASS: 35,177 native exports, +1,388, zero removals; Debug and Release match.
-- PASS: actual Debug-native Runtime 517/517, with all 62 DLLs hash-verified.
-- PASS: cold source copy builds and reproduces all 99 generated files byte-for-byte.
-- PASS: full local release-check reports batchImplementationComplete=true.
-- PASS: final documentation repack and content verification: 195 stable documents,
-  73 runtime/license files, final provenance and checksums; all 14 package icons match.
-- Implementation commit: d75082a. This document accompanies the local completion commit.
-- Final facade package SHA256: DFCE72E6530EA4DDE9C9F652C2F87F83F134A413B1AD7F346EA5E7BDC9D855E0.
+- PASS: Release/Debug native/managed builds and deterministic generation/discovery; 126 files.
+- PASS: Generator 154/154 and Runtime 528/528 in both Release and Debug (11 AA tests).
+- PASS: Release and Debug geometric ABI fixtures, 31 strict C11 headers and 34 record layouts.
+- PASS: 34,432 previous generated native signatures/bodies unchanged; 818 managed API
+  additions with zero removals; 49,943 public signatures and 3,750 facade forwarders.
+- PASS: 35,775 native exports, +598, zero removals; Debug and Release match.
+- PASS: actual Debug-native Runtime 528/528, with all 62 DLLs hash-verified.
+- PASS: 14 local packages and clean facade/direct-module consumers, including AA workflow.
+- PASS: exact inventory accounting and four rejection fixtures; unchanged denominator,
+  header and manual-ID sets, with the exact 598-entry catalogue reconciled.
+- PASS: cold source copy builds and reproduces all 126 generated files byte-for-byte.
+- PASS: all local release-check gates; batchImplementationComplete=true. Execution resumed
+  at the final inventory after interruption, retaining completed build/consumer/cold-run evidence.
+- PASS: independent read-only reference-emitter review found no confirmed blocking defect.
+- PASS: final documentation repack and content validation; 198 stable documents,
+  73 runtime/license files, five checksums and matching final provenance.
+- Implementation commit: 581b887. This document accompanies the local completion commit.
+- Final facade package SHA256: 8BB1E3AE9BBDA4067BB0C8044212C21E6F7BE8B35F6C52933DFEAD7E8B6DE77D.
+
+Release DLL: 19,127,296 bytes,
+`CE2A270D75B91CF4FE0F82BFA746929DE912E9067AE5CED2E4BC8E5AD9D5D8E8`.
+Debug DLL: `F22663AAAC95272E8A937940F4B871A8233CE1291E6E25113EA2986CD1A4255D`.
 
 ## Implemented scope
 
-35 copied geometric operation families cover constructors, queries and ref mutations.
-Four new 2D/3D similarity/affine coefficient records support translation, rotation,
-reflection, scale, composition and inverse workflows. Failed mutations preserve the
-managed receiver. SC-063 records explicit singular-inverse guards. Mutable output
-references, arrays, pointers, operators and native form-cache editing remain outside
-this rule. See [Batch Z](BATCH_Z_VALUE_OPERATIONS.md) and [type mapping](TYPE_MAPPING.md).
+598 copied reference operations cover 81 OCCT packages across nine product modules.
+220 operation classes expose curve/surface derivatives, parameter conversion, geometry
+coefficients, display attributes, and exchange/document queries. Native inputs are
+initialized snapshots; all copied outputs publish after success. Managed refs retain
+their original values on exceptions. Typed SafeHandles retain shared inputs during calls.
+See [Batch AA](BATCH_AA_REFERENCE_OPERATIONS.md), [type mapping](TYPE_MAPPING.md) and
+[ownership](OWNERSHIP.md) for initialization, aliasing and thread restrictions.
 
 ## Next action
 
-Batch Z is locally complete. The next migration can address explicit output/sequence
-contracts and remaining non-transient receiver projections. Remote CI, signing, GitHub
-push and NuGet publication are NOT RUN.
+Batch AA is locally complete. The next migration can address explicit buffer/sequence
+contracts and remaining non-transient receiver ownership.
+Remote CI, signing, GitHub push and NuGet publication are NOT RUN.

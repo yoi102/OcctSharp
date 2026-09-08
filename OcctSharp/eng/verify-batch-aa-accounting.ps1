@@ -26,6 +26,11 @@ if ($oldIds.Count -ne 22038 -or -not $oldIds.IsSubsetOf($currentIds)) { throw 'B
 $added = [Collections.Generic.HashSet[string]]::new($currentIds, [StringComparer]::Ordinal)
 $added.ExceptWith($oldIds)
 if ($added.Count -ne 598) { throw 'The accepted AA stable-ID delta changed.' }
+$contracts = Get-Content -LiteralPath (Join-Path $workspace 'src/OcctSharp.Generator/Transformation/reference-operation-contracts.json') -Raw | ConvertFrom-Json
+$contractIds = [Collections.Generic.HashSet[string]]::new([string[]]$contracts.stableId, [StringComparer]::Ordinal)
+if ($contractIds.Count -ne $contracts.Count -or -not $contractIds.SetEquals($added)) {
+    throw 'Generated additions differ from the exact audited reference-operation catalogue.'
+}
 $rows = [Collections.Generic.Dictionary[string,object]]::new([StringComparer]::Ordinal)
 foreach ($row in $after.FinalClassification.Declarations) {
     if ($rows.ContainsKey($row.StableId)) { throw "Duplicate exit ID: $($row.StableId)" }

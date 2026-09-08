@@ -1,6 +1,6 @@
 # ADR-0095: Audited copied reference operations
 
-- Status: Accepted for implementation.
+- Status: Accepted; implemented and locally validated in Batch AA.
 - Date: 2026-09-08.
 - Entry: Batch Z c80f09c, Preview.25 / ABI 1.69 / bridge 0.77.0.
 

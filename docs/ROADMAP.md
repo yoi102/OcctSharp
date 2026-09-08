@@ -2,9 +2,11 @@
 
 ## Current planning policy (2026-09-07)
 
-Batch AA is implementing [audited copied reference operations](BATCH_AA_REFERENCE_OPERATIONS.md)
-under ADR-0095. Its 598 reviewed candidates exclude dimensioned array-start references;
-final migration counts depend on generation, compilation and semantic validation.
+Batch AA completes [audited copied reference operations](BATCH_AA_REFERENCE_OPERATIONS.md)
+under ADR-0095: 598 generated additions across nine modules and 81 OCCT packages, with
+local delivery gates passed. Dimensioned array-start references remain excluded.
+Further migration can address explicit buffer/sequence contracts and non-transient
+receiver ownership; no fixed capability count applies.
 
 B-W and Q-W's 280/280 accepted capabilities are locally complete at `15fd671`.
 Batch X implements [ADR-0092](adr/0092-generated-numeric-and-copied-reference-expansion.md):
