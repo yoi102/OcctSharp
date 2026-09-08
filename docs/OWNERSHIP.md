@@ -1,5 +1,31 @@
 # Ownership and Lifetime
 
+## Batch AB owning non-transient values (ADR-0096; in progress)
+
+The new category constructs audited native instances directly in stable heap storage;
+published instances are never copied or moved. A typed managed SafeHandle owns an
+opaque, nonzero token with matching release in the existing Native DLL. Tokens are
+issued monotonically, never recycled and never interpreted as object addresses. Token
+exhaustion fails rather than wrapping. The type-tagged registry owns each live instance
+through shared_ptr and obtains an operation lease under its lock before native access.
+Every accepted owned input is leased too. Removing a token during release invalidates
+future acquisitions while existing leases retain the object until their calls end;
+repeated/stale release cannot destroy a newer allocation or an entry of another type.
+
+This is a concurrent-release lifetime guarantee for the new category. It prevents the
+validation-to-use race and allocation-address ABA, but does not serialize operations
+on mutable native state. Callers must synchronize such access and retain native thread
+restrictions. Existing shape/shared categories are unchanged. No borrowed member,
+shared_ptr, class layout, copy/move operation or retained external address is inferred.
+
+Audited copied refs use initialized independent snapshots and complete every output
+conversion before successful publication. Managed refs remain unchanged on exceptions;
+boolean false still publishes successful copies and aliased refs assign in argument
+order. Native object mutation or cache changes before a failure are not rolled back.
+Construction/destruction and lease-race evidence remain required before this category
+is delivered. See [ADR-0096](adr/0096-generated-owned-nontransient-values.md) and
+[Batch AB](BATCH_AB_OWNED_NONTRANSIENT_VALUES.md); current progress is in [STATUS](STATUS.md).
+
 ## Batch AA copied references (ADR-0095)
 
 ReferenceOperations reconstruct initialized ref arguments as independent local native

@@ -5,6 +5,7 @@
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="Transformation/reference-operation-contracts.json" />
+    <EmbeddedResource Include="Transformation/owned-value-operation-contracts.json" />
     <EmbeddedResource Include="Emission/preview22-stable-ids.json" />
     <EmbeddedResource Include="Emission/preview23-added-stable-ids.json" />
     <EmbeddedResource Include="Emission/preview24-added-stable-ids.json" />

@@ -211,7 +211,10 @@ public static class GeneratedDependencyClosureAnalyzer
         List<ResolvedReference> references,
         List<GeneratedDependencyIssue> issues)
     {
-        if (!ReferenceOperationContract.TryMap(declaration, type, usage, typeMap, out BindingTypeProjection? projection) || projection is null)
+        bool mapped = OwnedValueOperationContract.Contains(declaration)
+            ? OwnedValueOperationContract.TryMap(declaration, type, usage, typeMap, out BindingTypeProjection? projection)
+            : ReferenceOperationContract.TryMap(declaration, type, usage, typeMap, out projection);
+        if (!mapped || projection is null)
         {
             issues.Add(Unresolved(declaration, referenceKind, type, "No accepted TypeMap projection exists for an emitted signature type."));
             return;
@@ -225,10 +228,11 @@ public static class GeneratedDependencyClosureAnalyzer
             "TM006" when !string.IsNullOrWhiteSpace(type.HandleTargetType) =>
                 moduleIndex.Resolve(type.HandleTargetType),
             "TM007" => OcctProductModule.Modeling,
+            "TM010" => moduleIndex.Resolve(OwnedValueOperationContract.NativeTypeName(type)),
             _ => null,
         };
 
-        if (projection.RuleId is "TM004" or "TM006" && target is null)
+        if (projection.RuleId is "TM004" or "TM006" or "TM010" && target is null)
         {
             issues.Add(Unresolved(
                 declaration,

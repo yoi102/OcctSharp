@@ -1,6 +1,9 @@
 # Current Status
 
-- Last updated: 2026-09-08.
+- Last updated: 2026-09-09.
+- Active batch: [AB](BATCH_AB_OWNED_NONTRANSIENT_VALUES.md), in progress under
+  [ADR-0096](adr/0096-generated-owned-nontransient-values.md). Its new ownership
+  mechanism and migrated scope are not yet validated for delivery.
 - Completed local batch: [AA](BATCH_AA_REFERENCE_OPERATIONS.md), implementing
   [ADR-0095](adr/0095-generated-reference-operations.md).
 - Validated product: 8.0.1-preview.26 / ABI 1.70 / bridge 0.78.0.
@@ -10,7 +13,24 @@
 - Twelve modules, one facade, one Native DLL and fourteen local packages remain.
   GitHub push and NuGet publication are NOT RUN, outside this task.
 
-## Full-library accounting
+## Batch AB in progress
+
+The completed AA baseline is frozen in the inner workspace at
+`artifacts/preparation-baselines/preview26-batch-ab/`: manifest, full inventory,
+Release native DLL and a freshly read 49,943-signature API snapshot, with per-file
+hashes in `baseline-evidence.json`. The baseline source commit is c65b480; generated
+declaration and file counts match AA at 22,636 and 126. AB is implementing audited
+owning non-transient wrappers with stable native storage, typed non-reused tokens
+and shared_ptr operation leases. The 122-owner catalogue now generates 1,067 added
+IDs (23,703 total) in 137 files; its native build passes. The 34-header C11 and registry
+fixtures pass, including 250 concurrent release races. All 35,030 old generated native
+bodies/signatures remain unchanged. Preview.27 / ABI 1.71 / bridge 0.79.0 is the candidate;
+Release native/managed builds, deterministic discovery/generation, Generator 163/163
+and Runtime 542/542 pass (14 new runtime tests). Debug and the remaining product-delivery
+gates are NOT RUN for AB yet. The following AA counts and PASS results describe the
+completed Preview.26 baseline, not AB completion.
+
+## Full-library accounting (validated Batch AA baseline)
 
 | Disposition | Preview.25 entry | Batch AA |
 |---|---:|---:|
@@ -30,7 +50,7 @@ manual IDs or header exclusions. Every addition is Blocked-to-Emitted; there are
 other disposition or discovery identity changes. Inventory batch size remains 128.
 Inventory SHA256: `AE0C2EA053355D9D94E2DD20F9FB0B2EF41A10E22610EF745C59EF7DA887966E`.
 
-## Executed validation
+## Executed validation (Batch AA)
 
 - PASS: Release/Debug native/managed builds and deterministic generation/discovery; 126 files.
 - PASS: Generator 154/154 and Runtime 528/528 in both Release and Debug (11 AA tests).
@@ -67,6 +87,7 @@ See [Batch AA](BATCH_AA_REFERENCE_OPERATIONS.md), [type mapping](TYPE_MAPPING.md
 
 ## Next action
 
-Batch AA is locally complete. The next migration can address explicit buffer/sequence
-contracts and remaining non-transient receiver ownership.
+Continue Batch AB's audited owning non-transient implementation and lifetime validation,
+then reconcile the exact inventory/API/export delta and run product delivery gates.
+The validated version remains Preview.26 until new product evidence is complete.
 Remote CI, signing, GitHub push and NuGet publication are NOT RUN.

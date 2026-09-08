@@ -11,6 +11,7 @@
     <Compile Include="../Shared/BatchYGeometryWorkflow.cs" Link="BatchYGeometryWorkflow.cs" />
     <Compile Include="../Shared/BatchZValueWorkflow.cs" Link="BatchZValueWorkflow.cs" />
     <Compile Include="../Shared/BatchAAReferenceWorkflow.cs" Link="BatchAAReferenceWorkflow.cs" />
+    <Compile Include="../Shared/BatchABOwnedWorkflow.cs" Link="BatchABOwnedWorkflow.cs" />
     <PackageReference Include="OcctSharp.Visualization" Version="$(OcctSharpPackageVersion)" />
   </ItemGroup>
 </Project>

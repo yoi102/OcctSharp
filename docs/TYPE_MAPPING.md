@@ -1,5 +1,32 @@
 # Type Mapping
 
+## Batch AB audited owning non-transient projections (ADR-0096; in progress)
+
+An explicit stable-ID and exact-signature catalogue selects supported constructors
+and operations on independently owned non-transient classes. Context-specific TM010
+maps each selected owner to its typed SafeHandle and opaque native token, with exact
+type-tag validation and a call-duration shared_ptr lease. It does not add a fallback
+IntPtr mapping for unknown classes or change the general mutable-reference rejection.
+Native instances are constructed directly in stable heap storage and cannot be copied
+or moved after publication. Eligible owned inputs must have an audited call-bound
+relationship; borrowed storage and retained addresses require separate lifetime rules.
+
+Scalar, enum and geometric copies retain existing ABI records and conversions.
+Audited mutable copied-reference parameters use separate input values and output
+pointers, with managed ref assignment only after success. All output conversions
+complete before publication, without promising rollback of owned object mutation.
+Do not infer buffers from array-start references, mutable-reference return ownership,
+template layout or copy/move constructors. Preserve Manual/Skipped declarations,
+existing public identities and native exports/bodies in separate generated output.
+The proposed category is not delivered until [Batch AB](BATCH_AB_OWNED_NONTRANSIENT_VALUES.md)
+passes its ownership and product gates; see [OWNERSHIP](OWNERSHIP.md) and
+[ADR-0096](adr/0096-generated-owned-nontransient-values.md).
+
+TM010 accepts const references to audited owners as leased inputs, and copied value
+or const-reference results only for the 24 explicitly copyable owner records. An owned
+result gets independent heap storage. The supporting method catalogue preserves
+Manual dispositions and projects inherited queries without inventing migrated IDs.
+
 ## Batch AA audited reference parameters (ADR-0095)
 
 The explicit reference-operation catalogue matches both stable ID and native signature.

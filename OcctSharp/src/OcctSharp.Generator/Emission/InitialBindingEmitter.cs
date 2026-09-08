@@ -149,6 +149,10 @@ public static class InitialBindingEmitter
             sharedHandleScopes, sourceStableIds.ToHashSet(StringComparer.Ordinal), generatedPreambleHeaders);
         files.AddRange(referenceOperations.Files);
         sourceStableIds.AddRange(referenceOperations.SourceStableIds);
+        GeneratedBindingSet ownedValueOperations = OwnedValueOperationEmitter.Emit(report.OcctVersion, eligibleModel,
+            sharedHandleScopes, sourceStableIds.ToHashSet(StringComparer.Ordinal), generatedPreambleHeaders);
+        files.AddRange(ownedValueOperations.Files);
+        sourceStableIds.AddRange(ownedValueOperations.SourceStableIds);
         sourceStableIds.AddRange(eligibleModel.Declarations
             .Where(static declaration =>
                 declaration.Kind == BindingDeclarationKind.Enum

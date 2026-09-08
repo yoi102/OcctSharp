@@ -1,12 +1,18 @@
 # Roadmap
 
-## Current planning policy (2026-09-07)
+## Current planning policy (2026-09-08)
+
+Batch AB is in progress on [owning non-transient receivers](BATCH_AB_OWNED_NONTRANSIENT_VALUES.md)
+under ADR-0096. Its priority is a reusable safe ownership mechanism: stable heap
+instances, exact audited selection, non-reused typed tokens and call-duration leases.
+The last validated product remains Preview.26. Size the migrated scope by dependency,
+lifetime evidence and useful operations; no completed AB method count is claimed.
 
 Batch AA completes [audited copied reference operations](BATCH_AA_REFERENCE_OPERATIONS.md)
 under ADR-0095: 598 generated additions across nine modules and 81 OCCT packages, with
 local delivery gates passed. Dimensioned array-start references remain excluded.
-Further migration can address explicit buffer/sequence contracts and non-transient
-receiver ownership; no fixed capability count applies.
+Explicit buffer/sequence contracts remain a later migration gap; AB now addresses
+selected non-transient receiver ownership. No fixed capability count applies.
 
 B-W and Q-W's 280/280 accepted capabilities are locally complete at `15fd671`.
 Batch X implements [ADR-0092](adr/0092-generated-numeric-and-copied-reference-expansion.md):

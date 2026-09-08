@@ -7,6 +7,7 @@ Superseded ADRs remain available and point to their replacements.
 
 | ADR | Decision | Status |
 |---|---|---|
+| [ADR-0096](adr/0096-generated-owned-nontransient-values.md) | Audited owning non-transient instances with stable storage and leased non-reused token handles | Accepted for implementation; Batch AB in progress |
 | [ADR-0095](adr/0095-generated-reference-operations.md) | Audited copied mutable-reference operations with atomic managed publication | Accepted |
 | [ADR-0094](adr/0094-generated-geometric-value-operations.md) | Copied geometric instance operations and transform coefficients | Accepted |
 | [ADR-0093](adr/0093-generated-geometric-value-projections.md) | Broad generated geometric value copies with preserved overload epochs | Accepted |

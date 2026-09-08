@@ -1,5 +1,17 @@
 # Architecture
 
+## Batch AB owning non-transient boundary (in progress)
+
+[ADR-0096](adr/0096-generated-owned-nontransient-values.md) introduces an audited
+generated owning category for stable heap instances that cannot be copied or moved.
+Typed SafeHandles carry opaque monotonically increasing tokens. One type-tagged
+registry in the existing Native DLL acquires shared_ptr leases under its lock before
+native access, so concurrent release invalidates future calls without destroying an
+active call's storage. Tokens are never reused. This does not provide concurrent native
+mutation safety or upgrade historical handle categories. Existing modules, facade,
+exports and generated bodies are preserved. [OWNERSHIP](OWNERSHIP.md) and
+[TYPE_MAPPING](TYPE_MAPPING.md) define the boundary; [STATUS](STATUS.md) records progress.
+
 ## Batch AA reference operation boundary
 
 ADR-0095 adds ReferenceOperationEmitter and an exact stable-ID/signature catalogue for
