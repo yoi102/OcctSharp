@@ -5,30 +5,31 @@ versioned native C ABI, generated low-level bindings, and friendly managed CAD A
 modeling, STEP/IGES/STL exchange, XDE assemblies and metadata, meshing, inspection, and
 Windows visualization.
 
-Current local preview target: `8.0.1-preview.27` for Windows x64 (validation status in
+Current local preview target: `8.0.1-preview.28` for Windows x64 (validation status in
 [STATUS](docs/STATUS.md)). The NuGet graph contains 12 managed
 modules, the `OcctSharp` compatibility/facade package, and one shared
 `OcctSharp.Native.win-x64` runtime package. The native package places the complete
 62-DLL runtime in the application's `occt/` directory; no machine-wide OCCT installation
 or `PATH` change is required.
 
-Preview.25 adds copied geometric constructors, queries, mutations and 2D/3D transforms.
-See [Batch Z changes](docs/RELEASE_NOTES_8.0.1_PREVIEW_25.md) for scope and limitations.
+Preview.28 adds 225 audited owned utility classes and 1,924 generated declarations
+across nine modules, including geometry, modeling and STEP SELECT containers.
+See [Batch AC changes](docs/BATCH_AC_OWNED_UTILITY_EXPANSION.md) for scope and limitations.
 
 ## Install
 
 ```powershell
-dotnet add package OcctSharp --version 8.0.1-preview.27 --source ./OcctSharp/artifacts/packages
+dotnet add package OcctSharp --version 8.0.1-preview.28 --source ./OcctSharp/artifacts/packages
 ```
 
 A narrow consumer can reference a module directly, for example:
 
 ```powershell
-dotnet add package OcctSharp.Modeling --version 8.0.1-preview.27 --source ./OcctSharp/artifacts/packages
+dotnet add package OcctSharp.Modeling --version 8.0.1-preview.28 --source ./OcctSharp/artifacts/packages
 ```
 
 The supported runtime baseline is .NET 10, Windows x64, and OCCT 8.0.1.
-Preview.25 is local-only; it is not published on NuGet.org. Create the
+Preview.28 is a local package build; publication is outside this batch. Create the
 local package feed with `OcctSharp/eng/pack.ps1` using the contributor toolchain, or run
 the repository samples directly with the committed runtime.
 

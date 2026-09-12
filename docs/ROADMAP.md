@@ -9,7 +9,8 @@ ADR-0096; scope is selected by useful construction and safe native lifetime path
 Batch AB implements [owning non-transient receivers](BATCH_AB_OWNED_NONTRANSIENT_VALUES.md)
 under ADR-0096: 122 owners and 1,067 migrated declarations across three modules, with
 stable heap instances, exact audited selection, non-reused typed tokens and call-duration
-leases. Preview.27 local release checks pass; STATUS records final package evidence.
+leases. Preview.27 local release checks pass;
+[the Preview.27 status archive](STATUS_HISTORY_THROUGH_PREVIEW_27.md) records final package evidence.
 The next migration can extend audited owners and explicit buffer/sequence contracts.
 Size that scope by dependencies, lifetime evidence and useful operations.
 
