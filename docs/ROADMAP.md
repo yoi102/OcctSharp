@@ -2,6 +2,10 @@
 
 ## Current planning policy (2026-09-12)
 
+Batch AC is extending the [audited owned utility catalogue](BATCH_AC_OWNED_UTILITY_EXPANSION.md)
+across geometry, modeling and independent data/configuration classes. It reuses
+ADR-0096; scope is selected by useful construction and safe native lifetime paths.
+
 Batch AB implements [owning non-transient receivers](BATCH_AB_OWNED_NONTRANSIENT_VALUES.md)
 under ADR-0096: 122 owners and 1,067 migrated declarations across three modules, with
 stable heap instances, exact audited selection, non-reused typed tokens and call-duration

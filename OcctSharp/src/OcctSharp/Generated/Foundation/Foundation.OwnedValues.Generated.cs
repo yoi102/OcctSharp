@@ -6,6 +6,779 @@ using OcctSharp.Generated;
 using OcctSharp.Interop;
 using OcctSharp.Values;
 namespace OcctSharp.OwnedValues;
+/// <summary>Owns a stable-address Quantity_Color. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class QuantityColor : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private QuantityColor(OwnedHandle handle) => _handle = handle;
+  static QuantityColor() => NativeLibraryResolver.EnsureRegistered(typeof(QuantityColor).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static QuantityColor FromNative(nint value) {
+    try { return new QuantityColor(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@Quantity_Color@F@ChangeContrast#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_changecontrast_0")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_changecontrast_0(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes Quantity_Color::ChangeContrast. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void ChangeContrast(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_changecontrast_0(NativeHandle, arg0), "occtsharp_owned_quantity_color_changecontrast_0");
+  }
+  // Source: c:@S@Quantity_Color@F@ChangeIntensity#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_changeintensity_1")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_changeintensity_1(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes Quantity_Color::ChangeIntensity. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void ChangeIntensity(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_changeintensity_1(NativeHandle, arg0), "occtsharp_owned_quantity_color_changeintensity_1");
+  }
+  // Source: c:@S@Quantity_Color@F@Color2argb#&1$@S@Quantity_Color#&I#S
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_color2argb_2")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_color2argb_2(QuantityColor.OwnedHandle arg0, int arg1, out int updatedArg1);
+  /// <summary>Invokes Quantity_Color::Color2argb. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static void Color2argb(QuantityColor arg0, ref int arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_color2argb_2(arg0.NativeHandle, arg1, out int updatedArg1), "occtsharp_owned_quantity_color_color2argb_2");
+    arg1 = updatedArg1;
+  }
+  // Source: c:@S@Quantity_Color@F@Delta#&1$@S@Quantity_Color#&d#S2_#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_delta_3")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_delta_3(OwnedHandle receiver, QuantityColor.OwnedHandle arg0, double arg1, out double updatedArg1, double arg2, out double updatedArg2);
+  /// <summary>Invokes Quantity_Color::Delta. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Delta(QuantityColor arg0, ref double arg1, ref double arg2) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_delta_3(NativeHandle, arg0.NativeHandle, arg1, out double updatedArg1, arg2, out double updatedArg2), "occtsharp_owned_quantity_color_delta_3");
+    arg1 = updatedArg1;
+    arg2 = updatedArg2;
+  }
+  // Source: c:@S@Quantity_Color@F@DeltaE2000#&1$@S@Quantity_Color#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_deltae2000_4")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_deltae2000_4(OwnedHandle receiver, QuantityColor.OwnedHandle arg0, out double result);
+  /// <summary>Invokes Quantity_Color::DeltaE2000. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double DeltaE2000(QuantityColor arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_deltae2000_4(NativeHandle, arg0.NativeHandle, out double result), "occtsharp_owned_quantity_color_deltae2000_4");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Color@F@Distance#&1$@S@Quantity_Color#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_distance_5")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_distance_5(OwnedHandle receiver, QuantityColor.OwnedHandle arg0, out double result);
+  /// <summary>Invokes Quantity_Color::Distance. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Distance(QuantityColor arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_distance_5(NativeHandle, arg0.NativeHandle, out double result), "occtsharp_owned_quantity_color_distance_5");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Color@F@Hue#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_hue_6")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_hue_6(OwnedHandle receiver, out double result);
+  /// <summary>Invokes Quantity_Color::Hue. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Hue() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_hue_6(NativeHandle, out double result), "occtsharp_owned_quantity_color_hue_6");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Color@F@IsDifferent#&1$@S@Quantity_Color#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_isdifferent_7")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_isdifferent_7(OwnedHandle receiver, QuantityColor.OwnedHandle arg0, out int result);
+  /// <summary>Invokes Quantity_Color::IsDifferent. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsDifferent(QuantityColor arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_isdifferent_7(NativeHandle, arg0.NativeHandle, out int result), "occtsharp_owned_quantity_color_isdifferent_7");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Color@F@IsEqual#&1$@S@Quantity_Color#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_isequal_8")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_isequal_8(OwnedHandle receiver, QuantityColor.OwnedHandle arg0, out int result);
+  /// <summary>Invokes Quantity_Color::IsEqual. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsEqual(QuantityColor arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_isequal_8(NativeHandle, arg0.NativeHandle, out int result), "occtsharp_owned_quantity_color_isequal_8");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Color@F@Light#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_light_9")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_light_9(OwnedHandle receiver, out double result);
+  /// <summary>Invokes Quantity_Color::Light. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Light() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_light_9(NativeHandle, out double result), "occtsharp_owned_quantity_color_light_9");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Color@F@Name#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_name_10")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_name_10(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Quantity_Color::Name. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public QuantityNameOfColor Name() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_name_10(NativeHandle, out int result), "occtsharp_owned_quantity_color_name_10");
+    var managedResult = (QuantityNameOfColor)result;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Color@F@Quantity_Color#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_create_11")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_create_11(out nint result);
+  /// <summary>Invokes Quantity_Color::Quantity_Color. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static QuantityColor Create() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_create_11(out nint result), "occtsharp_owned_quantity_color_create_11");
+    var managedResult = QuantityColor.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Color@F@Quantity_Color#$@E@Quantity_NameOfColor#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_create_12")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_create_12(int arg0, out nint result);
+  /// <summary>Invokes Quantity_Color::Quantity_Color. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static QuantityColor Create(QuantityNameOfColor arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_create_12((int)arg0, out nint result), "occtsharp_owned_quantity_color_create_12");
+    var managedResult = QuantityColor.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Color@F@Quantity_Color#d#d#d#$@E@Quantity_TypeOfColor#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_create_13")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_create_13(double arg0, double arg1, double arg2, int arg3, out nint result);
+  /// <summary>Invokes Quantity_Color::Quantity_Color. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static QuantityColor Create(double arg0, double arg1, double arg2, QuantityTypeOfColor arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_create_13(arg0, arg1, arg2, (int)arg3, out nint result), "occtsharp_owned_quantity_color_create_13");
+    var managedResult = QuantityColor.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Color@F@Saturation#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_saturation_14")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_saturation_14(OwnedHandle receiver, out double result);
+  /// <summary>Invokes Quantity_Color::Saturation. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Saturation() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_saturation_14(NativeHandle, out double result), "occtsharp_owned_quantity_color_saturation_14");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Color@F@SetValues#$@E@Quantity_NameOfColor#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_setvalues_15")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_setvalues_15(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes Quantity_Color::SetValues. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetValues(QuantityNameOfColor arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_setvalues_15(NativeHandle, (int)arg0), "occtsharp_owned_quantity_color_setvalues_15");
+  }
+  // Source: c:@S@Quantity_Color@F@SetValues#d#d#d#$@E@Quantity_TypeOfColor#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_setvalues_16")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_setvalues_16(OwnedHandle receiver, double arg0, double arg1, double arg2, int arg3);
+  /// <summary>Invokes Quantity_Color::SetValues. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetValues(double arg0, double arg1, double arg2, QuantityTypeOfColor arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_setvalues_16(NativeHandle, arg0, arg1, arg2, (int)arg3), "occtsharp_owned_quantity_color_setvalues_16");
+  }
+  // Source: c:@S@Quantity_Color@F@SquareDistance#&1$@S@Quantity_Color#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_squaredistance_17")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_squaredistance_17(OwnedHandle receiver, QuantityColor.OwnedHandle arg0, out double result);
+  /// <summary>Invokes Quantity_Color::SquareDistance. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double SquareDistance(QuantityColor arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_squaredistance_17(NativeHandle, arg0.NativeHandle, out double result), "occtsharp_owned_quantity_color_squaredistance_17");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Color@F@Values#&d#S0_#S0_#$@E@Quantity_TypeOfColor#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_values_18")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_values_18(OwnedHandle receiver, double arg0, out double updatedArg0, double arg1, out double updatedArg1, double arg2, out double updatedArg2, int arg3);
+  /// <summary>Invokes Quantity_Color::Values. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Values(ref double arg0, ref double arg1, ref double arg2, QuantityTypeOfColor arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_values_18(NativeHandle, arg0, out double updatedArg0, arg1, out double updatedArg1, arg2, out double updatedArg2, (int)arg3), "occtsharp_owned_quantity_color_values_18");
+    arg0 = updatedArg0;
+    arg1 = updatedArg1;
+    arg2 = updatedArg2;
+  }
+  // Source: c:@S@Quantity_Color@F@Blue#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_blue_19")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_blue_19(OwnedHandle receiver, out double result);
+  /// <summary>Invokes Quantity_Color::Blue. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Blue() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_blue_19(NativeHandle, out double result), "occtsharp_owned_quantity_color_blue_19");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Color@F@Convert_LinearRGB_To_sRGB#d#S
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_convert_linearrgb_to_srgb_20")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_convert_linearrgb_to_srgb_20(double arg0, out double result);
+  /// <summary>Invokes Quantity_Color::Convert_LinearRGB_To_sRGB. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static double Convert_LinearRGB_To_sRGB(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_convert_linearrgb_to_srgb_20(arg0, out double result), "occtsharp_owned_quantity_color_convert_linearrgb_to_srgb_20");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Color@F@Convert_LinearRGB_To_sRGB#f#S
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_convert_linearrgb_to_srgb_21")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_convert_linearrgb_to_srgb_21(float arg0, out float result);
+  /// <summary>Invokes Quantity_Color::Convert_LinearRGB_To_sRGB. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static float Convert_LinearRGB_To_sRGB(float arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_convert_linearrgb_to_srgb_21(arg0, out float result), "occtsharp_owned_quantity_color_convert_linearrgb_to_srgb_21");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Color@F@Convert_LinearRGB_To_sRGB_approx22#f#S
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_convert_linearrgb_to_srgb_approx22_22")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_convert_linearrgb_to_srgb_approx22_22(float arg0, out float result);
+  /// <summary>Invokes Quantity_Color::Convert_LinearRGB_To_sRGB_approx22. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static float Convert_LinearRGB_To_sRGB_approx22(float arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_convert_linearrgb_to_srgb_approx22_22(arg0, out float result), "occtsharp_owned_quantity_color_convert_linearrgb_to_srgb_approx22_22");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Color@F@Convert_sRGB_To_LinearRGB#d#S
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_convert_srgb_to_linearrgb_23")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_convert_srgb_to_linearrgb_23(double arg0, out double result);
+  /// <summary>Invokes Quantity_Color::Convert_sRGB_To_LinearRGB. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static double Convert_sRGB_To_LinearRGB(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_convert_srgb_to_linearrgb_23(arg0, out double result), "occtsharp_owned_quantity_color_convert_srgb_to_linearrgb_23");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Color@F@Convert_sRGB_To_LinearRGB#f#S
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_convert_srgb_to_linearrgb_24")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_convert_srgb_to_linearrgb_24(float arg0, out float result);
+  /// <summary>Invokes Quantity_Color::Convert_sRGB_To_LinearRGB. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static float Convert_sRGB_To_LinearRGB(float arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_convert_srgb_to_linearrgb_24(arg0, out float result), "occtsharp_owned_quantity_color_convert_srgb_to_linearrgb_24");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Color@F@Convert_sRGB_To_LinearRGB_approx22#f#S
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_convert_srgb_to_linearrgb_approx22_25")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_convert_srgb_to_linearrgb_approx22_25(float arg0, out float result);
+  /// <summary>Invokes Quantity_Color::Convert_sRGB_To_LinearRGB_approx22. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static float Convert_sRGB_To_LinearRGB_approx22(float arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_convert_srgb_to_linearrgb_approx22_25(arg0, out float result), "occtsharp_owned_quantity_color_convert_srgb_to_linearrgb_approx22_25");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Color@F@Epsilon#S
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_epsilon_26")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_epsilon_26(out double result);
+  /// <summary>Invokes Quantity_Color::Epsilon. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static double Epsilon() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_epsilon_26(out double result), "occtsharp_owned_quantity_color_epsilon_26");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Color@F@Green#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_green_27")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_green_27(OwnedHandle receiver, out double result);
+  /// <summary>Invokes Quantity_Color::Green. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Green() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_green_27(NativeHandle, out double result), "occtsharp_owned_quantity_color_green_27");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Color@F@HlsRgb#d#d#d#&d#S0_#S0_#S
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_hlsrgb_28")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_hlsrgb_28(double arg0, double arg1, double arg2, double arg3, out double updatedArg3, double arg4, out double updatedArg4, double arg5, out double updatedArg5);
+  /// <summary>Invokes Quantity_Color::HlsRgb. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static void HlsRgb(double arg0, double arg1, double arg2, ref double arg3, ref double arg4, ref double arg5) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_hlsrgb_28(arg0, arg1, arg2, arg3, out double updatedArg3, arg4, out double updatedArg4, arg5, out double updatedArg5), "occtsharp_owned_quantity_color_hlsrgb_28");
+    arg3 = updatedArg3;
+    arg4 = updatedArg4;
+    arg5 = updatedArg5;
+  }
+  // Source: c:@S@Quantity_Color@F@Name#d#d#d#S
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_name_29")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_name_29(double arg0, double arg1, double arg2, out int result);
+  /// <summary>Invokes Quantity_Color::Name. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static QuantityNameOfColor Name(double arg0, double arg1, double arg2) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_name_29(arg0, arg1, arg2, out int result), "occtsharp_owned_quantity_color_name_29");
+    var managedResult = (QuantityNameOfColor)result;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Color@F@Red#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_red_30")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_red_30(OwnedHandle receiver, out double result);
+  /// <summary>Invokes Quantity_Color::Red. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Red() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_red_30(NativeHandle, out double result), "occtsharp_owned_quantity_color_red_30");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Color@F@RgbHls#d#d#d#&d#S0_#S0_#S
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_rgbhls_31")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_rgbhls_31(double arg0, double arg1, double arg2, double arg3, out double updatedArg3, double arg4, out double updatedArg4, double arg5, out double updatedArg5);
+  /// <summary>Invokes Quantity_Color::RgbHls. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static void RgbHls(double arg0, double arg1, double arg2, ref double arg3, ref double arg4, ref double arg5) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_rgbhls_31(arg0, arg1, arg2, arg3, out double updatedArg3, arg4, out double updatedArg4, arg5, out double updatedArg5), "occtsharp_owned_quantity_color_rgbhls_31");
+    arg3 = updatedArg3;
+    arg4 = updatedArg4;
+    arg5 = updatedArg5;
+  }
+  // Source: c:@S@Quantity_Color@F@SetEpsilon#d#S
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_color_setepsilon_32")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_color_setepsilon_32(double arg0);
+  /// <summary>Invokes Quantity_Color::SetEpsilon. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static void SetEpsilon(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_color_setepsilon_32(arg0), "occtsharp_owned_quantity_color_setepsilon_32");
+  }
+}
+/// <summary>Owns a stable-address Quantity_ColorRGBA. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class QuantityColorRGBA : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private QuantityColorRGBA(OwnedHandle handle) => _handle = handle;
+  static QuantityColorRGBA() => NativeLibraryResolver.EnsureRegistered(typeof(QuantityColorRGBA).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static QuantityColorRGBA FromNative(nint value) {
+    try { return new QuantityColorRGBA(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_colorrgba_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@Quantity_ColorRGBA@F@IsDifferent#&1$@S@Quantity_ColorRGBA#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_colorrgba_isdifferent_0")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_colorrgba_isdifferent_0(OwnedHandle receiver, QuantityColorRGBA.OwnedHandle arg0, out int result);
+  /// <summary>Invokes Quantity_ColorRGBA::IsDifferent. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsDifferent(QuantityColorRGBA arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_colorrgba_isdifferent_0(NativeHandle, arg0.NativeHandle, out int result), "occtsharp_owned_quantity_colorrgba_isdifferent_0");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_ColorRGBA@F@IsEqual#&1$@S@Quantity_ColorRGBA#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_colorrgba_isequal_1")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_colorrgba_isequal_1(OwnedHandle receiver, QuantityColorRGBA.OwnedHandle arg0, out int result);
+  /// <summary>Invokes Quantity_ColorRGBA::IsEqual. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsEqual(QuantityColorRGBA arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_colorrgba_isequal_1(NativeHandle, arg0.NativeHandle, out int result), "occtsharp_owned_quantity_colorrgba_isequal_1");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_ColorRGBA@F@Quantity_ColorRGBA#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_colorrgba_create_2")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_colorrgba_create_2(out nint result);
+  /// <summary>Invokes Quantity_ColorRGBA::Quantity_ColorRGBA. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static QuantityColorRGBA Create() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_colorrgba_create_2(out nint result), "occtsharp_owned_quantity_colorrgba_create_2");
+    var managedResult = QuantityColorRGBA.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_ColorRGBA@F@Quantity_ColorRGBA#&1$@S@Quantity_Color#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_colorrgba_create_3")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_colorrgba_create_3(QuantityColor.OwnedHandle arg0, out nint result);
+  /// <summary>Invokes Quantity_ColorRGBA::Quantity_ColorRGBA. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static QuantityColorRGBA Create(QuantityColor arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_colorrgba_create_3(arg0.NativeHandle, out nint result), "occtsharp_owned_quantity_colorrgba_create_3");
+    var managedResult = QuantityColorRGBA.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_ColorRGBA@F@Quantity_ColorRGBA#&1$@S@Quantity_Color#f#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_colorrgba_create_4")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_colorrgba_create_4(QuantityColor.OwnedHandle arg0, float arg1, out nint result);
+  /// <summary>Invokes Quantity_ColorRGBA::Quantity_ColorRGBA. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static QuantityColorRGBA Create(QuantityColor arg0, float arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_colorrgba_create_4(arg0.NativeHandle, arg1, out nint result), "occtsharp_owned_quantity_colorrgba_create_4");
+    var managedResult = QuantityColorRGBA.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_ColorRGBA@F@SetAlpha#f#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_colorrgba_setalpha_5")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_colorrgba_setalpha_5(OwnedHandle receiver, float arg0);
+  /// <summary>Invokes Quantity_ColorRGBA::SetAlpha. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetAlpha(float arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_colorrgba_setalpha_5(NativeHandle, arg0), "occtsharp_owned_quantity_colorrgba_setalpha_5");
+  }
+  // Source: c:@S@Quantity_ColorRGBA@F@SetRGB#&1$@S@Quantity_Color#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_colorrgba_setrgb_6")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_colorrgba_setrgb_6(OwnedHandle receiver, QuantityColor.OwnedHandle arg0);
+  /// <summary>Invokes Quantity_ColorRGBA::SetRGB. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetRGB(QuantityColor arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_colorrgba_setrgb_6(NativeHandle, arg0.NativeHandle), "occtsharp_owned_quantity_colorrgba_setrgb_6");
+  }
+  // Source: c:@S@Quantity_ColorRGBA@F@SetValues#f#f#f#f#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_colorrgba_setvalues_7")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_colorrgba_setvalues_7(OwnedHandle receiver, float arg0, float arg1, float arg2, float arg3);
+  /// <summary>Invokes Quantity_ColorRGBA::SetValues. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetValues(float arg0, float arg1, float arg2, float arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_colorrgba_setvalues_7(NativeHandle, arg0, arg1, arg2, arg3), "occtsharp_owned_quantity_colorrgba_setvalues_7");
+  }
+  // Source: c:@S@Quantity_ColorRGBA@F@Alpha#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_colorrgba_alpha_8")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_colorrgba_alpha_8(OwnedHandle receiver, out float result);
+  /// <summary>Invokes Quantity_ColorRGBA::Alpha. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public float Alpha() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_colorrgba_alpha_8(NativeHandle, out float result), "occtsharp_owned_quantity_colorrgba_alpha_8");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_ColorRGBA@F@GetRGB#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_colorrgba_getrgb_9")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_colorrgba_getrgb_9(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes Quantity_ColorRGBA::GetRGB. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public QuantityColor GetRGB() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_colorrgba_getrgb_9(NativeHandle, out nint result), "occtsharp_owned_quantity_colorrgba_getrgb_9");
+    var managedResult = QuantityColor.FromNative(result);
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address Quantity_Date. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class QuantityDate : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private QuantityDate(OwnedHandle handle) => _handle = handle;
+  static QuantityDate() => NativeLibraryResolver.EnsureRegistered(typeof(QuantityDate).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static QuantityDate FromNative(nint value) {
+    try { return new QuantityDate(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_date_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@Quantity_Date@F@Add#&1$@S@Quantity_Period#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_date_add_0")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_date_add_0(OwnedHandle receiver, QuantityPeriod.OwnedHandle arg0, out nint result);
+  /// <summary>Invokes Quantity_Date::Add. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public QuantityDate Add(QuantityPeriod arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_date_add_0(NativeHandle, arg0.NativeHandle, out nint result), "occtsharp_owned_quantity_date_add_0");
+    var managedResult = QuantityDate.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Date@F@Day#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_date_day_1")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_date_day_1(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Quantity_Date::Day. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int Day() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_date_day_1(NativeHandle, out int result), "occtsharp_owned_quantity_date_day_1");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Date@F@Difference#&1$@S@Quantity_Date#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_date_difference_2")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_date_difference_2(OwnedHandle receiver, QuantityDate.OwnedHandle arg0, out nint result);
+  /// <summary>Invokes Quantity_Date::Difference. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public QuantityPeriod Difference(QuantityDate arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_date_difference_2(NativeHandle, arg0.NativeHandle, out nint result), "occtsharp_owned_quantity_date_difference_2");
+    var managedResult = QuantityPeriod.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Date@F@Hour#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_date_hour_3")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_date_hour_3(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Quantity_Date::Hour. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int Hour() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_date_hour_3(NativeHandle, out int result), "occtsharp_owned_quantity_date_hour_3");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Date@F@IsEarlier#&1$@S@Quantity_Date#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_date_isearlier_4")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_date_isearlier_4(OwnedHandle receiver, QuantityDate.OwnedHandle arg0, out int result);
+  /// <summary>Invokes Quantity_Date::IsEarlier. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsEarlier(QuantityDate arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_date_isearlier_4(NativeHandle, arg0.NativeHandle, out int result), "occtsharp_owned_quantity_date_isearlier_4");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Date@F@IsEqual#&1$@S@Quantity_Date#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_date_isequal_5")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_date_isequal_5(OwnedHandle receiver, QuantityDate.OwnedHandle arg0, out int result);
+  /// <summary>Invokes Quantity_Date::IsEqual. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsEqual(QuantityDate arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_date_isequal_5(NativeHandle, arg0.NativeHandle, out int result), "occtsharp_owned_quantity_date_isequal_5");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Date@F@IsLater#&1$@S@Quantity_Date#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_date_islater_6")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_date_islater_6(OwnedHandle receiver, QuantityDate.OwnedHandle arg0, out int result);
+  /// <summary>Invokes Quantity_Date::IsLater. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsLater(QuantityDate arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_date_islater_6(NativeHandle, arg0.NativeHandle, out int result), "occtsharp_owned_quantity_date_islater_6");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Date@F@MicroSecond#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_date_microsecond_7")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_date_microsecond_7(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Quantity_Date::MicroSecond. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int MicroSecond() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_date_microsecond_7(NativeHandle, out int result), "occtsharp_owned_quantity_date_microsecond_7");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Date@F@MilliSecond#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_date_millisecond_8")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_date_millisecond_8(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Quantity_Date::MilliSecond. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int MilliSecond() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_date_millisecond_8(NativeHandle, out int result), "occtsharp_owned_quantity_date_millisecond_8");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Date@F@Minute#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_date_minute_9")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_date_minute_9(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Quantity_Date::Minute. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int Minute() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_date_minute_9(NativeHandle, out int result), "occtsharp_owned_quantity_date_minute_9");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Date@F@Month#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_date_month_10")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_date_month_10(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Quantity_Date::Month. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int Month() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_date_month_10(NativeHandle, out int result), "occtsharp_owned_quantity_date_month_10");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Date@F@Quantity_Date#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_date_create_11")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_date_create_11(out nint result);
+  /// <summary>Invokes Quantity_Date::Quantity_Date. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static QuantityDate Create() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_date_create_11(out nint result), "occtsharp_owned_quantity_date_create_11");
+    var managedResult = QuantityDate.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Date@F@Quantity_Date#I#I#I#I#I#I#I#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_date_create_12")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_date_create_12(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, out nint result);
+  /// <summary>Invokes Quantity_Date::Quantity_Date. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static QuantityDate Create(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_date_create_12(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, out nint result), "occtsharp_owned_quantity_date_create_12");
+    var managedResult = QuantityDate.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Date@F@Second#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_date_second_13")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_date_second_13(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Quantity_Date::Second. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int Second() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_date_second_13(NativeHandle, out int result), "occtsharp_owned_quantity_date_second_13");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Date@F@SetValues#I#I#I#I#I#I#I#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_date_setvalues_14")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_date_setvalues_14(OwnedHandle receiver, int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7);
+  /// <summary>Invokes Quantity_Date::SetValues. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetValues(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_date_setvalues_14(NativeHandle, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7), "occtsharp_owned_quantity_date_setvalues_14");
+  }
+  // Source: c:@S@Quantity_Date@F@Subtract#&1$@S@Quantity_Period#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_date_subtract_15")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_date_subtract_15(OwnedHandle receiver, QuantityPeriod.OwnedHandle arg0, out nint result);
+  /// <summary>Invokes Quantity_Date::Subtract. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public QuantityDate Subtract(QuantityPeriod arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_date_subtract_15(NativeHandle, arg0.NativeHandle, out nint result), "occtsharp_owned_quantity_date_subtract_15");
+    var managedResult = QuantityDate.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Date@F@Values#&I#S0_#S0_#S0_#S0_#S0_#S0_#S0_#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_date_values_16")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_date_values_16(OwnedHandle receiver, int arg0, out int updatedArg0, int arg1, out int updatedArg1, int arg2, out int updatedArg2, int arg3, out int updatedArg3, int arg4, out int updatedArg4, int arg5, out int updatedArg5, int arg6, out int updatedArg6, int arg7, out int updatedArg7);
+  /// <summary>Invokes Quantity_Date::Values. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Values(ref int arg0, ref int arg1, ref int arg2, ref int arg3, ref int arg4, ref int arg5, ref int arg6, ref int arg7) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_date_values_16(NativeHandle, arg0, out int updatedArg0, arg1, out int updatedArg1, arg2, out int updatedArg2, arg3, out int updatedArg3, arg4, out int updatedArg4, arg5, out int updatedArg5, arg6, out int updatedArg6, arg7, out int updatedArg7), "occtsharp_owned_quantity_date_values_16");
+    arg0 = updatedArg0;
+    arg1 = updatedArg1;
+    arg2 = updatedArg2;
+    arg3 = updatedArg3;
+    arg4 = updatedArg4;
+    arg5 = updatedArg5;
+    arg6 = updatedArg6;
+    arg7 = updatedArg7;
+  }
+  // Source: c:@S@Quantity_Date@F@Year#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_date_year_17")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_date_year_17(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Quantity_Date::Year. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int Year() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_date_year_17(NativeHandle, out int result), "occtsharp_owned_quantity_date_year_17");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Date@F@IsLeap#I#S
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_date_isleap_18")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_date_isleap_18(int arg0, out int result);
+  /// <summary>Invokes Quantity_Date::IsLeap. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static bool IsLeap(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_date_isleap_18(arg0, out int result), "occtsharp_owned_quantity_date_isleap_18");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Date@F@IsValid#I#I#I#I#I#I#I#I#S
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_date_isvalid_19")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_date_isvalid_19(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, out int result);
+  /// <summary>Invokes Quantity_Date::IsValid. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static bool IsValid(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_date_isvalid_19(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, out int result), "occtsharp_owned_quantity_date_isvalid_19");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address Quantity_Period. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class QuantityPeriod : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private QuantityPeriod(OwnedHandle handle) => _handle = handle;
+  static QuantityPeriod() => NativeLibraryResolver.EnsureRegistered(typeof(QuantityPeriod).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static QuantityPeriod FromNative(nint value) {
+    try { return new QuantityPeriod(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_period_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@Quantity_Period@F@Add#&1$@S@Quantity_Period#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_period_add_0")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_period_add_0(OwnedHandle receiver, QuantityPeriod.OwnedHandle arg0, out nint result);
+  /// <summary>Invokes Quantity_Period::Add. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public QuantityPeriod Add(QuantityPeriod arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_period_add_0(NativeHandle, arg0.NativeHandle, out nint result), "occtsharp_owned_quantity_period_add_0");
+    var managedResult = QuantityPeriod.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Period@F@IsEqual#&1$@S@Quantity_Period#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_period_isequal_1")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_period_isequal_1(OwnedHandle receiver, QuantityPeriod.OwnedHandle arg0, out int result);
+  /// <summary>Invokes Quantity_Period::IsEqual. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsEqual(QuantityPeriod arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_period_isequal_1(NativeHandle, arg0.NativeHandle, out int result), "occtsharp_owned_quantity_period_isequal_1");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Period@F@IsLonger#&1$@S@Quantity_Period#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_period_islonger_2")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_period_islonger_2(OwnedHandle receiver, QuantityPeriod.OwnedHandle arg0, out int result);
+  /// <summary>Invokes Quantity_Period::IsLonger. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsLonger(QuantityPeriod arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_period_islonger_2(NativeHandle, arg0.NativeHandle, out int result), "occtsharp_owned_quantity_period_islonger_2");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Period@F@IsShorter#&1$@S@Quantity_Period#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_period_isshorter_3")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_period_isshorter_3(OwnedHandle receiver, QuantityPeriod.OwnedHandle arg0, out int result);
+  /// <summary>Invokes Quantity_Period::IsShorter. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsShorter(QuantityPeriod arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_period_isshorter_3(NativeHandle, arg0.NativeHandle, out int result), "occtsharp_owned_quantity_period_isshorter_3");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Period@F@Quantity_Period#I#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_period_create_4")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_period_create_4(int arg0, int arg1, out nint result);
+  /// <summary>Invokes Quantity_Period::Quantity_Period. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static QuantityPeriod Create(int arg0, int arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_period_create_4(arg0, arg1, out nint result), "occtsharp_owned_quantity_period_create_4");
+    var managedResult = QuantityPeriod.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Period@F@Quantity_Period#I#I#I#I#I#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_period_create_5")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_period_create_5(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, out nint result);
+  /// <summary>Invokes Quantity_Period::Quantity_Period. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static QuantityPeriod Create(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_period_create_5(arg0, arg1, arg2, arg3, arg4, arg5, out nint result), "occtsharp_owned_quantity_period_create_5");
+    var managedResult = QuantityPeriod.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Period@F@SetValues#I#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_period_setvalues_6")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_period_setvalues_6(OwnedHandle receiver, int arg0, int arg1);
+  /// <summary>Invokes Quantity_Period::SetValues. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetValues(int arg0, int arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_period_setvalues_6(NativeHandle, arg0, arg1), "occtsharp_owned_quantity_period_setvalues_6");
+  }
+  // Source: c:@S@Quantity_Period@F@SetValues#I#I#I#I#I#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_period_setvalues_7")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_period_setvalues_7(OwnedHandle receiver, int arg0, int arg1, int arg2, int arg3, int arg4, int arg5);
+  /// <summary>Invokes Quantity_Period::SetValues. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetValues(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_period_setvalues_7(NativeHandle, arg0, arg1, arg2, arg3, arg4, arg5), "occtsharp_owned_quantity_period_setvalues_7");
+  }
+  // Source: c:@S@Quantity_Period@F@Subtract#&1$@S@Quantity_Period#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_period_subtract_8")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_period_subtract_8(OwnedHandle receiver, QuantityPeriod.OwnedHandle arg0, out nint result);
+  /// <summary>Invokes Quantity_Period::Subtract. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public QuantityPeriod Subtract(QuantityPeriod arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_period_subtract_8(NativeHandle, arg0.NativeHandle, out nint result), "occtsharp_owned_quantity_period_subtract_8");
+    var managedResult = QuantityPeriod.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Period@F@Values#&I#S0_#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_period_values_9")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_period_values_9(OwnedHandle receiver, int arg0, out int updatedArg0, int arg1, out int updatedArg1);
+  /// <summary>Invokes Quantity_Period::Values. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Values(ref int arg0, ref int arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_period_values_9(NativeHandle, arg0, out int updatedArg0, arg1, out int updatedArg1), "occtsharp_owned_quantity_period_values_9");
+    arg0 = updatedArg0;
+    arg1 = updatedArg1;
+  }
+  // Source: c:@S@Quantity_Period@F@Values#&I#S0_#S0_#S0_#S0_#S0_#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_period_values_10")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_period_values_10(OwnedHandle receiver, int arg0, out int updatedArg0, int arg1, out int updatedArg1, int arg2, out int updatedArg2, int arg3, out int updatedArg3, int arg4, out int updatedArg4, int arg5, out int updatedArg5);
+  /// <summary>Invokes Quantity_Period::Values. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Values(ref int arg0, ref int arg1, ref int arg2, ref int arg3, ref int arg4, ref int arg5) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_period_values_10(NativeHandle, arg0, out int updatedArg0, arg1, out int updatedArg1, arg2, out int updatedArg2, arg3, out int updatedArg3, arg4, out int updatedArg4, arg5, out int updatedArg5), "occtsharp_owned_quantity_period_values_10");
+    arg0 = updatedArg0;
+    arg1 = updatedArg1;
+    arg2 = updatedArg2;
+    arg3 = updatedArg3;
+    arg4 = updatedArg4;
+    arg5 = updatedArg5;
+  }
+  // Source: c:@S@Quantity_Period@F@IsValid#I#I#I#I#I#I#S
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_period_isvalid_11")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_period_isvalid_11(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, out int result);
+  /// <summary>Invokes Quantity_Period::IsValid. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static bool IsValid(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_period_isvalid_11(arg0, arg1, arg2, arg3, arg4, arg5, out int result), "occtsharp_owned_quantity_period_isvalid_11");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Quantity_Period@F@IsValid#I#I#S
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_quantity_period_isvalid_12")]
+  private static partial NativeStatus Native_occtsharp_owned_quantity_period_isvalid_12(int arg0, int arg1, out int result);
+  /// <summary>Invokes Quantity_Period::IsValid. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static bool IsValid(int arg0, int arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_quantity_period_isvalid_12(arg0, arg1, out int result), "occtsharp_owned_quantity_period_isvalid_12");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+}
 /// <summary>Owns a stable-address math_BullardGenerator. Synchronize mutation with other calls; dispose to release native storage.</summary>
 public sealed partial class MathBullardGenerator : IDisposable {
   internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
@@ -202,6 +975,289 @@ public sealed partial class MathFunctionSample : IDisposable {
   public static MathFunctionSample Create(double arg0, double arg1, int arg2) {
     NativeError.ThrowIfFailed(Native_occtsharp_owned_math_functionsample_create_3(arg0, arg1, arg2, out nint result), "occtsharp_owned_math_functionsample_create_3");
     var managedResult = MathFunctionSample.FromNative(result);
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address math_Matrix. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class MathMatrix : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private MathMatrix(OwnedHandle handle) => _handle = handle;
+  static MathMatrix() => NativeLibraryResolver.EnsureRegistered(typeof(MathMatrix).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static MathMatrix FromNative(nint value) {
+    try { return new MathMatrix(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_matrix_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@math_Matrix@F@Add#&1$@S@math_Matrix#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_matrix_add_0")]
+  private static partial NativeStatus Native_occtsharp_owned_math_matrix_add_0(OwnedHandle receiver, MathMatrix.OwnedHandle arg0);
+  /// <summary>Invokes math_Matrix::Add. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Add(MathMatrix arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_matrix_add_0(NativeHandle, arg0.NativeHandle), "occtsharp_owned_math_matrix_add_0");
+  }
+  // Source: c:@S@math_Matrix@F@Add#&1$@S@math_Matrix#S0_#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_matrix_add_1")]
+  private static partial NativeStatus Native_occtsharp_owned_math_matrix_add_1(OwnedHandle receiver, MathMatrix.OwnedHandle arg0, MathMatrix.OwnedHandle arg1);
+  /// <summary>Invokes math_Matrix::Add. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Add(MathMatrix arg0, MathMatrix arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_matrix_add_1(NativeHandle, arg0.NativeHandle, arg1.NativeHandle), "occtsharp_owned_math_matrix_add_1");
+  }
+  // Source: c:@S@math_Matrix@F@ColNumber#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_matrix_colnumber_2")]
+  private static partial NativeStatus Native_occtsharp_owned_math_matrix_colnumber_2(OwnedHandle receiver, out int result);
+  /// <summary>Invokes math_Matrix::ColNumber. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int ColNumber() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_matrix_colnumber_2(NativeHandle, out int result), "occtsharp_owned_math_matrix_colnumber_2");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@math_Matrix@F@Determinant#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_matrix_determinant_3")]
+  private static partial NativeStatus Native_occtsharp_owned_math_matrix_determinant_3(OwnedHandle receiver, out double result);
+  /// <summary>Invokes math_Matrix::Determinant. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Determinant() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_matrix_determinant_3(NativeHandle, out double result), "occtsharp_owned_math_matrix_determinant_3");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@math_Matrix@F@Divide#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_matrix_divide_4")]
+  private static partial NativeStatus Native_occtsharp_owned_math_matrix_divide_4(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes math_Matrix::Divide. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Divide(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_matrix_divide_4(NativeHandle, arg0), "occtsharp_owned_math_matrix_divide_4");
+  }
+  // Source: c:@S@math_Matrix@F@Init#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_matrix_init_5")]
+  private static partial NativeStatus Native_occtsharp_owned_math_matrix_init_5(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes math_Matrix::Init. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Init(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_matrix_init_5(NativeHandle, arg0), "occtsharp_owned_math_matrix_init_5");
+  }
+  // Source: c:@S@math_Matrix@F@Invert#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_matrix_invert_6")]
+  private static partial NativeStatus Native_occtsharp_owned_math_matrix_invert_6(OwnedHandle receiver);
+  /// <summary>Invokes math_Matrix::Invert. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Invert() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_matrix_invert_6(NativeHandle), "occtsharp_owned_math_matrix_invert_6");
+  }
+  // Source: c:@S@math_Matrix@F@LowerCol#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_matrix_lowercol_7")]
+  private static partial NativeStatus Native_occtsharp_owned_math_matrix_lowercol_7(OwnedHandle receiver, out int result);
+  /// <summary>Invokes math_Matrix::LowerCol. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int LowerCol() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_matrix_lowercol_7(NativeHandle, out int result), "occtsharp_owned_math_matrix_lowercol_7");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@math_Matrix@F@LowerRow#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_matrix_lowerrow_8")]
+  private static partial NativeStatus Native_occtsharp_owned_math_matrix_lowerrow_8(OwnedHandle receiver, out int result);
+  /// <summary>Invokes math_Matrix::LowerRow. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int LowerRow() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_matrix_lowerrow_8(NativeHandle, out int result), "occtsharp_owned_math_matrix_lowerrow_8");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@math_Matrix@F@Multiply#&1$@S@math_Matrix#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_matrix_multiply_9")]
+  private static partial NativeStatus Native_occtsharp_owned_math_matrix_multiply_9(OwnedHandle receiver, MathMatrix.OwnedHandle arg0);
+  /// <summary>Invokes math_Matrix::Multiply. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Multiply(MathMatrix arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_matrix_multiply_9(NativeHandle, arg0.NativeHandle), "occtsharp_owned_math_matrix_multiply_9");
+  }
+  // Source: c:@S@math_Matrix@F@Multiply#&1$@S@math_Matrix#S0_#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_matrix_multiply_10")]
+  private static partial NativeStatus Native_occtsharp_owned_math_matrix_multiply_10(OwnedHandle receiver, MathMatrix.OwnedHandle arg0, MathMatrix.OwnedHandle arg1);
+  /// <summary>Invokes math_Matrix::Multiply. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Multiply(MathMatrix arg0, MathMatrix arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_matrix_multiply_10(NativeHandle, arg0.NativeHandle, arg1.NativeHandle), "occtsharp_owned_math_matrix_multiply_10");
+  }
+  // Source: c:@S@math_Matrix@F@Multiply#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_matrix_multiply_11")]
+  private static partial NativeStatus Native_occtsharp_owned_math_matrix_multiply_11(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes math_Matrix::Multiply. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Multiply(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_matrix_multiply_11(NativeHandle, arg0), "occtsharp_owned_math_matrix_multiply_11");
+  }
+  // Source: c:@S@math_Matrix@F@RowNumber#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_matrix_rownumber_12")]
+  private static partial NativeStatus Native_occtsharp_owned_math_matrix_rownumber_12(OwnedHandle receiver, out int result);
+  /// <summary>Invokes math_Matrix::RowNumber. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int RowNumber() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_matrix_rownumber_12(NativeHandle, out int result), "occtsharp_owned_math_matrix_rownumber_12");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@math_Matrix@F@Set#I#I#I#I#&1$@S@math_Matrix#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_matrix_set_13")]
+  private static partial NativeStatus Native_occtsharp_owned_math_matrix_set_13(OwnedHandle receiver, int arg0, int arg1, int arg2, int arg3, MathMatrix.OwnedHandle arg4);
+  /// <summary>Invokes math_Matrix::Set. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Set(int arg0, int arg1, int arg2, int arg3, MathMatrix arg4) {
+    ArgumentNullException.ThrowIfNull(arg4);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_matrix_set_13(NativeHandle, arg0, arg1, arg2, arg3, arg4.NativeHandle), "occtsharp_owned_math_matrix_set_13");
+  }
+  // Source: c:@S@math_Matrix@F@SetDiag#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_matrix_setdiag_14")]
+  private static partial NativeStatus Native_occtsharp_owned_math_matrix_setdiag_14(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes math_Matrix::SetDiag. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetDiag(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_matrix_setdiag_14(NativeHandle, arg0), "occtsharp_owned_math_matrix_setdiag_14");
+  }
+  // Source: c:@S@math_Matrix@F@Subtract#&1$@S@math_Matrix#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_matrix_subtract_15")]
+  private static partial NativeStatus Native_occtsharp_owned_math_matrix_subtract_15(OwnedHandle receiver, MathMatrix.OwnedHandle arg0);
+  /// <summary>Invokes math_Matrix::Subtract. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Subtract(MathMatrix arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_matrix_subtract_15(NativeHandle, arg0.NativeHandle), "occtsharp_owned_math_matrix_subtract_15");
+  }
+  // Source: c:@S@math_Matrix@F@Subtract#&1$@S@math_Matrix#S0_#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_matrix_subtract_16")]
+  private static partial NativeStatus Native_occtsharp_owned_math_matrix_subtract_16(OwnedHandle receiver, MathMatrix.OwnedHandle arg0, MathMatrix.OwnedHandle arg1);
+  /// <summary>Invokes math_Matrix::Subtract. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Subtract(MathMatrix arg0, MathMatrix arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_matrix_subtract_16(NativeHandle, arg0.NativeHandle, arg1.NativeHandle), "occtsharp_owned_math_matrix_subtract_16");
+  }
+  // Source: c:@S@math_Matrix@F@SwapCol#I#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_matrix_swapcol_17")]
+  private static partial NativeStatus Native_occtsharp_owned_math_matrix_swapcol_17(OwnedHandle receiver, int arg0, int arg1);
+  /// <summary>Invokes math_Matrix::SwapCol. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SwapCol(int arg0, int arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_matrix_swapcol_17(NativeHandle, arg0, arg1), "occtsharp_owned_math_matrix_swapcol_17");
+  }
+  // Source: c:@S@math_Matrix@F@SwapRow#I#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_matrix_swaprow_18")]
+  private static partial NativeStatus Native_occtsharp_owned_math_matrix_swaprow_18(OwnedHandle receiver, int arg0, int arg1);
+  /// <summary>Invokes math_Matrix::SwapRow. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SwapRow(int arg0, int arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_matrix_swaprow_18(NativeHandle, arg0, arg1), "occtsharp_owned_math_matrix_swaprow_18");
+  }
+  // Source: c:@S@math_Matrix@F@TMultiply#&1$@S@math_Matrix#S0_#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_matrix_tmultiply_19")]
+  private static partial NativeStatus Native_occtsharp_owned_math_matrix_tmultiply_19(OwnedHandle receiver, MathMatrix.OwnedHandle arg0, MathMatrix.OwnedHandle arg1);
+  /// <summary>Invokes math_Matrix::TMultiply. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void TMultiply(MathMatrix arg0, MathMatrix arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_matrix_tmultiply_19(NativeHandle, arg0.NativeHandle, arg1.NativeHandle), "occtsharp_owned_math_matrix_tmultiply_19");
+  }
+  // Source: c:@S@math_Matrix@F@Transpose#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_matrix_transpose_20")]
+  private static partial NativeStatus Native_occtsharp_owned_math_matrix_transpose_20(OwnedHandle receiver);
+  /// <summary>Invokes math_Matrix::Transpose. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Transpose() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_matrix_transpose_20(NativeHandle), "occtsharp_owned_math_matrix_transpose_20");
+  }
+  // Source: c:@S@math_Matrix@F@UpperCol#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_matrix_uppercol_21")]
+  private static partial NativeStatus Native_occtsharp_owned_math_matrix_uppercol_21(OwnedHandle receiver, out int result);
+  /// <summary>Invokes math_Matrix::UpperCol. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int UpperCol() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_matrix_uppercol_21(NativeHandle, out int result), "occtsharp_owned_math_matrix_uppercol_21");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@math_Matrix@F@UpperRow#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_matrix_upperrow_22")]
+  private static partial NativeStatus Native_occtsharp_owned_math_matrix_upperrow_22(OwnedHandle receiver, out int result);
+  /// <summary>Invokes math_Matrix::UpperRow. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int UpperRow() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_matrix_upperrow_22(NativeHandle, out int result), "occtsharp_owned_math_matrix_upperrow_22");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@math_Matrix@F@Value#I#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_matrix_value_23")]
+  private static partial NativeStatus Native_occtsharp_owned_math_matrix_value_23(OwnedHandle receiver, int arg0, int arg1, out double result);
+  /// <summary>Invokes math_Matrix::Value. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Value(int arg0, int arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_matrix_value_23(NativeHandle, arg0, arg1, out double result), "occtsharp_owned_math_matrix_value_23");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@math_Matrix@F@math_Matrix#I#I#I#I#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_matrix_create_24")]
+  private static partial NativeStatus Native_occtsharp_owned_math_matrix_create_24(int arg0, int arg1, int arg2, int arg3, double arg4, out nint result);
+  /// <summary>Invokes math_Matrix::math_Matrix. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static MathMatrix Create(int arg0, int arg1, int arg2, int arg3, double arg4) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_matrix_create_24(arg0, arg1, arg2, arg3, arg4, out nint result), "occtsharp_owned_math_matrix_create_24");
+    var managedResult = MathMatrix.FromNative(result);
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address math_TrigonometricEquationFunction. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class MathTrigonometricEquationFunction : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private MathTrigonometricEquationFunction(OwnedHandle handle) => _handle = handle;
+  static MathTrigonometricEquationFunction() => NativeLibraryResolver.EnsureRegistered(typeof(MathTrigonometricEquationFunction).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static MathTrigonometricEquationFunction FromNative(nint value) {
+    try { return new MathTrigonometricEquationFunction(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_trigonometricequationfunction_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@math_TrigonometricEquationFunction@F@Derivative#d#&d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_trigonometricequationfunction_derivative_0")]
+  private static partial NativeStatus Native_occtsharp_owned_math_trigonometricequationfunction_derivative_0(OwnedHandle receiver, double arg0, double arg1, out double updatedArg1, out int result);
+  /// <summary>Invokes math_TrigonometricEquationFunction::Derivative. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool Derivative(double arg0, ref double arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_trigonometricequationfunction_derivative_0(NativeHandle, arg0, arg1, out double updatedArg1, out int result), "occtsharp_owned_math_trigonometricequationfunction_derivative_0");
+    var managedResult = result != 0;
+    arg1 = updatedArg1;
+    return managedResult;
+  }
+  // Source: c:@S@math_TrigonometricEquationFunction@F@Value#d#&d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_trigonometricequationfunction_value_1")]
+  private static partial NativeStatus Native_occtsharp_owned_math_trigonometricequationfunction_value_1(OwnedHandle receiver, double arg0, double arg1, out double updatedArg1, out int result);
+  /// <summary>Invokes math_TrigonometricEquationFunction::Value. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool Value(double arg0, ref double arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_trigonometricequationfunction_value_1(NativeHandle, arg0, arg1, out double updatedArg1, out int result), "occtsharp_owned_math_trigonometricequationfunction_value_1");
+    var managedResult = result != 0;
+    arg1 = updatedArg1;
+    return managedResult;
+  }
+  // Source: c:@S@math_TrigonometricEquationFunction@F@Values#d#&d#S0_#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_trigonometricequationfunction_values_2")]
+  private static partial NativeStatus Native_occtsharp_owned_math_trigonometricequationfunction_values_2(OwnedHandle receiver, double arg0, double arg1, out double updatedArg1, double arg2, out double updatedArg2, out int result);
+  /// <summary>Invokes math_TrigonometricEquationFunction::Values. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool Values(double arg0, ref double arg1, ref double arg2) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_trigonometricequationfunction_values_2(NativeHandle, arg0, arg1, out double updatedArg1, arg2, out double updatedArg2, out int result), "occtsharp_owned_math_trigonometricequationfunction_values_2");
+    var managedResult = result != 0;
+    arg1 = updatedArg1;
+    arg2 = updatedArg2;
+    return managedResult;
+  }
+  // Source: c:@S@math_TrigonometricEquationFunction@F@math_TrigonometricEquationFunction#d#d#d#d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_math_trigonometricequationfunction_create_3")]
+  private static partial NativeStatus Native_occtsharp_owned_math_trigonometricequationfunction_create_3(double arg0, double arg1, double arg2, double arg3, double arg4, out nint result);
+  /// <summary>Invokes math_TrigonometricEquationFunction::math_TrigonometricEquationFunction. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static MathTrigonometricEquationFunction Create(double arg0, double arg1, double arg2, double arg3, double arg4) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_math_trigonometricequationfunction_create_3(arg0, arg1, arg2, arg3, arg4, out nint result), "occtsharp_owned_math_trigonometricequationfunction_create_3");
+    var managedResult = MathTrigonometricEquationFunction.FromNative(result);
     return managedResult;
   }
 }

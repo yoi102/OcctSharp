@@ -9,6 +9,7 @@
     <EmbeddedResource Include="Emission/preview22-stable-ids.json" />
     <EmbeddedResource Include="Emission/preview23-added-stable-ids.json" />
     <EmbeddedResource Include="Emission/preview24-added-stable-ids.json" />
+    <EmbeddedResource Include="Emission/preview27-owned-owners.json" />
     <PackageReference Include="ClangSharp" />
     <PackageReference Include="libClangSharp" />
     <PackageReference Include="libClangSharp.runtime.win-x64" />

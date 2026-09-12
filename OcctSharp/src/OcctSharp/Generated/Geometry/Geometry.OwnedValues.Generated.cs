@@ -6,6 +6,322 @@ using OcctSharp.Generated;
 using OcctSharp.Interop;
 using OcctSharp.Values;
 namespace OcctSharp.OwnedValues;
+/// <summary>Owns a stable-address Approx_CurveOnSurface. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class ApproxCurveOnSurface : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private ApproxCurveOnSurface(OwnedHandle handle) => _handle = handle;
+  static ApproxCurveOnSurface() => NativeLibraryResolver.EnsureRegistered(typeof(ApproxCurveOnSurface).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static ApproxCurveOnSurface FromNative(nint value) {
+    try { return new ApproxCurveOnSurface(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_curveonsurface_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@Approx_CurveOnSurface@F@Approx_CurveOnSurface#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#d#d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_curveonsurface_create_0")]
+  private static partial NativeStatus Native_occtsharp_owned_approx_curveonsurface_create_0(Adaptor2dCurve2dHandle arg0, Adaptor3dSurfaceHandle arg1, double arg2, double arg3, double arg4, out nint result);
+  /// <summary>Invokes Approx_CurveOnSurface::Approx_CurveOnSurface. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ApproxCurveOnSurface Create(Adaptor2dCurve2d arg0, Adaptor3dSurface arg1, double arg2, double arg3, double arg4) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_approx_curveonsurface_create_0(arg0.NativeHandle, arg1.NativeHandle, arg2, arg3, arg4, out nint result), "occtsharp_owned_approx_curveonsurface_create_0");
+    var managedResult = ApproxCurveOnSurface.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Approx_CurveOnSurface@F@Curve2d#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_curveonsurface_curve2d_1")]
+  private static partial NativeStatus Native_occtsharp_owned_approx_curveonsurface_curve2d_1(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes Approx_CurveOnSurface::Curve2d. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Geom2dBSplineCurve? Curve2d() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_approx_curveonsurface_curve2d_1(NativeHandle, out nint result), "occtsharp_owned_approx_curveonsurface_curve2d_1");
+    var managedResult = Geom2dBSplineCurve.FromNative(result, "occtsharp_owned_approx_curveonsurface_curve2d_1");
+    return managedResult;
+  }
+  // Source: c:@S@Approx_CurveOnSurface@F@Curve3d#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_curveonsurface_curve3d_2")]
+  private static partial NativeStatus Native_occtsharp_owned_approx_curveonsurface_curve3d_2(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes Approx_CurveOnSurface::Curve3d. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public GeomBSplineCurve? Curve3d() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_approx_curveonsurface_curve3d_2(NativeHandle, out nint result), "occtsharp_owned_approx_curveonsurface_curve3d_2");
+    var managedResult = GeomBSplineCurve.FromNative(result, "occtsharp_owned_approx_curveonsurface_curve3d_2");
+    return managedResult;
+  }
+  // Source: c:@S@Approx_CurveOnSurface@F@HasResult#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_curveonsurface_hasresult_3")]
+  private static partial NativeStatus Native_occtsharp_owned_approx_curveonsurface_hasresult_3(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Approx_CurveOnSurface::HasResult. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool HasResult() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_approx_curveonsurface_hasresult_3(NativeHandle, out int result), "occtsharp_owned_approx_curveonsurface_hasresult_3");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Approx_CurveOnSurface@F@IsDone#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_curveonsurface_isdone_4")]
+  private static partial NativeStatus Native_occtsharp_owned_approx_curveonsurface_isdone_4(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Approx_CurveOnSurface::IsDone. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsDone() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_approx_curveonsurface_isdone_4(NativeHandle, out int result), "occtsharp_owned_approx_curveonsurface_isdone_4");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Approx_CurveOnSurface@F@MaxError2dU#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_curveonsurface_maxerror2du_5")]
+  private static partial NativeStatus Native_occtsharp_owned_approx_curveonsurface_maxerror2du_5(OwnedHandle receiver, out double result);
+  /// <summary>Invokes Approx_CurveOnSurface::MaxError2dU. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double MaxError2dU() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_approx_curveonsurface_maxerror2du_5(NativeHandle, out double result), "occtsharp_owned_approx_curveonsurface_maxerror2du_5");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Approx_CurveOnSurface@F@MaxError2dV#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_curveonsurface_maxerror2dv_6")]
+  private static partial NativeStatus Native_occtsharp_owned_approx_curveonsurface_maxerror2dv_6(OwnedHandle receiver, out double result);
+  /// <summary>Invokes Approx_CurveOnSurface::MaxError2dV. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double MaxError2dV() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_approx_curveonsurface_maxerror2dv_6(NativeHandle, out double result), "occtsharp_owned_approx_curveonsurface_maxerror2dv_6");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Approx_CurveOnSurface@F@MaxError3d#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_curveonsurface_maxerror3d_7")]
+  private static partial NativeStatus Native_occtsharp_owned_approx_curveonsurface_maxerror3d_7(OwnedHandle receiver, out double result);
+  /// <summary>Invokes Approx_CurveOnSurface::MaxError3d. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double MaxError3d() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_approx_curveonsurface_maxerror3d_7(NativeHandle, out double result), "occtsharp_owned_approx_curveonsurface_maxerror3d_7");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Approx_CurveOnSurface@F@Perform#I#I#$@E@GeomAbs_Shape#b#b#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_curveonsurface_perform_8")]
+  private static partial NativeStatus Native_occtsharp_owned_approx_curveonsurface_perform_8(OwnedHandle receiver, int arg0, int arg1, int arg2, int arg3, int arg4);
+  /// <summary>Invokes Approx_CurveOnSurface::Perform. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Perform(int arg0, int arg1, GeomAbsShape arg2, bool arg3, bool arg4) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_approx_curveonsurface_perform_8(NativeHandle, arg0, arg1, (int)arg2, (arg3 ? 1 : 0), (arg4 ? 1 : 0)), "occtsharp_owned_approx_curveonsurface_perform_8");
+  }
+}
+/// <summary>Owns a stable-address Approx_CurvilinearParameter. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class ApproxCurvilinearParameter : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private ApproxCurvilinearParameter(OwnedHandle handle) => _handle = handle;
+  static ApproxCurvilinearParameter() => NativeLibraryResolver.EnsureRegistered(typeof(ApproxCurvilinearParameter).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static ApproxCurvilinearParameter FromNative(nint value) {
+    try { return new ApproxCurvilinearParameter(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_curvilinearparameter_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@Approx_CurvilinearParameter@F@Approx_CurvilinearParameter#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#S0_#S3_#d#$@E@GeomAbs_Shape#I#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_curvilinearparameter_create_0")]
+  private static partial NativeStatus Native_occtsharp_owned_approx_curvilinearparameter_create_0(Adaptor2dCurve2dHandle arg0, Adaptor3dSurfaceHandle arg1, Adaptor2dCurve2dHandle arg2, Adaptor3dSurfaceHandle arg3, double arg4, int arg5, int arg6, int arg7, out nint result);
+  /// <summary>Invokes Approx_CurvilinearParameter::Approx_CurvilinearParameter. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ApproxCurvilinearParameter Create(Adaptor2dCurve2d arg0, Adaptor3dSurface arg1, Adaptor2dCurve2d arg2, Adaptor3dSurface arg3, double arg4, GeomAbsShape arg5, int arg6, int arg7) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    ArgumentNullException.ThrowIfNull(arg2);
+    ArgumentNullException.ThrowIfNull(arg3);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_approx_curvilinearparameter_create_0(arg0.NativeHandle, arg1.NativeHandle, arg2.NativeHandle, arg3.NativeHandle, arg4, (int)arg5, arg6, arg7, out nint result), "occtsharp_owned_approx_curvilinearparameter_create_0");
+    var managedResult = ApproxCurvilinearParameter.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Approx_CurvilinearParameter@F@Approx_CurvilinearParameter#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#d#$@E@GeomAbs_Shape#I#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_curvilinearparameter_create_1")]
+  private static partial NativeStatus Native_occtsharp_owned_approx_curvilinearparameter_create_1(Adaptor2dCurve2dHandle arg0, Adaptor3dSurfaceHandle arg1, double arg2, int arg3, int arg4, int arg5, out nint result);
+  /// <summary>Invokes Approx_CurvilinearParameter::Approx_CurvilinearParameter. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ApproxCurvilinearParameter Create(Adaptor2dCurve2d arg0, Adaptor3dSurface arg1, double arg2, GeomAbsShape arg3, int arg4, int arg5) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_approx_curvilinearparameter_create_1(arg0.NativeHandle, arg1.NativeHandle, arg2, (int)arg3, arg4, arg5, out nint result), "occtsharp_owned_approx_curvilinearparameter_create_1");
+    var managedResult = ApproxCurvilinearParameter.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Approx_CurvilinearParameter@F@Approx_CurvilinearParameter#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#d#$@E@GeomAbs_Shape#I#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_curvilinearparameter_create_2")]
+  private static partial NativeStatus Native_occtsharp_owned_approx_curvilinearparameter_create_2(Adaptor3dCurveHandle arg0, double arg1, int arg2, int arg3, int arg4, out nint result);
+  /// <summary>Invokes Approx_CurvilinearParameter::Approx_CurvilinearParameter. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ApproxCurvilinearParameter Create(Adaptor3dCurve arg0, double arg1, GeomAbsShape arg2, int arg3, int arg4) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_approx_curvilinearparameter_create_2(arg0.NativeHandle, arg1, (int)arg2, arg3, arg4, out nint result), "occtsharp_owned_approx_curvilinearparameter_create_2");
+    var managedResult = ApproxCurvilinearParameter.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Approx_CurvilinearParameter@F@Curve2d1#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_curvilinearparameter_curve2d1_3")]
+  private static partial NativeStatus Native_occtsharp_owned_approx_curvilinearparameter_curve2d1_3(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes Approx_CurvilinearParameter::Curve2d1. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Geom2dBSplineCurve? Curve2d1() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_approx_curvilinearparameter_curve2d1_3(NativeHandle, out nint result), "occtsharp_owned_approx_curvilinearparameter_curve2d1_3");
+    var managedResult = Geom2dBSplineCurve.FromNative(result, "occtsharp_owned_approx_curvilinearparameter_curve2d1_3");
+    return managedResult;
+  }
+  // Source: c:@S@Approx_CurvilinearParameter@F@Curve2d2#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_curvilinearparameter_curve2d2_4")]
+  private static partial NativeStatus Native_occtsharp_owned_approx_curvilinearparameter_curve2d2_4(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes Approx_CurvilinearParameter::Curve2d2. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Geom2dBSplineCurve? Curve2d2() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_approx_curvilinearparameter_curve2d2_4(NativeHandle, out nint result), "occtsharp_owned_approx_curvilinearparameter_curve2d2_4");
+    var managedResult = Geom2dBSplineCurve.FromNative(result, "occtsharp_owned_approx_curvilinearparameter_curve2d2_4");
+    return managedResult;
+  }
+  // Source: c:@S@Approx_CurvilinearParameter@F@Curve3d#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_curvilinearparameter_curve3d_5")]
+  private static partial NativeStatus Native_occtsharp_owned_approx_curvilinearparameter_curve3d_5(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes Approx_CurvilinearParameter::Curve3d. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public GeomBSplineCurve? Curve3d() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_approx_curvilinearparameter_curve3d_5(NativeHandle, out nint result), "occtsharp_owned_approx_curvilinearparameter_curve3d_5");
+    var managedResult = GeomBSplineCurve.FromNative(result, "occtsharp_owned_approx_curvilinearparameter_curve3d_5");
+    return managedResult;
+  }
+  // Source: c:@S@Approx_CurvilinearParameter@F@HasResult#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_curvilinearparameter_hasresult_6")]
+  private static partial NativeStatus Native_occtsharp_owned_approx_curvilinearparameter_hasresult_6(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Approx_CurvilinearParameter::HasResult. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool HasResult() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_approx_curvilinearparameter_hasresult_6(NativeHandle, out int result), "occtsharp_owned_approx_curvilinearparameter_hasresult_6");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Approx_CurvilinearParameter@F@IsDone#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_curvilinearparameter_isdone_7")]
+  private static partial NativeStatus Native_occtsharp_owned_approx_curvilinearparameter_isdone_7(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Approx_CurvilinearParameter::IsDone. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsDone() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_approx_curvilinearparameter_isdone_7(NativeHandle, out int result), "occtsharp_owned_approx_curvilinearparameter_isdone_7");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Approx_CurvilinearParameter@F@MaxError3d#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_curvilinearparameter_maxerror3d_8")]
+  private static partial NativeStatus Native_occtsharp_owned_approx_curvilinearparameter_maxerror3d_8(OwnedHandle receiver, out double result);
+  /// <summary>Invokes Approx_CurvilinearParameter::MaxError3d. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double MaxError3d() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_approx_curvilinearparameter_maxerror3d_8(NativeHandle, out double result), "occtsharp_owned_approx_curvilinearparameter_maxerror3d_8");
+    var managedResult = result;
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address Approx_SameParameter. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class ApproxSameParameter : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private ApproxSameParameter(OwnedHandle handle) => _handle = handle;
+  static ApproxSameParameter() => NativeLibraryResolver.EnsureRegistered(typeof(ApproxSameParameter).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static ApproxSameParameter FromNative(nint value) {
+    try { return new ApproxSameParameter(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_sameparameter_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@Approx_SameParameter@F@Approx_SameParameter#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_sameparameter_create_0")]
+  private static partial NativeStatus Native_occtsharp_owned_approx_sameparameter_create_0(Adaptor3dCurveHandle arg0, Adaptor2dCurve2dHandle arg1, Adaptor3dSurfaceHandle arg2, double arg3, out nint result);
+  /// <summary>Invokes Approx_SameParameter::Approx_SameParameter. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ApproxSameParameter Create(Adaptor3dCurve arg0, Adaptor2dCurve2d arg1, Adaptor3dSurface arg2, double arg3) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    ArgumentNullException.ThrowIfNull(arg2);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_approx_sameparameter_create_0(arg0.NativeHandle, arg1.NativeHandle, arg2.NativeHandle, arg3, out nint result), "occtsharp_owned_approx_sameparameter_create_0");
+    var managedResult = ApproxSameParameter.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Approx_SameParameter@F@Approx_SameParameter#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_sameparameter_create_1")]
+  private static partial NativeStatus Native_occtsharp_owned_approx_sameparameter_create_1(Adaptor3dCurveHandle arg0, Geom2dCurveHandle arg1, Adaptor3dSurfaceHandle arg2, double arg3, out nint result);
+  /// <summary>Invokes Approx_SameParameter::Approx_SameParameter. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ApproxSameParameter Create(Adaptor3dCurve arg0, Geom2dCurve arg1, Adaptor3dSurface arg2, double arg3) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    ArgumentNullException.ThrowIfNull(arg2);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_approx_sameparameter_create_1(arg0.NativeHandle, arg1.NativeHandle, arg2.NativeHandle, arg3, out nint result), "occtsharp_owned_approx_sameparameter_create_1");
+    var managedResult = ApproxSameParameter.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Approx_SameParameter@F@Approx_SameParameter#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_sameparameter_create_2")]
+  private static partial NativeStatus Native_occtsharp_owned_approx_sameparameter_create_2(GeomCurveHandle arg0, Geom2dCurveHandle arg1, GeomSurfaceHandle arg2, double arg3, out nint result);
+  /// <summary>Invokes Approx_SameParameter::Approx_SameParameter. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ApproxSameParameter Create(GeomCurve arg0, Geom2dCurve arg1, GeomSurface arg2, double arg3) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    ArgumentNullException.ThrowIfNull(arg2);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_approx_sameparameter_create_2(arg0.NativeHandle, arg1.NativeHandle, arg2.NativeHandle, arg3, out nint result), "occtsharp_owned_approx_sameparameter_create_2");
+    var managedResult = ApproxSameParameter.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Approx_SameParameter@F@Curve2d#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_sameparameter_curve2d_3")]
+  private static partial NativeStatus Native_occtsharp_owned_approx_sameparameter_curve2d_3(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes Approx_SameParameter::Curve2d. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Geom2dCurve? Curve2d() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_approx_sameparameter_curve2d_3(NativeHandle, out nint result), "occtsharp_owned_approx_sameparameter_curve2d_3");
+    var managedResult = Geom2dCurve.FromNative(result, "occtsharp_owned_approx_sameparameter_curve2d_3");
+    return managedResult;
+  }
+  // Source: c:@S@Approx_SameParameter@F@Curve3d#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_sameparameter_curve3d_4")]
+  private static partial NativeStatus Native_occtsharp_owned_approx_sameparameter_curve3d_4(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes Approx_SameParameter::Curve3d. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Adaptor3dCurve? Curve3d() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_approx_sameparameter_curve3d_4(NativeHandle, out nint result), "occtsharp_owned_approx_sameparameter_curve3d_4");
+    var managedResult = Adaptor3dCurve.FromNative(result, "occtsharp_owned_approx_sameparameter_curve3d_4");
+    return managedResult;
+  }
+  // Source: c:@S@Approx_SameParameter@F@CurveOnSurface#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_sameparameter_curveonsurface_5")]
+  private static partial NativeStatus Native_occtsharp_owned_approx_sameparameter_curveonsurface_5(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes Approx_SameParameter::CurveOnSurface. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Adaptor3dCurveOnSurface? CurveOnSurface() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_approx_sameparameter_curveonsurface_5(NativeHandle, out nint result), "occtsharp_owned_approx_sameparameter_curveonsurface_5");
+    var managedResult = Adaptor3dCurveOnSurface.FromNative(result, "occtsharp_owned_approx_sameparameter_curveonsurface_5");
+    return managedResult;
+  }
+  // Source: c:@S@Approx_SameParameter@F@IsDone#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_sameparameter_isdone_6")]
+  private static partial NativeStatus Native_occtsharp_owned_approx_sameparameter_isdone_6(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Approx_SameParameter::IsDone. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsDone() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_approx_sameparameter_isdone_6(NativeHandle, out int result), "occtsharp_owned_approx_sameparameter_isdone_6");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Approx_SameParameter@F@IsSameParameter#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_sameparameter_issameparameter_7")]
+  private static partial NativeStatus Native_occtsharp_owned_approx_sameparameter_issameparameter_7(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Approx_SameParameter::IsSameParameter. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsSameParameter() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_approx_sameparameter_issameparameter_7(NativeHandle, out int result), "occtsharp_owned_approx_sameparameter_issameparameter_7");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Approx_SameParameter@F@TolReached#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_approx_sameparameter_tolreached_8")]
+  private static partial NativeStatus Native_occtsharp_owned_approx_sameparameter_tolreached_8(OwnedHandle receiver, out double result);
+  /// <summary>Invokes Approx_SameParameter::TolReached. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double TolReached() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_approx_sameparameter_tolreached_8(NativeHandle, out double result), "occtsharp_owned_approx_sameparameter_tolreached_8");
+    var managedResult = result;
+    return managedResult;
+  }
+}
 /// <summary>Owns a stable-address Bnd_Box. Synchronize mutation with other calls; dispose to release native storage.</summary>
 public sealed partial class BndBox : IDisposable {
   internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
@@ -1519,6 +1835,1094 @@ public sealed partial class BndSphere : IDisposable {
     return managedResult;
   }
 }
+/// <summary>Owns a stable-address Convert_CircleToBSplineCurve. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class ConvertCircleToBSplineCurve : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private ConvertCircleToBSplineCurve(OwnedHandle handle) => _handle = handle;
+  static ConvertCircleToBSplineCurve() => NativeLibraryResolver.EnsureRegistered(typeof(ConvertCircleToBSplineCurve).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static ConvertCircleToBSplineCurve FromNative(nint value) {
+    try { return new ConvertCircleToBSplineCurve(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_circletobsplinecurve_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@Convert_CircleToBSplineCurve@F@Convert_CircleToBSplineCurve#&1$@S@gp_Circ2d#$@E@Convert_ParameterisationType#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_circletobsplinecurve_create_0")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_circletobsplinecurve_create_0(global::OcctSharp.Values.Circle2d arg0, int arg1, out nint result);
+  /// <summary>Invokes Convert_CircleToBSplineCurve::Convert_CircleToBSplineCurve. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ConvertCircleToBSplineCurve Create(global::OcctSharp.Values.Circle2d arg0, ConvertParameterisationType arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_circletobsplinecurve_create_0(arg0, (int)arg1, out nint result), "occtsharp_owned_convert_circletobsplinecurve_create_0");
+    var managedResult = ConvertCircleToBSplineCurve.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Convert_CircleToBSplineCurve@F@Convert_CircleToBSplineCurve#&1$@S@gp_Circ2d#d#d#$@E@Convert_ParameterisationType#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_circletobsplinecurve_create_1")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_circletobsplinecurve_create_1(global::OcctSharp.Values.Circle2d arg0, double arg1, double arg2, int arg3, out nint result);
+  /// <summary>Invokes Convert_CircleToBSplineCurve::Convert_CircleToBSplineCurve. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ConvertCircleToBSplineCurve Create(global::OcctSharp.Values.Circle2d arg0, double arg1, double arg2, ConvertParameterisationType arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_circletobsplinecurve_create_1(arg0, arg1, arg2, (int)arg3, out nint result), "occtsharp_owned_convert_circletobsplinecurve_create_1");
+    var managedResult = ConvertCircleToBSplineCurve.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@Degree#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_circletobsplinecurve_degree_2")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_circletobsplinecurve_degree_2(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::Degree. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int Degree() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_circletobsplinecurve_degree_2(NativeHandle, out int result), "occtsharp_owned_convert_circletobsplinecurve_degree_2");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@IsPeriodic#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_circletobsplinecurve_isperiodic_3")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_circletobsplinecurve_isperiodic_3(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::IsPeriodic. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsPeriodic() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_circletobsplinecurve_isperiodic_3(NativeHandle, out int result), "occtsharp_owned_convert_circletobsplinecurve_isperiodic_3");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@Knot#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_circletobsplinecurve_knot_4")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_circletobsplinecurve_knot_4(OwnedHandle receiver, int arg0, out double result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::Knot. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Knot(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_circletobsplinecurve_knot_4(NativeHandle, arg0, out double result), "occtsharp_owned_convert_circletobsplinecurve_knot_4");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@Multiplicity#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_circletobsplinecurve_multiplicity_5")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_circletobsplinecurve_multiplicity_5(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::Multiplicity. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int Multiplicity(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_circletobsplinecurve_multiplicity_5(NativeHandle, arg0, out int result), "occtsharp_owned_convert_circletobsplinecurve_multiplicity_5");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@NbKnots#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_circletobsplinecurve_nbknots_6")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_circletobsplinecurve_nbknots_6(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::NbKnots. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbKnots() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_circletobsplinecurve_nbknots_6(NativeHandle, out int result), "occtsharp_owned_convert_circletobsplinecurve_nbknots_6");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@NbPoles#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_circletobsplinecurve_nbpoles_7")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_circletobsplinecurve_nbpoles_7(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::NbPoles. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbPoles() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_circletobsplinecurve_nbpoles_7(NativeHandle, out int result), "occtsharp_owned_convert_circletobsplinecurve_nbpoles_7");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@Pole#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_circletobsplinecurve_pole_8")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_circletobsplinecurve_pole_8(OwnedHandle receiver, int arg0, out global::OcctSharp.Values.Point2d result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::Pole. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Point2d Pole(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_circletobsplinecurve_pole_8(NativeHandle, arg0, out global::OcctSharp.Values.Point2d result), "occtsharp_owned_convert_circletobsplinecurve_pole_8");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@Weight#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_circletobsplinecurve_weight_9")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_circletobsplinecurve_weight_9(OwnedHandle receiver, int arg0, out double result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::Weight. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Weight(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_circletobsplinecurve_weight_9(NativeHandle, arg0, out double result), "occtsharp_owned_convert_circletobsplinecurve_weight_9");
+    var managedResult = result;
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address Convert_ConeToBSplineSurface. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class ConvertConeToBSplineSurface : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private ConvertConeToBSplineSurface(OwnedHandle handle) => _handle = handle;
+  static ConvertConeToBSplineSurface() => NativeLibraryResolver.EnsureRegistered(typeof(ConvertConeToBSplineSurface).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static ConvertConeToBSplineSurface FromNative(nint value) {
+    try { return new ConvertConeToBSplineSurface(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_conetobsplinesurface_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@Convert_ConeToBSplineSurface@F@Convert_ConeToBSplineSurface#&1$@S@gp_Cone#d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_conetobsplinesurface_create_0")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_conetobsplinesurface_create_0(global::OcctSharp.Values.Cone arg0, double arg1, double arg2, out nint result);
+  /// <summary>Invokes Convert_ConeToBSplineSurface::Convert_ConeToBSplineSurface. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ConvertConeToBSplineSurface Create(global::OcctSharp.Values.Cone arg0, double arg1, double arg2) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_conetobsplinesurface_create_0(arg0, arg1, arg2, out nint result), "occtsharp_owned_convert_conetobsplinesurface_create_0");
+    var managedResult = ConvertConeToBSplineSurface.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConeToBSplineSurface@F@Convert_ConeToBSplineSurface#&1$@S@gp_Cone#d#d#d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_conetobsplinesurface_create_1")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_conetobsplinesurface_create_1(global::OcctSharp.Values.Cone arg0, double arg1, double arg2, double arg3, double arg4, out nint result);
+  /// <summary>Invokes Convert_ConeToBSplineSurface::Convert_ConeToBSplineSurface. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ConvertConeToBSplineSurface Create(global::OcctSharp.Values.Cone arg0, double arg1, double arg2, double arg3, double arg4) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_conetobsplinesurface_create_1(arg0, arg1, arg2, arg3, arg4, out nint result), "occtsharp_owned_convert_conetobsplinesurface_create_1");
+    var managedResult = ConvertConeToBSplineSurface.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@IsUPeriodic#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_conetobsplinesurface_isuperiodic_2")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_conetobsplinesurface_isuperiodic_2(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::IsUPeriodic. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsUPeriodic() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_conetobsplinesurface_isuperiodic_2(NativeHandle, out int result), "occtsharp_owned_convert_conetobsplinesurface_isuperiodic_2");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@IsVPeriodic#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_conetobsplinesurface_isvperiodic_3")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_conetobsplinesurface_isvperiodic_3(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::IsVPeriodic. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsVPeriodic() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_conetobsplinesurface_isvperiodic_3(NativeHandle, out int result), "occtsharp_owned_convert_conetobsplinesurface_isvperiodic_3");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@NbUKnots#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_conetobsplinesurface_nbuknots_4")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_conetobsplinesurface_nbuknots_4(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::NbUKnots. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbUKnots() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_conetobsplinesurface_nbuknots_4(NativeHandle, out int result), "occtsharp_owned_convert_conetobsplinesurface_nbuknots_4");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@NbUPoles#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_conetobsplinesurface_nbupoles_5")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_conetobsplinesurface_nbupoles_5(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::NbUPoles. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbUPoles() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_conetobsplinesurface_nbupoles_5(NativeHandle, out int result), "occtsharp_owned_convert_conetobsplinesurface_nbupoles_5");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@NbVKnots#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_conetobsplinesurface_nbvknots_6")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_conetobsplinesurface_nbvknots_6(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::NbVKnots. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbVKnots() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_conetobsplinesurface_nbvknots_6(NativeHandle, out int result), "occtsharp_owned_convert_conetobsplinesurface_nbvknots_6");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@NbVPoles#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_conetobsplinesurface_nbvpoles_7")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_conetobsplinesurface_nbvpoles_7(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::NbVPoles. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbVPoles() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_conetobsplinesurface_nbvpoles_7(NativeHandle, out int result), "occtsharp_owned_convert_conetobsplinesurface_nbvpoles_7");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@Pole#I#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_conetobsplinesurface_pole_8")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_conetobsplinesurface_pole_8(OwnedHandle receiver, int arg0, int arg1, out Point3dRaw result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::Pole. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Point3d Pole(int arg0, int arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_conetobsplinesurface_pole_8(NativeHandle, arg0, arg1, out Point3dRaw result), "occtsharp_owned_convert_conetobsplinesurface_pole_8");
+    var managedResult = new Point3d(result.X, result.Y, result.Z);
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@UDegree#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_conetobsplinesurface_udegree_9")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_conetobsplinesurface_udegree_9(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::UDegree. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int UDegree() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_conetobsplinesurface_udegree_9(NativeHandle, out int result), "occtsharp_owned_convert_conetobsplinesurface_udegree_9");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@UKnot#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_conetobsplinesurface_uknot_10")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_conetobsplinesurface_uknot_10(OwnedHandle receiver, int arg0, out double result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::UKnot. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double UKnot(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_conetobsplinesurface_uknot_10(NativeHandle, arg0, out double result), "occtsharp_owned_convert_conetobsplinesurface_uknot_10");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@UMultiplicity#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_conetobsplinesurface_umultiplicity_11")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_conetobsplinesurface_umultiplicity_11(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::UMultiplicity. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int UMultiplicity(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_conetobsplinesurface_umultiplicity_11(NativeHandle, arg0, out int result), "occtsharp_owned_convert_conetobsplinesurface_umultiplicity_11");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@VDegree#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_conetobsplinesurface_vdegree_12")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_conetobsplinesurface_vdegree_12(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::VDegree. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int VDegree() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_conetobsplinesurface_vdegree_12(NativeHandle, out int result), "occtsharp_owned_convert_conetobsplinesurface_vdegree_12");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@VKnot#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_conetobsplinesurface_vknot_13")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_conetobsplinesurface_vknot_13(OwnedHandle receiver, int arg0, out double result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::VKnot. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double VKnot(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_conetobsplinesurface_vknot_13(NativeHandle, arg0, out double result), "occtsharp_owned_convert_conetobsplinesurface_vknot_13");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@VMultiplicity#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_conetobsplinesurface_vmultiplicity_14")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_conetobsplinesurface_vmultiplicity_14(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::VMultiplicity. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int VMultiplicity(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_conetobsplinesurface_vmultiplicity_14(NativeHandle, arg0, out int result), "occtsharp_owned_convert_conetobsplinesurface_vmultiplicity_14");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@Weight#I#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_conetobsplinesurface_weight_15")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_conetobsplinesurface_weight_15(OwnedHandle receiver, int arg0, int arg1, out double result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::Weight. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Weight(int arg0, int arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_conetobsplinesurface_weight_15(NativeHandle, arg0, arg1, out double result), "occtsharp_owned_convert_conetobsplinesurface_weight_15");
+    var managedResult = result;
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address Convert_CylinderToBSplineSurface. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class ConvertCylinderToBSplineSurface : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private ConvertCylinderToBSplineSurface(OwnedHandle handle) => _handle = handle;
+  static ConvertCylinderToBSplineSurface() => NativeLibraryResolver.EnsureRegistered(typeof(ConvertCylinderToBSplineSurface).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static ConvertCylinderToBSplineSurface FromNative(nint value) {
+    try { return new ConvertCylinderToBSplineSurface(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_cylindertobsplinesurface_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@Convert_CylinderToBSplineSurface@F@Convert_CylinderToBSplineSurface#&1$@S@gp_Cylinder#d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_cylindertobsplinesurface_create_0")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_cylindertobsplinesurface_create_0(global::OcctSharp.Values.Cylinder arg0, double arg1, double arg2, out nint result);
+  /// <summary>Invokes Convert_CylinderToBSplineSurface::Convert_CylinderToBSplineSurface. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ConvertCylinderToBSplineSurface Create(global::OcctSharp.Values.Cylinder arg0, double arg1, double arg2) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_cylindertobsplinesurface_create_0(arg0, arg1, arg2, out nint result), "occtsharp_owned_convert_cylindertobsplinesurface_create_0");
+    var managedResult = ConvertCylinderToBSplineSurface.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Convert_CylinderToBSplineSurface@F@Convert_CylinderToBSplineSurface#&1$@S@gp_Cylinder#d#d#d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_cylindertobsplinesurface_create_1")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_cylindertobsplinesurface_create_1(global::OcctSharp.Values.Cylinder arg0, double arg1, double arg2, double arg3, double arg4, out nint result);
+  /// <summary>Invokes Convert_CylinderToBSplineSurface::Convert_CylinderToBSplineSurface. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ConvertCylinderToBSplineSurface Create(global::OcctSharp.Values.Cylinder arg0, double arg1, double arg2, double arg3, double arg4) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_cylindertobsplinesurface_create_1(arg0, arg1, arg2, arg3, arg4, out nint result), "occtsharp_owned_convert_cylindertobsplinesurface_create_1");
+    var managedResult = ConvertCylinderToBSplineSurface.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@IsUPeriodic#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_cylindertobsplinesurface_isuperiodic_2")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_cylindertobsplinesurface_isuperiodic_2(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::IsUPeriodic. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsUPeriodic() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_cylindertobsplinesurface_isuperiodic_2(NativeHandle, out int result), "occtsharp_owned_convert_cylindertobsplinesurface_isuperiodic_2");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@IsVPeriodic#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_cylindertobsplinesurface_isvperiodic_3")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_cylindertobsplinesurface_isvperiodic_3(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::IsVPeriodic. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsVPeriodic() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_cylindertobsplinesurface_isvperiodic_3(NativeHandle, out int result), "occtsharp_owned_convert_cylindertobsplinesurface_isvperiodic_3");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@NbUKnots#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_cylindertobsplinesurface_nbuknots_4")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_cylindertobsplinesurface_nbuknots_4(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::NbUKnots. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbUKnots() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_cylindertobsplinesurface_nbuknots_4(NativeHandle, out int result), "occtsharp_owned_convert_cylindertobsplinesurface_nbuknots_4");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@NbUPoles#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_cylindertobsplinesurface_nbupoles_5")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_cylindertobsplinesurface_nbupoles_5(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::NbUPoles. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbUPoles() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_cylindertobsplinesurface_nbupoles_5(NativeHandle, out int result), "occtsharp_owned_convert_cylindertobsplinesurface_nbupoles_5");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@NbVKnots#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_cylindertobsplinesurface_nbvknots_6")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_cylindertobsplinesurface_nbvknots_6(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::NbVKnots. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbVKnots() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_cylindertobsplinesurface_nbvknots_6(NativeHandle, out int result), "occtsharp_owned_convert_cylindertobsplinesurface_nbvknots_6");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@NbVPoles#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_cylindertobsplinesurface_nbvpoles_7")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_cylindertobsplinesurface_nbvpoles_7(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::NbVPoles. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbVPoles() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_cylindertobsplinesurface_nbvpoles_7(NativeHandle, out int result), "occtsharp_owned_convert_cylindertobsplinesurface_nbvpoles_7");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@Pole#I#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_cylindertobsplinesurface_pole_8")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_cylindertobsplinesurface_pole_8(OwnedHandle receiver, int arg0, int arg1, out Point3dRaw result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::Pole. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Point3d Pole(int arg0, int arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_cylindertobsplinesurface_pole_8(NativeHandle, arg0, arg1, out Point3dRaw result), "occtsharp_owned_convert_cylindertobsplinesurface_pole_8");
+    var managedResult = new Point3d(result.X, result.Y, result.Z);
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@UDegree#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_cylindertobsplinesurface_udegree_9")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_cylindertobsplinesurface_udegree_9(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::UDegree. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int UDegree() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_cylindertobsplinesurface_udegree_9(NativeHandle, out int result), "occtsharp_owned_convert_cylindertobsplinesurface_udegree_9");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@UKnot#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_cylindertobsplinesurface_uknot_10")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_cylindertobsplinesurface_uknot_10(OwnedHandle receiver, int arg0, out double result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::UKnot. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double UKnot(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_cylindertobsplinesurface_uknot_10(NativeHandle, arg0, out double result), "occtsharp_owned_convert_cylindertobsplinesurface_uknot_10");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@UMultiplicity#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_cylindertobsplinesurface_umultiplicity_11")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_cylindertobsplinesurface_umultiplicity_11(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::UMultiplicity. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int UMultiplicity(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_cylindertobsplinesurface_umultiplicity_11(NativeHandle, arg0, out int result), "occtsharp_owned_convert_cylindertobsplinesurface_umultiplicity_11");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@VDegree#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_cylindertobsplinesurface_vdegree_12")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_cylindertobsplinesurface_vdegree_12(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::VDegree. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int VDegree() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_cylindertobsplinesurface_vdegree_12(NativeHandle, out int result), "occtsharp_owned_convert_cylindertobsplinesurface_vdegree_12");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@VKnot#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_cylindertobsplinesurface_vknot_13")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_cylindertobsplinesurface_vknot_13(OwnedHandle receiver, int arg0, out double result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::VKnot. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double VKnot(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_cylindertobsplinesurface_vknot_13(NativeHandle, arg0, out double result), "occtsharp_owned_convert_cylindertobsplinesurface_vknot_13");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@VMultiplicity#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_cylindertobsplinesurface_vmultiplicity_14")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_cylindertobsplinesurface_vmultiplicity_14(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::VMultiplicity. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int VMultiplicity(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_cylindertobsplinesurface_vmultiplicity_14(NativeHandle, arg0, out int result), "occtsharp_owned_convert_cylindertobsplinesurface_vmultiplicity_14");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@Weight#I#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_cylindertobsplinesurface_weight_15")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_cylindertobsplinesurface_weight_15(OwnedHandle receiver, int arg0, int arg1, out double result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::Weight. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Weight(int arg0, int arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_cylindertobsplinesurface_weight_15(NativeHandle, arg0, arg1, out double result), "occtsharp_owned_convert_cylindertobsplinesurface_weight_15");
+    var managedResult = result;
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address Convert_EllipseToBSplineCurve. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class ConvertEllipseToBSplineCurve : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private ConvertEllipseToBSplineCurve(OwnedHandle handle) => _handle = handle;
+  static ConvertEllipseToBSplineCurve() => NativeLibraryResolver.EnsureRegistered(typeof(ConvertEllipseToBSplineCurve).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static ConvertEllipseToBSplineCurve FromNative(nint value) {
+    try { return new ConvertEllipseToBSplineCurve(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_ellipsetobsplinecurve_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@Convert_EllipseToBSplineCurve@F@Convert_EllipseToBSplineCurve#&1$@S@gp_Elips2d#$@E@Convert_ParameterisationType#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_ellipsetobsplinecurve_create_0")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_ellipsetobsplinecurve_create_0(global::OcctSharp.Values.Ellipse2d arg0, int arg1, out nint result);
+  /// <summary>Invokes Convert_EllipseToBSplineCurve::Convert_EllipseToBSplineCurve. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ConvertEllipseToBSplineCurve Create(global::OcctSharp.Values.Ellipse2d arg0, ConvertParameterisationType arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_ellipsetobsplinecurve_create_0(arg0, (int)arg1, out nint result), "occtsharp_owned_convert_ellipsetobsplinecurve_create_0");
+    var managedResult = ConvertEllipseToBSplineCurve.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Convert_EllipseToBSplineCurve@F@Convert_EllipseToBSplineCurve#&1$@S@gp_Elips2d#d#d#$@E@Convert_ParameterisationType#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_ellipsetobsplinecurve_create_1")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_ellipsetobsplinecurve_create_1(global::OcctSharp.Values.Ellipse2d arg0, double arg1, double arg2, int arg3, out nint result);
+  /// <summary>Invokes Convert_EllipseToBSplineCurve::Convert_EllipseToBSplineCurve. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ConvertEllipseToBSplineCurve Create(global::OcctSharp.Values.Ellipse2d arg0, double arg1, double arg2, ConvertParameterisationType arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_ellipsetobsplinecurve_create_1(arg0, arg1, arg2, (int)arg3, out nint result), "occtsharp_owned_convert_ellipsetobsplinecurve_create_1");
+    var managedResult = ConvertEllipseToBSplineCurve.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@Degree#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_ellipsetobsplinecurve_degree_2")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_ellipsetobsplinecurve_degree_2(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::Degree. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int Degree() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_ellipsetobsplinecurve_degree_2(NativeHandle, out int result), "occtsharp_owned_convert_ellipsetobsplinecurve_degree_2");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@IsPeriodic#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_ellipsetobsplinecurve_isperiodic_3")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_ellipsetobsplinecurve_isperiodic_3(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::IsPeriodic. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsPeriodic() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_ellipsetobsplinecurve_isperiodic_3(NativeHandle, out int result), "occtsharp_owned_convert_ellipsetobsplinecurve_isperiodic_3");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@Knot#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_ellipsetobsplinecurve_knot_4")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_ellipsetobsplinecurve_knot_4(OwnedHandle receiver, int arg0, out double result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::Knot. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Knot(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_ellipsetobsplinecurve_knot_4(NativeHandle, arg0, out double result), "occtsharp_owned_convert_ellipsetobsplinecurve_knot_4");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@Multiplicity#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_ellipsetobsplinecurve_multiplicity_5")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_ellipsetobsplinecurve_multiplicity_5(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::Multiplicity. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int Multiplicity(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_ellipsetobsplinecurve_multiplicity_5(NativeHandle, arg0, out int result), "occtsharp_owned_convert_ellipsetobsplinecurve_multiplicity_5");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@NbKnots#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_ellipsetobsplinecurve_nbknots_6")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_ellipsetobsplinecurve_nbknots_6(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::NbKnots. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbKnots() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_ellipsetobsplinecurve_nbknots_6(NativeHandle, out int result), "occtsharp_owned_convert_ellipsetobsplinecurve_nbknots_6");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@NbPoles#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_ellipsetobsplinecurve_nbpoles_7")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_ellipsetobsplinecurve_nbpoles_7(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::NbPoles. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbPoles() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_ellipsetobsplinecurve_nbpoles_7(NativeHandle, out int result), "occtsharp_owned_convert_ellipsetobsplinecurve_nbpoles_7");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@Pole#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_ellipsetobsplinecurve_pole_8")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_ellipsetobsplinecurve_pole_8(OwnedHandle receiver, int arg0, out global::OcctSharp.Values.Point2d result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::Pole. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Point2d Pole(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_ellipsetobsplinecurve_pole_8(NativeHandle, arg0, out global::OcctSharp.Values.Point2d result), "occtsharp_owned_convert_ellipsetobsplinecurve_pole_8");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@Weight#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_ellipsetobsplinecurve_weight_9")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_ellipsetobsplinecurve_weight_9(OwnedHandle receiver, int arg0, out double result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::Weight. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Weight(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_ellipsetobsplinecurve_weight_9(NativeHandle, arg0, out double result), "occtsharp_owned_convert_ellipsetobsplinecurve_weight_9");
+    var managedResult = result;
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address Convert_HyperbolaToBSplineCurve. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class ConvertHyperbolaToBSplineCurve : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private ConvertHyperbolaToBSplineCurve(OwnedHandle handle) => _handle = handle;
+  static ConvertHyperbolaToBSplineCurve() => NativeLibraryResolver.EnsureRegistered(typeof(ConvertHyperbolaToBSplineCurve).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static ConvertHyperbolaToBSplineCurve FromNative(nint value) {
+    try { return new ConvertHyperbolaToBSplineCurve(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_hyperbolatobsplinecurve_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@Convert_HyperbolaToBSplineCurve@F@Convert_HyperbolaToBSplineCurve#&1$@S@gp_Hypr2d#d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_hyperbolatobsplinecurve_create_0")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_hyperbolatobsplinecurve_create_0(global::OcctSharp.Values.Hyperbola2d arg0, double arg1, double arg2, out nint result);
+  /// <summary>Invokes Convert_HyperbolaToBSplineCurve::Convert_HyperbolaToBSplineCurve. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ConvertHyperbolaToBSplineCurve Create(global::OcctSharp.Values.Hyperbola2d arg0, double arg1, double arg2) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_hyperbolatobsplinecurve_create_0(arg0, arg1, arg2, out nint result), "occtsharp_owned_convert_hyperbolatobsplinecurve_create_0");
+    var managedResult = ConvertHyperbolaToBSplineCurve.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@Degree#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_hyperbolatobsplinecurve_degree_1")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_hyperbolatobsplinecurve_degree_1(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::Degree. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int Degree() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_hyperbolatobsplinecurve_degree_1(NativeHandle, out int result), "occtsharp_owned_convert_hyperbolatobsplinecurve_degree_1");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@IsPeriodic#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_hyperbolatobsplinecurve_isperiodic_2")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_hyperbolatobsplinecurve_isperiodic_2(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::IsPeriodic. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsPeriodic() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_hyperbolatobsplinecurve_isperiodic_2(NativeHandle, out int result), "occtsharp_owned_convert_hyperbolatobsplinecurve_isperiodic_2");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@Knot#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_hyperbolatobsplinecurve_knot_3")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_hyperbolatobsplinecurve_knot_3(OwnedHandle receiver, int arg0, out double result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::Knot. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Knot(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_hyperbolatobsplinecurve_knot_3(NativeHandle, arg0, out double result), "occtsharp_owned_convert_hyperbolatobsplinecurve_knot_3");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@Multiplicity#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_hyperbolatobsplinecurve_multiplicity_4")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_hyperbolatobsplinecurve_multiplicity_4(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::Multiplicity. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int Multiplicity(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_hyperbolatobsplinecurve_multiplicity_4(NativeHandle, arg0, out int result), "occtsharp_owned_convert_hyperbolatobsplinecurve_multiplicity_4");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@NbKnots#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_hyperbolatobsplinecurve_nbknots_5")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_hyperbolatobsplinecurve_nbknots_5(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::NbKnots. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbKnots() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_hyperbolatobsplinecurve_nbknots_5(NativeHandle, out int result), "occtsharp_owned_convert_hyperbolatobsplinecurve_nbknots_5");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@NbPoles#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_hyperbolatobsplinecurve_nbpoles_6")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_hyperbolatobsplinecurve_nbpoles_6(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::NbPoles. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbPoles() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_hyperbolatobsplinecurve_nbpoles_6(NativeHandle, out int result), "occtsharp_owned_convert_hyperbolatobsplinecurve_nbpoles_6");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@Pole#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_hyperbolatobsplinecurve_pole_7")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_hyperbolatobsplinecurve_pole_7(OwnedHandle receiver, int arg0, out global::OcctSharp.Values.Point2d result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::Pole. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Point2d Pole(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_hyperbolatobsplinecurve_pole_7(NativeHandle, arg0, out global::OcctSharp.Values.Point2d result), "occtsharp_owned_convert_hyperbolatobsplinecurve_pole_7");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@Weight#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_hyperbolatobsplinecurve_weight_8")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_hyperbolatobsplinecurve_weight_8(OwnedHandle receiver, int arg0, out double result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::Weight. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Weight(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_hyperbolatobsplinecurve_weight_8(NativeHandle, arg0, out double result), "occtsharp_owned_convert_hyperbolatobsplinecurve_weight_8");
+    var managedResult = result;
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address Convert_ParabolaToBSplineCurve. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class ConvertParabolaToBSplineCurve : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private ConvertParabolaToBSplineCurve(OwnedHandle handle) => _handle = handle;
+  static ConvertParabolaToBSplineCurve() => NativeLibraryResolver.EnsureRegistered(typeof(ConvertParabolaToBSplineCurve).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static ConvertParabolaToBSplineCurve FromNative(nint value) {
+    try { return new ConvertParabolaToBSplineCurve(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_parabolatobsplinecurve_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@Convert_ParabolaToBSplineCurve@F@Convert_ParabolaToBSplineCurve#&1$@S@gp_Parab2d#d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_parabolatobsplinecurve_create_0")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_parabolatobsplinecurve_create_0(global::OcctSharp.Values.Parabola2d arg0, double arg1, double arg2, out nint result);
+  /// <summary>Invokes Convert_ParabolaToBSplineCurve::Convert_ParabolaToBSplineCurve. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ConvertParabolaToBSplineCurve Create(global::OcctSharp.Values.Parabola2d arg0, double arg1, double arg2) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_parabolatobsplinecurve_create_0(arg0, arg1, arg2, out nint result), "occtsharp_owned_convert_parabolatobsplinecurve_create_0");
+    var managedResult = ConvertParabolaToBSplineCurve.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@Degree#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_parabolatobsplinecurve_degree_1")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_parabolatobsplinecurve_degree_1(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::Degree. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int Degree() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_parabolatobsplinecurve_degree_1(NativeHandle, out int result), "occtsharp_owned_convert_parabolatobsplinecurve_degree_1");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@IsPeriodic#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_parabolatobsplinecurve_isperiodic_2")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_parabolatobsplinecurve_isperiodic_2(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::IsPeriodic. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsPeriodic() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_parabolatobsplinecurve_isperiodic_2(NativeHandle, out int result), "occtsharp_owned_convert_parabolatobsplinecurve_isperiodic_2");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@Knot#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_parabolatobsplinecurve_knot_3")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_parabolatobsplinecurve_knot_3(OwnedHandle receiver, int arg0, out double result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::Knot. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Knot(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_parabolatobsplinecurve_knot_3(NativeHandle, arg0, out double result), "occtsharp_owned_convert_parabolatobsplinecurve_knot_3");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@Multiplicity#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_parabolatobsplinecurve_multiplicity_4")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_parabolatobsplinecurve_multiplicity_4(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::Multiplicity. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int Multiplicity(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_parabolatobsplinecurve_multiplicity_4(NativeHandle, arg0, out int result), "occtsharp_owned_convert_parabolatobsplinecurve_multiplicity_4");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@NbKnots#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_parabolatobsplinecurve_nbknots_5")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_parabolatobsplinecurve_nbknots_5(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::NbKnots. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbKnots() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_parabolatobsplinecurve_nbknots_5(NativeHandle, out int result), "occtsharp_owned_convert_parabolatobsplinecurve_nbknots_5");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@NbPoles#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_parabolatobsplinecurve_nbpoles_6")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_parabolatobsplinecurve_nbpoles_6(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::NbPoles. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbPoles() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_parabolatobsplinecurve_nbpoles_6(NativeHandle, out int result), "occtsharp_owned_convert_parabolatobsplinecurve_nbpoles_6");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@Pole#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_parabolatobsplinecurve_pole_7")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_parabolatobsplinecurve_pole_7(OwnedHandle receiver, int arg0, out global::OcctSharp.Values.Point2d result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::Pole. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Point2d Pole(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_parabolatobsplinecurve_pole_7(NativeHandle, arg0, out global::OcctSharp.Values.Point2d result), "occtsharp_owned_convert_parabolatobsplinecurve_pole_7");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ConicToBSplineCurve@F@Weight#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_parabolatobsplinecurve_weight_8")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_parabolatobsplinecurve_weight_8(OwnedHandle receiver, int arg0, out double result);
+  /// <summary>Invokes Convert_ConicToBSplineCurve::Weight. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Weight(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_parabolatobsplinecurve_weight_8(NativeHandle, arg0, out double result), "occtsharp_owned_convert_parabolatobsplinecurve_weight_8");
+    var managedResult = result;
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address Convert_SphereToBSplineSurface. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class ConvertSphereToBSplineSurface : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private ConvertSphereToBSplineSurface(OwnedHandle handle) => _handle = handle;
+  static ConvertSphereToBSplineSurface() => NativeLibraryResolver.EnsureRegistered(typeof(ConvertSphereToBSplineSurface).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static ConvertSphereToBSplineSurface FromNative(nint value) {
+    try { return new ConvertSphereToBSplineSurface(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_spheretobsplinesurface_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@Convert_SphereToBSplineSurface@F@Convert_SphereToBSplineSurface#&1$@S@gp_Sphere#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_spheretobsplinesurface_create_0")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_spheretobsplinesurface_create_0(global::OcctSharp.Values.Sphere arg0, out nint result);
+  /// <summary>Invokes Convert_SphereToBSplineSurface::Convert_SphereToBSplineSurface. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ConvertSphereToBSplineSurface Create(global::OcctSharp.Values.Sphere arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_spheretobsplinesurface_create_0(arg0, out nint result), "occtsharp_owned_convert_spheretobsplinesurface_create_0");
+    var managedResult = ConvertSphereToBSplineSurface.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Convert_SphereToBSplineSurface@F@Convert_SphereToBSplineSurface#&1$@S@gp_Sphere#d#d#b#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_spheretobsplinesurface_create_1")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_spheretobsplinesurface_create_1(global::OcctSharp.Values.Sphere arg0, double arg1, double arg2, int arg3, out nint result);
+  /// <summary>Invokes Convert_SphereToBSplineSurface::Convert_SphereToBSplineSurface. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ConvertSphereToBSplineSurface Create(global::OcctSharp.Values.Sphere arg0, double arg1, double arg2, bool arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_spheretobsplinesurface_create_1(arg0, arg1, arg2, (arg3 ? 1 : 0), out nint result), "occtsharp_owned_convert_spheretobsplinesurface_create_1");
+    var managedResult = ConvertSphereToBSplineSurface.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Convert_SphereToBSplineSurface@F@Convert_SphereToBSplineSurface#&1$@S@gp_Sphere#d#d#d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_spheretobsplinesurface_create_2")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_spheretobsplinesurface_create_2(global::OcctSharp.Values.Sphere arg0, double arg1, double arg2, double arg3, double arg4, out nint result);
+  /// <summary>Invokes Convert_SphereToBSplineSurface::Convert_SphereToBSplineSurface. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ConvertSphereToBSplineSurface Create(global::OcctSharp.Values.Sphere arg0, double arg1, double arg2, double arg3, double arg4) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_spheretobsplinesurface_create_2(arg0, arg1, arg2, arg3, arg4, out nint result), "occtsharp_owned_convert_spheretobsplinesurface_create_2");
+    var managedResult = ConvertSphereToBSplineSurface.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@IsUPeriodic#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_spheretobsplinesurface_isuperiodic_3")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_spheretobsplinesurface_isuperiodic_3(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::IsUPeriodic. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsUPeriodic() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_spheretobsplinesurface_isuperiodic_3(NativeHandle, out int result), "occtsharp_owned_convert_spheretobsplinesurface_isuperiodic_3");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@IsVPeriodic#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_spheretobsplinesurface_isvperiodic_4")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_spheretobsplinesurface_isvperiodic_4(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::IsVPeriodic. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsVPeriodic() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_spheretobsplinesurface_isvperiodic_4(NativeHandle, out int result), "occtsharp_owned_convert_spheretobsplinesurface_isvperiodic_4");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@NbUKnots#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_spheretobsplinesurface_nbuknots_5")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_spheretobsplinesurface_nbuknots_5(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::NbUKnots. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbUKnots() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_spheretobsplinesurface_nbuknots_5(NativeHandle, out int result), "occtsharp_owned_convert_spheretobsplinesurface_nbuknots_5");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@NbUPoles#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_spheretobsplinesurface_nbupoles_6")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_spheretobsplinesurface_nbupoles_6(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::NbUPoles. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbUPoles() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_spheretobsplinesurface_nbupoles_6(NativeHandle, out int result), "occtsharp_owned_convert_spheretobsplinesurface_nbupoles_6");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@NbVKnots#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_spheretobsplinesurface_nbvknots_7")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_spheretobsplinesurface_nbvknots_7(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::NbVKnots. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbVKnots() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_spheretobsplinesurface_nbvknots_7(NativeHandle, out int result), "occtsharp_owned_convert_spheretobsplinesurface_nbvknots_7");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@NbVPoles#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_spheretobsplinesurface_nbvpoles_8")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_spheretobsplinesurface_nbvpoles_8(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::NbVPoles. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbVPoles() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_spheretobsplinesurface_nbvpoles_8(NativeHandle, out int result), "occtsharp_owned_convert_spheretobsplinesurface_nbvpoles_8");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@Pole#I#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_spheretobsplinesurface_pole_9")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_spheretobsplinesurface_pole_9(OwnedHandle receiver, int arg0, int arg1, out Point3dRaw result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::Pole. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Point3d Pole(int arg0, int arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_spheretobsplinesurface_pole_9(NativeHandle, arg0, arg1, out Point3dRaw result), "occtsharp_owned_convert_spheretobsplinesurface_pole_9");
+    var managedResult = new Point3d(result.X, result.Y, result.Z);
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@UDegree#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_spheretobsplinesurface_udegree_10")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_spheretobsplinesurface_udegree_10(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::UDegree. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int UDegree() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_spheretobsplinesurface_udegree_10(NativeHandle, out int result), "occtsharp_owned_convert_spheretobsplinesurface_udegree_10");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@UKnot#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_spheretobsplinesurface_uknot_11")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_spheretobsplinesurface_uknot_11(OwnedHandle receiver, int arg0, out double result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::UKnot. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double UKnot(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_spheretobsplinesurface_uknot_11(NativeHandle, arg0, out double result), "occtsharp_owned_convert_spheretobsplinesurface_uknot_11");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@UMultiplicity#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_spheretobsplinesurface_umultiplicity_12")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_spheretobsplinesurface_umultiplicity_12(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::UMultiplicity. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int UMultiplicity(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_spheretobsplinesurface_umultiplicity_12(NativeHandle, arg0, out int result), "occtsharp_owned_convert_spheretobsplinesurface_umultiplicity_12");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@VDegree#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_spheretobsplinesurface_vdegree_13")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_spheretobsplinesurface_vdegree_13(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::VDegree. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int VDegree() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_spheretobsplinesurface_vdegree_13(NativeHandle, out int result), "occtsharp_owned_convert_spheretobsplinesurface_vdegree_13");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@VKnot#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_spheretobsplinesurface_vknot_14")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_spheretobsplinesurface_vknot_14(OwnedHandle receiver, int arg0, out double result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::VKnot. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double VKnot(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_spheretobsplinesurface_vknot_14(NativeHandle, arg0, out double result), "occtsharp_owned_convert_spheretobsplinesurface_vknot_14");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@VMultiplicity#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_spheretobsplinesurface_vmultiplicity_15")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_spheretobsplinesurface_vmultiplicity_15(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::VMultiplicity. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int VMultiplicity(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_spheretobsplinesurface_vmultiplicity_15(NativeHandle, arg0, out int result), "occtsharp_owned_convert_spheretobsplinesurface_vmultiplicity_15");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@Weight#I#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_spheretobsplinesurface_weight_16")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_spheretobsplinesurface_weight_16(OwnedHandle receiver, int arg0, int arg1, out double result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::Weight. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Weight(int arg0, int arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_spheretobsplinesurface_weight_16(NativeHandle, arg0, arg1, out double result), "occtsharp_owned_convert_spheretobsplinesurface_weight_16");
+    var managedResult = result;
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address Convert_TorusToBSplineSurface. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class ConvertTorusToBSplineSurface : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private ConvertTorusToBSplineSurface(OwnedHandle handle) => _handle = handle;
+  static ConvertTorusToBSplineSurface() => NativeLibraryResolver.EnsureRegistered(typeof(ConvertTorusToBSplineSurface).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static ConvertTorusToBSplineSurface FromNative(nint value) {
+    try { return new ConvertTorusToBSplineSurface(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_torustobsplinesurface_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@Convert_TorusToBSplineSurface@F@Convert_TorusToBSplineSurface#&1$@S@gp_Torus#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_torustobsplinesurface_create_0")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_torustobsplinesurface_create_0(global::OcctSharp.Values.Torus arg0, out nint result);
+  /// <summary>Invokes Convert_TorusToBSplineSurface::Convert_TorusToBSplineSurface. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ConvertTorusToBSplineSurface Create(global::OcctSharp.Values.Torus arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_torustobsplinesurface_create_0(arg0, out nint result), "occtsharp_owned_convert_torustobsplinesurface_create_0");
+    var managedResult = ConvertTorusToBSplineSurface.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Convert_TorusToBSplineSurface@F@Convert_TorusToBSplineSurface#&1$@S@gp_Torus#d#d#b#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_torustobsplinesurface_create_1")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_torustobsplinesurface_create_1(global::OcctSharp.Values.Torus arg0, double arg1, double arg2, int arg3, out nint result);
+  /// <summary>Invokes Convert_TorusToBSplineSurface::Convert_TorusToBSplineSurface. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ConvertTorusToBSplineSurface Create(global::OcctSharp.Values.Torus arg0, double arg1, double arg2, bool arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_torustobsplinesurface_create_1(arg0, arg1, arg2, (arg3 ? 1 : 0), out nint result), "occtsharp_owned_convert_torustobsplinesurface_create_1");
+    var managedResult = ConvertTorusToBSplineSurface.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Convert_TorusToBSplineSurface@F@Convert_TorusToBSplineSurface#&1$@S@gp_Torus#d#d#d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_torustobsplinesurface_create_2")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_torustobsplinesurface_create_2(global::OcctSharp.Values.Torus arg0, double arg1, double arg2, double arg3, double arg4, out nint result);
+  /// <summary>Invokes Convert_TorusToBSplineSurface::Convert_TorusToBSplineSurface. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ConvertTorusToBSplineSurface Create(global::OcctSharp.Values.Torus arg0, double arg1, double arg2, double arg3, double arg4) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_torustobsplinesurface_create_2(arg0, arg1, arg2, arg3, arg4, out nint result), "occtsharp_owned_convert_torustobsplinesurface_create_2");
+    var managedResult = ConvertTorusToBSplineSurface.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@IsUPeriodic#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_torustobsplinesurface_isuperiodic_3")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_torustobsplinesurface_isuperiodic_3(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::IsUPeriodic. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsUPeriodic() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_torustobsplinesurface_isuperiodic_3(NativeHandle, out int result), "occtsharp_owned_convert_torustobsplinesurface_isuperiodic_3");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@IsVPeriodic#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_torustobsplinesurface_isvperiodic_4")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_torustobsplinesurface_isvperiodic_4(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::IsVPeriodic. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsVPeriodic() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_torustobsplinesurface_isvperiodic_4(NativeHandle, out int result), "occtsharp_owned_convert_torustobsplinesurface_isvperiodic_4");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@NbUKnots#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_torustobsplinesurface_nbuknots_5")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_torustobsplinesurface_nbuknots_5(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::NbUKnots. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbUKnots() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_torustobsplinesurface_nbuknots_5(NativeHandle, out int result), "occtsharp_owned_convert_torustobsplinesurface_nbuknots_5");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@NbUPoles#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_torustobsplinesurface_nbupoles_6")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_torustobsplinesurface_nbupoles_6(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::NbUPoles. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbUPoles() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_torustobsplinesurface_nbupoles_6(NativeHandle, out int result), "occtsharp_owned_convert_torustobsplinesurface_nbupoles_6");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@NbVKnots#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_torustobsplinesurface_nbvknots_7")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_torustobsplinesurface_nbvknots_7(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::NbVKnots. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbVKnots() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_torustobsplinesurface_nbvknots_7(NativeHandle, out int result), "occtsharp_owned_convert_torustobsplinesurface_nbvknots_7");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@NbVPoles#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_torustobsplinesurface_nbvpoles_8")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_torustobsplinesurface_nbvpoles_8(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::NbVPoles. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbVPoles() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_torustobsplinesurface_nbvpoles_8(NativeHandle, out int result), "occtsharp_owned_convert_torustobsplinesurface_nbvpoles_8");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@Pole#I#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_torustobsplinesurface_pole_9")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_torustobsplinesurface_pole_9(OwnedHandle receiver, int arg0, int arg1, out Point3dRaw result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::Pole. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Point3d Pole(int arg0, int arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_torustobsplinesurface_pole_9(NativeHandle, arg0, arg1, out Point3dRaw result), "occtsharp_owned_convert_torustobsplinesurface_pole_9");
+    var managedResult = new Point3d(result.X, result.Y, result.Z);
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@UDegree#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_torustobsplinesurface_udegree_10")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_torustobsplinesurface_udegree_10(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::UDegree. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int UDegree() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_torustobsplinesurface_udegree_10(NativeHandle, out int result), "occtsharp_owned_convert_torustobsplinesurface_udegree_10");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@UKnot#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_torustobsplinesurface_uknot_11")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_torustobsplinesurface_uknot_11(OwnedHandle receiver, int arg0, out double result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::UKnot. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double UKnot(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_torustobsplinesurface_uknot_11(NativeHandle, arg0, out double result), "occtsharp_owned_convert_torustobsplinesurface_uknot_11");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@UMultiplicity#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_torustobsplinesurface_umultiplicity_12")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_torustobsplinesurface_umultiplicity_12(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::UMultiplicity. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int UMultiplicity(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_torustobsplinesurface_umultiplicity_12(NativeHandle, arg0, out int result), "occtsharp_owned_convert_torustobsplinesurface_umultiplicity_12");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@VDegree#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_torustobsplinesurface_vdegree_13")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_torustobsplinesurface_vdegree_13(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::VDegree. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int VDegree() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_torustobsplinesurface_vdegree_13(NativeHandle, out int result), "occtsharp_owned_convert_torustobsplinesurface_vdegree_13");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@VKnot#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_torustobsplinesurface_vknot_14")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_torustobsplinesurface_vknot_14(OwnedHandle receiver, int arg0, out double result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::VKnot. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double VKnot(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_torustobsplinesurface_vknot_14(NativeHandle, arg0, out double result), "occtsharp_owned_convert_torustobsplinesurface_vknot_14");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@VMultiplicity#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_torustobsplinesurface_vmultiplicity_15")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_torustobsplinesurface_vmultiplicity_15(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::VMultiplicity. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int VMultiplicity(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_torustobsplinesurface_vmultiplicity_15(NativeHandle, arg0, out int result), "occtsharp_owned_convert_torustobsplinesurface_vmultiplicity_15");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Convert_ElementarySurfaceToBSplineSurface@F@Weight#I#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_convert_torustobsplinesurface_weight_16")]
+  private static partial NativeStatus Native_occtsharp_owned_convert_torustobsplinesurface_weight_16(OwnedHandle receiver, int arg0, int arg1, out double result);
+  /// <summary>Invokes Convert_ElementarySurfaceToBSplineSurface::Weight. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Weight(int arg0, int arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_convert_torustobsplinesurface_weight_16(NativeHandle, arg0, arg1, out double result), "occtsharp_owned_convert_torustobsplinesurface_weight_16");
+    var managedResult = result;
+    return managedResult;
+  }
+}
 /// <summary>Owns a stable-address Extrema_ExtElC. Synchronize mutation with other calls; dispose to release native storage.</summary>
 public sealed partial class ExtremaExtElC : IDisposable {
   internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
@@ -2901,6 +4305,486 @@ public sealed partial class ExtremaPOnSurfParams : IDisposable {
   /// <summary>Invokes Extrema_POnSurfParams::SetSqrDistance. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
   public void SetSqrDistance(double arg0) {
     NativeError.ThrowIfFailed(Native_occtsharp_owned_extrema_ponsurfparams_setsqrdistance_7(NativeHandle, arg0), "occtsharp_owned_extrema_ponsurfparams_setsqrdistance_7");
+  }
+}
+/// <summary>Owns a stable-address FairCurve_Batten. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class FairCurveBatten : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private FairCurveBatten(OwnedHandle handle) => _handle = handle;
+  static FairCurveBatten() => NativeLibraryResolver.EnsureRegistered(typeof(FairCurveBatten).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static FairCurveBatten FromNative(nint value) {
+    try { return new FairCurveBatten(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_batten_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@FairCurve_Batten@F@Compute#&$@E@FairCurve_AnalysisCode#I#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_batten_compute_0")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_batten_compute_0(OwnedHandle receiver, int arg0, out int updatedArg0, int arg1, double arg2, out int result);
+  /// <summary>Invokes FairCurve_Batten::Compute. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool Compute(ref FairCurveAnalysisCode arg0, int arg1, double arg2) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_batten_compute_0(NativeHandle, (int)arg0, out int updatedArg0, arg1, arg2, out int result), "occtsharp_owned_faircurve_batten_compute_0");
+    var managedResult = result != 0;
+    arg0 = (FairCurveAnalysisCode)updatedArg0;
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_Batten@F@Curve#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_batten_curve_1")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_batten_curve_1(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes FairCurve_Batten::Curve. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Geom2dBSplineCurve? Curve() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_batten_curve_1(NativeHandle, out nint result), "occtsharp_owned_faircurve_batten_curve_1");
+    var managedResult = Geom2dBSplineCurve.FromNative(result, "occtsharp_owned_faircurve_batten_curve_1");
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_Batten@F@FairCurve_Batten#&1$@S@gp_Pnt2d#S0_#d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_batten_create_2")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_batten_create_2(global::OcctSharp.Values.Point2d arg0, global::OcctSharp.Values.Point2d arg1, double arg2, double arg3, out nint result);
+  /// <summary>Invokes FairCurve_Batten::FairCurve_Batten. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static FairCurveBatten Create(global::OcctSharp.Values.Point2d arg0, global::OcctSharp.Values.Point2d arg1, double arg2, double arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_batten_create_2(arg0, arg1, arg2, arg3, out nint result), "occtsharp_owned_faircurve_batten_create_2");
+    var managedResult = FairCurveBatten.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_Batten@F@GetAngle1#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_batten_getangle1_3")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_batten_getangle1_3(OwnedHandle receiver, out double result);
+  /// <summary>Invokes FairCurve_Batten::GetAngle1. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double GetAngle1() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_batten_getangle1_3(NativeHandle, out double result), "occtsharp_owned_faircurve_batten_getangle1_3");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_Batten@F@GetAngle2#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_batten_getangle2_4")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_batten_getangle2_4(OwnedHandle receiver, out double result);
+  /// <summary>Invokes FairCurve_Batten::GetAngle2. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double GetAngle2() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_batten_getangle2_4(NativeHandle, out double result), "occtsharp_owned_faircurve_batten_getangle2_4");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_Batten@F@GetConstraintOrder1#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_batten_getconstraintorder1_5")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_batten_getconstraintorder1_5(OwnedHandle receiver, out int result);
+  /// <summary>Invokes FairCurve_Batten::GetConstraintOrder1. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int GetConstraintOrder1() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_batten_getconstraintorder1_5(NativeHandle, out int result), "occtsharp_owned_faircurve_batten_getconstraintorder1_5");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_Batten@F@GetConstraintOrder2#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_batten_getconstraintorder2_6")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_batten_getconstraintorder2_6(OwnedHandle receiver, out int result);
+  /// <summary>Invokes FairCurve_Batten::GetConstraintOrder2. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int GetConstraintOrder2() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_batten_getconstraintorder2_6(NativeHandle, out int result), "occtsharp_owned_faircurve_batten_getconstraintorder2_6");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_Batten@F@GetFreeSliding#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_batten_getfreesliding_7")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_batten_getfreesliding_7(OwnedHandle receiver, out int result);
+  /// <summary>Invokes FairCurve_Batten::GetFreeSliding. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool GetFreeSliding() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_batten_getfreesliding_7(NativeHandle, out int result), "occtsharp_owned_faircurve_batten_getfreesliding_7");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_Batten@F@GetHeight#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_batten_getheight_8")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_batten_getheight_8(OwnedHandle receiver, out double result);
+  /// <summary>Invokes FairCurve_Batten::GetHeight. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double GetHeight() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_batten_getheight_8(NativeHandle, out double result), "occtsharp_owned_faircurve_batten_getheight_8");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_Batten@F@GetP1#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_batten_getp1_9")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_batten_getp1_9(OwnedHandle receiver, out global::OcctSharp.Values.Point2d result);
+  /// <summary>Invokes FairCurve_Batten::GetP1. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Point2d GetP1() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_batten_getp1_9(NativeHandle, out global::OcctSharp.Values.Point2d result), "occtsharp_owned_faircurve_batten_getp1_9");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_Batten@F@GetP2#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_batten_getp2_10")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_batten_getp2_10(OwnedHandle receiver, out global::OcctSharp.Values.Point2d result);
+  /// <summary>Invokes FairCurve_Batten::GetP2. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Point2d GetP2() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_batten_getp2_10(NativeHandle, out global::OcctSharp.Values.Point2d result), "occtsharp_owned_faircurve_batten_getp2_10");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_Batten@F@GetSlidingFactor#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_batten_getslidingfactor_11")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_batten_getslidingfactor_11(OwnedHandle receiver, out double result);
+  /// <summary>Invokes FairCurve_Batten::GetSlidingFactor. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double GetSlidingFactor() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_batten_getslidingfactor_11(NativeHandle, out double result), "occtsharp_owned_faircurve_batten_getslidingfactor_11");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_Batten@F@GetSlope#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_batten_getslope_12")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_batten_getslope_12(OwnedHandle receiver, out double result);
+  /// <summary>Invokes FairCurve_Batten::GetSlope. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double GetSlope() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_batten_getslope_12(NativeHandle, out double result), "occtsharp_owned_faircurve_batten_getslope_12");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_Batten@F@SetAngle1#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_batten_setangle1_13")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_batten_setangle1_13(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes FairCurve_Batten::SetAngle1. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetAngle1(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_batten_setangle1_13(NativeHandle, arg0), "occtsharp_owned_faircurve_batten_setangle1_13");
+  }
+  // Source: c:@S@FairCurve_Batten@F@SetAngle2#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_batten_setangle2_14")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_batten_setangle2_14(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes FairCurve_Batten::SetAngle2. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetAngle2(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_batten_setangle2_14(NativeHandle, arg0), "occtsharp_owned_faircurve_batten_setangle2_14");
+  }
+  // Source: c:@S@FairCurve_Batten@F@SetConstraintOrder1#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_batten_setconstraintorder1_15")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_batten_setconstraintorder1_15(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes FairCurve_Batten::SetConstraintOrder1. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetConstraintOrder1(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_batten_setconstraintorder1_15(NativeHandle, arg0), "occtsharp_owned_faircurve_batten_setconstraintorder1_15");
+  }
+  // Source: c:@S@FairCurve_Batten@F@SetConstraintOrder2#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_batten_setconstraintorder2_16")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_batten_setconstraintorder2_16(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes FairCurve_Batten::SetConstraintOrder2. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetConstraintOrder2(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_batten_setconstraintorder2_16(NativeHandle, arg0), "occtsharp_owned_faircurve_batten_setconstraintorder2_16");
+  }
+  // Source: c:@S@FairCurve_Batten@F@SetFreeSliding#b#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_batten_setfreesliding_17")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_batten_setfreesliding_17(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes FairCurve_Batten::SetFreeSliding. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetFreeSliding(bool arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_batten_setfreesliding_17(NativeHandle, (arg0 ? 1 : 0)), "occtsharp_owned_faircurve_batten_setfreesliding_17");
+  }
+  // Source: c:@S@FairCurve_Batten@F@SetHeight#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_batten_setheight_18")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_batten_setheight_18(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes FairCurve_Batten::SetHeight. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetHeight(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_batten_setheight_18(NativeHandle, arg0), "occtsharp_owned_faircurve_batten_setheight_18");
+  }
+  // Source: c:@S@FairCurve_Batten@F@SetP1#&1$@S@gp_Pnt2d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_batten_setp1_19")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_batten_setp1_19(OwnedHandle receiver, global::OcctSharp.Values.Point2d arg0);
+  /// <summary>Invokes FairCurve_Batten::SetP1. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetP1(global::OcctSharp.Values.Point2d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_batten_setp1_19(NativeHandle, arg0), "occtsharp_owned_faircurve_batten_setp1_19");
+  }
+  // Source: c:@S@FairCurve_Batten@F@SetP2#&1$@S@gp_Pnt2d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_batten_setp2_20")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_batten_setp2_20(OwnedHandle receiver, global::OcctSharp.Values.Point2d arg0);
+  /// <summary>Invokes FairCurve_Batten::SetP2. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetP2(global::OcctSharp.Values.Point2d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_batten_setp2_20(NativeHandle, arg0), "occtsharp_owned_faircurve_batten_setp2_20");
+  }
+  // Source: c:@S@FairCurve_Batten@F@SetSlidingFactor#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_batten_setslidingfactor_21")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_batten_setslidingfactor_21(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes FairCurve_Batten::SetSlidingFactor. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetSlidingFactor(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_batten_setslidingfactor_21(NativeHandle, arg0), "occtsharp_owned_faircurve_batten_setslidingfactor_21");
+  }
+  // Source: c:@S@FairCurve_Batten@F@SetSlope#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_batten_setslope_22")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_batten_setslope_22(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes FairCurve_Batten::SetSlope. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetSlope(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_batten_setslope_22(NativeHandle, arg0), "occtsharp_owned_faircurve_batten_setslope_22");
+  }
+  // Source: c:@S@FairCurve_Batten@F@SlidingOfReference#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_batten_slidingofreference_23")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_batten_slidingofreference_23(OwnedHandle receiver, out double result);
+  /// <summary>Invokes FairCurve_Batten::SlidingOfReference. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double SlidingOfReference() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_batten_slidingofreference_23(NativeHandle, out double result), "occtsharp_owned_faircurve_batten_slidingofreference_23");
+    var managedResult = result;
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address FairCurve_MinimalVariation. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class FairCurveMinimalVariation : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private FairCurveMinimalVariation(OwnedHandle handle) => _handle = handle;
+  static FairCurveMinimalVariation() => NativeLibraryResolver.EnsureRegistered(typeof(FairCurveMinimalVariation).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static FairCurveMinimalVariation FromNative(nint value) {
+    try { return new FairCurveMinimalVariation(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@FairCurve_MinimalVariation@F@Compute#&$@E@FairCurve_AnalysisCode#I#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_compute_0")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_compute_0(OwnedHandle receiver, int arg0, out int updatedArg0, int arg1, double arg2, out int result);
+  /// <summary>Invokes FairCurve_MinimalVariation::Compute. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool Compute(ref FairCurveAnalysisCode arg0, int arg1, double arg2) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_compute_0(NativeHandle, (int)arg0, out int updatedArg0, arg1, arg2, out int result), "occtsharp_owned_faircurve_minimalvariation_compute_0");
+    var managedResult = result != 0;
+    arg0 = (FairCurveAnalysisCode)updatedArg0;
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_MinimalVariation@F@FairCurve_MinimalVariation#&1$@S@gp_Pnt2d#S0_#d#d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_create_1")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_create_1(global::OcctSharp.Values.Point2d arg0, global::OcctSharp.Values.Point2d arg1, double arg2, double arg3, double arg4, out nint result);
+  /// <summary>Invokes FairCurve_MinimalVariation::FairCurve_MinimalVariation. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static FairCurveMinimalVariation Create(global::OcctSharp.Values.Point2d arg0, global::OcctSharp.Values.Point2d arg1, double arg2, double arg3, double arg4) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_create_1(arg0, arg1, arg2, arg3, arg4, out nint result), "occtsharp_owned_faircurve_minimalvariation_create_1");
+    var managedResult = FairCurveMinimalVariation.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_MinimalVariation@F@GetCurvature1#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_getcurvature1_2")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_getcurvature1_2(OwnedHandle receiver, out double result);
+  /// <summary>Invokes FairCurve_MinimalVariation::GetCurvature1. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double GetCurvature1() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_getcurvature1_2(NativeHandle, out double result), "occtsharp_owned_faircurve_minimalvariation_getcurvature1_2");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_MinimalVariation@F@GetCurvature2#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_getcurvature2_3")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_getcurvature2_3(OwnedHandle receiver, out double result);
+  /// <summary>Invokes FairCurve_MinimalVariation::GetCurvature2. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double GetCurvature2() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_getcurvature2_3(NativeHandle, out double result), "occtsharp_owned_faircurve_minimalvariation_getcurvature2_3");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_MinimalVariation@F@GetPhysicalRatio#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_getphysicalratio_4")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_getphysicalratio_4(OwnedHandle receiver, out double result);
+  /// <summary>Invokes FairCurve_MinimalVariation::GetPhysicalRatio. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double GetPhysicalRatio() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_getphysicalratio_4(NativeHandle, out double result), "occtsharp_owned_faircurve_minimalvariation_getphysicalratio_4");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_MinimalVariation@F@SetCurvature1#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_setcurvature1_5")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_setcurvature1_5(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes FairCurve_MinimalVariation::SetCurvature1. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetCurvature1(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_setcurvature1_5(NativeHandle, arg0), "occtsharp_owned_faircurve_minimalvariation_setcurvature1_5");
+  }
+  // Source: c:@S@FairCurve_MinimalVariation@F@SetCurvature2#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_setcurvature2_6")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_setcurvature2_6(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes FairCurve_MinimalVariation::SetCurvature2. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetCurvature2(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_setcurvature2_6(NativeHandle, arg0), "occtsharp_owned_faircurve_minimalvariation_setcurvature2_6");
+  }
+  // Source: c:@S@FairCurve_MinimalVariation@F@SetPhysicalRatio#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_setphysicalratio_7")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_setphysicalratio_7(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes FairCurve_MinimalVariation::SetPhysicalRatio. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetPhysicalRatio(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_setphysicalratio_7(NativeHandle, arg0), "occtsharp_owned_faircurve_minimalvariation_setphysicalratio_7");
+  }
+  // Source: c:@S@FairCurve_Batten@F@Curve#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_curve_8")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_curve_8(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes FairCurve_Batten::Curve. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Geom2dBSplineCurve? Curve() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_curve_8(NativeHandle, out nint result), "occtsharp_owned_faircurve_minimalvariation_curve_8");
+    var managedResult = Geom2dBSplineCurve.FromNative(result, "occtsharp_owned_faircurve_minimalvariation_curve_8");
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_Batten@F@GetAngle1#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_getangle1_9")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_getangle1_9(OwnedHandle receiver, out double result);
+  /// <summary>Invokes FairCurve_Batten::GetAngle1. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double GetAngle1() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_getangle1_9(NativeHandle, out double result), "occtsharp_owned_faircurve_minimalvariation_getangle1_9");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_Batten@F@GetAngle2#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_getangle2_10")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_getangle2_10(OwnedHandle receiver, out double result);
+  /// <summary>Invokes FairCurve_Batten::GetAngle2. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double GetAngle2() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_getangle2_10(NativeHandle, out double result), "occtsharp_owned_faircurve_minimalvariation_getangle2_10");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_Batten@F@GetConstraintOrder1#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_getconstraintorder1_11")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_getconstraintorder1_11(OwnedHandle receiver, out int result);
+  /// <summary>Invokes FairCurve_Batten::GetConstraintOrder1. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int GetConstraintOrder1() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_getconstraintorder1_11(NativeHandle, out int result), "occtsharp_owned_faircurve_minimalvariation_getconstraintorder1_11");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_Batten@F@GetConstraintOrder2#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_getconstraintorder2_12")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_getconstraintorder2_12(OwnedHandle receiver, out int result);
+  /// <summary>Invokes FairCurve_Batten::GetConstraintOrder2. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int GetConstraintOrder2() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_getconstraintorder2_12(NativeHandle, out int result), "occtsharp_owned_faircurve_minimalvariation_getconstraintorder2_12");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_Batten@F@GetFreeSliding#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_getfreesliding_13")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_getfreesliding_13(OwnedHandle receiver, out int result);
+  /// <summary>Invokes FairCurve_Batten::GetFreeSliding. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool GetFreeSliding() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_getfreesliding_13(NativeHandle, out int result), "occtsharp_owned_faircurve_minimalvariation_getfreesliding_13");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_Batten@F@GetHeight#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_getheight_14")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_getheight_14(OwnedHandle receiver, out double result);
+  /// <summary>Invokes FairCurve_Batten::GetHeight. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double GetHeight() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_getheight_14(NativeHandle, out double result), "occtsharp_owned_faircurve_minimalvariation_getheight_14");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_Batten@F@GetP1#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_getp1_15")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_getp1_15(OwnedHandle receiver, out global::OcctSharp.Values.Point2d result);
+  /// <summary>Invokes FairCurve_Batten::GetP1. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Point2d GetP1() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_getp1_15(NativeHandle, out global::OcctSharp.Values.Point2d result), "occtsharp_owned_faircurve_minimalvariation_getp1_15");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_Batten@F@GetP2#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_getp2_16")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_getp2_16(OwnedHandle receiver, out global::OcctSharp.Values.Point2d result);
+  /// <summary>Invokes FairCurve_Batten::GetP2. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Point2d GetP2() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_getp2_16(NativeHandle, out global::OcctSharp.Values.Point2d result), "occtsharp_owned_faircurve_minimalvariation_getp2_16");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_Batten@F@GetSlidingFactor#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_getslidingfactor_17")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_getslidingfactor_17(OwnedHandle receiver, out double result);
+  /// <summary>Invokes FairCurve_Batten::GetSlidingFactor. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double GetSlidingFactor() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_getslidingfactor_17(NativeHandle, out double result), "occtsharp_owned_faircurve_minimalvariation_getslidingfactor_17");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_Batten@F@GetSlope#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_getslope_18")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_getslope_18(OwnedHandle receiver, out double result);
+  /// <summary>Invokes FairCurve_Batten::GetSlope. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double GetSlope() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_getslope_18(NativeHandle, out double result), "occtsharp_owned_faircurve_minimalvariation_getslope_18");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@FairCurve_Batten@F@SetAngle1#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_setangle1_19")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_setangle1_19(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes FairCurve_Batten::SetAngle1. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetAngle1(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_setangle1_19(NativeHandle, arg0), "occtsharp_owned_faircurve_minimalvariation_setangle1_19");
+  }
+  // Source: c:@S@FairCurve_Batten@F@SetAngle2#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_setangle2_20")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_setangle2_20(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes FairCurve_Batten::SetAngle2. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetAngle2(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_setangle2_20(NativeHandle, arg0), "occtsharp_owned_faircurve_minimalvariation_setangle2_20");
+  }
+  // Source: c:@S@FairCurve_Batten@F@SetConstraintOrder1#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_setconstraintorder1_21")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_setconstraintorder1_21(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes FairCurve_Batten::SetConstraintOrder1. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetConstraintOrder1(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_setconstraintorder1_21(NativeHandle, arg0), "occtsharp_owned_faircurve_minimalvariation_setconstraintorder1_21");
+  }
+  // Source: c:@S@FairCurve_Batten@F@SetConstraintOrder2#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_setconstraintorder2_22")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_setconstraintorder2_22(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes FairCurve_Batten::SetConstraintOrder2. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetConstraintOrder2(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_setconstraintorder2_22(NativeHandle, arg0), "occtsharp_owned_faircurve_minimalvariation_setconstraintorder2_22");
+  }
+  // Source: c:@S@FairCurve_Batten@F@SetFreeSliding#b#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_setfreesliding_23")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_setfreesliding_23(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes FairCurve_Batten::SetFreeSliding. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetFreeSliding(bool arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_setfreesliding_23(NativeHandle, (arg0 ? 1 : 0)), "occtsharp_owned_faircurve_minimalvariation_setfreesliding_23");
+  }
+  // Source: c:@S@FairCurve_Batten@F@SetHeight#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_setheight_24")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_setheight_24(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes FairCurve_Batten::SetHeight. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetHeight(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_setheight_24(NativeHandle, arg0), "occtsharp_owned_faircurve_minimalvariation_setheight_24");
+  }
+  // Source: c:@S@FairCurve_Batten@F@SetP1#&1$@S@gp_Pnt2d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_setp1_25")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_setp1_25(OwnedHandle receiver, global::OcctSharp.Values.Point2d arg0);
+  /// <summary>Invokes FairCurve_Batten::SetP1. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetP1(global::OcctSharp.Values.Point2d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_setp1_25(NativeHandle, arg0), "occtsharp_owned_faircurve_minimalvariation_setp1_25");
+  }
+  // Source: c:@S@FairCurve_Batten@F@SetP2#&1$@S@gp_Pnt2d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_setp2_26")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_setp2_26(OwnedHandle receiver, global::OcctSharp.Values.Point2d arg0);
+  /// <summary>Invokes FairCurve_Batten::SetP2. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetP2(global::OcctSharp.Values.Point2d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_setp2_26(NativeHandle, arg0), "occtsharp_owned_faircurve_minimalvariation_setp2_26");
+  }
+  // Source: c:@S@FairCurve_Batten@F@SetSlidingFactor#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_setslidingfactor_27")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_setslidingfactor_27(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes FairCurve_Batten::SetSlidingFactor. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetSlidingFactor(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_setslidingfactor_27(NativeHandle, arg0), "occtsharp_owned_faircurve_minimalvariation_setslidingfactor_27");
+  }
+  // Source: c:@S@FairCurve_Batten@F@SetSlope#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_setslope_28")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_setslope_28(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes FairCurve_Batten::SetSlope. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetSlope(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_setslope_28(NativeHandle, arg0), "occtsharp_owned_faircurve_minimalvariation_setslope_28");
+  }
+  // Source: c:@S@FairCurve_Batten@F@SlidingOfReference#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_faircurve_minimalvariation_slidingofreference_29")]
+  private static partial NativeStatus Native_occtsharp_owned_faircurve_minimalvariation_slidingofreference_29(OwnedHandle receiver, out double result);
+  /// <summary>Invokes FairCurve_Batten::SlidingOfReference. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double SlidingOfReference() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_faircurve_minimalvariation_slidingofreference_29(NativeHandle, out double result), "occtsharp_owned_faircurve_minimalvariation_slidingofreference_29");
+    var managedResult = result;
+    return managedResult;
   }
 }
 /// <summary>Owns a stable-address GC_MakeArcOfCircle. Synchronize mutation with other calls; dispose to release native storage.</summary>
@@ -8378,6 +10262,420 @@ public sealed partial class Geom2dAPIProjectPointOnCurve : IDisposable {
     return managedResult;
   }
 }
+/// <summary>Owns a stable-address Geom2dConvert_ApproxCurve. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class Geom2dConvertApproxCurve : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private Geom2dConvertApproxCurve(OwnedHandle handle) => _handle = handle;
+  static Geom2dConvertApproxCurve() => NativeLibraryResolver.EnsureRegistered(typeof(Geom2dConvertApproxCurve).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static Geom2dConvertApproxCurve FromNative(nint value) {
+    try { return new Geom2dConvertApproxCurve(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dconvert_approxcurve_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@Geom2dConvert_ApproxCurve@F@Geom2dConvert_ApproxCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#d#$@E@GeomAbs_Shape#I#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dconvert_approxcurve_create_0")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dconvert_approxcurve_create_0(Adaptor2dCurve2dHandle arg0, double arg1, int arg2, int arg3, int arg4, out nint result);
+  /// <summary>Invokes Geom2dConvert_ApproxCurve::Geom2dConvert_ApproxCurve. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static Geom2dConvertApproxCurve Create(Adaptor2dCurve2d arg0, double arg1, GeomAbsShape arg2, int arg3, int arg4) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dconvert_approxcurve_create_0(arg0.NativeHandle, arg1, (int)arg2, arg3, arg4, out nint result), "occtsharp_owned_geom2dconvert_approxcurve_create_0");
+    var managedResult = Geom2dConvertApproxCurve.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Geom2dConvert_ApproxCurve@F@Curve#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dconvert_approxcurve_curve_1")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dconvert_approxcurve_curve_1(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes Geom2dConvert_ApproxCurve::Curve. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Geom2dBSplineCurve? Curve() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dconvert_approxcurve_curve_1(NativeHandle, out nint result), "occtsharp_owned_geom2dconvert_approxcurve_curve_1");
+    var managedResult = Geom2dBSplineCurve.FromNative(result, "occtsharp_owned_geom2dconvert_approxcurve_curve_1");
+    return managedResult;
+  }
+  // Source: c:@S@Geom2dConvert_ApproxCurve@F@HasResult#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dconvert_approxcurve_hasresult_2")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dconvert_approxcurve_hasresult_2(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Geom2dConvert_ApproxCurve::HasResult. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool HasResult() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dconvert_approxcurve_hasresult_2(NativeHandle, out int result), "occtsharp_owned_geom2dconvert_approxcurve_hasresult_2");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Geom2dConvert_ApproxCurve@F@IsDone#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dconvert_approxcurve_isdone_3")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dconvert_approxcurve_isdone_3(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Geom2dConvert_ApproxCurve::IsDone. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsDone() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dconvert_approxcurve_isdone_3(NativeHandle, out int result), "occtsharp_owned_geom2dconvert_approxcurve_isdone_3");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Geom2dConvert_ApproxCurve@F@MaxError#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dconvert_approxcurve_maxerror_4")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dconvert_approxcurve_maxerror_4(OwnedHandle receiver, out double result);
+  /// <summary>Invokes Geom2dConvert_ApproxCurve::MaxError. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double MaxError() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dconvert_approxcurve_maxerror_4(NativeHandle, out double result), "occtsharp_owned_geom2dconvert_approxcurve_maxerror_4");
+    var managedResult = result;
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address Geom2dConvert_BSplineCurveKnotSplitting. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class Geom2dConvertBSplineCurveKnotSplitting : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private Geom2dConvertBSplineCurveKnotSplitting(OwnedHandle handle) => _handle = handle;
+  static Geom2dConvertBSplineCurveKnotSplitting() => NativeLibraryResolver.EnsureRegistered(typeof(Geom2dConvertBSplineCurveKnotSplitting).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static Geom2dConvertBSplineCurveKnotSplitting FromNative(nint value) {
+    try { return new Geom2dConvertBSplineCurveKnotSplitting(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dconvert_bsplinecurveknotsplitting_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@Geom2dConvert_BSplineCurveKnotSplitting@F@Geom2dConvert_BSplineCurveKnotSplitting#&1$@N@opencascade@S@handle>#$@S@Geom2d_BSplineCurve#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dconvert_bsplinecurveknotsplitting_create_0")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dconvert_bsplinecurveknotsplitting_create_0(Geom2dBSplineCurveHandle arg0, int arg1, out nint result);
+  /// <summary>Invokes Geom2dConvert_BSplineCurveKnotSplitting::Geom2dConvert_BSplineCurveKnotSplitting. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static Geom2dConvertBSplineCurveKnotSplitting Create(Geom2dBSplineCurve arg0, int arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dconvert_bsplinecurveknotsplitting_create_0(arg0.NativeHandle, arg1, out nint result), "occtsharp_owned_geom2dconvert_bsplinecurveknotsplitting_create_0");
+    var managedResult = Geom2dConvertBSplineCurveKnotSplitting.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Geom2dConvert_BSplineCurveKnotSplitting@F@NbSplits#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dconvert_bsplinecurveknotsplitting_nbsplits_1")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dconvert_bsplinecurveknotsplitting_nbsplits_1(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Geom2dConvert_BSplineCurveKnotSplitting::NbSplits. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbSplits() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dconvert_bsplinecurveknotsplitting_nbsplits_1(NativeHandle, out int result), "occtsharp_owned_geom2dconvert_bsplinecurveknotsplitting_nbsplits_1");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Geom2dConvert_BSplineCurveKnotSplitting@F@SplitValue#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dconvert_bsplinecurveknotsplitting_splitvalue_2")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dconvert_bsplinecurveknotsplitting_splitvalue_2(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes Geom2dConvert_BSplineCurveKnotSplitting::SplitValue. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int SplitValue(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dconvert_bsplinecurveknotsplitting_splitvalue_2(NativeHandle, arg0, out int result), "occtsharp_owned_geom2dconvert_bsplinecurveknotsplitting_splitvalue_2");
+    var managedResult = result;
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address Geom2dConvert_BSplineCurveToBezierCurve. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class Geom2dConvertBSplineCurveToBezierCurve : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private Geom2dConvertBSplineCurveToBezierCurve(OwnedHandle handle) => _handle = handle;
+  static Geom2dConvertBSplineCurveToBezierCurve() => NativeLibraryResolver.EnsureRegistered(typeof(Geom2dConvertBSplineCurveToBezierCurve).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static Geom2dConvertBSplineCurveToBezierCurve FromNative(nint value) {
+    try { return new Geom2dConvertBSplineCurveToBezierCurve(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dconvert_bsplinecurvetobeziercurve_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@Geom2dConvert_BSplineCurveToBezierCurve@F@Arc#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dconvert_bsplinecurvetobeziercurve_arc_0")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dconvert_bsplinecurvetobeziercurve_arc_0(OwnedHandle receiver, int arg0, out nint result);
+  /// <summary>Invokes Geom2dConvert_BSplineCurveToBezierCurve::Arc. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Geom2dBezierCurve? Arc(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dconvert_bsplinecurvetobeziercurve_arc_0(NativeHandle, arg0, out nint result), "occtsharp_owned_geom2dconvert_bsplinecurvetobeziercurve_arc_0");
+    var managedResult = Geom2dBezierCurve.FromNative(result, "occtsharp_owned_geom2dconvert_bsplinecurvetobeziercurve_arc_0");
+    return managedResult;
+  }
+  // Source: c:@S@Geom2dConvert_BSplineCurveToBezierCurve@F@Geom2dConvert_BSplineCurveToBezierCurve#&1$@N@opencascade@S@handle>#$@S@Geom2d_BSplineCurve#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dconvert_bsplinecurvetobeziercurve_create_1")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dconvert_bsplinecurvetobeziercurve_create_1(Geom2dBSplineCurveHandle arg0, out nint result);
+  /// <summary>Invokes Geom2dConvert_BSplineCurveToBezierCurve::Geom2dConvert_BSplineCurveToBezierCurve. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static Geom2dConvertBSplineCurveToBezierCurve Create(Geom2dBSplineCurve arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dconvert_bsplinecurvetobeziercurve_create_1(arg0.NativeHandle, out nint result), "occtsharp_owned_geom2dconvert_bsplinecurvetobeziercurve_create_1");
+    var managedResult = Geom2dConvertBSplineCurveToBezierCurve.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Geom2dConvert_BSplineCurveToBezierCurve@F@Geom2dConvert_BSplineCurveToBezierCurve#&1$@N@opencascade@S@handle>#$@S@Geom2d_BSplineCurve#d#d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dconvert_bsplinecurvetobeziercurve_create_2")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dconvert_bsplinecurvetobeziercurve_create_2(Geom2dBSplineCurveHandle arg0, double arg1, double arg2, double arg3, out nint result);
+  /// <summary>Invokes Geom2dConvert_BSplineCurveToBezierCurve::Geom2dConvert_BSplineCurveToBezierCurve. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static Geom2dConvertBSplineCurveToBezierCurve Create(Geom2dBSplineCurve arg0, double arg1, double arg2, double arg3) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dconvert_bsplinecurvetobeziercurve_create_2(arg0.NativeHandle, arg1, arg2, arg3, out nint result), "occtsharp_owned_geom2dconvert_bsplinecurvetobeziercurve_create_2");
+    var managedResult = Geom2dConvertBSplineCurveToBezierCurve.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Geom2dConvert_BSplineCurveToBezierCurve@F@NbArcs#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dconvert_bsplinecurvetobeziercurve_nbarcs_3")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dconvert_bsplinecurvetobeziercurve_nbarcs_3(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Geom2dConvert_BSplineCurveToBezierCurve::NbArcs. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbArcs() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dconvert_bsplinecurvetobeziercurve_nbarcs_3(NativeHandle, out int result), "occtsharp_owned_geom2dconvert_bsplinecurvetobeziercurve_nbarcs_3");
+    var managedResult = result;
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address Geom2dGcc_Circ2d2TanRad. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class Geom2dGccCirc2d2TanRad : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private Geom2dGccCirc2d2TanRad(OwnedHandle handle) => _handle = handle;
+  static Geom2dGccCirc2d2TanRad() => NativeLibraryResolver.EnsureRegistered(typeof(Geom2dGccCirc2d2TanRad).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static Geom2dGccCirc2d2TanRad FromNative(nint value) {
+    try { return new Geom2dGccCirc2d2TanRad(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dgcc_circ2d2tanrad_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@Geom2dGcc_Circ2d2TanRad@F@Geom2dGcc_Circ2d2TanRad#&1$@N@opencascade@S@handle>#$@S@Geom2d_Point#S0_#d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dgcc_circ2d2tanrad_create_0")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dgcc_circ2d2tanrad_create_0(Geom2dPointHandle arg0, Geom2dPointHandle arg1, double arg2, double arg3, out nint result);
+  /// <summary>Invokes Geom2dGcc_Circ2d2TanRad::Geom2dGcc_Circ2d2TanRad. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static Geom2dGccCirc2d2TanRad Create(Geom2dPoint arg0, Geom2dPoint arg1, double arg2, double arg3) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dgcc_circ2d2tanrad_create_0(arg0.NativeHandle, arg1.NativeHandle, arg2, arg3, out nint result), "occtsharp_owned_geom2dgcc_circ2d2tanrad_create_0");
+    var managedResult = Geom2dGccCirc2d2TanRad.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Geom2dGcc_Circ2d2TanRad@F@IsDone#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dgcc_circ2d2tanrad_isdone_1")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dgcc_circ2d2tanrad_isdone_1(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Geom2dGcc_Circ2d2TanRad::IsDone. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsDone() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dgcc_circ2d2tanrad_isdone_1(NativeHandle, out int result), "occtsharp_owned_geom2dgcc_circ2d2tanrad_isdone_1");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Geom2dGcc_Circ2d2TanRad@F@IsTheSame1#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dgcc_circ2d2tanrad_isthesame1_2")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dgcc_circ2d2tanrad_isthesame1_2(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes Geom2dGcc_Circ2d2TanRad::IsTheSame1. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsTheSame1(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dgcc_circ2d2tanrad_isthesame1_2(NativeHandle, arg0, out int result), "occtsharp_owned_geom2dgcc_circ2d2tanrad_isthesame1_2");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Geom2dGcc_Circ2d2TanRad@F@IsTheSame2#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dgcc_circ2d2tanrad_isthesame2_3")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dgcc_circ2d2tanrad_isthesame2_3(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes Geom2dGcc_Circ2d2TanRad::IsTheSame2. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsTheSame2(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dgcc_circ2d2tanrad_isthesame2_3(NativeHandle, arg0, out int result), "occtsharp_owned_geom2dgcc_circ2d2tanrad_isthesame2_3");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Geom2dGcc_Circ2d2TanRad@F@NbSolutions#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dgcc_circ2d2tanrad_nbsolutions_4")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dgcc_circ2d2tanrad_nbsolutions_4(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Geom2dGcc_Circ2d2TanRad::NbSolutions. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbSolutions() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dgcc_circ2d2tanrad_nbsolutions_4(NativeHandle, out int result), "occtsharp_owned_geom2dgcc_circ2d2tanrad_nbsolutions_4");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Geom2dGcc_Circ2d2TanRad@F@Results#&1$@S@GccAna_Circ2d2TanRad#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dgcc_circ2d2tanrad_results_5")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dgcc_circ2d2tanrad_results_5(OwnedHandle receiver, GccAnaCirc2d2TanRad.OwnedHandle arg0);
+  /// <summary>Invokes Geom2dGcc_Circ2d2TanRad::Results. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Results(GccAnaCirc2d2TanRad arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dgcc_circ2d2tanrad_results_5(NativeHandle, arg0.NativeHandle), "occtsharp_owned_geom2dgcc_circ2d2tanrad_results_5");
+  }
+  // Source: c:@S@Geom2dGcc_Circ2d2TanRad@F@Tangency1#I#&d#S0_#&$@S@gp_Pnt2d#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dgcc_circ2d2tanrad_tangency1_6")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dgcc_circ2d2tanrad_tangency1_6(OwnedHandle receiver, int arg0, double arg1, out double updatedArg1, double arg2, out double updatedArg2, global::OcctSharp.Values.Point2d arg3, out global::OcctSharp.Values.Point2d updatedArg3);
+  /// <summary>Invokes Geom2dGcc_Circ2d2TanRad::Tangency1. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Tangency1(int arg0, ref double arg1, ref double arg2, ref global::OcctSharp.Values.Point2d arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dgcc_circ2d2tanrad_tangency1_6(NativeHandle, arg0, arg1, out double updatedArg1, arg2, out double updatedArg2, arg3, out global::OcctSharp.Values.Point2d updatedArg3), "occtsharp_owned_geom2dgcc_circ2d2tanrad_tangency1_6");
+    arg1 = updatedArg1;
+    arg2 = updatedArg2;
+    arg3 = updatedArg3;
+  }
+  // Source: c:@S@Geom2dGcc_Circ2d2TanRad@F@Tangency2#I#&d#S0_#&$@S@gp_Pnt2d#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dgcc_circ2d2tanrad_tangency2_7")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dgcc_circ2d2tanrad_tangency2_7(OwnedHandle receiver, int arg0, double arg1, out double updatedArg1, double arg2, out double updatedArg2, global::OcctSharp.Values.Point2d arg3, out global::OcctSharp.Values.Point2d updatedArg3);
+  /// <summary>Invokes Geom2dGcc_Circ2d2TanRad::Tangency2. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Tangency2(int arg0, ref double arg1, ref double arg2, ref global::OcctSharp.Values.Point2d arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dgcc_circ2d2tanrad_tangency2_7(NativeHandle, arg0, arg1, out double updatedArg1, arg2, out double updatedArg2, arg3, out global::OcctSharp.Values.Point2d updatedArg3), "occtsharp_owned_geom2dgcc_circ2d2tanrad_tangency2_7");
+    arg1 = updatedArg1;
+    arg2 = updatedArg2;
+    arg3 = updatedArg3;
+  }
+  // Source: c:@S@Geom2dGcc_Circ2d2TanRad@F@ThisSolution#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dgcc_circ2d2tanrad_thissolution_8")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dgcc_circ2d2tanrad_thissolution_8(OwnedHandle receiver, int arg0, out global::OcctSharp.Values.Circle2d result);
+  /// <summary>Invokes Geom2dGcc_Circ2d2TanRad::ThisSolution. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Circle2d ThisSolution(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dgcc_circ2d2tanrad_thissolution_8(NativeHandle, arg0, out global::OcctSharp.Values.Circle2d result), "occtsharp_owned_geom2dgcc_circ2d2tanrad_thissolution_8");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Geom2dGcc_Circ2d2TanRad@F@WhichQualifier#I#&$@E@GccEnt_Position#S0_#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dgcc_circ2d2tanrad_whichqualifier_9")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dgcc_circ2d2tanrad_whichqualifier_9(OwnedHandle receiver, int arg0, int arg1, out int updatedArg1, int arg2, out int updatedArg2);
+  /// <summary>Invokes Geom2dGcc_Circ2d2TanRad::WhichQualifier. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void WhichQualifier(int arg0, ref GccEntPosition arg1, ref GccEntPosition arg2) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dgcc_circ2d2tanrad_whichqualifier_9(NativeHandle, arg0, (int)arg1, out int updatedArg1, (int)arg2, out int updatedArg2), "occtsharp_owned_geom2dgcc_circ2d2tanrad_whichqualifier_9");
+    arg1 = (GccEntPosition)updatedArg1;
+    arg2 = (GccEntPosition)updatedArg2;
+  }
+}
+/// <summary>Owns a stable-address Geom2dGcc_Circ2d3Tan. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class Geom2dGccCirc2d3Tan : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private Geom2dGccCirc2d3Tan(OwnedHandle handle) => _handle = handle;
+  static Geom2dGccCirc2d3Tan() => NativeLibraryResolver.EnsureRegistered(typeof(Geom2dGccCirc2d3Tan).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static Geom2dGccCirc2d3Tan FromNative(nint value) {
+    try { return new Geom2dGccCirc2d3Tan(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dgcc_circ2d3tan_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@Geom2dGcc_Circ2d3Tan@F@Geom2dGcc_Circ2d3Tan#&1$@N@opencascade@S@handle>#$@S@Geom2d_Point#S0_#S0_#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dgcc_circ2d3tan_create_0")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dgcc_circ2d3tan_create_0(Geom2dPointHandle arg0, Geom2dPointHandle arg1, Geom2dPointHandle arg2, double arg3, out nint result);
+  /// <summary>Invokes Geom2dGcc_Circ2d3Tan::Geom2dGcc_Circ2d3Tan. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static Geom2dGccCirc2d3Tan Create(Geom2dPoint arg0, Geom2dPoint arg1, Geom2dPoint arg2, double arg3) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    ArgumentNullException.ThrowIfNull(arg2);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dgcc_circ2d3tan_create_0(arg0.NativeHandle, arg1.NativeHandle, arg2.NativeHandle, arg3, out nint result), "occtsharp_owned_geom2dgcc_circ2d3tan_create_0");
+    var managedResult = Geom2dGccCirc2d3Tan.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Geom2dGcc_Circ2d3Tan@F@IsDone#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dgcc_circ2d3tan_isdone_1")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dgcc_circ2d3tan_isdone_1(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Geom2dGcc_Circ2d3Tan::IsDone. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsDone() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dgcc_circ2d3tan_isdone_1(NativeHandle, out int result), "occtsharp_owned_geom2dgcc_circ2d3tan_isdone_1");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Geom2dGcc_Circ2d3Tan@F@IsTheSame1#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dgcc_circ2d3tan_isthesame1_2")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dgcc_circ2d3tan_isthesame1_2(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes Geom2dGcc_Circ2d3Tan::IsTheSame1. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsTheSame1(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dgcc_circ2d3tan_isthesame1_2(NativeHandle, arg0, out int result), "occtsharp_owned_geom2dgcc_circ2d3tan_isthesame1_2");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Geom2dGcc_Circ2d3Tan@F@IsTheSame2#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dgcc_circ2d3tan_isthesame2_3")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dgcc_circ2d3tan_isthesame2_3(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes Geom2dGcc_Circ2d3Tan::IsTheSame2. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsTheSame2(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dgcc_circ2d3tan_isthesame2_3(NativeHandle, arg0, out int result), "occtsharp_owned_geom2dgcc_circ2d3tan_isthesame2_3");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Geom2dGcc_Circ2d3Tan@F@IsTheSame3#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dgcc_circ2d3tan_isthesame3_4")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dgcc_circ2d3tan_isthesame3_4(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes Geom2dGcc_Circ2d3Tan::IsTheSame3. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsTheSame3(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dgcc_circ2d3tan_isthesame3_4(NativeHandle, arg0, out int result), "occtsharp_owned_geom2dgcc_circ2d3tan_isthesame3_4");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Geom2dGcc_Circ2d3Tan@F@NbSolutions#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dgcc_circ2d3tan_nbsolutions_5")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dgcc_circ2d3tan_nbsolutions_5(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Geom2dGcc_Circ2d3Tan::NbSolutions. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbSolutions() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dgcc_circ2d3tan_nbsolutions_5(NativeHandle, out int result), "occtsharp_owned_geom2dgcc_circ2d3tan_nbsolutions_5");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Geom2dGcc_Circ2d3Tan@F@Results#&1$@S@GccAna_Circ2d3Tan#I#I#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dgcc_circ2d3tan_results_6")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dgcc_circ2d3tan_results_6(OwnedHandle receiver, GccAnaCirc2d3Tan.OwnedHandle arg0, int arg1, int arg2, int arg3);
+  /// <summary>Invokes Geom2dGcc_Circ2d3Tan::Results. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Results(GccAnaCirc2d3Tan arg0, int arg1, int arg2, int arg3) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dgcc_circ2d3tan_results_6(NativeHandle, arg0.NativeHandle, arg1, arg2, arg3), "occtsharp_owned_geom2dgcc_circ2d3tan_results_6");
+  }
+  // Source: c:@S@Geom2dGcc_Circ2d3Tan@F@Tangency1#I#&d#S0_#&$@S@gp_Pnt2d#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dgcc_circ2d3tan_tangency1_7")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dgcc_circ2d3tan_tangency1_7(OwnedHandle receiver, int arg0, double arg1, out double updatedArg1, double arg2, out double updatedArg2, global::OcctSharp.Values.Point2d arg3, out global::OcctSharp.Values.Point2d updatedArg3);
+  /// <summary>Invokes Geom2dGcc_Circ2d3Tan::Tangency1. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Tangency1(int arg0, ref double arg1, ref double arg2, ref global::OcctSharp.Values.Point2d arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dgcc_circ2d3tan_tangency1_7(NativeHandle, arg0, arg1, out double updatedArg1, arg2, out double updatedArg2, arg3, out global::OcctSharp.Values.Point2d updatedArg3), "occtsharp_owned_geom2dgcc_circ2d3tan_tangency1_7");
+    arg1 = updatedArg1;
+    arg2 = updatedArg2;
+    arg3 = updatedArg3;
+  }
+  // Source: c:@S@Geom2dGcc_Circ2d3Tan@F@Tangency2#I#&d#S0_#&$@S@gp_Pnt2d#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dgcc_circ2d3tan_tangency2_8")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dgcc_circ2d3tan_tangency2_8(OwnedHandle receiver, int arg0, double arg1, out double updatedArg1, double arg2, out double updatedArg2, global::OcctSharp.Values.Point2d arg3, out global::OcctSharp.Values.Point2d updatedArg3);
+  /// <summary>Invokes Geom2dGcc_Circ2d3Tan::Tangency2. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Tangency2(int arg0, ref double arg1, ref double arg2, ref global::OcctSharp.Values.Point2d arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dgcc_circ2d3tan_tangency2_8(NativeHandle, arg0, arg1, out double updatedArg1, arg2, out double updatedArg2, arg3, out global::OcctSharp.Values.Point2d updatedArg3), "occtsharp_owned_geom2dgcc_circ2d3tan_tangency2_8");
+    arg1 = updatedArg1;
+    arg2 = updatedArg2;
+    arg3 = updatedArg3;
+  }
+  // Source: c:@S@Geom2dGcc_Circ2d3Tan@F@Tangency3#I#&d#S0_#&$@S@gp_Pnt2d#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dgcc_circ2d3tan_tangency3_9")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dgcc_circ2d3tan_tangency3_9(OwnedHandle receiver, int arg0, double arg1, out double updatedArg1, double arg2, out double updatedArg2, global::OcctSharp.Values.Point2d arg3, out global::OcctSharp.Values.Point2d updatedArg3);
+  /// <summary>Invokes Geom2dGcc_Circ2d3Tan::Tangency3. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Tangency3(int arg0, ref double arg1, ref double arg2, ref global::OcctSharp.Values.Point2d arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dgcc_circ2d3tan_tangency3_9(NativeHandle, arg0, arg1, out double updatedArg1, arg2, out double updatedArg2, arg3, out global::OcctSharp.Values.Point2d updatedArg3), "occtsharp_owned_geom2dgcc_circ2d3tan_tangency3_9");
+    arg1 = updatedArg1;
+    arg2 = updatedArg2;
+    arg3 = updatedArg3;
+  }
+  // Source: c:@S@Geom2dGcc_Circ2d3Tan@F@ThisSolution#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dgcc_circ2d3tan_thissolution_10")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dgcc_circ2d3tan_thissolution_10(OwnedHandle receiver, int arg0, out global::OcctSharp.Values.Circle2d result);
+  /// <summary>Invokes Geom2dGcc_Circ2d3Tan::ThisSolution. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Circle2d ThisSolution(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dgcc_circ2d3tan_thissolution_10(NativeHandle, arg0, out global::OcctSharp.Values.Circle2d result), "occtsharp_owned_geom2dgcc_circ2d3tan_thissolution_10");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Geom2dGcc_Circ2d3Tan@F@WhichQualifier#I#&$@E@GccEnt_Position#S0_#S0_#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geom2dgcc_circ2d3tan_whichqualifier_11")]
+  private static partial NativeStatus Native_occtsharp_owned_geom2dgcc_circ2d3tan_whichqualifier_11(OwnedHandle receiver, int arg0, int arg1, out int updatedArg1, int arg2, out int updatedArg2, int arg3, out int updatedArg3);
+  /// <summary>Invokes Geom2dGcc_Circ2d3Tan::WhichQualifier. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void WhichQualifier(int arg0, ref GccEntPosition arg1, ref GccEntPosition arg2, ref GccEntPosition arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geom2dgcc_circ2d3tan_whichqualifier_11(NativeHandle, arg0, (int)arg1, out int updatedArg1, (int)arg2, out int updatedArg2, (int)arg3, out int updatedArg3), "occtsharp_owned_geom2dgcc_circ2d3tan_whichqualifier_11");
+    arg1 = (GccEntPosition)updatedArg1;
+    arg2 = (GccEntPosition)updatedArg2;
+    arg3 = (GccEntPosition)updatedArg3;
+  }
+}
 /// <summary>Owns a stable-address GeomAPI_ExtremaCurveCurve. Synchronize mutation with other calls; dispose to release native storage.</summary>
 public sealed partial class GeomAPIExtremaCurveCurve : IDisposable {
   internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
@@ -9321,6 +11619,1153 @@ public sealed partial class GeomAPIProjectPointOnSurf : IDisposable {
     arg2 = updatedArg2;
   }
 }
+/// <summary>Owns a stable-address GeomConvert_ApproxCurve. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class GeomConvertApproxCurve : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private GeomConvertApproxCurve(OwnedHandle handle) => _handle = handle;
+  static GeomConvertApproxCurve() => NativeLibraryResolver.EnsureRegistered(typeof(GeomConvertApproxCurve).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static GeomConvertApproxCurve FromNative(nint value) {
+    try { return new GeomConvertApproxCurve(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_approxcurve_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@GeomConvert_ApproxCurve@F@Curve#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_approxcurve_curve_0")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_approxcurve_curve_0(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes GeomConvert_ApproxCurve::Curve. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public GeomBSplineCurve? Curve() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_approxcurve_curve_0(NativeHandle, out nint result), "occtsharp_owned_geomconvert_approxcurve_curve_0");
+    var managedResult = GeomBSplineCurve.FromNative(result, "occtsharp_owned_geomconvert_approxcurve_curve_0");
+    return managedResult;
+  }
+  // Source: c:@S@GeomConvert_ApproxCurve@F@GeomConvert_ApproxCurve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#d#$@E@GeomAbs_Shape#I#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_approxcurve_create_1")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_approxcurve_create_1(Adaptor3dCurveHandle arg0, double arg1, int arg2, int arg3, int arg4, out nint result);
+  /// <summary>Invokes GeomConvert_ApproxCurve::GeomConvert_ApproxCurve. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomConvertApproxCurve Create(Adaptor3dCurve arg0, double arg1, GeomAbsShape arg2, int arg3, int arg4) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_approxcurve_create_1(arg0.NativeHandle, arg1, (int)arg2, arg3, arg4, out nint result), "occtsharp_owned_geomconvert_approxcurve_create_1");
+    var managedResult = GeomConvertApproxCurve.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomConvert_ApproxCurve@F@GeomConvert_ApproxCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#$@E@GeomAbs_Shape#I#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_approxcurve_create_2")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_approxcurve_create_2(GeomCurveHandle arg0, double arg1, int arg2, int arg3, int arg4, out nint result);
+  /// <summary>Invokes GeomConvert_ApproxCurve::GeomConvert_ApproxCurve. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomConvertApproxCurve Create(GeomCurve arg0, double arg1, GeomAbsShape arg2, int arg3, int arg4) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_approxcurve_create_2(arg0.NativeHandle, arg1, (int)arg2, arg3, arg4, out nint result), "occtsharp_owned_geomconvert_approxcurve_create_2");
+    var managedResult = GeomConvertApproxCurve.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomConvert_ApproxCurve@F@HasResult#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_approxcurve_hasresult_3")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_approxcurve_hasresult_3(OwnedHandle receiver, out int result);
+  /// <summary>Invokes GeomConvert_ApproxCurve::HasResult. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool HasResult() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_approxcurve_hasresult_3(NativeHandle, out int result), "occtsharp_owned_geomconvert_approxcurve_hasresult_3");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@GeomConvert_ApproxCurve@F@IsDone#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_approxcurve_isdone_4")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_approxcurve_isdone_4(OwnedHandle receiver, out int result);
+  /// <summary>Invokes GeomConvert_ApproxCurve::IsDone. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsDone() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_approxcurve_isdone_4(NativeHandle, out int result), "occtsharp_owned_geomconvert_approxcurve_isdone_4");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@GeomConvert_ApproxCurve@F@MaxError#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_approxcurve_maxerror_5")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_approxcurve_maxerror_5(OwnedHandle receiver, out double result);
+  /// <summary>Invokes GeomConvert_ApproxCurve::MaxError. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double MaxError() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_approxcurve_maxerror_5(NativeHandle, out double result), "occtsharp_owned_geomconvert_approxcurve_maxerror_5");
+    var managedResult = result;
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address GeomConvert_ApproxSurface. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class GeomConvertApproxSurface : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private GeomConvertApproxSurface(OwnedHandle handle) => _handle = handle;
+  static GeomConvertApproxSurface() => NativeLibraryResolver.EnsureRegistered(typeof(GeomConvertApproxSurface).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static GeomConvertApproxSurface FromNative(nint value) {
+    try { return new GeomConvertApproxSurface(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_approxsurface_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@GeomConvert_ApproxSurface@F@GeomConvert_ApproxSurface#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#d#$@E@GeomAbs_Shape#S3_#I#I#I#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_approxsurface_create_0")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_approxsurface_create_0(Adaptor3dSurfaceHandle arg0, double arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, out nint result);
+  /// <summary>Invokes GeomConvert_ApproxSurface::GeomConvert_ApproxSurface. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomConvertApproxSurface Create(Adaptor3dSurface arg0, double arg1, GeomAbsShape arg2, GeomAbsShape arg3, int arg4, int arg5, int arg6, int arg7) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_approxsurface_create_0(arg0.NativeHandle, arg1, (int)arg2, (int)arg3, arg4, arg5, arg6, arg7, out nint result), "occtsharp_owned_geomconvert_approxsurface_create_0");
+    var managedResult = GeomConvertApproxSurface.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomConvert_ApproxSurface@F@GeomConvert_ApproxSurface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#$@E@GeomAbs_Shape#S3_#I#I#I#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_approxsurface_create_1")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_approxsurface_create_1(GeomSurfaceHandle arg0, double arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, out nint result);
+  /// <summary>Invokes GeomConvert_ApproxSurface::GeomConvert_ApproxSurface. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomConvertApproxSurface Create(GeomSurface arg0, double arg1, GeomAbsShape arg2, GeomAbsShape arg3, int arg4, int arg5, int arg6, int arg7) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_approxsurface_create_1(arg0.NativeHandle, arg1, (int)arg2, (int)arg3, arg4, arg5, arg6, arg7, out nint result), "occtsharp_owned_geomconvert_approxsurface_create_1");
+    var managedResult = GeomConvertApproxSurface.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomConvert_ApproxSurface@F@HasResult#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_approxsurface_hasresult_2")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_approxsurface_hasresult_2(OwnedHandle receiver, out int result);
+  /// <summary>Invokes GeomConvert_ApproxSurface::HasResult. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool HasResult() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_approxsurface_hasresult_2(NativeHandle, out int result), "occtsharp_owned_geomconvert_approxsurface_hasresult_2");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@GeomConvert_ApproxSurface@F@IsDone#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_approxsurface_isdone_3")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_approxsurface_isdone_3(OwnedHandle receiver, out int result);
+  /// <summary>Invokes GeomConvert_ApproxSurface::IsDone. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsDone() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_approxsurface_isdone_3(NativeHandle, out int result), "occtsharp_owned_geomconvert_approxsurface_isdone_3");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@GeomConvert_ApproxSurface@F@MaxError#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_approxsurface_maxerror_4")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_approxsurface_maxerror_4(OwnedHandle receiver, out double result);
+  /// <summary>Invokes GeomConvert_ApproxSurface::MaxError. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double MaxError() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_approxsurface_maxerror_4(NativeHandle, out double result), "occtsharp_owned_geomconvert_approxsurface_maxerror_4");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@GeomConvert_ApproxSurface@F@Surface#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_approxsurface_surface_5")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_approxsurface_surface_5(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes GeomConvert_ApproxSurface::Surface. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public GeomBSplineSurface? Surface() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_approxsurface_surface_5(NativeHandle, out nint result), "occtsharp_owned_geomconvert_approxsurface_surface_5");
+    var managedResult = GeomBSplineSurface.FromNative(result, "occtsharp_owned_geomconvert_approxsurface_surface_5");
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address GeomConvert_BSplineCurveKnotSplitting. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class GeomConvertBSplineCurveKnotSplitting : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private GeomConvertBSplineCurveKnotSplitting(OwnedHandle handle) => _handle = handle;
+  static GeomConvertBSplineCurveKnotSplitting() => NativeLibraryResolver.EnsureRegistered(typeof(GeomConvertBSplineCurveKnotSplitting).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static GeomConvertBSplineCurveKnotSplitting FromNative(nint value) {
+    try { return new GeomConvertBSplineCurveKnotSplitting(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_bsplinecurveknotsplitting_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@GeomConvert_BSplineCurveKnotSplitting@F@GeomConvert_BSplineCurveKnotSplitting#&1$@N@opencascade@S@handle>#$@S@Geom_BSplineCurve#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_bsplinecurveknotsplitting_create_0")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_bsplinecurveknotsplitting_create_0(GeomBSplineCurveHandle arg0, int arg1, out nint result);
+  /// <summary>Invokes GeomConvert_BSplineCurveKnotSplitting::GeomConvert_BSplineCurveKnotSplitting. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomConvertBSplineCurveKnotSplitting Create(GeomBSplineCurve arg0, int arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_bsplinecurveknotsplitting_create_0(arg0.NativeHandle, arg1, out nint result), "occtsharp_owned_geomconvert_bsplinecurveknotsplitting_create_0");
+    var managedResult = GeomConvertBSplineCurveKnotSplitting.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomConvert_BSplineCurveKnotSplitting@F@NbSplits#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_bsplinecurveknotsplitting_nbsplits_1")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_bsplinecurveknotsplitting_nbsplits_1(OwnedHandle receiver, out int result);
+  /// <summary>Invokes GeomConvert_BSplineCurveKnotSplitting::NbSplits. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbSplits() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_bsplinecurveknotsplitting_nbsplits_1(NativeHandle, out int result), "occtsharp_owned_geomconvert_bsplinecurveknotsplitting_nbsplits_1");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@GeomConvert_BSplineCurveKnotSplitting@F@SplitValue#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_bsplinecurveknotsplitting_splitvalue_2")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_bsplinecurveknotsplitting_splitvalue_2(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes GeomConvert_BSplineCurveKnotSplitting::SplitValue. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int SplitValue(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_bsplinecurveknotsplitting_splitvalue_2(NativeHandle, arg0, out int result), "occtsharp_owned_geomconvert_bsplinecurveknotsplitting_splitvalue_2");
+    var managedResult = result;
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address GeomConvert_BSplineCurveToBezierCurve. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class GeomConvertBSplineCurveToBezierCurve : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private GeomConvertBSplineCurveToBezierCurve(OwnedHandle handle) => _handle = handle;
+  static GeomConvertBSplineCurveToBezierCurve() => NativeLibraryResolver.EnsureRegistered(typeof(GeomConvertBSplineCurveToBezierCurve).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static GeomConvertBSplineCurveToBezierCurve FromNative(nint value) {
+    try { return new GeomConvertBSplineCurveToBezierCurve(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_bsplinecurvetobeziercurve_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@GeomConvert_BSplineCurveToBezierCurve@F@GeomConvert_BSplineCurveToBezierCurve#&1$@N@opencascade@S@handle>#$@S@Geom_BSplineCurve#d#d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_bsplinecurvetobeziercurve_create_0")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_bsplinecurvetobeziercurve_create_0(GeomBSplineCurveHandle arg0, double arg1, double arg2, double arg3, out nint result);
+  /// <summary>Invokes GeomConvert_BSplineCurveToBezierCurve::GeomConvert_BSplineCurveToBezierCurve. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomConvertBSplineCurveToBezierCurve Create(GeomBSplineCurve arg0, double arg1, double arg2, double arg3) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_bsplinecurvetobeziercurve_create_0(arg0.NativeHandle, arg1, arg2, arg3, out nint result), "occtsharp_owned_geomconvert_bsplinecurvetobeziercurve_create_0");
+    var managedResult = GeomConvertBSplineCurveToBezierCurve.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomConvert_BSplineCurveToBezierCurve@F@Arc#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_bsplinecurvetobeziercurve_arc_1")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_bsplinecurvetobeziercurve_arc_1(OwnedHandle receiver, int arg0, out nint result);
+  /// <summary>Invokes GeomConvert_BSplineCurveToBezierCurve::Arc. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public GeomBezierCurve? Arc(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_bsplinecurvetobeziercurve_arc_1(NativeHandle, arg0, out nint result), "occtsharp_owned_geomconvert_bsplinecurvetobeziercurve_arc_1");
+    var managedResult = GeomBezierCurve.FromNative(result, "occtsharp_owned_geomconvert_bsplinecurvetobeziercurve_arc_1");
+    return managedResult;
+  }
+  // Source: c:@S@GeomConvert_BSplineCurveToBezierCurve@F@NbArcs#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_bsplinecurvetobeziercurve_nbarcs_2")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_bsplinecurvetobeziercurve_nbarcs_2(OwnedHandle receiver, out int result);
+  /// <summary>Invokes GeomConvert_BSplineCurveToBezierCurve::NbArcs. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbArcs() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_bsplinecurvetobeziercurve_nbarcs_2(NativeHandle, out int result), "occtsharp_owned_geomconvert_bsplinecurvetobeziercurve_nbarcs_2");
+    var managedResult = result;
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address GeomConvert_BSplineSurfaceToBezierSurface. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class GeomConvertBSplineSurfaceToBezierSurface : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private GeomConvertBSplineSurfaceToBezierSurface(OwnedHandle handle) => _handle = handle;
+  static GeomConvertBSplineSurfaceToBezierSurface() => NativeLibraryResolver.EnsureRegistered(typeof(GeomConvertBSplineSurfaceToBezierSurface).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static GeomConvertBSplineSurfaceToBezierSurface FromNative(nint value) {
+    try { return new GeomConvertBSplineSurfaceToBezierSurface(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_bsplinesurfacetobeziersurface_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@GeomConvert_BSplineSurfaceToBezierSurface@F@GeomConvert_BSplineSurfaceToBezierSurface#&1$@N@opencascade@S@handle>#$@S@Geom_BSplineSurface#d#d#d#d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_bsplinesurfacetobeziersurface_create_0")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_bsplinesurfacetobeziersurface_create_0(GeomBSplineSurfaceHandle arg0, double arg1, double arg2, double arg3, double arg4, double arg5, out nint result);
+  /// <summary>Invokes GeomConvert_BSplineSurfaceToBezierSurface::GeomConvert_BSplineSurfaceToBezierSurface. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomConvertBSplineSurfaceToBezierSurface Create(GeomBSplineSurface arg0, double arg1, double arg2, double arg3, double arg4, double arg5) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_bsplinesurfacetobeziersurface_create_0(arg0.NativeHandle, arg1, arg2, arg3, arg4, arg5, out nint result), "occtsharp_owned_geomconvert_bsplinesurfacetobeziersurface_create_0");
+    var managedResult = GeomConvertBSplineSurfaceToBezierSurface.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomConvert_BSplineSurfaceToBezierSurface@F@NbUPatches#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_bsplinesurfacetobeziersurface_nbupatches_1")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_bsplinesurfacetobeziersurface_nbupatches_1(OwnedHandle receiver, out int result);
+  /// <summary>Invokes GeomConvert_BSplineSurfaceToBezierSurface::NbUPatches. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbUPatches() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_bsplinesurfacetobeziersurface_nbupatches_1(NativeHandle, out int result), "occtsharp_owned_geomconvert_bsplinesurfacetobeziersurface_nbupatches_1");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@GeomConvert_BSplineSurfaceToBezierSurface@F@NbVPatches#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_bsplinesurfacetobeziersurface_nbvpatches_2")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_bsplinesurfacetobeziersurface_nbvpatches_2(OwnedHandle receiver, out int result);
+  /// <summary>Invokes GeomConvert_BSplineSurfaceToBezierSurface::NbVPatches. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbVPatches() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_bsplinesurfacetobeziersurface_nbvpatches_2(NativeHandle, out int result), "occtsharp_owned_geomconvert_bsplinesurfacetobeziersurface_nbvpatches_2");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@GeomConvert_BSplineSurfaceToBezierSurface@F@Patch#I#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_bsplinesurfacetobeziersurface_patch_3")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_bsplinesurfacetobeziersurface_patch_3(OwnedHandle receiver, int arg0, int arg1, out nint result);
+  /// <summary>Invokes GeomConvert_BSplineSurfaceToBezierSurface::Patch. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public GeomBezierSurface? Patch(int arg0, int arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_bsplinesurfacetobeziersurface_patch_3(NativeHandle, arg0, arg1, out nint result), "occtsharp_owned_geomconvert_bsplinesurfacetobeziersurface_patch_3");
+    var managedResult = GeomBezierSurface.FromNative(result, "occtsharp_owned_geomconvert_bsplinesurfacetobeziersurface_patch_3");
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address GeomConvert_CompCurveToBSplineCurve. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class GeomConvertCompCurveToBSplineCurve : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private GeomConvertCompCurveToBSplineCurve(OwnedHandle handle) => _handle = handle;
+  static GeomConvertCompCurveToBSplineCurve() => NativeLibraryResolver.EnsureRegistered(typeof(GeomConvertCompCurveToBSplineCurve).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static GeomConvertCompCurveToBSplineCurve FromNative(nint value) {
+    try { return new GeomConvertCompCurveToBSplineCurve(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_compcurvetobsplinecurve_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@GeomConvert_CompCurveToBSplineCurve@F@Clear#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_compcurvetobsplinecurve_clear_0")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_compcurvetobsplinecurve_clear_0(OwnedHandle receiver);
+  /// <summary>Invokes GeomConvert_CompCurveToBSplineCurve::Clear. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Clear() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_compcurvetobsplinecurve_clear_0(NativeHandle), "occtsharp_owned_geomconvert_compcurvetobsplinecurve_clear_0");
+  }
+  // Source: c:@S@GeomConvert_CompCurveToBSplineCurve@F@GeomConvert_CompCurveToBSplineCurve#&1$@N@opencascade@S@handle>#$@S@Geom_BoundedCurve#$@E@Convert_ParameterisationType#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_compcurvetobsplinecurve_create_1")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_compcurvetobsplinecurve_create_1(GeomBoundedCurveHandle arg0, int arg1, out nint result);
+  /// <summary>Invokes GeomConvert_CompCurveToBSplineCurve::GeomConvert_CompCurveToBSplineCurve. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomConvertCompCurveToBSplineCurve Create(GeomBoundedCurve arg0, ConvertParameterisationType arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_compcurvetobsplinecurve_create_1(arg0.NativeHandle, (int)arg1, out nint result), "occtsharp_owned_geomconvert_compcurvetobsplinecurve_create_1");
+    var managedResult = GeomConvertCompCurveToBSplineCurve.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomConvert_CompCurveToBSplineCurve@F@Add#&1$@N@opencascade@S@handle>#$@S@Geom_BoundedCurve#d#b#b#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_compcurvetobsplinecurve_add_2")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_compcurvetobsplinecurve_add_2(OwnedHandle receiver, GeomBoundedCurveHandle arg0, double arg1, int arg2, int arg3, int arg4, out int result);
+  /// <summary>Invokes GeomConvert_CompCurveToBSplineCurve::Add. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool Add(GeomBoundedCurve arg0, double arg1, bool arg2, bool arg3, int arg4) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_compcurvetobsplinecurve_add_2(NativeHandle, arg0.NativeHandle, arg1, (arg2 ? 1 : 0), (arg3 ? 1 : 0), arg4, out int result), "occtsharp_owned_geomconvert_compcurvetobsplinecurve_add_2");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@GeomConvert_CompCurveToBSplineCurve@F@BSplineCurve#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_compcurvetobsplinecurve_bsplinecurve_3")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_compcurvetobsplinecurve_bsplinecurve_3(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes GeomConvert_CompCurveToBSplineCurve::BSplineCurve. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public GeomBSplineCurve? BSplineCurve() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_compcurvetobsplinecurve_bsplinecurve_3(NativeHandle, out nint result), "occtsharp_owned_geomconvert_compcurvetobsplinecurve_bsplinecurve_3");
+    var managedResult = GeomBSplineCurve.FromNative(result, "occtsharp_owned_geomconvert_compcurvetobsplinecurve_bsplinecurve_3");
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address GeomConvert_SurfToAnaSurf. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class GeomConvertSurfToAnaSurf : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private GeomConvertSurfToAnaSurf(OwnedHandle handle) => _handle = handle;
+  static GeomConvertSurfToAnaSurf() => NativeLibraryResolver.EnsureRegistered(typeof(GeomConvertSurfToAnaSurf).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static GeomConvertSurfToAnaSurf FromNative(nint value) {
+    try { return new GeomConvertSurfToAnaSurf(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_surftoanasurf_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@GeomConvert_SurfToAnaSurf@F@ConvertToAnalytical#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_surftoanasurf_converttoanalytical_0")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_surftoanasurf_converttoanalytical_0(OwnedHandle receiver, double arg0, out nint result);
+  /// <summary>Invokes GeomConvert_SurfToAnaSurf::ConvertToAnalytical. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public GeomSurface? ConvertToAnalytical(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_surftoanasurf_converttoanalytical_0(NativeHandle, arg0, out nint result), "occtsharp_owned_geomconvert_surftoanasurf_converttoanalytical_0");
+    var managedResult = GeomSurface.FromNative(result, "occtsharp_owned_geomconvert_surftoanasurf_converttoanalytical_0");
+    return managedResult;
+  }
+  // Source: c:@S@GeomConvert_SurfToAnaSurf@F@ConvertToAnalytical#d#d#d#d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_surftoanasurf_converttoanalytical_1")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_surftoanasurf_converttoanalytical_1(OwnedHandle receiver, double arg0, double arg1, double arg2, double arg3, double arg4, out nint result);
+  /// <summary>Invokes GeomConvert_SurfToAnaSurf::ConvertToAnalytical. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public GeomSurface? ConvertToAnalytical(double arg0, double arg1, double arg2, double arg3, double arg4) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_surftoanasurf_converttoanalytical_1(NativeHandle, arg0, arg1, arg2, arg3, arg4, out nint result), "occtsharp_owned_geomconvert_surftoanasurf_converttoanalytical_1");
+    var managedResult = GeomSurface.FromNative(result, "occtsharp_owned_geomconvert_surftoanasurf_converttoanalytical_1");
+    return managedResult;
+  }
+  // Source: c:@S@GeomConvert_SurfToAnaSurf@F@GeomConvert_SurfToAnaSurf#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_surftoanasurf_create_2")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_surftoanasurf_create_2(GeomSurfaceHandle arg0, out nint result);
+  /// <summary>Invokes GeomConvert_SurfToAnaSurf::GeomConvert_SurfToAnaSurf. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomConvertSurfToAnaSurf Create(GeomSurface arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_surftoanasurf_create_2(arg0.NativeHandle, out nint result), "occtsharp_owned_geomconvert_surftoanasurf_create_2");
+    var managedResult = GeomConvertSurfToAnaSurf.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomConvert_SurfToAnaSurf@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_surftoanasurf_init_3")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_surftoanasurf_init_3(OwnedHandle receiver, GeomSurfaceHandle arg0);
+  /// <summary>Invokes GeomConvert_SurfToAnaSurf::Init. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Init(GeomSurface arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_surftoanasurf_init_3(NativeHandle, arg0.NativeHandle), "occtsharp_owned_geomconvert_surftoanasurf_init_3");
+  }
+  // Source: c:@S@GeomConvert_SurfToAnaSurf@F@IsCanonical#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#S
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_surftoanasurf_iscanonical_4")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_surftoanasurf_iscanonical_4(GeomSurfaceHandle arg0, out int result);
+  /// <summary>Invokes GeomConvert_SurfToAnaSurf::IsCanonical. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static bool IsCanonical(GeomSurface arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_surftoanasurf_iscanonical_4(arg0.NativeHandle, out int result), "occtsharp_owned_geomconvert_surftoanasurf_iscanonical_4");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@GeomConvert_SurfToAnaSurf@F@IsSame#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#S0_#d#S
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_surftoanasurf_issame_5")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_surftoanasurf_issame_5(GeomSurfaceHandle arg0, GeomSurfaceHandle arg1, double arg2, out int result);
+  /// <summary>Invokes GeomConvert_SurfToAnaSurf::IsSame. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static bool IsSame(GeomSurface arg0, GeomSurface arg1, double arg2) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_surftoanasurf_issame_5(arg0.NativeHandle, arg1.NativeHandle, arg2, out int result), "occtsharp_owned_geomconvert_surftoanasurf_issame_5");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@GeomConvert_SurfToAnaSurf@F@SetConvType#$@E@GeomConvert_ConvType#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_surftoanasurf_setconvtype_6")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_surftoanasurf_setconvtype_6(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes GeomConvert_SurfToAnaSurf::SetConvType. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetConvType(GeomConvertConvType arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_surftoanasurf_setconvtype_6(NativeHandle, (int)arg0), "occtsharp_owned_geomconvert_surftoanasurf_setconvtype_6");
+  }
+  // Source: c:@S@GeomConvert_SurfToAnaSurf@F@SetTarget#$@E@GeomAbs_SurfaceType#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomconvert_surftoanasurf_settarget_7")]
+  private static partial NativeStatus Native_occtsharp_owned_geomconvert_surftoanasurf_settarget_7(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes GeomConvert_SurfToAnaSurf::SetTarget. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetTarget(GeomAbsSurfaceType arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomconvert_surftoanasurf_settarget_7(NativeHandle, (int)arg0), "occtsharp_owned_geomconvert_surftoanasurf_settarget_7");
+  }
+}
+/// <summary>Owns a stable-address GeomFill_BSplineCurves. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class GeomFillBSplineCurves : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private GeomFillBSplineCurves(OwnedHandle handle) => _handle = handle;
+  static GeomFillBSplineCurves() => NativeLibraryResolver.EnsureRegistered(typeof(GeomFillBSplineCurves).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static GeomFillBSplineCurves FromNative(nint value) {
+    try { return new GeomFillBSplineCurves(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_bsplinecurves_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@GeomFill_BSplineCurves@F@GeomFill_BSplineCurves#&1$@N@opencascade@S@handle>#$@S@Geom_BSplineCurve#S0_#$@E@GeomFill_FillingStyle#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_bsplinecurves_create_0")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_bsplinecurves_create_0(GeomBSplineCurveHandle arg0, GeomBSplineCurveHandle arg1, int arg2, out nint result);
+  /// <summary>Invokes GeomFill_BSplineCurves::GeomFill_BSplineCurves. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomFillBSplineCurves Create(GeomBSplineCurve arg0, GeomBSplineCurve arg1, GeomFillFillingStyle arg2) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_bsplinecurves_create_0(arg0.NativeHandle, arg1.NativeHandle, (int)arg2, out nint result), "occtsharp_owned_geomfill_bsplinecurves_create_0");
+    var managedResult = GeomFillBSplineCurves.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomFill_BSplineCurves@F@GeomFill_BSplineCurves#&1$@N@opencascade@S@handle>#$@S@Geom_BSplineCurve#S0_#S0_#$@E@GeomFill_FillingStyle#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_bsplinecurves_create_1")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_bsplinecurves_create_1(GeomBSplineCurveHandle arg0, GeomBSplineCurveHandle arg1, GeomBSplineCurveHandle arg2, int arg3, out nint result);
+  /// <summary>Invokes GeomFill_BSplineCurves::GeomFill_BSplineCurves. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomFillBSplineCurves Create(GeomBSplineCurve arg0, GeomBSplineCurve arg1, GeomBSplineCurve arg2, GeomFillFillingStyle arg3) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    ArgumentNullException.ThrowIfNull(arg2);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_bsplinecurves_create_1(arg0.NativeHandle, arg1.NativeHandle, arg2.NativeHandle, (int)arg3, out nint result), "occtsharp_owned_geomfill_bsplinecurves_create_1");
+    var managedResult = GeomFillBSplineCurves.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomFill_BSplineCurves@F@GeomFill_BSplineCurves#&1$@N@opencascade@S@handle>#$@S@Geom_BSplineCurve#S0_#S0_#S0_#$@E@GeomFill_FillingStyle#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_bsplinecurves_create_2")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_bsplinecurves_create_2(GeomBSplineCurveHandle arg0, GeomBSplineCurveHandle arg1, GeomBSplineCurveHandle arg2, GeomBSplineCurveHandle arg3, int arg4, out nint result);
+  /// <summary>Invokes GeomFill_BSplineCurves::GeomFill_BSplineCurves. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomFillBSplineCurves Create(GeomBSplineCurve arg0, GeomBSplineCurve arg1, GeomBSplineCurve arg2, GeomBSplineCurve arg3, GeomFillFillingStyle arg4) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    ArgumentNullException.ThrowIfNull(arg2);
+    ArgumentNullException.ThrowIfNull(arg3);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_bsplinecurves_create_2(arg0.NativeHandle, arg1.NativeHandle, arg2.NativeHandle, arg3.NativeHandle, (int)arg4, out nint result), "occtsharp_owned_geomfill_bsplinecurves_create_2");
+    var managedResult = GeomFillBSplineCurves.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomFill_BSplineCurves@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_BSplineCurve#S0_#$@E@GeomFill_FillingStyle#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_bsplinecurves_init_3")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_bsplinecurves_init_3(OwnedHandle receiver, GeomBSplineCurveHandle arg0, GeomBSplineCurveHandle arg1, int arg2);
+  /// <summary>Invokes GeomFill_BSplineCurves::Init. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Init(GeomBSplineCurve arg0, GeomBSplineCurve arg1, GeomFillFillingStyle arg2) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_bsplinecurves_init_3(NativeHandle, arg0.NativeHandle, arg1.NativeHandle, (int)arg2), "occtsharp_owned_geomfill_bsplinecurves_init_3");
+  }
+  // Source: c:@S@GeomFill_BSplineCurves@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_BSplineCurve#S0_#S0_#$@E@GeomFill_FillingStyle#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_bsplinecurves_init_4")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_bsplinecurves_init_4(OwnedHandle receiver, GeomBSplineCurveHandle arg0, GeomBSplineCurveHandle arg1, GeomBSplineCurveHandle arg2, int arg3);
+  /// <summary>Invokes GeomFill_BSplineCurves::Init. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Init(GeomBSplineCurve arg0, GeomBSplineCurve arg1, GeomBSplineCurve arg2, GeomFillFillingStyle arg3) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    ArgumentNullException.ThrowIfNull(arg2);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_bsplinecurves_init_4(NativeHandle, arg0.NativeHandle, arg1.NativeHandle, arg2.NativeHandle, (int)arg3), "occtsharp_owned_geomfill_bsplinecurves_init_4");
+  }
+  // Source: c:@S@GeomFill_BSplineCurves@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_BSplineCurve#S0_#S0_#S0_#$@E@GeomFill_FillingStyle#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_bsplinecurves_init_5")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_bsplinecurves_init_5(OwnedHandle receiver, GeomBSplineCurveHandle arg0, GeomBSplineCurveHandle arg1, GeomBSplineCurveHandle arg2, GeomBSplineCurveHandle arg3, int arg4);
+  /// <summary>Invokes GeomFill_BSplineCurves::Init. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Init(GeomBSplineCurve arg0, GeomBSplineCurve arg1, GeomBSplineCurve arg2, GeomBSplineCurve arg3, GeomFillFillingStyle arg4) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    ArgumentNullException.ThrowIfNull(arg2);
+    ArgumentNullException.ThrowIfNull(arg3);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_bsplinecurves_init_5(NativeHandle, arg0.NativeHandle, arg1.NativeHandle, arg2.NativeHandle, arg3.NativeHandle, (int)arg4), "occtsharp_owned_geomfill_bsplinecurves_init_5");
+  }
+  // Source: c:@S@GeomFill_BSplineCurves@F@Surface#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_bsplinecurves_surface_6")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_bsplinecurves_surface_6(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes GeomFill_BSplineCurves::Surface. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public GeomBSplineSurface? Surface() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_bsplinecurves_surface_6(NativeHandle, out nint result), "occtsharp_owned_geomfill_bsplinecurves_surface_6");
+    var managedResult = GeomBSplineSurface.FromNative(result, "occtsharp_owned_geomfill_bsplinecurves_surface_6");
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address GeomFill_BezierCurves. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class GeomFillBezierCurves : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private GeomFillBezierCurves(OwnedHandle handle) => _handle = handle;
+  static GeomFillBezierCurves() => NativeLibraryResolver.EnsureRegistered(typeof(GeomFillBezierCurves).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static GeomFillBezierCurves FromNative(nint value) {
+    try { return new GeomFillBezierCurves(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_beziercurves_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@GeomFill_BezierCurves@F@GeomFill_BezierCurves#&1$@N@opencascade@S@handle>#$@S@Geom_BezierCurve#S0_#$@E@GeomFill_FillingStyle#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_beziercurves_create_0")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_beziercurves_create_0(GeomBezierCurveHandle arg0, GeomBezierCurveHandle arg1, int arg2, out nint result);
+  /// <summary>Invokes GeomFill_BezierCurves::GeomFill_BezierCurves. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomFillBezierCurves Create(GeomBezierCurve arg0, GeomBezierCurve arg1, GeomFillFillingStyle arg2) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_beziercurves_create_0(arg0.NativeHandle, arg1.NativeHandle, (int)arg2, out nint result), "occtsharp_owned_geomfill_beziercurves_create_0");
+    var managedResult = GeomFillBezierCurves.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomFill_BezierCurves@F@GeomFill_BezierCurves#&1$@N@opencascade@S@handle>#$@S@Geom_BezierCurve#S0_#S0_#$@E@GeomFill_FillingStyle#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_beziercurves_create_1")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_beziercurves_create_1(GeomBezierCurveHandle arg0, GeomBezierCurveHandle arg1, GeomBezierCurveHandle arg2, int arg3, out nint result);
+  /// <summary>Invokes GeomFill_BezierCurves::GeomFill_BezierCurves. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomFillBezierCurves Create(GeomBezierCurve arg0, GeomBezierCurve arg1, GeomBezierCurve arg2, GeomFillFillingStyle arg3) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    ArgumentNullException.ThrowIfNull(arg2);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_beziercurves_create_1(arg0.NativeHandle, arg1.NativeHandle, arg2.NativeHandle, (int)arg3, out nint result), "occtsharp_owned_geomfill_beziercurves_create_1");
+    var managedResult = GeomFillBezierCurves.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomFill_BezierCurves@F@GeomFill_BezierCurves#&1$@N@opencascade@S@handle>#$@S@Geom_BezierCurve#S0_#S0_#S0_#$@E@GeomFill_FillingStyle#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_beziercurves_create_2")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_beziercurves_create_2(GeomBezierCurveHandle arg0, GeomBezierCurveHandle arg1, GeomBezierCurveHandle arg2, GeomBezierCurveHandle arg3, int arg4, out nint result);
+  /// <summary>Invokes GeomFill_BezierCurves::GeomFill_BezierCurves. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomFillBezierCurves Create(GeomBezierCurve arg0, GeomBezierCurve arg1, GeomBezierCurve arg2, GeomBezierCurve arg3, GeomFillFillingStyle arg4) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    ArgumentNullException.ThrowIfNull(arg2);
+    ArgumentNullException.ThrowIfNull(arg3);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_beziercurves_create_2(arg0.NativeHandle, arg1.NativeHandle, arg2.NativeHandle, arg3.NativeHandle, (int)arg4, out nint result), "occtsharp_owned_geomfill_beziercurves_create_2");
+    var managedResult = GeomFillBezierCurves.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomFill_BezierCurves@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_BezierCurve#S0_#$@E@GeomFill_FillingStyle#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_beziercurves_init_3")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_beziercurves_init_3(OwnedHandle receiver, GeomBezierCurveHandle arg0, GeomBezierCurveHandle arg1, int arg2);
+  /// <summary>Invokes GeomFill_BezierCurves::Init. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Init(GeomBezierCurve arg0, GeomBezierCurve arg1, GeomFillFillingStyle arg2) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_beziercurves_init_3(NativeHandle, arg0.NativeHandle, arg1.NativeHandle, (int)arg2), "occtsharp_owned_geomfill_beziercurves_init_3");
+  }
+  // Source: c:@S@GeomFill_BezierCurves@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_BezierCurve#S0_#S0_#$@E@GeomFill_FillingStyle#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_beziercurves_init_4")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_beziercurves_init_4(OwnedHandle receiver, GeomBezierCurveHandle arg0, GeomBezierCurveHandle arg1, GeomBezierCurveHandle arg2, int arg3);
+  /// <summary>Invokes GeomFill_BezierCurves::Init. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Init(GeomBezierCurve arg0, GeomBezierCurve arg1, GeomBezierCurve arg2, GeomFillFillingStyle arg3) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    ArgumentNullException.ThrowIfNull(arg2);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_beziercurves_init_4(NativeHandle, arg0.NativeHandle, arg1.NativeHandle, arg2.NativeHandle, (int)arg3), "occtsharp_owned_geomfill_beziercurves_init_4");
+  }
+  // Source: c:@S@GeomFill_BezierCurves@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_BezierCurve#S0_#S0_#S0_#$@E@GeomFill_FillingStyle#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_beziercurves_init_5")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_beziercurves_init_5(OwnedHandle receiver, GeomBezierCurveHandle arg0, GeomBezierCurveHandle arg1, GeomBezierCurveHandle arg2, GeomBezierCurveHandle arg3, int arg4);
+  /// <summary>Invokes GeomFill_BezierCurves::Init. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Init(GeomBezierCurve arg0, GeomBezierCurve arg1, GeomBezierCurve arg2, GeomBezierCurve arg3, GeomFillFillingStyle arg4) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    ArgumentNullException.ThrowIfNull(arg2);
+    ArgumentNullException.ThrowIfNull(arg3);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_beziercurves_init_5(NativeHandle, arg0.NativeHandle, arg1.NativeHandle, arg2.NativeHandle, arg3.NativeHandle, (int)arg4), "occtsharp_owned_geomfill_beziercurves_init_5");
+  }
+  // Source: c:@S@GeomFill_BezierCurves@F@Surface#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_beziercurves_surface_6")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_beziercurves_surface_6(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes GeomFill_BezierCurves::Surface. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public GeomBezierSurface? Surface() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_beziercurves_surface_6(NativeHandle, out nint result), "occtsharp_owned_geomfill_beziercurves_surface_6");
+    var managedResult = GeomBezierSurface.FromNative(result, "occtsharp_owned_geomfill_beziercurves_surface_6");
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address GeomFill_Pipe. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class GeomFillPipe : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private GeomFillPipe(OwnedHandle handle) => _handle = handle;
+  static GeomFillPipe() => NativeLibraryResolver.EnsureRegistered(typeof(GeomFillPipe).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static GeomFillPipe FromNative(nint value) {
+    try { return new GeomFillPipe(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_pipe_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@GeomFill_Pipe@F@GenerateParticularCase#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_pipe_generateparticularcase_0")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_pipe_generateparticularcase_0(OwnedHandle receiver, out int result);
+  /// <summary>Invokes GeomFill_Pipe::GenerateParticularCase. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool GenerateParticularCase() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_pipe_generateparticularcase_0(NativeHandle, out int result), "occtsharp_owned_geomfill_pipe_generateparticularcase_0");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@GeomFill_Pipe@F@GenerateParticularCase#b#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_pipe_generateparticularcase_1")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_pipe_generateparticularcase_1(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes GeomFill_Pipe::GenerateParticularCase. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void GenerateParticularCase(bool arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_pipe_generateparticularcase_1(NativeHandle, (arg0 ? 1 : 0)), "occtsharp_owned_geomfill_pipe_generateparticularcase_1");
+  }
+  // Source: c:@S@GeomFill_Pipe@F@GeomFill_Pipe#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#S0_#S0_#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_pipe_create_2")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_pipe_create_2(Adaptor3dCurveHandle arg0, Adaptor3dCurveHandle arg1, Adaptor3dCurveHandle arg2, double arg3, out nint result);
+  /// <summary>Invokes GeomFill_Pipe::GeomFill_Pipe. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomFillPipe Create(Adaptor3dCurve arg0, Adaptor3dCurve arg1, Adaptor3dCurve arg2, double arg3) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    ArgumentNullException.ThrowIfNull(arg2);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_pipe_create_2(arg0.NativeHandle, arg1.NativeHandle, arg2.NativeHandle, arg3, out nint result), "occtsharp_owned_geomfill_pipe_create_2");
+    var managedResult = GeomFillPipe.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomFill_Pipe@F@GeomFill_Pipe#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_pipe_create_3")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_pipe_create_3(Geom2dCurveHandle arg0, GeomSurfaceHandle arg1, GeomCurveHandle arg2, out nint result);
+  /// <summary>Invokes GeomFill_Pipe::GeomFill_Pipe. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomFillPipe Create(Geom2dCurve arg0, GeomSurface arg1, GeomCurve arg2) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    ArgumentNullException.ThrowIfNull(arg2);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_pipe_create_3(arg0.NativeHandle, arg1.NativeHandle, arg2.NativeHandle, out nint result), "occtsharp_owned_geomfill_pipe_create_3");
+    var managedResult = GeomFillPipe.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomFill_Pipe@F@GeomFill_Pipe#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#S0_#b#b#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_pipe_create_4")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_pipe_create_4(GeomCurveHandle arg0, Adaptor3dCurveHandle arg1, GeomCurveHandle arg2, int arg3, int arg4, out nint result);
+  /// <summary>Invokes GeomFill_Pipe::GeomFill_Pipe. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomFillPipe Create(GeomCurve arg0, Adaptor3dCurve arg1, GeomCurve arg2, bool arg3, bool arg4) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    ArgumentNullException.ThrowIfNull(arg2);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_pipe_create_4(arg0.NativeHandle, arg1.NativeHandle, arg2.NativeHandle, (arg3 ? 1 : 0), (arg4 ? 1 : 0), out nint result), "occtsharp_owned_geomfill_pipe_create_4");
+    var managedResult = GeomFillPipe.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomFill_Pipe@F@GeomFill_Pipe#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#S0_#$@E@GeomFill_Trihedron#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_pipe_create_5")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_pipe_create_5(GeomCurveHandle arg0, GeomCurveHandle arg1, int arg2, out nint result);
+  /// <summary>Invokes GeomFill_Pipe::GeomFill_Pipe. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomFillPipe Create(GeomCurve arg0, GeomCurve arg1, GeomFillTrihedron arg2) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_pipe_create_5(arg0.NativeHandle, arg1.NativeHandle, (int)arg2, out nint result), "occtsharp_owned_geomfill_pipe_create_5");
+    var managedResult = GeomFillPipe.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomFill_Pipe@F@GeomFill_Pipe#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#S0_#&1$@S@gp_Dir#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_pipe_create_6")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_pipe_create_6(GeomCurveHandle arg0, GeomCurveHandle arg1, global::OcctSharp.Values.Direction3d arg2, out nint result);
+  /// <summary>Invokes GeomFill_Pipe::GeomFill_Pipe. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomFillPipe Create(GeomCurve arg0, GeomCurve arg1, global::OcctSharp.Values.Direction3d arg2) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_pipe_create_6(arg0.NativeHandle, arg1.NativeHandle, arg2, out nint result), "occtsharp_owned_geomfill_pipe_create_6");
+    var managedResult = GeomFillPipe.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomFill_Pipe@F@GeomFill_Pipe#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#S0_#S0_#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_pipe_create_7")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_pipe_create_7(GeomCurveHandle arg0, GeomCurveHandle arg1, GeomCurveHandle arg2, out nint result);
+  /// <summary>Invokes GeomFill_Pipe::GeomFill_Pipe. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomFillPipe Create(GeomCurve arg0, GeomCurve arg1, GeomCurve arg2) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    ArgumentNullException.ThrowIfNull(arg2);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_pipe_create_7(arg0.NativeHandle, arg1.NativeHandle, arg2.NativeHandle, out nint result), "occtsharp_owned_geomfill_pipe_create_7");
+    var managedResult = GeomFillPipe.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomFill_Pipe@F@GeomFill_Pipe#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#S0_#S0_#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_pipe_create_8")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_pipe_create_8(GeomCurveHandle arg0, GeomCurveHandle arg1, GeomCurveHandle arg2, double arg3, out nint result);
+  /// <summary>Invokes GeomFill_Pipe::GeomFill_Pipe. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomFillPipe Create(GeomCurve arg0, GeomCurve arg1, GeomCurve arg2, double arg3) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    ArgumentNullException.ThrowIfNull(arg2);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_pipe_create_8(arg0.NativeHandle, arg1.NativeHandle, arg2.NativeHandle, arg3, out nint result), "occtsharp_owned_geomfill_pipe_create_8");
+    var managedResult = GeomFillPipe.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomFill_Pipe@F@GeomFill_Pipe#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_pipe_create_9")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_pipe_create_9(GeomCurveHandle arg0, double arg1, out nint result);
+  /// <summary>Invokes GeomFill_Pipe::GeomFill_Pipe. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomFillPipe Create(GeomCurve arg0, double arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_pipe_create_9(arg0.NativeHandle, arg1, out nint result), "occtsharp_owned_geomfill_pipe_create_9");
+    var managedResult = GeomFillPipe.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomFill_Pipe@F@GetStatus#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_pipe_getstatus_10")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_pipe_getstatus_10(OwnedHandle receiver, out int result);
+  /// <summary>Invokes GeomFill_Pipe::GetStatus. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public GeomFillPipeError GetStatus() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_pipe_getstatus_10(NativeHandle, out int result), "occtsharp_owned_geomfill_pipe_getstatus_10");
+    var managedResult = (GeomFillPipeError)result;
+    return managedResult;
+  }
+  // Source: c:@S@GeomFill_Pipe@F@Init#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#S0_#S0_#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_pipe_init_11")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_pipe_init_11(OwnedHandle receiver, Adaptor3dCurveHandle arg0, Adaptor3dCurveHandle arg1, Adaptor3dCurveHandle arg2, double arg3);
+  /// <summary>Invokes GeomFill_Pipe::Init. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Init(Adaptor3dCurve arg0, Adaptor3dCurve arg1, Adaptor3dCurve arg2, double arg3) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    ArgumentNullException.ThrowIfNull(arg2);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_pipe_init_11(NativeHandle, arg0.NativeHandle, arg1.NativeHandle, arg2.NativeHandle, arg3), "occtsharp_owned_geomfill_pipe_init_11");
+  }
+  // Source: c:@S@GeomFill_Pipe@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_pipe_init_12")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_pipe_init_12(OwnedHandle receiver, Geom2dCurveHandle arg0, GeomSurfaceHandle arg1, GeomCurveHandle arg2);
+  /// <summary>Invokes GeomFill_Pipe::Init. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Init(Geom2dCurve arg0, GeomSurface arg1, GeomCurve arg2) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    ArgumentNullException.ThrowIfNull(arg2);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_pipe_init_12(NativeHandle, arg0.NativeHandle, arg1.NativeHandle, arg2.NativeHandle), "occtsharp_owned_geomfill_pipe_init_12");
+  }
+  // Source: c:@S@GeomFill_Pipe@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#S0_#b#b#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_pipe_init_13")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_pipe_init_13(OwnedHandle receiver, GeomCurveHandle arg0, Adaptor3dCurveHandle arg1, GeomCurveHandle arg2, int arg3, int arg4);
+  /// <summary>Invokes GeomFill_Pipe::Init. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Init(GeomCurve arg0, Adaptor3dCurve arg1, GeomCurve arg2, bool arg3, bool arg4) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    ArgumentNullException.ThrowIfNull(arg2);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_pipe_init_13(NativeHandle, arg0.NativeHandle, arg1.NativeHandle, arg2.NativeHandle, (arg3 ? 1 : 0), (arg4 ? 1 : 0)), "occtsharp_owned_geomfill_pipe_init_13");
+  }
+  // Source: c:@S@GeomFill_Pipe@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#S0_#$@E@GeomFill_Trihedron#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_pipe_init_14")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_pipe_init_14(OwnedHandle receiver, GeomCurveHandle arg0, GeomCurveHandle arg1, int arg2);
+  /// <summary>Invokes GeomFill_Pipe::Init. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Init(GeomCurve arg0, GeomCurve arg1, GeomFillTrihedron arg2) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_pipe_init_14(NativeHandle, arg0.NativeHandle, arg1.NativeHandle, (int)arg2), "occtsharp_owned_geomfill_pipe_init_14");
+  }
+  // Source: c:@S@GeomFill_Pipe@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#S0_#&1$@S@gp_Dir#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_pipe_init_15")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_pipe_init_15(OwnedHandle receiver, GeomCurveHandle arg0, GeomCurveHandle arg1, global::OcctSharp.Values.Direction3d arg2);
+  /// <summary>Invokes GeomFill_Pipe::Init. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Init(GeomCurve arg0, GeomCurve arg1, global::OcctSharp.Values.Direction3d arg2) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_pipe_init_15(NativeHandle, arg0.NativeHandle, arg1.NativeHandle, arg2), "occtsharp_owned_geomfill_pipe_init_15");
+  }
+  // Source: c:@S@GeomFill_Pipe@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#S0_#S0_#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_pipe_init_16")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_pipe_init_16(OwnedHandle receiver, GeomCurveHandle arg0, GeomCurveHandle arg1, GeomCurveHandle arg2);
+  /// <summary>Invokes GeomFill_Pipe::Init. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Init(GeomCurve arg0, GeomCurve arg1, GeomCurve arg2) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    ArgumentNullException.ThrowIfNull(arg2);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_pipe_init_16(NativeHandle, arg0.NativeHandle, arg1.NativeHandle, arg2.NativeHandle), "occtsharp_owned_geomfill_pipe_init_16");
+  }
+  // Source: c:@S@GeomFill_Pipe@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_pipe_init_17")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_pipe_init_17(OwnedHandle receiver, GeomCurveHandle arg0, double arg1);
+  /// <summary>Invokes GeomFill_Pipe::Init. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Init(GeomCurve arg0, double arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_pipe_init_17(NativeHandle, arg0.NativeHandle, arg1), "occtsharp_owned_geomfill_pipe_init_17");
+  }
+  // Source: c:@S@GeomFill_Pipe@F@IsDone#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_pipe_isdone_18")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_pipe_isdone_18(OwnedHandle receiver, out int result);
+  /// <summary>Invokes GeomFill_Pipe::IsDone. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsDone() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_pipe_isdone_18(NativeHandle, out int result), "occtsharp_owned_geomfill_pipe_isdone_18");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@GeomFill_Pipe@F@Perform#b#b#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_pipe_perform_19")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_pipe_perform_19(OwnedHandle receiver, int arg0, int arg1);
+  /// <summary>Invokes GeomFill_Pipe::Perform. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Perform(bool arg0, bool arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_pipe_perform_19(NativeHandle, (arg0 ? 1 : 0), (arg1 ? 1 : 0)), "occtsharp_owned_geomfill_pipe_perform_19");
+  }
+  // Source: c:@S@GeomFill_Pipe@F@Perform#d#b#$@E@GeomAbs_Shape#I#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_pipe_perform_20")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_pipe_perform_20(OwnedHandle receiver, double arg0, int arg1, int arg2, int arg3, int arg4);
+  /// <summary>Invokes GeomFill_Pipe::Perform. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Perform(double arg0, bool arg1, GeomAbsShape arg2, int arg3, int arg4) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_pipe_perform_20(NativeHandle, arg0, (arg1 ? 1 : 0), (int)arg2, arg3, arg4), "occtsharp_owned_geomfill_pipe_perform_20");
+  }
+  // Source: c:@S@GeomFill_Pipe@F@Surface#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_pipe_surface_21")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_pipe_surface_21(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes GeomFill_Pipe::Surface. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public GeomSurface? Surface() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_pipe_surface_21(NativeHandle, out nint result), "occtsharp_owned_geomfill_pipe_surface_21");
+    var managedResult = GeomSurface.FromNative(result, "occtsharp_owned_geomfill_pipe_surface_21");
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address GeomFill_Profiler. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class GeomFillProfiler : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private GeomFillProfiler(OwnedHandle handle) => _handle = handle;
+  static GeomFillProfiler() => NativeLibraryResolver.EnsureRegistered(typeof(GeomFillProfiler).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static GeomFillProfiler FromNative(nint value) {
+    try { return new GeomFillProfiler(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_profiler_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@GeomFill_Profiler@F@AddCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_profiler_addcurve_0")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_profiler_addcurve_0(OwnedHandle receiver, GeomCurveHandle arg0);
+  /// <summary>Invokes GeomFill_Profiler::AddCurve. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void AddCurve(GeomCurve arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_profiler_addcurve_0(NativeHandle, arg0.NativeHandle), "occtsharp_owned_geomfill_profiler_addcurve_0");
+  }
+  // Source: c:@S@GeomFill_Profiler@F@Curve#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_profiler_curve_1")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_profiler_curve_1(OwnedHandle receiver, int arg0, out nint result);
+  /// <summary>Invokes GeomFill_Profiler::Curve. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public GeomCurve? Curve(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_profiler_curve_1(NativeHandle, arg0, out nint result), "occtsharp_owned_geomfill_profiler_curve_1");
+    var managedResult = GeomCurve.FromNative(result, "occtsharp_owned_geomfill_profiler_curve_1");
+    return managedResult;
+  }
+  // Source: c:@S@GeomFill_Profiler@F@Degree#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_profiler_degree_2")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_profiler_degree_2(OwnedHandle receiver, out int result);
+  /// <summary>Invokes GeomFill_Profiler::Degree. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int Degree() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_profiler_degree_2(NativeHandle, out int result), "occtsharp_owned_geomfill_profiler_degree_2");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@GeomFill_Profiler@F@GeomFill_Profiler#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_profiler_create_3")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_profiler_create_3(out nint result);
+  /// <summary>Invokes GeomFill_Profiler::GeomFill_Profiler. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomFillProfiler Create() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_profiler_create_3(out nint result), "occtsharp_owned_geomfill_profiler_create_3");
+    var managedResult = GeomFillProfiler.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomFill_Profiler@F@NbKnots#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_profiler_nbknots_4")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_profiler_nbknots_4(OwnedHandle receiver, out int result);
+  /// <summary>Invokes GeomFill_Profiler::NbKnots. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbKnots() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_profiler_nbknots_4(NativeHandle, out int result), "occtsharp_owned_geomfill_profiler_nbknots_4");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@GeomFill_Profiler@F@NbPoles#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_profiler_nbpoles_5")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_profiler_nbpoles_5(OwnedHandle receiver, out int result);
+  /// <summary>Invokes GeomFill_Profiler::NbPoles. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbPoles() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_profiler_nbpoles_5(NativeHandle, out int result), "occtsharp_owned_geomfill_profiler_nbpoles_5");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@GeomFill_Profiler@F@Perform#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomfill_profiler_perform_6")]
+  private static partial NativeStatus Native_occtsharp_owned_geomfill_profiler_perform_6(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes GeomFill_Profiler::Perform. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Perform(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomfill_profiler_perform_6(NativeHandle, arg0), "occtsharp_owned_geomfill_profiler_perform_6");
+  }
+}
+/// <summary>Owns a stable-address GeomInt_IntSS. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class GeomIntIntSS : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private GeomIntIntSS(OwnedHandle handle) => _handle = handle;
+  static GeomIntIntSS() => NativeLibraryResolver.EnsureRegistered(typeof(GeomIntIntSS).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static GeomIntIntSS FromNative(nint value) {
+    try { return new GeomIntIntSS(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomint_intss_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@GeomInt_IntSS@F@Boundary#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomint_intss_boundary_0")]
+  private static partial NativeStatus Native_occtsharp_owned_geomint_intss_boundary_0(OwnedHandle receiver, int arg0, out nint result);
+  /// <summary>Invokes GeomInt_IntSS::Boundary. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public GeomCurve? Boundary(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomint_intss_boundary_0(NativeHandle, arg0, out nint result), "occtsharp_owned_geomint_intss_boundary_0");
+    var managedResult = GeomCurve.FromNative(result, "occtsharp_owned_geomint_intss_boundary_0");
+    return managedResult;
+  }
+  // Source: c:@S@GeomInt_IntSS@F@GeomInt_IntSS#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomint_intss_create_1")]
+  private static partial NativeStatus Native_occtsharp_owned_geomint_intss_create_1(out nint result);
+  /// <summary>Invokes GeomInt_IntSS::GeomInt_IntSS. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomIntIntSS Create() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomint_intss_create_1(out nint result), "occtsharp_owned_geomint_intss_create_1");
+    var managedResult = GeomIntIntSS.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomInt_IntSS@F@GeomInt_IntSS#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#S0_#d#b#b#b#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomint_intss_create_2")]
+  private static partial NativeStatus Native_occtsharp_owned_geomint_intss_create_2(GeomSurfaceHandle arg0, GeomSurfaceHandle arg1, double arg2, int arg3, int arg4, int arg5, out nint result);
+  /// <summary>Invokes GeomInt_IntSS::GeomInt_IntSS. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomIntIntSS Create(GeomSurface arg0, GeomSurface arg1, double arg2, bool arg3, bool arg4, bool arg5) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomint_intss_create_2(arg0.NativeHandle, arg1.NativeHandle, arg2, (arg3 ? 1 : 0), (arg4 ? 1 : 0), (arg5 ? 1 : 0), out nint result), "occtsharp_owned_geomint_intss_create_2");
+    var managedResult = GeomIntIntSS.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomInt_IntSS@F@HasLineOnS1#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomint_intss_haslineons1_3")]
+  private static partial NativeStatus Native_occtsharp_owned_geomint_intss_haslineons1_3(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes GeomInt_IntSS::HasLineOnS1. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool HasLineOnS1(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomint_intss_haslineons1_3(NativeHandle, arg0, out int result), "occtsharp_owned_geomint_intss_haslineons1_3");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@GeomInt_IntSS@F@HasLineOnS2#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomint_intss_haslineons2_4")]
+  private static partial NativeStatus Native_occtsharp_owned_geomint_intss_haslineons2_4(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes GeomInt_IntSS::HasLineOnS2. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool HasLineOnS2(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomint_intss_haslineons2_4(NativeHandle, arg0, out int result), "occtsharp_owned_geomint_intss_haslineons2_4");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@GeomInt_IntSS@F@IsDone#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomint_intss_isdone_5")]
+  private static partial NativeStatus Native_occtsharp_owned_geomint_intss_isdone_5(OwnedHandle receiver, out int result);
+  /// <summary>Invokes GeomInt_IntSS::IsDone. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsDone() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomint_intss_isdone_5(NativeHandle, out int result), "occtsharp_owned_geomint_intss_isdone_5");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@GeomInt_IntSS@F@Line#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomint_intss_line_6")]
+  private static partial NativeStatus Native_occtsharp_owned_geomint_intss_line_6(OwnedHandle receiver, int arg0, out nint result);
+  /// <summary>Invokes GeomInt_IntSS::Line. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public GeomCurve? Line(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomint_intss_line_6(NativeHandle, arg0, out nint result), "occtsharp_owned_geomint_intss_line_6");
+    var managedResult = GeomCurve.FromNative(result, "occtsharp_owned_geomint_intss_line_6");
+    return managedResult;
+  }
+  // Source: c:@S@GeomInt_IntSS@F@LineOnS1#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomint_intss_lineons1_7")]
+  private static partial NativeStatus Native_occtsharp_owned_geomint_intss_lineons1_7(OwnedHandle receiver, int arg0, out nint result);
+  /// <summary>Invokes GeomInt_IntSS::LineOnS1. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Geom2dCurve? LineOnS1(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomint_intss_lineons1_7(NativeHandle, arg0, out nint result), "occtsharp_owned_geomint_intss_lineons1_7");
+    var managedResult = Geom2dCurve.FromNative(result, "occtsharp_owned_geomint_intss_lineons1_7");
+    return managedResult;
+  }
+  // Source: c:@S@GeomInt_IntSS@F@LineOnS2#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomint_intss_lineons2_8")]
+  private static partial NativeStatus Native_occtsharp_owned_geomint_intss_lineons2_8(OwnedHandle receiver, int arg0, out nint result);
+  /// <summary>Invokes GeomInt_IntSS::LineOnS2. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Geom2dCurve? LineOnS2(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomint_intss_lineons2_8(NativeHandle, arg0, out nint result), "occtsharp_owned_geomint_intss_lineons2_8");
+    var managedResult = Geom2dCurve.FromNative(result, "occtsharp_owned_geomint_intss_lineons2_8");
+    return managedResult;
+  }
+  // Source: c:@S@GeomInt_IntSS@F@NbBoundaries#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomint_intss_nbboundaries_9")]
+  private static partial NativeStatus Native_occtsharp_owned_geomint_intss_nbboundaries_9(OwnedHandle receiver, out int result);
+  /// <summary>Invokes GeomInt_IntSS::NbBoundaries. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbBoundaries() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomint_intss_nbboundaries_9(NativeHandle, out int result), "occtsharp_owned_geomint_intss_nbboundaries_9");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@GeomInt_IntSS@F@NbLines#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomint_intss_nblines_10")]
+  private static partial NativeStatus Native_occtsharp_owned_geomint_intss_nblines_10(OwnedHandle receiver, out int result);
+  /// <summary>Invokes GeomInt_IntSS::NbLines. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbLines() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomint_intss_nblines_10(NativeHandle, out int result), "occtsharp_owned_geomint_intss_nblines_10");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@GeomInt_IntSS@F@NbPoints#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomint_intss_nbpoints_11")]
+  private static partial NativeStatus Native_occtsharp_owned_geomint_intss_nbpoints_11(OwnedHandle receiver, out int result);
+  /// <summary>Invokes GeomInt_IntSS::NbPoints. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbPoints() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomint_intss_nbpoints_11(NativeHandle, out int result), "occtsharp_owned_geomint_intss_nbpoints_11");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@GeomInt_IntSS@F@Perform#&1$@N@opencascade@S@handle>#$@S@GeomAdaptor_Surface#S0_#d#b#b#b#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomint_intss_perform_12")]
+  private static partial NativeStatus Native_occtsharp_owned_geomint_intss_perform_12(OwnedHandle receiver, GeomAdaptorSurfaceHandle arg0, GeomAdaptorSurfaceHandle arg1, double arg2, int arg3, int arg4, int arg5);
+  /// <summary>Invokes GeomInt_IntSS::Perform. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Perform(GeomAdaptorSurface arg0, GeomAdaptorSurface arg1, double arg2, bool arg3, bool arg4, bool arg5) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomint_intss_perform_12(NativeHandle, arg0.NativeHandle, arg1.NativeHandle, arg2, (arg3 ? 1 : 0), (arg4 ? 1 : 0), (arg5 ? 1 : 0)), "occtsharp_owned_geomint_intss_perform_12");
+  }
+  // Source: c:@S@GeomInt_IntSS@F@Perform#&1$@N@opencascade@S@handle>#$@S@GeomAdaptor_Surface#S0_#d#d#d#d#d#b#b#b#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomint_intss_perform_13")]
+  private static partial NativeStatus Native_occtsharp_owned_geomint_intss_perform_13(OwnedHandle receiver, GeomAdaptorSurfaceHandle arg0, GeomAdaptorSurfaceHandle arg1, double arg2, double arg3, double arg4, double arg5, double arg6, int arg7, int arg8, int arg9);
+  /// <summary>Invokes GeomInt_IntSS::Perform. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Perform(GeomAdaptorSurface arg0, GeomAdaptorSurface arg1, double arg2, double arg3, double arg4, double arg5, double arg6, bool arg7, bool arg8, bool arg9) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomint_intss_perform_13(NativeHandle, arg0.NativeHandle, arg1.NativeHandle, arg2, arg3, arg4, arg5, arg6, (arg7 ? 1 : 0), (arg8 ? 1 : 0), (arg9 ? 1 : 0)), "occtsharp_owned_geomint_intss_perform_13");
+  }
+  // Source: c:@S@GeomInt_IntSS@F@Perform#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#S0_#d#b#b#b#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomint_intss_perform_14")]
+  private static partial NativeStatus Native_occtsharp_owned_geomint_intss_perform_14(OwnedHandle receiver, GeomSurfaceHandle arg0, GeomSurfaceHandle arg1, double arg2, int arg3, int arg4, int arg5);
+  /// <summary>Invokes GeomInt_IntSS::Perform. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Perform(GeomSurface arg0, GeomSurface arg1, double arg2, bool arg3, bool arg4, bool arg5) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomint_intss_perform_14(NativeHandle, arg0.NativeHandle, arg1.NativeHandle, arg2, (arg3 ? 1 : 0), (arg4 ? 1 : 0), (arg5 ? 1 : 0)), "occtsharp_owned_geomint_intss_perform_14");
+  }
+  // Source: c:@S@GeomInt_IntSS@F@Perform#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#S0_#d#d#d#d#d#b#b#b#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomint_intss_perform_15")]
+  private static partial NativeStatus Native_occtsharp_owned_geomint_intss_perform_15(OwnedHandle receiver, GeomSurfaceHandle arg0, GeomSurfaceHandle arg1, double arg2, double arg3, double arg4, double arg5, double arg6, int arg7, int arg8, int arg9);
+  /// <summary>Invokes GeomInt_IntSS::Perform. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Perform(GeomSurface arg0, GeomSurface arg1, double arg2, double arg3, double arg4, double arg5, double arg6, bool arg7, bool arg8, bool arg9) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomint_intss_perform_15(NativeHandle, arg0.NativeHandle, arg1.NativeHandle, arg2, arg3, arg4, arg5, arg6, (arg7 ? 1 : 0), (arg8 ? 1 : 0), (arg9 ? 1 : 0)), "occtsharp_owned_geomint_intss_perform_15");
+  }
+  // Source: c:@S@GeomInt_IntSS@F@Pnt2d#I#b#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomint_intss_pnt2d_16")]
+  private static partial NativeStatus Native_occtsharp_owned_geomint_intss_pnt2d_16(OwnedHandle receiver, int arg0, int arg1, out global::OcctSharp.Values.Point2d result);
+  /// <summary>Invokes GeomInt_IntSS::Pnt2d. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Point2d Pnt2d(int arg0, bool arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomint_intss_pnt2d_16(NativeHandle, arg0, (arg1 ? 1 : 0), out global::OcctSharp.Values.Point2d result), "occtsharp_owned_geomint_intss_pnt2d_16");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@GeomInt_IntSS@F@Point#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomint_intss_point_17")]
+  private static partial NativeStatus Native_occtsharp_owned_geomint_intss_point_17(OwnedHandle receiver, int arg0, out Point3dRaw result);
+  /// <summary>Invokes GeomInt_IntSS::Point. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Point3d Point(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomint_intss_point_17(NativeHandle, arg0, out Point3dRaw result), "occtsharp_owned_geomint_intss_point_17");
+    var managedResult = new Point3d(result.X, result.Y, result.Z);
+    return managedResult;
+  }
+  // Source: c:@S@GeomInt_IntSS@F@TolReached2d#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomint_intss_tolreached2d_18")]
+  private static partial NativeStatus Native_occtsharp_owned_geomint_intss_tolreached2d_18(OwnedHandle receiver, out double result);
+  /// <summary>Invokes GeomInt_IntSS::TolReached2d. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double TolReached2d() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomint_intss_tolreached2d_18(NativeHandle, out double result), "occtsharp_owned_geomint_intss_tolreached2d_18");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@GeomInt_IntSS@F@TolReached3d#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomint_intss_tolreached3d_19")]
+  private static partial NativeStatus Native_occtsharp_owned_geomint_intss_tolreached3d_19(OwnedHandle receiver, out double result);
+  /// <summary>Invokes GeomInt_IntSS::TolReached3d. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double TolReached3d() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomint_intss_tolreached3d_19(NativeHandle, out double result), "occtsharp_owned_geomint_intss_tolreached3d_19");
+    var managedResult = result;
+    return managedResult;
+  }
+}
 /// <summary>Owns a stable-address GeomLProp_CurAndInf2d. Synchronize mutation with other calls; dispose to release native storage.</summary>
 public sealed partial class GeomLPropCurAndInf2d : IDisposable {
   internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
@@ -9418,6 +12863,478 @@ public sealed partial class GeomLPropCurAndInf2d : IDisposable {
     return managedResult;
   }
 }
+/// <summary>Owns a stable-address GeomLib_CheckCurveOnSurface. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class GeomLibCheckCurveOnSurface : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private GeomLibCheckCurveOnSurface(OwnedHandle handle) => _handle = handle;
+  static GeomLibCheckCurveOnSurface() => NativeLibraryResolver.EnsureRegistered(typeof(GeomLibCheckCurveOnSurface).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static GeomLibCheckCurveOnSurface FromNative(nint value) {
+    try { return new GeomLibCheckCurveOnSurface(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomlib_checkcurveonsurface_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@GeomLib_CheckCurveOnSurface@F@ErrorStatus#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomlib_checkcurveonsurface_errorstatus_0")]
+  private static partial NativeStatus Native_occtsharp_owned_geomlib_checkcurveonsurface_errorstatus_0(OwnedHandle receiver, out int result);
+  /// <summary>Invokes GeomLib_CheckCurveOnSurface::ErrorStatus. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int ErrorStatus() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomlib_checkcurveonsurface_errorstatus_0(NativeHandle, out int result), "occtsharp_owned_geomlib_checkcurveonsurface_errorstatus_0");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@GeomLib_CheckCurveOnSurface@F@GeomLib_CheckCurveOnSurface#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomlib_checkcurveonsurface_create_1")]
+  private static partial NativeStatus Native_occtsharp_owned_geomlib_checkcurveonsurface_create_1(out nint result);
+  /// <summary>Invokes GeomLib_CheckCurveOnSurface::GeomLib_CheckCurveOnSurface. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomLibCheckCurveOnSurface Create() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomlib_checkcurveonsurface_create_1(out nint result), "occtsharp_owned_geomlib_checkcurveonsurface_create_1");
+    var managedResult = GeomLibCheckCurveOnSurface.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomLib_CheckCurveOnSurface@F@GeomLib_CheckCurveOnSurface#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomlib_checkcurveonsurface_create_2")]
+  private static partial NativeStatus Native_occtsharp_owned_geomlib_checkcurveonsurface_create_2(Adaptor3dCurveHandle arg0, double arg1, out nint result);
+  /// <summary>Invokes GeomLib_CheckCurveOnSurface::GeomLib_CheckCurveOnSurface. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomLibCheckCurveOnSurface Create(Adaptor3dCurve arg0, double arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomlib_checkcurveonsurface_create_2(arg0.NativeHandle, arg1, out nint result), "occtsharp_owned_geomlib_checkcurveonsurface_create_2");
+    var managedResult = GeomLibCheckCurveOnSurface.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomLib_CheckCurveOnSurface@F@Init#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomlib_checkcurveonsurface_init_3")]
+  private static partial NativeStatus Native_occtsharp_owned_geomlib_checkcurveonsurface_init_3(OwnedHandle receiver);
+  /// <summary>Invokes GeomLib_CheckCurveOnSurface::Init. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Init() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomlib_checkcurveonsurface_init_3(NativeHandle), "occtsharp_owned_geomlib_checkcurveonsurface_init_3");
+  }
+  // Source: c:@S@GeomLib_CheckCurveOnSurface@F@Init#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomlib_checkcurveonsurface_init_4")]
+  private static partial NativeStatus Native_occtsharp_owned_geomlib_checkcurveonsurface_init_4(OwnedHandle receiver, Adaptor3dCurveHandle arg0, double arg1);
+  /// <summary>Invokes GeomLib_CheckCurveOnSurface::Init. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Init(Adaptor3dCurve arg0, double arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomlib_checkcurveonsurface_init_4(NativeHandle, arg0.NativeHandle, arg1), "occtsharp_owned_geomlib_checkcurveonsurface_init_4");
+  }
+  // Source: c:@S@GeomLib_CheckCurveOnSurface@F@IsDone#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomlib_checkcurveonsurface_isdone_5")]
+  private static partial NativeStatus Native_occtsharp_owned_geomlib_checkcurveonsurface_isdone_5(OwnedHandle receiver, out int result);
+  /// <summary>Invokes GeomLib_CheckCurveOnSurface::IsDone. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsDone() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomlib_checkcurveonsurface_isdone_5(NativeHandle, out int result), "occtsharp_owned_geomlib_checkcurveonsurface_isdone_5");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@GeomLib_CheckCurveOnSurface@F@IsParallel#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomlib_checkcurveonsurface_isparallel_6")]
+  private static partial NativeStatus Native_occtsharp_owned_geomlib_checkcurveonsurface_isparallel_6(OwnedHandle receiver, out int result);
+  /// <summary>Invokes GeomLib_CheckCurveOnSurface::IsParallel. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsParallel() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomlib_checkcurveonsurface_isparallel_6(NativeHandle, out int result), "occtsharp_owned_geomlib_checkcurveonsurface_isparallel_6");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@GeomLib_CheckCurveOnSurface@F@MaxDistance#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomlib_checkcurveonsurface_maxdistance_7")]
+  private static partial NativeStatus Native_occtsharp_owned_geomlib_checkcurveonsurface_maxdistance_7(OwnedHandle receiver, out double result);
+  /// <summary>Invokes GeomLib_CheckCurveOnSurface::MaxDistance. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double MaxDistance() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomlib_checkcurveonsurface_maxdistance_7(NativeHandle, out double result), "occtsharp_owned_geomlib_checkcurveonsurface_maxdistance_7");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@GeomLib_CheckCurveOnSurface@F@MaxParameter#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomlib_checkcurveonsurface_maxparameter_8")]
+  private static partial NativeStatus Native_occtsharp_owned_geomlib_checkcurveonsurface_maxparameter_8(OwnedHandle receiver, out double result);
+  /// <summary>Invokes GeomLib_CheckCurveOnSurface::MaxParameter. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double MaxParameter() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomlib_checkcurveonsurface_maxparameter_8(NativeHandle, out double result), "occtsharp_owned_geomlib_checkcurveonsurface_maxparameter_8");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@GeomLib_CheckCurveOnSurface@F@Perform#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_CurveOnSurface#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomlib_checkcurveonsurface_perform_9")]
+  private static partial NativeStatus Native_occtsharp_owned_geomlib_checkcurveonsurface_perform_9(OwnedHandle receiver, Adaptor3dCurveOnSurfaceHandle arg0);
+  /// <summary>Invokes GeomLib_CheckCurveOnSurface::Perform. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Perform(Adaptor3dCurveOnSurface arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomlib_checkcurveonsurface_perform_9(NativeHandle, arg0.NativeHandle), "occtsharp_owned_geomlib_checkcurveonsurface_perform_9");
+  }
+  // Source: c:@S@GeomLib_CheckCurveOnSurface@F@SetParallel#b#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomlib_checkcurveonsurface_setparallel_10")]
+  private static partial NativeStatus Native_occtsharp_owned_geomlib_checkcurveonsurface_setparallel_10(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes GeomLib_CheckCurveOnSurface::SetParallel. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetParallel(bool arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomlib_checkcurveonsurface_setparallel_10(NativeHandle, (arg0 ? 1 : 0)), "occtsharp_owned_geomlib_checkcurveonsurface_setparallel_10");
+  }
+}
+/// <summary>Owns a stable-address GeomLib_IsPlanarSurface. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class GeomLibIsPlanarSurface : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private GeomLibIsPlanarSurface(OwnedHandle handle) => _handle = handle;
+  static GeomLibIsPlanarSurface() => NativeLibraryResolver.EnsureRegistered(typeof(GeomLibIsPlanarSurface).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static GeomLibIsPlanarSurface FromNative(nint value) {
+    try { return new GeomLibIsPlanarSurface(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomlib_isplanarsurface_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@GeomLib_IsPlanarSurface@F@GeomLib_IsPlanarSurface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomlib_isplanarsurface_create_0")]
+  private static partial NativeStatus Native_occtsharp_owned_geomlib_isplanarsurface_create_0(GeomSurfaceHandle arg0, double arg1, out nint result);
+  /// <summary>Invokes GeomLib_IsPlanarSurface::GeomLib_IsPlanarSurface. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomLibIsPlanarSurface Create(GeomSurface arg0, double arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomlib_isplanarsurface_create_0(arg0.NativeHandle, arg1, out nint result), "occtsharp_owned_geomlib_isplanarsurface_create_0");
+    var managedResult = GeomLibIsPlanarSurface.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomLib_IsPlanarSurface@F@IsPlanar#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomlib_isplanarsurface_isplanar_1")]
+  private static partial NativeStatus Native_occtsharp_owned_geomlib_isplanarsurface_isplanar_1(OwnedHandle receiver, out int result);
+  /// <summary>Invokes GeomLib_IsPlanarSurface::IsPlanar. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsPlanar() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomlib_isplanarsurface_isplanar_1(NativeHandle, out int result), "occtsharp_owned_geomlib_isplanarsurface_isplanar_1");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@GeomLib_IsPlanarSurface@F@Plan#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomlib_isplanarsurface_plan_2")]
+  private static partial NativeStatus Native_occtsharp_owned_geomlib_isplanarsurface_plan_2(OwnedHandle receiver, out global::OcctSharp.Values.Plane result);
+  /// <summary>Invokes GeomLib_IsPlanarSurface::Plan. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Plane Plan() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomlib_isplanarsurface_plan_2(NativeHandle, out global::OcctSharp.Values.Plane result), "occtsharp_owned_geomlib_isplanarsurface_plan_2");
+    var managedResult = result;
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address GeomLib_LogSample. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class GeomLibLogSample : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private GeomLibLogSample(OwnedHandle handle) => _handle = handle;
+  static GeomLibLogSample() => NativeLibraryResolver.EnsureRegistered(typeof(GeomLibLogSample).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static GeomLibLogSample FromNative(nint value) {
+    try { return new GeomLibLogSample(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomlib_logsample_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@GeomLib_LogSample@F@GeomLib_LogSample#d#d#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomlib_logsample_create_0")]
+  private static partial NativeStatus Native_occtsharp_owned_geomlib_logsample_create_0(double arg0, double arg1, int arg2, out nint result);
+  /// <summary>Invokes GeomLib_LogSample::GeomLib_LogSample. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomLibLogSample Create(double arg0, double arg1, int arg2) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomlib_logsample_create_0(arg0, arg1, arg2, out nint result), "occtsharp_owned_geomlib_logsample_create_0");
+    var managedResult = GeomLibLogSample.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomLib_LogSample@F@GetParameter#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomlib_logsample_getparameter_1")]
+  private static partial NativeStatus Native_occtsharp_owned_geomlib_logsample_getparameter_1(OwnedHandle receiver, int arg0, out double result);
+  /// <summary>Invokes GeomLib_LogSample::GetParameter. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double GetParameter(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomlib_logsample_getparameter_1(NativeHandle, arg0, out double result), "occtsharp_owned_geomlib_logsample_getparameter_1");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@math_FunctionSample@F@Bounds#&d#S0_#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomlib_logsample_bounds_2")]
+  private static partial NativeStatus Native_occtsharp_owned_geomlib_logsample_bounds_2(OwnedHandle receiver, double arg0, out double updatedArg0, double arg1, out double updatedArg1);
+  /// <summary>Invokes math_FunctionSample::Bounds. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Bounds(ref double arg0, ref double arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomlib_logsample_bounds_2(NativeHandle, arg0, out double updatedArg0, arg1, out double updatedArg1), "occtsharp_owned_geomlib_logsample_bounds_2");
+    arg0 = updatedArg0;
+    arg1 = updatedArg1;
+  }
+  // Source: c:@S@math_FunctionSample@F@NbPoints#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomlib_logsample_nbpoints_3")]
+  private static partial NativeStatus Native_occtsharp_owned_geomlib_logsample_nbpoints_3(OwnedHandle receiver, out int result);
+  /// <summary>Invokes math_FunctionSample::NbPoints. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbPoints() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomlib_logsample_nbpoints_3(NativeHandle, out int result), "occtsharp_owned_geomlib_logsample_nbpoints_3");
+    var managedResult = result;
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address GeomPlate_MakeApprox. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class GeomPlateMakeApprox : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private GeomPlateMakeApprox(OwnedHandle handle) => _handle = handle;
+  static GeomPlateMakeApprox() => NativeLibraryResolver.EnsureRegistered(typeof(GeomPlateMakeApprox).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static GeomPlateMakeApprox FromNative(nint value) {
+    try { return new GeomPlateMakeApprox(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomplate_makeapprox_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@GeomPlate_MakeApprox@F@ApproxError#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomplate_makeapprox_approxerror_0")]
+  private static partial NativeStatus Native_occtsharp_owned_geomplate_makeapprox_approxerror_0(OwnedHandle receiver, out double result);
+  /// <summary>Invokes GeomPlate_MakeApprox::ApproxError. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double ApproxError() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomplate_makeapprox_approxerror_0(NativeHandle, out double result), "occtsharp_owned_geomplate_makeapprox_approxerror_0");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@GeomPlate_MakeApprox@F@CriterionError#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomplate_makeapprox_criterionerror_1")]
+  private static partial NativeStatus Native_occtsharp_owned_geomplate_makeapprox_criterionerror_1(OwnedHandle receiver, out double result);
+  /// <summary>Invokes GeomPlate_MakeApprox::CriterionError. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double CriterionError() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomplate_makeapprox_criterionerror_1(NativeHandle, out double result), "occtsharp_owned_geomplate_makeapprox_criterionerror_1");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@GeomPlate_MakeApprox@F@GeomPlate_MakeApprox#&1$@N@opencascade@S@handle>#$@S@GeomPlate_Surface#d#I#I#d#I#$@E@GeomAbs_Shape#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomplate_makeapprox_create_2")]
+  private static partial NativeStatus Native_occtsharp_owned_geomplate_makeapprox_create_2(GeomPlateSurfaceHandle arg0, double arg1, int arg2, int arg3, double arg4, int arg5, int arg6, double arg7, out nint result);
+  /// <summary>Invokes GeomPlate_MakeApprox::GeomPlate_MakeApprox. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static GeomPlateMakeApprox Create(GeomPlateSurface arg0, double arg1, int arg2, int arg3, double arg4, int arg5, GeomAbsShape arg6, double arg7) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomplate_makeapprox_create_2(arg0.NativeHandle, arg1, arg2, arg3, arg4, arg5, (int)arg6, arg7, out nint result), "occtsharp_owned_geomplate_makeapprox_create_2");
+    var managedResult = GeomPlateMakeApprox.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@GeomPlate_MakeApprox@F@Surface#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_geomplate_makeapprox_surface_3")]
+  private static partial NativeStatus Native_occtsharp_owned_geomplate_makeapprox_surface_3(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes GeomPlate_MakeApprox::Surface. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public GeomBSplineSurface? Surface() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_geomplate_makeapprox_surface_3(NativeHandle, out nint result), "occtsharp_owned_geomplate_makeapprox_surface_3");
+    var managedResult = GeomBSplineSurface.FromNative(result, "occtsharp_owned_geomplate_makeapprox_surface_3");
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address Hatch_Hatcher. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class HatchHatcher : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private HatchHatcher(OwnedHandle handle) => _handle = handle;
+  static HatchHatcher() => NativeLibraryResolver.EnsureRegistered(typeof(HatchHatcher).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static HatchHatcher FromNative(nint value) {
+    try { return new HatchHatcher(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatch_hatcher_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@Hatch_Hatcher@F@AddLine#&1$@S@gp_Dir2d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatch_hatcher_addline_0")]
+  private static partial NativeStatus Native_occtsharp_owned_hatch_hatcher_addline_0(OwnedHandle receiver, global::OcctSharp.Values.Direction2d arg0, double arg1);
+  /// <summary>Invokes Hatch_Hatcher::AddLine. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void AddLine(global::OcctSharp.Values.Direction2d arg0, double arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatch_hatcher_addline_0(NativeHandle, arg0, arg1), "occtsharp_owned_hatch_hatcher_addline_0");
+  }
+  // Source: c:@S@Hatch_Hatcher@F@AddLine#&1$@S@gp_Lin2d#$@E@Hatch_LineForm#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatch_hatcher_addline_1")]
+  private static partial NativeStatus Native_occtsharp_owned_hatch_hatcher_addline_1(OwnedHandle receiver, global::OcctSharp.Values.Line2d arg0, int arg1);
+  /// <summary>Invokes Hatch_Hatcher::AddLine. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void AddLine(global::OcctSharp.Values.Line2d arg0, HatchLineForm arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatch_hatcher_addline_1(NativeHandle, arg0, (int)arg1), "occtsharp_owned_hatch_hatcher_addline_1");
+  }
+  // Source: c:@S@Hatch_Hatcher@F@AddXLine#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatch_hatcher_addxline_2")]
+  private static partial NativeStatus Native_occtsharp_owned_hatch_hatcher_addxline_2(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes Hatch_Hatcher::AddXLine. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void AddXLine(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatch_hatcher_addxline_2(NativeHandle, arg0), "occtsharp_owned_hatch_hatcher_addxline_2");
+  }
+  // Source: c:@S@Hatch_Hatcher@F@AddYLine#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatch_hatcher_addyline_3")]
+  private static partial NativeStatus Native_occtsharp_owned_hatch_hatcher_addyline_3(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes Hatch_Hatcher::AddYLine. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void AddYLine(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatch_hatcher_addyline_3(NativeHandle, arg0), "occtsharp_owned_hatch_hatcher_addyline_3");
+  }
+  // Source: c:@S@Hatch_Hatcher@F@Coordinate#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatch_hatcher_coordinate_4")]
+  private static partial NativeStatus Native_occtsharp_owned_hatch_hatcher_coordinate_4(OwnedHandle receiver, int arg0, out double result);
+  /// <summary>Invokes Hatch_Hatcher::Coordinate. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Coordinate(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatch_hatcher_coordinate_4(NativeHandle, arg0, out double result), "occtsharp_owned_hatch_hatcher_coordinate_4");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Hatch_Hatcher@F@End#I#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatch_hatcher_end_5")]
+  private static partial NativeStatus Native_occtsharp_owned_hatch_hatcher_end_5(OwnedHandle receiver, int arg0, int arg1, out double result);
+  /// <summary>Invokes Hatch_Hatcher::End. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double End(int arg0, int arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatch_hatcher_end_5(NativeHandle, arg0, arg1, out double result), "occtsharp_owned_hatch_hatcher_end_5");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Hatch_Hatcher@F@EndIndex#I#I#&I#&d#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatch_hatcher_endindex_6")]
+  private static partial NativeStatus Native_occtsharp_owned_hatch_hatcher_endindex_6(OwnedHandle receiver, int arg0, int arg1, int arg2, out int updatedArg2, double arg3, out double updatedArg3);
+  /// <summary>Invokes Hatch_Hatcher::EndIndex. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void EndIndex(int arg0, int arg1, ref int arg2, ref double arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatch_hatcher_endindex_6(NativeHandle, arg0, arg1, arg2, out int updatedArg2, arg3, out double updatedArg3), "occtsharp_owned_hatch_hatcher_endindex_6");
+    arg2 = updatedArg2;
+    arg3 = updatedArg3;
+  }
+  // Source: c:@S@Hatch_Hatcher@F@Hatch_Hatcher#d#b#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatch_hatcher_create_7")]
+  private static partial NativeStatus Native_occtsharp_owned_hatch_hatcher_create_7(double arg0, int arg1, out nint result);
+  /// <summary>Invokes Hatch_Hatcher::Hatch_Hatcher. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static HatchHatcher Create(double arg0, bool arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatch_hatcher_create_7(arg0, (arg1 ? 1 : 0), out nint result), "occtsharp_owned_hatch_hatcher_create_7");
+    var managedResult = HatchHatcher.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@Hatch_Hatcher@F@IsXLine#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatch_hatcher_isxline_8")]
+  private static partial NativeStatus Native_occtsharp_owned_hatch_hatcher_isxline_8(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes Hatch_Hatcher::IsXLine. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsXLine(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatch_hatcher_isxline_8(NativeHandle, arg0, out int result), "occtsharp_owned_hatch_hatcher_isxline_8");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Hatch_Hatcher@F@IsYLine#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatch_hatcher_isyline_9")]
+  private static partial NativeStatus Native_occtsharp_owned_hatch_hatcher_isyline_9(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes Hatch_Hatcher::IsYLine. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsYLine(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatch_hatcher_isyline_9(NativeHandle, arg0, out int result), "occtsharp_owned_hatch_hatcher_isyline_9");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@Hatch_Hatcher@F@Line#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatch_hatcher_line_10")]
+  private static partial NativeStatus Native_occtsharp_owned_hatch_hatcher_line_10(OwnedHandle receiver, int arg0, out global::OcctSharp.Values.Line2d result);
+  /// <summary>Invokes Hatch_Hatcher::Line. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Line2d Line(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatch_hatcher_line_10(NativeHandle, arg0, out global::OcctSharp.Values.Line2d result), "occtsharp_owned_hatch_hatcher_line_10");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Hatch_Hatcher@F@LineForm#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatch_hatcher_lineform_11")]
+  private static partial NativeStatus Native_occtsharp_owned_hatch_hatcher_lineform_11(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes Hatch_Hatcher::LineForm. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public HatchLineForm LineForm(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatch_hatcher_lineform_11(NativeHandle, arg0, out int result), "occtsharp_owned_hatch_hatcher_lineform_11");
+    var managedResult = (HatchLineForm)result;
+    return managedResult;
+  }
+  // Source: c:@S@Hatch_Hatcher@F@NbIntervals#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatch_hatcher_nbintervals_12")]
+  private static partial NativeStatus Native_occtsharp_owned_hatch_hatcher_nbintervals_12(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Hatch_Hatcher::NbIntervals. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbIntervals() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatch_hatcher_nbintervals_12(NativeHandle, out int result), "occtsharp_owned_hatch_hatcher_nbintervals_12");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Hatch_Hatcher@F@NbIntervals#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatch_hatcher_nbintervals_13")]
+  private static partial NativeStatus Native_occtsharp_owned_hatch_hatcher_nbintervals_13(OwnedHandle receiver, int arg0, out int result);
+  /// <summary>Invokes Hatch_Hatcher::NbIntervals. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbIntervals(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatch_hatcher_nbintervals_13(NativeHandle, arg0, out int result), "occtsharp_owned_hatch_hatcher_nbintervals_13");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Hatch_Hatcher@F@NbLines#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatch_hatcher_nblines_14")]
+  private static partial NativeStatus Native_occtsharp_owned_hatch_hatcher_nblines_14(OwnedHandle receiver, out int result);
+  /// <summary>Invokes Hatch_Hatcher::NbLines. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbLines() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatch_hatcher_nblines_14(NativeHandle, out int result), "occtsharp_owned_hatch_hatcher_nblines_14");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Hatch_Hatcher@F@Start#I#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatch_hatcher_start_15")]
+  private static partial NativeStatus Native_occtsharp_owned_hatch_hatcher_start_15(OwnedHandle receiver, int arg0, int arg1, out double result);
+  /// <summary>Invokes Hatch_Hatcher::Start. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Start(int arg0, int arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatch_hatcher_start_15(NativeHandle, arg0, arg1, out double result), "occtsharp_owned_hatch_hatcher_start_15");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Hatch_Hatcher@F@StartIndex#I#I#&I#&d#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatch_hatcher_startindex_16")]
+  private static partial NativeStatus Native_occtsharp_owned_hatch_hatcher_startindex_16(OwnedHandle receiver, int arg0, int arg1, int arg2, out int updatedArg2, double arg3, out double updatedArg3);
+  /// <summary>Invokes Hatch_Hatcher::StartIndex. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void StartIndex(int arg0, int arg1, ref int arg2, ref double arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatch_hatcher_startindex_16(NativeHandle, arg0, arg1, arg2, out int updatedArg2, arg3, out double updatedArg3), "occtsharp_owned_hatch_hatcher_startindex_16");
+    arg2 = updatedArg2;
+    arg3 = updatedArg3;
+  }
+  // Source: c:@S@Hatch_Hatcher@F@Tolerance#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatch_hatcher_tolerance_17")]
+  private static partial NativeStatus Native_occtsharp_owned_hatch_hatcher_tolerance_17(OwnedHandle receiver, out double result);
+  /// <summary>Invokes Hatch_Hatcher::Tolerance. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Tolerance() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatch_hatcher_tolerance_17(NativeHandle, out double result), "occtsharp_owned_hatch_hatcher_tolerance_17");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@Hatch_Hatcher@F@Tolerance#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatch_hatcher_tolerance_18")]
+  private static partial NativeStatus Native_occtsharp_owned_hatch_hatcher_tolerance_18(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes Hatch_Hatcher::Tolerance. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Tolerance(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatch_hatcher_tolerance_18(NativeHandle, arg0), "occtsharp_owned_hatch_hatcher_tolerance_18");
+  }
+  // Source: c:@S@Hatch_Hatcher@F@Trim#&1$@S@gp_Lin2d#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatch_hatcher_trim_19")]
+  private static partial NativeStatus Native_occtsharp_owned_hatch_hatcher_trim_19(OwnedHandle receiver, global::OcctSharp.Values.Line2d arg0, int arg1);
+  /// <summary>Invokes Hatch_Hatcher::Trim. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Trim(global::OcctSharp.Values.Line2d arg0, int arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatch_hatcher_trim_19(NativeHandle, arg0, arg1), "occtsharp_owned_hatch_hatcher_trim_19");
+  }
+  // Source: c:@S@Hatch_Hatcher@F@Trim#&1$@S@gp_Lin2d#d#d#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatch_hatcher_trim_20")]
+  private static partial NativeStatus Native_occtsharp_owned_hatch_hatcher_trim_20(OwnedHandle receiver, global::OcctSharp.Values.Line2d arg0, double arg1, double arg2, int arg3);
+  /// <summary>Invokes Hatch_Hatcher::Trim. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Trim(global::OcctSharp.Values.Line2d arg0, double arg1, double arg2, int arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatch_hatcher_trim_20(NativeHandle, arg0, arg1, arg2, arg3), "occtsharp_owned_hatch_hatcher_trim_20");
+  }
+  // Source: c:@S@Hatch_Hatcher@F@Trim#&1$@S@gp_Pnt2d#S0_#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_hatch_hatcher_trim_21")]
+  private static partial NativeStatus Native_occtsharp_owned_hatch_hatcher_trim_21(OwnedHandle receiver, global::OcctSharp.Values.Point2d arg0, global::OcctSharp.Values.Point2d arg1, int arg2);
+  /// <summary>Invokes Hatch_Hatcher::Trim. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Trim(global::OcctSharp.Values.Point2d arg0, global::OcctSharp.Values.Point2d arg1, int arg2) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_hatch_hatcher_trim_21(NativeHandle, arg0, arg1, arg2), "occtsharp_owned_hatch_hatcher_trim_21");
+  }
+}
 /// <summary>Owns a stable-address LProp_CurAndInf. Synchronize mutation with other calls; dispose to release native storage.</summary>
 public sealed partial class LPropCurAndInf : IDisposable {
   internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
@@ -9501,6 +13418,1454 @@ public sealed partial class LPropCurAndInf : IDisposable {
     NativeError.ThrowIfFailed(Native_occtsharp_owned_lprop_curandinf_type_7(NativeHandle, arg0, out int result), "occtsharp_owned_lprop_curandinf_type_7");
     var managedResult = (LPropCIType)result;
     return managedResult;
+  }
+}
+/// <summary>Owns a stable-address MAT2d_CutCurve. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class MAT2dCutCurve : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private MAT2dCutCurve(OwnedHandle handle) => _handle = handle;
+  static MAT2dCutCurve() => NativeLibraryResolver.EnsureRegistered(typeof(MAT2dCutCurve).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static MAT2dCutCurve FromNative(nint value) {
+    try { return new MAT2dCutCurve(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_mat2d_cutcurve_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@MAT2d_CutCurve@F@MAT2d_CutCurve#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_mat2d_cutcurve_create_0")]
+  private static partial NativeStatus Native_occtsharp_owned_mat2d_cutcurve_create_0(out nint result);
+  /// <summary>Invokes MAT2d_CutCurve::MAT2d_CutCurve. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static MAT2dCutCurve Create() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_mat2d_cutcurve_create_0(out nint result), "occtsharp_owned_mat2d_cutcurve_create_0");
+    var managedResult = MAT2dCutCurve.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@MAT2d_CutCurve@F@MAT2d_CutCurve#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_mat2d_cutcurve_create_1")]
+  private static partial NativeStatus Native_occtsharp_owned_mat2d_cutcurve_create_1(Geom2dCurveHandle arg0, out nint result);
+  /// <summary>Invokes MAT2d_CutCurve::MAT2d_CutCurve. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static MAT2dCutCurve Create(Geom2dCurve arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_mat2d_cutcurve_create_1(arg0.NativeHandle, out nint result), "occtsharp_owned_mat2d_cutcurve_create_1");
+    var managedResult = MAT2dCutCurve.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@MAT2d_CutCurve@F@NbCurves#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_mat2d_cutcurve_nbcurves_2")]
+  private static partial NativeStatus Native_occtsharp_owned_mat2d_cutcurve_nbcurves_2(OwnedHandle receiver, out int result);
+  /// <summary>Invokes MAT2d_CutCurve::NbCurves. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int NbCurves() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_mat2d_cutcurve_nbcurves_2(NativeHandle, out int result), "occtsharp_owned_mat2d_cutcurve_nbcurves_2");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@MAT2d_CutCurve@F@Perform#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_mat2d_cutcurve_perform_3")]
+  private static partial NativeStatus Native_occtsharp_owned_mat2d_cutcurve_perform_3(OwnedHandle receiver, Geom2dCurveHandle arg0);
+  /// <summary>Invokes MAT2d_CutCurve::Perform. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Perform(Geom2dCurve arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_mat2d_cutcurve_perform_3(NativeHandle, arg0.NativeHandle), "occtsharp_owned_mat2d_cutcurve_perform_3");
+  }
+  // Source: c:@S@MAT2d_CutCurve@F@UnModified#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_mat2d_cutcurve_unmodified_4")]
+  private static partial NativeStatus Native_occtsharp_owned_mat2d_cutcurve_unmodified_4(OwnedHandle receiver, out int result);
+  /// <summary>Invokes MAT2d_CutCurve::UnModified. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool UnModified() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_mat2d_cutcurve_unmodified_4(NativeHandle, out int result), "occtsharp_owned_mat2d_cutcurve_unmodified_4");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@MAT2d_CutCurve@F@Value#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_mat2d_cutcurve_value_5")]
+  private static partial NativeStatus Native_occtsharp_owned_mat2d_cutcurve_value_5(OwnedHandle receiver, int arg0, out nint result);
+  /// <summary>Invokes MAT2d_CutCurve::Value. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Geom2dTrimmedCurve? Value(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_mat2d_cutcurve_value_5(NativeHandle, arg0, out nint result), "occtsharp_owned_mat2d_cutcurve_value_5");
+    var managedResult = Geom2dTrimmedCurve.FromNative(result, "occtsharp_owned_mat2d_cutcurve_value_5");
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address NLPlate_NLPlate. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class NLPlateNLPlate : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private NLPlateNLPlate(OwnedHandle handle) => _handle = handle;
+  static NLPlateNLPlate() => NativeLibraryResolver.EnsureRegistered(typeof(NLPlateNLPlate).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static NLPlateNLPlate FromNative(nint value) {
+    try { return new NLPlateNLPlate(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_nlplate_nlplate_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@NLPlate_NLPlate@F@ConstraintsSliding#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_nlplate_nlplate_constraintssliding_0")]
+  private static partial NativeStatus Native_occtsharp_owned_nlplate_nlplate_constraintssliding_0(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes NLPlate_NLPlate::ConstraintsSliding. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void ConstraintsSliding(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_nlplate_nlplate_constraintssliding_0(NativeHandle, arg0), "occtsharp_owned_nlplate_nlplate_constraintssliding_0");
+  }
+  // Source: c:@S@NLPlate_NLPlate@F@Continuity#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_nlplate_nlplate_continuity_1")]
+  private static partial NativeStatus Native_occtsharp_owned_nlplate_nlplate_continuity_1(OwnedHandle receiver, out int result);
+  /// <summary>Invokes NLPlate_NLPlate::Continuity. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int Continuity() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_nlplate_nlplate_continuity_1(NativeHandle, out int result), "occtsharp_owned_nlplate_nlplate_continuity_1");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@NLPlate_NLPlate@F@Evaluate#&1$@S@gp_XY#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_nlplate_nlplate_evaluate_2")]
+  private static partial NativeStatus Native_occtsharp_owned_nlplate_nlplate_evaluate_2(OwnedHandle receiver, global::OcctSharp.Values.Coordinates2d arg0, out global::OcctSharp.Values.Coordinates3d result);
+  /// <summary>Invokes NLPlate_NLPlate::Evaluate. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Coordinates3d Evaluate(global::OcctSharp.Values.Coordinates2d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_nlplate_nlplate_evaluate_2(NativeHandle, arg0, out global::OcctSharp.Values.Coordinates3d result), "occtsharp_owned_nlplate_nlplate_evaluate_2");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@NLPlate_NLPlate@F@EvaluateDerivative#&1$@S@gp_XY#I#I#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_nlplate_nlplate_evaluatederivative_3")]
+  private static partial NativeStatus Native_occtsharp_owned_nlplate_nlplate_evaluatederivative_3(OwnedHandle receiver, global::OcctSharp.Values.Coordinates2d arg0, int arg1, int arg2, out global::OcctSharp.Values.Coordinates3d result);
+  /// <summary>Invokes NLPlate_NLPlate::EvaluateDerivative. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Coordinates3d EvaluateDerivative(global::OcctSharp.Values.Coordinates2d arg0, int arg1, int arg2) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_nlplate_nlplate_evaluatederivative_3(NativeHandle, arg0, arg1, arg2, out global::OcctSharp.Values.Coordinates3d result), "occtsharp_owned_nlplate_nlplate_evaluatederivative_3");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@NLPlate_NLPlate@F@IncrementalSolve#I#I#I#b#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_nlplate_nlplate_incrementalsolve_4")]
+  private static partial NativeStatus Native_occtsharp_owned_nlplate_nlplate_incrementalsolve_4(OwnedHandle receiver, int arg0, int arg1, int arg2, int arg3);
+  /// <summary>Invokes NLPlate_NLPlate::IncrementalSolve. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void IncrementalSolve(int arg0, int arg1, int arg2, bool arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_nlplate_nlplate_incrementalsolve_4(NativeHandle, arg0, arg1, arg2, (arg3 ? 1 : 0)), "occtsharp_owned_nlplate_nlplate_incrementalsolve_4");
+  }
+  // Source: c:@S@NLPlate_NLPlate@F@Init#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_nlplate_nlplate_init_5")]
+  private static partial NativeStatus Native_occtsharp_owned_nlplate_nlplate_init_5(OwnedHandle receiver);
+  /// <summary>Invokes NLPlate_NLPlate::Init. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Init() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_nlplate_nlplate_init_5(NativeHandle), "occtsharp_owned_nlplate_nlplate_init_5");
+  }
+  // Source: c:@S@NLPlate_NLPlate@F@IsDone#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_nlplate_nlplate_isdone_6")]
+  private static partial NativeStatus Native_occtsharp_owned_nlplate_nlplate_isdone_6(OwnedHandle receiver, out int result);
+  /// <summary>Invokes NLPlate_NLPlate::IsDone. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsDone() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_nlplate_nlplate_isdone_6(NativeHandle, out int result), "occtsharp_owned_nlplate_nlplate_isdone_6");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@NLPlate_NLPlate@F@Load#&1$@N@opencascade@S@handle>#$@S@NLPlate_HGPPConstraint#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_nlplate_nlplate_load_7")]
+  private static partial NativeStatus Native_occtsharp_owned_nlplate_nlplate_load_7(OwnedHandle receiver, NLPlateHGPPConstraintHandle arg0);
+  /// <summary>Invokes NLPlate_NLPlate::Load. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Load(NLPlateHGPPConstraint arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_nlplate_nlplate_load_7(NativeHandle, arg0.NativeHandle), "occtsharp_owned_nlplate_nlplate_load_7");
+  }
+  // Source: c:@S@NLPlate_NLPlate@F@MaxActiveConstraintOrder#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_nlplate_nlplate_maxactiveconstraintorder_8")]
+  private static partial NativeStatus Native_occtsharp_owned_nlplate_nlplate_maxactiveconstraintorder_8(OwnedHandle receiver, out int result);
+  /// <summary>Invokes NLPlate_NLPlate::MaxActiveConstraintOrder. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public int MaxActiveConstraintOrder() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_nlplate_nlplate_maxactiveconstraintorder_8(NativeHandle, out int result), "occtsharp_owned_nlplate_nlplate_maxactiveconstraintorder_8");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@NLPlate_NLPlate@F@NLPlate_NLPlate#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_nlplate_nlplate_create_9")]
+  private static partial NativeStatus Native_occtsharp_owned_nlplate_nlplate_create_9(GeomSurfaceHandle arg0, out nint result);
+  /// <summary>Invokes NLPlate_NLPlate::NLPlate_NLPlate. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static NLPlateNLPlate Create(GeomSurface arg0) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_nlplate_nlplate_create_9(arg0.NativeHandle, out nint result), "occtsharp_owned_nlplate_nlplate_create_9");
+    var managedResult = NLPlateNLPlate.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@NLPlate_NLPlate@F@Solve#I#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_nlplate_nlplate_solve_10")]
+  private static partial NativeStatus Native_occtsharp_owned_nlplate_nlplate_solve_10(OwnedHandle receiver, int arg0, int arg1);
+  /// <summary>Invokes NLPlate_NLPlate::Solve. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Solve(int arg0, int arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_nlplate_nlplate_solve_10(NativeHandle, arg0, arg1), "occtsharp_owned_nlplate_nlplate_solve_10");
+  }
+  // Source: c:@S@NLPlate_NLPlate@F@Solve2#I#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_nlplate_nlplate_solve2_11")]
+  private static partial NativeStatus Native_occtsharp_owned_nlplate_nlplate_solve2_11(OwnedHandle receiver, int arg0, int arg1);
+  /// <summary>Invokes NLPlate_NLPlate::Solve2. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Solve2(int arg0, int arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_nlplate_nlplate_solve2_11(NativeHandle, arg0, arg1), "occtsharp_owned_nlplate_nlplate_solve2_11");
+  }
+}
+/// <summary>Owns a stable-address ProjLib_ComputeApprox. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class ProjLibComputeApprox : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private ProjLibComputeApprox(OwnedHandle handle) => _handle = handle;
+  static ProjLibComputeApprox() => NativeLibraryResolver.EnsureRegistered(typeof(ProjLibComputeApprox).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static ProjLibComputeApprox FromNative(nint value) {
+    try { return new ProjLibComputeApprox(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapprox_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@ProjLib_ComputeApprox@F@BSpline#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapprox_bspline_0")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_computeapprox_bspline_0(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes ProjLib_ComputeApprox::BSpline. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Geom2dBSplineCurve? BSpline() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_computeapprox_bspline_0(NativeHandle, out nint result), "occtsharp_owned_projlib_computeapprox_bspline_0");
+    var managedResult = Geom2dBSplineCurve.FromNative(result, "occtsharp_owned_projlib_computeapprox_bspline_0");
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_ComputeApprox@F@Bezier#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapprox_bezier_1")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_computeapprox_bezier_1(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes ProjLib_ComputeApprox::Bezier. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Geom2dBezierCurve? Bezier() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_computeapprox_bezier_1(NativeHandle, out nint result), "occtsharp_owned_projlib_computeapprox_bezier_1");
+    var managedResult = Geom2dBezierCurve.FromNative(result, "occtsharp_owned_projlib_computeapprox_bezier_1");
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_ComputeApprox@F@Perform#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapprox_perform_2")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_computeapprox_perform_2(OwnedHandle receiver, Adaptor3dCurveHandle arg0, Adaptor3dSurfaceHandle arg1);
+  /// <summary>Invokes ProjLib_ComputeApprox::Perform. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Perform(Adaptor3dCurve arg0, Adaptor3dSurface arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_computeapprox_perform_2(NativeHandle, arg0.NativeHandle, arg1.NativeHandle), "occtsharp_owned_projlib_computeapprox_perform_2");
+  }
+  // Source: c:@S@ProjLib_ComputeApprox@F@ProjLib_ComputeApprox#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapprox_create_3")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_computeapprox_create_3(out nint result);
+  /// <summary>Invokes ProjLib_ComputeApprox::ProjLib_ComputeApprox. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ProjLibComputeApprox Create() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_computeapprox_create_3(out nint result), "occtsharp_owned_projlib_computeapprox_create_3");
+    var managedResult = ProjLibComputeApprox.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_ComputeApprox@F@ProjLib_ComputeApprox#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapprox_create_4")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_computeapprox_create_4(Adaptor3dCurveHandle arg0, Adaptor3dSurfaceHandle arg1, double arg2, out nint result);
+  /// <summary>Invokes ProjLib_ComputeApprox::ProjLib_ComputeApprox. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ProjLibComputeApprox Create(Adaptor3dCurve arg0, Adaptor3dSurface arg1, double arg2) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_computeapprox_create_4(arg0.NativeHandle, arg1.NativeHandle, arg2, out nint result), "occtsharp_owned_projlib_computeapprox_create_4");
+    var managedResult = ProjLibComputeApprox.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_ComputeApprox@F@SetBndPnt#$@E@AppParCurves_Constraint#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapprox_setbndpnt_5")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_computeapprox_setbndpnt_5(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes ProjLib_ComputeApprox::SetBndPnt. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetBndPnt(AppParCurvesConstraint arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_computeapprox_setbndpnt_5(NativeHandle, (int)arg0), "occtsharp_owned_projlib_computeapprox_setbndpnt_5");
+  }
+  // Source: c:@S@ProjLib_ComputeApprox@F@SetDegree#I#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapprox_setdegree_6")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_computeapprox_setdegree_6(OwnedHandle receiver, int arg0, int arg1);
+  /// <summary>Invokes ProjLib_ComputeApprox::SetDegree. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetDegree(int arg0, int arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_computeapprox_setdegree_6(NativeHandle, arg0, arg1), "occtsharp_owned_projlib_computeapprox_setdegree_6");
+  }
+  // Source: c:@S@ProjLib_ComputeApprox@F@SetMaxSegments#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapprox_setmaxsegments_7")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_computeapprox_setmaxsegments_7(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes ProjLib_ComputeApprox::SetMaxSegments. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetMaxSegments(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_computeapprox_setmaxsegments_7(NativeHandle, arg0), "occtsharp_owned_projlib_computeapprox_setmaxsegments_7");
+  }
+  // Source: c:@S@ProjLib_ComputeApprox@F@SetTolerance#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapprox_settolerance_8")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_computeapprox_settolerance_8(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes ProjLib_ComputeApprox::SetTolerance. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetTolerance(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_computeapprox_settolerance_8(NativeHandle, arg0), "occtsharp_owned_projlib_computeapprox_settolerance_8");
+  }
+  // Source: c:@S@ProjLib_ComputeApprox@F@Tolerance#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapprox_tolerance_9")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_computeapprox_tolerance_9(OwnedHandle receiver, out double result);
+  /// <summary>Invokes ProjLib_ComputeApprox::Tolerance. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Tolerance() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_computeapprox_tolerance_9(NativeHandle, out double result), "occtsharp_owned_projlib_computeapprox_tolerance_9");
+    var managedResult = result;
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address ProjLib_ComputeApproxOnPolarSurface. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class ProjLibComputeApproxOnPolarSurface : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private ProjLibComputeApproxOnPolarSurface(OwnedHandle handle) => _handle = handle;
+  static ProjLibComputeApproxOnPolarSurface() => NativeLibraryResolver.EnsureRegistered(typeof(ProjLibComputeApproxOnPolarSurface).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static ProjLibComputeApproxOnPolarSurface FromNative(nint value) {
+    try { return new ProjLibComputeApproxOnPolarSurface(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapproxonpolarsurface_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@ProjLib_ComputeApproxOnPolarSurface@F@BSpline#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapproxonpolarsurface_bspline_0")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_computeapproxonpolarsurface_bspline_0(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes ProjLib_ComputeApproxOnPolarSurface::BSpline. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Geom2dBSplineCurve? BSpline() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_computeapproxonpolarsurface_bspline_0(NativeHandle, out nint result), "occtsharp_owned_projlib_computeapproxonpolarsurface_bspline_0");
+    var managedResult = Geom2dBSplineCurve.FromNative(result, "occtsharp_owned_projlib_computeapproxonpolarsurface_bspline_0");
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_ComputeApproxOnPolarSurface@F@BuildInitialCurve2d#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapproxonpolarsurface_buildinitialcurve2d_1")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_computeapproxonpolarsurface_buildinitialcurve2d_1(OwnedHandle receiver, Adaptor3dCurveHandle arg0, Adaptor3dSurfaceHandle arg1, out nint result);
+  /// <summary>Invokes ProjLib_ComputeApproxOnPolarSurface::BuildInitialCurve2d. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Adaptor2dCurve2d? BuildInitialCurve2d(Adaptor3dCurve arg0, Adaptor3dSurface arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_computeapproxonpolarsurface_buildinitialcurve2d_1(NativeHandle, arg0.NativeHandle, arg1.NativeHandle, out nint result), "occtsharp_owned_projlib_computeapproxonpolarsurface_buildinitialcurve2d_1");
+    var managedResult = Adaptor2dCurve2d.FromNative(result, "occtsharp_owned_projlib_computeapproxonpolarsurface_buildinitialcurve2d_1");
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_ComputeApproxOnPolarSurface@F@Curve2d#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapproxonpolarsurface_curve2d_2")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_computeapproxonpolarsurface_curve2d_2(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes ProjLib_ComputeApproxOnPolarSurface::Curve2d. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Geom2dCurve? Curve2d() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_computeapproxonpolarsurface_curve2d_2(NativeHandle, out nint result), "occtsharp_owned_projlib_computeapproxonpolarsurface_curve2d_2");
+    var managedResult = Geom2dCurve.FromNative(result, "occtsharp_owned_projlib_computeapproxonpolarsurface_curve2d_2");
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_ComputeApproxOnPolarSurface@F@IsDone#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapproxonpolarsurface_isdone_3")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_computeapproxonpolarsurface_isdone_3(OwnedHandle receiver, out int result);
+  /// <summary>Invokes ProjLib_ComputeApproxOnPolarSurface::IsDone. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsDone() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_computeapproxonpolarsurface_isdone_3(NativeHandle, out int result), "occtsharp_owned_projlib_computeapproxonpolarsurface_isdone_3");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_ComputeApproxOnPolarSurface@F@Perform#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapproxonpolarsurface_perform_4")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_computeapproxonpolarsurface_perform_4(OwnedHandle receiver, Adaptor2dCurve2dHandle arg0, Adaptor3dCurveHandle arg1, Adaptor3dSurfaceHandle arg2, out nint result);
+  /// <summary>Invokes ProjLib_ComputeApproxOnPolarSurface::Perform. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Geom2dBSplineCurve? Perform(Adaptor2dCurve2d arg0, Adaptor3dCurve arg1, Adaptor3dSurface arg2) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    ArgumentNullException.ThrowIfNull(arg2);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_computeapproxonpolarsurface_perform_4(NativeHandle, arg0.NativeHandle, arg1.NativeHandle, arg2.NativeHandle, out nint result), "occtsharp_owned_projlib_computeapproxonpolarsurface_perform_4");
+    var managedResult = Geom2dBSplineCurve.FromNative(result, "occtsharp_owned_projlib_computeapproxonpolarsurface_perform_4");
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_ComputeApproxOnPolarSurface@F@Perform#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapproxonpolarsurface_perform_5")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_computeapproxonpolarsurface_perform_5(OwnedHandle receiver, Adaptor3dCurveHandle arg0, Adaptor3dSurfaceHandle arg1);
+  /// <summary>Invokes ProjLib_ComputeApproxOnPolarSurface::Perform. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Perform(Adaptor3dCurve arg0, Adaptor3dSurface arg1) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_computeapproxonpolarsurface_perform_5(NativeHandle, arg0.NativeHandle, arg1.NativeHandle), "occtsharp_owned_projlib_computeapproxonpolarsurface_perform_5");
+  }
+  // Source: c:@S@ProjLib_ComputeApproxOnPolarSurface@F@ProjLib_ComputeApproxOnPolarSurface#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapproxonpolarsurface_create_6")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_computeapproxonpolarsurface_create_6(Adaptor2dCurve2dHandle arg0, Adaptor3dCurveHandle arg1, Adaptor3dSurfaceHandle arg2, double arg3, out nint result);
+  /// <summary>Invokes ProjLib_ComputeApproxOnPolarSurface::ProjLib_ComputeApproxOnPolarSurface. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ProjLibComputeApproxOnPolarSurface Create(Adaptor2dCurve2d arg0, Adaptor3dCurve arg1, Adaptor3dSurface arg2, double arg3) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    ArgumentNullException.ThrowIfNull(arg2);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_computeapproxonpolarsurface_create_6(arg0.NativeHandle, arg1.NativeHandle, arg2.NativeHandle, arg3, out nint result), "occtsharp_owned_projlib_computeapproxonpolarsurface_create_6");
+    var managedResult = ProjLibComputeApproxOnPolarSurface.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_ComputeApproxOnPolarSurface@F@ProjLib_ComputeApproxOnPolarSurface#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#S0_#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapproxonpolarsurface_create_7")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_computeapproxonpolarsurface_create_7(Adaptor2dCurve2dHandle arg0, Adaptor2dCurve2dHandle arg1, Adaptor3dCurveHandle arg2, Adaptor3dSurfaceHandle arg3, double arg4, out nint result);
+  /// <summary>Invokes ProjLib_ComputeApproxOnPolarSurface::ProjLib_ComputeApproxOnPolarSurface. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ProjLibComputeApproxOnPolarSurface Create(Adaptor2dCurve2d arg0, Adaptor2dCurve2d arg1, Adaptor3dCurve arg2, Adaptor3dSurface arg3, double arg4) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    ArgumentNullException.ThrowIfNull(arg2);
+    ArgumentNullException.ThrowIfNull(arg3);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_computeapproxonpolarsurface_create_7(arg0.NativeHandle, arg1.NativeHandle, arg2.NativeHandle, arg3.NativeHandle, arg4, out nint result), "occtsharp_owned_projlib_computeapproxonpolarsurface_create_7");
+    var managedResult = ProjLibComputeApproxOnPolarSurface.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_ComputeApproxOnPolarSurface@F@ProjLib_ComputeApproxOnPolarSurface#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapproxonpolarsurface_create_8")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_computeapproxonpolarsurface_create_8(Adaptor3dCurveHandle arg0, Adaptor3dSurfaceHandle arg1, double arg2, out nint result);
+  /// <summary>Invokes ProjLib_ComputeApproxOnPolarSurface::ProjLib_ComputeApproxOnPolarSurface. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ProjLibComputeApproxOnPolarSurface Create(Adaptor3dCurve arg0, Adaptor3dSurface arg1, double arg2) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_computeapproxonpolarsurface_create_8(arg0.NativeHandle, arg1.NativeHandle, arg2, out nint result), "occtsharp_owned_projlib_computeapproxonpolarsurface_create_8");
+    var managedResult = ProjLibComputeApproxOnPolarSurface.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_ComputeApproxOnPolarSurface@F@ProjectUsingInitialCurve2d#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapproxonpolarsurface_projectusinginitialcurve2d_9")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_computeapproxonpolarsurface_projectusinginitialcurve2d_9(OwnedHandle receiver, Adaptor3dCurveHandle arg0, Adaptor3dSurfaceHandle arg1, Adaptor2dCurve2dHandle arg2, out nint result);
+  /// <summary>Invokes ProjLib_ComputeApproxOnPolarSurface::ProjectUsingInitialCurve2d. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Geom2dBSplineCurve? ProjectUsingInitialCurve2d(Adaptor3dCurve arg0, Adaptor3dSurface arg1, Adaptor2dCurve2d arg2) {
+    ArgumentNullException.ThrowIfNull(arg0);
+    ArgumentNullException.ThrowIfNull(arg1);
+    ArgumentNullException.ThrowIfNull(arg2);
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_computeapproxonpolarsurface_projectusinginitialcurve2d_9(NativeHandle, arg0.NativeHandle, arg1.NativeHandle, arg2.NativeHandle, out nint result), "occtsharp_owned_projlib_computeapproxonpolarsurface_projectusinginitialcurve2d_9");
+    var managedResult = Geom2dBSplineCurve.FromNative(result, "occtsharp_owned_projlib_computeapproxonpolarsurface_projectusinginitialcurve2d_9");
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_ComputeApproxOnPolarSurface@F@SetBndPnt#$@E@AppParCurves_Constraint#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapproxonpolarsurface_setbndpnt_10")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_computeapproxonpolarsurface_setbndpnt_10(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes ProjLib_ComputeApproxOnPolarSurface::SetBndPnt. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetBndPnt(AppParCurvesConstraint arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_computeapproxonpolarsurface_setbndpnt_10(NativeHandle, (int)arg0), "occtsharp_owned_projlib_computeapproxonpolarsurface_setbndpnt_10");
+  }
+  // Source: c:@S@ProjLib_ComputeApproxOnPolarSurface@F@SetDegree#I#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapproxonpolarsurface_setdegree_11")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_computeapproxonpolarsurface_setdegree_11(OwnedHandle receiver, int arg0, int arg1);
+  /// <summary>Invokes ProjLib_ComputeApproxOnPolarSurface::SetDegree. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetDegree(int arg0, int arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_computeapproxonpolarsurface_setdegree_11(NativeHandle, arg0, arg1), "occtsharp_owned_projlib_computeapproxonpolarsurface_setdegree_11");
+  }
+  // Source: c:@S@ProjLib_ComputeApproxOnPolarSurface@F@SetMaxDist#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapproxonpolarsurface_setmaxdist_12")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_computeapproxonpolarsurface_setmaxdist_12(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes ProjLib_ComputeApproxOnPolarSurface::SetMaxDist. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetMaxDist(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_computeapproxonpolarsurface_setmaxdist_12(NativeHandle, arg0), "occtsharp_owned_projlib_computeapproxonpolarsurface_setmaxdist_12");
+  }
+  // Source: c:@S@ProjLib_ComputeApproxOnPolarSurface@F@SetMaxSegments#I#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapproxonpolarsurface_setmaxsegments_13")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_computeapproxonpolarsurface_setmaxsegments_13(OwnedHandle receiver, int arg0);
+  /// <summary>Invokes ProjLib_ComputeApproxOnPolarSurface::SetMaxSegments. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetMaxSegments(int arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_computeapproxonpolarsurface_setmaxsegments_13(NativeHandle, arg0), "occtsharp_owned_projlib_computeapproxonpolarsurface_setmaxsegments_13");
+  }
+  // Source: c:@S@ProjLib_ComputeApproxOnPolarSurface@F@SetTolerance#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapproxonpolarsurface_settolerance_14")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_computeapproxonpolarsurface_settolerance_14(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes ProjLib_ComputeApproxOnPolarSurface::SetTolerance. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetTolerance(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_computeapproxonpolarsurface_settolerance_14(NativeHandle, arg0), "occtsharp_owned_projlib_computeapproxonpolarsurface_settolerance_14");
+  }
+  // Source: c:@S@ProjLib_ComputeApproxOnPolarSurface@F@Tolerance#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_computeapproxonpolarsurface_tolerance_15")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_computeapproxonpolarsurface_tolerance_15(OwnedHandle receiver, out double result);
+  /// <summary>Invokes ProjLib_ComputeApproxOnPolarSurface::Tolerance. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public double Tolerance() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_computeapproxonpolarsurface_tolerance_15(NativeHandle, out double result), "occtsharp_owned_projlib_computeapproxonpolarsurface_tolerance_15");
+    var managedResult = result;
+    return managedResult;
+  }
+}
+/// <summary>Owns a stable-address ProjLib_Cone. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class ProjLibCone : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private ProjLibCone(OwnedHandle handle) => _handle = handle;
+  static ProjLibCone() => NativeLibraryResolver.EnsureRegistered(typeof(ProjLibCone).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static ProjLibCone FromNative(nint value) {
+    try { return new ProjLibCone(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cone_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@ProjLib_Cone@F@Init#&1$@S@gp_Cone#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cone_init_0")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cone_init_0(OwnedHandle receiver, global::OcctSharp.Values.Cone arg0);
+  /// <summary>Invokes ProjLib_Cone::Init. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Init(global::OcctSharp.Values.Cone arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cone_init_0(NativeHandle, arg0), "occtsharp_owned_projlib_cone_init_0");
+  }
+  // Source: c:@S@ProjLib_Cone@F@ProjLib_Cone#&1$@S@gp_Cone#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cone_create_1")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cone_create_1(global::OcctSharp.Values.Cone arg0, out nint result);
+  /// <summary>Invokes ProjLib_Cone::ProjLib_Cone. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ProjLibCone Create(global::OcctSharp.Values.Cone arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cone_create_1(arg0, out nint result), "occtsharp_owned_projlib_cone_create_1");
+    var managedResult = ProjLibCone.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Cone@F@ProjLib_Cone#&1$@S@gp_Cone#&1$@S@gp_Circ#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cone_create_2")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cone_create_2(global::OcctSharp.Values.Cone arg0, global::OcctSharp.Values.Circle3d arg1, out nint result);
+  /// <summary>Invokes ProjLib_Cone::ProjLib_Cone. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ProjLibCone Create(global::OcctSharp.Values.Cone arg0, global::OcctSharp.Values.Circle3d arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cone_create_2(arg0, arg1, out nint result), "occtsharp_owned_projlib_cone_create_2");
+    var managedResult = ProjLibCone.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Cone@F@ProjLib_Cone#&1$@S@gp_Cone#&1$@S@gp_Lin#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cone_create_3")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cone_create_3(global::OcctSharp.Values.Cone arg0, global::OcctSharp.Values.Line3d arg1, out nint result);
+  /// <summary>Invokes ProjLib_Cone::ProjLib_Cone. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ProjLibCone Create(global::OcctSharp.Values.Cone arg0, global::OcctSharp.Values.Line3d arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cone_create_3(arg0, arg1, out nint result), "occtsharp_owned_projlib_cone_create_3");
+    var managedResult = ProjLibCone.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Cone@F@Project#&1$@S@gp_Circ#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cone_project_4")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cone_project_4(OwnedHandle receiver, global::OcctSharp.Values.Circle3d arg0);
+  /// <summary>Invokes ProjLib_Cone::Project. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Project(global::OcctSharp.Values.Circle3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cone_project_4(NativeHandle, arg0), "occtsharp_owned_projlib_cone_project_4");
+  }
+  // Source: c:@S@ProjLib_Cone@F@Project#&1$@S@gp_Elips#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cone_project_5")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cone_project_5(OwnedHandle receiver, global::OcctSharp.Values.Ellipse3d arg0);
+  /// <summary>Invokes ProjLib_Cone::Project. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Project(global::OcctSharp.Values.Ellipse3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cone_project_5(NativeHandle, arg0), "occtsharp_owned_projlib_cone_project_5");
+  }
+  // Source: c:@S@ProjLib_Cone@F@Project#&1$@S@gp_Hypr#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cone_project_6")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cone_project_6(OwnedHandle receiver, global::OcctSharp.Values.Hyperbola3d arg0);
+  /// <summary>Invokes ProjLib_Cone::Project. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Project(global::OcctSharp.Values.Hyperbola3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cone_project_6(NativeHandle, arg0), "occtsharp_owned_projlib_cone_project_6");
+  }
+  // Source: c:@S@ProjLib_Cone@F@Project#&1$@S@gp_Lin#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cone_project_7")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cone_project_7(OwnedHandle receiver, global::OcctSharp.Values.Line3d arg0);
+  /// <summary>Invokes ProjLib_Cone::Project. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Project(global::OcctSharp.Values.Line3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cone_project_7(NativeHandle, arg0), "occtsharp_owned_projlib_cone_project_7");
+  }
+  // Source: c:@S@ProjLib_Cone@F@Project#&1$@S@gp_Parab#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cone_project_8")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cone_project_8(OwnedHandle receiver, global::OcctSharp.Values.Parabola3d arg0);
+  /// <summary>Invokes ProjLib_Cone::Project. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Project(global::OcctSharp.Values.Parabola3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cone_project_8(NativeHandle, arg0), "occtsharp_owned_projlib_cone_project_8");
+  }
+  // Source: c:@S@ProjLib_Projector@F@BSpline#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cone_bspline_9")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cone_bspline_9(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes ProjLib_Projector::BSpline. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Geom2dBSplineCurve? BSpline() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cone_bspline_9(NativeHandle, out nint result), "occtsharp_owned_projlib_cone_bspline_9");
+    var managedResult = Geom2dBSplineCurve.FromNative(result, "occtsharp_owned_projlib_cone_bspline_9");
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Bezier#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cone_bezier_10")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cone_bezier_10(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes ProjLib_Projector::Bezier. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Geom2dBezierCurve? Bezier() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cone_bezier_10(NativeHandle, out nint result), "occtsharp_owned_projlib_cone_bezier_10");
+    var managedResult = Geom2dBezierCurve.FromNative(result, "occtsharp_owned_projlib_cone_bezier_10");
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Circle#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cone_circle_11")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cone_circle_11(OwnedHandle receiver, out global::OcctSharp.Values.Circle2d result);
+  /// <summary>Invokes ProjLib_Projector::Circle. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Circle2d Circle() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cone_circle_11(NativeHandle, out global::OcctSharp.Values.Circle2d result), "occtsharp_owned_projlib_cone_circle_11");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Ellipse#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cone_ellipse_12")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cone_ellipse_12(OwnedHandle receiver, out global::OcctSharp.Values.Ellipse2d result);
+  /// <summary>Invokes ProjLib_Projector::Ellipse. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Ellipse2d Ellipse() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cone_ellipse_12(NativeHandle, out global::OcctSharp.Values.Ellipse2d result), "occtsharp_owned_projlib_cone_ellipse_12");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@GetType#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cone_gettype_13")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cone_gettype_13(OwnedHandle receiver, out int result);
+  /// <summary>Invokes ProjLib_Projector::GetType. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public new GeomAbsCurveType GetType() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cone_gettype_13(NativeHandle, out int result), "occtsharp_owned_projlib_cone_gettype_13");
+    var managedResult = (GeomAbsCurveType)result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Hyperbola#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cone_hyperbola_14")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cone_hyperbola_14(OwnedHandle receiver, out global::OcctSharp.Values.Hyperbola2d result);
+  /// <summary>Invokes ProjLib_Projector::Hyperbola. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Hyperbola2d Hyperbola() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cone_hyperbola_14(NativeHandle, out global::OcctSharp.Values.Hyperbola2d result), "occtsharp_owned_projlib_cone_hyperbola_14");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@IsDone#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cone_isdone_15")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cone_isdone_15(OwnedHandle receiver, out int result);
+  /// <summary>Invokes ProjLib_Projector::IsDone. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsDone() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cone_isdone_15(NativeHandle, out int result), "occtsharp_owned_projlib_cone_isdone_15");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@IsPeriodic#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cone_isperiodic_16")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cone_isperiodic_16(OwnedHandle receiver, out int result);
+  /// <summary>Invokes ProjLib_Projector::IsPeriodic. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsPeriodic() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cone_isperiodic_16(NativeHandle, out int result), "occtsharp_owned_projlib_cone_isperiodic_16");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Line#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cone_line_17")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cone_line_17(OwnedHandle receiver, out global::OcctSharp.Values.Line2d result);
+  /// <summary>Invokes ProjLib_Projector::Line. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Line2d Line() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cone_line_17(NativeHandle, out global::OcctSharp.Values.Line2d result), "occtsharp_owned_projlib_cone_line_17");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Parabola#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cone_parabola_18")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cone_parabola_18(OwnedHandle receiver, out global::OcctSharp.Values.Parabola2d result);
+  /// <summary>Invokes ProjLib_Projector::Parabola. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Parabola2d Parabola() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cone_parabola_18(NativeHandle, out global::OcctSharp.Values.Parabola2d result), "occtsharp_owned_projlib_cone_parabola_18");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@UFrame#d#d#d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cone_uframe_19")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cone_uframe_19(OwnedHandle receiver, double arg0, double arg1, double arg2, double arg3);
+  /// <summary>Invokes ProjLib_Projector::UFrame. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void UFrame(double arg0, double arg1, double arg2, double arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cone_uframe_19(NativeHandle, arg0, arg1, arg2, arg3), "occtsharp_owned_projlib_cone_uframe_19");
+  }
+  // Source: c:@S@ProjLib_Projector@F@VFrame#d#d#d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cone_vframe_20")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cone_vframe_20(OwnedHandle receiver, double arg0, double arg1, double arg2, double arg3);
+  /// <summary>Invokes ProjLib_Projector::VFrame. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void VFrame(double arg0, double arg1, double arg2, double arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cone_vframe_20(NativeHandle, arg0, arg1, arg2, arg3), "occtsharp_owned_projlib_cone_vframe_20");
+  }
+}
+/// <summary>Owns a stable-address ProjLib_Cylinder. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class ProjLibCylinder : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private ProjLibCylinder(OwnedHandle handle) => _handle = handle;
+  static ProjLibCylinder() => NativeLibraryResolver.EnsureRegistered(typeof(ProjLibCylinder).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static ProjLibCylinder FromNative(nint value) {
+    try { return new ProjLibCylinder(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cylinder_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@ProjLib_Cylinder@F@Init#&1$@S@gp_Cylinder#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cylinder_init_0")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cylinder_init_0(OwnedHandle receiver, global::OcctSharp.Values.Cylinder arg0);
+  /// <summary>Invokes ProjLib_Cylinder::Init. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Init(global::OcctSharp.Values.Cylinder arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cylinder_init_0(NativeHandle, arg0), "occtsharp_owned_projlib_cylinder_init_0");
+  }
+  // Source: c:@S@ProjLib_Cylinder@F@ProjLib_Cylinder#&1$@S@gp_Cylinder#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cylinder_create_1")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cylinder_create_1(global::OcctSharp.Values.Cylinder arg0, out nint result);
+  /// <summary>Invokes ProjLib_Cylinder::ProjLib_Cylinder. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ProjLibCylinder Create(global::OcctSharp.Values.Cylinder arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cylinder_create_1(arg0, out nint result), "occtsharp_owned_projlib_cylinder_create_1");
+    var managedResult = ProjLibCylinder.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Cylinder@F@ProjLib_Cylinder#&1$@S@gp_Cylinder#&1$@S@gp_Circ#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cylinder_create_2")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cylinder_create_2(global::OcctSharp.Values.Cylinder arg0, global::OcctSharp.Values.Circle3d arg1, out nint result);
+  /// <summary>Invokes ProjLib_Cylinder::ProjLib_Cylinder. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ProjLibCylinder Create(global::OcctSharp.Values.Cylinder arg0, global::OcctSharp.Values.Circle3d arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cylinder_create_2(arg0, arg1, out nint result), "occtsharp_owned_projlib_cylinder_create_2");
+    var managedResult = ProjLibCylinder.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Cylinder@F@ProjLib_Cylinder#&1$@S@gp_Cylinder#&1$@S@gp_Elips#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cylinder_create_3")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cylinder_create_3(global::OcctSharp.Values.Cylinder arg0, global::OcctSharp.Values.Ellipse3d arg1, out nint result);
+  /// <summary>Invokes ProjLib_Cylinder::ProjLib_Cylinder. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ProjLibCylinder Create(global::OcctSharp.Values.Cylinder arg0, global::OcctSharp.Values.Ellipse3d arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cylinder_create_3(arg0, arg1, out nint result), "occtsharp_owned_projlib_cylinder_create_3");
+    var managedResult = ProjLibCylinder.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Cylinder@F@ProjLib_Cylinder#&1$@S@gp_Cylinder#&1$@S@gp_Lin#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cylinder_create_4")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cylinder_create_4(global::OcctSharp.Values.Cylinder arg0, global::OcctSharp.Values.Line3d arg1, out nint result);
+  /// <summary>Invokes ProjLib_Cylinder::ProjLib_Cylinder. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ProjLibCylinder Create(global::OcctSharp.Values.Cylinder arg0, global::OcctSharp.Values.Line3d arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cylinder_create_4(arg0, arg1, out nint result), "occtsharp_owned_projlib_cylinder_create_4");
+    var managedResult = ProjLibCylinder.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Cylinder@F@Project#&1$@S@gp_Circ#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cylinder_project_5")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cylinder_project_5(OwnedHandle receiver, global::OcctSharp.Values.Circle3d arg0);
+  /// <summary>Invokes ProjLib_Cylinder::Project. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Project(global::OcctSharp.Values.Circle3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cylinder_project_5(NativeHandle, arg0), "occtsharp_owned_projlib_cylinder_project_5");
+  }
+  // Source: c:@S@ProjLib_Cylinder@F@Project#&1$@S@gp_Elips#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cylinder_project_6")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cylinder_project_6(OwnedHandle receiver, global::OcctSharp.Values.Ellipse3d arg0);
+  /// <summary>Invokes ProjLib_Cylinder::Project. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Project(global::OcctSharp.Values.Ellipse3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cylinder_project_6(NativeHandle, arg0), "occtsharp_owned_projlib_cylinder_project_6");
+  }
+  // Source: c:@S@ProjLib_Cylinder@F@Project#&1$@S@gp_Hypr#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cylinder_project_7")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cylinder_project_7(OwnedHandle receiver, global::OcctSharp.Values.Hyperbola3d arg0);
+  /// <summary>Invokes ProjLib_Cylinder::Project. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Project(global::OcctSharp.Values.Hyperbola3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cylinder_project_7(NativeHandle, arg0), "occtsharp_owned_projlib_cylinder_project_7");
+  }
+  // Source: c:@S@ProjLib_Cylinder@F@Project#&1$@S@gp_Lin#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cylinder_project_8")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cylinder_project_8(OwnedHandle receiver, global::OcctSharp.Values.Line3d arg0);
+  /// <summary>Invokes ProjLib_Cylinder::Project. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Project(global::OcctSharp.Values.Line3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cylinder_project_8(NativeHandle, arg0), "occtsharp_owned_projlib_cylinder_project_8");
+  }
+  // Source: c:@S@ProjLib_Cylinder@F@Project#&1$@S@gp_Parab#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cylinder_project_9")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cylinder_project_9(OwnedHandle receiver, global::OcctSharp.Values.Parabola3d arg0);
+  /// <summary>Invokes ProjLib_Cylinder::Project. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Project(global::OcctSharp.Values.Parabola3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cylinder_project_9(NativeHandle, arg0), "occtsharp_owned_projlib_cylinder_project_9");
+  }
+  // Source: c:@S@ProjLib_Projector@F@BSpline#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cylinder_bspline_10")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cylinder_bspline_10(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes ProjLib_Projector::BSpline. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Geom2dBSplineCurve? BSpline() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cylinder_bspline_10(NativeHandle, out nint result), "occtsharp_owned_projlib_cylinder_bspline_10");
+    var managedResult = Geom2dBSplineCurve.FromNative(result, "occtsharp_owned_projlib_cylinder_bspline_10");
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Bezier#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cylinder_bezier_11")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cylinder_bezier_11(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes ProjLib_Projector::Bezier. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Geom2dBezierCurve? Bezier() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cylinder_bezier_11(NativeHandle, out nint result), "occtsharp_owned_projlib_cylinder_bezier_11");
+    var managedResult = Geom2dBezierCurve.FromNative(result, "occtsharp_owned_projlib_cylinder_bezier_11");
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Circle#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cylinder_circle_12")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cylinder_circle_12(OwnedHandle receiver, out global::OcctSharp.Values.Circle2d result);
+  /// <summary>Invokes ProjLib_Projector::Circle. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Circle2d Circle() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cylinder_circle_12(NativeHandle, out global::OcctSharp.Values.Circle2d result), "occtsharp_owned_projlib_cylinder_circle_12");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Ellipse#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cylinder_ellipse_13")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cylinder_ellipse_13(OwnedHandle receiver, out global::OcctSharp.Values.Ellipse2d result);
+  /// <summary>Invokes ProjLib_Projector::Ellipse. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Ellipse2d Ellipse() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cylinder_ellipse_13(NativeHandle, out global::OcctSharp.Values.Ellipse2d result), "occtsharp_owned_projlib_cylinder_ellipse_13");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@GetType#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cylinder_gettype_14")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cylinder_gettype_14(OwnedHandle receiver, out int result);
+  /// <summary>Invokes ProjLib_Projector::GetType. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public new GeomAbsCurveType GetType() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cylinder_gettype_14(NativeHandle, out int result), "occtsharp_owned_projlib_cylinder_gettype_14");
+    var managedResult = (GeomAbsCurveType)result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Hyperbola#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cylinder_hyperbola_15")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cylinder_hyperbola_15(OwnedHandle receiver, out global::OcctSharp.Values.Hyperbola2d result);
+  /// <summary>Invokes ProjLib_Projector::Hyperbola. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Hyperbola2d Hyperbola() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cylinder_hyperbola_15(NativeHandle, out global::OcctSharp.Values.Hyperbola2d result), "occtsharp_owned_projlib_cylinder_hyperbola_15");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@IsDone#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cylinder_isdone_16")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cylinder_isdone_16(OwnedHandle receiver, out int result);
+  /// <summary>Invokes ProjLib_Projector::IsDone. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsDone() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cylinder_isdone_16(NativeHandle, out int result), "occtsharp_owned_projlib_cylinder_isdone_16");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@IsPeriodic#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cylinder_isperiodic_17")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cylinder_isperiodic_17(OwnedHandle receiver, out int result);
+  /// <summary>Invokes ProjLib_Projector::IsPeriodic. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsPeriodic() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cylinder_isperiodic_17(NativeHandle, out int result), "occtsharp_owned_projlib_cylinder_isperiodic_17");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Line#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cylinder_line_18")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cylinder_line_18(OwnedHandle receiver, out global::OcctSharp.Values.Line2d result);
+  /// <summary>Invokes ProjLib_Projector::Line. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Line2d Line() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cylinder_line_18(NativeHandle, out global::OcctSharp.Values.Line2d result), "occtsharp_owned_projlib_cylinder_line_18");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Parabola#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cylinder_parabola_19")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cylinder_parabola_19(OwnedHandle receiver, out global::OcctSharp.Values.Parabola2d result);
+  /// <summary>Invokes ProjLib_Projector::Parabola. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Parabola2d Parabola() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cylinder_parabola_19(NativeHandle, out global::OcctSharp.Values.Parabola2d result), "occtsharp_owned_projlib_cylinder_parabola_19");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@UFrame#d#d#d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cylinder_uframe_20")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cylinder_uframe_20(OwnedHandle receiver, double arg0, double arg1, double arg2, double arg3);
+  /// <summary>Invokes ProjLib_Projector::UFrame. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void UFrame(double arg0, double arg1, double arg2, double arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cylinder_uframe_20(NativeHandle, arg0, arg1, arg2, arg3), "occtsharp_owned_projlib_cylinder_uframe_20");
+  }
+  // Source: c:@S@ProjLib_Projector@F@VFrame#d#d#d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_cylinder_vframe_21")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_cylinder_vframe_21(OwnedHandle receiver, double arg0, double arg1, double arg2, double arg3);
+  /// <summary>Invokes ProjLib_Projector::VFrame. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void VFrame(double arg0, double arg1, double arg2, double arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_cylinder_vframe_21(NativeHandle, arg0, arg1, arg2, arg3), "occtsharp_owned_projlib_cylinder_vframe_21");
+  }
+}
+/// <summary>Owns a stable-address ProjLib_Plane. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class ProjLibPlane : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private ProjLibPlane(OwnedHandle handle) => _handle = handle;
+  static ProjLibPlane() => NativeLibraryResolver.EnsureRegistered(typeof(ProjLibPlane).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static ProjLibPlane FromNative(nint value) {
+    try { return new ProjLibPlane(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_plane_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@ProjLib_Plane@F@Init#&1$@S@gp_Pln#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_plane_init_0")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_plane_init_0(OwnedHandle receiver, global::OcctSharp.Values.Plane arg0);
+  /// <summary>Invokes ProjLib_Plane::Init. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Init(global::OcctSharp.Values.Plane arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_plane_init_0(NativeHandle, arg0), "occtsharp_owned_projlib_plane_init_0");
+  }
+  // Source: c:@S@ProjLib_Plane@F@ProjLib_Plane#&1$@S@gp_Pln#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_plane_create_1")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_plane_create_1(global::OcctSharp.Values.Plane arg0, out nint result);
+  /// <summary>Invokes ProjLib_Plane::ProjLib_Plane. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ProjLibPlane Create(global::OcctSharp.Values.Plane arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_plane_create_1(arg0, out nint result), "occtsharp_owned_projlib_plane_create_1");
+    var managedResult = ProjLibPlane.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Plane@F@ProjLib_Plane#&1$@S@gp_Pln#&1$@S@gp_Circ#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_plane_create_2")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_plane_create_2(global::OcctSharp.Values.Plane arg0, global::OcctSharp.Values.Circle3d arg1, out nint result);
+  /// <summary>Invokes ProjLib_Plane::ProjLib_Plane. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ProjLibPlane Create(global::OcctSharp.Values.Plane arg0, global::OcctSharp.Values.Circle3d arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_plane_create_2(arg0, arg1, out nint result), "occtsharp_owned_projlib_plane_create_2");
+    var managedResult = ProjLibPlane.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Plane@F@ProjLib_Plane#&1$@S@gp_Pln#&1$@S@gp_Elips#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_plane_create_3")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_plane_create_3(global::OcctSharp.Values.Plane arg0, global::OcctSharp.Values.Ellipse3d arg1, out nint result);
+  /// <summary>Invokes ProjLib_Plane::ProjLib_Plane. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ProjLibPlane Create(global::OcctSharp.Values.Plane arg0, global::OcctSharp.Values.Ellipse3d arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_plane_create_3(arg0, arg1, out nint result), "occtsharp_owned_projlib_plane_create_3");
+    var managedResult = ProjLibPlane.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Plane@F@ProjLib_Plane#&1$@S@gp_Pln#&1$@S@gp_Hypr#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_plane_create_4")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_plane_create_4(global::OcctSharp.Values.Plane arg0, global::OcctSharp.Values.Hyperbola3d arg1, out nint result);
+  /// <summary>Invokes ProjLib_Plane::ProjLib_Plane. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ProjLibPlane Create(global::OcctSharp.Values.Plane arg0, global::OcctSharp.Values.Hyperbola3d arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_plane_create_4(arg0, arg1, out nint result), "occtsharp_owned_projlib_plane_create_4");
+    var managedResult = ProjLibPlane.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Plane@F@ProjLib_Plane#&1$@S@gp_Pln#&1$@S@gp_Lin#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_plane_create_5")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_plane_create_5(global::OcctSharp.Values.Plane arg0, global::OcctSharp.Values.Line3d arg1, out nint result);
+  /// <summary>Invokes ProjLib_Plane::ProjLib_Plane. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ProjLibPlane Create(global::OcctSharp.Values.Plane arg0, global::OcctSharp.Values.Line3d arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_plane_create_5(arg0, arg1, out nint result), "occtsharp_owned_projlib_plane_create_5");
+    var managedResult = ProjLibPlane.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Plane@F@ProjLib_Plane#&1$@S@gp_Pln#&1$@S@gp_Parab#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_plane_create_6")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_plane_create_6(global::OcctSharp.Values.Plane arg0, global::OcctSharp.Values.Parabola3d arg1, out nint result);
+  /// <summary>Invokes ProjLib_Plane::ProjLib_Plane. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ProjLibPlane Create(global::OcctSharp.Values.Plane arg0, global::OcctSharp.Values.Parabola3d arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_plane_create_6(arg0, arg1, out nint result), "occtsharp_owned_projlib_plane_create_6");
+    var managedResult = ProjLibPlane.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Plane@F@Project#&1$@S@gp_Circ#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_plane_project_7")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_plane_project_7(OwnedHandle receiver, global::OcctSharp.Values.Circle3d arg0);
+  /// <summary>Invokes ProjLib_Plane::Project. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Project(global::OcctSharp.Values.Circle3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_plane_project_7(NativeHandle, arg0), "occtsharp_owned_projlib_plane_project_7");
+  }
+  // Source: c:@S@ProjLib_Plane@F@Project#&1$@S@gp_Elips#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_plane_project_8")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_plane_project_8(OwnedHandle receiver, global::OcctSharp.Values.Ellipse3d arg0);
+  /// <summary>Invokes ProjLib_Plane::Project. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Project(global::OcctSharp.Values.Ellipse3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_plane_project_8(NativeHandle, arg0), "occtsharp_owned_projlib_plane_project_8");
+  }
+  // Source: c:@S@ProjLib_Plane@F@Project#&1$@S@gp_Hypr#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_plane_project_9")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_plane_project_9(OwnedHandle receiver, global::OcctSharp.Values.Hyperbola3d arg0);
+  /// <summary>Invokes ProjLib_Plane::Project. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Project(global::OcctSharp.Values.Hyperbola3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_plane_project_9(NativeHandle, arg0), "occtsharp_owned_projlib_plane_project_9");
+  }
+  // Source: c:@S@ProjLib_Plane@F@Project#&1$@S@gp_Lin#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_plane_project_10")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_plane_project_10(OwnedHandle receiver, global::OcctSharp.Values.Line3d arg0);
+  /// <summary>Invokes ProjLib_Plane::Project. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Project(global::OcctSharp.Values.Line3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_plane_project_10(NativeHandle, arg0), "occtsharp_owned_projlib_plane_project_10");
+  }
+  // Source: c:@S@ProjLib_Plane@F@Project#&1$@S@gp_Parab#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_plane_project_11")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_plane_project_11(OwnedHandle receiver, global::OcctSharp.Values.Parabola3d arg0);
+  /// <summary>Invokes ProjLib_Plane::Project. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Project(global::OcctSharp.Values.Parabola3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_plane_project_11(NativeHandle, arg0), "occtsharp_owned_projlib_plane_project_11");
+  }
+  // Source: c:@S@ProjLib_Projector@F@BSpline#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_plane_bspline_12")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_plane_bspline_12(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes ProjLib_Projector::BSpline. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Geom2dBSplineCurve? BSpline() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_plane_bspline_12(NativeHandle, out nint result), "occtsharp_owned_projlib_plane_bspline_12");
+    var managedResult = Geom2dBSplineCurve.FromNative(result, "occtsharp_owned_projlib_plane_bspline_12");
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Bezier#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_plane_bezier_13")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_plane_bezier_13(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes ProjLib_Projector::Bezier. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Geom2dBezierCurve? Bezier() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_plane_bezier_13(NativeHandle, out nint result), "occtsharp_owned_projlib_plane_bezier_13");
+    var managedResult = Geom2dBezierCurve.FromNative(result, "occtsharp_owned_projlib_plane_bezier_13");
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Circle#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_plane_circle_14")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_plane_circle_14(OwnedHandle receiver, out global::OcctSharp.Values.Circle2d result);
+  /// <summary>Invokes ProjLib_Projector::Circle. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Circle2d Circle() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_plane_circle_14(NativeHandle, out global::OcctSharp.Values.Circle2d result), "occtsharp_owned_projlib_plane_circle_14");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Ellipse#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_plane_ellipse_15")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_plane_ellipse_15(OwnedHandle receiver, out global::OcctSharp.Values.Ellipse2d result);
+  /// <summary>Invokes ProjLib_Projector::Ellipse. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Ellipse2d Ellipse() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_plane_ellipse_15(NativeHandle, out global::OcctSharp.Values.Ellipse2d result), "occtsharp_owned_projlib_plane_ellipse_15");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@GetType#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_plane_gettype_16")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_plane_gettype_16(OwnedHandle receiver, out int result);
+  /// <summary>Invokes ProjLib_Projector::GetType. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public new GeomAbsCurveType GetType() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_plane_gettype_16(NativeHandle, out int result), "occtsharp_owned_projlib_plane_gettype_16");
+    var managedResult = (GeomAbsCurveType)result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Hyperbola#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_plane_hyperbola_17")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_plane_hyperbola_17(OwnedHandle receiver, out global::OcctSharp.Values.Hyperbola2d result);
+  /// <summary>Invokes ProjLib_Projector::Hyperbola. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Hyperbola2d Hyperbola() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_plane_hyperbola_17(NativeHandle, out global::OcctSharp.Values.Hyperbola2d result), "occtsharp_owned_projlib_plane_hyperbola_17");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@IsDone#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_plane_isdone_18")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_plane_isdone_18(OwnedHandle receiver, out int result);
+  /// <summary>Invokes ProjLib_Projector::IsDone. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsDone() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_plane_isdone_18(NativeHandle, out int result), "occtsharp_owned_projlib_plane_isdone_18");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@IsPeriodic#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_plane_isperiodic_19")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_plane_isperiodic_19(OwnedHandle receiver, out int result);
+  /// <summary>Invokes ProjLib_Projector::IsPeriodic. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsPeriodic() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_plane_isperiodic_19(NativeHandle, out int result), "occtsharp_owned_projlib_plane_isperiodic_19");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Line#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_plane_line_20")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_plane_line_20(OwnedHandle receiver, out global::OcctSharp.Values.Line2d result);
+  /// <summary>Invokes ProjLib_Projector::Line. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Line2d Line() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_plane_line_20(NativeHandle, out global::OcctSharp.Values.Line2d result), "occtsharp_owned_projlib_plane_line_20");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Parabola#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_plane_parabola_21")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_plane_parabola_21(OwnedHandle receiver, out global::OcctSharp.Values.Parabola2d result);
+  /// <summary>Invokes ProjLib_Projector::Parabola. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Parabola2d Parabola() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_plane_parabola_21(NativeHandle, out global::OcctSharp.Values.Parabola2d result), "occtsharp_owned_projlib_plane_parabola_21");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@UFrame#d#d#d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_plane_uframe_22")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_plane_uframe_22(OwnedHandle receiver, double arg0, double arg1, double arg2, double arg3);
+  /// <summary>Invokes ProjLib_Projector::UFrame. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void UFrame(double arg0, double arg1, double arg2, double arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_plane_uframe_22(NativeHandle, arg0, arg1, arg2, arg3), "occtsharp_owned_projlib_plane_uframe_22");
+  }
+  // Source: c:@S@ProjLib_Projector@F@VFrame#d#d#d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_plane_vframe_23")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_plane_vframe_23(OwnedHandle receiver, double arg0, double arg1, double arg2, double arg3);
+  /// <summary>Invokes ProjLib_Projector::VFrame. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void VFrame(double arg0, double arg1, double arg2, double arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_plane_vframe_23(NativeHandle, arg0, arg1, arg2, arg3), "occtsharp_owned_projlib_plane_vframe_23");
+  }
+}
+/// <summary>Owns a stable-address ProjLib_Sphere. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class ProjLibSphere : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private ProjLibSphere(OwnedHandle handle) => _handle = handle;
+  static ProjLibSphere() => NativeLibraryResolver.EnsureRegistered(typeof(ProjLibSphere).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static ProjLibSphere FromNative(nint value) {
+    try { return new ProjLibSphere(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_sphere_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@ProjLib_Sphere@F@Init#&1$@S@gp_Sphere#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_sphere_init_0")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_sphere_init_0(OwnedHandle receiver, global::OcctSharp.Values.Sphere arg0);
+  /// <summary>Invokes ProjLib_Sphere::Init. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Init(global::OcctSharp.Values.Sphere arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_sphere_init_0(NativeHandle, arg0), "occtsharp_owned_projlib_sphere_init_0");
+  }
+  // Source: c:@S@ProjLib_Sphere@F@ProjLib_Sphere#&1$@S@gp_Sphere#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_sphere_create_1")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_sphere_create_1(global::OcctSharp.Values.Sphere arg0, out nint result);
+  /// <summary>Invokes ProjLib_Sphere::ProjLib_Sphere. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ProjLibSphere Create(global::OcctSharp.Values.Sphere arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_sphere_create_1(arg0, out nint result), "occtsharp_owned_projlib_sphere_create_1");
+    var managedResult = ProjLibSphere.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Sphere@F@ProjLib_Sphere#&1$@S@gp_Sphere#&1$@S@gp_Circ#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_sphere_create_2")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_sphere_create_2(global::OcctSharp.Values.Sphere arg0, global::OcctSharp.Values.Circle3d arg1, out nint result);
+  /// <summary>Invokes ProjLib_Sphere::ProjLib_Sphere. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ProjLibSphere Create(global::OcctSharp.Values.Sphere arg0, global::OcctSharp.Values.Circle3d arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_sphere_create_2(arg0, arg1, out nint result), "occtsharp_owned_projlib_sphere_create_2");
+    var managedResult = ProjLibSphere.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Sphere@F@Project#&1$@S@gp_Circ#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_sphere_project_3")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_sphere_project_3(OwnedHandle receiver, global::OcctSharp.Values.Circle3d arg0);
+  /// <summary>Invokes ProjLib_Sphere::Project. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Project(global::OcctSharp.Values.Circle3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_sphere_project_3(NativeHandle, arg0), "occtsharp_owned_projlib_sphere_project_3");
+  }
+  // Source: c:@S@ProjLib_Sphere@F@Project#&1$@S@gp_Elips#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_sphere_project_4")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_sphere_project_4(OwnedHandle receiver, global::OcctSharp.Values.Ellipse3d arg0);
+  /// <summary>Invokes ProjLib_Sphere::Project. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Project(global::OcctSharp.Values.Ellipse3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_sphere_project_4(NativeHandle, arg0), "occtsharp_owned_projlib_sphere_project_4");
+  }
+  // Source: c:@S@ProjLib_Sphere@F@Project#&1$@S@gp_Hypr#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_sphere_project_5")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_sphere_project_5(OwnedHandle receiver, global::OcctSharp.Values.Hyperbola3d arg0);
+  /// <summary>Invokes ProjLib_Sphere::Project. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Project(global::OcctSharp.Values.Hyperbola3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_sphere_project_5(NativeHandle, arg0), "occtsharp_owned_projlib_sphere_project_5");
+  }
+  // Source: c:@S@ProjLib_Sphere@F@Project#&1$@S@gp_Lin#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_sphere_project_6")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_sphere_project_6(OwnedHandle receiver, global::OcctSharp.Values.Line3d arg0);
+  /// <summary>Invokes ProjLib_Sphere::Project. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Project(global::OcctSharp.Values.Line3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_sphere_project_6(NativeHandle, arg0), "occtsharp_owned_projlib_sphere_project_6");
+  }
+  // Source: c:@S@ProjLib_Sphere@F@Project#&1$@S@gp_Parab#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_sphere_project_7")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_sphere_project_7(OwnedHandle receiver, global::OcctSharp.Values.Parabola3d arg0);
+  /// <summary>Invokes ProjLib_Sphere::Project. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Project(global::OcctSharp.Values.Parabola3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_sphere_project_7(NativeHandle, arg0), "occtsharp_owned_projlib_sphere_project_7");
+  }
+  // Source: c:@S@ProjLib_Sphere@F@SetInBounds#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_sphere_setinbounds_8")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_sphere_setinbounds_8(OwnedHandle receiver, double arg0);
+  /// <summary>Invokes ProjLib_Sphere::SetInBounds. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void SetInBounds(double arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_sphere_setinbounds_8(NativeHandle, arg0), "occtsharp_owned_projlib_sphere_setinbounds_8");
+  }
+  // Source: c:@S@ProjLib_Projector@F@BSpline#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_sphere_bspline_9")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_sphere_bspline_9(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes ProjLib_Projector::BSpline. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Geom2dBSplineCurve? BSpline() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_sphere_bspline_9(NativeHandle, out nint result), "occtsharp_owned_projlib_sphere_bspline_9");
+    var managedResult = Geom2dBSplineCurve.FromNative(result, "occtsharp_owned_projlib_sphere_bspline_9");
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Bezier#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_sphere_bezier_10")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_sphere_bezier_10(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes ProjLib_Projector::Bezier. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Geom2dBezierCurve? Bezier() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_sphere_bezier_10(NativeHandle, out nint result), "occtsharp_owned_projlib_sphere_bezier_10");
+    var managedResult = Geom2dBezierCurve.FromNative(result, "occtsharp_owned_projlib_sphere_bezier_10");
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Circle#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_sphere_circle_11")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_sphere_circle_11(OwnedHandle receiver, out global::OcctSharp.Values.Circle2d result);
+  /// <summary>Invokes ProjLib_Projector::Circle. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Circle2d Circle() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_sphere_circle_11(NativeHandle, out global::OcctSharp.Values.Circle2d result), "occtsharp_owned_projlib_sphere_circle_11");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Ellipse#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_sphere_ellipse_12")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_sphere_ellipse_12(OwnedHandle receiver, out global::OcctSharp.Values.Ellipse2d result);
+  /// <summary>Invokes ProjLib_Projector::Ellipse. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Ellipse2d Ellipse() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_sphere_ellipse_12(NativeHandle, out global::OcctSharp.Values.Ellipse2d result), "occtsharp_owned_projlib_sphere_ellipse_12");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@GetType#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_sphere_gettype_13")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_sphere_gettype_13(OwnedHandle receiver, out int result);
+  /// <summary>Invokes ProjLib_Projector::GetType. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public new GeomAbsCurveType GetType() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_sphere_gettype_13(NativeHandle, out int result), "occtsharp_owned_projlib_sphere_gettype_13");
+    var managedResult = (GeomAbsCurveType)result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Hyperbola#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_sphere_hyperbola_14")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_sphere_hyperbola_14(OwnedHandle receiver, out global::OcctSharp.Values.Hyperbola2d result);
+  /// <summary>Invokes ProjLib_Projector::Hyperbola. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Hyperbola2d Hyperbola() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_sphere_hyperbola_14(NativeHandle, out global::OcctSharp.Values.Hyperbola2d result), "occtsharp_owned_projlib_sphere_hyperbola_14");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@IsDone#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_sphere_isdone_15")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_sphere_isdone_15(OwnedHandle receiver, out int result);
+  /// <summary>Invokes ProjLib_Projector::IsDone. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsDone() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_sphere_isdone_15(NativeHandle, out int result), "occtsharp_owned_projlib_sphere_isdone_15");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@IsPeriodic#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_sphere_isperiodic_16")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_sphere_isperiodic_16(OwnedHandle receiver, out int result);
+  /// <summary>Invokes ProjLib_Projector::IsPeriodic. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsPeriodic() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_sphere_isperiodic_16(NativeHandle, out int result), "occtsharp_owned_projlib_sphere_isperiodic_16");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Line#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_sphere_line_17")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_sphere_line_17(OwnedHandle receiver, out global::OcctSharp.Values.Line2d result);
+  /// <summary>Invokes ProjLib_Projector::Line. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Line2d Line() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_sphere_line_17(NativeHandle, out global::OcctSharp.Values.Line2d result), "occtsharp_owned_projlib_sphere_line_17");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Parabola#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_sphere_parabola_18")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_sphere_parabola_18(OwnedHandle receiver, out global::OcctSharp.Values.Parabola2d result);
+  /// <summary>Invokes ProjLib_Projector::Parabola. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Parabola2d Parabola() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_sphere_parabola_18(NativeHandle, out global::OcctSharp.Values.Parabola2d result), "occtsharp_owned_projlib_sphere_parabola_18");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@UFrame#d#d#d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_sphere_uframe_19")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_sphere_uframe_19(OwnedHandle receiver, double arg0, double arg1, double arg2, double arg3);
+  /// <summary>Invokes ProjLib_Projector::UFrame. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void UFrame(double arg0, double arg1, double arg2, double arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_sphere_uframe_19(NativeHandle, arg0, arg1, arg2, arg3), "occtsharp_owned_projlib_sphere_uframe_19");
+  }
+  // Source: c:@S@ProjLib_Projector@F@VFrame#d#d#d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_sphere_vframe_20")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_sphere_vframe_20(OwnedHandle receiver, double arg0, double arg1, double arg2, double arg3);
+  /// <summary>Invokes ProjLib_Projector::VFrame. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void VFrame(double arg0, double arg1, double arg2, double arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_sphere_vframe_20(NativeHandle, arg0, arg1, arg2, arg3), "occtsharp_owned_projlib_sphere_vframe_20");
+  }
+}
+/// <summary>Owns a stable-address ProjLib_Torus. Synchronize mutation with other calls; dispose to release native storage.</summary>
+public sealed partial class ProjLibTorus : IDisposable {
+  internal sealed class OwnedHandle : SafeHandleZeroOrMinusOneIsInvalid {
+    internal OwnedHandle(nint value) : base(true) => SetHandle(value);
+    protected override bool ReleaseHandle() { NativeRelease(handle); return true; }
+  }
+  private readonly OwnedHandle _handle;
+  private ProjLibTorus(OwnedHandle handle) => _handle = handle;
+  static ProjLibTorus() => NativeLibraryResolver.EnsureRegistered(typeof(ProjLibTorus).Assembly);
+  internal OwnedHandle NativeHandle { get { ObjectDisposedException.ThrowIf(_handle.IsClosed, this); return _handle; } }
+  internal static ProjLibTorus FromNative(nint value) {
+    try { return new ProjLibTorus(new OwnedHandle(value)); }
+    catch { NativeRelease(value); throw; }
+  }
+  /// <summary>Releases native storage once active calls have finished.</summary>
+  public void Dispose() => _handle.Dispose();
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_torus_release")]
+  private static partial void NativeRelease(nint handle);
+  // Source: c:@S@ProjLib_Torus@F@Init#&1$@S@gp_Torus#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_torus_init_0")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_torus_init_0(OwnedHandle receiver, global::OcctSharp.Values.Torus arg0);
+  /// <summary>Invokes ProjLib_Torus::Init. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Init(global::OcctSharp.Values.Torus arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_torus_init_0(NativeHandle, arg0), "occtsharp_owned_projlib_torus_init_0");
+  }
+  // Source: c:@S@ProjLib_Torus@F@ProjLib_Torus#&1$@S@gp_Torus#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_torus_create_1")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_torus_create_1(global::OcctSharp.Values.Torus arg0, out nint result);
+  /// <summary>Invokes ProjLib_Torus::ProjLib_Torus. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ProjLibTorus Create(global::OcctSharp.Values.Torus arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_torus_create_1(arg0, out nint result), "occtsharp_owned_projlib_torus_create_1");
+    var managedResult = ProjLibTorus.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Torus@F@ProjLib_Torus#&1$@S@gp_Torus#&1$@S@gp_Circ#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_torus_create_2")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_torus_create_2(global::OcctSharp.Values.Torus arg0, global::OcctSharp.Values.Circle3d arg1, out nint result);
+  /// <summary>Invokes ProjLib_Torus::ProjLib_Torus. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public static ProjLibTorus Create(global::OcctSharp.Values.Torus arg0, global::OcctSharp.Values.Circle3d arg1) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_torus_create_2(arg0, arg1, out nint result), "occtsharp_owned_projlib_torus_create_2");
+    var managedResult = ProjLibTorus.FromNative(result);
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Torus@F@Project#&1$@S@gp_Circ#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_torus_project_3")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_torus_project_3(OwnedHandle receiver, global::OcctSharp.Values.Circle3d arg0);
+  /// <summary>Invokes ProjLib_Torus::Project. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Project(global::OcctSharp.Values.Circle3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_torus_project_3(NativeHandle, arg0), "occtsharp_owned_projlib_torus_project_3");
+  }
+  // Source: c:@S@ProjLib_Torus@F@Project#&1$@S@gp_Elips#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_torus_project_4")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_torus_project_4(OwnedHandle receiver, global::OcctSharp.Values.Ellipse3d arg0);
+  /// <summary>Invokes ProjLib_Torus::Project. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Project(global::OcctSharp.Values.Ellipse3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_torus_project_4(NativeHandle, arg0), "occtsharp_owned_projlib_torus_project_4");
+  }
+  // Source: c:@S@ProjLib_Torus@F@Project#&1$@S@gp_Hypr#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_torus_project_5")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_torus_project_5(OwnedHandle receiver, global::OcctSharp.Values.Hyperbola3d arg0);
+  /// <summary>Invokes ProjLib_Torus::Project. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Project(global::OcctSharp.Values.Hyperbola3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_torus_project_5(NativeHandle, arg0), "occtsharp_owned_projlib_torus_project_5");
+  }
+  // Source: c:@S@ProjLib_Torus@F@Project#&1$@S@gp_Lin#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_torus_project_6")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_torus_project_6(OwnedHandle receiver, global::OcctSharp.Values.Line3d arg0);
+  /// <summary>Invokes ProjLib_Torus::Project. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Project(global::OcctSharp.Values.Line3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_torus_project_6(NativeHandle, arg0), "occtsharp_owned_projlib_torus_project_6");
+  }
+  // Source: c:@S@ProjLib_Torus@F@Project#&1$@S@gp_Parab#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_torus_project_7")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_torus_project_7(OwnedHandle receiver, global::OcctSharp.Values.Parabola3d arg0);
+  /// <summary>Invokes ProjLib_Torus::Project. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void Project(global::OcctSharp.Values.Parabola3d arg0) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_torus_project_7(NativeHandle, arg0), "occtsharp_owned_projlib_torus_project_7");
+  }
+  // Source: c:@S@ProjLib_Projector@F@BSpline#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_torus_bspline_8")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_torus_bspline_8(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes ProjLib_Projector::BSpline. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Geom2dBSplineCurve? BSpline() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_torus_bspline_8(NativeHandle, out nint result), "occtsharp_owned_projlib_torus_bspline_8");
+    var managedResult = Geom2dBSplineCurve.FromNative(result, "occtsharp_owned_projlib_torus_bspline_8");
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Bezier#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_torus_bezier_9")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_torus_bezier_9(OwnedHandle receiver, out nint result);
+  /// <summary>Invokes ProjLib_Projector::Bezier. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public Geom2dBezierCurve? Bezier() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_torus_bezier_9(NativeHandle, out nint result), "occtsharp_owned_projlib_torus_bezier_9");
+    var managedResult = Geom2dBezierCurve.FromNative(result, "occtsharp_owned_projlib_torus_bezier_9");
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Circle#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_torus_circle_10")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_torus_circle_10(OwnedHandle receiver, out global::OcctSharp.Values.Circle2d result);
+  /// <summary>Invokes ProjLib_Projector::Circle. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Circle2d Circle() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_torus_circle_10(NativeHandle, out global::OcctSharp.Values.Circle2d result), "occtsharp_owned_projlib_torus_circle_10");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Ellipse#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_torus_ellipse_11")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_torus_ellipse_11(OwnedHandle receiver, out global::OcctSharp.Values.Ellipse2d result);
+  /// <summary>Invokes ProjLib_Projector::Ellipse. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Ellipse2d Ellipse() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_torus_ellipse_11(NativeHandle, out global::OcctSharp.Values.Ellipse2d result), "occtsharp_owned_projlib_torus_ellipse_11");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@GetType#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_torus_gettype_12")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_torus_gettype_12(OwnedHandle receiver, out int result);
+  /// <summary>Invokes ProjLib_Projector::GetType. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public new GeomAbsCurveType GetType() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_torus_gettype_12(NativeHandle, out int result), "occtsharp_owned_projlib_torus_gettype_12");
+    var managedResult = (GeomAbsCurveType)result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Hyperbola#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_torus_hyperbola_13")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_torus_hyperbola_13(OwnedHandle receiver, out global::OcctSharp.Values.Hyperbola2d result);
+  /// <summary>Invokes ProjLib_Projector::Hyperbola. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Hyperbola2d Hyperbola() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_torus_hyperbola_13(NativeHandle, out global::OcctSharp.Values.Hyperbola2d result), "occtsharp_owned_projlib_torus_hyperbola_13");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@IsDone#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_torus_isdone_14")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_torus_isdone_14(OwnedHandle receiver, out int result);
+  /// <summary>Invokes ProjLib_Projector::IsDone. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsDone() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_torus_isdone_14(NativeHandle, out int result), "occtsharp_owned_projlib_torus_isdone_14");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@IsPeriodic#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_torus_isperiodic_15")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_torus_isperiodic_15(OwnedHandle receiver, out int result);
+  /// <summary>Invokes ProjLib_Projector::IsPeriodic. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public bool IsPeriodic() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_torus_isperiodic_15(NativeHandle, out int result), "occtsharp_owned_projlib_torus_isperiodic_15");
+    var managedResult = result != 0;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Line#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_torus_line_16")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_torus_line_16(OwnedHandle receiver, out global::OcctSharp.Values.Line2d result);
+  /// <summary>Invokes ProjLib_Projector::Line. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Line2d Line() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_torus_line_16(NativeHandle, out global::OcctSharp.Values.Line2d result), "occtsharp_owned_projlib_torus_line_16");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@Parabola#1
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_torus_parabola_17")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_torus_parabola_17(OwnedHandle receiver, out global::OcctSharp.Values.Parabola2d result);
+  /// <summary>Invokes ProjLib_Projector::Parabola. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public global::OcctSharp.Values.Parabola2d Parabola() {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_torus_parabola_17(NativeHandle, out global::OcctSharp.Values.Parabola2d result), "occtsharp_owned_projlib_torus_parabola_17");
+    var managedResult = result;
+    return managedResult;
+  }
+  // Source: c:@S@ProjLib_Projector@F@UFrame#d#d#d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_torus_uframe_18")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_torus_uframe_18(OwnedHandle receiver, double arg0, double arg1, double arg2, double arg3);
+  /// <summary>Invokes ProjLib_Projector::UFrame. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void UFrame(double arg0, double arg1, double arg2, double arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_torus_uframe_18(NativeHandle, arg0, arg1, arg2, arg3), "occtsharp_owned_projlib_torus_uframe_18");
+  }
+  // Source: c:@S@ProjLib_Projector@F@VFrame#d#d#d#d#
+  [LibraryImport("OcctSharp.Native", EntryPoint = "occtsharp_owned_projlib_torus_vframe_19")]
+  private static partial NativeStatus Native_occtsharp_owned_projlib_torus_vframe_19(OwnedHandle receiver, double arg0, double arg1, double arg2, double arg3);
+  /// <summary>Invokes ProjLib_Projector::VFrame. Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>
+  public void VFrame(double arg0, double arg1, double arg2, double arg3) {
+    NativeError.ThrowIfFailed(Native_occtsharp_owned_projlib_torus_vframe_19(NativeHandle, arg0, arg1, arg2, arg3), "occtsharp_owned_projlib_torus_vframe_19");
   }
 }
 /// <summary>Owns a stable-address gce_MakeCirc. Synchronize mutation with other calls; dispose to release native storage.</summary>

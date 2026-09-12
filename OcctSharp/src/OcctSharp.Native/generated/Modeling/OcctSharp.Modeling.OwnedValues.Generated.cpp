@@ -4,6 +4,22 @@
 #include "../Runtime/OcctSharp.Runtime.OwnedSupport.Generated.hxx"
 #include <Standard_Failure.hxx>
 void OcctSharp_Internal_SetLastError(const char*);
+#include <BOPAlgo_SectionAttribute.hxx>
+#include <BOPDS_IndexRange.hxx>
+#include <BOPDS_Pair.hxx>
+#include <BOPDS_Pave.hxx>
+#include <BOPDS_Point.hxx>
+#include <BRepBlend_Extremity.hxx>
+#include <BRepBlend_PointOnRst.hxx>
+#include <BRepOffset_Interval.hxx>
+#include <Blend_Point.hxx>
+#include <Contap_ContAna.hxx>
+#include <HLRAlgo_BiPoint.hxx>
+#include <HLRAlgo_Coincidence.hxx>
+#include <HLRAlgo_EdgeStatus.hxx>
+#include <HLRAlgo_Interference.hxx>
+#include <HLRAlgo_Intersection.hxx>
+#include <HLRAlgo_Projector.hxx>
 #include <IntAna2d_AnaIntersection.hxx>
 #include <IntAna2d_Conic.hxx>
 #include <IntAna2d_IntPoint.hxx>
@@ -13,6 +29,3729 @@ void OcctSharp_Internal_SetLastError(const char*);
 #include <IntAna_IntQuadQuad.hxx>
 #include <IntAna_QuadQuadGeo.hxx>
 #include <IntAna_Quadric.hxx>
+#include <IntCurveSurface_HInter.hxx>
+#include <IntCurveSurface_IntersectionPoint.hxx>
+#include <IntCurveSurface_IntersectionSegment.hxx>
+#include <IntCurve_IConicTool.hxx>
+#include <IntCurve_IntConicConic.hxx>
+#include <IntCurve_IntImpConicParConic.hxx>
+#include <IntCurve_PConic.hxx>
+#include <IntPolyh_Couple.hxx>
+#include <IntPolyh_Edge.hxx>
+#include <IntPolyh_Point.hxx>
+#include <IntPolyh_Triangle.hxx>
+#include <IntRes2d_Domain.hxx>
+#include <IntRes2d_IntersectionPoint.hxx>
+#include <IntRes2d_IntersectionSegment.hxx>
+#include <IntRes2d_Transition.hxx>
+#include <IntSurf_Couple.hxx>
+#include <IntSurf_InteriorPoint.hxx>
+#include <IntSurf_PathPoint.hxx>
+#include <IntSurf_Quadric.hxx>
+#include <IntSurf_Transition.hxx>
+#include <IntTools_BaseRangeSample.hxx>
+#include <IntTools_CurveRangeLocalizeData.hxx>
+#include <IntTools_CurveRangeSample.hxx>
+#include <IntTools_MarkedRangeSet.hxx>
+#include <IntTools_Range.hxx>
+#include <IntTools_SurfaceRangeLocalizeData.hxx>
+#include <IntTools_SurfaceRangeSample.hxx>
+#include <Intrv_Interval.hxx>
+#include <Intrv_Intervals.hxx>
+#include <ShapeAnalysis_WireOrder.hxx>
+#include <Sweep_NumShape.hxx>
+#include <TopOpeBRepDS_Curve.hxx>
+#include <TopOpeBRepDS_Point.hxx>
+#include <TopOpeBRepDS_Surface.hxx>
+#include <TopOpeBRepDS_Transition.hxx>
+#include <Bnd_Box.hxx>
+namespace OcctSharpGenerated { const OcctSharp_Adaptor2dCurve2dHandle* ValidateAdaptor2dCurve2d(const OcctSharp_Adaptor2dCurve2dHandle*); }
+namespace OcctSharpGenerated { OcctSharp_Adaptor2dCurve2dHandle* AllocateAdaptor2dCurve2d(opencascade::handle<Adaptor2d_Curve2d>); }
+namespace OcctSharpGenerated { const OcctSharp_Adaptor3dHVertexHandle* ValidateAdaptor3dHVertex(const OcctSharp_Adaptor3dHVertexHandle*); }
+namespace OcctSharpGenerated { OcctSharp_Adaptor3dHVertexHandle* AllocateAdaptor3dHVertex(opencascade::handle<Adaptor3d_HVertex>); }
+namespace OcctSharpGenerated { const OcctSharp_Adaptor3dCurveHandle* ValidateAdaptor3dCurve(const OcctSharp_Adaptor3dCurveHandle*); }
+namespace OcctSharpGenerated { OcctSharp_Adaptor3dCurveHandle* AllocateAdaptor3dCurve(opencascade::handle<Adaptor3d_Curve>); }
+namespace OcctSharpGenerated { const OcctSharp_Adaptor3dSurfaceHandle* ValidateAdaptor3dSurface(const OcctSharp_Adaptor3dSurfaceHandle*); }
+namespace OcctSharpGenerated { OcctSharp_Adaptor3dSurfaceHandle* AllocateAdaptor3dSurface(opencascade::handle<Adaptor3d_Surface>); }
+namespace OcctSharpGenerated { const OcctSharp_GeomCurveHandle* ValidateGeomCurve(const OcctSharp_GeomCurveHandle*); }
+namespace OcctSharpGenerated { OcctSharp_GeomCurveHandle* AllocateGeomCurve(opencascade::handle<Geom_Curve>); }
+namespace OcctSharpGenerated { const OcctSharp_Geom2dCurveHandle* ValidateGeom2dCurve(const OcctSharp_Geom2dCurveHandle*); }
+namespace OcctSharpGenerated { OcctSharp_Geom2dCurveHandle* AllocateGeom2dCurve(opencascade::handle<Geom2d_Curve>); }
+namespace OcctSharpGenerated { const OcctSharp_TopOpeBRepDSInterferenceHandle* ValidateTopOpeBRepDSInterference(const OcctSharp_TopOpeBRepDSInterferenceHandle*); }
+namespace OcctSharpGenerated { OcctSharp_TopOpeBRepDSInterferenceHandle* AllocateTopOpeBRepDSInterference(opencascade::handle<TopOpeBRepDS_Interference>); }
+namespace OcctSharpGenerated { const OcctSharp_GeomSurfaceHandle* ValidateGeomSurface(const OcctSharp_GeomSurfaceHandle*); }
+namespace OcctSharpGenerated { OcctSharp_GeomSurfaceHandle* AllocateGeomSurface(opencascade::handle<Geom_Surface>); }
+void OCCTSHARP_CALL occtsharp_owned_bopalgo_sectionattribute_release(OcctSharp_Owned_BOPAlgo_SectionAttributeHandle* handle) { OcctSharpOwned::Release(handle, typeid(BOPAlgo_SectionAttribute)); }
+// Source: c:@S@BOPAlgo_SectionAttribute@F@Approximation#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopalgo_sectionattribute_approximation_0(const OcctSharp_Owned_BOPAlgo_SectionAttributeHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BOPAlgo_SectionAttribute>(receiver);
+    auto returned = self->Approximation();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPAlgo_SectionAttribute@F@Approximation#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopalgo_sectionattribute_approximation_1(const OcctSharp_Owned_BOPAlgo_SectionAttributeHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<BOPAlgo_SectionAttribute>(receiver);
+    auto local0 = (arg0 != 0);
+    self->Approximation(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPAlgo_SectionAttribute@F@BOPAlgo_SectionAttribute#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopalgo_sectionattribute_create_2(OcctSharp_Owned_BOPAlgo_SectionAttributeHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto returned = std::make_shared<BOPAlgo_SectionAttribute>();
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_BOPAlgo_SectionAttributeHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPAlgo_SectionAttribute@F@BOPAlgo_SectionAttribute#b#b#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopalgo_sectionattribute_create_3(int32_t arg0, int32_t arg1, int32_t arg2, OcctSharp_Owned_BOPAlgo_SectionAttributeHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = (arg0 != 0);
+    auto local1 = (arg1 != 0);
+    auto local2 = (arg2 != 0);
+    auto returned = std::make_shared<BOPAlgo_SectionAttribute>(local0, local1, local2);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_BOPAlgo_SectionAttributeHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPAlgo_SectionAttribute@F@PCurveOnS1#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopalgo_sectionattribute_pcurveons1_4(const OcctSharp_Owned_BOPAlgo_SectionAttributeHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BOPAlgo_SectionAttribute>(receiver);
+    auto returned = self->PCurveOnS1();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPAlgo_SectionAttribute@F@PCurveOnS1#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopalgo_sectionattribute_pcurveons1_5(const OcctSharp_Owned_BOPAlgo_SectionAttributeHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<BOPAlgo_SectionAttribute>(receiver);
+    auto local0 = (arg0 != 0);
+    self->PCurveOnS1(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPAlgo_SectionAttribute@F@PCurveOnS2#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopalgo_sectionattribute_pcurveons2_6(const OcctSharp_Owned_BOPAlgo_SectionAttributeHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BOPAlgo_SectionAttribute>(receiver);
+    auto returned = self->PCurveOnS2();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPAlgo_SectionAttribute@F@PCurveOnS2#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopalgo_sectionattribute_pcurveons2_7(const OcctSharp_Owned_BOPAlgo_SectionAttributeHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<BOPAlgo_SectionAttribute>(receiver);
+    auto local0 = (arg0 != 0);
+    self->PCurveOnS2(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_bopds_indexrange_release(OcctSharp_Owned_BOPDS_IndexRangeHandle* handle) { OcctSharpOwned::Release(handle, typeid(BOPDS_IndexRange)); }
+// Source: c:@S@BOPDS_IndexRange@F@BOPDS_IndexRange#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_indexrange_create_0(OcctSharp_Owned_BOPDS_IndexRangeHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto returned = std::make_shared<BOPDS_IndexRange>();
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_BOPDS_IndexRangeHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_IndexRange@F@BOPDS_IndexRange#I#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_indexrange_create_1(int32_t arg0, int32_t arg1, OcctSharp_Owned_BOPDS_IndexRangeHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = arg0;
+    auto local1 = arg1;
+    auto returned = std::make_shared<BOPDS_IndexRange>(local0, local1);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_BOPDS_IndexRangeHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_IndexRange@F@Contains#I#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_indexrange_contains_2(const OcctSharp_Owned_BOPDS_IndexRangeHandle* receiver, int32_t arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BOPDS_IndexRange>(receiver);
+    auto local0 = arg0;
+    auto returned = self->Contains(local0);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_IndexRange@F@First#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_indexrange_first_3(const OcctSharp_Owned_BOPDS_IndexRangeHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BOPDS_IndexRange>(receiver);
+    auto returned = self->First();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_IndexRange@F@Indices#&I#S0_#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_indexrange_indices_4(const OcctSharp_Owned_BOPDS_IndexRangeHandle* receiver, int32_t arg0, int32_t* updatedArg0, int32_t arg1, int32_t* updatedArg1) {
+  if (!updatedArg0) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg0 = {};
+  *updatedArg1 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BOPDS_IndexRange>(receiver);
+    auto local0 = arg0;
+    auto local1 = arg1;
+    self->Indices(local0, local1);
+    const auto copied0 = local0;
+    const auto copied1 = local1;
+    *updatedArg0 = copied0;
+    *updatedArg1 = copied1;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_IndexRange@F@Last#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_indexrange_last_5(const OcctSharp_Owned_BOPDS_IndexRangeHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BOPDS_IndexRange>(receiver);
+    auto returned = self->Last();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_IndexRange@F@SetFirst#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_indexrange_setfirst_6(const OcctSharp_Owned_BOPDS_IndexRangeHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<BOPDS_IndexRange>(receiver);
+    auto local0 = arg0;
+    self->SetFirst(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_IndexRange@F@SetIndices#I#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_indexrange_setindices_7(const OcctSharp_Owned_BOPDS_IndexRangeHandle* receiver, int32_t arg0, int32_t arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<BOPDS_IndexRange>(receiver);
+    auto local0 = arg0;
+    auto local1 = arg1;
+    self->SetIndices(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_IndexRange@F@SetLast#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_indexrange_setlast_8(const OcctSharp_Owned_BOPDS_IndexRangeHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<BOPDS_IndexRange>(receiver);
+    auto local0 = arg0;
+    self->SetLast(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_bopds_pair_release(OcctSharp_Owned_BOPDS_PairHandle* handle) { OcctSharpOwned::Release(handle, typeid(BOPDS_Pair)); }
+// Source: c:@S@BOPDS_Pair@F@BOPDS_Pair#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_pair_create_0(OcctSharp_Owned_BOPDS_PairHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto returned = std::make_shared<BOPDS_Pair>();
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_BOPDS_PairHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_Pair@F@BOPDS_Pair#I#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_pair_create_1(int32_t arg0, int32_t arg1, OcctSharp_Owned_BOPDS_PairHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = arg0;
+    auto local1 = arg1;
+    auto returned = std::make_shared<BOPDS_Pair>(local0, local1);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_BOPDS_PairHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_Pair@F@Indices#&I#S0_#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_pair_indices_2(const OcctSharp_Owned_BOPDS_PairHandle* receiver, int32_t arg0, int32_t* updatedArg0, int32_t arg1, int32_t* updatedArg1) {
+  if (!updatedArg0) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg0 = {};
+  *updatedArg1 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BOPDS_Pair>(receiver);
+    auto local0 = arg0;
+    auto local1 = arg1;
+    self->Indices(local0, local1);
+    const auto copied0 = local0;
+    const auto copied1 = local1;
+    *updatedArg0 = copied0;
+    *updatedArg1 = copied1;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_Pair@F@IsEqual#&1$@S@BOPDS_Pair#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_pair_isequal_3(const OcctSharp_Owned_BOPDS_PairHandle* receiver, const OcctSharp_Owned_BOPDS_PairHandle* arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BOPDS_Pair>(receiver);
+    auto local0 = OcctSharpOwned::Lease<BOPDS_Pair>(arg0);
+    auto returned = self->IsEqual(*local0);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_Pair@F@SetIndices#I#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_pair_setindices_4(const OcctSharp_Owned_BOPDS_PairHandle* receiver, int32_t arg0, int32_t arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<BOPDS_Pair>(receiver);
+    auto local0 = arg0;
+    auto local1 = arg1;
+    self->SetIndices(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_bopds_pave_release(OcctSharp_Owned_BOPDS_PaveHandle* handle) { OcctSharpOwned::Release(handle, typeid(BOPDS_Pave)); }
+// Source: c:@S@BOPDS_Pave@F@BOPDS_Pave#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_pave_create_0(OcctSharp_Owned_BOPDS_PaveHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto returned = std::make_shared<BOPDS_Pave>();
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_BOPDS_PaveHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_Pave@F@BOPDS_Pave#I#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_pave_create_1(int32_t arg0, double arg1, OcctSharp_Owned_BOPDS_PaveHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = arg0;
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto returned = std::make_shared<BOPDS_Pave>(local0, local1);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_BOPDS_PaveHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_Pave@F@Contents#&I#&d#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_pave_contents_2(const OcctSharp_Owned_BOPDS_PaveHandle* receiver, int32_t arg0, int32_t* updatedArg0, double arg1, double* updatedArg1) {
+  if (!updatedArg0) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg0 = {};
+  *updatedArg1 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BOPDS_Pave>(receiver);
+    auto local0 = arg0;
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    self->Contents(local0, local1);
+    const auto copied0 = local0;
+    const auto copied1 = local1;
+    *updatedArg0 = copied0;
+    *updatedArg1 = copied1;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_Pave@F@Index#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_pave_index_3(const OcctSharp_Owned_BOPDS_PaveHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BOPDS_Pave>(receiver);
+    auto returned = self->Index();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_Pave@F@IsEqual#&1$@S@BOPDS_Pave#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_pave_isequal_4(const OcctSharp_Owned_BOPDS_PaveHandle* receiver, const OcctSharp_Owned_BOPDS_PaveHandle* arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BOPDS_Pave>(receiver);
+    auto local0 = OcctSharpOwned::Lease<BOPDS_Pave>(arg0);
+    auto returned = self->IsEqual(*local0);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_Pave@F@IsLess#&1$@S@BOPDS_Pave#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_pave_isless_5(const OcctSharp_Owned_BOPDS_PaveHandle* receiver, const OcctSharp_Owned_BOPDS_PaveHandle* arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BOPDS_Pave>(receiver);
+    auto local0 = OcctSharpOwned::Lease<BOPDS_Pave>(arg0);
+    auto returned = self->IsLess(*local0);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_Pave@F@Parameter#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_pave_parameter_6(const OcctSharp_Owned_BOPDS_PaveHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BOPDS_Pave>(receiver);
+    auto returned = self->Parameter();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_Pave@F@SetIndex#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_pave_setindex_7(const OcctSharp_Owned_BOPDS_PaveHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<BOPDS_Pave>(receiver);
+    auto local0 = arg0;
+    self->SetIndex(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_Pave@F@SetParameter#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_pave_setparameter_8(const OcctSharp_Owned_BOPDS_PaveHandle* receiver, double arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<BOPDS_Pave>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    self->SetParameter(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_bopds_point_release(OcctSharp_Owned_BOPDS_PointHandle* handle) { OcctSharpOwned::Release(handle, typeid(BOPDS_Point)); }
+// Source: c:@S@BOPDS_Point@F@BOPDS_Point#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_point_create_0(OcctSharp_Owned_BOPDS_PointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto returned = std::make_shared<BOPDS_Point>();
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_BOPDS_PointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_Point@F@Index#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_point_index_1(const OcctSharp_Owned_BOPDS_PointHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BOPDS_Point>(receiver);
+    auto returned = self->Index();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_Point@F@Pnt#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_point_pnt_2(const OcctSharp_Owned_BOPDS_PointHandle* receiver, OcctSharp_Point3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BOPDS_Point>(receiver);
+    auto returned = self->Pnt();
+    const auto copiedResult = OcctSharp_Point3d{returned.X(), returned.Y(), returned.Z()};
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_Point@F@Pnt2D1#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_point_pnt2d1_3(const OcctSharp_Owned_BOPDS_PointHandle* receiver, OcctSharp_Value_Point2d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BOPDS_Point>(receiver);
+    auto returned = self->Pnt2D1();
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_Point@F@Pnt2D2#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_point_pnt2d2_4(const OcctSharp_Owned_BOPDS_PointHandle* receiver, OcctSharp_Value_Point2d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BOPDS_Point>(receiver);
+    auto returned = self->Pnt2D2();
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_Point@F@SetIndex#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_point_setindex_5(const OcctSharp_Owned_BOPDS_PointHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<BOPDS_Point>(receiver);
+    auto local0 = arg0;
+    self->SetIndex(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_Point@F@SetPnt#&1$@S@gp_Pnt#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_point_setpnt_6(const OcctSharp_Owned_BOPDS_PointHandle* receiver, OcctSharp_Point3d arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<BOPDS_Point>(receiver);
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    self->SetPnt(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_Point@F@SetPnt2D1#&1$@S@gp_Pnt2d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_point_setpnt2d1_7(const OcctSharp_Owned_BOPDS_PointHandle* receiver, OcctSharp_Value_Point2d arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<BOPDS_Point>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    self->SetPnt2D1(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BOPDS_Point@F@SetPnt2D2#&1$@S@gp_Pnt2d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_bopds_point_setpnt2d2_8(const OcctSharp_Owned_BOPDS_PointHandle* receiver, OcctSharp_Value_Point2d arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<BOPDS_Point>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    self->SetPnt2D2(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_brepblend_extremity_release(OcctSharp_Owned_BRepBlend_ExtremityHandle* handle) { OcctSharpOwned::Release(handle, typeid(BRepBlend_Extremity)); }
+// Source: c:@S@BRepBlend_Extremity@F@AddArc#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#d#&1$@S@IntSurf_Transition#S3_#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepblend_extremity_addarc_0(const OcctSharp_Owned_BRepBlend_ExtremityHandle* receiver, const OcctSharp_Adaptor2dCurve2dHandle* arg0, double arg1, const OcctSharp_Owned_IntSurf_TransitionHandle* arg2, const OcctSharp_Owned_IntSurf_TransitionHandle* arg3) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<BRepBlend_Extremity>(receiver);
+    auto local0 = OcctSharpGenerated::ValidateAdaptor2dCurve2d(arg0)->Value;
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharpOwned::Lease<IntSurf_Transition>(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntSurf_Transition>(arg3);
+    self->AddArc(local0, local1, *local2, *local3);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepBlend_Extremity@F@BRepBlend_Extremity#&1$@S@gp_Pnt#d#d#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepblend_extremity_create_1(OcctSharp_Point3d arg0, double arg1, double arg2, double arg3, double arg4, OcctSharp_Owned_BRepBlend_ExtremityHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto returned = std::make_shared<BRepBlend_Extremity>(local0, local1, local2, local3, local4);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_BRepBlend_ExtremityHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepBlend_Extremity@F@BRepBlend_Extremity#&1$@S@gp_Pnt#d#d#d#d#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_HVertex#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepblend_extremity_create_2(OcctSharp_Point3d arg0, double arg1, double arg2, double arg3, double arg4, const OcctSharp_Adaptor3dHVertexHandle* arg5, OcctSharp_Owned_BRepBlend_ExtremityHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharpGenerated::ValidateAdaptor3dHVertex(arg5)->Value;
+    auto returned = std::make_shared<BRepBlend_Extremity>(local0, local1, local2, local3, local4, local5);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_BRepBlend_ExtremityHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepBlend_Extremity@F@HasTangent#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepblend_extremity_hastangent_3(const OcctSharp_Owned_BRepBlend_ExtremityHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BRepBlend_Extremity>(receiver);
+    auto returned = self->HasTangent();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepBlend_Extremity@F@IsVertex#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepblend_extremity_isvertex_4(const OcctSharp_Owned_BRepBlend_ExtremityHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BRepBlend_Extremity>(receiver);
+    auto returned = self->IsVertex();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepBlend_Extremity@F@NbPointOnRst#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepblend_extremity_nbpointonrst_5(const OcctSharp_Owned_BRepBlend_ExtremityHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BRepBlend_Extremity>(receiver);
+    auto returned = self->NbPointOnRst();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepBlend_Extremity@F@Parameter#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepblend_extremity_parameter_6(const OcctSharp_Owned_BRepBlend_ExtremityHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BRepBlend_Extremity>(receiver);
+    auto returned = self->Parameter();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepBlend_Extremity@F@ParameterOnGuide#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepblend_extremity_parameteronguide_7(const OcctSharp_Owned_BRepBlend_ExtremityHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BRepBlend_Extremity>(receiver);
+    auto returned = self->ParameterOnGuide();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepBlend_Extremity@F@Parameters#&d#S0_#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepblend_extremity_parameters_8(const OcctSharp_Owned_BRepBlend_ExtremityHandle* receiver, double arg0, double* updatedArg0, double arg1, double* updatedArg1) {
+  if (!updatedArg0) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg0 = {};
+  *updatedArg1 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BRepBlend_Extremity>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    self->Parameters(local0, local1);
+    const auto copied0 = local0;
+    const auto copied1 = local1;
+    *updatedArg0 = copied0;
+    *updatedArg1 = copied1;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepBlend_Extremity@F@PointOnRst#I#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepblend_extremity_pointonrst_9(const OcctSharp_Owned_BRepBlend_ExtremityHandle* receiver, int32_t arg0, OcctSharp_Owned_BRepBlend_PointOnRstHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BRepBlend_Extremity>(receiver);
+    auto local0 = arg0;
+    auto returned = std::make_shared<BRepBlend_PointOnRst>(self->PointOnRst(local0));
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_BRepBlend_PointOnRstHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepBlend_Extremity@F@SetTangent#&1$@S@gp_Vec#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepblend_extremity_settangent_10(const OcctSharp_Owned_BRepBlend_ExtremityHandle* receiver, OcctSharp_Value_Vector3d arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<BRepBlend_Extremity>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    self->SetTangent(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepBlend_Extremity@F@SetValue#&1$@S@gp_Pnt#d#d#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepblend_extremity_setvalue_11(const OcctSharp_Owned_BRepBlend_ExtremityHandle* receiver, OcctSharp_Point3d arg0, double arg1, double arg2, double arg3, double arg4) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<BRepBlend_Extremity>(receiver);
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    self->SetValue(local0, local1, local2, local3, local4);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepBlend_Extremity@F@SetValue#&1$@S@gp_Pnt#d#d#d#d#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_HVertex#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepblend_extremity_setvalue_12(const OcctSharp_Owned_BRepBlend_ExtremityHandle* receiver, OcctSharp_Point3d arg0, double arg1, double arg2, double arg3, double arg4, const OcctSharp_Adaptor3dHVertexHandle* arg5) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<BRepBlend_Extremity>(receiver);
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharpGenerated::ValidateAdaptor3dHVertex(arg5)->Value;
+    self->SetValue(local0, local1, local2, local3, local4, local5);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepBlend_Extremity@F@SetVertex#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_HVertex#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepblend_extremity_setvertex_13(const OcctSharp_Owned_BRepBlend_ExtremityHandle* receiver, const OcctSharp_Adaptor3dHVertexHandle* arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<BRepBlend_Extremity>(receiver);
+    auto local0 = OcctSharpGenerated::ValidateAdaptor3dHVertex(arg0)->Value;
+    self->SetVertex(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepBlend_Extremity@F@Tangent#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepblend_extremity_tangent_14(const OcctSharp_Owned_BRepBlend_ExtremityHandle* receiver, OcctSharp_Value_Vector3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BRepBlend_Extremity>(receiver);
+    auto returned = self->Tangent();
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepBlend_Extremity@F@Tolerance#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepblend_extremity_tolerance_15(const OcctSharp_Owned_BRepBlend_ExtremityHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BRepBlend_Extremity>(receiver);
+    auto returned = self->Tolerance();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepBlend_Extremity@F@Value#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepblend_extremity_value_16(const OcctSharp_Owned_BRepBlend_ExtremityHandle* receiver, OcctSharp_Point3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BRepBlend_Extremity>(receiver);
+    auto returned = self->Value();
+    const auto copiedResult = OcctSharp_Point3d{returned.X(), returned.Y(), returned.Z()};
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepBlend_Extremity@F@Vertex#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepblend_extremity_vertex_17(const OcctSharp_Owned_BRepBlend_ExtremityHandle* receiver, OcctSharp_Adaptor3dHVertexHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BRepBlend_Extremity>(receiver);
+    auto returned = self->Vertex();
+    auto* published = returned.IsNull() ? nullptr : OcctSharpGenerated::AllocateAdaptor3dHVertex(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_brepblend_pointonrst_release(OcctSharp_Owned_BRepBlend_PointOnRstHandle* handle) { OcctSharpOwned::Release(handle, typeid(BRepBlend_PointOnRst)); }
+// Source: c:@S@BRepBlend_PointOnRst@F@Arc#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepblend_pointonrst_arc_0(const OcctSharp_Owned_BRepBlend_PointOnRstHandle* receiver, OcctSharp_Adaptor2dCurve2dHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BRepBlend_PointOnRst>(receiver);
+    auto returned = self->Arc();
+    auto* published = returned.IsNull() ? nullptr : OcctSharpGenerated::AllocateAdaptor2dCurve2d(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepBlend_PointOnRst@F@BRepBlend_PointOnRst#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#d#&1$@S@IntSurf_Transition#S3_#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepblend_pointonrst_create_1(const OcctSharp_Adaptor2dCurve2dHandle* arg0, double arg1, const OcctSharp_Owned_IntSurf_TransitionHandle* arg2, const OcctSharp_Owned_IntSurf_TransitionHandle* arg3, OcctSharp_Owned_BRepBlend_PointOnRstHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharpGenerated::ValidateAdaptor2dCurve2d(arg0)->Value;
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharpOwned::Lease<IntSurf_Transition>(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntSurf_Transition>(arg3);
+    auto returned = std::make_shared<BRepBlend_PointOnRst>(local0, local1, *local2, *local3);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_BRepBlend_PointOnRstHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepBlend_PointOnRst@F@ParameterOnArc#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepblend_pointonrst_parameteronarc_2(const OcctSharp_Owned_BRepBlend_PointOnRstHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BRepBlend_PointOnRst>(receiver);
+    auto returned = self->ParameterOnArc();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepBlend_PointOnRst@F@SetArc#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#d#&1$@S@IntSurf_Transition#S3_#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepblend_pointonrst_setarc_3(const OcctSharp_Owned_BRepBlend_PointOnRstHandle* receiver, const OcctSharp_Adaptor2dCurve2dHandle* arg0, double arg1, const OcctSharp_Owned_IntSurf_TransitionHandle* arg2, const OcctSharp_Owned_IntSurf_TransitionHandle* arg3) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<BRepBlend_PointOnRst>(receiver);
+    auto local0 = OcctSharpGenerated::ValidateAdaptor2dCurve2d(arg0)->Value;
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharpOwned::Lease<IntSurf_Transition>(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntSurf_Transition>(arg3);
+    self->SetArc(local0, local1, *local2, *local3);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepBlend_PointOnRst@F@TransitionOnArc#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepblend_pointonrst_transitiononarc_4(const OcctSharp_Owned_BRepBlend_PointOnRstHandle* receiver, OcctSharp_Owned_IntSurf_TransitionHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BRepBlend_PointOnRst>(receiver);
+    auto returned = std::make_shared<IntSurf_Transition>(self->TransitionOnArc());
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntSurf_TransitionHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepBlend_PointOnRst@F@TransitionOnLine#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepblend_pointonrst_transitiononline_5(const OcctSharp_Owned_BRepBlend_PointOnRstHandle* receiver, OcctSharp_Owned_IntSurf_TransitionHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BRepBlend_PointOnRst>(receiver);
+    auto returned = std::make_shared<IntSurf_Transition>(self->TransitionOnLine());
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntSurf_TransitionHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_brepoffset_interval_release(OcctSharp_Owned_BRepOffset_IntervalHandle* handle) { OcctSharpOwned::Release(handle, typeid(BRepOffset_Interval)); }
+// Source: c:@S@BRepOffset_Interval@F@BRepOffset_Interval#d#d#$@E@ChFiDS_TypeOfConcavity#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepoffset_interval_create_0(double arg0, double arg1, int32_t arg2, OcctSharp_Owned_BRepOffset_IntervalHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = static_cast<ChFiDS_TypeOfConcavity>(arg2);
+    auto returned = std::make_shared<BRepOffset_Interval>(local0, local1, local2);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_BRepOffset_IntervalHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepOffset_Interval@F@First#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepoffset_interval_first_1(const OcctSharp_Owned_BRepOffset_IntervalHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BRepOffset_Interval>(receiver);
+    auto returned = self->First();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepOffset_Interval@F@First#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepoffset_interval_first_2(const OcctSharp_Owned_BRepOffset_IntervalHandle* receiver, double arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<BRepOffset_Interval>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    self->First(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepOffset_Interval@F@Last#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepoffset_interval_last_3(const OcctSharp_Owned_BRepOffset_IntervalHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BRepOffset_Interval>(receiver);
+    auto returned = self->Last();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepOffset_Interval@F@Last#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepoffset_interval_last_4(const OcctSharp_Owned_BRepOffset_IntervalHandle* receiver, double arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<BRepOffset_Interval>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    self->Last(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepOffset_Interval@F@Type#$@E@ChFiDS_TypeOfConcavity#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepoffset_interval_type_5(const OcctSharp_Owned_BRepOffset_IntervalHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<BRepOffset_Interval>(receiver);
+    auto local0 = static_cast<ChFiDS_TypeOfConcavity>(arg0);
+    self->Type(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@BRepOffset_Interval@F@Type#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_brepoffset_interval_type_6(const OcctSharp_Owned_BRepOffset_IntervalHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const BRepOffset_Interval>(receiver);
+    auto returned = self->Type();
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_blend_point_release(OcctSharp_Owned_Blend_PointHandle* handle) { OcctSharpOwned::Release(handle, typeid(Blend_Point)); }
+// Source: c:@S@Blend_Point@F@Blend_Point#&1$@S@gp_Pnt#S0_#d#d#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_create_0(OcctSharp_Point3d arg0, OcctSharp_Point3d arg1, double arg2, double arg3, double arg4, double arg5, OcctSharp_Owned_Blend_PointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = gp_Pnt(OcctSharp_GeometryValues::Check(arg1.x), OcctSharp_GeometryValues::Check(arg1.y), OcctSharp_GeometryValues::Check(arg1.z));
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto returned = std::make_shared<Blend_Point>(local0, local1, local2, local3, local4, local5);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_Blend_PointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@Blend_Point#&1$@S@gp_Pnt#S0_#d#d#d#d#&1$@S@gp_Vec#S2_#&1$@S@gp_Vec2d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_create_1(OcctSharp_Point3d arg0, OcctSharp_Point3d arg1, double arg2, double arg3, double arg4, double arg5, OcctSharp_Value_Vector3d arg6, OcctSharp_Value_Vector3d arg7, OcctSharp_Value_Vector2d arg8, OcctSharp_Owned_Blend_PointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = gp_Pnt(OcctSharp_GeometryValues::Check(arg1.x), OcctSharp_GeometryValues::Check(arg1.y), OcctSharp_GeometryValues::Check(arg1.z));
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto local6 = OcctSharp_GeometryValues::ToNative(arg6);
+    auto local7 = OcctSharp_GeometryValues::ToNative(arg7);
+    auto local8 = OcctSharp_GeometryValues::ToNative(arg8);
+    auto returned = std::make_shared<Blend_Point>(local0, local1, local2, local3, local4, local5, local6, local7, local8);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_Blend_PointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@Blend_Point#&1$@S@gp_Pnt#S0_#d#d#d#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_create_2(OcctSharp_Point3d arg0, OcctSharp_Point3d arg1, double arg2, double arg3, double arg4, double arg5, double arg6, OcctSharp_Owned_Blend_PointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = gp_Pnt(OcctSharp_GeometryValues::Check(arg1.x), OcctSharp_GeometryValues::Check(arg1.y), OcctSharp_GeometryValues::Check(arg1.z));
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto local6 = OcctSharp_GeometryValues::Check(arg6);
+    auto returned = std::make_shared<Blend_Point>(local0, local1, local2, local3, local4, local5, local6);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_Blend_PointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@Blend_Point#&1$@S@gp_Pnt#S0_#d#d#d#d#d#&1$@S@gp_Vec#S2_#&1$@S@gp_Vec2d#S4_#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_create_3(OcctSharp_Point3d arg0, OcctSharp_Point3d arg1, double arg2, double arg3, double arg4, double arg5, double arg6, OcctSharp_Value_Vector3d arg7, OcctSharp_Value_Vector3d arg8, OcctSharp_Value_Vector2d arg9, OcctSharp_Value_Vector2d arg10, OcctSharp_Owned_Blend_PointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = gp_Pnt(OcctSharp_GeometryValues::Check(arg1.x), OcctSharp_GeometryValues::Check(arg1.y), OcctSharp_GeometryValues::Check(arg1.z));
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto local6 = OcctSharp_GeometryValues::Check(arg6);
+    auto local7 = OcctSharp_GeometryValues::ToNative(arg7);
+    auto local8 = OcctSharp_GeometryValues::ToNative(arg8);
+    auto local9 = OcctSharp_GeometryValues::ToNative(arg9);
+    auto local10 = OcctSharp_GeometryValues::ToNative(arg10);
+    auto returned = std::make_shared<Blend_Point>(local0, local1, local2, local3, local4, local5, local6, local7, local8, local9, local10);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_Blend_PointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@Blend_Point#&1$@S@gp_Pnt#S0_#d#d#d#d#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_create_4(OcctSharp_Point3d arg0, OcctSharp_Point3d arg1, double arg2, double arg3, double arg4, double arg5, double arg6, double arg7, OcctSharp_Owned_Blend_PointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = gp_Pnt(OcctSharp_GeometryValues::Check(arg1.x), OcctSharp_GeometryValues::Check(arg1.y), OcctSharp_GeometryValues::Check(arg1.z));
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto local6 = OcctSharp_GeometryValues::Check(arg6);
+    auto local7 = OcctSharp_GeometryValues::Check(arg7);
+    auto returned = std::make_shared<Blend_Point>(local0, local1, local2, local3, local4, local5, local6, local7);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_Blend_PointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@Blend_Point#&1$@S@gp_Pnt#S0_#d#d#d#d#d#d#&1$@S@gp_Vec#S2_#&1$@S@gp_Vec2d#S4_#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_create_5(OcctSharp_Point3d arg0, OcctSharp_Point3d arg1, double arg2, double arg3, double arg4, double arg5, double arg6, double arg7, OcctSharp_Value_Vector3d arg8, OcctSharp_Value_Vector3d arg9, OcctSharp_Value_Vector2d arg10, OcctSharp_Value_Vector2d arg11, OcctSharp_Owned_Blend_PointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = gp_Pnt(OcctSharp_GeometryValues::Check(arg1.x), OcctSharp_GeometryValues::Check(arg1.y), OcctSharp_GeometryValues::Check(arg1.z));
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto local6 = OcctSharp_GeometryValues::Check(arg6);
+    auto local7 = OcctSharp_GeometryValues::Check(arg7);
+    auto local8 = OcctSharp_GeometryValues::ToNative(arg8);
+    auto local9 = OcctSharp_GeometryValues::ToNative(arg9);
+    auto local10 = OcctSharp_GeometryValues::ToNative(arg10);
+    auto local11 = OcctSharp_GeometryValues::ToNative(arg11);
+    auto returned = std::make_shared<Blend_Point>(local0, local1, local2, local3, local4, local5, local6, local7, local8, local9, local10, local11);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_Blend_PointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@Blend_Point#&1$@S@gp_Pnt#S0_#d#d#d#d#d#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_create_6(OcctSharp_Point3d arg0, OcctSharp_Point3d arg1, double arg2, double arg3, double arg4, double arg5, double arg6, double arg7, double arg8, OcctSharp_Owned_Blend_PointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = gp_Pnt(OcctSharp_GeometryValues::Check(arg1.x), OcctSharp_GeometryValues::Check(arg1.y), OcctSharp_GeometryValues::Check(arg1.z));
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto local6 = OcctSharp_GeometryValues::Check(arg6);
+    auto local7 = OcctSharp_GeometryValues::Check(arg7);
+    auto local8 = OcctSharp_GeometryValues::Check(arg8);
+    auto returned = std::make_shared<Blend_Point>(local0, local1, local2, local3, local4, local5, local6, local7, local8);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_Blend_PointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@Blend_Point#&1$@S@gp_Pnt#S0_#d#d#d#d#d#d#d#&1$@S@gp_Vec#S2_#&1$@S@gp_Vec2d#S4_#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_create_7(OcctSharp_Point3d arg0, OcctSharp_Point3d arg1, double arg2, double arg3, double arg4, double arg5, double arg6, double arg7, double arg8, OcctSharp_Value_Vector3d arg9, OcctSharp_Value_Vector3d arg10, OcctSharp_Value_Vector2d arg11, OcctSharp_Value_Vector2d arg12, OcctSharp_Owned_Blend_PointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = gp_Pnt(OcctSharp_GeometryValues::Check(arg1.x), OcctSharp_GeometryValues::Check(arg1.y), OcctSharp_GeometryValues::Check(arg1.z));
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto local6 = OcctSharp_GeometryValues::Check(arg6);
+    auto local7 = OcctSharp_GeometryValues::Check(arg7);
+    auto local8 = OcctSharp_GeometryValues::Check(arg8);
+    auto local9 = OcctSharp_GeometryValues::ToNative(arg9);
+    auto local10 = OcctSharp_GeometryValues::ToNative(arg10);
+    auto local11 = OcctSharp_GeometryValues::ToNative(arg11);
+    auto local12 = OcctSharp_GeometryValues::ToNative(arg12);
+    auto returned = std::make_shared<Blend_Point>(local0, local1, local2, local3, local4, local5, local6, local7, local8, local9, local10, local11, local12);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_Blend_PointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@IsTangencyPoint#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_istangencypoint_8(const OcctSharp_Owned_Blend_PointHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Blend_Point>(receiver);
+    auto returned = self->IsTangencyPoint();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@Parameter#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_parameter_9(const OcctSharp_Owned_Blend_PointHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Blend_Point>(receiver);
+    auto returned = self->Parameter();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@ParameterOnC#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_parameteronc_10(const OcctSharp_Owned_Blend_PointHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Blend_Point>(receiver);
+    auto returned = self->ParameterOnC();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@ParameterOnC1#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_parameteronc1_11(const OcctSharp_Owned_Blend_PointHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Blend_Point>(receiver);
+    auto returned = self->ParameterOnC1();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@ParameterOnC2#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_parameteronc2_12(const OcctSharp_Owned_Blend_PointHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Blend_Point>(receiver);
+    auto returned = self->ParameterOnC2();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@ParametersOnS#&d#S0_#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_parametersons_13(const OcctSharp_Owned_Blend_PointHandle* receiver, double arg0, double* updatedArg0, double arg1, double* updatedArg1) {
+  if (!updatedArg0) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg0 = {};
+  *updatedArg1 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Blend_Point>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    self->ParametersOnS(local0, local1);
+    const auto copied0 = local0;
+    const auto copied1 = local1;
+    *updatedArg0 = copied0;
+    *updatedArg1 = copied1;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@ParametersOnS1#&d#S0_#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_parametersons1_14(const OcctSharp_Owned_Blend_PointHandle* receiver, double arg0, double* updatedArg0, double arg1, double* updatedArg1) {
+  if (!updatedArg0) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg0 = {};
+  *updatedArg1 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Blend_Point>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    self->ParametersOnS1(local0, local1);
+    const auto copied0 = local0;
+    const auto copied1 = local1;
+    *updatedArg0 = copied0;
+    *updatedArg1 = copied1;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@ParametersOnS2#&d#S0_#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_parametersons2_15(const OcctSharp_Owned_Blend_PointHandle* receiver, double arg0, double* updatedArg0, double arg1, double* updatedArg1) {
+  if (!updatedArg0) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg0 = {};
+  *updatedArg1 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Blend_Point>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    self->ParametersOnS2(local0, local1);
+    const auto copied0 = local0;
+    const auto copied1 = local1;
+    *updatedArg0 = copied0;
+    *updatedArg1 = copied1;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@PointOnC#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_pointonc_16(const OcctSharp_Owned_Blend_PointHandle* receiver, OcctSharp_Point3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Blend_Point>(receiver);
+    auto returned = self->PointOnC();
+    const auto copiedResult = OcctSharp_Point3d{returned.X(), returned.Y(), returned.Z()};
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@PointOnC1#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_pointonc1_17(const OcctSharp_Owned_Blend_PointHandle* receiver, OcctSharp_Point3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Blend_Point>(receiver);
+    auto returned = self->PointOnC1();
+    const auto copiedResult = OcctSharp_Point3d{returned.X(), returned.Y(), returned.Z()};
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@PointOnC2#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_pointonc2_18(const OcctSharp_Owned_Blend_PointHandle* receiver, OcctSharp_Point3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Blend_Point>(receiver);
+    auto returned = self->PointOnC2();
+    const auto copiedResult = OcctSharp_Point3d{returned.X(), returned.Y(), returned.Z()};
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@PointOnS#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_pointons_19(const OcctSharp_Owned_Blend_PointHandle* receiver, OcctSharp_Point3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Blend_Point>(receiver);
+    auto returned = self->PointOnS();
+    const auto copiedResult = OcctSharp_Point3d{returned.X(), returned.Y(), returned.Z()};
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@PointOnS1#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_pointons1_20(const OcctSharp_Owned_Blend_PointHandle* receiver, OcctSharp_Point3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Blend_Point>(receiver);
+    auto returned = self->PointOnS1();
+    const auto copiedResult = OcctSharp_Point3d{returned.X(), returned.Y(), returned.Z()};
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@PointOnS2#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_pointons2_21(const OcctSharp_Owned_Blend_PointHandle* receiver, OcctSharp_Point3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Blend_Point>(receiver);
+    auto returned = self->PointOnS2();
+    const auto copiedResult = OcctSharp_Point3d{returned.X(), returned.Y(), returned.Z()};
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@SetParameter#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_setparameter_22(const OcctSharp_Owned_Blend_PointHandle* receiver, double arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Blend_Point>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    self->SetParameter(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@SetValue#&1$@S@gp_Pnt#S0_#d#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_setvalue_23(const OcctSharp_Owned_Blend_PointHandle* receiver, OcctSharp_Point3d arg0, OcctSharp_Point3d arg1, double arg2, double arg3, double arg4) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Blend_Point>(receiver);
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = gp_Pnt(OcctSharp_GeometryValues::Check(arg1.x), OcctSharp_GeometryValues::Check(arg1.y), OcctSharp_GeometryValues::Check(arg1.z));
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    self->SetValue(local0, local1, local2, local3, local4);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@SetValue#&1$@S@gp_Pnt#S0_#d#d#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_setvalue_24(const OcctSharp_Owned_Blend_PointHandle* receiver, OcctSharp_Point3d arg0, OcctSharp_Point3d arg1, double arg2, double arg3, double arg4, double arg5) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Blend_Point>(receiver);
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = gp_Pnt(OcctSharp_GeometryValues::Check(arg1.x), OcctSharp_GeometryValues::Check(arg1.y), OcctSharp_GeometryValues::Check(arg1.z));
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    self->SetValue(local0, local1, local2, local3, local4, local5);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@SetValue#&1$@S@gp_Pnt#S0_#d#d#d#d#&1$@S@gp_Vec#S2_#&1$@S@gp_Vec2d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_setvalue_25(const OcctSharp_Owned_Blend_PointHandle* receiver, OcctSharp_Point3d arg0, OcctSharp_Point3d arg1, double arg2, double arg3, double arg4, double arg5, OcctSharp_Value_Vector3d arg6, OcctSharp_Value_Vector3d arg7, OcctSharp_Value_Vector2d arg8) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Blend_Point>(receiver);
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = gp_Pnt(OcctSharp_GeometryValues::Check(arg1.x), OcctSharp_GeometryValues::Check(arg1.y), OcctSharp_GeometryValues::Check(arg1.z));
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto local6 = OcctSharp_GeometryValues::ToNative(arg6);
+    auto local7 = OcctSharp_GeometryValues::ToNative(arg7);
+    auto local8 = OcctSharp_GeometryValues::ToNative(arg8);
+    self->SetValue(local0, local1, local2, local3, local4, local5, local6, local7, local8);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@SetValue#&1$@S@gp_Pnt#S0_#d#d#d#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_setvalue_26(const OcctSharp_Owned_Blend_PointHandle* receiver, OcctSharp_Point3d arg0, OcctSharp_Point3d arg1, double arg2, double arg3, double arg4, double arg5, double arg6) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Blend_Point>(receiver);
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = gp_Pnt(OcctSharp_GeometryValues::Check(arg1.x), OcctSharp_GeometryValues::Check(arg1.y), OcctSharp_GeometryValues::Check(arg1.z));
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto local6 = OcctSharp_GeometryValues::Check(arg6);
+    self->SetValue(local0, local1, local2, local3, local4, local5, local6);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@SetValue#&1$@S@gp_Pnt#S0_#d#d#d#d#d#&1$@S@gp_Vec#S2_#&1$@S@gp_Vec2d#S4_#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_setvalue_27(const OcctSharp_Owned_Blend_PointHandle* receiver, OcctSharp_Point3d arg0, OcctSharp_Point3d arg1, double arg2, double arg3, double arg4, double arg5, double arg6, OcctSharp_Value_Vector3d arg7, OcctSharp_Value_Vector3d arg8, OcctSharp_Value_Vector2d arg9, OcctSharp_Value_Vector2d arg10) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Blend_Point>(receiver);
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = gp_Pnt(OcctSharp_GeometryValues::Check(arg1.x), OcctSharp_GeometryValues::Check(arg1.y), OcctSharp_GeometryValues::Check(arg1.z));
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto local6 = OcctSharp_GeometryValues::Check(arg6);
+    auto local7 = OcctSharp_GeometryValues::ToNative(arg7);
+    auto local8 = OcctSharp_GeometryValues::ToNative(arg8);
+    auto local9 = OcctSharp_GeometryValues::ToNative(arg9);
+    auto local10 = OcctSharp_GeometryValues::ToNative(arg10);
+    self->SetValue(local0, local1, local2, local3, local4, local5, local6, local7, local8, local9, local10);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@SetValue#&1$@S@gp_Pnt#S0_#d#d#d#d#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_setvalue_28(const OcctSharp_Owned_Blend_PointHandle* receiver, OcctSharp_Point3d arg0, OcctSharp_Point3d arg1, double arg2, double arg3, double arg4, double arg5, double arg6, double arg7) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Blend_Point>(receiver);
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = gp_Pnt(OcctSharp_GeometryValues::Check(arg1.x), OcctSharp_GeometryValues::Check(arg1.y), OcctSharp_GeometryValues::Check(arg1.z));
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto local6 = OcctSharp_GeometryValues::Check(arg6);
+    auto local7 = OcctSharp_GeometryValues::Check(arg7);
+    self->SetValue(local0, local1, local2, local3, local4, local5, local6, local7);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@SetValue#&1$@S@gp_Pnt#S0_#d#d#d#d#d#d#&1$@S@gp_Vec#S2_#&1$@S@gp_Vec2d#S4_#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_setvalue_29(const OcctSharp_Owned_Blend_PointHandle* receiver, OcctSharp_Point3d arg0, OcctSharp_Point3d arg1, double arg2, double arg3, double arg4, double arg5, double arg6, double arg7, OcctSharp_Value_Vector3d arg8, OcctSharp_Value_Vector3d arg9, OcctSharp_Value_Vector2d arg10, OcctSharp_Value_Vector2d arg11) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Blend_Point>(receiver);
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = gp_Pnt(OcctSharp_GeometryValues::Check(arg1.x), OcctSharp_GeometryValues::Check(arg1.y), OcctSharp_GeometryValues::Check(arg1.z));
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto local6 = OcctSharp_GeometryValues::Check(arg6);
+    auto local7 = OcctSharp_GeometryValues::Check(arg7);
+    auto local8 = OcctSharp_GeometryValues::ToNative(arg8);
+    auto local9 = OcctSharp_GeometryValues::ToNative(arg9);
+    auto local10 = OcctSharp_GeometryValues::ToNative(arg10);
+    auto local11 = OcctSharp_GeometryValues::ToNative(arg11);
+    self->SetValue(local0, local1, local2, local3, local4, local5, local6, local7, local8, local9, local10, local11);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@SetValue#&1$@S@gp_Pnt#S0_#d#d#d#d#d#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_setvalue_30(const OcctSharp_Owned_Blend_PointHandle* receiver, OcctSharp_Point3d arg0, OcctSharp_Point3d arg1, double arg2, double arg3, double arg4, double arg5, double arg6, double arg7, double arg8) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Blend_Point>(receiver);
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = gp_Pnt(OcctSharp_GeometryValues::Check(arg1.x), OcctSharp_GeometryValues::Check(arg1.y), OcctSharp_GeometryValues::Check(arg1.z));
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto local6 = OcctSharp_GeometryValues::Check(arg6);
+    auto local7 = OcctSharp_GeometryValues::Check(arg7);
+    auto local8 = OcctSharp_GeometryValues::Check(arg8);
+    self->SetValue(local0, local1, local2, local3, local4, local5, local6, local7, local8);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@SetValue#&1$@S@gp_Pnt#S0_#d#d#d#d#d#d#d#&1$@S@gp_Vec#S2_#&1$@S@gp_Vec2d#S4_#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_setvalue_31(const OcctSharp_Owned_Blend_PointHandle* receiver, OcctSharp_Point3d arg0, OcctSharp_Point3d arg1, double arg2, double arg3, double arg4, double arg5, double arg6, double arg7, double arg8, OcctSharp_Value_Vector3d arg9, OcctSharp_Value_Vector3d arg10, OcctSharp_Value_Vector2d arg11, OcctSharp_Value_Vector2d arg12) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Blend_Point>(receiver);
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = gp_Pnt(OcctSharp_GeometryValues::Check(arg1.x), OcctSharp_GeometryValues::Check(arg1.y), OcctSharp_GeometryValues::Check(arg1.z));
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto local6 = OcctSharp_GeometryValues::Check(arg6);
+    auto local7 = OcctSharp_GeometryValues::Check(arg7);
+    auto local8 = OcctSharp_GeometryValues::Check(arg8);
+    auto local9 = OcctSharp_GeometryValues::ToNative(arg9);
+    auto local10 = OcctSharp_GeometryValues::ToNative(arg10);
+    auto local11 = OcctSharp_GeometryValues::ToNative(arg11);
+    auto local12 = OcctSharp_GeometryValues::ToNative(arg12);
+    self->SetValue(local0, local1, local2, local3, local4, local5, local6, local7, local8, local9, local10, local11, local12);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@Tangent2d#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_tangent2d_32(const OcctSharp_Owned_Blend_PointHandle* receiver, OcctSharp_Value_Vector2d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Blend_Point>(receiver);
+    auto returned = self->Tangent2d();
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@Tangent2dOnS1#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_tangent2dons1_33(const OcctSharp_Owned_Blend_PointHandle* receiver, OcctSharp_Value_Vector2d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Blend_Point>(receiver);
+    auto returned = self->Tangent2dOnS1();
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@Tangent2dOnS2#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_tangent2dons2_34(const OcctSharp_Owned_Blend_PointHandle* receiver, OcctSharp_Value_Vector2d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Blend_Point>(receiver);
+    auto returned = self->Tangent2dOnS2();
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@TangentOnC#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_tangentonc_35(const OcctSharp_Owned_Blend_PointHandle* receiver, OcctSharp_Value_Vector3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Blend_Point>(receiver);
+    auto returned = self->TangentOnC();
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@TangentOnC1#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_tangentonc1_36(const OcctSharp_Owned_Blend_PointHandle* receiver, OcctSharp_Value_Vector3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Blend_Point>(receiver);
+    auto returned = self->TangentOnC1();
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@TangentOnC2#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_tangentonc2_37(const OcctSharp_Owned_Blend_PointHandle* receiver, OcctSharp_Value_Vector3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Blend_Point>(receiver);
+    auto returned = self->TangentOnC2();
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@TangentOnS#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_tangentons_38(const OcctSharp_Owned_Blend_PointHandle* receiver, OcctSharp_Value_Vector3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Blend_Point>(receiver);
+    auto returned = self->TangentOnS();
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@TangentOnS1#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_tangentons1_39(const OcctSharp_Owned_Blend_PointHandle* receiver, OcctSharp_Value_Vector3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Blend_Point>(receiver);
+    auto returned = self->TangentOnS1();
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Blend_Point@F@TangentOnS2#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_blend_point_tangentons2_40(const OcctSharp_Owned_Blend_PointHandle* receiver, OcctSharp_Value_Vector3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Blend_Point>(receiver);
+    auto returned = self->TangentOnS2();
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_contap_contana_release(OcctSharp_Owned_Contap_ContAnaHandle* handle) { OcctSharpOwned::Release(handle, typeid(Contap_ContAna)); }
+// Source: c:@S@Contap_ContAna@F@Contap_ContAna#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_contap_contana_create_0(OcctSharp_Owned_Contap_ContAnaHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto returned = std::make_shared<Contap_ContAna>();
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_Contap_ContAnaHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Contap_ContAna@F@IsDone#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_contap_contana_isdone_1(const OcctSharp_Owned_Contap_ContAnaHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Contap_ContAna>(receiver);
+    auto returned = self->IsDone();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Contap_ContAna@F@NbContours#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_contap_contana_nbcontours_2(const OcctSharp_Owned_Contap_ContAnaHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Contap_ContAna>(receiver);
+    auto returned = self->NbContours();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Contap_ContAna@F@Perform#&1$@S@gp_Cone#&1$@S@gp_Dir#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_contap_contana_perform_3(const OcctSharp_Owned_Contap_ContAnaHandle* receiver, OcctSharp_Value_Cone arg0, OcctSharp_Value_Direction3d arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Contap_ContAna>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharp_GeometryValues::ToNative(arg1);
+    self->Perform(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Contap_ContAna@F@Perform#&1$@S@gp_Cone#&1$@S@gp_Dir#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_contap_contana_perform_4(const OcctSharp_Owned_Contap_ContAnaHandle* receiver, OcctSharp_Value_Cone arg0, OcctSharp_Value_Direction3d arg1, double arg2) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Contap_ContAna>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharp_GeometryValues::ToNative(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    self->Perform(local0, local1, local2);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Contap_ContAna@F@Perform#&1$@S@gp_Cone#&1$@S@gp_Pnt#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_contap_contana_perform_5(const OcctSharp_Owned_Contap_ContAnaHandle* receiver, OcctSharp_Value_Cone arg0, OcctSharp_Point3d arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Contap_ContAna>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = gp_Pnt(OcctSharp_GeometryValues::Check(arg1.x), OcctSharp_GeometryValues::Check(arg1.y), OcctSharp_GeometryValues::Check(arg1.z));
+    self->Perform(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Contap_ContAna@F@Perform#&1$@S@gp_Cylinder#&1$@S@gp_Dir#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_contap_contana_perform_6(const OcctSharp_Owned_Contap_ContAnaHandle* receiver, OcctSharp_Value_Cylinder arg0, OcctSharp_Value_Direction3d arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Contap_ContAna>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharp_GeometryValues::ToNative(arg1);
+    self->Perform(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Contap_ContAna@F@Perform#&1$@S@gp_Cylinder#&1$@S@gp_Dir#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_contap_contana_perform_7(const OcctSharp_Owned_Contap_ContAnaHandle* receiver, OcctSharp_Value_Cylinder arg0, OcctSharp_Value_Direction3d arg1, double arg2) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Contap_ContAna>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharp_GeometryValues::ToNative(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    self->Perform(local0, local1, local2);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Contap_ContAna@F@Perform#&1$@S@gp_Cylinder#&1$@S@gp_Pnt#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_contap_contana_perform_8(const OcctSharp_Owned_Contap_ContAnaHandle* receiver, OcctSharp_Value_Cylinder arg0, OcctSharp_Point3d arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Contap_ContAna>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = gp_Pnt(OcctSharp_GeometryValues::Check(arg1.x), OcctSharp_GeometryValues::Check(arg1.y), OcctSharp_GeometryValues::Check(arg1.z));
+    self->Perform(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Contap_ContAna@F@Perform#&1$@S@gp_Sphere#&1$@S@gp_Dir#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_contap_contana_perform_9(const OcctSharp_Owned_Contap_ContAnaHandle* receiver, OcctSharp_Value_Sphere arg0, OcctSharp_Value_Direction3d arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Contap_ContAna>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharp_GeometryValues::ToNative(arg1);
+    self->Perform(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Contap_ContAna@F@Perform#&1$@S@gp_Sphere#&1$@S@gp_Dir#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_contap_contana_perform_10(const OcctSharp_Owned_Contap_ContAnaHandle* receiver, OcctSharp_Value_Sphere arg0, OcctSharp_Value_Direction3d arg1, double arg2) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Contap_ContAna>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharp_GeometryValues::ToNative(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    self->Perform(local0, local1, local2);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Contap_ContAna@F@Perform#&1$@S@gp_Sphere#&1$@S@gp_Pnt#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_contap_contana_perform_11(const OcctSharp_Owned_Contap_ContAnaHandle* receiver, OcctSharp_Value_Sphere arg0, OcctSharp_Point3d arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Contap_ContAna>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = gp_Pnt(OcctSharp_GeometryValues::Check(arg1.x), OcctSharp_GeometryValues::Check(arg1.y), OcctSharp_GeometryValues::Check(arg1.z));
+    self->Perform(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Contap_ContAna@F@TypeContour#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_contap_contana_typecontour_12(const OcctSharp_Owned_Contap_ContAnaHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Contap_ContAna>(receiver);
+    auto returned = self->TypeContour();
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_hlralgo_bipoint_release(OcctSharp_Owned_HLRAlgo_BiPointHandle* handle) { OcctSharpOwned::Release(handle, typeid(HLRAlgo_BiPoint)); }
+// Source: c:@S@HLRAlgo_BiPoint@F@HLRAlgo_BiPoint#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_bipoint_create_0(OcctSharp_Owned_HLRAlgo_BiPointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto returned = std::make_shared<HLRAlgo_BiPoint>();
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_HLRAlgo_BiPointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_BiPoint@F@HLRAlgo_BiPoint#d#d#d#d#d#d#d#d#d#d#d#d#I#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_bipoint_create_1(double arg0, double arg1, double arg2, double arg3, double arg4, double arg5, double arg6, double arg7, double arg8, double arg9, double arg10, double arg11, int32_t arg12, int32_t arg13, OcctSharp_Owned_HLRAlgo_BiPointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto local6 = OcctSharp_GeometryValues::Check(arg6);
+    auto local7 = OcctSharp_GeometryValues::Check(arg7);
+    auto local8 = OcctSharp_GeometryValues::Check(arg8);
+    auto local9 = OcctSharp_GeometryValues::Check(arg9);
+    auto local10 = OcctSharp_GeometryValues::Check(arg10);
+    auto local11 = OcctSharp_GeometryValues::Check(arg11);
+    auto local12 = arg12;
+    auto local13 = arg13;
+    auto returned = std::make_shared<HLRAlgo_BiPoint>(local0, local1, local2, local3, local4, local5, local6, local7, local8, local9, local10, local11, local12, local13);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_HLRAlgo_BiPointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_BiPoint@F@HLRAlgo_BiPoint#d#d#d#d#d#d#d#d#d#d#d#d#I#I#I#I#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_bipoint_create_2(double arg0, double arg1, double arg2, double arg3, double arg4, double arg5, double arg6, double arg7, double arg8, double arg9, double arg10, double arg11, int32_t arg12, int32_t arg13, int32_t arg14, int32_t arg15, int32_t arg16, OcctSharp_Owned_HLRAlgo_BiPointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto local6 = OcctSharp_GeometryValues::Check(arg6);
+    auto local7 = OcctSharp_GeometryValues::Check(arg7);
+    auto local8 = OcctSharp_GeometryValues::Check(arg8);
+    auto local9 = OcctSharp_GeometryValues::Check(arg9);
+    auto local10 = OcctSharp_GeometryValues::Check(arg10);
+    auto local11 = OcctSharp_GeometryValues::Check(arg11);
+    auto local12 = arg12;
+    auto local13 = arg13;
+    auto local14 = arg14;
+    auto local15 = arg15;
+    auto local16 = arg16;
+    auto returned = std::make_shared<HLRAlgo_BiPoint>(local0, local1, local2, local3, local4, local5, local6, local7, local8, local9, local10, local11, local12, local13, local14, local15, local16);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_HLRAlgo_BiPointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_BiPoint@F@HLRAlgo_BiPoint#d#d#d#d#d#d#d#d#d#d#d#d#I#I#I#I#I#I#I#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_bipoint_create_3(double arg0, double arg1, double arg2, double arg3, double arg4, double arg5, double arg6, double arg7, double arg8, double arg9, double arg10, double arg11, int32_t arg12, int32_t arg13, int32_t arg14, int32_t arg15, int32_t arg16, int32_t arg17, int32_t arg18, int32_t arg19, OcctSharp_Owned_HLRAlgo_BiPointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto local6 = OcctSharp_GeometryValues::Check(arg6);
+    auto local7 = OcctSharp_GeometryValues::Check(arg7);
+    auto local8 = OcctSharp_GeometryValues::Check(arg8);
+    auto local9 = OcctSharp_GeometryValues::Check(arg9);
+    auto local10 = OcctSharp_GeometryValues::Check(arg10);
+    auto local11 = OcctSharp_GeometryValues::Check(arg11);
+    auto local12 = arg12;
+    auto local13 = arg13;
+    auto local14 = arg14;
+    auto local15 = arg15;
+    auto local16 = arg16;
+    auto local17 = arg17;
+    auto local18 = arg18;
+    auto local19 = arg19;
+    auto returned = std::make_shared<HLRAlgo_BiPoint>(local0, local1, local2, local3, local4, local5, local6, local7, local8, local9, local10, local11, local12, local13, local14, local15, local16, local17, local18, local19);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_HLRAlgo_BiPointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_BiPoint@F@HLRAlgo_BiPoint#d#d#d#d#d#d#d#d#d#d#d#d#I#I#I#I#I#I#I#b#b#b#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_bipoint_create_4(double arg0, double arg1, double arg2, double arg3, double arg4, double arg5, double arg6, double arg7, double arg8, double arg9, double arg10, double arg11, int32_t arg12, int32_t arg13, int32_t arg14, int32_t arg15, int32_t arg16, int32_t arg17, int32_t arg18, int32_t arg19, int32_t arg20, int32_t arg21, int32_t arg22, OcctSharp_Owned_HLRAlgo_BiPointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto local6 = OcctSharp_GeometryValues::Check(arg6);
+    auto local7 = OcctSharp_GeometryValues::Check(arg7);
+    auto local8 = OcctSharp_GeometryValues::Check(arg8);
+    auto local9 = OcctSharp_GeometryValues::Check(arg9);
+    auto local10 = OcctSharp_GeometryValues::Check(arg10);
+    auto local11 = OcctSharp_GeometryValues::Check(arg11);
+    auto local12 = arg12;
+    auto local13 = arg13;
+    auto local14 = arg14;
+    auto local15 = arg15;
+    auto local16 = arg16;
+    auto local17 = arg17;
+    auto local18 = arg18;
+    auto local19 = (arg19 != 0);
+    auto local20 = (arg20 != 0);
+    auto local21 = (arg21 != 0);
+    auto local22 = (arg22 != 0);
+    auto returned = std::make_shared<HLRAlgo_BiPoint>(local0, local1, local2, local3, local4, local5, local6, local7, local8, local9, local10, local11, local12, local13, local14, local15, local16, local17, local18, local19, local20, local21, local22);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_HLRAlgo_BiPointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_BiPoint@F@HLRAlgo_BiPoint#d#d#d#d#d#d#d#d#d#d#d#d#I#I#I#I#b#b#b#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_bipoint_create_5(double arg0, double arg1, double arg2, double arg3, double arg4, double arg5, double arg6, double arg7, double arg8, double arg9, double arg10, double arg11, int32_t arg12, int32_t arg13, int32_t arg14, int32_t arg15, int32_t arg16, int32_t arg17, int32_t arg18, int32_t arg19, OcctSharp_Owned_HLRAlgo_BiPointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto local6 = OcctSharp_GeometryValues::Check(arg6);
+    auto local7 = OcctSharp_GeometryValues::Check(arg7);
+    auto local8 = OcctSharp_GeometryValues::Check(arg8);
+    auto local9 = OcctSharp_GeometryValues::Check(arg9);
+    auto local10 = OcctSharp_GeometryValues::Check(arg10);
+    auto local11 = OcctSharp_GeometryValues::Check(arg11);
+    auto local12 = arg12;
+    auto local13 = arg13;
+    auto local14 = arg14;
+    auto local15 = arg15;
+    auto local16 = (arg16 != 0);
+    auto local17 = (arg17 != 0);
+    auto local18 = (arg18 != 0);
+    auto local19 = (arg19 != 0);
+    auto returned = std::make_shared<HLRAlgo_BiPoint>(local0, local1, local2, local3, local4, local5, local6, local7, local8, local9, local10, local11, local12, local13, local14, local15, local16, local17, local18, local19);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_HLRAlgo_BiPointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_BiPoint@F@HLRAlgo_BiPoint#d#d#d#d#d#d#d#d#d#d#d#d#I#b#b#b#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_bipoint_create_6(double arg0, double arg1, double arg2, double arg3, double arg4, double arg5, double arg6, double arg7, double arg8, double arg9, double arg10, double arg11, int32_t arg12, int32_t arg13, int32_t arg14, int32_t arg15, int32_t arg16, OcctSharp_Owned_HLRAlgo_BiPointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto local6 = OcctSharp_GeometryValues::Check(arg6);
+    auto local7 = OcctSharp_GeometryValues::Check(arg7);
+    auto local8 = OcctSharp_GeometryValues::Check(arg8);
+    auto local9 = OcctSharp_GeometryValues::Check(arg9);
+    auto local10 = OcctSharp_GeometryValues::Check(arg10);
+    auto local11 = OcctSharp_GeometryValues::Check(arg11);
+    auto local12 = arg12;
+    auto local13 = (arg13 != 0);
+    auto local14 = (arg14 != 0);
+    auto local15 = (arg15 != 0);
+    auto local16 = (arg16 != 0);
+    auto returned = std::make_shared<HLRAlgo_BiPoint>(local0, local1, local2, local3, local4, local5, local6, local7, local8, local9, local10, local11, local12, local13, local14, local15, local16);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_HLRAlgo_BiPointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_BiPoint@F@Hidden#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_bipoint_hidden_7(const OcctSharp_Owned_HLRAlgo_BiPointHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_BiPoint>(receiver);
+    auto returned = self->Hidden();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_BiPoint@F@Hidden#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_bipoint_hidden_8(const OcctSharp_Owned_HLRAlgo_BiPointHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HLRAlgo_BiPoint>(receiver);
+    auto local0 = (arg0 != 0);
+    self->Hidden(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_BiPoint@F@IntLine#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_bipoint_intline_9(const OcctSharp_Owned_HLRAlgo_BiPointHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_BiPoint>(receiver);
+    auto returned = self->IntLine();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_BiPoint@F@IntLine#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_bipoint_intline_10(const OcctSharp_Owned_HLRAlgo_BiPointHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HLRAlgo_BiPoint>(receiver);
+    auto local0 = (arg0 != 0);
+    self->IntLine(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_BiPoint@F@OutLine#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_bipoint_outline_11(const OcctSharp_Owned_HLRAlgo_BiPointHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_BiPoint>(receiver);
+    auto returned = self->OutLine();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_BiPoint@F@OutLine#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_bipoint_outline_12(const OcctSharp_Owned_HLRAlgo_BiPointHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HLRAlgo_BiPoint>(receiver);
+    auto local0 = (arg0 != 0);
+    self->OutLine(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_BiPoint@F@Rg1Line#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_bipoint_rg1line_13(const OcctSharp_Owned_HLRAlgo_BiPointHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_BiPoint>(receiver);
+    auto returned = self->Rg1Line();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_BiPoint@F@Rg1Line#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_bipoint_rg1line_14(const OcctSharp_Owned_HLRAlgo_BiPointHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HLRAlgo_BiPoint>(receiver);
+    auto local0 = (arg0 != 0);
+    self->Rg1Line(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_BiPoint@F@RgNLine#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_bipoint_rgnline_15(const OcctSharp_Owned_HLRAlgo_BiPointHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_BiPoint>(receiver);
+    auto returned = self->RgNLine();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_BiPoint@F@RgNLine#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_bipoint_rgnline_16(const OcctSharp_Owned_HLRAlgo_BiPointHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HLRAlgo_BiPoint>(receiver);
+    auto local0 = (arg0 != 0);
+    self->RgNLine(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_hlralgo_coincidence_release(OcctSharp_Owned_HLRAlgo_CoincidenceHandle* handle) { OcctSharpOwned::Release(handle, typeid(HLRAlgo_Coincidence)); }
+// Source: c:@S@HLRAlgo_Coincidence@F@HLRAlgo_Coincidence#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_coincidence_create_0(OcctSharp_Owned_HLRAlgo_CoincidenceHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto returned = std::make_shared<HLRAlgo_Coincidence>();
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_HLRAlgo_CoincidenceHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Coincidence@F@Set2D#I#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_coincidence_set2d_1(const OcctSharp_Owned_HLRAlgo_CoincidenceHandle* receiver, int32_t arg0, double arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HLRAlgo_Coincidence>(receiver);
+    auto local0 = arg0;
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    self->Set2D(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Coincidence@F@SetState3D#$@E@TopAbs_State#S0_#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_coincidence_setstate3d_2(const OcctSharp_Owned_HLRAlgo_CoincidenceHandle* receiver, int32_t arg0, int32_t arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HLRAlgo_Coincidence>(receiver);
+    auto local0 = static_cast<TopAbs_State>(arg0);
+    auto local1 = static_cast<TopAbs_State>(arg1);
+    self->SetState3D(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Coincidence@F@State3D#&$@E@TopAbs_State#S0_#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_coincidence_state3d_3(const OcctSharp_Owned_HLRAlgo_CoincidenceHandle* receiver, int32_t arg0, int32_t* updatedArg0, int32_t arg1, int32_t* updatedArg1) {
+  if (!updatedArg0) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg0 = {};
+  *updatedArg1 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_Coincidence>(receiver);
+    auto local0 = static_cast<TopAbs_State>(arg0);
+    auto local1 = static_cast<TopAbs_State>(arg1);
+    self->State3D(local0, local1);
+    const auto copied0 = static_cast<int32_t>(local0);
+    const auto copied1 = static_cast<int32_t>(local1);
+    *updatedArg0 = copied0;
+    *updatedArg1 = copied1;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Coincidence@F@Value2D#&I#&d#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_coincidence_value2d_4(const OcctSharp_Owned_HLRAlgo_CoincidenceHandle* receiver, int32_t arg0, int32_t* updatedArg0, double arg1, double* updatedArg1) {
+  if (!updatedArg0) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg0 = {};
+  *updatedArg1 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_Coincidence>(receiver);
+    auto local0 = arg0;
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    self->Value2D(local0, local1);
+    const auto copied0 = local0;
+    const auto copied1 = local1;
+    *updatedArg0 = copied0;
+    *updatedArg1 = copied1;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_hlralgo_edgestatus_release(OcctSharp_Owned_HLRAlgo_EdgeStatusHandle* handle) { OcctSharpOwned::Release(handle, typeid(HLRAlgo_EdgeStatus)); }
+// Source: c:@S@HLRAlgo_EdgeStatus@F@AllHidden#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_edgestatus_allhidden_0(const OcctSharp_Owned_HLRAlgo_EdgeStatusHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_EdgeStatus>(receiver);
+    auto returned = self->AllHidden();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_EdgeStatus@F@AllHidden#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_edgestatus_allhidden_1(const OcctSharp_Owned_HLRAlgo_EdgeStatusHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HLRAlgo_EdgeStatus>(receiver);
+    auto local0 = (arg0 != 0);
+    self->AllHidden(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_EdgeStatus@F@AllVisible#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_edgestatus_allvisible_2(const OcctSharp_Owned_HLRAlgo_EdgeStatusHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_EdgeStatus>(receiver);
+    auto returned = self->AllVisible();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_EdgeStatus@F@AllVisible#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_edgestatus_allvisible_3(const OcctSharp_Owned_HLRAlgo_EdgeStatusHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HLRAlgo_EdgeStatus>(receiver);
+    auto local0 = (arg0 != 0);
+    self->AllVisible(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_EdgeStatus@F@Bounds#&d#&f#S0_#S1_#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_edgestatus_bounds_4(const OcctSharp_Owned_HLRAlgo_EdgeStatusHandle* receiver, double arg0, double* updatedArg0, float arg1, float* updatedArg1, double arg2, double* updatedArg2, float arg3, float* updatedArg3) {
+  if (!updatedArg0) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg2) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg3) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg0 = {};
+  *updatedArg1 = {};
+  *updatedArg2 = {};
+  *updatedArg3 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_EdgeStatus>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = static_cast<float>(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = static_cast<float>(arg3);
+    self->Bounds(local0, local1, local2, local3);
+    const auto copied0 = local0;
+    const auto copied1 = local1;
+    const auto copied2 = local2;
+    const auto copied3 = local3;
+    *updatedArg0 = copied0;
+    *updatedArg1 = copied1;
+    *updatedArg2 = copied2;
+    *updatedArg3 = copied3;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_EdgeStatus@F@HLRAlgo_EdgeStatus#d#f#d#f#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_edgestatus_create_5(double arg0, float arg1, double arg2, float arg3, OcctSharp_Owned_HLRAlgo_EdgeStatusHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = static_cast<float>(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = static_cast<float>(arg3);
+    auto returned = std::make_shared<HLRAlgo_EdgeStatus>(local0, local1, local2, local3);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_HLRAlgo_EdgeStatusHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_EdgeStatus@F@Hide#d#f#d#f#b#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_edgestatus_hide_6(const OcctSharp_Owned_HLRAlgo_EdgeStatusHandle* receiver, double arg0, float arg1, double arg2, float arg3, int32_t arg4, int32_t arg5) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HLRAlgo_EdgeStatus>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = static_cast<float>(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = static_cast<float>(arg3);
+    auto local4 = (arg4 != 0);
+    auto local5 = (arg5 != 0);
+    self->Hide(local0, local1, local2, local3, local4, local5);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_EdgeStatus@F@HideAll#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_edgestatus_hideall_7(const OcctSharp_Owned_HLRAlgo_EdgeStatusHandle* receiver) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HLRAlgo_EdgeStatus>(receiver);
+    self->HideAll();
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_EdgeStatus@F@Initialize#d#f#d#f#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_edgestatus_initialize_8(const OcctSharp_Owned_HLRAlgo_EdgeStatusHandle* receiver, double arg0, float arg1, double arg2, float arg3) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HLRAlgo_EdgeStatus>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = static_cast<float>(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = static_cast<float>(arg3);
+    self->Initialize(local0, local1, local2, local3);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_EdgeStatus@F@NbVisiblePart#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_edgestatus_nbvisiblepart_9(const OcctSharp_Owned_HLRAlgo_EdgeStatusHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_EdgeStatus>(receiver);
+    auto returned = self->NbVisiblePart();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_EdgeStatus@F@ShowAll#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_edgestatus_showall_10(const OcctSharp_Owned_HLRAlgo_EdgeStatusHandle* receiver) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HLRAlgo_EdgeStatus>(receiver);
+    self->ShowAll();
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_EdgeStatus@F@VisiblePart#I#&d#&f#S0_#S1_#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_edgestatus_visiblepart_11(const OcctSharp_Owned_HLRAlgo_EdgeStatusHandle* receiver, int32_t arg0, double arg1, double* updatedArg1, float arg2, float* updatedArg2, double arg3, double* updatedArg3, float arg4, float* updatedArg4) {
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg2) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg3) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg4) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg1 = {};
+  *updatedArg2 = {};
+  *updatedArg3 = {};
+  *updatedArg4 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_EdgeStatus>(receiver);
+    auto local0 = arg0;
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = static_cast<float>(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = static_cast<float>(arg4);
+    self->VisiblePart(local0, local1, local2, local3, local4);
+    const auto copied1 = local1;
+    const auto copied2 = local2;
+    const auto copied3 = local3;
+    const auto copied4 = local4;
+    *updatedArg1 = copied1;
+    *updatedArg2 = copied2;
+    *updatedArg3 = copied3;
+    *updatedArg4 = copied4;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_hlralgo_interference_release(OcctSharp_Owned_HLRAlgo_InterferenceHandle* handle) { OcctSharpOwned::Release(handle, typeid(HLRAlgo_Interference)); }
+// Source: c:@S@HLRAlgo_Interference@F@Boundary#&1$@S@HLRAlgo_Coincidence#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_interference_boundary_0(const OcctSharp_Owned_HLRAlgo_InterferenceHandle* receiver, const OcctSharp_Owned_HLRAlgo_CoincidenceHandle* arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HLRAlgo_Interference>(receiver);
+    auto local0 = OcctSharpOwned::Lease<HLRAlgo_Coincidence>(arg0);
+    self->Boundary(*local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Interference@F@Boundary#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_interference_boundary_1(const OcctSharp_Owned_HLRAlgo_InterferenceHandle* receiver, OcctSharp_Owned_HLRAlgo_CoincidenceHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_Interference>(receiver);
+    auto returned = std::make_shared<HLRAlgo_Coincidence>(self->Boundary());
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_HLRAlgo_CoincidenceHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Interference@F@BoundaryTransition#$@E@TopAbs_Orientation#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_interference_boundarytransition_2(const OcctSharp_Owned_HLRAlgo_InterferenceHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HLRAlgo_Interference>(receiver);
+    auto local0 = static_cast<TopAbs_Orientation>(arg0);
+    self->BoundaryTransition(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Interference@F@BoundaryTransition#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_interference_boundarytransition_3(const OcctSharp_Owned_HLRAlgo_InterferenceHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_Interference>(receiver);
+    auto returned = self->BoundaryTransition();
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Interference@F@HLRAlgo_Interference#&1$@S@HLRAlgo_Intersection#&1$@S@HLRAlgo_Coincidence#$@E@TopAbs_Orientation#S4_#S4_#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_interference_create_4(const OcctSharp_Owned_HLRAlgo_IntersectionHandle* arg0, const OcctSharp_Owned_HLRAlgo_CoincidenceHandle* arg1, int32_t arg2, int32_t arg3, int32_t arg4, OcctSharp_Owned_HLRAlgo_InterferenceHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharpOwned::Lease<HLRAlgo_Intersection>(arg0);
+    auto local1 = OcctSharpOwned::Lease<HLRAlgo_Coincidence>(arg1);
+    auto local2 = static_cast<TopAbs_Orientation>(arg2);
+    auto local3 = static_cast<TopAbs_Orientation>(arg3);
+    auto local4 = static_cast<TopAbs_Orientation>(arg4);
+    auto returned = std::make_shared<HLRAlgo_Interference>(*local0, *local1, local2, local3, local4);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_HLRAlgo_InterferenceHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Interference@F@Intersection#&1$@S@HLRAlgo_Intersection#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_interference_intersection_5(const OcctSharp_Owned_HLRAlgo_InterferenceHandle* receiver, const OcctSharp_Owned_HLRAlgo_IntersectionHandle* arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HLRAlgo_Interference>(receiver);
+    auto local0 = OcctSharpOwned::Lease<HLRAlgo_Intersection>(arg0);
+    self->Intersection(*local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Interference@F@Intersection#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_interference_intersection_6(const OcctSharp_Owned_HLRAlgo_InterferenceHandle* receiver, OcctSharp_Owned_HLRAlgo_IntersectionHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_Interference>(receiver);
+    auto returned = std::make_shared<HLRAlgo_Intersection>(self->Intersection());
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_HLRAlgo_IntersectionHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Interference@F@Orientation#$@E@TopAbs_Orientation#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_interference_orientation_7(const OcctSharp_Owned_HLRAlgo_InterferenceHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HLRAlgo_Interference>(receiver);
+    auto local0 = static_cast<TopAbs_Orientation>(arg0);
+    self->Orientation(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Interference@F@Orientation#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_interference_orientation_8(const OcctSharp_Owned_HLRAlgo_InterferenceHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_Interference>(receiver);
+    auto returned = self->Orientation();
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Interference@F@Transition#$@E@TopAbs_Orientation#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_interference_transition_9(const OcctSharp_Owned_HLRAlgo_InterferenceHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HLRAlgo_Interference>(receiver);
+    auto local0 = static_cast<TopAbs_Orientation>(arg0);
+    self->Transition(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Interference@F@Transition#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_interference_transition_10(const OcctSharp_Owned_HLRAlgo_InterferenceHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_Interference>(receiver);
+    auto returned = self->Transition();
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_hlralgo_intersection_release(OcctSharp_Owned_HLRAlgo_IntersectionHandle* handle) { OcctSharpOwned::Release(handle, typeid(HLRAlgo_Intersection)); }
+// Source: c:@S@HLRAlgo_Intersection@F@HLRAlgo_Intersection#$@E@TopAbs_Orientation#I#I#I#d#f#$@E@TopAbs_State#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_intersection_create_0(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, double arg4, float arg5, int32_t arg6, OcctSharp_Owned_HLRAlgo_IntersectionHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = static_cast<TopAbs_Orientation>(arg0);
+    auto local1 = arg1;
+    auto local2 = arg2;
+    auto local3 = arg3;
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = static_cast<float>(arg5);
+    auto local6 = static_cast<TopAbs_State>(arg6);
+    auto returned = std::make_shared<HLRAlgo_Intersection>(local0, local1, local2, local3, local4, local5, local6);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_HLRAlgo_IntersectionHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Intersection@F@Index#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_intersection_index_1(const OcctSharp_Owned_HLRAlgo_IntersectionHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_Intersection>(receiver);
+    auto returned = self->Index();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Intersection@F@Index#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_intersection_index_2(const OcctSharp_Owned_HLRAlgo_IntersectionHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HLRAlgo_Intersection>(receiver);
+    auto local0 = arg0;
+    self->Index(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Intersection@F@Level#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_intersection_level_3(const OcctSharp_Owned_HLRAlgo_IntersectionHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_Intersection>(receiver);
+    auto returned = self->Level();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Intersection@F@Level#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_intersection_level_4(const OcctSharp_Owned_HLRAlgo_IntersectionHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HLRAlgo_Intersection>(receiver);
+    auto local0 = arg0;
+    self->Level(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Intersection@F@Orientation#$@E@TopAbs_Orientation#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_intersection_orientation_5(const OcctSharp_Owned_HLRAlgo_IntersectionHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HLRAlgo_Intersection>(receiver);
+    auto local0 = static_cast<TopAbs_Orientation>(arg0);
+    self->Orientation(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Intersection@F@Orientation#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_intersection_orientation_6(const OcctSharp_Owned_HLRAlgo_IntersectionHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_Intersection>(receiver);
+    auto returned = self->Orientation();
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Intersection@F@Parameter#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_intersection_parameter_7(const OcctSharp_Owned_HLRAlgo_IntersectionHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_Intersection>(receiver);
+    auto returned = self->Parameter();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Intersection@F@Parameter#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_intersection_parameter_8(const OcctSharp_Owned_HLRAlgo_IntersectionHandle* receiver, double arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HLRAlgo_Intersection>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    self->Parameter(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Intersection@F@SegIndex#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_intersection_segindex_9(const OcctSharp_Owned_HLRAlgo_IntersectionHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_Intersection>(receiver);
+    auto returned = self->SegIndex();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Intersection@F@SegIndex#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_intersection_segindex_10(const OcctSharp_Owned_HLRAlgo_IntersectionHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HLRAlgo_Intersection>(receiver);
+    auto local0 = arg0;
+    self->SegIndex(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Intersection@F@State#$@E@TopAbs_State#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_intersection_state_11(const OcctSharp_Owned_HLRAlgo_IntersectionHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HLRAlgo_Intersection>(receiver);
+    auto local0 = static_cast<TopAbs_State>(arg0);
+    self->State(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Intersection@F@State#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_intersection_state_12(const OcctSharp_Owned_HLRAlgo_IntersectionHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_Intersection>(receiver);
+    auto returned = self->State();
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Intersection@F@Tolerance#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_intersection_tolerance_13(const OcctSharp_Owned_HLRAlgo_IntersectionHandle* receiver, float* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_Intersection>(receiver);
+    auto returned = self->Tolerance();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Intersection@F@Tolerance#f#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_intersection_tolerance_14(const OcctSharp_Owned_HLRAlgo_IntersectionHandle* receiver, float arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HLRAlgo_Intersection>(receiver);
+    auto local0 = static_cast<float>(arg0);
+    self->Tolerance(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_hlralgo_projector_release(OcctSharp_Owned_HLRAlgo_ProjectorHandle* handle) { OcctSharpOwned::Release(handle, typeid(HLRAlgo_Projector)); }
+// Source: c:@S@HLRAlgo_Projector@F@Directions#&$@S@gp_Vec2d#S0_#S0_#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_projector_directions_0(const OcctSharp_Owned_HLRAlgo_ProjectorHandle* receiver, OcctSharp_Value_Vector2d arg0, OcctSharp_Value_Vector2d* updatedArg0, OcctSharp_Value_Vector2d arg1, OcctSharp_Value_Vector2d* updatedArg1, OcctSharp_Value_Vector2d arg2, OcctSharp_Value_Vector2d* updatedArg2) {
+  if (!updatedArg0) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg2) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg0 = {};
+  *updatedArg1 = {};
+  *updatedArg2 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_Projector>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharp_GeometryValues::ToNative(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    self->Directions(local0, local1, local2);
+    const auto copied0 = OcctSharp_GeometryValues::FromNative(local0);
+    const auto copied1 = OcctSharp_GeometryValues::FromNative(local1);
+    const auto copied2 = OcctSharp_GeometryValues::FromNative(local2);
+    *updatedArg0 = copied0;
+    *updatedArg1 = copied1;
+    *updatedArg2 = copied2;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Projector@F@Focus#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_projector_focus_1(const OcctSharp_Owned_HLRAlgo_ProjectorHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_Projector>(receiver);
+    auto returned = self->Focus();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Projector@F@FullTransformation#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_projector_fulltransformation_2(const OcctSharp_Owned_HLRAlgo_ProjectorHandle* receiver, OcctSharp_Value_Transform3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_Projector>(receiver);
+    auto returned = self->FullTransformation();
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Projector@F@HLRAlgo_Projector#&1$@S@gp_Trsf#b#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_projector_create_3(OcctSharp_Value_Transform3d arg0, int32_t arg1, double arg2, OcctSharp_Owned_HLRAlgo_ProjectorHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = (arg1 != 0);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto returned = std::make_shared<HLRAlgo_Projector>(local0, local1, local2);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_HLRAlgo_ProjectorHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Projector@F@HLRAlgo_Projector#&1$@S@gp_Trsf#b#d#&1$@S@gp_Vec2d#S2_#S2_#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_projector_create_4(OcctSharp_Value_Transform3d arg0, int32_t arg1, double arg2, OcctSharp_Value_Vector2d arg3, OcctSharp_Value_Vector2d arg4, OcctSharp_Value_Vector2d arg5, OcctSharp_Owned_HLRAlgo_ProjectorHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = (arg1 != 0);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::ToNative(arg3);
+    auto local4 = OcctSharp_GeometryValues::ToNative(arg4);
+    auto local5 = OcctSharp_GeometryValues::ToNative(arg5);
+    auto returned = std::make_shared<HLRAlgo_Projector>(local0, local1, local2, local3, local4, local5);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_HLRAlgo_ProjectorHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Projector@F@InvertedTransformation#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_projector_invertedtransformation_5(const OcctSharp_Owned_HLRAlgo_ProjectorHandle* receiver, OcctSharp_Value_Transform3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_Projector>(receiver);
+    auto returned = self->InvertedTransformation();
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Projector@F@Perspective#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_projector_perspective_6(const OcctSharp_Owned_HLRAlgo_ProjectorHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_Projector>(receiver);
+    auto returned = self->Perspective();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Projector@F@Project#&1$@S@gp_Pnt#&$@S@gp_Pnt2d#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_projector_project_7(const OcctSharp_Owned_HLRAlgo_ProjectorHandle* receiver, OcctSharp_Point3d arg0, OcctSharp_Value_Point2d arg1, OcctSharp_Value_Point2d* updatedArg1) {
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg1 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_Projector>(receiver);
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = OcctSharp_GeometryValues::ToNative(arg1);
+    self->Project(local0, local1);
+    const auto copied1 = OcctSharp_GeometryValues::FromNative(local1);
+    *updatedArg1 = copied1;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Projector@F@Project#&1$@S@gp_Pnt#&1$@S@gp_Vec#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_projector_project_8(const OcctSharp_Owned_HLRAlgo_ProjectorHandle* receiver, OcctSharp_Point3d arg0, OcctSharp_Value_Vector3d arg1, OcctSharp_Value_Point2d arg2, OcctSharp_Value_Point2d* updatedArg2, OcctSharp_Value_Vector2d arg3, OcctSharp_Value_Vector2d* updatedArg3) {
+  if (!updatedArg2) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg3) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg2 = {};
+  *updatedArg3 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_Projector>(receiver);
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = OcctSharp_GeometryValues::ToNative(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharp_GeometryValues::ToNative(arg3);
+    self->Project(local0, local1, local2, local3);
+    const auto copied2 = OcctSharp_GeometryValues::FromNative(local2);
+    const auto copied3 = OcctSharp_GeometryValues::FromNative(local3);
+    *updatedArg2 = copied2;
+    *updatedArg3 = copied3;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Projector@F@Project#&1$@S@gp_Pnt#&d#S2_#S2_#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_projector_project_9(const OcctSharp_Owned_HLRAlgo_ProjectorHandle* receiver, OcctSharp_Point3d arg0, double arg1, double* updatedArg1, double arg2, double* updatedArg2, double arg3, double* updatedArg3) {
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg2) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg3) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg1 = {};
+  *updatedArg2 = {};
+  *updatedArg3 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_Projector>(receiver);
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    self->Project(local0, local1, local2, local3);
+    const auto copied1 = local1;
+    const auto copied2 = local2;
+    const auto copied3 = local3;
+    *updatedArg1 = copied1;
+    *updatedArg2 = copied2;
+    *updatedArg3 = copied3;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Projector@F@Scaled#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_projector_scaled_10(const OcctSharp_Owned_HLRAlgo_ProjectorHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HLRAlgo_Projector>(receiver);
+    auto local0 = (arg0 != 0);
+    self->Scaled(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Projector@F@Set#&1$@S@gp_Trsf#b#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_projector_set_11(const OcctSharp_Owned_HLRAlgo_ProjectorHandle* receiver, OcctSharp_Value_Transform3d arg0, int32_t arg1, double arg2) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<HLRAlgo_Projector>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = (arg1 != 0);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    self->Set(local0, local1, local2);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Projector@F@Shoot#d#d#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_projector_shoot_12(const OcctSharp_Owned_HLRAlgo_ProjectorHandle* receiver, double arg0, double arg1, OcctSharp_Value_Line3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_Projector>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto returned = self->Shoot(local0, local1);
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Projector@F@Transform#&$@S@gp_Pnt#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_projector_transform_13(const OcctSharp_Owned_HLRAlgo_ProjectorHandle* receiver, OcctSharp_Point3d arg0, OcctSharp_Point3d* updatedArg0) {
+  if (!updatedArg0) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg0 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_Projector>(receiver);
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    self->Transform(local0);
+    const auto copied0 = OcctSharp_Point3d{local0.X(), local0.Y(), local0.Z()};
+    *updatedArg0 = copied0;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Projector@F@Transform#&$@S@gp_Vec#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_projector_transform_14(const OcctSharp_Owned_HLRAlgo_ProjectorHandle* receiver, OcctSharp_Value_Vector3d arg0, OcctSharp_Value_Vector3d* updatedArg0) {
+  if (!updatedArg0) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg0 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_Projector>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    self->Transform(local0);
+    const auto copied0 = OcctSharp_GeometryValues::FromNative(local0);
+    *updatedArg0 = copied0;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@HLRAlgo_Projector@F@Transformation#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_hlralgo_projector_transformation_15(const OcctSharp_Owned_HLRAlgo_ProjectorHandle* receiver, OcctSharp_Value_Transform3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const HLRAlgo_Projector>(receiver);
+    auto returned = self->Transformation();
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
 void OCCTSHARP_CALL occtsharp_owned_intana2d_anaintersection_release(OcctSharp_Owned_IntAna2d_AnaIntersectionHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntAna2d_AnaIntersection)); }
 // Source: c:@S@IntAna2d_AnaIntersection@F@IdenticalElements#1
 OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intana2d_anaintersection_identicalelements_0(const OcctSharp_Owned_IntAna2d_AnaIntersectionHandle* receiver, int32_t* result) {
@@ -2755,6 +6494,8031 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intana_quadric_setquadric_9(cons
     auto self = OcctSharpOwned::Lease<IntAna_Quadric>(receiver);
     auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
     self->SetQuadric(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_intcurvesurface_hinter_release(OcctSharp_Owned_IntCurveSurface_HInterHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntCurveSurface_HInter)); }
+// Source: c:@S@IntCurveSurface_HInter@F@IntCurveSurface_HInter#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurvesurface_hinter_create_0(OcctSharp_Owned_IntCurveSurface_HInterHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto returned = std::make_shared<IntCurveSurface_HInter>();
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurveSurface_HInterHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurveSurface_HInter@F@Perform#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurvesurface_hinter_perform_1(const OcctSharp_Owned_IntCurveSurface_HInterHandle* receiver, const OcctSharp_Adaptor3dCurveHandle* arg0, const OcctSharp_Adaptor3dSurfaceHandle* arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntCurveSurface_HInter>(receiver);
+    auto local0 = OcctSharpGenerated::ValidateAdaptor3dCurve(arg0)->Value;
+    auto local1 = OcctSharpGenerated::ValidateAdaptor3dSurface(arg1)->Value;
+    self->Perform(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurveSurface_Intersection@F@IsDone#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurvesurface_hinter_isdone_2(const OcctSharp_Owned_IntCurveSurface_HInterHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurveSurface_HInter>(receiver);
+    auto returned = self->IsDone();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurveSurface_Intersection@F@IsParallel#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurvesurface_hinter_isparallel_3(const OcctSharp_Owned_IntCurveSurface_HInterHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurveSurface_HInter>(receiver);
+    auto returned = self->IsParallel();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurveSurface_Intersection@F@NbPoints#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurvesurface_hinter_nbpoints_4(const OcctSharp_Owned_IntCurveSurface_HInterHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurveSurface_HInter>(receiver);
+    auto returned = self->NbPoints();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurveSurface_Intersection@F@NbSegments#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurvesurface_hinter_nbsegments_5(const OcctSharp_Owned_IntCurveSurface_HInterHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurveSurface_HInter>(receiver);
+    auto returned = self->NbSegments();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurveSurface_Intersection@F@Point#I#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurvesurface_hinter_point_6(const OcctSharp_Owned_IntCurveSurface_HInterHandle* receiver, int32_t arg0, OcctSharp_Owned_IntCurveSurface_IntersectionPointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurveSurface_HInter>(receiver);
+    auto local0 = arg0;
+    auto returned = std::make_shared<IntCurveSurface_IntersectionPoint>(self->Point(local0));
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurveSurface_IntersectionPointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurveSurface_Intersection@F@Segment#I#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurvesurface_hinter_segment_7(const OcctSharp_Owned_IntCurveSurface_HInterHandle* receiver, int32_t arg0, OcctSharp_Owned_IntCurveSurface_IntersectionSegmentHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurveSurface_HInter>(receiver);
+    auto local0 = arg0;
+    auto returned = std::make_shared<IntCurveSurface_IntersectionSegment>(self->Segment(local0));
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurveSurface_IntersectionSegmentHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_intcurvesurface_intersectionpoint_release(OcctSharp_Owned_IntCurveSurface_IntersectionPointHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntCurveSurface_IntersectionPoint)); }
+// Source: c:@S@IntCurveSurface_IntersectionPoint@F@IntCurveSurface_IntersectionPoint#&1$@S@gp_Pnt#d#d#d#$@E@IntCurveSurface_TransitionOnCurve#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurvesurface_intersectionpoint_create_0(OcctSharp_Point3d arg0, double arg1, double arg2, double arg3, int32_t arg4, OcctSharp_Owned_IntCurveSurface_IntersectionPointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = static_cast<IntCurveSurface_TransitionOnCurve>(arg4);
+    auto returned = std::make_shared<IntCurveSurface_IntersectionPoint>(local0, local1, local2, local3, local4);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurveSurface_IntersectionPointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurveSurface_IntersectionPoint@F@Pnt#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurvesurface_intersectionpoint_pnt_1(const OcctSharp_Owned_IntCurveSurface_IntersectionPointHandle* receiver, OcctSharp_Point3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurveSurface_IntersectionPoint>(receiver);
+    auto returned = self->Pnt();
+    const auto copiedResult = OcctSharp_Point3d{returned.X(), returned.Y(), returned.Z()};
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurveSurface_IntersectionPoint@F@SetValues#&1$@S@gp_Pnt#d#d#d#$@E@IntCurveSurface_TransitionOnCurve#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurvesurface_intersectionpoint_setvalues_2(const OcctSharp_Owned_IntCurveSurface_IntersectionPointHandle* receiver, OcctSharp_Point3d arg0, double arg1, double arg2, double arg3, int32_t arg4) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntCurveSurface_IntersectionPoint>(receiver);
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = static_cast<IntCurveSurface_TransitionOnCurve>(arg4);
+    self->SetValues(local0, local1, local2, local3, local4);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurveSurface_IntersectionPoint@F@Transition#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurvesurface_intersectionpoint_transition_3(const OcctSharp_Owned_IntCurveSurface_IntersectionPointHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurveSurface_IntersectionPoint>(receiver);
+    auto returned = self->Transition();
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurveSurface_IntersectionPoint@F@U#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurvesurface_intersectionpoint_u_4(const OcctSharp_Owned_IntCurveSurface_IntersectionPointHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurveSurface_IntersectionPoint>(receiver);
+    auto returned = self->U();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurveSurface_IntersectionPoint@F@V#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurvesurface_intersectionpoint_v_5(const OcctSharp_Owned_IntCurveSurface_IntersectionPointHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurveSurface_IntersectionPoint>(receiver);
+    auto returned = self->V();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurveSurface_IntersectionPoint@F@Values#&$@S@gp_Pnt#&d#S2_#S2_#&$@E@IntCurveSurface_TransitionOnCurve#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurvesurface_intersectionpoint_values_6(const OcctSharp_Owned_IntCurveSurface_IntersectionPointHandle* receiver, OcctSharp_Point3d arg0, OcctSharp_Point3d* updatedArg0, double arg1, double* updatedArg1, double arg2, double* updatedArg2, double arg3, double* updatedArg3, int32_t arg4, int32_t* updatedArg4) {
+  if (!updatedArg0) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg2) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg3) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg4) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg0 = {};
+  *updatedArg1 = {};
+  *updatedArg2 = {};
+  *updatedArg3 = {};
+  *updatedArg4 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurveSurface_IntersectionPoint>(receiver);
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = static_cast<IntCurveSurface_TransitionOnCurve>(arg4);
+    self->Values(local0, local1, local2, local3, local4);
+    const auto copied0 = OcctSharp_Point3d{local0.X(), local0.Y(), local0.Z()};
+    const auto copied1 = local1;
+    const auto copied2 = local2;
+    const auto copied3 = local3;
+    const auto copied4 = static_cast<int32_t>(local4);
+    *updatedArg0 = copied0;
+    *updatedArg1 = copied1;
+    *updatedArg2 = copied2;
+    *updatedArg3 = copied3;
+    *updatedArg4 = copied4;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurveSurface_IntersectionPoint@F@W#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurvesurface_intersectionpoint_w_7(const OcctSharp_Owned_IntCurveSurface_IntersectionPointHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurveSurface_IntersectionPoint>(receiver);
+    auto returned = self->W();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_intcurvesurface_intersectionsegment_release(OcctSharp_Owned_IntCurveSurface_IntersectionSegmentHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntCurveSurface_IntersectionSegment)); }
+// Source: c:@S@IntCurveSurface_IntersectionSegment@F@FirstPoint#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurvesurface_intersectionsegment_firstpoint_0(const OcctSharp_Owned_IntCurveSurface_IntersectionSegmentHandle* receiver, OcctSharp_Owned_IntCurveSurface_IntersectionPointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurveSurface_IntersectionSegment>(receiver);
+    auto returned = std::make_shared<IntCurveSurface_IntersectionPoint>(self->FirstPoint());
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurveSurface_IntersectionPointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurveSurface_IntersectionSegment@F@IntCurveSurface_IntersectionSegment#&1$@S@IntCurveSurface_IntersectionPoint#S0_#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurvesurface_intersectionsegment_create_1(const OcctSharp_Owned_IntCurveSurface_IntersectionPointHandle* arg0, const OcctSharp_Owned_IntCurveSurface_IntersectionPointHandle* arg1, OcctSharp_Owned_IntCurveSurface_IntersectionSegmentHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharpOwned::Lease<IntCurveSurface_IntersectionPoint>(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntCurveSurface_IntersectionPoint>(arg1);
+    auto returned = std::make_shared<IntCurveSurface_IntersectionSegment>(*local0, *local1);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurveSurface_IntersectionSegmentHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurveSurface_IntersectionSegment@F@SecondPoint#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurvesurface_intersectionsegment_secondpoint_2(const OcctSharp_Owned_IntCurveSurface_IntersectionSegmentHandle* receiver, OcctSharp_Owned_IntCurveSurface_IntersectionPointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurveSurface_IntersectionSegment>(receiver);
+    auto returned = std::make_shared<IntCurveSurface_IntersectionPoint>(self->SecondPoint());
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurveSurface_IntersectionPointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurveSurface_IntersectionSegment@F@SetValues#&1$@S@IntCurveSurface_IntersectionPoint#S0_#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurvesurface_intersectionsegment_setvalues_3(const OcctSharp_Owned_IntCurveSurface_IntersectionSegmentHandle* receiver, const OcctSharp_Owned_IntCurveSurface_IntersectionPointHandle* arg0, const OcctSharp_Owned_IntCurveSurface_IntersectionPointHandle* arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntCurveSurface_IntersectionSegment>(receiver);
+    auto local0 = OcctSharpOwned::Lease<IntCurveSurface_IntersectionPoint>(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntCurveSurface_IntersectionPoint>(arg1);
+    self->SetValues(*local0, *local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_intcurve_iconictool_release(OcctSharp_Owned_IntCurve_IConicToolHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntCurve_IConicTool)); }
+// Source: c:@S@IntCurve_IConicTool@F@D1#d#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_iconictool_d1_0(const OcctSharp_Owned_IntCurve_IConicToolHandle* receiver, double arg0, OcctSharp_Value_Point2d arg1, OcctSharp_Value_Point2d* updatedArg1, OcctSharp_Value_Vector2d arg2, OcctSharp_Value_Vector2d* updatedArg2) {
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg2) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg1 = {};
+  *updatedArg2 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurve_IConicTool>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::ToNative(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    self->D1(local0, local1, local2);
+    const auto copied1 = OcctSharp_GeometryValues::FromNative(local1);
+    const auto copied2 = OcctSharp_GeometryValues::FromNative(local2);
+    *updatedArg1 = copied1;
+    *updatedArg2 = copied2;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IConicTool@F@D2#d#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#S2_#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_iconictool_d2_1(const OcctSharp_Owned_IntCurve_IConicToolHandle* receiver, double arg0, OcctSharp_Value_Point2d arg1, OcctSharp_Value_Point2d* updatedArg1, OcctSharp_Value_Vector2d arg2, OcctSharp_Value_Vector2d* updatedArg2, OcctSharp_Value_Vector2d arg3, OcctSharp_Value_Vector2d* updatedArg3) {
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg2) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg3) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg1 = {};
+  *updatedArg2 = {};
+  *updatedArg3 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurve_IConicTool>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::ToNative(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharp_GeometryValues::ToNative(arg3);
+    self->D2(local0, local1, local2, local3);
+    const auto copied1 = OcctSharp_GeometryValues::FromNative(local1);
+    const auto copied2 = OcctSharp_GeometryValues::FromNative(local2);
+    const auto copied3 = OcctSharp_GeometryValues::FromNative(local3);
+    *updatedArg1 = copied1;
+    *updatedArg2 = copied2;
+    *updatedArg3 = copied3;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IConicTool@F@Distance#&1$@S@gp_Pnt2d#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_iconictool_distance_2(const OcctSharp_Owned_IntCurve_IConicToolHandle* receiver, OcctSharp_Value_Point2d arg0, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurve_IConicTool>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto returned = self->Distance(local0);
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IConicTool@F@FindParameter#&1$@S@gp_Pnt2d#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_iconictool_findparameter_3(const OcctSharp_Owned_IntCurve_IConicToolHandle* receiver, OcctSharp_Value_Point2d arg0, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurve_IConicTool>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto returned = self->FindParameter(local0);
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IConicTool@F@GradDistance#&1$@S@gp_Pnt2d#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_iconictool_graddistance_4(const OcctSharp_Owned_IntCurve_IConicToolHandle* receiver, OcctSharp_Value_Point2d arg0, OcctSharp_Value_Vector2d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurve_IConicTool>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto returned = self->GradDistance(local0);
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IConicTool@F@IntCurve_IConicTool#&1$@S@gp_Circ2d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_iconictool_create_5(OcctSharp_Value_Circle2d arg0, OcctSharp_Owned_IntCurve_IConicToolHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto returned = std::make_shared<IntCurve_IConicTool>(local0);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_IConicToolHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IConicTool@F@IntCurve_IConicTool#&1$@S@gp_Elips2d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_iconictool_create_6(OcctSharp_Value_Ellipse2d arg0, OcctSharp_Owned_IntCurve_IConicToolHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto returned = std::make_shared<IntCurve_IConicTool>(local0);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_IConicToolHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IConicTool@F@IntCurve_IConicTool#&1$@S@gp_Hypr2d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_iconictool_create_7(OcctSharp_Value_Hyperbola2d arg0, OcctSharp_Owned_IntCurve_IConicToolHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto returned = std::make_shared<IntCurve_IConicTool>(local0);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_IConicToolHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IConicTool@F@IntCurve_IConicTool#&1$@S@gp_Lin2d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_iconictool_create_8(OcctSharp_Value_Line2d arg0, OcctSharp_Owned_IntCurve_IConicToolHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto returned = std::make_shared<IntCurve_IConicTool>(local0);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_IConicToolHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IConicTool@F@IntCurve_IConicTool#&1$@S@gp_Parab2d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_iconictool_create_9(OcctSharp_Value_Parabola2d arg0, OcctSharp_Owned_IntCurve_IConicToolHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto returned = std::make_shared<IntCurve_IConicTool>(local0);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_IConicToolHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IConicTool@F@Value#d#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_iconictool_value_10(const OcctSharp_Owned_IntCurve_IConicToolHandle* receiver, double arg0, OcctSharp_Value_Point2d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurve_IConicTool>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto returned = self->Value(local0);
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_release(OcctSharp_Owned_IntCurve_IntConicConicHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntCurve_IntConicConic)); }
+// Source: c:@S@IntCurve_IntConicConic@F@IntCurve_IntConicConic#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_create_0(OcctSharp_Owned_IntCurve_IntConicConicHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto returned = std::make_shared<IntCurve_IntConicConic>();
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_IntConicConicHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@IntCurve_IntConicConic#&1$@S@gp_Circ2d#&1$@S@IntRes2d_Domain#&1$@S@gp_Elips2d#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_create_1(OcctSharp_Value_Circle2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Ellipse2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5, OcctSharp_Owned_IntCurve_IntConicConicHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto returned = std::make_shared<IntCurve_IntConicConic>(local0, *local1, local2, *local3, local4, local5);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_IntConicConicHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@IntCurve_IntConicConic#&1$@S@gp_Circ2d#&1$@S@IntRes2d_Domain#&1$@S@gp_Hypr2d#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_create_2(OcctSharp_Value_Circle2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Hyperbola2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5, OcctSharp_Owned_IntCurve_IntConicConicHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto returned = std::make_shared<IntCurve_IntConicConic>(local0, *local1, local2, *local3, local4, local5);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_IntConicConicHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@IntCurve_IntConicConic#&1$@S@gp_Circ2d#&1$@S@IntRes2d_Domain#&1$@S@gp_Parab2d#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_create_3(OcctSharp_Value_Circle2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Parabola2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5, OcctSharp_Owned_IntCurve_IntConicConicHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto returned = std::make_shared<IntCurve_IntConicConic>(local0, *local1, local2, *local3, local4, local5);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_IntConicConicHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@IntCurve_IntConicConic#&1$@S@gp_Circ2d#&1$@S@IntRes2d_Domain#S0_#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_create_4(OcctSharp_Value_Circle2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Circle2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5, OcctSharp_Owned_IntCurve_IntConicConicHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto returned = std::make_shared<IntCurve_IntConicConic>(local0, *local1, local2, *local3, local4, local5);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_IntConicConicHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@IntCurve_IntConicConic#&1$@S@gp_Elips2d#&1$@S@IntRes2d_Domain#&1$@S@gp_Hypr2d#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_create_5(OcctSharp_Value_Ellipse2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Hyperbola2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5, OcctSharp_Owned_IntCurve_IntConicConicHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto returned = std::make_shared<IntCurve_IntConicConic>(local0, *local1, local2, *local3, local4, local5);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_IntConicConicHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@IntCurve_IntConicConic#&1$@S@gp_Elips2d#&1$@S@IntRes2d_Domain#&1$@S@gp_Parab2d#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_create_6(OcctSharp_Value_Ellipse2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Parabola2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5, OcctSharp_Owned_IntCurve_IntConicConicHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto returned = std::make_shared<IntCurve_IntConicConic>(local0, *local1, local2, *local3, local4, local5);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_IntConicConicHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@IntCurve_IntConicConic#&1$@S@gp_Elips2d#&1$@S@IntRes2d_Domain#S0_#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_create_7(OcctSharp_Value_Ellipse2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Ellipse2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5, OcctSharp_Owned_IntCurve_IntConicConicHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto returned = std::make_shared<IntCurve_IntConicConic>(local0, *local1, local2, *local3, local4, local5);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_IntConicConicHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@IntCurve_IntConicConic#&1$@S@gp_Hypr2d#&1$@S@IntRes2d_Domain#S0_#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_create_8(OcctSharp_Value_Hyperbola2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Hyperbola2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5, OcctSharp_Owned_IntCurve_IntConicConicHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto returned = std::make_shared<IntCurve_IntConicConic>(local0, *local1, local2, *local3, local4, local5);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_IntConicConicHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@IntCurve_IntConicConic#&1$@S@gp_Lin2d#&1$@S@IntRes2d_Domain#&1$@S@gp_Circ2d#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_create_9(OcctSharp_Value_Line2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Circle2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5, OcctSharp_Owned_IntCurve_IntConicConicHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto returned = std::make_shared<IntCurve_IntConicConic>(local0, *local1, local2, *local3, local4, local5);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_IntConicConicHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@IntCurve_IntConicConic#&1$@S@gp_Lin2d#&1$@S@IntRes2d_Domain#&1$@S@gp_Elips2d#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_create_10(OcctSharp_Value_Line2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Ellipse2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5, OcctSharp_Owned_IntCurve_IntConicConicHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto returned = std::make_shared<IntCurve_IntConicConic>(local0, *local1, local2, *local3, local4, local5);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_IntConicConicHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@IntCurve_IntConicConic#&1$@S@gp_Lin2d#&1$@S@IntRes2d_Domain#&1$@S@gp_Hypr2d#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_create_11(OcctSharp_Value_Line2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Hyperbola2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5, OcctSharp_Owned_IntCurve_IntConicConicHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto returned = std::make_shared<IntCurve_IntConicConic>(local0, *local1, local2, *local3, local4, local5);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_IntConicConicHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@IntCurve_IntConicConic#&1$@S@gp_Lin2d#&1$@S@IntRes2d_Domain#&1$@S@gp_Parab2d#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_create_12(OcctSharp_Value_Line2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Parabola2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5, OcctSharp_Owned_IntCurve_IntConicConicHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto returned = std::make_shared<IntCurve_IntConicConic>(local0, *local1, local2, *local3, local4, local5);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_IntConicConicHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@IntCurve_IntConicConic#&1$@S@gp_Lin2d#&1$@S@IntRes2d_Domain#S0_#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_create_13(OcctSharp_Value_Line2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Line2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5, OcctSharp_Owned_IntCurve_IntConicConicHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto returned = std::make_shared<IntCurve_IntConicConic>(local0, *local1, local2, *local3, local4, local5);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_IntConicConicHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@IntCurve_IntConicConic#&1$@S@gp_Parab2d#&1$@S@IntRes2d_Domain#&1$@S@gp_Hypr2d#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_create_14(OcctSharp_Value_Parabola2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Hyperbola2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5, OcctSharp_Owned_IntCurve_IntConicConicHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto returned = std::make_shared<IntCurve_IntConicConic>(local0, *local1, local2, *local3, local4, local5);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_IntConicConicHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@IntCurve_IntConicConic#&1$@S@gp_Parab2d#&1$@S@IntRes2d_Domain#S0_#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_create_15(OcctSharp_Value_Parabola2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Parabola2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5, OcctSharp_Owned_IntCurve_IntConicConicHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto returned = std::make_shared<IntCurve_IntConicConic>(local0, *local1, local2, *local3, local4, local5);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_IntConicConicHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@Perform#&1$@S@gp_Circ2d#&1$@S@IntRes2d_Domain#&1$@S@gp_Elips2d#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_perform_16(const OcctSharp_Owned_IntCurve_IntConicConicHandle* receiver, OcctSharp_Value_Circle2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Ellipse2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntCurve_IntConicConic>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    self->Perform(local0, *local1, local2, *local3, local4, local5);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@Perform#&1$@S@gp_Circ2d#&1$@S@IntRes2d_Domain#&1$@S@gp_Hypr2d#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_perform_17(const OcctSharp_Owned_IntCurve_IntConicConicHandle* receiver, OcctSharp_Value_Circle2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Hyperbola2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntCurve_IntConicConic>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    self->Perform(local0, *local1, local2, *local3, local4, local5);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@Perform#&1$@S@gp_Circ2d#&1$@S@IntRes2d_Domain#&1$@S@gp_Parab2d#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_perform_18(const OcctSharp_Owned_IntCurve_IntConicConicHandle* receiver, OcctSharp_Value_Circle2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Parabola2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntCurve_IntConicConic>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    self->Perform(local0, *local1, local2, *local3, local4, local5);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@Perform#&1$@S@gp_Circ2d#&1$@S@IntRes2d_Domain#S0_#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_perform_19(const OcctSharp_Owned_IntCurve_IntConicConicHandle* receiver, OcctSharp_Value_Circle2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Circle2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntCurve_IntConicConic>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    self->Perform(local0, *local1, local2, *local3, local4, local5);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@Perform#&1$@S@gp_Elips2d#&1$@S@IntRes2d_Domain#&1$@S@gp_Hypr2d#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_perform_20(const OcctSharp_Owned_IntCurve_IntConicConicHandle* receiver, OcctSharp_Value_Ellipse2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Hyperbola2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntCurve_IntConicConic>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    self->Perform(local0, *local1, local2, *local3, local4, local5);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@Perform#&1$@S@gp_Elips2d#&1$@S@IntRes2d_Domain#&1$@S@gp_Parab2d#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_perform_21(const OcctSharp_Owned_IntCurve_IntConicConicHandle* receiver, OcctSharp_Value_Ellipse2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Parabola2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntCurve_IntConicConic>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    self->Perform(local0, *local1, local2, *local3, local4, local5);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@Perform#&1$@S@gp_Elips2d#&1$@S@IntRes2d_Domain#S0_#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_perform_22(const OcctSharp_Owned_IntCurve_IntConicConicHandle* receiver, OcctSharp_Value_Ellipse2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Ellipse2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntCurve_IntConicConic>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    self->Perform(local0, *local1, local2, *local3, local4, local5);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@Perform#&1$@S@gp_Hypr2d#&1$@S@IntRes2d_Domain#S0_#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_perform_23(const OcctSharp_Owned_IntCurve_IntConicConicHandle* receiver, OcctSharp_Value_Hyperbola2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Hyperbola2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntCurve_IntConicConic>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    self->Perform(local0, *local1, local2, *local3, local4, local5);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@Perform#&1$@S@gp_Lin2d#&1$@S@IntRes2d_Domain#&1$@S@gp_Circ2d#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_perform_24(const OcctSharp_Owned_IntCurve_IntConicConicHandle* receiver, OcctSharp_Value_Line2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Circle2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntCurve_IntConicConic>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    self->Perform(local0, *local1, local2, *local3, local4, local5);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@Perform#&1$@S@gp_Lin2d#&1$@S@IntRes2d_Domain#&1$@S@gp_Elips2d#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_perform_25(const OcctSharp_Owned_IntCurve_IntConicConicHandle* receiver, OcctSharp_Value_Line2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Ellipse2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntCurve_IntConicConic>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    self->Perform(local0, *local1, local2, *local3, local4, local5);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@Perform#&1$@S@gp_Lin2d#&1$@S@IntRes2d_Domain#&1$@S@gp_Hypr2d#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_perform_26(const OcctSharp_Owned_IntCurve_IntConicConicHandle* receiver, OcctSharp_Value_Line2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Hyperbola2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntCurve_IntConicConic>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    self->Perform(local0, *local1, local2, *local3, local4, local5);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@Perform#&1$@S@gp_Lin2d#&1$@S@IntRes2d_Domain#&1$@S@gp_Parab2d#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_perform_27(const OcctSharp_Owned_IntCurve_IntConicConicHandle* receiver, OcctSharp_Value_Line2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Parabola2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntCurve_IntConicConic>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    self->Perform(local0, *local1, local2, *local3, local4, local5);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@Perform#&1$@S@gp_Lin2d#&1$@S@IntRes2d_Domain#S0_#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_perform_28(const OcctSharp_Owned_IntCurve_IntConicConicHandle* receiver, OcctSharp_Value_Line2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Line2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntCurve_IntConicConic>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    self->Perform(local0, *local1, local2, *local3, local4, local5);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@Perform#&1$@S@gp_Parab2d#&1$@S@IntRes2d_Domain#&1$@S@gp_Hypr2d#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_perform_29(const OcctSharp_Owned_IntCurve_IntConicConicHandle* receiver, OcctSharp_Value_Parabola2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Hyperbola2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntCurve_IntConicConic>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    self->Perform(local0, *local1, local2, *local3, local4, local5);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntConicConic@F@Perform#&1$@S@gp_Parab2d#&1$@S@IntRes2d_Domain#S0_#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_perform_30(const OcctSharp_Owned_IntCurve_IntConicConicHandle* receiver, OcctSharp_Value_Parabola2d arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, OcctSharp_Value_Parabola2d arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntCurve_IntConicConic>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    self->Perform(local0, *local1, local2, *local3, local4, local5);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Intersection@F@IsDone#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_isdone_31(const OcctSharp_Owned_IntCurve_IntConicConicHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurve_IntConicConic>(receiver);
+    auto returned = self->IsDone();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Intersection@F@IsEmpty#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_isempty_32(const OcctSharp_Owned_IntCurve_IntConicConicHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurve_IntConicConic>(receiver);
+    auto returned = self->IsEmpty();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Intersection@F@NbPoints#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_nbpoints_33(const OcctSharp_Owned_IntCurve_IntConicConicHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurve_IntConicConic>(receiver);
+    auto returned = self->NbPoints();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Intersection@F@NbSegments#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_nbsegments_34(const OcctSharp_Owned_IntCurve_IntConicConicHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurve_IntConicConic>(receiver);
+    auto returned = self->NbSegments();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Intersection@F@Point#I#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_point_35(const OcctSharp_Owned_IntCurve_IntConicConicHandle* receiver, int32_t arg0, OcctSharp_Owned_IntRes2d_IntersectionPointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurve_IntConicConic>(receiver);
+    auto local0 = arg0;
+    auto returned = std::make_shared<IntRes2d_IntersectionPoint>(self->Point(local0));
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntRes2d_IntersectionPointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Intersection@F@Segment#I#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_segment_36(const OcctSharp_Owned_IntCurve_IntConicConicHandle* receiver, int32_t arg0, OcctSharp_Owned_IntRes2d_IntersectionSegmentHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurve_IntConicConic>(receiver);
+    auto local0 = arg0;
+    auto returned = std::make_shared<IntRes2d_IntersectionSegment>(self->Segment(local0));
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntRes2d_IntersectionSegmentHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Intersection@F@SetReversedParameters#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intconicconic_setreversedparameters_37(const OcctSharp_Owned_IntCurve_IntConicConicHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntCurve_IntConicConic>(receiver);
+    auto local0 = (arg0 != 0);
+    self->SetReversedParameters(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_intcurve_intimpconicparconic_release(OcctSharp_Owned_IntCurve_IntImpConicParConicHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntCurve_IntImpConicParConic)); }
+// Source: c:@S@IntCurve_IntImpConicParConic@F@FindU#d#&$@S@gp_Pnt2d#&1$@S@IntCurve_PConic#&1$@S@IntCurve_IConicTool#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intimpconicparconic_findu_0(const OcctSharp_Owned_IntCurve_IntImpConicParConicHandle* receiver, double arg0, OcctSharp_Value_Point2d arg1, OcctSharp_Value_Point2d* updatedArg1, const OcctSharp_Owned_IntCurve_PConicHandle* arg2, const OcctSharp_Owned_IntCurve_IConicToolHandle* arg3, double* result) {
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg1 = {};
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurve_IntImpConicParConic>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::ToNative(arg1);
+    auto local2 = OcctSharpOwned::Lease<IntCurve_PConic>(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntCurve_IConicTool>(arg3);
+    auto returned = self->FindU(local0, local1, *local2, *local3);
+    const auto copied1 = OcctSharp_GeometryValues::FromNative(local1);
+    const auto copiedResult = returned;
+    *updatedArg1 = copied1;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntImpConicParConic@F@FindV#d#&$@S@gp_Pnt2d#&1$@S@IntCurve_IConicTool#&1$@S@IntCurve_PConic#&1$@S@IntRes2d_Domain#d#d#d#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intimpconicparconic_findv_1(const OcctSharp_Owned_IntCurve_IntImpConicParConicHandle* receiver, double arg0, OcctSharp_Value_Point2d arg1, OcctSharp_Value_Point2d* updatedArg1, const OcctSharp_Owned_IntCurve_IConicToolHandle* arg2, const OcctSharp_Owned_IntCurve_PConicHandle* arg3, const OcctSharp_Owned_IntRes2d_DomainHandle* arg4, double arg5, double arg6, double arg7, double* result) {
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg1 = {};
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurve_IntImpConicParConic>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::ToNative(arg1);
+    auto local2 = OcctSharpOwned::Lease<IntCurve_IConicTool>(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntCurve_PConic>(arg3);
+    auto local4 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto local6 = OcctSharp_GeometryValues::Check(arg6);
+    auto local7 = OcctSharp_GeometryValues::Check(arg7);
+    auto returned = self->FindV(local0, local1, *local2, *local3, *local4, local5, local6, local7);
+    const auto copied1 = OcctSharp_GeometryValues::FromNative(local1);
+    const auto copiedResult = returned;
+    *updatedArg1 = copied1;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntImpConicParConic@F@IntCurve_IntImpConicParConic#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intimpconicparconic_create_2(OcctSharp_Owned_IntCurve_IntImpConicParConicHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto returned = std::make_shared<IntCurve_IntImpConicParConic>();
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_IntImpConicParConicHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntImpConicParConic@F@IntCurve_IntImpConicParConic#&1$@S@IntCurve_IConicTool#&1$@S@IntRes2d_Domain#&1$@S@IntCurve_PConic#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intimpconicparconic_create_3(const OcctSharp_Owned_IntCurve_IConicToolHandle* arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, const OcctSharp_Owned_IntCurve_PConicHandle* arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5, OcctSharp_Owned_IntCurve_IntImpConicParConicHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharpOwned::Lease<IntCurve_IConicTool>(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharpOwned::Lease<IntCurve_PConic>(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto returned = std::make_shared<IntCurve_IntImpConicParConic>(*local0, *local1, *local2, *local3, local4, local5);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_IntImpConicParConicHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_IntImpConicParConic@F@Perform#&1$@S@IntCurve_IConicTool#&1$@S@IntRes2d_Domain#&1$@S@IntCurve_PConic#S2_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intimpconicparconic_perform_4(const OcctSharp_Owned_IntCurve_IntImpConicParConicHandle* receiver, const OcctSharp_Owned_IntCurve_IConicToolHandle* arg0, const OcctSharp_Owned_IntRes2d_DomainHandle* arg1, const OcctSharp_Owned_IntCurve_PConicHandle* arg2, const OcctSharp_Owned_IntRes2d_DomainHandle* arg3, double arg4, double arg5) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntCurve_IntImpConicParConic>(receiver);
+    auto local0 = OcctSharpOwned::Lease<IntCurve_IConicTool>(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg1);
+    auto local2 = OcctSharpOwned::Lease<IntCurve_PConic>(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Domain>(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    self->Perform(*local0, *local1, *local2, *local3, local4, local5);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Intersection@F@IsDone#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intimpconicparconic_isdone_5(const OcctSharp_Owned_IntCurve_IntImpConicParConicHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurve_IntImpConicParConic>(receiver);
+    auto returned = self->IsDone();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Intersection@F@IsEmpty#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intimpconicparconic_isempty_6(const OcctSharp_Owned_IntCurve_IntImpConicParConicHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurve_IntImpConicParConic>(receiver);
+    auto returned = self->IsEmpty();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Intersection@F@NbPoints#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intimpconicparconic_nbpoints_7(const OcctSharp_Owned_IntCurve_IntImpConicParConicHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurve_IntImpConicParConic>(receiver);
+    auto returned = self->NbPoints();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Intersection@F@NbSegments#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intimpconicparconic_nbsegments_8(const OcctSharp_Owned_IntCurve_IntImpConicParConicHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurve_IntImpConicParConic>(receiver);
+    auto returned = self->NbSegments();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Intersection@F@Point#I#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intimpconicparconic_point_9(const OcctSharp_Owned_IntCurve_IntImpConicParConicHandle* receiver, int32_t arg0, OcctSharp_Owned_IntRes2d_IntersectionPointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurve_IntImpConicParConic>(receiver);
+    auto local0 = arg0;
+    auto returned = std::make_shared<IntRes2d_IntersectionPoint>(self->Point(local0));
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntRes2d_IntersectionPointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Intersection@F@Segment#I#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intimpconicparconic_segment_10(const OcctSharp_Owned_IntCurve_IntImpConicParConicHandle* receiver, int32_t arg0, OcctSharp_Owned_IntRes2d_IntersectionSegmentHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurve_IntImpConicParConic>(receiver);
+    auto local0 = arg0;
+    auto returned = std::make_shared<IntRes2d_IntersectionSegment>(self->Segment(local0));
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntRes2d_IntersectionSegmentHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Intersection@F@SetReversedParameters#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_intimpconicparconic_setreversedparameters_11(const OcctSharp_Owned_IntCurve_IntImpConicParConicHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntCurve_IntImpConicParConic>(receiver);
+    auto local0 = (arg0 != 0);
+    self->SetReversedParameters(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_intcurve_pconic_release(OcctSharp_Owned_IntCurve_PConicHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntCurve_PConic)); }
+// Source: c:@S@IntCurve_PConic@F@Accuracy#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_pconic_accuracy_0(const OcctSharp_Owned_IntCurve_PConicHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurve_PConic>(receiver);
+    auto returned = self->Accuracy();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_PConic@F@Axis2#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_pconic_axis2_1(const OcctSharp_Owned_IntCurve_PConicHandle* receiver, OcctSharp_Value_Axis22d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurve_PConic>(receiver);
+    auto returned = self->Axis2();
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_PConic@F@EpsX#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_pconic_epsx_2(const OcctSharp_Owned_IntCurve_PConicHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurve_PConic>(receiver);
+    auto returned = self->EpsX();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_PConic@F@IntCurve_PConic#&1$@S@gp_Circ2d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_pconic_create_3(OcctSharp_Value_Circle2d arg0, OcctSharp_Owned_IntCurve_PConicHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto returned = std::make_shared<IntCurve_PConic>(local0);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_PConicHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_PConic@F@IntCurve_PConic#&1$@S@gp_Elips2d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_pconic_create_4(OcctSharp_Value_Ellipse2d arg0, OcctSharp_Owned_IntCurve_PConicHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto returned = std::make_shared<IntCurve_PConic>(local0);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_PConicHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_PConic@F@IntCurve_PConic#&1$@S@gp_Hypr2d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_pconic_create_5(OcctSharp_Value_Hyperbola2d arg0, OcctSharp_Owned_IntCurve_PConicHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto returned = std::make_shared<IntCurve_PConic>(local0);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_PConicHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_PConic@F@IntCurve_PConic#&1$@S@gp_Lin2d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_pconic_create_6(OcctSharp_Value_Line2d arg0, OcctSharp_Owned_IntCurve_PConicHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto returned = std::make_shared<IntCurve_PConic>(local0);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_PConicHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_PConic@F@IntCurve_PConic#&1$@S@gp_Parab2d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_pconic_create_7(OcctSharp_Value_Parabola2d arg0, OcctSharp_Owned_IntCurve_PConicHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto returned = std::make_shared<IntCurve_PConic>(local0);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntCurve_PConicHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_PConic@F@Param1#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_pconic_param1_8(const OcctSharp_Owned_IntCurve_PConicHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurve_PConic>(receiver);
+    auto returned = self->Param1();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_PConic@F@Param2#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_pconic_param2_9(const OcctSharp_Owned_IntCurve_PConicHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurve_PConic>(receiver);
+    auto returned = self->Param2();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_PConic@F@SetAccuracy#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_pconic_setaccuracy_10(const OcctSharp_Owned_IntCurve_PConicHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntCurve_PConic>(receiver);
+    auto local0 = arg0;
+    self->SetAccuracy(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_PConic@F@SetEpsX#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_pconic_setepsx_11(const OcctSharp_Owned_IntCurve_PConicHandle* receiver, double arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntCurve_PConic>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    self->SetEpsX(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntCurve_PConic@F@TypeCurve#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intcurve_pconic_typecurve_12(const OcctSharp_Owned_IntCurve_PConicHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntCurve_PConic>(receiver);
+    auto returned = self->TypeCurve();
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_intpolyh_couple_release(OcctSharp_Owned_IntPolyh_CoupleHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntPolyh_Couple)); }
+// Source: c:@S@IntPolyh_Couple@F@Angle#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_couple_angle_0(const OcctSharp_Owned_IntPolyh_CoupleHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Couple>(receiver);
+    auto returned = self->Angle();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Couple@F@FirstValue#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_couple_firstvalue_1(const OcctSharp_Owned_IntPolyh_CoupleHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Couple>(receiver);
+    auto returned = self->FirstValue();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Couple@F@IntPolyh_Couple#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_couple_create_2(OcctSharp_Owned_IntPolyh_CoupleHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto returned = std::make_shared<IntPolyh_Couple>();
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntPolyh_CoupleHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Couple@F@IntPolyh_Couple#I#I#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_couple_create_3(int32_t arg0, int32_t arg1, double arg2, OcctSharp_Owned_IntPolyh_CoupleHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = arg0;
+    auto local1 = arg1;
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto returned = std::make_shared<IntPolyh_Couple>(local0, local1, local2);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntPolyh_CoupleHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Couple@F@IsAnalyzed#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_couple_isanalyzed_4(const OcctSharp_Owned_IntPolyh_CoupleHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Couple>(receiver);
+    auto returned = self->IsAnalyzed();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Couple@F@IsEqual#&1$@S@IntPolyh_Couple#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_couple_isequal_5(const OcctSharp_Owned_IntPolyh_CoupleHandle* receiver, const OcctSharp_Owned_IntPolyh_CoupleHandle* arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Couple>(receiver);
+    auto local0 = OcctSharpOwned::Lease<IntPolyh_Couple>(arg0);
+    auto returned = self->IsEqual(*local0);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Couple@F@SecondValue#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_couple_secondvalue_6(const OcctSharp_Owned_IntPolyh_CoupleHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Couple>(receiver);
+    auto returned = self->SecondValue();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Couple@F@SetAnalyzed#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_couple_setanalyzed_7(const OcctSharp_Owned_IntPolyh_CoupleHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Couple>(receiver);
+    auto local0 = (arg0 != 0);
+    self->SetAnalyzed(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Couple@F@SetAngle#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_couple_setangle_8(const OcctSharp_Owned_IntPolyh_CoupleHandle* receiver, double arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Couple>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    self->SetAngle(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Couple@F@SetCoupleValue#I#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_couple_setcouplevalue_9(const OcctSharp_Owned_IntPolyh_CoupleHandle* receiver, int32_t arg0, int32_t arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Couple>(receiver);
+    auto local0 = arg0;
+    auto local1 = arg1;
+    self->SetCoupleValue(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_intpolyh_edge_release(OcctSharp_Owned_IntPolyh_EdgeHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntPolyh_Edge)); }
+// Source: c:@S@IntPolyh_Edge@F@FirstPoint#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_edge_firstpoint_0(const OcctSharp_Owned_IntPolyh_EdgeHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Edge>(receiver);
+    auto returned = self->FirstPoint();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Edge@F@FirstTriangle#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_edge_firsttriangle_1(const OcctSharp_Owned_IntPolyh_EdgeHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Edge>(receiver);
+    auto returned = self->FirstTriangle();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Edge@F@IntPolyh_Edge#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_edge_create_2(OcctSharp_Owned_IntPolyh_EdgeHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto returned = std::make_shared<IntPolyh_Edge>();
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntPolyh_EdgeHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Edge@F@IntPolyh_Edge#I#I#I#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_edge_create_3(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, OcctSharp_Owned_IntPolyh_EdgeHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = arg0;
+    auto local1 = arg1;
+    auto local2 = arg2;
+    auto local3 = arg3;
+    auto returned = std::make_shared<IntPolyh_Edge>(local0, local1, local2, local3);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntPolyh_EdgeHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Edge@F@SecondPoint#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_edge_secondpoint_4(const OcctSharp_Owned_IntPolyh_EdgeHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Edge>(receiver);
+    auto returned = self->SecondPoint();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Edge@F@SecondTriangle#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_edge_secondtriangle_5(const OcctSharp_Owned_IntPolyh_EdgeHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Edge>(receiver);
+    auto returned = self->SecondTriangle();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Edge@F@SetFirstPoint#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_edge_setfirstpoint_6(const OcctSharp_Owned_IntPolyh_EdgeHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Edge>(receiver);
+    auto local0 = arg0;
+    self->SetFirstPoint(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Edge@F@SetFirstTriangle#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_edge_setfirsttriangle_7(const OcctSharp_Owned_IntPolyh_EdgeHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Edge>(receiver);
+    auto local0 = arg0;
+    self->SetFirstTriangle(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Edge@F@SetSecondPoint#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_edge_setsecondpoint_8(const OcctSharp_Owned_IntPolyh_EdgeHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Edge>(receiver);
+    auto local0 = arg0;
+    self->SetSecondPoint(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Edge@F@SetSecondTriangle#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_edge_setsecondtriangle_9(const OcctSharp_Owned_IntPolyh_EdgeHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Edge>(receiver);
+    auto local0 = arg0;
+    self->SetSecondTriangle(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_intpolyh_point_release(OcctSharp_Owned_IntPolyh_PointHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntPolyh_Point)); }
+// Source: c:@S@IntPolyh_Point@F@Add#&1$@S@IntPolyh_Point#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_point_add_0(const OcctSharp_Owned_IntPolyh_PointHandle* receiver, const OcctSharp_Owned_IntPolyh_PointHandle* arg0, OcctSharp_Owned_IntPolyh_PointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Point>(receiver);
+    auto local0 = OcctSharpOwned::Lease<IntPolyh_Point>(arg0);
+    auto returned = std::make_shared<IntPolyh_Point>(self->Add(*local0));
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntPolyh_PointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Point@F@Cross#&1$@S@IntPolyh_Point#S0_#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_point_cross_1(const OcctSharp_Owned_IntPolyh_PointHandle* receiver, const OcctSharp_Owned_IntPolyh_PointHandle* arg0, const OcctSharp_Owned_IntPolyh_PointHandle* arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Point>(receiver);
+    auto local0 = OcctSharpOwned::Lease<IntPolyh_Point>(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntPolyh_Point>(arg1);
+    self->Cross(*local0, *local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Point@F@Degenerated#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_point_degenerated_2(const OcctSharp_Owned_IntPolyh_PointHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Point>(receiver);
+    auto returned = self->Degenerated();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Point@F@Divide#d#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_point_divide_3(const OcctSharp_Owned_IntPolyh_PointHandle* receiver, double arg0, OcctSharp_Owned_IntPolyh_PointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Point>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto returned = std::make_shared<IntPolyh_Point>(self->Divide(local0));
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntPolyh_PointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Point@F@Dot#&1$@S@IntPolyh_Point#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_point_dot_4(const OcctSharp_Owned_IntPolyh_PointHandle* receiver, const OcctSharp_Owned_IntPolyh_PointHandle* arg0, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Point>(receiver);
+    auto local0 = OcctSharpOwned::Lease<IntPolyh_Point>(arg0);
+    auto returned = self->Dot(*local0);
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Point@F@IntPolyh_Point#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_point_create_5(OcctSharp_Owned_IntPolyh_PointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto returned = std::make_shared<IntPolyh_Point>();
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntPolyh_PointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Point@F@IntPolyh_Point#d#d#d#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_point_create_6(double arg0, double arg1, double arg2, double arg3, double arg4, OcctSharp_Owned_IntPolyh_PointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto returned = std::make_shared<IntPolyh_Point>(local0, local1, local2, local3, local4);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntPolyh_PointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Point@F@Middle#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#&1$@S@IntPolyh_Point#S3_#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_point_middle_7(const OcctSharp_Owned_IntPolyh_PointHandle* receiver, const OcctSharp_Adaptor3dSurfaceHandle* arg0, const OcctSharp_Owned_IntPolyh_PointHandle* arg1, const OcctSharp_Owned_IntPolyh_PointHandle* arg2) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Point>(receiver);
+    auto local0 = OcctSharpGenerated::ValidateAdaptor3dSurface(arg0)->Value;
+    auto local1 = OcctSharpOwned::Lease<IntPolyh_Point>(arg1);
+    auto local2 = OcctSharpOwned::Lease<IntPolyh_Point>(arg2);
+    self->Middle(local0, *local1, *local2);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Point@F@Multiplication#d#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_point_multiplication_8(const OcctSharp_Owned_IntPolyh_PointHandle* receiver, double arg0, OcctSharp_Owned_IntPolyh_PointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Point>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto returned = std::make_shared<IntPolyh_Point>(self->Multiplication(local0));
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntPolyh_PointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Point@F@PartOfCommon#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_point_partofcommon_9(const OcctSharp_Owned_IntPolyh_PointHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Point>(receiver);
+    auto returned = self->PartOfCommon();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Point@F@Set#d#d#d#d#d#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_point_set_10(const OcctSharp_Owned_IntPolyh_PointHandle* receiver, double arg0, double arg1, double arg2, double arg3, double arg4, int32_t arg5) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Point>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = arg5;
+    self->Set(local0, local1, local2, local3, local4, local5);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Point@F@SetDegenerated#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_point_setdegenerated_11(const OcctSharp_Owned_IntPolyh_PointHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Point>(receiver);
+    auto local0 = (arg0 != 0);
+    self->SetDegenerated(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Point@F@SetPartOfCommon#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_point_setpartofcommon_12(const OcctSharp_Owned_IntPolyh_PointHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Point>(receiver);
+    auto local0 = arg0;
+    self->SetPartOfCommon(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Point@F@SetU#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_point_setu_13(const OcctSharp_Owned_IntPolyh_PointHandle* receiver, double arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Point>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    self->SetU(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Point@F@SetV#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_point_setv_14(const OcctSharp_Owned_IntPolyh_PointHandle* receiver, double arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Point>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    self->SetV(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Point@F@SetX#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_point_setx_15(const OcctSharp_Owned_IntPolyh_PointHandle* receiver, double arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Point>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    self->SetX(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Point@F@SetY#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_point_sety_16(const OcctSharp_Owned_IntPolyh_PointHandle* receiver, double arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Point>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    self->SetY(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Point@F@SetZ#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_point_setz_17(const OcctSharp_Owned_IntPolyh_PointHandle* receiver, double arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Point>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    self->SetZ(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Point@F@SquareDistance#&1$@S@IntPolyh_Point#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_point_squaredistance_18(const OcctSharp_Owned_IntPolyh_PointHandle* receiver, const OcctSharp_Owned_IntPolyh_PointHandle* arg0, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Point>(receiver);
+    auto local0 = OcctSharpOwned::Lease<IntPolyh_Point>(arg0);
+    auto returned = self->SquareDistance(*local0);
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Point@F@SquareModulus#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_point_squaremodulus_19(const OcctSharp_Owned_IntPolyh_PointHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Point>(receiver);
+    auto returned = self->SquareModulus();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Point@F@Sub#&1$@S@IntPolyh_Point#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_point_sub_20(const OcctSharp_Owned_IntPolyh_PointHandle* receiver, const OcctSharp_Owned_IntPolyh_PointHandle* arg0, OcctSharp_Owned_IntPolyh_PointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Point>(receiver);
+    auto local0 = OcctSharpOwned::Lease<IntPolyh_Point>(arg0);
+    auto returned = std::make_shared<IntPolyh_Point>(self->Sub(*local0));
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntPolyh_PointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Point@F@U#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_point_u_21(const OcctSharp_Owned_IntPolyh_PointHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Point>(receiver);
+    auto returned = self->U();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Point@F@V#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_point_v_22(const OcctSharp_Owned_IntPolyh_PointHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Point>(receiver);
+    auto returned = self->V();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Point@F@X#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_point_x_23(const OcctSharp_Owned_IntPolyh_PointHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Point>(receiver);
+    auto returned = self->X();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Point@F@Y#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_point_y_24(const OcctSharp_Owned_IntPolyh_PointHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Point>(receiver);
+    auto returned = self->Y();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Point@F@Z#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_point_z_25(const OcctSharp_Owned_IntPolyh_PointHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Point>(receiver);
+    auto returned = self->Z();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_release(OcctSharp_Owned_IntPolyh_TriangleHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntPolyh_Triangle)); }
+// Source: c:@S@IntPolyh_Triangle@F@Deflection#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_deflection_0(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Triangle>(receiver);
+    auto returned = self->Deflection();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@FirstEdge#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_firstedge_1(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Triangle>(receiver);
+    auto returned = self->FirstEdge();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@FirstEdgeOrientation#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_firstedgeorientation_2(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Triangle>(receiver);
+    auto returned = self->FirstEdgeOrientation();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@FirstPoint#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_firstpoint_3(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Triangle>(receiver);
+    auto returned = self->FirstPoint();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@GetEdgeNumber#I#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_getedgenumber_4(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, int32_t arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Triangle>(receiver);
+    auto local0 = arg0;
+    auto returned = self->GetEdgeNumber(local0);
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@GetEdgeOrientation#I#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_getedgeorientation_5(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, int32_t arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Triangle>(receiver);
+    auto local0 = arg0;
+    auto returned = self->GetEdgeOrientation(local0);
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@HasIntersection#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_hasintersection_6(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Triangle>(receiver);
+    auto returned = self->HasIntersection();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@IntPolyh_Triangle#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_create_7(OcctSharp_Owned_IntPolyh_TriangleHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto returned = std::make_shared<IntPolyh_Triangle>();
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntPolyh_TriangleHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@IntPolyh_Triangle#I#I#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_create_8(int32_t arg0, int32_t arg1, int32_t arg2, OcctSharp_Owned_IntPolyh_TriangleHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = arg0;
+    auto local1 = arg1;
+    auto local2 = arg2;
+    auto returned = std::make_shared<IntPolyh_Triangle>(local0, local1, local2);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntPolyh_TriangleHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@IsDegenerated#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_isdegenerated_9(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Triangle>(receiver);
+    auto returned = self->IsDegenerated();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@IsIntersectionPossible#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_isintersectionpossible_10(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Triangle>(receiver);
+    auto returned = self->IsIntersectionPossible();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@SecondEdge#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_secondedge_11(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Triangle>(receiver);
+    auto returned = self->SecondEdge();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@SecondEdgeOrientation#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_secondedgeorientation_12(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Triangle>(receiver);
+    auto returned = self->SecondEdgeOrientation();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@SecondPoint#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_secondpoint_13(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Triangle>(receiver);
+    auto returned = self->SecondPoint();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@SetDeflection#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_setdeflection_14(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, double arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Triangle>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    self->SetDeflection(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@SetDegenerated#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_setdegenerated_15(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Triangle>(receiver);
+    auto local0 = (arg0 != 0);
+    self->SetDegenerated(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@SetEdge#I#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_setedge_16(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, int32_t arg0, int32_t arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Triangle>(receiver);
+    auto local0 = arg0;
+    auto local1 = arg1;
+    self->SetEdge(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@SetEdgeAndOrientation#&1$@S@IntPolyh_Edge#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_setedgeandorientation_17(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, const OcctSharp_Owned_IntPolyh_EdgeHandle* arg0, int32_t arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Triangle>(receiver);
+    auto local0 = OcctSharpOwned::Lease<IntPolyh_Edge>(arg0);
+    auto local1 = arg1;
+    self->SetEdgeAndOrientation(*local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@SetEdgeOrientation#I#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_setedgeorientation_18(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, int32_t arg0, int32_t arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Triangle>(receiver);
+    auto local0 = arg0;
+    auto local1 = arg1;
+    self->SetEdgeOrientation(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@SetFirstEdge#I#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_setfirstedge_19(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, int32_t arg0, int32_t arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Triangle>(receiver);
+    auto local0 = arg0;
+    auto local1 = arg1;
+    self->SetFirstEdge(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@SetFirstPoint#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_setfirstpoint_20(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Triangle>(receiver);
+    auto local0 = arg0;
+    self->SetFirstPoint(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@SetIntersection#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_setintersection_21(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Triangle>(receiver);
+    auto local0 = (arg0 != 0);
+    self->SetIntersection(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@SetIntersectionPossible#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_setintersectionpossible_22(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Triangle>(receiver);
+    auto local0 = (arg0 != 0);
+    self->SetIntersectionPossible(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@SetSecondEdge#I#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_setsecondedge_23(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, int32_t arg0, int32_t arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Triangle>(receiver);
+    auto local0 = arg0;
+    auto local1 = arg1;
+    self->SetSecondEdge(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@SetSecondPoint#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_setsecondpoint_24(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Triangle>(receiver);
+    auto local0 = arg0;
+    self->SetSecondPoint(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@SetThirdEdge#I#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_setthirdedge_25(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, int32_t arg0, int32_t arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Triangle>(receiver);
+    auto local0 = arg0;
+    auto local1 = arg1;
+    self->SetThirdEdge(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@SetThirdPoint#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_setthirdpoint_26(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntPolyh_Triangle>(receiver);
+    auto local0 = arg0;
+    self->SetThirdPoint(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@ThirdEdge#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_thirdedge_27(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Triangle>(receiver);
+    auto returned = self->ThirdEdge();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@ThirdEdgeOrientation#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_thirdedgeorientation_28(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Triangle>(receiver);
+    auto returned = self->ThirdEdgeOrientation();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntPolyh_Triangle@F@ThirdPoint#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intpolyh_triangle_thirdpoint_29(const OcctSharp_Owned_IntPolyh_TriangleHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntPolyh_Triangle>(receiver);
+    auto returned = self->ThirdPoint();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_intres2d_domain_release(OcctSharp_Owned_IntRes2d_DomainHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntRes2d_Domain)); }
+// Source: c:@S@IntRes2d_Domain@F@FirstParameter#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_domain_firstparameter_0(const OcctSharp_Owned_IntRes2d_DomainHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntRes2d_Domain>(receiver);
+    auto returned = self->FirstParameter();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Domain@F@FirstPoint#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_domain_firstpoint_1(const OcctSharp_Owned_IntRes2d_DomainHandle* receiver, OcctSharp_Value_Point2d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntRes2d_Domain>(receiver);
+    auto returned = self->FirstPoint();
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Domain@F@FirstTolerance#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_domain_firsttolerance_2(const OcctSharp_Owned_IntRes2d_DomainHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntRes2d_Domain>(receiver);
+    auto returned = self->FirstTolerance();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Domain@F@HasFirstPoint#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_domain_hasfirstpoint_3(const OcctSharp_Owned_IntRes2d_DomainHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntRes2d_Domain>(receiver);
+    auto returned = self->HasFirstPoint();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Domain@F@HasLastPoint#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_domain_haslastpoint_4(const OcctSharp_Owned_IntRes2d_DomainHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntRes2d_Domain>(receiver);
+    auto returned = self->HasLastPoint();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Domain@F@IntRes2d_Domain#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_domain_create_5(OcctSharp_Owned_IntRes2d_DomainHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto returned = std::make_shared<IntRes2d_Domain>();
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntRes2d_DomainHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Domain@F@IntRes2d_Domain#&1$@S@gp_Pnt2d#d#d#S0_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_domain_create_6(OcctSharp_Value_Point2d arg0, double arg1, double arg2, OcctSharp_Value_Point2d arg3, double arg4, double arg5, OcctSharp_Owned_IntRes2d_DomainHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::ToNative(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    auto returned = std::make_shared<IntRes2d_Domain>(local0, local1, local2, local3, local4, local5);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntRes2d_DomainHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Domain@F@IntRes2d_Domain#&1$@S@gp_Pnt2d#d#d#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_domain_create_7(OcctSharp_Value_Point2d arg0, double arg1, double arg2, int32_t arg3, OcctSharp_Owned_IntRes2d_DomainHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = (arg3 != 0);
+    auto returned = std::make_shared<IntRes2d_Domain>(local0, local1, local2, local3);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntRes2d_DomainHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Domain@F@IsClosed#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_domain_isclosed_8(const OcctSharp_Owned_IntRes2d_DomainHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntRes2d_Domain>(receiver);
+    auto returned = self->IsClosed();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Domain@F@LastParameter#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_domain_lastparameter_9(const OcctSharp_Owned_IntRes2d_DomainHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntRes2d_Domain>(receiver);
+    auto returned = self->LastParameter();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Domain@F@LastPoint#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_domain_lastpoint_10(const OcctSharp_Owned_IntRes2d_DomainHandle* receiver, OcctSharp_Value_Point2d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntRes2d_Domain>(receiver);
+    auto returned = self->LastPoint();
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Domain@F@LastTolerance#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_domain_lasttolerance_11(const OcctSharp_Owned_IntRes2d_DomainHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntRes2d_Domain>(receiver);
+    auto returned = self->LastTolerance();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Domain@F@SetEquivalentParameters#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_domain_setequivalentparameters_12(const OcctSharp_Owned_IntRes2d_DomainHandle* receiver, double arg0, double arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntRes2d_Domain>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    self->SetEquivalentParameters(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Domain@F@SetValues#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_domain_setvalues_13(const OcctSharp_Owned_IntRes2d_DomainHandle* receiver) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntRes2d_Domain>(receiver);
+    self->SetValues();
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Domain@F@SetValues#&1$@S@gp_Pnt2d#d#d#S0_#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_domain_setvalues_14(const OcctSharp_Owned_IntRes2d_DomainHandle* receiver, OcctSharp_Value_Point2d arg0, double arg1, double arg2, OcctSharp_Value_Point2d arg3, double arg4, double arg5) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntRes2d_Domain>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::ToNative(arg3);
+    auto local4 = OcctSharp_GeometryValues::Check(arg4);
+    auto local5 = OcctSharp_GeometryValues::Check(arg5);
+    self->SetValues(local0, local1, local2, local3, local4, local5);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Domain@F@SetValues#&1$@S@gp_Pnt2d#d#d#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_domain_setvalues_15(const OcctSharp_Owned_IntRes2d_DomainHandle* receiver, OcctSharp_Value_Point2d arg0, double arg1, double arg2, int32_t arg3) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntRes2d_Domain>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = (arg3 != 0);
+    self->SetValues(local0, local1, local2, local3);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_intres2d_intersectionpoint_release(OcctSharp_Owned_IntRes2d_IntersectionPointHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntRes2d_IntersectionPoint)); }
+// Source: c:@S@IntRes2d_IntersectionPoint@F@IntRes2d_IntersectionPoint#&1$@S@gp_Pnt2d#d#d#&1$@S@IntRes2d_Transition#S2_#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_intersectionpoint_create_0(OcctSharp_Value_Point2d arg0, double arg1, double arg2, const OcctSharp_Owned_IntRes2d_TransitionHandle* arg3, const OcctSharp_Owned_IntRes2d_TransitionHandle* arg4, int32_t arg5, OcctSharp_Owned_IntRes2d_IntersectionPointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Transition>(arg3);
+    auto local4 = OcctSharpOwned::Lease<IntRes2d_Transition>(arg4);
+    auto local5 = (arg5 != 0);
+    auto returned = std::make_shared<IntRes2d_IntersectionPoint>(local0, local1, local2, *local3, *local4, local5);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntRes2d_IntersectionPointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_IntersectionPoint@F@SetValues#&1$@S@gp_Pnt2d#d#d#&1$@S@IntRes2d_Transition#S2_#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_intersectionpoint_setvalues_1(const OcctSharp_Owned_IntRes2d_IntersectionPointHandle* receiver, OcctSharp_Value_Point2d arg0, double arg1, double arg2, const OcctSharp_Owned_IntRes2d_TransitionHandle* arg3, const OcctSharp_Owned_IntRes2d_TransitionHandle* arg4, int32_t arg5) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntRes2d_IntersectionPoint>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharpOwned::Lease<IntRes2d_Transition>(arg3);
+    auto local4 = OcctSharpOwned::Lease<IntRes2d_Transition>(arg4);
+    auto local5 = (arg5 != 0);
+    self->SetValues(local0, local1, local2, *local3, *local4, local5);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_IntersectionPoint@F@TransitionOfFirst#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_intersectionpoint_transitionoffirst_2(const OcctSharp_Owned_IntRes2d_IntersectionPointHandle* receiver, OcctSharp_Owned_IntRes2d_TransitionHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntRes2d_IntersectionPoint>(receiver);
+    auto returned = std::make_shared<IntRes2d_Transition>(self->TransitionOfFirst());
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntRes2d_TransitionHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_IntersectionPoint@F@TransitionOfSecond#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_intersectionpoint_transitionofsecond_3(const OcctSharp_Owned_IntRes2d_IntersectionPointHandle* receiver, OcctSharp_Owned_IntRes2d_TransitionHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntRes2d_IntersectionPoint>(receiver);
+    auto returned = std::make_shared<IntRes2d_Transition>(self->TransitionOfSecond());
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntRes2d_TransitionHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_IntersectionPoint@F@ParamOnFirst#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_intersectionpoint_paramonfirst_4(const OcctSharp_Owned_IntRes2d_IntersectionPointHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntRes2d_IntersectionPoint>(receiver);
+    auto returned = self->ParamOnFirst();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_IntersectionPoint@F@ParamOnSecond#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_intersectionpoint_paramonsecond_5(const OcctSharp_Owned_IntRes2d_IntersectionPointHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntRes2d_IntersectionPoint>(receiver);
+    auto returned = self->ParamOnSecond();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_IntersectionPoint@F@Value#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_intersectionpoint_value_6(const OcctSharp_Owned_IntRes2d_IntersectionPointHandle* receiver, OcctSharp_Value_Point2d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntRes2d_IntersectionPoint>(receiver);
+    auto returned = self->Value();
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_intres2d_intersectionsegment_release(OcctSharp_Owned_IntRes2d_IntersectionSegmentHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntRes2d_IntersectionSegment)); }
+// Source: c:@S@IntRes2d_IntersectionSegment@F@IntRes2d_IntersectionSegment#&1$@S@IntRes2d_IntersectionPoint#S0_#b#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_intersectionsegment_create_0(const OcctSharp_Owned_IntRes2d_IntersectionPointHandle* arg0, const OcctSharp_Owned_IntRes2d_IntersectionPointHandle* arg1, int32_t arg2, int32_t arg3, OcctSharp_Owned_IntRes2d_IntersectionSegmentHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharpOwned::Lease<IntRes2d_IntersectionPoint>(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntRes2d_IntersectionPoint>(arg1);
+    auto local2 = (arg2 != 0);
+    auto local3 = (arg3 != 0);
+    auto returned = std::make_shared<IntRes2d_IntersectionSegment>(*local0, *local1, local2, local3);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntRes2d_IntersectionSegmentHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_IntersectionSegment@F@IntRes2d_IntersectionSegment#&1$@S@IntRes2d_IntersectionPoint#b#b#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_intersectionsegment_create_1(const OcctSharp_Owned_IntRes2d_IntersectionPointHandle* arg0, int32_t arg1, int32_t arg2, int32_t arg3, OcctSharp_Owned_IntRes2d_IntersectionSegmentHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharpOwned::Lease<IntRes2d_IntersectionPoint>(arg0);
+    auto local1 = (arg1 != 0);
+    auto local2 = (arg2 != 0);
+    auto local3 = (arg3 != 0);
+    auto returned = std::make_shared<IntRes2d_IntersectionSegment>(*local0, local1, local2, local3);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntRes2d_IntersectionSegmentHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_IntersectionSegment@F@IntRes2d_IntersectionSegment#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_intersectionsegment_create_2(int32_t arg0, OcctSharp_Owned_IntRes2d_IntersectionSegmentHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = (arg0 != 0);
+    auto returned = std::make_shared<IntRes2d_IntersectionSegment>(local0);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntRes2d_IntersectionSegmentHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_IntersectionSegment@F@IsOpposite#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_intersectionsegment_isopposite_3(const OcctSharp_Owned_IntRes2d_IntersectionSegmentHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntRes2d_IntersectionSegment>(receiver);
+    auto returned = self->IsOpposite();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_IntersectionSegment@F@FirstPoint#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_intersectionsegment_firstpoint_4(const OcctSharp_Owned_IntRes2d_IntersectionSegmentHandle* receiver, OcctSharp_Owned_IntRes2d_IntersectionPointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntRes2d_IntersectionSegment>(receiver);
+    auto returned = std::make_shared<IntRes2d_IntersectionPoint>(self->FirstPoint());
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntRes2d_IntersectionPointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_IntersectionSegment@F@HasFirstPoint#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_intersectionsegment_hasfirstpoint_5(const OcctSharp_Owned_IntRes2d_IntersectionSegmentHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntRes2d_IntersectionSegment>(receiver);
+    auto returned = self->HasFirstPoint();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_IntersectionSegment@F@HasLastPoint#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_intersectionsegment_haslastpoint_6(const OcctSharp_Owned_IntRes2d_IntersectionSegmentHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntRes2d_IntersectionSegment>(receiver);
+    auto returned = self->HasLastPoint();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_IntersectionSegment@F@LastPoint#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_intersectionsegment_lastpoint_7(const OcctSharp_Owned_IntRes2d_IntersectionSegmentHandle* receiver, OcctSharp_Owned_IntRes2d_IntersectionPointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntRes2d_IntersectionSegment>(receiver);
+    auto returned = std::make_shared<IntRes2d_IntersectionPoint>(self->LastPoint());
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntRes2d_IntersectionPointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_intres2d_transition_release(OcctSharp_Owned_IntRes2d_TransitionHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntRes2d_Transition)); }
+// Source: c:@S@IntRes2d_Transition@F@IntRes2d_Transition#$@E@IntRes2d_Position#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_transition_create_0(int32_t arg0, OcctSharp_Owned_IntRes2d_TransitionHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = static_cast<IntRes2d_Position>(arg0);
+    auto returned = std::make_shared<IntRes2d_Transition>(local0);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntRes2d_TransitionHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Transition@F@IntRes2d_Transition#b#$@E@IntRes2d_Position#$@E@IntRes2d_Situation#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_transition_create_1(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, OcctSharp_Owned_IntRes2d_TransitionHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = (arg0 != 0);
+    auto local1 = static_cast<IntRes2d_Position>(arg1);
+    auto local2 = static_cast<IntRes2d_Situation>(arg2);
+    auto local3 = (arg3 != 0);
+    auto returned = std::make_shared<IntRes2d_Transition>(local0, local1, local2, local3);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntRes2d_TransitionHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Transition@F@IntRes2d_Transition#b#$@E@IntRes2d_Position#$@E@IntRes2d_TypeTrans#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_transition_create_2(int32_t arg0, int32_t arg1, int32_t arg2, OcctSharp_Owned_IntRes2d_TransitionHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = (arg0 != 0);
+    auto local1 = static_cast<IntRes2d_Position>(arg1);
+    auto local2 = static_cast<IntRes2d_TypeTrans>(arg2);
+    auto returned = std::make_shared<IntRes2d_Transition>(local0, local1, local2);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntRes2d_TransitionHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Transition@F@IsOpposite#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_transition_isopposite_3(const OcctSharp_Owned_IntRes2d_TransitionHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntRes2d_Transition>(receiver);
+    auto returned = self->IsOpposite();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Transition@F@IsTangent#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_transition_istangent_4(const OcctSharp_Owned_IntRes2d_TransitionHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntRes2d_Transition>(receiver);
+    auto returned = self->IsTangent();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Transition@F@PositionOnCurve#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_transition_positiononcurve_5(const OcctSharp_Owned_IntRes2d_TransitionHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntRes2d_Transition>(receiver);
+    auto returned = self->PositionOnCurve();
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Transition@F@SetPosition#$@E@IntRes2d_Position#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_transition_setposition_6(const OcctSharp_Owned_IntRes2d_TransitionHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntRes2d_Transition>(receiver);
+    auto local0 = static_cast<IntRes2d_Position>(arg0);
+    self->SetPosition(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Transition@F@SetValue#$@E@IntRes2d_Position#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_transition_setvalue_7(const OcctSharp_Owned_IntRes2d_TransitionHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntRes2d_Transition>(receiver);
+    auto local0 = static_cast<IntRes2d_Position>(arg0);
+    self->SetValue(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Transition@F@SetValue#b#$@E@IntRes2d_Position#$@E@IntRes2d_Situation#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_transition_setvalue_8(const OcctSharp_Owned_IntRes2d_TransitionHandle* receiver, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntRes2d_Transition>(receiver);
+    auto local0 = (arg0 != 0);
+    auto local1 = static_cast<IntRes2d_Position>(arg1);
+    auto local2 = static_cast<IntRes2d_Situation>(arg2);
+    auto local3 = (arg3 != 0);
+    self->SetValue(local0, local1, local2, local3);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Transition@F@SetValue#b#$@E@IntRes2d_Position#$@E@IntRes2d_TypeTrans#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_transition_setvalue_9(const OcctSharp_Owned_IntRes2d_TransitionHandle* receiver, int32_t arg0, int32_t arg1, int32_t arg2) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntRes2d_Transition>(receiver);
+    auto local0 = (arg0 != 0);
+    auto local1 = static_cast<IntRes2d_Position>(arg1);
+    auto local2 = static_cast<IntRes2d_TypeTrans>(arg2);
+    self->SetValue(local0, local1, local2);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Transition@F@Situation#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_transition_situation_10(const OcctSharp_Owned_IntRes2d_TransitionHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntRes2d_Transition>(receiver);
+    auto returned = self->Situation();
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntRes2d_Transition@F@TransitionType#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intres2d_transition_transitiontype_11(const OcctSharp_Owned_IntRes2d_TransitionHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntRes2d_Transition>(receiver);
+    auto returned = self->TransitionType();
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_intsurf_couple_release(OcctSharp_Owned_IntSurf_CoupleHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntSurf_Couple)); }
+// Source: c:@S@IntSurf_Couple@F@First#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_couple_first_0(const OcctSharp_Owned_IntSurf_CoupleHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_Couple>(receiver);
+    auto returned = self->First();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Couple@F@IntSurf_Couple#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_couple_create_1(OcctSharp_Owned_IntSurf_CoupleHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto returned = std::make_shared<IntSurf_Couple>();
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntSurf_CoupleHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Couple@F@IntSurf_Couple#I#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_couple_create_2(int32_t arg0, int32_t arg1, OcctSharp_Owned_IntSurf_CoupleHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = arg0;
+    auto local1 = arg1;
+    auto returned = std::make_shared<IntSurf_Couple>(local0, local1);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntSurf_CoupleHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Couple@F@Second#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_couple_second_3(const OcctSharp_Owned_IntSurf_CoupleHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_Couple>(receiver);
+    auto returned = self->Second();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_intsurf_interiorpoint_release(OcctSharp_Owned_IntSurf_InteriorPointHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntSurf_InteriorPoint)); }
+// Source: c:@S@IntSurf_InteriorPoint@F@Direction#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_interiorpoint_direction_0(const OcctSharp_Owned_IntSurf_InteriorPointHandle* receiver, OcctSharp_Value_Vector3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_InteriorPoint>(receiver);
+    auto returned = self->Direction();
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_InteriorPoint@F@Direction2d#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_interiorpoint_direction2d_1(const OcctSharp_Owned_IntSurf_InteriorPointHandle* receiver, OcctSharp_Value_Vector2d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_InteriorPoint>(receiver);
+    auto returned = self->Direction2d();
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_InteriorPoint@F@IntSurf_InteriorPoint#&1$@S@gp_Pnt#d#d#&1$@S@gp_Vec#&1$@S@gp_Vec2d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_interiorpoint_create_2(OcctSharp_Point3d arg0, double arg1, double arg2, OcctSharp_Value_Vector3d arg3, OcctSharp_Value_Vector2d arg4, OcctSharp_Owned_IntSurf_InteriorPointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::ToNative(arg3);
+    auto local4 = OcctSharp_GeometryValues::ToNative(arg4);
+    auto returned = std::make_shared<IntSurf_InteriorPoint>(local0, local1, local2, local3, local4);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntSurf_InteriorPointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_InteriorPoint@F@Parameters#&d#S0_#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_interiorpoint_parameters_3(const OcctSharp_Owned_IntSurf_InteriorPointHandle* receiver, double arg0, double* updatedArg0, double arg1, double* updatedArg1) {
+  if (!updatedArg0) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg0 = {};
+  *updatedArg1 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_InteriorPoint>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    self->Parameters(local0, local1);
+    const auto copied0 = local0;
+    const auto copied1 = local1;
+    *updatedArg0 = copied0;
+    *updatedArg1 = copied1;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_InteriorPoint@F@SetValue#&1$@S@gp_Pnt#d#d#&1$@S@gp_Vec#&1$@S@gp_Vec2d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_interiorpoint_setvalue_4(const OcctSharp_Owned_IntSurf_InteriorPointHandle* receiver, OcctSharp_Point3d arg0, double arg1, double arg2, OcctSharp_Value_Vector3d arg3, OcctSharp_Value_Vector2d arg4) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntSurf_InteriorPoint>(receiver);
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::ToNative(arg3);
+    auto local4 = OcctSharp_GeometryValues::ToNative(arg4);
+    self->SetValue(local0, local1, local2, local3, local4);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_InteriorPoint@F@UParameter#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_interiorpoint_uparameter_5(const OcctSharp_Owned_IntSurf_InteriorPointHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_InteriorPoint>(receiver);
+    auto returned = self->UParameter();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_InteriorPoint@F@VParameter#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_interiorpoint_vparameter_6(const OcctSharp_Owned_IntSurf_InteriorPointHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_InteriorPoint>(receiver);
+    auto returned = self->VParameter();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_InteriorPoint@F@Value#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_interiorpoint_value_7(const OcctSharp_Owned_IntSurf_InteriorPointHandle* receiver, OcctSharp_Point3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_InteriorPoint>(receiver);
+    auto returned = self->Value();
+    const auto copiedResult = OcctSharp_Point3d{returned.X(), returned.Y(), returned.Z()};
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_intsurf_pathpoint_release(OcctSharp_Owned_IntSurf_PathPointHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntSurf_PathPoint)); }
+// Source: c:@S@IntSurf_PathPoint@F@AddUV#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_pathpoint_adduv_0(const OcctSharp_Owned_IntSurf_PathPointHandle* receiver, double arg0, double arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntSurf_PathPoint>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    self->AddUV(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_PathPoint@F@Direction2d#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_pathpoint_direction2d_1(const OcctSharp_Owned_IntSurf_PathPointHandle* receiver, OcctSharp_Value_Direction2d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_PathPoint>(receiver);
+    auto returned = self->Direction2d();
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_PathPoint@F@Direction3d#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_pathpoint_direction3d_2(const OcctSharp_Owned_IntSurf_PathPointHandle* receiver, OcctSharp_Value_Vector3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_PathPoint>(receiver);
+    auto returned = self->Direction3d();
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_PathPoint@F@IntSurf_PathPoint#&1$@S@gp_Pnt#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_pathpoint_create_3(OcctSharp_Point3d arg0, double arg1, double arg2, OcctSharp_Owned_IntSurf_PathPointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto returned = std::make_shared<IntSurf_PathPoint>(local0, local1, local2);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntSurf_PathPointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_PathPoint@F@IsPassingPnt#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_pathpoint_ispassingpnt_4(const OcctSharp_Owned_IntSurf_PathPointHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_PathPoint>(receiver);
+    auto returned = self->IsPassingPnt();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_PathPoint@F@IsTangent#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_pathpoint_istangent_5(const OcctSharp_Owned_IntSurf_PathPointHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_PathPoint>(receiver);
+    auto returned = self->IsTangent();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_PathPoint@F@Multiplicity#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_pathpoint_multiplicity_6(const OcctSharp_Owned_IntSurf_PathPointHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_PathPoint>(receiver);
+    auto returned = self->Multiplicity();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_PathPoint@F@Parameters#I#&d#S0_#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_pathpoint_parameters_7(const OcctSharp_Owned_IntSurf_PathPointHandle* receiver, int32_t arg0, double arg1, double* updatedArg1, double arg2, double* updatedArg2) {
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg2) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg1 = {};
+  *updatedArg2 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_PathPoint>(receiver);
+    auto local0 = arg0;
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    self->Parameters(local0, local1, local2);
+    const auto copied1 = local1;
+    const auto copied2 = local2;
+    *updatedArg1 = copied1;
+    *updatedArg2 = copied2;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_PathPoint@F@SetDirections#&1$@S@gp_Vec#&1$@S@gp_Dir2d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_pathpoint_setdirections_8(const OcctSharp_Owned_IntSurf_PathPointHandle* receiver, OcctSharp_Value_Vector3d arg0, OcctSharp_Value_Direction2d arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntSurf_PathPoint>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharp_GeometryValues::ToNative(arg1);
+    self->SetDirections(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_PathPoint@F@SetPassing#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_pathpoint_setpassing_9(const OcctSharp_Owned_IntSurf_PathPointHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntSurf_PathPoint>(receiver);
+    auto local0 = (arg0 != 0);
+    self->SetPassing(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_PathPoint@F@SetTangency#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_pathpoint_settangency_10(const OcctSharp_Owned_IntSurf_PathPointHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntSurf_PathPoint>(receiver);
+    auto local0 = (arg0 != 0);
+    self->SetTangency(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_PathPoint@F@SetValue#&1$@S@gp_Pnt#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_pathpoint_setvalue_11(const OcctSharp_Owned_IntSurf_PathPointHandle* receiver, OcctSharp_Point3d arg0, double arg1, double arg2) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntSurf_PathPoint>(receiver);
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    self->SetValue(local0, local1, local2);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_PathPoint@F@Value#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_pathpoint_value_12(const OcctSharp_Owned_IntSurf_PathPointHandle* receiver, OcctSharp_Point3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_PathPoint>(receiver);
+    auto returned = self->Value();
+    const auto copiedResult = OcctSharp_Point3d{returned.X(), returned.Y(), returned.Z()};
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_PathPoint@F@Value2d#&d#S0_#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_pathpoint_value2d_13(const OcctSharp_Owned_IntSurf_PathPointHandle* receiver, double arg0, double* updatedArg0, double arg1, double* updatedArg1) {
+  if (!updatedArg0) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg0 = {};
+  *updatedArg1 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_PathPoint>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    self->Value2d(local0, local1);
+    const auto copied0 = local0;
+    const auto copied1 = local1;
+    *updatedArg0 = copied0;
+    *updatedArg1 = copied1;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_intsurf_quadric_release(OcctSharp_Owned_IntSurf_QuadricHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntSurf_Quadric)); }
+// Source: c:@S@IntSurf_Quadric@F@D1#d#d#&$@S@gp_Pnt#&$@S@gp_Vec#S2_#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_quadric_d1_0(const OcctSharp_Owned_IntSurf_QuadricHandle* receiver, double arg0, double arg1, OcctSharp_Point3d arg2, OcctSharp_Point3d* updatedArg2, OcctSharp_Value_Vector3d arg3, OcctSharp_Value_Vector3d* updatedArg3, OcctSharp_Value_Vector3d arg4, OcctSharp_Value_Vector3d* updatedArg4) {
+  if (!updatedArg2) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg3) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg4) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg2 = {};
+  *updatedArg3 = {};
+  *updatedArg4 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_Quadric>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = gp_Pnt(OcctSharp_GeometryValues::Check(arg2.x), OcctSharp_GeometryValues::Check(arg2.y), OcctSharp_GeometryValues::Check(arg2.z));
+    auto local3 = OcctSharp_GeometryValues::ToNative(arg3);
+    auto local4 = OcctSharp_GeometryValues::ToNative(arg4);
+    self->D1(local0, local1, local2, local3, local4);
+    const auto copied2 = OcctSharp_Point3d{local2.X(), local2.Y(), local2.Z()};
+    const auto copied3 = OcctSharp_GeometryValues::FromNative(local3);
+    const auto copied4 = OcctSharp_GeometryValues::FromNative(local4);
+    *updatedArg2 = copied2;
+    *updatedArg3 = copied3;
+    *updatedArg4 = copied4;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Quadric@F@DN#d#d#I#I#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_quadric_dn_1(const OcctSharp_Owned_IntSurf_QuadricHandle* receiver, double arg0, double arg1, int32_t arg2, int32_t arg3, OcctSharp_Value_Vector3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_Quadric>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = arg2;
+    auto local3 = arg3;
+    auto returned = self->DN(local0, local1, local2, local3);
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Quadric@F@Distance#&1$@S@gp_Pnt#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_quadric_distance_2(const OcctSharp_Owned_IntSurf_QuadricHandle* receiver, OcctSharp_Point3d arg0, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_Quadric>(receiver);
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto returned = self->Distance(local0);
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Quadric@F@Gradient#&1$@S@gp_Pnt#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_quadric_gradient_3(const OcctSharp_Owned_IntSurf_QuadricHandle* receiver, OcctSharp_Point3d arg0, OcctSharp_Value_Vector3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_Quadric>(receiver);
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto returned = self->Gradient(local0);
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Quadric@F@IntSurf_Quadric#&1$@S@gp_Cone#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_quadric_create_4(OcctSharp_Value_Cone arg0, OcctSharp_Owned_IntSurf_QuadricHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto returned = std::make_shared<IntSurf_Quadric>(local0);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntSurf_QuadricHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Quadric@F@IntSurf_Quadric#&1$@S@gp_Cylinder#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_quadric_create_5(OcctSharp_Value_Cylinder arg0, OcctSharp_Owned_IntSurf_QuadricHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto returned = std::make_shared<IntSurf_Quadric>(local0);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntSurf_QuadricHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Quadric@F@IntSurf_Quadric#&1$@S@gp_Pln#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_quadric_create_6(OcctSharp_Value_Plane arg0, OcctSharp_Owned_IntSurf_QuadricHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto returned = std::make_shared<IntSurf_Quadric>(local0);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntSurf_QuadricHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Quadric@F@IntSurf_Quadric#&1$@S@gp_Sphere#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_quadric_create_7(OcctSharp_Value_Sphere arg0, OcctSharp_Owned_IntSurf_QuadricHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto returned = std::make_shared<IntSurf_Quadric>(local0);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntSurf_QuadricHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Quadric@F@IntSurf_Quadric#&1$@S@gp_Torus#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_quadric_create_8(OcctSharp_Value_Torus arg0, OcctSharp_Owned_IntSurf_QuadricHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto returned = std::make_shared<IntSurf_Quadric>(local0);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntSurf_QuadricHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Quadric@F@Normale#&1$@S@gp_Pnt#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_quadric_normale_9(const OcctSharp_Owned_IntSurf_QuadricHandle* receiver, OcctSharp_Point3d arg0, OcctSharp_Value_Vector3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_Quadric>(receiver);
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto returned = self->Normale(local0);
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Quadric@F@Normale#d#d#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_quadric_normale_10(const OcctSharp_Owned_IntSurf_QuadricHandle* receiver, double arg0, double arg1, OcctSharp_Value_Vector3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_Quadric>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto returned = self->Normale(local0, local1);
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Quadric@F@Parameters#&1$@S@gp_Pnt#&d#S2_#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_quadric_parameters_11(const OcctSharp_Owned_IntSurf_QuadricHandle* receiver, OcctSharp_Point3d arg0, double arg1, double* updatedArg1, double arg2, double* updatedArg2) {
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg2) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg1 = {};
+  *updatedArg2 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_Quadric>(receiver);
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    self->Parameters(local0, local1, local2);
+    const auto copied1 = local1;
+    const auto copied2 = local2;
+    *updatedArg1 = copied1;
+    *updatedArg2 = copied2;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Quadric@F@Plane#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_quadric_plane_12(const OcctSharp_Owned_IntSurf_QuadricHandle* receiver, OcctSharp_Value_Plane* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_Quadric>(receiver);
+    auto returned = self->Plane();
+    const auto copiedResult = OcctSharp_GeometryValues::FromNative(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Quadric@F@SetValue#&1$@S@gp_Cone#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_quadric_setvalue_13(const OcctSharp_Owned_IntSurf_QuadricHandle* receiver, OcctSharp_Value_Cone arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntSurf_Quadric>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    self->SetValue(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Quadric@F@SetValue#&1$@S@gp_Cylinder#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_quadric_setvalue_14(const OcctSharp_Owned_IntSurf_QuadricHandle* receiver, OcctSharp_Value_Cylinder arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntSurf_Quadric>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    self->SetValue(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Quadric@F@SetValue#&1$@S@gp_Pln#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_quadric_setvalue_15(const OcctSharp_Owned_IntSurf_QuadricHandle* receiver, OcctSharp_Value_Plane arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntSurf_Quadric>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    self->SetValue(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Quadric@F@SetValue#&1$@S@gp_Sphere#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_quadric_setvalue_16(const OcctSharp_Owned_IntSurf_QuadricHandle* receiver, OcctSharp_Value_Sphere arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntSurf_Quadric>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    self->SetValue(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Quadric@F@SetValue#&1$@S@gp_Torus#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_quadric_setvalue_17(const OcctSharp_Owned_IntSurf_QuadricHandle* receiver, OcctSharp_Value_Torus arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntSurf_Quadric>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    self->SetValue(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Quadric@F@TypeQuadric#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_quadric_typequadric_18(const OcctSharp_Owned_IntSurf_QuadricHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_Quadric>(receiver);
+    auto returned = self->TypeQuadric();
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Quadric@F@ValAndGrad#&1$@S@gp_Pnt#&d#&$@S@gp_Vec#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_quadric_valandgrad_19(const OcctSharp_Owned_IntSurf_QuadricHandle* receiver, OcctSharp_Point3d arg0, double arg1, double* updatedArg1, OcctSharp_Value_Vector3d arg2, OcctSharp_Value_Vector3d* updatedArg2) {
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg2) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg1 = {};
+  *updatedArg2 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_Quadric>(receiver);
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    self->ValAndGrad(local0, local1, local2);
+    const auto copied1 = local1;
+    const auto copied2 = OcctSharp_GeometryValues::FromNative(local2);
+    *updatedArg1 = copied1;
+    *updatedArg2 = copied2;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Quadric@F@Value#d#d#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_quadric_value_20(const OcctSharp_Owned_IntSurf_QuadricHandle* receiver, double arg0, double arg1, OcctSharp_Point3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_Quadric>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto returned = self->Value(local0, local1);
+    const auto copiedResult = OcctSharp_Point3d{returned.X(), returned.Y(), returned.Z()};
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_intsurf_transition_release(OcctSharp_Owned_IntSurf_TransitionHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntSurf_Transition)); }
+// Source: c:@S@IntSurf_Transition@F@IntSurf_Transition#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_transition_create_0(OcctSharp_Owned_IntSurf_TransitionHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto returned = std::make_shared<IntSurf_Transition>();
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntSurf_TransitionHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Transition@F@IntSurf_Transition#b#$@E@IntSurf_Situation#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_transition_create_1(int32_t arg0, int32_t arg1, int32_t arg2, OcctSharp_Owned_IntSurf_TransitionHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = (arg0 != 0);
+    auto local1 = static_cast<IntSurf_Situation>(arg1);
+    auto local2 = (arg2 != 0);
+    auto returned = std::make_shared<IntSurf_Transition>(local0, local1, local2);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntSurf_TransitionHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Transition@F@IntSurf_Transition#b#$@E@IntSurf_TypeTrans#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_transition_create_2(int32_t arg0, int32_t arg1, OcctSharp_Owned_IntSurf_TransitionHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = (arg0 != 0);
+    auto local1 = static_cast<IntSurf_TypeTrans>(arg1);
+    auto returned = std::make_shared<IntSurf_Transition>(local0, local1);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntSurf_TransitionHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Transition@F@IsOpposite#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_transition_isopposite_3(const OcctSharp_Owned_IntSurf_TransitionHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_Transition>(receiver);
+    auto returned = self->IsOpposite();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Transition@F@IsTangent#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_transition_istangent_4(const OcctSharp_Owned_IntSurf_TransitionHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_Transition>(receiver);
+    auto returned = self->IsTangent();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Transition@F@SetValue#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_transition_setvalue_5(const OcctSharp_Owned_IntSurf_TransitionHandle* receiver) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntSurf_Transition>(receiver);
+    self->SetValue();
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Transition@F@SetValue#b#$@E@IntSurf_Situation#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_transition_setvalue_6(const OcctSharp_Owned_IntSurf_TransitionHandle* receiver, int32_t arg0, int32_t arg1, int32_t arg2) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntSurf_Transition>(receiver);
+    auto local0 = (arg0 != 0);
+    auto local1 = static_cast<IntSurf_Situation>(arg1);
+    auto local2 = (arg2 != 0);
+    self->SetValue(local0, local1, local2);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Transition@F@SetValue#b#$@E@IntSurf_TypeTrans#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_transition_setvalue_7(const OcctSharp_Owned_IntSurf_TransitionHandle* receiver, int32_t arg0, int32_t arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntSurf_Transition>(receiver);
+    auto local0 = (arg0 != 0);
+    auto local1 = static_cast<IntSurf_TypeTrans>(arg1);
+    self->SetValue(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Transition@F@Situation#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_transition_situation_8(const OcctSharp_Owned_IntSurf_TransitionHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_Transition>(receiver);
+    auto returned = self->Situation();
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntSurf_Transition@F@TransitionType#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intsurf_transition_transitiontype_9(const OcctSharp_Owned_IntSurf_TransitionHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntSurf_Transition>(receiver);
+    auto returned = self->TransitionType();
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_inttools_baserangesample_release(OcctSharp_Owned_IntTools_BaseRangeSampleHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntTools_BaseRangeSample)); }
+// Source: c:@S@IntTools_BaseRangeSample@F@GetDepth#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_baserangesample_getdepth_0(const OcctSharp_Owned_IntTools_BaseRangeSampleHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_BaseRangeSample>(receiver);
+    auto returned = self->GetDepth();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_BaseRangeSample@F@IntTools_BaseRangeSample#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_baserangesample_create_1(int32_t arg0, OcctSharp_Owned_IntTools_BaseRangeSampleHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = arg0;
+    auto returned = std::make_shared<IntTools_BaseRangeSample>(local0);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntTools_BaseRangeSampleHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_BaseRangeSample@F@SetDepth#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_baserangesample_setdepth_2(const OcctSharp_Owned_IntTools_BaseRangeSampleHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntTools_BaseRangeSample>(receiver);
+    auto local0 = arg0;
+    self->SetDepth(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_inttools_curverangelocalizedata_release(OcctSharp_Owned_IntTools_CurveRangeLocalizeDataHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntTools_CurveRangeLocalizeData)); }
+// Source: c:@S@IntTools_CurveRangeLocalizeData@F@AddBox#&1$@S@IntTools_CurveRangeSample#&1$@S@Bnd_Box#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_curverangelocalizedata_addbox_0(const OcctSharp_Owned_IntTools_CurveRangeLocalizeDataHandle* receiver, const OcctSharp_Owned_IntTools_CurveRangeSampleHandle* arg0, const OcctSharp_Owned_Bnd_BoxHandle* arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntTools_CurveRangeLocalizeData>(receiver);
+    auto local0 = OcctSharpOwned::Lease<IntTools_CurveRangeSample>(arg0);
+    auto local1 = OcctSharpOwned::Lease<Bnd_Box>(arg1);
+    self->AddBox(*local0, *local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_CurveRangeLocalizeData@F@AddOutRange#&1$@S@IntTools_CurveRangeSample#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_curverangelocalizedata_addoutrange_1(const OcctSharp_Owned_IntTools_CurveRangeLocalizeDataHandle* receiver, const OcctSharp_Owned_IntTools_CurveRangeSampleHandle* arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntTools_CurveRangeLocalizeData>(receiver);
+    auto local0 = OcctSharpOwned::Lease<IntTools_CurveRangeSample>(arg0);
+    self->AddOutRange(*local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_CurveRangeLocalizeData@F@GetMinRange#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_curverangelocalizedata_getminrange_2(const OcctSharp_Owned_IntTools_CurveRangeLocalizeDataHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_CurveRangeLocalizeData>(receiver);
+    auto returned = self->GetMinRange();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_CurveRangeLocalizeData@F@GetNbSample#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_curverangelocalizedata_getnbsample_3(const OcctSharp_Owned_IntTools_CurveRangeLocalizeDataHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_CurveRangeLocalizeData>(receiver);
+    auto returned = self->GetNbSample();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_CurveRangeLocalizeData@F@IntTools_CurveRangeLocalizeData#I#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_curverangelocalizedata_create_4(int32_t arg0, double arg1, OcctSharp_Owned_IntTools_CurveRangeLocalizeDataHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = arg0;
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto returned = std::make_shared<IntTools_CurveRangeLocalizeData>(local0, local1);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntTools_CurveRangeLocalizeDataHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_CurveRangeLocalizeData@F@IsRangeOut#&1$@S@IntTools_CurveRangeSample#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_curverangelocalizedata_israngeout_5(const OcctSharp_Owned_IntTools_CurveRangeLocalizeDataHandle* receiver, const OcctSharp_Owned_IntTools_CurveRangeSampleHandle* arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_CurveRangeLocalizeData>(receiver);
+    auto local0 = OcctSharpOwned::Lease<IntTools_CurveRangeSample>(arg0);
+    auto returned = self->IsRangeOut(*local0);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_inttools_curverangesample_release(OcctSharp_Owned_IntTools_CurveRangeSampleHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntTools_CurveRangeSample)); }
+// Source: c:@S@IntTools_CurveRangeSample@F@GetRange#d#d#I#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_curverangesample_getrange_0(const OcctSharp_Owned_IntTools_CurveRangeSampleHandle* receiver, double arg0, double arg1, int32_t arg2, OcctSharp_Owned_IntTools_RangeHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_CurveRangeSample>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = arg2;
+    auto returned = std::make_shared<IntTools_Range>(self->GetRange(local0, local1, local2));
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntTools_RangeHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_CurveRangeSample@F@GetRangeIndex#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_curverangesample_getrangeindex_1(const OcctSharp_Owned_IntTools_CurveRangeSampleHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_CurveRangeSample>(receiver);
+    auto returned = self->GetRangeIndex();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_CurveRangeSample@F@GetRangeIndexDeeper#I#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_curverangesample_getrangeindexdeeper_2(const OcctSharp_Owned_IntTools_CurveRangeSampleHandle* receiver, int32_t arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_CurveRangeSample>(receiver);
+    auto local0 = arg0;
+    auto returned = self->GetRangeIndexDeeper(local0);
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_CurveRangeSample@F@IntTools_CurveRangeSample#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_curverangesample_create_3(int32_t arg0, OcctSharp_Owned_IntTools_CurveRangeSampleHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = arg0;
+    auto returned = std::make_shared<IntTools_CurveRangeSample>(local0);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntTools_CurveRangeSampleHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_CurveRangeSample@F@IsEqual#&1$@S@IntTools_CurveRangeSample#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_curverangesample_isequal_4(const OcctSharp_Owned_IntTools_CurveRangeSampleHandle* receiver, const OcctSharp_Owned_IntTools_CurveRangeSampleHandle* arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_CurveRangeSample>(receiver);
+    auto local0 = OcctSharpOwned::Lease<IntTools_CurveRangeSample>(arg0);
+    auto returned = self->IsEqual(*local0);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_CurveRangeSample@F@SetRangeIndex#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_curverangesample_setrangeindex_5(const OcctSharp_Owned_IntTools_CurveRangeSampleHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntTools_CurveRangeSample>(receiver);
+    auto local0 = arg0;
+    self->SetRangeIndex(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_BaseRangeSample@F@GetDepth#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_curverangesample_getdepth_6(const OcctSharp_Owned_IntTools_CurveRangeSampleHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_CurveRangeSample>(receiver);
+    auto returned = self->GetDepth();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_BaseRangeSample@F@SetDepth#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_curverangesample_setdepth_7(const OcctSharp_Owned_IntTools_CurveRangeSampleHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntTools_CurveRangeSample>(receiver);
+    auto local0 = arg0;
+    self->SetDepth(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_inttools_markedrangeset_release(OcctSharp_Owned_IntTools_MarkedRangeSetHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntTools_MarkedRangeSet)); }
+// Source: c:@S@IntTools_MarkedRangeSet@F@Flag#I#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_markedrangeset_flag_0(const OcctSharp_Owned_IntTools_MarkedRangeSetHandle* receiver, int32_t arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_MarkedRangeSet>(receiver);
+    auto local0 = arg0;
+    auto returned = self->Flag(local0);
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_MarkedRangeSet@F@GetIndex#d#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_markedrangeset_getindex_1(const OcctSharp_Owned_IntTools_MarkedRangeSetHandle* receiver, double arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_MarkedRangeSet>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto returned = self->GetIndex(local0);
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_MarkedRangeSet@F@GetIndex#d#b#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_markedrangeset_getindex_2(const OcctSharp_Owned_IntTools_MarkedRangeSetHandle* receiver, double arg0, int32_t arg1, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_MarkedRangeSet>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = (arg1 != 0);
+    auto returned = self->GetIndex(local0, local1);
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_MarkedRangeSet@F@InsertRange#&1$@S@IntTools_Range#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_markedrangeset_insertrange_3(const OcctSharp_Owned_IntTools_MarkedRangeSetHandle* receiver, const OcctSharp_Owned_IntTools_RangeHandle* arg0, int32_t arg1, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntTools_MarkedRangeSet>(receiver);
+    auto local0 = OcctSharpOwned::Lease<IntTools_Range>(arg0);
+    auto local1 = arg1;
+    auto returned = self->InsertRange(*local0, local1);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_MarkedRangeSet@F@InsertRange#&1$@S@IntTools_Range#I#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_markedrangeset_insertrange_4(const OcctSharp_Owned_IntTools_MarkedRangeSetHandle* receiver, const OcctSharp_Owned_IntTools_RangeHandle* arg0, int32_t arg1, int32_t arg2, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntTools_MarkedRangeSet>(receiver);
+    auto local0 = OcctSharpOwned::Lease<IntTools_Range>(arg0);
+    auto local1 = arg1;
+    auto local2 = arg2;
+    auto returned = self->InsertRange(*local0, local1, local2);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_MarkedRangeSet@F@InsertRange#d#d#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_markedrangeset_insertrange_5(const OcctSharp_Owned_IntTools_MarkedRangeSetHandle* receiver, double arg0, double arg1, int32_t arg2, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntTools_MarkedRangeSet>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = arg2;
+    auto returned = self->InsertRange(local0, local1, local2);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_MarkedRangeSet@F@InsertRange#d#d#I#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_markedrangeset_insertrange_6(const OcctSharp_Owned_IntTools_MarkedRangeSetHandle* receiver, double arg0, double arg1, int32_t arg2, int32_t arg3, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntTools_MarkedRangeSet>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = arg2;
+    auto local3 = arg3;
+    auto returned = self->InsertRange(local0, local1, local2, local3);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_MarkedRangeSet@F@IntTools_MarkedRangeSet#d#d#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_markedrangeset_create_7(double arg0, double arg1, int32_t arg2, OcctSharp_Owned_IntTools_MarkedRangeSetHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = arg2;
+    auto returned = std::make_shared<IntTools_MarkedRangeSet>(local0, local1, local2);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntTools_MarkedRangeSetHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_MarkedRangeSet@F@Length#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_markedrangeset_length_8(const OcctSharp_Owned_IntTools_MarkedRangeSetHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_MarkedRangeSet>(receiver);
+    auto returned = self->Length();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_MarkedRangeSet@F@Range#I#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_markedrangeset_range_9(const OcctSharp_Owned_IntTools_MarkedRangeSetHandle* receiver, int32_t arg0, OcctSharp_Owned_IntTools_RangeHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_MarkedRangeSet>(receiver);
+    auto local0 = arg0;
+    auto returned = std::make_shared<IntTools_Range>(self->Range(local0));
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntTools_RangeHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_MarkedRangeSet@F@SetBoundaries#d#d#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_markedrangeset_setboundaries_10(const OcctSharp_Owned_IntTools_MarkedRangeSetHandle* receiver, double arg0, double arg1, int32_t arg2) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntTools_MarkedRangeSet>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = arg2;
+    self->SetBoundaries(local0, local1, local2);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_MarkedRangeSet@F@SetFlag#I#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_markedrangeset_setflag_11(const OcctSharp_Owned_IntTools_MarkedRangeSetHandle* receiver, int32_t arg0, int32_t arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntTools_MarkedRangeSet>(receiver);
+    auto local0 = arg0;
+    auto local1 = arg1;
+    self->SetFlag(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_inttools_range_release(OcctSharp_Owned_IntTools_RangeHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntTools_Range)); }
+// Source: c:@S@IntTools_Range@F@First#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_range_first_0(const OcctSharp_Owned_IntTools_RangeHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_Range>(receiver);
+    auto returned = self->First();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_Range@F@IntTools_Range#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_range_create_1(double arg0, double arg1, OcctSharp_Owned_IntTools_RangeHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto returned = std::make_shared<IntTools_Range>(local0, local1);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntTools_RangeHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_Range@F@Last#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_range_last_2(const OcctSharp_Owned_IntTools_RangeHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_Range>(receiver);
+    auto returned = self->Last();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_Range@F@Range#&d#S0_#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_range_range_3(const OcctSharp_Owned_IntTools_RangeHandle* receiver, double arg0, double* updatedArg0, double arg1, double* updatedArg1) {
+  if (!updatedArg0) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg0 = {};
+  *updatedArg1 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_Range>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    self->Range(local0, local1);
+    const auto copied0 = local0;
+    const auto copied1 = local1;
+    *updatedArg0 = copied0;
+    *updatedArg1 = copied1;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_Range@F@SetFirst#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_range_setfirst_4(const OcctSharp_Owned_IntTools_RangeHandle* receiver, double arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntTools_Range>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    self->SetFirst(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_Range@F@SetLast#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_range_setlast_5(const OcctSharp_Owned_IntTools_RangeHandle* receiver, double arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntTools_Range>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    self->SetLast(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangelocalizedata_release(OcctSharp_Owned_IntTools_SurfaceRangeLocalizeDataHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntTools_SurfaceRangeLocalizeData)); }
+// Source: c:@S@IntTools_SurfaceRangeLocalizeData@F@AddBox#&1$@S@IntTools_SurfaceRangeSample#&1$@S@Bnd_Box#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangelocalizedata_addbox_0(const OcctSharp_Owned_IntTools_SurfaceRangeLocalizeDataHandle* receiver, const OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle* arg0, const OcctSharp_Owned_Bnd_BoxHandle* arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntTools_SurfaceRangeLocalizeData>(receiver);
+    auto local0 = OcctSharpOwned::Lease<IntTools_SurfaceRangeSample>(arg0);
+    auto local1 = OcctSharpOwned::Lease<Bnd_Box>(arg1);
+    self->AddBox(*local0, *local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeLocalizeData@F@AddOutRange#&1$@S@IntTools_SurfaceRangeSample#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangelocalizedata_addoutrange_1(const OcctSharp_Owned_IntTools_SurfaceRangeLocalizeDataHandle* receiver, const OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle* arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntTools_SurfaceRangeLocalizeData>(receiver);
+    auto local0 = OcctSharpOwned::Lease<IntTools_SurfaceRangeSample>(arg0);
+    self->AddOutRange(*local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeLocalizeData@F@GetMinRangeU#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangelocalizedata_getminrangeu_2(const OcctSharp_Owned_IntTools_SurfaceRangeLocalizeDataHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_SurfaceRangeLocalizeData>(receiver);
+    auto returned = self->GetMinRangeU();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeLocalizeData@F@GetMinRangeV#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangelocalizedata_getminrangev_3(const OcctSharp_Owned_IntTools_SurfaceRangeLocalizeDataHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_SurfaceRangeLocalizeData>(receiver);
+    auto returned = self->GetMinRangeV();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeLocalizeData@F@GetNbSampleU#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangelocalizedata_getnbsampleu_4(const OcctSharp_Owned_IntTools_SurfaceRangeLocalizeDataHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_SurfaceRangeLocalizeData>(receiver);
+    auto returned = self->GetNbSampleU();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeLocalizeData@F@GetNbSampleV#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangelocalizedata_getnbsamplev_5(const OcctSharp_Owned_IntTools_SurfaceRangeLocalizeDataHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_SurfaceRangeLocalizeData>(receiver);
+    auto returned = self->GetNbSampleV();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeLocalizeData@F@IntTools_SurfaceRangeLocalizeData#I#I#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangelocalizedata_create_6(int32_t arg0, int32_t arg1, double arg2, double arg3, OcctSharp_Owned_IntTools_SurfaceRangeLocalizeDataHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = arg0;
+    auto local1 = arg1;
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = OcctSharp_GeometryValues::Check(arg3);
+    auto returned = std::make_shared<IntTools_SurfaceRangeLocalizeData>(local0, local1, local2, local3);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntTools_SurfaceRangeLocalizeDataHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeLocalizeData@F@IsRangeOut#&1$@S@IntTools_SurfaceRangeSample#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangelocalizedata_israngeout_7(const OcctSharp_Owned_IntTools_SurfaceRangeLocalizeDataHandle* receiver, const OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle* arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_SurfaceRangeLocalizeData>(receiver);
+    auto local0 = OcctSharpOwned::Lease<IntTools_SurfaceRangeSample>(arg0);
+    auto returned = self->IsRangeOut(*local0);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeLocalizeData@F@RemoveRangeOutAll#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangelocalizedata_removerangeoutall_8(const OcctSharp_Owned_IntTools_SurfaceRangeLocalizeDataHandle* receiver) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntTools_SurfaceRangeLocalizeData>(receiver);
+    self->RemoveRangeOutAll();
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangesample_release(OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle* handle) { OcctSharpOwned::Release(handle, typeid(IntTools_SurfaceRangeSample)); }
+// Source: c:@S@IntTools_SurfaceRangeSample@F@GetDepthU#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangesample_getdepthu_0(const OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_SurfaceRangeSample>(receiver);
+    auto returned = self->GetDepthU();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeSample@F@GetDepthV#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangesample_getdepthv_1(const OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_SurfaceRangeSample>(receiver);
+    auto returned = self->GetDepthV();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeSample@F@GetDepths#&I#S0_#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangesample_getdepths_2(const OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle* receiver, int32_t arg0, int32_t* updatedArg0, int32_t arg1, int32_t* updatedArg1) {
+  if (!updatedArg0) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg0 = {};
+  *updatedArg1 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_SurfaceRangeSample>(receiver);
+    auto local0 = arg0;
+    auto local1 = arg1;
+    self->GetDepths(local0, local1);
+    const auto copied0 = local0;
+    const auto copied1 = local1;
+    *updatedArg0 = copied0;
+    *updatedArg1 = copied1;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeSample@F@GetIndexU#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangesample_getindexu_3(const OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_SurfaceRangeSample>(receiver);
+    auto returned = self->GetIndexU();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeSample@F@GetIndexV#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangesample_getindexv_4(const OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_SurfaceRangeSample>(receiver);
+    auto returned = self->GetIndexV();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeSample@F@GetIndexes#&I#S0_#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangesample_getindexes_5(const OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle* receiver, int32_t arg0, int32_t* updatedArg0, int32_t arg1, int32_t* updatedArg1) {
+  if (!updatedArg0) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg0 = {};
+  *updatedArg1 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_SurfaceRangeSample>(receiver);
+    auto local0 = arg0;
+    auto local1 = arg1;
+    self->GetIndexes(local0, local1);
+    const auto copied0 = local0;
+    const auto copied1 = local1;
+    *updatedArg0 = copied0;
+    *updatedArg1 = copied1;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeSample@F@GetRangeIndexUDeeper#I#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangesample_getrangeindexudeeper_6(const OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle* receiver, int32_t arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_SurfaceRangeSample>(receiver);
+    auto local0 = arg0;
+    auto returned = self->GetRangeIndexUDeeper(local0);
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeSample@F@GetRangeIndexVDeeper#I#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangesample_getrangeindexvdeeper_7(const OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle* receiver, int32_t arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_SurfaceRangeSample>(receiver);
+    auto local0 = arg0;
+    auto returned = self->GetRangeIndexVDeeper(local0);
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeSample@F@GetRangeU#d#d#I#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangesample_getrangeu_8(const OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle* receiver, double arg0, double arg1, int32_t arg2, OcctSharp_Owned_IntTools_RangeHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_SurfaceRangeSample>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = arg2;
+    auto returned = std::make_shared<IntTools_Range>(self->GetRangeU(local0, local1, local2));
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntTools_RangeHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeSample@F@GetRangeV#d#d#I#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangesample_getrangev_9(const OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle* receiver, double arg0, double arg1, int32_t arg2, OcctSharp_Owned_IntTools_RangeHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_SurfaceRangeSample>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = arg2;
+    auto returned = std::make_shared<IntTools_Range>(self->GetRangeV(local0, local1, local2));
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntTools_RangeHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeSample@F@GetSampleRangeU#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangesample_getsamplerangeu_10(const OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle* receiver, OcctSharp_Owned_IntTools_CurveRangeSampleHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_SurfaceRangeSample>(receiver);
+    auto returned = std::make_shared<IntTools_CurveRangeSample>(self->GetSampleRangeU());
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntTools_CurveRangeSampleHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeSample@F@GetSampleRangeV#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangesample_getsamplerangev_11(const OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle* receiver, OcctSharp_Owned_IntTools_CurveRangeSampleHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_SurfaceRangeSample>(receiver);
+    auto returned = std::make_shared<IntTools_CurveRangeSample>(self->GetSampleRangeV());
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntTools_CurveRangeSampleHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeSample@F@IntTools_SurfaceRangeSample#&1$@S@IntTools_CurveRangeSample#S0_#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangesample_create_12(const OcctSharp_Owned_IntTools_CurveRangeSampleHandle* arg0, const OcctSharp_Owned_IntTools_CurveRangeSampleHandle* arg1, OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharpOwned::Lease<IntTools_CurveRangeSample>(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntTools_CurveRangeSample>(arg1);
+    auto returned = std::make_shared<IntTools_SurfaceRangeSample>(*local0, *local1);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeSample@F@IntTools_SurfaceRangeSample#I#I#I#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangesample_create_13(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = arg0;
+    auto local1 = arg1;
+    auto local2 = arg2;
+    auto local3 = arg3;
+    auto returned = std::make_shared<IntTools_SurfaceRangeSample>(local0, local1, local2, local3);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeSample@F@IsEqual#&1$@S@IntTools_SurfaceRangeSample#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangesample_isequal_14(const OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle* receiver, const OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle* arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const IntTools_SurfaceRangeSample>(receiver);
+    auto local0 = OcctSharpOwned::Lease<IntTools_SurfaceRangeSample>(arg0);
+    auto returned = self->IsEqual(*local0);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeSample@F@SetDepthU#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangesample_setdepthu_15(const OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntTools_SurfaceRangeSample>(receiver);
+    auto local0 = arg0;
+    self->SetDepthU(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeSample@F@SetDepthV#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangesample_setdepthv_16(const OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntTools_SurfaceRangeSample>(receiver);
+    auto local0 = arg0;
+    self->SetDepthV(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeSample@F@SetIndexU#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangesample_setindexu_17(const OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntTools_SurfaceRangeSample>(receiver);
+    auto local0 = arg0;
+    self->SetIndexU(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeSample@F@SetIndexV#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangesample_setindexv_18(const OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntTools_SurfaceRangeSample>(receiver);
+    auto local0 = arg0;
+    self->SetIndexV(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeSample@F@SetIndexes#I#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangesample_setindexes_19(const OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle* receiver, int32_t arg0, int32_t arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntTools_SurfaceRangeSample>(receiver);
+    auto local0 = arg0;
+    auto local1 = arg1;
+    self->SetIndexes(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeSample@F@SetRanges#&1$@S@IntTools_CurveRangeSample#S0_#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangesample_setranges_20(const OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle* receiver, const OcctSharp_Owned_IntTools_CurveRangeSampleHandle* arg0, const OcctSharp_Owned_IntTools_CurveRangeSampleHandle* arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntTools_SurfaceRangeSample>(receiver);
+    auto local0 = OcctSharpOwned::Lease<IntTools_CurveRangeSample>(arg0);
+    auto local1 = OcctSharpOwned::Lease<IntTools_CurveRangeSample>(arg1);
+    self->SetRanges(*local0, *local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeSample@F@SetSampleRangeU#&1$@S@IntTools_CurveRangeSample#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangesample_setsamplerangeu_21(const OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle* receiver, const OcctSharp_Owned_IntTools_CurveRangeSampleHandle* arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntTools_SurfaceRangeSample>(receiver);
+    auto local0 = OcctSharpOwned::Lease<IntTools_CurveRangeSample>(arg0);
+    self->SetSampleRangeU(*local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@IntTools_SurfaceRangeSample@F@SetSampleRangeV#&1$@S@IntTools_CurveRangeSample#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_inttools_surfacerangesample_setsamplerangev_22(const OcctSharp_Owned_IntTools_SurfaceRangeSampleHandle* receiver, const OcctSharp_Owned_IntTools_CurveRangeSampleHandle* arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<IntTools_SurfaceRangeSample>(receiver);
+    auto local0 = OcctSharpOwned::Lease<IntTools_CurveRangeSample>(arg0);
+    self->SetSampleRangeV(*local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_intrv_interval_release(OcctSharp_Owned_Intrv_IntervalHandle* handle) { OcctSharpOwned::Release(handle, typeid(Intrv_Interval)); }
+// Source: c:@S@Intrv_Interval@F@Bounds#&d#&f#S0_#S1_#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_bounds_0(const OcctSharp_Owned_Intrv_IntervalHandle* receiver, double arg0, double* updatedArg0, float arg1, float* updatedArg1, double arg2, double* updatedArg2, float arg3, float* updatedArg3) {
+  if (!updatedArg0) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg2) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg3) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg0 = {};
+  *updatedArg1 = {};
+  *updatedArg2 = {};
+  *updatedArg3 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Intrv_Interval>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = static_cast<float>(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = static_cast<float>(arg3);
+    self->Bounds(local0, local1, local2, local3);
+    const auto copied0 = local0;
+    const auto copied1 = local1;
+    const auto copied2 = local2;
+    const auto copied3 = local3;
+    *updatedArg0 = copied0;
+    *updatedArg1 = copied1;
+    *updatedArg2 = copied2;
+    *updatedArg3 = copied3;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Interval@F@CutAtEnd#d#f#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_cutatend_1(const OcctSharp_Owned_Intrv_IntervalHandle* receiver, double arg0, float arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Intrv_Interval>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = static_cast<float>(arg1);
+    self->CutAtEnd(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Interval@F@CutAtStart#d#f#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_cutatstart_2(const OcctSharp_Owned_Intrv_IntervalHandle* receiver, double arg0, float arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Intrv_Interval>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = static_cast<float>(arg1);
+    self->CutAtStart(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Interval@F@End#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_end_3(const OcctSharp_Owned_Intrv_IntervalHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Intrv_Interval>(receiver);
+    auto returned = self->End();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Interval@F@FuseAtEnd#d#f#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_fuseatend_4(const OcctSharp_Owned_Intrv_IntervalHandle* receiver, double arg0, float arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Intrv_Interval>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = static_cast<float>(arg1);
+    self->FuseAtEnd(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Interval@F@FuseAtStart#d#f#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_fuseatstart_5(const OcctSharp_Owned_Intrv_IntervalHandle* receiver, double arg0, float arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Intrv_Interval>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = static_cast<float>(arg1);
+    self->FuseAtStart(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Interval@F@Intrv_Interval#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_create_6(double arg0, double arg1, OcctSharp_Owned_Intrv_IntervalHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto returned = std::make_shared<Intrv_Interval>(local0, local1);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_Intrv_IntervalHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Interval@F@Intrv_Interval#d#f#d#f#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_create_7(double arg0, float arg1, double arg2, float arg3, OcctSharp_Owned_Intrv_IntervalHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = static_cast<float>(arg1);
+    auto local2 = OcctSharp_GeometryValues::Check(arg2);
+    auto local3 = static_cast<float>(arg3);
+    auto returned = std::make_shared<Intrv_Interval>(local0, local1, local2, local3);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_Intrv_IntervalHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Interval@F@IsAfter#&1$@S@Intrv_Interval#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_isafter_8(const OcctSharp_Owned_Intrv_IntervalHandle* receiver, const OcctSharp_Owned_Intrv_IntervalHandle* arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Intrv_Interval>(receiver);
+    auto local0 = OcctSharpOwned::Lease<Intrv_Interval>(arg0);
+    auto returned = self->IsAfter(*local0);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Interval@F@IsBefore#&1$@S@Intrv_Interval#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_isbefore_9(const OcctSharp_Owned_Intrv_IntervalHandle* receiver, const OcctSharp_Owned_Intrv_IntervalHandle* arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Intrv_Interval>(receiver);
+    auto local0 = OcctSharpOwned::Lease<Intrv_Interval>(arg0);
+    auto returned = self->IsBefore(*local0);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Interval@F@IsEnclosing#&1$@S@Intrv_Interval#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_isenclosing_10(const OcctSharp_Owned_Intrv_IntervalHandle* receiver, const OcctSharp_Owned_Intrv_IntervalHandle* arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Intrv_Interval>(receiver);
+    auto local0 = OcctSharpOwned::Lease<Intrv_Interval>(arg0);
+    auto returned = self->IsEnclosing(*local0);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Interval@F@IsInside#&1$@S@Intrv_Interval#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_isinside_11(const OcctSharp_Owned_Intrv_IntervalHandle* receiver, const OcctSharp_Owned_Intrv_IntervalHandle* arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Intrv_Interval>(receiver);
+    auto local0 = OcctSharpOwned::Lease<Intrv_Interval>(arg0);
+    auto returned = self->IsInside(*local0);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Interval@F@IsJustAfter#&1$@S@Intrv_Interval#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_isjustafter_12(const OcctSharp_Owned_Intrv_IntervalHandle* receiver, const OcctSharp_Owned_Intrv_IntervalHandle* arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Intrv_Interval>(receiver);
+    auto local0 = OcctSharpOwned::Lease<Intrv_Interval>(arg0);
+    auto returned = self->IsJustAfter(*local0);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Interval@F@IsJustBefore#&1$@S@Intrv_Interval#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_isjustbefore_13(const OcctSharp_Owned_Intrv_IntervalHandle* receiver, const OcctSharp_Owned_Intrv_IntervalHandle* arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Intrv_Interval>(receiver);
+    auto local0 = OcctSharpOwned::Lease<Intrv_Interval>(arg0);
+    auto returned = self->IsJustBefore(*local0);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Interval@F@IsJustEnclosingAtEnd#&1$@S@Intrv_Interval#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_isjustenclosingatend_14(const OcctSharp_Owned_Intrv_IntervalHandle* receiver, const OcctSharp_Owned_Intrv_IntervalHandle* arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Intrv_Interval>(receiver);
+    auto local0 = OcctSharpOwned::Lease<Intrv_Interval>(arg0);
+    auto returned = self->IsJustEnclosingAtEnd(*local0);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Interval@F@IsJustEnclosingAtStart#&1$@S@Intrv_Interval#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_isjustenclosingatstart_15(const OcctSharp_Owned_Intrv_IntervalHandle* receiver, const OcctSharp_Owned_Intrv_IntervalHandle* arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Intrv_Interval>(receiver);
+    auto local0 = OcctSharpOwned::Lease<Intrv_Interval>(arg0);
+    auto returned = self->IsJustEnclosingAtStart(*local0);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Interval@F@IsJustOverlappingAtEnd#&1$@S@Intrv_Interval#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_isjustoverlappingatend_16(const OcctSharp_Owned_Intrv_IntervalHandle* receiver, const OcctSharp_Owned_Intrv_IntervalHandle* arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Intrv_Interval>(receiver);
+    auto local0 = OcctSharpOwned::Lease<Intrv_Interval>(arg0);
+    auto returned = self->IsJustOverlappingAtEnd(*local0);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Interval@F@IsJustOverlappingAtStart#&1$@S@Intrv_Interval#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_isjustoverlappingatstart_17(const OcctSharp_Owned_Intrv_IntervalHandle* receiver, const OcctSharp_Owned_Intrv_IntervalHandle* arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Intrv_Interval>(receiver);
+    auto local0 = OcctSharpOwned::Lease<Intrv_Interval>(arg0);
+    auto returned = self->IsJustOverlappingAtStart(*local0);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Interval@F@IsOverlappingAtEnd#&1$@S@Intrv_Interval#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_isoverlappingatend_18(const OcctSharp_Owned_Intrv_IntervalHandle* receiver, const OcctSharp_Owned_Intrv_IntervalHandle* arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Intrv_Interval>(receiver);
+    auto local0 = OcctSharpOwned::Lease<Intrv_Interval>(arg0);
+    auto returned = self->IsOverlappingAtEnd(*local0);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Interval@F@IsOverlappingAtStart#&1$@S@Intrv_Interval#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_isoverlappingatstart_19(const OcctSharp_Owned_Intrv_IntervalHandle* receiver, const OcctSharp_Owned_Intrv_IntervalHandle* arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Intrv_Interval>(receiver);
+    auto local0 = OcctSharpOwned::Lease<Intrv_Interval>(arg0);
+    auto returned = self->IsOverlappingAtStart(*local0);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Interval@F@IsProbablyEmpty#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_isprobablyempty_20(const OcctSharp_Owned_Intrv_IntervalHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Intrv_Interval>(receiver);
+    auto returned = self->IsProbablyEmpty();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Interval@F@IsSimilar#&1$@S@Intrv_Interval#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_issimilar_21(const OcctSharp_Owned_Intrv_IntervalHandle* receiver, const OcctSharp_Owned_Intrv_IntervalHandle* arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Intrv_Interval>(receiver);
+    auto local0 = OcctSharpOwned::Lease<Intrv_Interval>(arg0);
+    auto returned = self->IsSimilar(*local0);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Interval@F@Position#&1$@S@Intrv_Interval#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_position_22(const OcctSharp_Owned_Intrv_IntervalHandle* receiver, const OcctSharp_Owned_Intrv_IntervalHandle* arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Intrv_Interval>(receiver);
+    auto local0 = OcctSharpOwned::Lease<Intrv_Interval>(arg0);
+    auto returned = self->Position(*local0);
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Interval@F@SetEnd#d#f#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_setend_23(const OcctSharp_Owned_Intrv_IntervalHandle* receiver, double arg0, float arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Intrv_Interval>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = static_cast<float>(arg1);
+    self->SetEnd(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Interval@F@SetStart#d#f#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_setstart_24(const OcctSharp_Owned_Intrv_IntervalHandle* receiver, double arg0, float arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Intrv_Interval>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = static_cast<float>(arg1);
+    self->SetStart(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Interval@F@Start#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_start_25(const OcctSharp_Owned_Intrv_IntervalHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Intrv_Interval>(receiver);
+    auto returned = self->Start();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Interval@F@TolEnd#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_tolend_26(const OcctSharp_Owned_Intrv_IntervalHandle* receiver, float* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Intrv_Interval>(receiver);
+    auto returned = self->TolEnd();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Interval@F@TolStart#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_interval_tolstart_27(const OcctSharp_Owned_Intrv_IntervalHandle* receiver, float* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Intrv_Interval>(receiver);
+    auto returned = self->TolStart();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_intrv_intervals_release(OcctSharp_Owned_Intrv_IntervalsHandle* handle) { OcctSharpOwned::Release(handle, typeid(Intrv_Intervals)); }
+// Source: c:@S@Intrv_Intervals@F@Intersect#&1$@S@Intrv_Interval#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_intervals_intersect_0(const OcctSharp_Owned_Intrv_IntervalsHandle* receiver, const OcctSharp_Owned_Intrv_IntervalHandle* arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Intrv_Intervals>(receiver);
+    auto local0 = OcctSharpOwned::Lease<Intrv_Interval>(arg0);
+    self->Intersect(*local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Intervals@F@Intersect#&1$@S@Intrv_Intervals#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_intervals_intersect_1(const OcctSharp_Owned_Intrv_IntervalsHandle* receiver, const OcctSharp_Owned_Intrv_IntervalsHandle* arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Intrv_Intervals>(receiver);
+    auto local0 = OcctSharpOwned::Lease<Intrv_Intervals>(arg0);
+    self->Intersect(*local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Intervals@F@Intrv_Intervals#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_intervals_create_2(OcctSharp_Owned_Intrv_IntervalsHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto returned = std::make_shared<Intrv_Intervals>();
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_Intrv_IntervalsHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Intervals@F@Intrv_Intervals#&1$@S@Intrv_Interval#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_intervals_create_3(const OcctSharp_Owned_Intrv_IntervalHandle* arg0, OcctSharp_Owned_Intrv_IntervalsHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharpOwned::Lease<Intrv_Interval>(arg0);
+    auto returned = std::make_shared<Intrv_Intervals>(*local0);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_Intrv_IntervalsHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Intervals@F@NbIntervals#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_intervals_nbintervals_4(const OcctSharp_Owned_Intrv_IntervalsHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Intrv_Intervals>(receiver);
+    auto returned = self->NbIntervals();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Intervals@F@Subtract#&1$@S@Intrv_Interval#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_intervals_subtract_5(const OcctSharp_Owned_Intrv_IntervalsHandle* receiver, const OcctSharp_Owned_Intrv_IntervalHandle* arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Intrv_Intervals>(receiver);
+    auto local0 = OcctSharpOwned::Lease<Intrv_Interval>(arg0);
+    self->Subtract(*local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Intervals@F@Subtract#&1$@S@Intrv_Intervals#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_intervals_subtract_6(const OcctSharp_Owned_Intrv_IntervalsHandle* receiver, const OcctSharp_Owned_Intrv_IntervalsHandle* arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Intrv_Intervals>(receiver);
+    auto local0 = OcctSharpOwned::Lease<Intrv_Intervals>(arg0);
+    self->Subtract(*local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Intervals@F@Unite#&1$@S@Intrv_Interval#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_intervals_unite_7(const OcctSharp_Owned_Intrv_IntervalsHandle* receiver, const OcctSharp_Owned_Intrv_IntervalHandle* arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Intrv_Intervals>(receiver);
+    auto local0 = OcctSharpOwned::Lease<Intrv_Interval>(arg0);
+    self->Unite(*local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Intervals@F@Unite#&1$@S@Intrv_Intervals#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_intervals_unite_8(const OcctSharp_Owned_Intrv_IntervalsHandle* receiver, const OcctSharp_Owned_Intrv_IntervalsHandle* arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Intrv_Intervals>(receiver);
+    auto local0 = OcctSharpOwned::Lease<Intrv_Intervals>(arg0);
+    self->Unite(*local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Intervals@F@Value#I#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_intervals_value_9(const OcctSharp_Owned_Intrv_IntervalsHandle* receiver, int32_t arg0, OcctSharp_Owned_Intrv_IntervalHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Intrv_Intervals>(receiver);
+    auto local0 = arg0;
+    auto returned = std::make_shared<Intrv_Interval>(self->Value(local0));
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_Intrv_IntervalHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Intervals@F@XUnite#&1$@S@Intrv_Interval#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_intervals_xunite_10(const OcctSharp_Owned_Intrv_IntervalsHandle* receiver, const OcctSharp_Owned_Intrv_IntervalHandle* arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Intrv_Intervals>(receiver);
+    auto local0 = OcctSharpOwned::Lease<Intrv_Interval>(arg0);
+    self->XUnite(*local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Intrv_Intervals@F@XUnite#&1$@S@Intrv_Intervals#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_intrv_intervals_xunite_11(const OcctSharp_Owned_Intrv_IntervalsHandle* receiver, const OcctSharp_Owned_Intrv_IntervalsHandle* arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Intrv_Intervals>(receiver);
+    auto local0 = OcctSharpOwned::Lease<Intrv_Intervals>(arg0);
+    self->XUnite(*local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_shapeanalysis_wireorder_release(OcctSharp_Owned_ShapeAnalysis_WireOrderHandle* handle) { OcctSharpOwned::Release(handle, typeid(ShapeAnalysis_WireOrder)); }
+// Source: c:@S@ShapeAnalysis_WireOrder@F@Add#&1$@S@gp_XY#S0_#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_shapeanalysis_wireorder_add_0(const OcctSharp_Owned_ShapeAnalysis_WireOrderHandle* receiver, OcctSharp_Value_Coordinates2d arg0, OcctSharp_Value_Coordinates2d arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<ShapeAnalysis_WireOrder>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharp_GeometryValues::ToNative(arg1);
+    self->Add(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@ShapeAnalysis_WireOrder@F@Add#&1$@S@gp_XYZ#S0_#&1$@S@gp_XY#S2_#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_shapeanalysis_wireorder_add_1(const OcctSharp_Owned_ShapeAnalysis_WireOrderHandle* receiver, OcctSharp_Value_Coordinates3d arg0, OcctSharp_Value_Coordinates3d arg1, OcctSharp_Value_Coordinates2d arg2, OcctSharp_Value_Coordinates2d arg3) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<ShapeAnalysis_WireOrder>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharp_GeometryValues::ToNative(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    auto local3 = OcctSharp_GeometryValues::ToNative(arg3);
+    self->Add(local0, local1, local2, local3);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@ShapeAnalysis_WireOrder@F@Clear#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_shapeanalysis_wireorder_clear_2(const OcctSharp_Owned_ShapeAnalysis_WireOrderHandle* receiver) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<ShapeAnalysis_WireOrder>(receiver);
+    self->Clear();
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@ShapeAnalysis_WireOrder@F@Gap#I#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_shapeanalysis_wireorder_gap_3(const OcctSharp_Owned_ShapeAnalysis_WireOrderHandle* receiver, int32_t arg0, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const ShapeAnalysis_WireOrder>(receiver);
+    auto local0 = arg0;
+    auto returned = self->Gap(local0);
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@ShapeAnalysis_WireOrder@F@SetMode#b#d#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_shapeanalysis_wireorder_setmode_4(const OcctSharp_Owned_ShapeAnalysis_WireOrderHandle* receiver, int32_t arg0, double arg1, int32_t arg2) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<ShapeAnalysis_WireOrder>(receiver);
+    auto local0 = (arg0 != 0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = (arg2 != 0);
+    self->SetMode(local0, local1, local2);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@ShapeAnalysis_WireOrder@F@ShapeAnalysis_WireOrder#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_shapeanalysis_wireorder_create_5(OcctSharp_Owned_ShapeAnalysis_WireOrderHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto returned = std::make_shared<ShapeAnalysis_WireOrder>();
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_ShapeAnalysis_WireOrderHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@ShapeAnalysis_WireOrder@F@Status#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_shapeanalysis_wireorder_status_6(const OcctSharp_Owned_ShapeAnalysis_WireOrderHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const ShapeAnalysis_WireOrder>(receiver);
+    auto returned = self->Status();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@ShapeAnalysis_WireOrder@F@Tolerance#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_shapeanalysis_wireorder_tolerance_7(const OcctSharp_Owned_ShapeAnalysis_WireOrderHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const ShapeAnalysis_WireOrder>(receiver);
+    auto returned = self->Tolerance();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@ShapeAnalysis_WireOrder@F@XY#I#&$@S@gp_XY#S0_#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_shapeanalysis_wireorder_xy_8(const OcctSharp_Owned_ShapeAnalysis_WireOrderHandle* receiver, int32_t arg0, OcctSharp_Value_Coordinates2d arg1, OcctSharp_Value_Coordinates2d* updatedArg1, OcctSharp_Value_Coordinates2d arg2, OcctSharp_Value_Coordinates2d* updatedArg2) {
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg2) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg1 = {};
+  *updatedArg2 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const ShapeAnalysis_WireOrder>(receiver);
+    auto local0 = arg0;
+    auto local1 = OcctSharp_GeometryValues::ToNative(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    self->XY(local0, local1, local2);
+    const auto copied1 = OcctSharp_GeometryValues::FromNative(local1);
+    const auto copied2 = OcctSharp_GeometryValues::FromNative(local2);
+    *updatedArg1 = copied1;
+    *updatedArg2 = copied2;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@ShapeAnalysis_WireOrder@F@XYZ#I#&$@S@gp_XYZ#S0_#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_shapeanalysis_wireorder_xyz_9(const OcctSharp_Owned_ShapeAnalysis_WireOrderHandle* receiver, int32_t arg0, OcctSharp_Value_Coordinates3d arg1, OcctSharp_Value_Coordinates3d* updatedArg1, OcctSharp_Value_Coordinates3d arg2, OcctSharp_Value_Coordinates3d* updatedArg2) {
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg2) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg1 = {};
+  *updatedArg2 = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const ShapeAnalysis_WireOrder>(receiver);
+    auto local0 = arg0;
+    auto local1 = OcctSharp_GeometryValues::ToNative(arg1);
+    auto local2 = OcctSharp_GeometryValues::ToNative(arg2);
+    self->XYZ(local0, local1, local2);
+    const auto copied1 = OcctSharp_GeometryValues::FromNative(local1);
+    const auto copied2 = OcctSharp_GeometryValues::FromNative(local2);
+    *updatedArg1 = copied1;
+    *updatedArg2 = copied2;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@ShapeAnalysis_WireOrder@F@Add#&1$@S@gp_XYZ#S0_#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_shapeanalysis_wireorder_add_10(const OcctSharp_Owned_ShapeAnalysis_WireOrderHandle* receiver, OcctSharp_Value_Coordinates3d arg0, OcctSharp_Value_Coordinates3d arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<ShapeAnalysis_WireOrder>(receiver);
+    auto local0 = OcctSharp_GeometryValues::ToNative(arg0);
+    auto local1 = OcctSharp_GeometryValues::ToNative(arg1);
+    self->Add(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@ShapeAnalysis_WireOrder@F@IsDone#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_shapeanalysis_wireorder_isdone_11(const OcctSharp_Owned_ShapeAnalysis_WireOrderHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const ShapeAnalysis_WireOrder>(receiver);
+    auto returned = self->IsDone();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@ShapeAnalysis_WireOrder@F@NbEdges#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_shapeanalysis_wireorder_nbedges_12(const OcctSharp_Owned_ShapeAnalysis_WireOrderHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const ShapeAnalysis_WireOrder>(receiver);
+    auto returned = self->NbEdges();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@ShapeAnalysis_WireOrder@F@Ordered#I#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_shapeanalysis_wireorder_ordered_13(const OcctSharp_Owned_ShapeAnalysis_WireOrderHandle* receiver, int32_t arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const ShapeAnalysis_WireOrder>(receiver);
+    auto local0 = arg0;
+    auto returned = self->Ordered(local0);
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@ShapeAnalysis_WireOrder@F@Perform#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_shapeanalysis_wireorder_perform_14(const OcctSharp_Owned_ShapeAnalysis_WireOrderHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<ShapeAnalysis_WireOrder>(receiver);
+    auto local0 = (arg0 != 0);
+    self->Perform(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_sweep_numshape_release(OcctSharp_Owned_Sweep_NumShapeHandle* handle) { OcctSharpOwned::Release(handle, typeid(Sweep_NumShape)); }
+// Source: c:@S@Sweep_NumShape@F@BegInfinite#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_sweep_numshape_beginfinite_0(const OcctSharp_Owned_Sweep_NumShapeHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Sweep_NumShape>(receiver);
+    auto returned = self->BegInfinite();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Sweep_NumShape@F@Closed#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_sweep_numshape_closed_1(const OcctSharp_Owned_Sweep_NumShapeHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Sweep_NumShape>(receiver);
+    auto returned = self->Closed();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Sweep_NumShape@F@EndInfinite#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_sweep_numshape_endinfinite_2(const OcctSharp_Owned_Sweep_NumShapeHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Sweep_NumShape>(receiver);
+    auto returned = self->EndInfinite();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Sweep_NumShape@F@Index#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_sweep_numshape_index_3(const OcctSharp_Owned_Sweep_NumShapeHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Sweep_NumShape>(receiver);
+    auto returned = self->Index();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Sweep_NumShape@F@Init#I#$@E@TopAbs_ShapeEnum#b#b#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_sweep_numshape_init_4(const OcctSharp_Owned_Sweep_NumShapeHandle* receiver, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<Sweep_NumShape>(receiver);
+    auto local0 = arg0;
+    auto local1 = static_cast<TopAbs_ShapeEnum>(arg1);
+    auto local2 = (arg2 != 0);
+    auto local3 = (arg3 != 0);
+    auto local4 = (arg4 != 0);
+    self->Init(local0, local1, local2, local3, local4);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Sweep_NumShape@F@Orientation#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_sweep_numshape_orientation_5(const OcctSharp_Owned_Sweep_NumShapeHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Sweep_NumShape>(receiver);
+    auto returned = self->Orientation();
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Sweep_NumShape@F@Sweep_NumShape#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_sweep_numshape_create_6(OcctSharp_Owned_Sweep_NumShapeHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto returned = std::make_shared<Sweep_NumShape>();
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_Sweep_NumShapeHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Sweep_NumShape@F@Sweep_NumShape#I#$@E@TopAbs_ShapeEnum#b#b#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_sweep_numshape_create_7(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, OcctSharp_Owned_Sweep_NumShapeHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = arg0;
+    auto local1 = static_cast<TopAbs_ShapeEnum>(arg1);
+    auto local2 = (arg2 != 0);
+    auto local3 = (arg3 != 0);
+    auto local4 = (arg4 != 0);
+    auto returned = std::make_shared<Sweep_NumShape>(local0, local1, local2, local3, local4);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_Sweep_NumShapeHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@Sweep_NumShape@F@Type#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_sweep_numshape_type_8(const OcctSharp_Owned_Sweep_NumShapeHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const Sweep_NumShape>(receiver);
+    auto returned = self->Type();
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_topopebrepds_curve_release(OcctSharp_Owned_TopOpeBRepDS_CurveHandle* handle) { OcctSharpOwned::Release(handle, typeid(TopOpeBRepDS_Curve)); }
+// Source: c:@S@TopOpeBRepDS_Curve@F@ChangeDSIndex#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_curve_changedsindex_0(const OcctSharp_Owned_TopOpeBRepDS_CurveHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<TopOpeBRepDS_Curve>(receiver);
+    auto local0 = arg0;
+    self->ChangeDSIndex(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Curve@F@ChangeIsWalk#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_curve_changeiswalk_1(const OcctSharp_Owned_TopOpeBRepDS_CurveHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<TopOpeBRepDS_Curve>(receiver);
+    auto local0 = (arg0 != 0);
+    self->ChangeIsWalk(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Curve@F@ChangeKeep#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_curve_changekeep_2(const OcctSharp_Owned_TopOpeBRepDS_CurveHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<TopOpeBRepDS_Curve>(receiver);
+    auto local0 = (arg0 != 0);
+    self->ChangeKeep(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Curve@F@ChangeMother#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_curve_changemother_3(const OcctSharp_Owned_TopOpeBRepDS_CurveHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<TopOpeBRepDS_Curve>(receiver);
+    auto local0 = arg0;
+    self->ChangeMother(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Curve@F@Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_curve_curve_4(const OcctSharp_Owned_TopOpeBRepDS_CurveHandle* receiver, const OcctSharp_GeomCurveHandle* arg0, double arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<TopOpeBRepDS_Curve>(receiver);
+    auto local0 = OcctSharpGenerated::ValidateGeomCurve(arg0)->Value;
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    self->Curve(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Curve@F@Curve#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_curve_curve_5(const OcctSharp_Owned_TopOpeBRepDS_CurveHandle* receiver, OcctSharp_GeomCurveHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Curve>(receiver);
+    auto returned = self->Curve();
+    auto* published = returned.IsNull() ? nullptr : OcctSharpGenerated::AllocateGeomCurve(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Curve@F@Curve1#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_curve_curve1_6(const OcctSharp_Owned_TopOpeBRepDS_CurveHandle* receiver, const OcctSharp_Geom2dCurveHandle* arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<TopOpeBRepDS_Curve>(receiver);
+    auto local0 = OcctSharpGenerated::ValidateGeom2dCurve(arg0)->Value;
+    self->Curve1(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Curve@F@Curve1#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_curve_curve1_7(const OcctSharp_Owned_TopOpeBRepDS_CurveHandle* receiver, OcctSharp_Geom2dCurveHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Curve>(receiver);
+    auto returned = self->Curve1();
+    auto* published = returned.IsNull() ? nullptr : OcctSharpGenerated::AllocateGeom2dCurve(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Curve@F@Curve2#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_curve_curve2_8(const OcctSharp_Owned_TopOpeBRepDS_CurveHandle* receiver, const OcctSharp_Geom2dCurveHandle* arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<TopOpeBRepDS_Curve>(receiver);
+    auto local0 = OcctSharpGenerated::ValidateGeom2dCurve(arg0)->Value;
+    self->Curve2(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Curve@F@Curve2#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_curve_curve2_9(const OcctSharp_Owned_TopOpeBRepDS_CurveHandle* receiver, OcctSharp_Geom2dCurveHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Curve>(receiver);
+    auto returned = self->Curve2();
+    auto* published = returned.IsNull() ? nullptr : OcctSharpGenerated::AllocateGeom2dCurve(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Curve@F@DSIndex#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_curve_dsindex_10(const OcctSharp_Owned_TopOpeBRepDS_CurveHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Curve>(receiver);
+    auto returned = self->DSIndex();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Curve@F@DefineCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_curve_definecurve_11(const OcctSharp_Owned_TopOpeBRepDS_CurveHandle* receiver, const OcctSharp_GeomCurveHandle* arg0, double arg1, int32_t arg2) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<TopOpeBRepDS_Curve>(receiver);
+    auto local0 = OcctSharpGenerated::ValidateGeomCurve(arg0)->Value;
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = (arg2 != 0);
+    self->DefineCurve(local0, local1, local2);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Curve@F@GetSCI1#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_curve_getsci1_12(const OcctSharp_Owned_TopOpeBRepDS_CurveHandle* receiver, OcctSharp_TopOpeBRepDSInterferenceHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Curve>(receiver);
+    auto returned = self->GetSCI1();
+    auto* published = returned.IsNull() ? nullptr : OcctSharpGenerated::AllocateTopOpeBRepDSInterference(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Curve@F@GetSCI2#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_curve_getsci2_13(const OcctSharp_Owned_TopOpeBRepDS_CurveHandle* receiver, OcctSharp_TopOpeBRepDSInterferenceHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Curve>(receiver);
+    auto returned = self->GetSCI2();
+    auto* published = returned.IsNull() ? nullptr : OcctSharpGenerated::AllocateTopOpeBRepDSInterference(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Curve@F@IsWalk#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_curve_iswalk_14(const OcctSharp_Owned_TopOpeBRepDS_CurveHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Curve>(receiver);
+    auto returned = self->IsWalk();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Curve@F@Keep#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_curve_keep_15(const OcctSharp_Owned_TopOpeBRepDS_CurveHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Curve>(receiver);
+    auto returned = self->Keep();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Curve@F@Mother#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_curve_mother_16(const OcctSharp_Owned_TopOpeBRepDS_CurveHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Curve>(receiver);
+    auto returned = self->Mother();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Curve@F@Range#&d#S0_#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_curve_range_17(const OcctSharp_Owned_TopOpeBRepDS_CurveHandle* receiver, double arg0, double* updatedArg0, double arg1, double* updatedArg1, int32_t* result) {
+  if (!updatedArg0) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!updatedArg1) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *updatedArg0 = {};
+  *updatedArg1 = {};
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Curve>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto returned = self->Range(local0, local1);
+    const auto copied0 = local0;
+    const auto copied1 = local1;
+    const auto copiedResult = (returned ? 1 : 0);
+    *updatedArg0 = copied0;
+    *updatedArg1 = copied1;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Curve@F@SetRange#d#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_curve_setrange_18(const OcctSharp_Owned_TopOpeBRepDS_CurveHandle* receiver, double arg0, double arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<TopOpeBRepDS_Curve>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    self->SetRange(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Curve@F@SetSCI#&1$@N@opencascade@S@handle>#$@S@TopOpeBRepDS_Interference#S0_#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_curve_setsci_19(const OcctSharp_Owned_TopOpeBRepDS_CurveHandle* receiver, const OcctSharp_TopOpeBRepDSInterferenceHandle* arg0, const OcctSharp_TopOpeBRepDSInterferenceHandle* arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<TopOpeBRepDS_Curve>(receiver);
+    auto local0 = OcctSharpGenerated::ValidateTopOpeBRepDSInterference(arg0)->Value;
+    auto local1 = OcctSharpGenerated::ValidateTopOpeBRepDSInterference(arg1)->Value;
+    self->SetSCI(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Curve@F@Tolerance#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_curve_tolerance_20(const OcctSharp_Owned_TopOpeBRepDS_CurveHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Curve>(receiver);
+    auto returned = self->Tolerance();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Curve@F@Tolerance#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_curve_tolerance_21(const OcctSharp_Owned_TopOpeBRepDS_CurveHandle* receiver, double arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<TopOpeBRepDS_Curve>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    self->Tolerance(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Curve@F@TopOpeBRepDS_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_curve_create_22(const OcctSharp_GeomCurveHandle* arg0, double arg1, int32_t arg2, OcctSharp_Owned_TopOpeBRepDS_CurveHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharpGenerated::ValidateGeomCurve(arg0)->Value;
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto local2 = (arg2 != 0);
+    auto returned = std::make_shared<TopOpeBRepDS_Curve>(local0, local1, local2);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_TopOpeBRepDS_CurveHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_topopebrepds_point_release(OcctSharp_Owned_TopOpeBRepDS_PointHandle* handle) { OcctSharpOwned::Release(handle, typeid(TopOpeBRepDS_Point)); }
+// Source: c:@S@TopOpeBRepDS_Point@F@ChangeKeep#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_point_changekeep_0(const OcctSharp_Owned_TopOpeBRepDS_PointHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<TopOpeBRepDS_Point>(receiver);
+    auto local0 = (arg0 != 0);
+    self->ChangeKeep(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Point@F@IsEqual#&1$@S@TopOpeBRepDS_Point#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_point_isequal_1(const OcctSharp_Owned_TopOpeBRepDS_PointHandle* receiver, const OcctSharp_Owned_TopOpeBRepDS_PointHandle* arg0, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Point>(receiver);
+    auto local0 = OcctSharpOwned::Lease<TopOpeBRepDS_Point>(arg0);
+    auto returned = self->IsEqual(*local0);
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Point@F@Keep#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_point_keep_2(const OcctSharp_Owned_TopOpeBRepDS_PointHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Point>(receiver);
+    auto returned = self->Keep();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Point@F@Point#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_point_point_3(const OcctSharp_Owned_TopOpeBRepDS_PointHandle* receiver, OcctSharp_Point3d* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Point>(receiver);
+    auto returned = self->Point();
+    const auto copiedResult = OcctSharp_Point3d{returned.X(), returned.Y(), returned.Z()};
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Point@F@Tolerance#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_point_tolerance_4(const OcctSharp_Owned_TopOpeBRepDS_PointHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Point>(receiver);
+    auto returned = self->Tolerance();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Point@F@Tolerance#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_point_tolerance_5(const OcctSharp_Owned_TopOpeBRepDS_PointHandle* receiver, double arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<TopOpeBRepDS_Point>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    self->Tolerance(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Point@F@TopOpeBRepDS_Point#&1$@S@gp_Pnt#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_point_create_6(OcctSharp_Point3d arg0, double arg1, OcctSharp_Owned_TopOpeBRepDS_PointHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = gp_Pnt(OcctSharp_GeometryValues::Check(arg0.x), OcctSharp_GeometryValues::Check(arg0.y), OcctSharp_GeometryValues::Check(arg0.z));
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto returned = std::make_shared<TopOpeBRepDS_Point>(local0, local1);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_TopOpeBRepDS_PointHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_topopebrepds_surface_release(OcctSharp_Owned_TopOpeBRepDS_SurfaceHandle* handle) { OcctSharpOwned::Release(handle, typeid(TopOpeBRepDS_Surface)); }
+// Source: c:@S@TopOpeBRepDS_Surface@F@Assign#&1$@S@TopOpeBRepDS_Surface#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_surface_assign_0(const OcctSharp_Owned_TopOpeBRepDS_SurfaceHandle* receiver, const OcctSharp_Owned_TopOpeBRepDS_SurfaceHandle* arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<TopOpeBRepDS_Surface>(receiver);
+    auto local0 = OcctSharpOwned::Lease<TopOpeBRepDS_Surface>(arg0);
+    self->Assign(*local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Surface@F@ChangeKeep#b#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_surface_changekeep_1(const OcctSharp_Owned_TopOpeBRepDS_SurfaceHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<TopOpeBRepDS_Surface>(receiver);
+    auto local0 = (arg0 != 0);
+    self->ChangeKeep(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Surface@F@Keep#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_surface_keep_2(const OcctSharp_Owned_TopOpeBRepDS_SurfaceHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Surface>(receiver);
+    auto returned = self->Keep();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Surface@F@Surface#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_surface_surface_3(const OcctSharp_Owned_TopOpeBRepDS_SurfaceHandle* receiver, OcctSharp_GeomSurfaceHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Surface>(receiver);
+    auto returned = self->Surface();
+    auto* published = returned.IsNull() ? nullptr : OcctSharpGenerated::AllocateGeomSurface(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Surface@F@Tolerance#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_surface_tolerance_4(const OcctSharp_Owned_TopOpeBRepDS_SurfaceHandle* receiver, double* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Surface>(receiver);
+    auto returned = self->Tolerance();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Surface@F@Tolerance#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_surface_tolerance_5(const OcctSharp_Owned_TopOpeBRepDS_SurfaceHandle* receiver, double arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<TopOpeBRepDS_Surface>(receiver);
+    auto local0 = OcctSharp_GeometryValues::Check(arg0);
+    self->Tolerance(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Surface@F@TopOpeBRepDS_Surface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_surface_create_6(const OcctSharp_GeomSurfaceHandle* arg0, double arg1, OcctSharp_Owned_TopOpeBRepDS_SurfaceHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = OcctSharpGenerated::ValidateGeomSurface(arg0)->Value;
+    auto local1 = OcctSharp_GeometryValues::Check(arg1);
+    auto returned = std::make_shared<TopOpeBRepDS_Surface>(local0, local1);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_TopOpeBRepDS_SurfaceHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+void OCCTSHARP_CALL occtsharp_owned_topopebrepds_transition_release(OcctSharp_Owned_TopOpeBRepDS_TransitionHandle* handle) { OcctSharpOwned::Release(handle, typeid(TopOpeBRepDS_Transition)); }
+// Source: c:@S@TopOpeBRepDS_Transition@F@After#$@E@TopAbs_State#$@E@TopAbs_ShapeEnum#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_transition_after_0(const OcctSharp_Owned_TopOpeBRepDS_TransitionHandle* receiver, int32_t arg0, int32_t arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<TopOpeBRepDS_Transition>(receiver);
+    auto local0 = static_cast<TopAbs_State>(arg0);
+    auto local1 = static_cast<TopAbs_ShapeEnum>(arg1);
+    self->After(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Transition@F@After#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_transition_after_1(const OcctSharp_Owned_TopOpeBRepDS_TransitionHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Transition>(receiver);
+    auto returned = self->After();
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Transition@F@Before#$@E@TopAbs_State#$@E@TopAbs_ShapeEnum#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_transition_before_2(const OcctSharp_Owned_TopOpeBRepDS_TransitionHandle* receiver, int32_t arg0, int32_t arg1) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<TopOpeBRepDS_Transition>(receiver);
+    auto local0 = static_cast<TopAbs_State>(arg0);
+    auto local1 = static_cast<TopAbs_ShapeEnum>(arg1);
+    self->Before(local0, local1);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Transition@F@Before#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_transition_before_3(const OcctSharp_Owned_TopOpeBRepDS_TransitionHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Transition>(receiver);
+    auto returned = self->Before();
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Transition@F@Complement#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_transition_complement_4(const OcctSharp_Owned_TopOpeBRepDS_TransitionHandle* receiver, OcctSharp_Owned_TopOpeBRepDS_TransitionHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Transition>(receiver);
+    auto returned = std::make_shared<TopOpeBRepDS_Transition>(self->Complement());
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_TopOpeBRepDS_TransitionHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Transition@F@Index#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_transition_index_5(const OcctSharp_Owned_TopOpeBRepDS_TransitionHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Transition>(receiver);
+    auto returned = self->Index();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Transition@F@Index#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_transition_index_6(const OcctSharp_Owned_TopOpeBRepDS_TransitionHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<TopOpeBRepDS_Transition>(receiver);
+    auto local0 = arg0;
+    self->Index(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Transition@F@IndexAfter#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_transition_indexafter_7(const OcctSharp_Owned_TopOpeBRepDS_TransitionHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Transition>(receiver);
+    auto returned = self->IndexAfter();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Transition@F@IndexAfter#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_transition_indexafter_8(const OcctSharp_Owned_TopOpeBRepDS_TransitionHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<TopOpeBRepDS_Transition>(receiver);
+    auto local0 = arg0;
+    self->IndexAfter(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Transition@F@IndexBefore#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_transition_indexbefore_9(const OcctSharp_Owned_TopOpeBRepDS_TransitionHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Transition>(receiver);
+    auto returned = self->IndexBefore();
+    const auto copiedResult = returned;
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Transition@F@IndexBefore#I#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_transition_indexbefore_10(const OcctSharp_Owned_TopOpeBRepDS_TransitionHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<TopOpeBRepDS_Transition>(receiver);
+    auto local0 = arg0;
+    self->IndexBefore(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Transition@F@IsUnknown#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_transition_isunknown_11(const OcctSharp_Owned_TopOpeBRepDS_TransitionHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Transition>(receiver);
+    auto returned = self->IsUnknown();
+    const auto copiedResult = (returned ? 1 : 0);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Transition@F@ONAfter#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_transition_onafter_12(const OcctSharp_Owned_TopOpeBRepDS_TransitionHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Transition>(receiver);
+    auto returned = self->ONAfter();
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Transition@F@ONBefore#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_transition_onbefore_13(const OcctSharp_Owned_TopOpeBRepDS_TransitionHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Transition>(receiver);
+    auto returned = self->ONBefore();
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Transition@F@Orientation#$@E@TopAbs_State#$@E@TopAbs_ShapeEnum#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_transition_orientation_14(const OcctSharp_Owned_TopOpeBRepDS_TransitionHandle* receiver, int32_t arg0, int32_t arg1, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Transition>(receiver);
+    auto local0 = static_cast<TopAbs_State>(arg0);
+    auto local1 = static_cast<TopAbs_ShapeEnum>(arg1);
+    auto returned = self->Orientation(local0, local1);
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Transition@F@Set#$@E@TopAbs_Orientation#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_transition_set_15(const OcctSharp_Owned_TopOpeBRepDS_TransitionHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<TopOpeBRepDS_Transition>(receiver);
+    auto local0 = static_cast<TopAbs_Orientation>(arg0);
+    self->Set(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Transition@F@Set#$@E@TopAbs_State#S0_#$@E@TopAbs_ShapeEnum#S1_#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_transition_set_16(const OcctSharp_Owned_TopOpeBRepDS_TransitionHandle* receiver, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<TopOpeBRepDS_Transition>(receiver);
+    auto local0 = static_cast<TopAbs_State>(arg0);
+    auto local1 = static_cast<TopAbs_State>(arg1);
+    auto local2 = static_cast<TopAbs_ShapeEnum>(arg2);
+    auto local3 = static_cast<TopAbs_ShapeEnum>(arg3);
+    self->Set(local0, local1, local2, local3);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Transition@F@ShapeAfter#$@E@TopAbs_ShapeEnum#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_transition_shapeafter_17(const OcctSharp_Owned_TopOpeBRepDS_TransitionHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<TopOpeBRepDS_Transition>(receiver);
+    auto local0 = static_cast<TopAbs_ShapeEnum>(arg0);
+    self->ShapeAfter(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Transition@F@ShapeAfter#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_transition_shapeafter_18(const OcctSharp_Owned_TopOpeBRepDS_TransitionHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Transition>(receiver);
+    auto returned = self->ShapeAfter();
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Transition@F@ShapeBefore#$@E@TopAbs_ShapeEnum#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_transition_shapebefore_19(const OcctSharp_Owned_TopOpeBRepDS_TransitionHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<TopOpeBRepDS_Transition>(receiver);
+    auto local0 = static_cast<TopAbs_ShapeEnum>(arg0);
+    self->ShapeBefore(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Transition@F@ShapeBefore#1
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_transition_shapebefore_20(const OcctSharp_Owned_TopOpeBRepDS_TransitionHandle* receiver, int32_t* result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<const TopOpeBRepDS_Transition>(receiver);
+    auto returned = self->ShapeBefore();
+    const auto copiedResult = static_cast<int32_t>(returned);
+    *result = copiedResult;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Transition@F@StateAfter#$@E@TopAbs_State#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_transition_stateafter_21(const OcctSharp_Owned_TopOpeBRepDS_TransitionHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<TopOpeBRepDS_Transition>(receiver);
+    auto local0 = static_cast<TopAbs_State>(arg0);
+    self->StateAfter(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Transition@F@StateBefore#$@E@TopAbs_State#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_transition_statebefore_22(const OcctSharp_Owned_TopOpeBRepDS_TransitionHandle* receiver, int32_t arg0) {
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto self = OcctSharpOwned::Lease<TopOpeBRepDS_Transition>(receiver);
+    auto local0 = static_cast<TopAbs_State>(arg0);
+    self->StateBefore(local0);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Transition@F@TopOpeBRepDS_Transition#$@E@TopAbs_Orientation#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_transition_create_23(int32_t arg0, OcctSharp_Owned_TopOpeBRepDS_TransitionHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = static_cast<TopAbs_Orientation>(arg0);
+    auto returned = std::make_shared<TopOpeBRepDS_Transition>(local0);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_TopOpeBRepDS_TransitionHandle>(std::move(returned));
+    *result = published;
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown owned operation exception."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+// Source: c:@S@TopOpeBRepDS_Transition@F@TopOpeBRepDS_Transition#$@E@TopAbs_State#S0_#$@E@TopAbs_ShapeEnum#S1_#
+OcctSharp_Status OCCTSHARP_CALL occtsharp_owned_topopebrepds_transition_create_24(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, OcctSharp_Owned_TopOpeBRepDS_TransitionHandle** result) {
+  if (!result) { OcctSharp_Internal_SetLastError("Null owned operation output."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  OcctSharp_Internal_SetLastError("");
+  try {
+    auto local0 = static_cast<TopAbs_State>(arg0);
+    auto local1 = static_cast<TopAbs_State>(arg1);
+    auto local2 = static_cast<TopAbs_ShapeEnum>(arg2);
+    auto local3 = static_cast<TopAbs_ShapeEnum>(arg3);
+    auto returned = std::make_shared<TopOpeBRepDS_Transition>(local0, local1, local2, local3);
+    auto* published = OcctSharpOwned::Publish<OcctSharp_Owned_TopOpeBRepDS_TransitionHandle>(std::move(returned));
+    *result = published;
     return OCCTSHARP_STATUS_SUCCESS;
   }
   catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }

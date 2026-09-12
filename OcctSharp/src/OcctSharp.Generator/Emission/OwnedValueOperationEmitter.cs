@@ -1,4 +1,5 @@
 using System.Text;
+using System.Text.Json;
 using OcctSharp.Generator.Discovery;
 using OcctSharp.Generator.Model;
 using OcctSharp.Generator.Transformation;
@@ -10,6 +11,20 @@ namespace OcctSharp.Generator.Emission;
 /// <summary>Emits the exact audited catalogue of stable-address owning objects.</summary>
 internal static class OwnedValueOperationEmitter
 {
+    // Preserve the already published AB bodies. New owners resolve const overloads
+    // through a const lease, even when the class also has a mutable overload.
+    private static readonly HashSet<string> LegacyOwners = LoadLegacyOwners();
+
+    private static HashSet<string> LoadLegacyOwners()
+    {
+        using Stream stream = typeof(OwnedValueOperationEmitter).Assembly.GetManifestResourceStream(
+            "OcctSharp.Generator.Emission.preview27-owned-owners.json")
+            ?? throw new InvalidDataException("Preview.27 owned receiver epoch is missing.");
+        return (JsonSerializer.Deserialize<string[]>(stream)
+            ?? throw new InvalidDataException("Preview.27 owned receiver epoch is empty."))
+            .ToHashSet(StringComparer.Ordinal);
+    }
+
     internal static GeneratedBindingSet Emit(string version, BindingModel model,
         IReadOnlyList<SharedHandleScopeConfiguration> sharedScopes, IReadOnlySet<string> existing,
         IReadOnlyList<string> preambleHeaders)
@@ -70,6 +85,20 @@ internal static class OwnedValueOperationEmitter
                     EmitOperation(d, owner, name, ordinal++, Map, shared, h, cpp, cs, signatures, guardMakerResults);
                 foreach (var d in supportingOperations)
                     EmitOperation(d, owner, name, ordinal++, Map, shared, h, cpp, cs, signatures, guardMakerResults);
+                if (!LegacyOwners.Contains(owner)
+                    && supportingOperations.Any(d => d.NativeName == "StepData_SelectType::SetValue"))
+                {
+                    // Typed getters define the audited entity alternatives. Supply matching
+                    // setters without requiring an otherwise unavailable managed base upcast.
+                    foreach (var getter in declarations.Where(d => Owner(d) == owner
+                            && d.Kind == BindingDeclarationKind.Method && !d.IsStatic && d.Parameters.Count == 0
+                            && d.ReturnType?.IsOcctHandle == true && d.ReturnType.HandleTargetType != "Standard_Transient")
+                        .DistinctBy(d => d.ReturnType!.HandleTargetType))
+                    {
+                        var setter = TypedSelectSetter(owner, getter);
+                        EmitOperation(setter, owner, name, ordinal++, Map, shared, h, cpp, cs, signatures, false);
+                    }
+                }
                 if (OwnedValueOperationContract.SupportingDefaultOwners.Contains(owner)
                     && !declarations.Any(d => Owner(d) == owner && d.Kind == BindingDeclarationKind.Constructor && d.Parameters.Count == 0))
                 {
@@ -100,6 +129,17 @@ internal static class OwnedValueOperationEmitter
         cs.AppendLine("  [LibraryImport(\"OcctSharp.Native\", EntryPoint = \"" + release + "\")]\n  private static partial void NativeRelease(nint handle);");
     }
 
+    private static BindingDeclaration TypedSelectSetter(string owner, BindingDeclaration getter) => new(
+        "support:owned-select-set:" + owner + ":" + getter.ReturnType!.HandleTargetType,
+        owner + "::SetValue", BindingDeclarationKind.Method, getter.Header, 0, 0)
+    {
+        Access = BindingAccess.Public,
+        ProductModule = getter.ProductModule,
+        ReturnType = new("void", "void", "void", "void",
+            [new(BindingTypeLayerKind.Value, false)], null, [], false, null),
+        Parameters = [new(0, "value", getter.ReturnType!, false)],
+    };
+
     private static void EmitOperation(BindingDeclaration d, string owner, string className, int ordinal,
         Func<BindingDeclaration, BindingType, BindingTypeUsage, BindingTypeProjection> map,
         Dictionary<string, SharedHandleScopeConfiguration> shared,
@@ -115,7 +155,8 @@ internal static class OwnedValueOperationEmitter
         if (!ctor && !d.IsStatic)
         {
             abi.Add("const " + Handle(owner) + "* receiver"); raw.Add("OwnedHandle receiver"); args.Add("NativeHandle");
-            locals.Add("auto self = OcctSharpOwned::Lease<" + owner + ">(receiver);");
+            string receiverType = d.IsConst && !LegacyOwners.Contains(owner) ? "const " + owner : owner;
+            locals.Add("auto self = OcctSharpOwned::Lease<" + receiverType + ">(receiver);");
         }
         for (int i = 0; i < d.Parameters.Count; i++)
         {
@@ -200,7 +241,8 @@ internal static class OwnedValueOperationEmitter
         while (!signatures.Add(method + "(" + string.Join(",", friendly) + ")")) method = baseMethod + suffix++;
         cs.AppendLine("  // Source: " + d.StableId + "\n  [LibraryImport(\"OcctSharp.Native\", EntryPoint = \"" + export + "\")]\n  private static partial NativeStatus Native_" + export + "(" + string.Join(", ", raw) + ");");
         cs.AppendLine("  /// <summary>Invokes " + d.NativeName + ". Native preconditions apply; ref outputs publish on success. Object mutations are not rolled back on failure.</summary>");
-        cs.AppendLine("  public " + (ctor || d.IsStatic ? "static " : "") + friendlyReturn + " " + EnumBindingEmitter.ToIdentifier(method) + "(" + string.Join(", ", friendly) + ") {");
+        string hidesObjectMethod = !LegacyOwners.Contains(owner) && method == "GetType" && friendly.Count == 0 ? "new " : "";
+        cs.AppendLine("  public " + hidesObjectMethod + (ctor || d.IsStatic ? "static " : "") + friendlyReturn + " " + EnumBindingEmitter.ToIdentifier(method) + "(" + string.Join(", ", friendly) + ") {");
         foreach (string guard in guards) cs.AppendLine("    " + guard);
         cs.AppendLine("    NativeError.ThrowIfFailed(Native_" + export + "(" + string.Join(", ", args) + "), \"" + export + "\");");
         if (!returnsVoid) cs.AppendLine("    var managedResult = " + returnExpression + ";");

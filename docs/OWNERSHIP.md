@@ -1,5 +1,15 @@
 # Ownership and Lifetime
 
+## Batch AC utility and SELECT extension
+
+[Batch AC](BATCH_AC_OWNED_UTILITY_EXPANSION.md) reuses ADR-0096 for additional audited
+owners. Data-result copies include explicitly checked color, date and intersection
+records; no algorithm copy/move or borrowed storage is inferred. STEP SELECT containers
+retain intrusive entity handles. Typed setter conveniences use native checked SetValue
+and preserve both entity and select-member acceptance semantics; returned entity handles
+retain the entity independently of the container. Native mutations still require caller
+synchronization. New const operations resolve native overloads through const leases.
+
 ## Batch AB owning non-transient values (ADR-0096)
 
 The new category constructs audited native instances directly in stable heap storage;

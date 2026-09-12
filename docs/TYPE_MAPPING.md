@@ -1,5 +1,15 @@
 # Type Mapping
 
+## Batch AC audited utility extension
+
+[Batch AC](BATCH_AC_OWNED_UTILITY_EXPANSION.md) extends the exact TM010 catalogue while
+preserving the Preview.27 owner epoch. New const methods use const receiver leases.
+For audited STEP SELECT owners, typed parameterless getters supply supporting typed
+SetValue overloads; native implicit handle upcasts and existing checked SetValue retain
+the normal shared category. Neither these conveniences nor inherited projections are
+additional migrated declaration IDs. The general type map and buffer exclusions remain
+unchanged.
+
 ## Batch AB audited owning non-transient projections (ADR-0096)
 
 An explicit stable-ID and exact-signature catalogue selects supported constructors

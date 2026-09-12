@@ -5,6 +5,7 @@ OcctSharp.Tests.Shared.BatchYGeometryWorkflow.Run();
 OcctSharp.Tests.Shared.BatchZValueWorkflow.Run();
 OcctSharp.Tests.Shared.BatchAAReferenceWorkflow.Run();
 OcctSharp.Tests.Shared.BatchABOwnedWorkflow.Run();
+OcctSharp.Tests.Shared.BatchACOwnedUtilityWorkflow.Run();
 
 byte[] frameInput = [10,20,30,255];
 var frame = ViewerColorFrame.FromRgba(1,1,frameInput);
