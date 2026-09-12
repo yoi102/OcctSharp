@@ -1,12 +1,13 @@
 # Batch AB: Owning non-transient receivers and operations
 
-- State: in progress under [ADR-0096](adr/0096-generated-owned-nontransient-values.md).
-- Last validated product: c65b480, Preview.26 / ABI 1.70 / bridge 0.78.0 (Batch AA).
+- State: implemented and locally validated under [ADR-0096](adr/0096-generated-owned-nontransient-values.md).
+- Product: Preview.27 / ABI 1.71 / bridge 0.79.0; implementation commit f58a580.
+- Entry product: c65b480, Preview.26 / ABI 1.70 / bridge 0.78.0 (Batch AA).
 - Entry: 22,636 generated, 1,217 accepted manual, 43,072 Blocked, 49,347 Skipped.
 - Entry total: 116,272 declarations; 7,058/7,090 headers and 32 explicit exclusions.
 - Entry declaration coverage: 20.51%; this is not functional completeness.
-- New AB generation, compilation, runtime/lifetime and product delivery gates: NOT RUN
-  at preparation. No AB release or completed migration count is claimed.
+- Exit: 23,703 generated, 1,217 accepted manual, 42,005 Blocked, 49,347 Skipped;
+  21.43% declaration coverage. Final package-content evidence is recorded in STATUS.
 
 ## Frozen entry evidence
 
@@ -52,10 +53,11 @@ Manual/Skipped IDs and old generated exports/bodies remain unchanged. Borrowed m
 external-buffer lifetimes, unsupported constructors/destructors and unsafe array-start
 references stay excluded. No module, facade or native-DLL split is introduced.
 
-## Delivery evidence to complete
+## Implemented catalogue and validation
 
 The implementation catalogue currently freezes 122 owners and 1,067 migration IDs:
-891 Geometry, 149 Modeling and 27 Foundation. It covers Bnd, analytic Extrema,
+446 constructors formerly BL103 and 621 instance operations formerly BL102;
+891 Geometry, 149 Modeling and 27 Foundation. It covers 15 OCCT packages: Bnd, analytic Extrema,
 IntAna/IntAna2d, GccAna/GccEnt, GC/gce makers, GProp, GeomAPI/Geom2dAPI, LProp,
 quaternion interpolation and selected math utilities. `OwnedValues` is the managed
 namespace; `occtsharp_owned_` is the separate native export family. TM010 applies only
@@ -69,26 +71,53 @@ and supporting operations are native/API additions, not migrated declaration IDs
 The discovery denominator and all 1,217 accepted Manual IDs remain the accounting
 baseline. No wildcard owner rule applies to future SDK declarations.
 
+For example, the new owned range supports mutation, leased arguments and independent
+returned copies (the same behavior is exercised by BatchABOwnedTests):
+
+```csharp
+using OcctSharp.OwnedValues;
+
+using BndRange first = BndRange.Create(1, 5);
+using BndRange second = BndRange.Create(3, 8);
+first.Common(second);
+using BndRange shifted = first.Shifted(10);
+double minimum = 0, maximum = 0;
+shifted.GetBounds(ref minimum, ref maximum); // 13, 15
+```
+
 Development evidence: all 1,067 IDs have generated successfully in 137 files with a
 complete, acyclic managed dependency closure. Native compilation/linking has passed.
 All 35,030 previous generated native signatures/bodies are unchanged. Strict C11 checks
 pass for 34 headers. The standalone registry fixture passes null/wrong-type/stale and
 repeated release, token non-reuse, stable addresses, 250 release races with 16,000 lease
 attempts, and final destruction, in both Release and Debug fixture configurations.
-Release native/managed builds, deterministic generation/discovery, Generator 163/163
-and Runtime 542/542 pass, including 14 AB runtime tests. The new public API has 1,500
+Release and Debug native/managed builds, deterministic generation/discovery, Generator
+163/163 and Runtime 542/542 pass, including 14 AB runtime tests. The new public API has 1,500
 additions and zero removals. The bundled 62-DLL runtime matches the Release build.
-Seven accounting rejection fixtures pass against a synthetic inventory; the final
-real inventory and remaining Debug/product gates are still pending.
+Seven accounting rejection fixtures pass against an isolated synthetic inventory;
+the final real inventory confirms precisely 1,067 Blocked-to-Emitted IDs with no other
+disposition or header changes. Implementation is saved at f58a580.
+Release used SDK 10.0.400; resumed Release/Debug and cold builds use 10.0.401 under the
+repository's latestPatch policy and reproduces the identical generated/discovery hashes.
+Actual Debug-native Runtime 542/542 passes with all 62 DLL hashes checked. Native
+export comparison passes with 37,153 exports, 1,378 additions and zero removals;
+Debug and Release sets match. The final read-only audit also checked all 187 support entries: there are no matching
+const/nonconst overload pairs and no module edges outside the accepted graph. Support
+entries retain separate catalogue evidence; they are not added to migrated stable IDs.
 
-Record the exact constructor/receiver catalogue, exclusions and Blocked-to-Emitted
-delta; rule regressions; semantic operations; raw type/stale/null/repeated-release
-handling; disposal races and token non-reuse; failure atomicity; and lifetime/destruction
-behavior. Complete Release/Debug and actual Debug-native suites, ABI/layout checks,
-old source/API/export preservation, deterministic/cold regeneration, full-inventory
-accounting, fourteen packages, both clean consumers, documentation/content checks
-and the local release check before claiming product delivery. New AB gates are NOT RUN
-at preparation; prior AA evidence does not validate this new ownership mechanism.
+Fourteen local packages and clean facade/direct-module consumers pass with the AB
+workflow. A cold source copy builds, passes Generator 163/163 and Runtime 542/542,
+and reproduces all 137 generated files byte-for-byte. Local release-check gates pass;
+batchImplementationComplete=true. Execution resumed after interruption with evidence
+in artifacts/batch-ab-release-check.log, batch-ab-release-resume.log and
+batch-ab-release-tail.log. Final inventory SHA256:
+`14B0D49AB1929D51D2E9BA17240641C6537C11DDEAF89F7F6F0AFAA0A9A24BE2`.
+
+The final rebuilt Release bridge was synchronized to the bundled runtime and rerun
+against all 542 Runtime tests. Its SHA256 is
+`FE5AE1330F6951EF2560E90AA97967BD0CC8A5B818DC00519111F58327E0498A`;
+the tested Debug bridge SHA256 is
+`451780944BA0C259C1786174B988383BB93D5FA9C4928CFEF8C8F4682020EEC0`.
 
 See [OWNERSHIP](OWNERSHIP.md) and [TYPE_MAPPING](TYPE_MAPPING.md) for contracts.
 [STATUS](STATUS.md) owns live progress. Commits remain local; push/publication are NOT RUN.

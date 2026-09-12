@@ -1,6 +1,6 @@
 # Architecture
 
-## Batch AB owning non-transient boundary (in progress)
+## Batch AB owning non-transient boundary
 
 [ADR-0096](adr/0096-generated-owned-nontransient-values.md) introduces an audited
 generated owning category for stable heap instances that cannot be copied or moved.

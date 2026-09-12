@@ -1,93 +1,83 @@
 # Current Status
 
-- Last updated: 2026-09-09.
-- Active batch: [AB](BATCH_AB_OWNED_NONTRANSIENT_VALUES.md), in progress under
-  [ADR-0096](adr/0096-generated-owned-nontransient-values.md). Its new ownership
-  mechanism and migrated scope are not yet validated for delivery.
-- Completed local batch: [AA](BATCH_AA_REFERENCE_OPERATIONS.md), implementing
-  [ADR-0095](adr/0095-generated-reference-operations.md).
-- Validated product: 8.0.1-preview.26 / ABI 1.70 / bridge 0.78.0.
-  All local product-delivery gates and final package-content checks pass.
-- Entry product: Batch Z c80f09c. Its completed evidence is preserved in
-  [Preview.25 history](STATUS_HISTORY_THROUGH_PREVIEW_25.md).
+- Last updated: 2026-09-12.
+- Completed local batch: AB, with implementation and delivery checks passing under
+  [ADR-0096](adr/0096-generated-owned-nontransient-values.md).
+- Product: 8.0.1-preview.27 / ABI 1.71 / bridge 0.79.0.
+- Implementation commit: f58a580. Entry product: c65b480, Preview.26;
+  [its completed evidence is archived](STATUS_HISTORY_THROUGH_PREVIEW_26.md).
 - Twelve modules, one facade, one Native DLL and fourteen local packages remain.
-  GitHub push and NuGet publication are NOT RUN, outside this task.
+- PASS: final documentation and package content verified: 201 packaged documents,
+  73 runtime/license files and five release checksums.
+- GitHub push, remote CI, signing and NuGet publication: NOT RUN, outside this task.
 
-## Batch AB in progress
+## Full-library accounting
 
-The completed AA baseline is frozen in the inner workspace at
-`artifacts/preparation-baselines/preview26-batch-ab/`: manifest, full inventory,
-Release native DLL and a freshly read 49,943-signature API snapshot, with per-file
-hashes in `baseline-evidence.json`. The baseline source commit is c65b480; generated
-declaration and file counts match AA at 22,636 and 126. AB is implementing audited
-owning non-transient wrappers with stable native storage, typed non-reused tokens
-and shared_ptr operation leases. The 122-owner catalogue now generates 1,067 added
-IDs (23,703 total) in 137 files; its native build passes. The 34-header C11 and registry
-fixtures pass, including 250 concurrent release races. All 35,030 old generated native
-bodies/signatures remain unchanged. Preview.27 / ABI 1.71 / bridge 0.79.0 is the candidate;
-Release native/managed builds, deterministic discovery/generation, Generator 163/163
-and Runtime 542/542 pass (14 new runtime tests). Debug and the remaining product-delivery
-gates are NOT RUN for AB yet. The following AA counts and PASS results describe the
-completed Preview.26 baseline, not AB completion.
-
-## Full-library accounting (validated Batch AA baseline)
-
-| Disposition | Preview.25 entry | Batch AA |
+| Disposition | Preview.26 entry | Batch AB |
 |---|---:|---:|
-| Emitted | 22,038 | 22,636 |
+| Emitted | 22,636 | 23,703 |
 | Accepted manual | 1,217 | 1,217 |
-| Blocked | 43,670 | 43,072 |
+| Blocked | 43,072 | 42,005 |
 | Skipped | 49,347 | 49,347 |
 | SupportedUnselected / pending / HD099 | 0 / 0 / 0 | 0 / 0 / 0 |
 | Total inventoried | 116,272 | 116,272 |
 
-Generated plus accepted manual declaration coverage rises from 20.00% to 20.51%.
+Generated plus accepted manual declaration coverage rises from 20.51% to 21.43%.
 This is declaration coverage, not functional completeness. Semantic discovery remains
 7,058/7,090 headers with the same 32 explicit exclusions. Full migration is incomplete.
 
-AA adds exactly the 598 audited catalogue IDs and removes none. There are no new
-manual IDs or header exclusions. Every addition is Blocked-to-Emitted; there are no
-other disposition or discovery identity changes. Inventory batch size remains 128.
-Inventory SHA256: `AE0C2EA053355D9D94E2DD20F9FB0B2EF41A10E22610EF745C59EF7DA887966E`.
+AB adds exactly 1,067 audited catalogue IDs: 446 constructors and 621 instance
+operations, all Blocked-to-Emitted. No other declaration disposition, discovery identity,
+manual ID or header exclusion changes. Inventory uses BatchSize 128.
+Inventory SHA256: `14B0D49AB1929D51D2E9BA17240641C6537C11DDEAF89F7F6F0AFAA0A9A24BE2`.
 
-## Executed validation (Batch AA)
+## Executed validation
 
-- PASS: Release/Debug native/managed builds and deterministic generation/discovery; 126 files.
-- PASS: Generator 154/154 and Runtime 528/528 in both Release and Debug (11 AA tests).
-- PASS: Release and Debug geometric ABI fixtures, 31 strict C11 headers and 34 record layouts.
-- PASS: 34,432 previous generated native signatures/bodies unchanged; 818 managed API
-  additions with zero removals; 49,943 public signatures and 3,750 facade forwarders.
-- PASS: 35,775 native exports, +598, zero removals; Debug and Release match.
-- PASS: actual Debug-native Runtime 528/528, with all 62 DLLs hash-verified.
-- PASS: 14 local packages and clean facade/direct-module consumers, including AA workflow.
-- PASS: exact inventory accounting and four rejection fixtures; unchanged denominator,
-  header and manual-ID sets, with the exact 598-entry catalogue reconciled.
-- PASS: cold source copy builds and reproduces all 126 generated files byte-for-byte.
-- PASS: all local release-check gates; batchImplementationComplete=true. Execution resumed
-  at the final inventory after interruption, retaining completed build/consumer/cold-run evidence.
-- PASS: independent read-only reference-emitter review found no confirmed blocking defect.
-- PASS: final documentation repack and content validation; 198 stable documents,
-  73 runtime/license files, five checksums and matching final provenance.
-- Implementation commit: 581b887. This document accompanies the local completion commit.
-- Final facade package SHA256: 8BB1E3AE9BBDA4067BB0C8044212C21E6F7BE8B35F6C52933DFEAD7E8B6DE77D.
+- PASS: Release/Debug native and managed builds; deterministic generation/discovery,
+  137 generated files, complete acyclic module dependency closure.
+- PASS: Generator 163/163; Runtime 542/542 in Release and Debug, including 14 AB tests.
+- PASS: actual Debug-native Runtime 542/542 in an isolated directory; all 62 DLL hashes checked.
+- PASS: Release/Debug strict C11 checks for 34 generated headers and geometric ABI fixtures.
+- PASS: registry null/wrong-type/stale/repeated release, token non-reuse, stable addresses,
+  250 concurrent release rounds and 16,000 lease attempts per fixture configuration;
+  final destruction and managed Dispose/finalizer tests.
+- PASS: 35,030 previous generated native signatures/bodies unchanged; 1,500 managed API
+  additions and zero removals, for 51,443 signatures and 3,872 facade forwarders.
+- PASS: 37,153 native exports, 1,378 additions and zero removals; Debug matches Release.
+- PASS: 14 packages and clean facade/direct-module consumers with AB workflows; sample smoke.
+- PASS: cold source copy builds and tests successfully; all 137 generated files are byte-identical.
+- PASS: exact final inventory accounting and seven rejection fixtures. The fixtures use
+  an isolated synthetic inventory; the final accounting checks the actual full scan.
+- PASS: all local release-check gates; batchImplementationComplete=true. Interrupted
+  execution resumed with source-identified Release/Debug evidence retained.
 
-Release DLL: 19,127,296 bytes,
-`CE2A270D75B91CF4FE0F82BFA746929DE912E9067AE5CED2E4BC8E5AD9D5D8E8`.
-Debug DLL: `F22663AAAC95272E8A937940F4B871A8233CE1291E6E25113EA2986CD1A4255D`.
+Final facade package SHA256:
+`1A622EF34D46885191383824580C7AF23567EFD855DC42C80E4CCF483A3B2372`.
+
+The latest rebuilt Release bridge also passes all 542 Runtime tests; its 62-DLL closure
+matches the bundled runtime. Release bridge size: 20,033,536 bytes.
+Release SHA256: `FE5AE1330F6951EF2560E90AA97967BD0CC8A5B818DC00519111F58327E0498A`.
+Debug SHA256: `451780944BA0C259C1786174B988383BB93D5FA9C4928CFEF8C8F4682020EEC0`.
+Release started with SDK 10.0.400; resumed and cold checks use 10.0.401 under latestPatch,
+with identical generated/discovery hashes.
 
 ## Implemented scope
 
-598 copied reference operations cover 81 OCCT packages across nine product modules.
-220 operation classes expose curve/surface derivatives, parameter conversion, geometry
-coefficients, display attributes, and exchange/document queries. Native inputs are
-initialized snapshots; all copied outputs publish after success. Managed refs retain
-their original values on exceptions. Typed SafeHandles retain shared inputs during calls.
-See [Batch AA](BATCH_AA_REFERENCE_OPERATIONS.md), [type mapping](TYPE_MAPPING.md) and
-[ownership](OWNERSHIP.md) for initialization, aliasing and thread restrictions.
+122 owning classes cover 15 OCCT packages across Geometry, Modeling and Foundation:
+Bnd, analytic Extrema, IntAna/IntAna2d, GccAna/GccEnt, GC/gce makers, GProp,
+GeomAPI/Geom2dAPI, LProp/GeomLProp, quaternion interpolation and selected math utilities.
+OwnedValues exposes deterministic disposal, fixed native object addresses and type-checked
+non-reused tokens with operation leases. Only 24 audited data types allow independent
+copied owning results. Mutable copied refs publish after success; native object mutation
+is not rolled back on failure. Callers synchronize concurrent mutation.
 
-## Next action
+187 supporting method projections, two default factories and 122 release exports are
+accounted separately from migrated declaration IDs. Existing Manual APIs remain intact.
+See [Batch AB](BATCH_AB_OWNED_NONTRANSIENT_VALUES.md), [OWNERSHIP](OWNERSHIP.md) and
+[TYPE_MAPPING](TYPE_MAPPING.md) for contracts and usage.
 
-Continue Batch AB's audited owning non-transient implementation and lifetime validation,
-then reconcile the exact inventory/API/export delta and run product delivery gates.
-The validated version remains Preview.26 until new product evidence is complete.
-Remote CI, signing, GitHub push and NuGet publication are NOT RUN.
+## Remaining migration
+
+Broader non-transient owners, explicit buffers/sequences, borrowed member lifetimes,
+mutable owning outputs and unsupported native types remain future work. There is no
+fixed per-batch capability count; follow [WORKFLOW](WORKFLOW.md).

@@ -1,6 +1,6 @@
 # Type Mapping
 
-## Batch AB audited owning non-transient projections (ADR-0096; in progress)
+## Batch AB audited owning non-transient projections (ADR-0096)
 
 An explicit stable-ID and exact-signature catalogue selects supported constructors
 and operations on independently owned non-transient classes. Context-specific TM010
@@ -18,8 +18,8 @@ complete before publication, without promising rollback of owned object mutation
 Do not infer buffers from array-start references, mutable-reference return ownership,
 template layout or copy/move constructors. Preserve Manual/Skipped declarations,
 existing public identities and native exports/bodies in separate generated output.
-The proposed category is not delivered until [Batch AB](BATCH_AB_OWNED_NONTRANSIENT_VALUES.md)
-passes its ownership and product gates; see [OWNERSHIP](OWNERSHIP.md) and
+The implemented category and validation are recorded in [Batch AB](BATCH_AB_OWNED_NONTRANSIENT_VALUES.md);
+see [OWNERSHIP](OWNERSHIP.md) and
 [ADR-0096](adr/0096-generated-owned-nontransient-values.md).
 
 TM010 accepts const references to audited owners as leased inputs, and copied value

@@ -1,6 +1,6 @@
 # Ownership and Lifetime
 
-## Batch AB owning non-transient values (ADR-0096; in progress)
+## Batch AB owning non-transient values (ADR-0096)
 
 The new category constructs audited native instances directly in stable heap storage;
 published instances are never copied or moved. A typed managed SafeHandle owns an
@@ -22,8 +22,8 @@ Audited copied refs use initialized independent snapshots and complete every out
 conversion before successful publication. Managed refs remain unchanged on exceptions;
 boolean false still publishes successful copies and aliased refs assign in argument
 order. Native object mutation or cache changes before a failure are not rolled back.
-Construction/destruction and lease-race evidence remain required before this category
-is delivered. See [ADR-0096](adr/0096-generated-owned-nontransient-values.md) and
+Construction/destruction and lease-race checks pass in Release and Debug fixtures.
+See [ADR-0096](adr/0096-generated-owned-nontransient-values.md) and
 [Batch AB](BATCH_AB_OWNED_NONTRANSIENT_VALUES.md); current progress is in [STATUS](STATUS.md).
 
 ## Batch AA copied references (ADR-0095)

@@ -1,6 +1,6 @@
 # ADR-0096: Generated owning non-transient values with leased token handles
 
-- Status: Accepted for implementation; Batch AB is in progress.
+- Status: Accepted; Batch AB implemented and locally validated.
 - Date: 2026-09-08.
 - Entry: Batch AA c65b480, Preview.26 / ABI 1.70 / bridge 0.78.0.
 - Related: [ADR-0009](0009-native-shape-handle-registry.md),
@@ -95,7 +95,7 @@ tests; destructor/lifetime and failure-publication checks; actual Debug-native r
 deterministic and cold regeneration; exact full-inventory reconciliation; all packages,
 clean facade/direct-module consumers and the full local release check. Record the tested
 race ordering and repetition count without claiming that lifetime leasing serializes
-object mutation. New ownership validation and product gates are NOT RUN at preparation.
+object mutation. Executed evidence is recorded in Batch AB and STATUS.
 
 [Batch AB](../BATCH_AB_OWNED_NONTRANSIENT_VALUES.md) owns scope and evidence;
 [STATUS](../STATUS.md) retains the last validated product and current progress. Local
