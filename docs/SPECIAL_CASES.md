@@ -2202,3 +2202,15 @@ rules or design:
 - Removal criteria: Replace this exception only after generated session/document
   ownership and path-safe exchange can preserve the same copied diagnostics, metadata,
   lifetime, failure, viewer, and package evidence.
+
+## Cadoryx H2-B2: exact Boolean topology-history companion
+
+Manual composition export `occtsharp_boolean_topology_history` extends the accepted
+ADR-0088 copied-input/FeatureResult boundary. It reuses existing generated OCCT
+bindings without changing their IDs; generated binding delta is zero. One added
+manual C ABI entry composes BRepAlgoAPI_Fuse/Cut/Common with LocalFeatures::InputGraph
+and History, preserving each source full-map index and the final result-map index.
+No native builder, iterator or registry category escapes. Both input groups are
+nonempty, inputs are bounded to 256, and algorithms run non-destructively without
+parallel mutation. Missing final membership remains explicit. The existing feature
+API is unchanged. Validation status is recorded in BOOLEAN_TOPOLOGY_HISTORY.md.

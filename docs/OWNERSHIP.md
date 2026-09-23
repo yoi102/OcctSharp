@@ -797,3 +797,12 @@ Managed non-ASCII path staging owns unique temporary files, promotes output only
 successful native completion, and cleans success/failure/exception paths. No temporary
 path or file owner escapes to callers. The WPF host owns the imported XDE document and
 viewer-parent-bound presentations exactly as it does for STEP.
+
+## Boolean topology-history companion
+
+BooleanHistoryModeling holds SafeHandle references to every RepairSnapshot input
+while native InputGraph copies the entire graph. Builders and history iterators
+remain call-local. Existing FeatureResult and Shape owners publish the result and
+history shapes; input disposal after Build cannot invalidate outputs. History
+result indices refer to the exact final graph, with final traversal orientation.
+There is no new registry or borrowed pointer; existing release paths are reused.

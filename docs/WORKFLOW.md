@@ -7,11 +7,12 @@ size, commit frequency or a new execution queue on future requests.
 
 ## Recover only relevant context
 
-Start with AGENTS.md, STATUS and this policy. For a material implementation change,
-read the relevant architecture section, topic contract and ADRs; consult ROADMAP when
-choosing or changing priorities and DECISIONS when changing a design boundary. Reuse
-context already read in the current session. A spelling fix does not require reading
-every ownership, packaging and historical batch document.
+Use the task-specific reading routes in AGENTS.md. Read STATUS when resuming work or
+establishing the current scope or baseline, and this policy when execution, validation
+or completion rules need clarification. Read architecture, topic contracts and accepted
+ADRs for the behavior or boundary being changed; consult ROADMAP for priority choices
+and DECISIONS for design-boundary changes. Reuse context already read unless relevant
+facts have changed. Local fixes need only their affected context.
 
 ## Choose a useful scope
 
@@ -23,7 +24,8 @@ every ownership, packaging and historical batch document.
 - Preserve accepted scope and report added, deferred or blocked outcomes explicitly.
   Routine dependency discoveries and implementation choices within the user's request
   need no repeated confirmation. Material changes to requested outcomes need direction;
-  an elapsed deadline or a failed test is not permission to discard a requirement.
+  pause only work that depends on that decision and continue independent, already
+  authorized work. An elapsed deadline or a failed test is not permission to discard a requirement.
 - For a new binding scope, record its baseline and exact stable-ID delta. Reuse an
   unchanged, hash-identified inventory during development. Refresh full inventory when
   parser/configuration/classification/SDK inputs change and at binding delivery; do not
@@ -62,6 +64,13 @@ local release check. Required failures or NOT RUN gates keep that delivery incom
 Intermediate commits and documentation/tooling-only maintenance are not product releases.
 The existing full build/release scripts keep their checks; this policy changes when
 they are invoked, not their success criteria.
+
+Prefer the unified release entry point for delivery. Checks it already runs satisfy
+the corresponding requirements; do not separately repeat successful checks while their
+relevant inputs and evidence remain unchanged. This does not remove checks inside the
+scripts or merge distinct purposes such as clean regeneration, actual Debug-native
+runtime and lifetime/concurrency validation. Run required checks not covered by the
+entry point separately.
 
 Use repeated stress runs for concurrency, disposal, intermittent native failures and
 driver instability when evidence warrants them. There is no universal ten-repeat quota;

@@ -1,7 +1,14 @@
 # Current Status
 
-- Last updated: 2026-09-12.
-- Current work: [Batch AC](BATCH_AC_OWNED_UTILITY_EXPANSION.md). Implementation and
+- Last updated: 2026-09-23.
+- Instruction maintenance: AGENTS and WORKFLOW now route reading by task, distinguish
+  historical checklists, avoid extra duplicate verification and pause only work dependent
+  on a required scope decision. See the [ADR-0091 clarification](adr/0091-proportionate-development-workflow.md#clarification-2026-09-17).
+  Documentation QA passed (205 documents, 497 local links and paired fences), as did
+  whitespace checks for this change. Product builds/tests/repacking: NOT RUN for this
+  documentation-only maintenance; existing package evidence remains tied to its baseline.
+- Development follow-up: [Cadoryx Boolean topology history](BOOLEAN_TOPOLOGY_HISTORY.md), Release/Debug native and affected managed builds, 6/6 focused tests per actual native configuration (including multi-argument history), C11/exports and 62-DLL identity checks passed. The 2026-09-23 focused rerun confirmed test-output bridge hashes match the local Release/Debug builds; the default bundled Preview.28 runtime lacks this new export and must not be used for these source-tree tests. Fourteen local .2 packages, native payload/lock hashes, an isolated direct-module NuGet consumer and Cadoryx 306 tests passed before this test-only addition. Cadoryx owns the final desktop evidence in its ROADMAP; full upstream release gates are NOT RUN. The following Batch AC delivery describes the unchanged Preview.28 baseline.
+- Baseline work: [Batch AC](BATCH_AC_OWNED_UTILITY_EXPANSION.md). Implementation and
   Release/Debug tests pass; local delivery checks are complete. Public-release
   readiness remains false because hosted CI, signing and publication are not run,
   and 32 SDK headers remain explicit Clang parse exclusions.

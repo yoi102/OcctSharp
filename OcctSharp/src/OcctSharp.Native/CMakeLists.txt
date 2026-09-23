@@ -22,6 +22,7 @@ set(OCCTSHARP_MANUAL_NATIVE_SOURCES
   src/Modeling/RegionInspection.cpp
   src/Modeling/VolumeConstruction.cpp
   src/Modeling/LocalFeatureData.cpp
+  src/Modeling/BooleanTopologyHistory.cpp
   src/Modeling/ContourFinishing.cpp
   src/Modeling/ChamferContours.cpp
   src/Modeling/LocalDraft.cpp

@@ -11,11 +11,11 @@
 > 已接受 ADR 及 `docs/STATUS.md` 为准。本文件中把 `src/`、`tests/`、`reports/`
 > 放在仓库根目录的旧目录示例已由 `docs/REPOSITORY_LAYOUT.md` 取代。
 >
-> 本文件用于约束所有参与本项目的 AI Agent（如 ChatGPT、Codex、Claude Code、Devin 等）。
+> 本文件保留参与本项目的 AI Agent 曾使用的历史规则，不作为当前执行指令。
 >
 > 目标：构建一个可维护、可升级、可验证的 **Open CASCADE Technology（OCCT）C#/.NET 自动封装生成器与运行时封装库**。
 >
-> 本文件优先级高于 AI 自行推测的实现偏好。除非用户明确要求，否则不得违反本文件中的规则。
+> 以下为历史规则，当前执行政策以 `WORKFLOW.md` 为准；技术约束以当前专题文档和已接受 ADR 为准。
 
 ---
 
@@ -1268,7 +1268,7 @@ Managed Wrapper
 
 ---
 
-# 32. AI 每次任务开始前必须执行的检查
+# 32. 历史任务开始检查（已被 ADR-0091 取代）
 
 开始修改前：
 
@@ -1287,7 +1287,7 @@ Managed Wrapper
 
 ---
 
-# 33. AI 每次任务结束前必须执行的检查
+# 33. 历史任务结束检查（已被 ADR-0091 取代）
 
 完成修改后：
 

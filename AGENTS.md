@@ -2,17 +2,18 @@
 
 These instructions apply to the entire repository.
 
-## Required reading
+## Read context by task
 
-Before making a material change, read:
+Read only the context needed for the requested change:
 
-1. `docs/STATUS.md` and `docs/WORKFLOW.md`
-2. The relevant sections of `docs/ARCHITECTURE.md` and the topic contract
-3. Relevant ADRs; consult `docs/DECISIONS.md` when changing a design boundary
-4. `docs/ROADMAP.md` when selecting or changing priorities
+- `docs/STATUS.md` when resuming work or establishing the current scope or baseline.
+- `docs/WORKFLOW.md` when execution, validation or completion policy needs clarification.
+- Relevant architecture sections, topic contracts and accepted ADRs when changing the
+  behavior or boundary they govern; consult `docs/DECISIONS.md` for a design-boundary change.
+- `docs/ROADMAP.md` when selecting or changing priorities.
 
-Reuse context already read in the current session. Trivial documentation fixes need
-only the affected context. ADR-0091 and WORKFLOW define current execution policy:
+Reuse context already read in the current session unless relevant facts have changed.
+Local fixes need only their affected context. ADR-0091 and WORKFLOW define current execution policy:
 future work has no fixed capability count, authorized intermediate commits are allowed,
 and validation is selected by impact with full product-delivery gates retained.
 

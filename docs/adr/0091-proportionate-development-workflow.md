@@ -48,6 +48,15 @@ New ownership/ABI categories and architecture boundaries still require design re
 Generated/manual separation, native lifetime and exception safety, single-DLL ownership,
 honest classification, and separate publication authority remain unchanged.
 
+## Clarification: 2026-09-17
+
+Following the user-approved instruction audit, route reading by the requested task
+instead of a universal startup list, and label retired checklists as historical.
+Successful checks inside the unified release entry point need no additional duplicate
+invocation while their relevant inputs and evidence remain unchanged; all existing gates
+remain required. A necessary scope decision pauses only dependent work, while independent
+authorized work continues. Completion, native safety and external-action boundaries are unchanged.
+
 ## Alternatives considered
 
 - Delete safety and runtime gates: rejected because native failures can corrupt memory.

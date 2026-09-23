@@ -101,6 +101,13 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_rib_slot(
   const OcctSharp_RibSlotOptions* options, OcctSharp_FeatureResultHandle** output);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_local_hole(
   const OcctSharp_ShapeHandle* source, const OcctSharp_LocalHoleOptions* options, OcctSharp_FeatureResultHandle** output);
+/* One private graph copy and one Boolean build. Input slots retain each original
+   full-map order; result slots are in the final returned topology. Operation 0/1/2
+   means Fuse/Cut/Common. Both argument and tool groups must be nonempty. */
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_boolean_topology_history(
+  const OcctSharp_ShapeHandle* const* inputs, int32_t count, int32_t argument_count,
+  int32_t operation, OcctSharp_FeatureResultHandle** output);
+
 /* All-zero null buffers query counts. Otherwise every capacity is checked before
    any array is written, including arrays whose corresponding count is zero. */
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_local_feature_snapshot(

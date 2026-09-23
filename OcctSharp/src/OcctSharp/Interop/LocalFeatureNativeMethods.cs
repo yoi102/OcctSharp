@@ -92,6 +92,11 @@ internal struct LocalHoleOptionsRaw
 
 internal static partial class NativeMethods
 {
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_boolean_topology_history")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus BooleanTopologyHistory(nint* inputs, int count,
+        int argumentCount, int operation, out nint result);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_local_feature_source_subshape")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus LocalFeatureSourceSubshape(ShapeHandle source, int index, out nint result);
