@@ -5,21 +5,14 @@ versioned native C ABI, generated low-level bindings, and friendly managed CAD A
 modeling, STEP/IGES/STL exchange, XDE assemblies and metadata, meshing, inspection, and
 Windows visualization.
 
-Current version: `8.0.1-preview.85` for Windows x64, ABI1.118 / bridge0.133.0.
-[STATUS](docs/STATUS.md) records validation, publication and downstream acceptance.
-The NuGet graph
-contains 12 managed modules, the `OcctSharp` facade, and one shared
-`OcctSharp.Native.win-x64` precompiled-provider package with62 DLLs in the application's `occt/`
-directory. No machine-wide OCCT installation or PATH change is required.
+**Published version:** `8.0.1-preview.85` for .NET 10 / Windows x64,
+ABI1.118 / bridge0.133.0. All 14 packages are available on nuget.org.
+See [Preview.85 delivery](docs/PREVIEW85_DELIVERY.md) for validation and publication
+evidence, and [current status](docs/STATUS.md) for ongoing work.
 
-[Preview.85 admission](docs/CADORYX_PUBLIC_PREVIEW85_PLAN.md) adds owned authoring
-copies and history domains, defeature history, initial display modes, exact STEP
-offset graphs and periodic distance prerequisites. These reusable support rules
-are generator-owned; support-file counts do not grant raw declaration credit.
-Declaration migration coverage and product completion are separate; external
-CAD, hosted CI, signing and public publication have their own acceptance gates.
+## Install and get started
 
-## Install
+In a .NET 10 project on Windows x64, install the facade to access the managed SDK:
 
 ```powershell
 dotnet add package OcctSharp --version 8.0.1-preview.85 --source https://api.nuget.org/v3/index.json
@@ -31,27 +24,84 @@ A narrow consumer can reference a module directly, for example:
 dotnet add package OcctSharp.Modeling --version 8.0.1-preview.85 --source https://api.nuget.org/v3/index.json
 ```
 
-The supported runtime baseline is .NET 10, Windows x64, and OCCT 8.0.1.
-Confirm version availability from the publication receipt linked in STATUS. Create the
-local package feed with `OcctSharp/eng/pack.ps1` using the contributor toolchain and
-select `./OcctSharp/artifacts/packages` as the source, or run
-the repository samples directly with the committed runtime.
+The packages bring in the shared native runtime transitively and copy its 62 DLLs
+to the application's `occt/` directory. No machine-wide OCCT installation, PATH
+change, or vcpkg setup is required for applications, including Cadoryx.
 
-For a fixed source dependency toolchain, see [pinned vcpkg recovery](docs/DEPENDENCY_RECOVERY.md).
-This is for contributors rebuilding OcctSharp itself. Cadoryx and other NuGet
-consumers receive the native DLLs through their packages and require no vcpkg.
-From the inner `OcctSharp/` directory:
+For a new console project:
 
 ```powershell
-./eng/restore-dependencies.ps1 -RequireEmpty -NoBinaryCache
-./eng/build-vcpkg.ps1 -InstallRoot ./artifacts/dependencies/vcpkg-installed
+dotnet new console --name OcctSharpDemo --framework net10.0
+cd OcctSharpDemo
+dotnet add package OcctSharp --version 8.0.1-preview.85 --source https://api.nuget.org/v3/index.json
 ```
 
-This independent provider has configuration-specific runtime manifests and its
-own runtime/license qualification. The published precompiled payload retains
-its separately validated62-DLL manifest.
+Replace `Program.cs` with the [solid creation example](#create-a-solid) below and
+run `dotnet run`. Native resources such as `Shape` own disposable handles; use
+`using` to release them.
 
-## Configure review lighting and capture copied frames
+## Packages and runtime
+
+Keep OcctSharp package references on the same version.
+
+| Package group | Purpose |
+|---|---|
+| `OcctSharp` | Facade exposing the managed modules through one reference. |
+| `OcctSharp.Runtime`, `OcctSharp.Foundation`, `OcctSharp.Geometry`, `OcctSharp.MeshData` | Runtime infrastructure and foundational geometry/mesh data. |
+| `OcctSharp.Modeling`, `OcctSharp.Mesh`, `OcctSharp.Documents` | Modeling, meshing and document APIs. |
+| `OcctSharp.Visualization`, `OcctSharp.DataExchange`, `OcctSharp.Xde`, `OcctSharp.IVtk`, `OcctSharp.Draw` | Visualization, exchange, XDE and optional toolkit bindings; individual capability limits still apply. |
+| `OcctSharp.Native.win-x64` | Shared Windows x64 native bridge and OCCT runtime distribution. |
+
+`OcctSharp.Native.win-x64` remains supported and is not deprecated. The published
+Preview.85 package uses the qualified precompiled 62-DLL provider. The contributor
+vcpkg build route has a separate dependency manifest and does not replace this
+published payload or the application's native package dependency.
+
+## Preview.85 delivery and coverage
+
+Preview.85 adds owned authoring copies and history domains, defeature history,
+initial display modes, exact STEP offset graphs and periodic distance prerequisites.
+Reusable support rules are generated; manual binding exceptions are recorded in
+[SPECIAL_CASES](docs/SPECIAL_CASES.md). See the [admission scope](docs/CADORYX_PUBLIC_PREVIEW85_PLAN.md)
+for these additions and the [final delivery](docs/PREVIEW85_DELIVERY.md) for results.
+
+| Validation | Preview.85 result |
+|---|---|
+| Complete Release and Debug suites | Generator 410/410 and Runtime 2255/2255 in each configuration. |
+| Cold regeneration | 399 exact generated outputs, with build and full suites passing. |
+| Published packages | 14/14 remote payloads, catalog hashes and NuGet repository signatures verified. |
+| Fresh public consumers | Facade and direct-module projects restored, compiled and ran using only nuget.org with SDK 10.0.401; both contain the exact 62-DLL runtime. |
+| Author signing and hosted CI | NOT RUN. Repository signature verification is a separate completed check. |
+
+Declaration support covers **28,618 / 66,959 non-Skipped declarations (42.7396%)**.
+The full inventory contains 116,366 declarations: 28,020 Emitted, 598 Manual,
+38,341 Blocked, 49,407 Skipped and 0 Pending. Pending 0 means classification is
+complete; whole-OCCT migration remains incomplete. Generated output counts do not
+measure usable CAD capability coverage. See the [module accounting](docs/PROGRESS_PREVIEW_83.md).
+
+External CAD interoperability, physical GPU/display/input checks, mixed-DPI/RDP
+and human application acceptance remain separate gates. SDK publication does not
+complete Cadoryx's application acceptance. Published packages are immutable;
+later source and README updates are not included retroactively.
+
+## API examples
+
+The examples use the `OcctSharp` namespace and the facade package. Viewer examples
+also require an existing live viewer on its creating UI thread.
+
+### Create a solid
+
+```csharp
+using OcctSharp;
+
+using Shape box = ShapeFactory.CreateBox(40, 30, 20);
+using Shape cylinder = ShapeFactory.CreateCylinder(6, 20);
+
+Console.WriteLine($"Box faces: {box.FaceCount}");
+Console.WriteLine($"Cylinder faces: {cylinder.FaceCount}");
+```
+
+### Configure review lighting and capture copied frames
 
 With an existing live `OcctViewer viewer` on its creating UI thread:
 
@@ -80,19 +130,7 @@ See [W review/capture contracts](docs/RELEASE_NOTES_8.0.1_PREVIEW_22.md) and the
 Captures still require a live HWND/OpenGL context. PBR/IBL and advanced quality modes
 are capability-checked; copied frames do not provide live D3DImage compositing.
 
-## Create a solid
-
-```csharp
-using OcctSharp;
-
-using Shape box = ShapeFactory.CreateBox(40, 30, 20);
-using Shape cylinder = ShapeFactory.CreateCylinder(6, 20);
-
-Console.WriteLine($"Box faces: {box.FaceCount}");
-Console.WriteLine($"Cylinder faces: {cylinder.FaceCount}");
-```
-
-## Partition exact material regions
+### Partition exact material regions
 
 ```csharp
 using var left = ShapeFactory.CreateBox(10, 10, 10);
@@ -109,7 +147,7 @@ Cell and interface IDs belong to one result revision. See the
 [Batch V matrix](docs/BATCH_V_PARTITION_VOLUME_GAP_INVENTORY.md) for bounded volumes,
 point selection, atomic parametric outputs, XDE products and STEP/IGES format limits.
 
-## Apply a source-bound variable-radius fillet
+### Apply a source-bound variable-radius fillet
 
 ```csharp
 using OcctSharp;
@@ -131,7 +169,7 @@ limits. Partial fillets are diagnostics, never accepted fallback geometry. Radiu
 interpolation and pinned SDK limiter limitations are disclosed in
 [Preview.20 notes](docs/RELEASE_NOTES_8.0.1_PREVIEW_20.md).
 
-## Recompute a persisted parametric feature
+### Recompute a persisted parametric feature
 
 ```csharp
 using OcctSharp;
@@ -157,7 +195,7 @@ repair, guided sweep/fill and mesh recipes. Failed runs retain explicitly stale 
 results; persistent selections can report unsupported or ambiguous topology changes.
 See [Preview.19 notes](docs/RELEASE_NOTES_8.0.1_PREVIEW_19.md) for ownership and format limits.
 
-## Build a 2D sketch with a hole and extrude it
+### Build a 2D sketch with a hole and extrude it
 
 ```csharp
 using OcctSharp;
@@ -182,7 +220,7 @@ Bezier and B-spline definitions support rational weights; `Interpolate` creates 
 degree-one, piecewise-linear B-spline. Wire/face/feature results are independent
 `IDisposable` shapes. The API does not include a parametric constraint solver.
 
-## Work on a curved surface in UV space
+### Work on a curved surface in UV space
 
 ```csharp
 using OcctSharp;
@@ -208,7 +246,7 @@ distance. Definitions and reports are copied; returned shapes and repair/split r
 containers must be disposed. See the [32-capability Batch P scope](docs/BATCH_P_SURFACE_UV_CURVE_GAP_INVENTORY.md)
 and [Preview.15 notes](docs/RELEASE_NOTES_8.0.1_PREVIEW_15.md).
 
-## Inspect and preview a bounded repair
+### Inspect and preview a bounded repair
 
 ```csharp
 using OcctSharp;
@@ -243,7 +281,7 @@ shared XDE definition transactionally only when metadata mapping is unambiguous;
 See [Batch Q's 40 capabilities](docs/BATCH_Q_SHAPE_REPAIR_TOPOLOGY_GAP_INVENTORY.md)
 and [Preview.16 notes](docs/RELEASE_NOTES_8.0.1_PREVIEW_16.md).
 
-## Author, edit and deliver a mesh
+### Author, edit and deliver a mesh
 
 ```csharp
 using OcctSharp;
@@ -274,7 +312,7 @@ Discrete shapes are not exact CAD solids and cannot be exported as exact STEP/IG
 See [Batch R's 40 capabilities](docs/BATCH_R_MESH_AUTHORING_EDITING_GAP_INVENTORY.md)
 and [Preview.17 notes](docs/RELEASE_NOTES_8.0.1_PREVIEW_17.md).
 
-## Preview and build a law-scaled guided sweep
+### Preview and build a law-scaled guided sweep
 
 ```csharp
 using OcctSharp;
@@ -302,7 +340,7 @@ laws; keep-contact has a C0 limit. Recipes persist in BinXCAF, not generic STEP/
 See [Batch S's 40 capabilities](docs/BATCH_S_GUIDED_SWEEP_CONSTRAINED_SURFACE_GAP_INVENTORY.md)
 and [Preview.18 notes](docs/RELEASE_NOTES_8.0.1_PREVIEW_18.md).
 
-## Read ordinary STEP geometry
+### Read ordinary STEP geometry
 
 Use the geometry-only API when product structure and presentation metadata are not
 needed:
@@ -314,7 +352,7 @@ using Shape shape = ShapeExchange.ReadStep("part.step");
 Console.WriteLine($"Imported faces: {shape.FaceCount}");
 ```
 
-## Read STEP/XDE colors and subshape styles
+### Read STEP/XDE colors and subshape styles
 
 Use `XdeDocument` for assemblies, names, layers, colors, materials, visibility, and
 location-aware face/subshape presentation styles:
@@ -348,7 +386,7 @@ foreach (XdeLabel root in document.GetFreeShapes())
 material, alpha, and visibility styles to one `AIS_ColoredShape` presentation. Viewer
 objects are UI-thread-affine and require a native child-window handle.
 
-## Read or write metadata-aware IGES
+### Read or write metadata-aware IGES
 
 Use the XDE-centered exchange API for IGES names, colors, layers, visibility, diagnostics,
 and Unicode Windows paths. The format-neutral methods route STEP or IGES by extension:
@@ -378,8 +416,8 @@ SDK or native build toolchain.
 
 | Sample | Description | Detailed guide |
 |---|---|---|
-| `OcctSharp.Samples` | Interactive console menu covering solid creation, STEP/STL/IGES export, transformed XDE STEP assemblies, a native viewer window, and a complete BREP/topology/mesh/XDE workflow. It also provides the non-interactive `--smoke` clone/runtime check. | [Console sample README](https://github.com/yoi102/OcctSharp/blob/main/OcctSharp/samples/OcctSharp.Samples/README.md) |
-| `OcctSharpViewer.Wpf` | `CommunityToolkit.Mvvm` WPF viewer for STEP/STP and IGES/IGS with XDE presentation colors, standard views, shaded/wireframe display, selection, rotation, pan, and zoom. | [WPF viewer README](https://github.com/yoi102/OcctSharp/blob/main/OcctSharp/samples/OcctSharpViewer.Wpf/README.md) |
+| `OcctSharp.Samples` | Interactive console menu covering solid creation, STEP/STL/IGES export, transformed XDE STEP assemblies, a native viewer window, and a complete BREP/topology/mesh/XDE workflow. It also provides the non-interactive `--smoke` clone/runtime check. | [Console sample README](OcctSharp/samples/OcctSharp.Samples/README.md) |
+| `OcctSharpViewer.Wpf` | `CommunityToolkit.Mvvm` WPF viewer for STEP/STP and IGES/IGS with XDE presentation colors, standard views, shaded/wireframe display, selection, rotation, pan, and zoom. | [WPF viewer README](OcctSharp/samples/OcctSharpViewer.Wpf/README.md) |
 
 https://github.com/user-attachments/assets/2f3e5b9b-bc01-4aeb-b36e-64ade2463fe4
 
@@ -403,7 +441,7 @@ controls, STEP color behavior, and troubleshooting.
 
 ## Clone and run without an OCCT SDK
 
-On Windows x64 with .NET SDK 10.0.400:
+On Windows x64 with .NET SDK 10.0.400 or a later 10.0.4xx patch:
 
 ```powershell
 git clone https://github.com/yoi102/OcctSharp.git
@@ -414,11 +452,35 @@ dotnet run --project .\samples\OcctSharp.Samples -- --smoke
 The committed, SHA256-pinned Release runtime is copied automatically. Building the
 native bridge or regenerating bindings still requires the documented MSVC/OCCT contributor
 toolchain.
+The workspace's `global.json` selects the 10.0.400 feature band with patch roll-forward;
+public consumer validation used SDK 10.0.401.
+
+## Contributor builds
+
+Contributors rebuilding the native bridge can use the
+[pinned vcpkg source recovery](docs/DEPENDENCY_RECOVERY.md) route with .NET 10 and
+Visual Studio 2026 C++ tools. From the inner `OcctSharp/` workspace:
+
+```powershell
+./eng/restore-dependencies.ps1 -RequireEmpty -NoBinaryCache
+./eng/build-vcpkg.ps1 -InstallRoot ./artifacts/dependencies/vcpkg-installed
+```
+
+`-RequireEmpty` requires a new installation prefix. Follow the recovery guide for
+Debug builds, runtime qualification and license/provenance checks. This independent
+provider passed source recovery, exact regeneration and both Runtime suites; its
+84-DLL runtime per configuration has its own manifests and licenses.
+
+For the precompiled-provider build route and local package creation, follow
+[build/release instructions](docs/BUILD_AND_RELEASE.md) and
+[NuGet packaging](docs/NUGET_PACKAGING.md). `OcctSharp/eng/pack.ps1` produces the
+local feed under `OcctSharp/artifacts/packages`. A successful build alone does not
+establish runtime validation or publication.
 
 ## License and third-party runtime terms
 
 The OcctSharp project code, generated bindings, and repository-built
-`OcctSharp.Native.dll` are licensed under the [MIT License](https://github.com/yoi102/OcctSharp/blob/main/LICENSE).
+`OcctSharp.Native.dll` are licensed under the [MIT License](LICENSE).
 The NuGet packages therefore declare `MIT` for the OcctSharp-owned package content.
 
 That MIT declaration does **not** relicense OCCT or the other native libraries bundled in
@@ -428,9 +490,9 @@ FreeType, OpenVR, FFmpeg, and jemalloc retain their respective upstream terms.
 
 Before redistributing the native package or an application that ships its `occt/`
 directory, review the complete
-[third-party runtime notice](https://github.com/yoi102/OcctSharp/blob/main/OcctSharp/runtime/win-x64/THIRD_PARTY_NOTICES.md)
+[third-party runtime notice](OcctSharp/runtime/win-x64/THIRD_PARTY_NOTICES.md)
 and the accompanying
-[license texts](https://github.com/yoi102/OcctSharp/tree/main/OcctSharp/runtime/win-x64/licenses).
+[license texts](OcctSharp/runtime/win-x64/licenses).
 Those files are included in `OcctSharp.Native.win-x64` under its `licenses/` directory.
 
 ## Project structure and status
@@ -441,6 +503,11 @@ Those files are included in `OcctSharp.Native.win-x64` under its `licenses/` dir
 - Project code is MIT licensed; bundled native components remain governed by the terms
   summarized above.
 
-See [documentation](docs/DOCUMENTATION_INDEX.md), [current status](docs/STATUS.md),
-[samples](docs/SAMPLES.md), [NuGet packaging](docs/NUGET_PACKAGING.md), and
-[build/release instructions](docs/BUILD_AND_RELEASE.md).
+| Guide | Contents |
+|---|---|
+| [Documentation index](docs/DOCUMENTATION_INDEX.md) | Architecture and API topic guides. |
+| [Current status](docs/STATUS.md) and [roadmap](docs/ROADMAP.md) | Current delivery boundaries and future priorities. |
+| [Preview.85 delivery](docs/PREVIEW85_DELIVERY.md) | Published package identities and validation results. |
+| [Samples](docs/SAMPLES.md) | Runnable application workflows. |
+| [NuGet packaging](docs/NUGET_PACKAGING.md) and [build/release instructions](docs/BUILD_AND_RELEASE.md) | Contributor packaging and release procedures. |
+| [Pinned dependency recovery](docs/DEPENDENCY_RECOVERY.md) | Independent vcpkg contributor toolchain. |
