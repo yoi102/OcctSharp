@@ -1,0 +1,108 @@
+using OcctSharp.Interop;
+
+namespace OcctSharp;
+
+#pragma warning disable CS1591
+[Flags]
+public enum AuthoringInputCopyIssue
+{
+    None = 0, MissingTarget = 1, TargetOutsideArgument = 2, KindMismatch = 4,
+    OriginalIdentityReused = 8, MultipleSourceArguments = 16, MultipleTargetArguments = 32
+}
+public readonly record struct AuthoringInputCopyArgument(int ArgumentIndex, int SourceTopologyCount,
+    int TargetTopologyCount, ShapeKind SourceRootKind, ShapeKind TargetRootKind);
+public readonly record struct AuthoringInputCopyRow(int ArgumentIndex, int SourceTopologyIndex,
+    ShapeKind SourceKind, int TargetTopologyIndex, ShapeKind? TargetKind,
+    int SourceArgumentMemberships, int TargetArgumentMemberships, AuthoringInputCopyIssue Issues)
+{
+    public bool HasUniqueArgumentMapping => Issues == AuthoringInputCopyIssue.None;
+}
+
+/// <summary>Actual native ModifiedShape correspondences, checked against each copied root by
+/// native identity. Indices address distinct domains. TopExp maps ignore orientation and collapse
+/// shared internal occurrences; this report does not prove occurrence paths or final-result identity.</summary>
+public sealed class AuthoringInputCopyReport
+{
+    internal AuthoringInputCopyReport(Guid sourceDomainId, AuthoringInputCopyArgument[] arguments,
+        AuthoringInputCopyRow[] rows)
+    {
+        SourceDomainId = sourceDomainId; TargetDomainId = Guid.NewGuid();
+        Arguments = Array.AsReadOnly(arguments); Rows = Array.AsReadOnly(rows);
+    }
+    public int SchemaVersion { get; } = 1;
+    public Guid SourceDomainId { get; }
+    public Guid TargetDomainId { get; }
+    public IReadOnlyList<AuthoringInputCopyArgument> Arguments { get; }
+    public IReadOnlyList<AuthoringInputCopyRow> Rows { get; }
+    public bool ProvesCompleteOccurrencePaths { get; }
+    public bool ProvesHistorySourceAddresses { get; }
+    public bool ProvesFinalResultIdentity { get; }
+}
+
+/// <summary>Owns one actual independent copy of a complete input graph and its value report.</summary>
+public sealed class AuthoringInputCopy : IDisposable
+{
+    private readonly Shape[] inputs;
+    private AuthoringInputCopy(Shape[] inputs, AuthoringInputCopyReport report)
+    { this.inputs = inputs; Inputs = Array.AsReadOnly(inputs); Report = report; }
+    public IReadOnlyList<Shape> Inputs { get; }
+    public AuthoringInputCopyReport Report { get; }
+    public static AuthoringInputCopy Create(IEnumerable<Shape> inputs)
+    {
+        ConsumerAuthoringRuntime.Require();
+        Shape[] source = ScalarLawDefinition.Copy(inputs, 512);
+        Shape[] copied = AuthoringBridge.CopyInputs(source, out AuthoringInputCopyReport report);
+        return new(copied, report);
+    }
+    public void Dispose() { foreach (Shape input in inputs) input.Dispose(); }
+}
+
+internal static class AuthoringInputCopyReader
+{
+    internal static AuthoringInputCopyReport? Read(FeatureResultHandle result, Guid sourceDomainId)
+    {
+        NativeError.ThrowIfFailed(NativeMethods.AuthoringCopyReportInfo(result, out AuthoringCopyInfoRaw info), "authoring_copy_report_info");
+        if (info.SchemaVersion == 0 && info.ArgumentCount == 0 && info.RowCount == 0 && info.Reserved == 0) return null;
+        if (info.SchemaVersion != 1 || info.Reserved != 0 || info.ArgumentCount is < 1 or > 512 || info.RowCount is < 1 or > 1000000)
+            throw new InvalidOperationException("Native input-copy report exceeds its versioned bounded contract.");
+        AuthoringInputCopyArgument[] arguments = new AuthoringInputCopyArgument[info.ArgumentCount];
+        int total = 0;
+        for (int i = 0; i < arguments.Length; i++)
+        {
+            NativeError.ThrowIfFailed(NativeMethods.AuthoringCopyReportArgument(result, i, out AuthoringCopyArgumentRaw arg), "authoring_copy_report_argument");
+            if (arg.SourceCount is < 1 or > 1000000 || arg.TargetCount is < 1 or > 1000000 ||
+                !Enum.IsDefined((ShapeKind)arg.SourceRootKind) || !Enum.IsDefined((ShapeKind)arg.TargetRootKind))
+                throw new InvalidOperationException("Native input-copy argument domain is invalid.");
+            total = checked(total + arg.SourceCount);
+            if (total > info.RowCount) throw new InvalidOperationException("Native input-copy argument coverage is invalid.");
+            arguments[i] = new(i, arg.SourceCount, arg.TargetCount, (ShapeKind)arg.SourceRootKind, (ShapeKind)arg.TargetRootKind);
+        }
+        if (total != info.RowCount) throw new InvalidOperationException("Native input-copy report has incomplete source coverage.");
+        AuthoringInputCopyRow[] rows = new AuthoringInputCopyRow[info.RowCount];
+        int argument = 0, sourceIndex = 0;
+        for (int i = 0; i < rows.Length; i++)
+        {
+            NativeError.ThrowIfFailed(NativeMethods.AuthoringCopyReportRow(result, i, out AuthoringCopyRowRaw row), "authoring_copy_report_row");
+            if (row.ArgumentIndex != argument || row.SourceIndex != sourceIndex || !Enum.IsDefined((ShapeKind)row.SourceKind) ||
+                row.TargetIndex < -1 || row.TargetIndex >= arguments[argument].TargetTopologyCount ||
+                row.TargetKind < -1 || (row.TargetKind >= 0 && !Enum.IsDefined((ShapeKind)row.TargetKind)) ||
+                row.SourceMemberships is < 1 || row.SourceMemberships > info.ArgumentCount ||
+                row.TargetMemberships is < 0 || row.TargetMemberships > info.ArgumentCount || (row.Issues & ~63) != 0)
+                throw new InvalidOperationException("Native input-copy row has invalid domain addresses.");
+            var issues = (AuthoringInputCopyIssue)row.Issues;
+            bool missing = issues.HasFlag(AuthoringInputCopyIssue.MissingTarget);
+            bool outside = issues.HasFlag(AuthoringInputCopyIssue.TargetOutsideArgument);
+            if (missing != (row.TargetKind == -1) || (row.TargetIndex == -1) != (missing || outside) ||
+                (!missing && issues.HasFlag(AuthoringInputCopyIssue.KindMismatch) != (row.SourceKind != row.TargetKind)) ||
+                issues.HasFlag(AuthoringInputCopyIssue.MultipleSourceArguments) != (row.SourceMemberships > 1) ||
+                issues.HasFlag(AuthoringInputCopyIssue.MultipleTargetArguments) != (row.TargetMemberships > 1) ||
+                (missing && row.TargetMemberships != 0) || (!missing && !outside && row.TargetMemberships == 0))
+                throw new InvalidOperationException("Native input-copy row diagnostics contradict its addresses.");
+            rows[i] = new(argument, sourceIndex, (ShapeKind)row.SourceKind, row.TargetIndex,
+                row.TargetKind >= 0 ? (ShapeKind)row.TargetKind : null, row.SourceMemberships, row.TargetMemberships, issues);
+            if (++sourceIndex == arguments[argument].SourceTopologyCount) { argument++; sourceIndex = 0; }
+        }
+        return new(sourceDomainId, arguments, rows);
+    }
+}
+#pragma warning restore CS1591

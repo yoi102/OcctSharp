@@ -15,10 +15,13 @@ struct OcctSharp_FeatureHistoryEntry
   TopoDS_Shape Shape;
   int32_t SubshapeIndex = -1;
   int32_t SourceKind = -1;
+  TopoDS_Shape AuthoringSource;
 };
 
 struct OcctSharp_LocalFeatureData;
 struct OcctSharp_RegionData;
+struct OcctSharp_AuthoringCopyData;
+struct OcctSharp_AuthoringHistoryDomainData;
 struct OcctSharp_SerializedReferenceData;
 struct OcctSharp_SerializedOccurrenceData;
 
@@ -32,6 +35,8 @@ struct OcctSharp_FeatureResultHandle
   // Optional copied diagnostics owned by this existing result, never a builder or registry.
   std::shared_ptr<OcctSharp_LocalFeatureData> LocalFeature;
   std::shared_ptr<OcctSharp_RegionData> Regions;
+  std::shared_ptr<OcctSharp_AuthoringCopyData> AuthoringCopy;
+  std::shared_ptr<OcctSharp_AuthoringHistoryDomainData> AuthoringDomains;
   // Independent bounded decoded graphs live inside the existing result owner.
   std::shared_ptr<OcctSharp_SerializedReferenceData> SerializedReferences;
   std::shared_ptr<OcctSharp_SerializedOccurrenceData> SerializedOccurrences;

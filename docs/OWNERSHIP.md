@@ -1502,3 +1502,19 @@ marks only SDK presentation loss. Existing facade and Modeling interop owners re
 Test-only context-slot instrumentation restores parked context only for teardown;
 recovery creates a fresh production host with retained owned model/asset copies.
 No graphics/context pointer is exposed by the public product.
+
+## Preview85 copy/history and exact STEP ownership
+
+See [ADR-0140](adr/0140-public-consumer-copy-history-and-exact-exchange.md).
+AuthoringInputCopy owns copied Shapes; reports contain immutable values and
+independent source/copy/final domain IDs. Existing FeatureResult owns native
+report payloads and actual history source shapes until managed copies are read.
+TopExp maps collapse orientation/shared occurrences; ambiguous membership stays
+explicit and does not authorize an inferred occurrence or reference rebind.
+Defeature retains RepairSnapshot source-domain checks and owning LocalFeatureResult.
+Exact STEP read/write scopes keep private geometry/document graphs and release
+their application-local copy owners. Units and ordering are tied to actual
+representation contexts and original root sequences. Periodic distance remains
+call-private and returns original support identities/parameters only.
+Initial display retains viewer-thread/source lifetime and isolation tracking;
+the new native exports require public ABI 1.118.

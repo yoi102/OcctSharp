@@ -6,6 +6,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Emission/consumer-*.txt" />
     <EmbeddedResource Include="Emission/consumer-support-contract.json" />
+    <EmbeddedResource Include="Emission/defeature-history-*.txt" />
+    <EmbeddedResource Include="Emission/defeature-history-contract.json" />
+    <EmbeddedResource Include="Emission/step-exact-offset-*.txt" />
+    <EmbeddedResource Include="Emission/step-exact-offset-contract.json" />
+    <EmbeddedResource Include="Emission/inspection-periodic-*.txt" />
+    <EmbeddedResource Include="Emission/inspection-periodic-contract.json" />
     <EmbeddedResource Include="Emission/viewer-render-health-*.txt" />
     <EmbeddedResource Include="Emission/viewer-render-health-contract.json" />
     <EmbeddedResource Include="Transformation/render-resource-adapters-operation-contracts.json" />

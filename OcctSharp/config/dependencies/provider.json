@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0",
+  "provider": "vcpkg-occt801-d3d-original-headers-v1",
+  "registryCommit": "e456309491fd875487bf02b8a0dca76c1b1b00cc",
+  "toolVersion": "2026-09-26-51bf87ca6e9bf3e622d84ff323bd202ab1ca0c0b",
+  "toolSha256": "2A4AE1467B9E797964C60C919D057B9E5DC1EC03F4B9632C1150026DB25201F2",
+  "upstreamPortTree": "03ee9b71f9ce479ebafeab28f92182d13c779553",
+  "sourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "sourceArchiveSha512": "bbe7099071cbf5397940ebc6e66ec05f8023d5e5aae6142870e14b93aa6f8f94c30980ef421e717f0fbfbc23b3520c3ccfe8a939c4caba3ccbf325060e26eb52",
+  "triplet": "x64-windows",
+  "features": ["freeimage", "freetype", "rapidjson", "tbb"],
+  "overlayChanges": ["USE_D3D enabled", "FFMPEG and OPENVR disabled", "Preserve original SDK header bytes instead of rewriting include delimiters"],
+  "publicationPayload": "Existing precompiled provider until separately qualified"
+}

@@ -1,3 +1,5 @@
+#include <ShapeProcess.hxx>
+#include "../../generated/DataExchange/OcctSharp.ExactStepOffsets.Generated.hxx"
 #include "../../generated/Xde/OcctSharp.Xde.XdeAdapters.Generated.hxx"
 #include "../../generated/Documents/OcctSharp.Documents.DocumentAdapters.Generated.hxx"
 // Native Exchange/StepAssembly implementation. Public contracts and ownership are unchanged.
@@ -70,6 +72,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_step_merge_xde(
           OCCTSHARP_STATUS_FILE_IO_ERROR,
           "OCCT could not read a STEP input through STEPCAF.");
       }
+      OcctSharp_ExactStepOffsetReadScope exactOffsets(reader.ChangeReader());
       PreTransferStepStyleTargets(reader);
       if (!reader.Transfer(sourceDocument))
       {
@@ -77,6 +80,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_step_merge_xde(
           OCCTSHARP_STATUS_TRANSFER_FAILED,
           "A STEP input could not be transferred into an XDE document.");
       }
+      OcctSharp_CompleteImportedExactPlanarOffsetPcurves(sourceDocument);
       RecoverStepPresentationStyles(reader, sourceDocument);
 
       occ::handle<XCAFDoc_ShapeTool> sourceShapeTool =
@@ -162,12 +166,15 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_step_merge_xde(
 
     STEPCAFControl_Writer writer;
     ConfigureXdeWriter(writer);
-    if (!writer.Transfer(outputDocument, STEPControl_AsIs))
+    OcctSharp_ExactStepXdeWriteScope exportScope(outputDocument);
+    if (exportScope.HasExactOffsets()) writer.SetShapeProcessFlags(ShapeProcess::OperationsFlags{});
+    if (!writer.Transfer(exportScope.Document(), STEPControl_AsIs))
     {
       throw OperationFailure(
         OCCTSHARP_STATUS_TRANSFER_FAILED,
         "The output XDE document could not be transferred to STEP.");
     }
+    exportScope.Complete(writer.ChangeWriter());
     if (writer.Write(output_path) != IFSelect_RetDone)
     {
       throw OperationFailure(

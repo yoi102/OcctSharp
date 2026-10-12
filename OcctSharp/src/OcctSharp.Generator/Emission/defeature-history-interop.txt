@@ -1,0 +1,10 @@
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+namespace OcctSharp.Interop;
+internal static partial class NativeMethods
+{
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_defeature_topology_history")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus DefeatureTopologyHistory(nint source, int* faceIndices, int faceCount,
+        int unifyResult, out nint result);
+}

@@ -11,7 +11,7 @@ public enum LocalFeatureHistoryKind
 }
 [Flags]
 public enum LocalFeatureGroupSupport { None = 0, Caps = 1, Laterals = 2, Contacts = 4, Patches = 8, Evolution = 16 }
-public enum LocalFeatureOperation { Fillet, Chamfer, FaceDraft, ShellDraft, Prism, DraftedPrism, Revolved, Pipe, LinearRibSlot, RevolutionRibSlot, Hole, Boolean, Transform, Compound }
+public enum LocalFeatureOperation { Fillet, Chamfer, FaceDraft, ShellDraft, Prism, DraftedPrism, Revolved, Pipe, LinearRibSlot, RevolutionRibSlot, Hole, Boolean, Transform, Compound, Defeature }
 public enum LocalFeatureFaultKind { Contour, Vertex, DraftFace }
 public readonly record struct LocalFeatureReference(Guid PlanId, int ArgumentIndex, int TopologyIndex, ShapeKind Kind);
 public sealed record LocalFeatureHistoryItem(LocalFeatureReference? Source, LocalFeatureHistoryKind Kind, int? Group, Shape? Shape, int? ResultTopologyIndex = null) : IDisposable

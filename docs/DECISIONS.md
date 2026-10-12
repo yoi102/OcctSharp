@@ -195,3 +195,6 @@ New ADRs should include:
 
 - [ADR-0136](adr/0136-call-private-coupled-constraint-copies.md): TM054 initialized nested3D/2D constraint copies, bounded enumeration and atomic detached publication.
 - [ADR-0138](adr/0138-owned-mesh-resource-import.md): CE nested local mesh resources and native material-owned copied encoded textures; existing flat profile preserved.
+
+- [ADR-0140](adr/0140-public-consumer-copy-history-and-exact-exchange.md): public generator-owned copy/history, initial display and exact STEP/distance consumer support; ABI 1.118 admission.
+- [ADR-0141](adr/0141-pinned-vcpkg-dependency-provider.md): pinned independent source dependency recovery and exact provider-specific runtime closure.

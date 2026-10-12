@@ -44,6 +44,10 @@
     <None Update="Fixtures/minipc3-many-faces-solid.brep" CopyToOutputDirectory="PreserveNewest" />
     <None Update="Fixtures/minipc3-difficult-trim-solid.brep" CopyToOutputDirectory="PreserveNewest" />
     <None Update="Fixtures/b17-large-offset/*.brep" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="Fixtures/b18-exact-step/*.brep" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="Fixtures/b18-periodic-distance/*.brep" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="Fixtures/b18-periodic-interior/*.brep" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="Fixtures/b18-shared-units/*.step" CopyToOutputDirectory="PreserveNewest" />
     <Compile Include="../Shared/BatchXProjectionWorkflow.cs" Link="BatchXProjectionWorkflow.cs" />
     <Compile Include="../Shared/BatchYGeometryWorkflow.cs" Link="BatchYGeometryWorkflow.cs" />
     <Compile Include="../Shared/BatchZValueWorkflow.cs" Link="BatchZValueWorkflow.cs" />

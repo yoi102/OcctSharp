@@ -1,0 +1,58 @@
+using OcctSharp.Interop;
+
+namespace OcctSharp;
+
+public sealed partial class OcctViewer
+{
+    /// <summary>Displays a shape in the requested mode on its first native display. Legacy Display keeps its default.</summary>
+    public ViewerPresentation DisplayInMode(Shape shape, ViewerDisplayMode mode)
+    {
+        ArgumentNullException.ThrowIfNull(shape); EnsureInitialDisplayMode(mode);
+        NativeError.ThrowIfFailed(NativeMethods.DisplayViewerShapeInMode(Handle, shape.Handle, (int)mode, out long id), "viewer_display_shape_in_mode");
+        return TrackInitialPresentation(id, null);
+    }
+
+    /// <summary>Displays a styled XDE label in the requested initial mode, retaining existing style and ownership rules.</summary>
+    public ViewerPresentation DisplayInMode(XdeLabel label, ViewerDisplayMode mode)
+    {
+        ArgumentNullException.ThrowIfNull(label); EnsureInitialDisplayMode(mode);
+        NativeError.ThrowIfFailed(NativeMethods.DisplayViewerXdeLabelInMode(Handle, label.Document.Handle, label.Entry, (int)mode, out long id), "viewer_display_xde_label_in_mode");
+        return TrackInitialPresentation(id, null);
+    }
+
+    /// <summary>Displays a located occurrence in the requested initial mode with the caller's existing copied occurrence identity.</summary>
+    public ViewerPresentation DisplayInMode(XdeOccurrence occurrence, ViewerDisplayMode mode)
+    {
+        ArgumentNullException.ThrowIfNull(occurrence); EnsureInitialDisplayMode(mode);
+        ViewerSourceIdentity identity = new(occurrence.Path, occurrence.OccurrenceLabel.Entry, occurrence.ReferredLabel.Entry);
+        using Shape located = occurrence.GetLocatedShape();
+        NativeError.ThrowIfFailed(NativeMethods.DisplayViewerShapeInMode(Handle, located.Handle, (int)mode, out long id), "viewer_display_shape_in_mode");
+        return TrackInitialPresentation(id, identity);
+    }
+
+    /// <summary>Displays a viewer-owned shared source in the requested initial mode without changing legacy Display overloads.</summary>
+    public ViewerPresentation DisplayInMode(ViewerSource source, GpTrsf transform, ViewerDisplayMode mode,
+        ViewerSourceIdentity? identity = null)
+    {
+        ArgumentNullException.ThrowIfNull(source); ArgumentNullException.ThrowIfNull(transform); EnsureInitialDisplayMode(mode);
+        if (!ReferenceEquals(source.Viewer, this)) throw new ArgumentException("The source belongs to another viewer.", nameof(source));
+        ObjectDisposedException.ThrowIf(source.IsRemoved, source);
+        NativeError.ThrowIfFailed(NativeMethods.DisplayViewerSourceInMode(Handle, source.Id, transform.Handle, (int)mode, out long id), "viewer_source_display_in_mode");
+        return TrackInitialPresentation(id, identity);
+    }
+
+    private void EnsureInitialDisplayMode(ViewerDisplayMode mode)
+    {
+        EnsureThread();
+        if (!Enum.IsDefined(mode)) throw new ArgumentOutOfRangeException(nameof(mode));
+        if (OcctRuntime.Info.AbiVersion.Minor < 118)
+            throw new NotSupportedException("Initial presentation display mode requires native ABI 1.118 or later.");
+    }
+
+    private ViewerPresentation TrackInitialPresentation(long id, ViewerSourceIdentity? identity)
+    {
+        ViewerPresentation presentation = new(this, id, identity); _presentations.Add(id, presentation);
+        if (_isolationVisibility is not null) { _isolationVisibility[id] = true; SetVisible(presentation, false); }
+        return presentation;
+    }
+}

@@ -14,12 +14,14 @@ public sealed record AuthoringDiagnostics(bool Ready, bool AlgorithmDone, bool S
 /// <summary>Owns independent result/history shapes. Algorithm completion and geometry validity are separate.</summary>
 public sealed class AuthoringResult : IDisposable
 {
-    internal AuthoringResult(Guid planId, Shape? shape, AuthoringDiagnostics diagnostics, AuthoringHistoryItem[] history)
-    { PlanId = planId; Shape = shape; Diagnostics = diagnostics; History = Array.AsReadOnly(history); }
+    internal AuthoringResult(Guid planId, Shape? shape, AuthoringDiagnostics diagnostics, AuthoringHistoryItem[] history, AuthoringInputCopyReport? inputCopy, AuthoringHistoryDomainReport? historyDomains)
+    { PlanId = planId; Shape = shape; Diagnostics = diagnostics; History = Array.AsReadOnly(history); InputCopy = inputCopy; HistoryDomains = historyDomains; }
     public Guid PlanId { get; }
     public Shape? Shape { get; }
     public AuthoringDiagnostics Diagnostics { get; }
     public IReadOnlyList<AuthoringHistoryItem> History { get; }
+    public AuthoringInputCopyReport? InputCopy { get; }
+    public AuthoringHistoryDomainReport? HistoryDomains { get; }
     public IReadOnlyList<Shape> SimulatedSections => History.Where(h => h.Kind == AuthoringHistoryKind.SimulatedSection && h.Shape is not null).Select(h => h.Shape!).ToArray();
     public Shape? FirstSection => History.FirstOrDefault(h => h.Kind == AuthoringHistoryKind.FirstSection)?.Shape;
     public Shape? LastSection => History.FirstOrDefault(h => h.Kind == AuthoringHistoryKind.LastSection)?.Shape;
@@ -50,12 +52,23 @@ internal static class AuthoringBridge
         }
         finally { for (int i = 0; i < acquired.Length; i++) if (acquired[i]) shapes[i].Handle.DangerousRelease(); }
     }
-    internal static unsafe Shape[] CopyInputs(IReadOnlyList<Shape> shapes) => WithInputs(shapes, (p, count) =>
+    internal static Shape[] CopyInputs(IReadOnlyList<Shape> shapes) => CopyInputs(shapes, out _);
+    internal static Shape[] CopyInputs(IReadOnlyList<Shape> shapes, out AuthoringInputCopyReport report)
+    {
+        ConsumerAuthoringRuntime.Require();
+        AuthoringInputCopyReport? captured = null;
+        Shape[] values = CopyInputsCore(shapes, value => captured = value);
+        report = captured!; return values;
+    }
+    private static unsafe Shape[] CopyInputsCore(IReadOnlyList<Shape> shapes, Action<AuthoringInputCopyReport> capture) => WithInputs(shapes, (p, count) =>
     {
         NativeError.ThrowIfFailed(NativeMethods.AuthoringCopyInputs(p, count, out nint raw), "authoring_copy_inputs");
         using FeatureResultHandle result = new(raw); List<Shape> copied = [];
         try
         {
+            var report = AuthoringInputCopyReader.Read(result, Guid.NewGuid())
+                ?? throw new InvalidOperationException("An actual input copy has no native domain report.");
+            capture(report);
             for (int i = 0; i < count; i++)
             {
                 NativeError.ThrowIfFailed(NativeMethods.AuthoringHistory(result, i, out _, out nint item), "authoring_copy_input");
@@ -65,7 +78,7 @@ internal static class AuthoringBridge
         }
         catch { foreach (Shape shape in copied) shape.Dispose(); throw; }
     });
-    internal static unsafe AuthoringResult Read(Guid id, nint raw, AuthoringInfoRaw info)
+    internal static unsafe AuthoringResult Read(Guid id, nint raw, AuthoringInfoRaw info, Guid? sourceDomainId = null)
     {
         using FeatureResultHandle result = new(raw); Shape? shape = null; List<AuthoringHistoryItem> history = [];
         try
@@ -84,9 +97,13 @@ internal static class AuthoringBridge
             byte[] bytes = new byte[required]; fixed (byte* p = bytes)
                 NativeError.ThrowIfFailed(NativeMethods.GetFeatureResultMessage(result, p, bytes.Length, out _), "authoring_message");
             string message = Encoding.UTF8.GetString(bytes.AsSpan(0, bytes.Length - 1));
+            ConsumerAuthoringRuntime.Require();
+            var inputCopy = AuthoringInputCopyReader.Read(result, sourceDomainId ?? Guid.NewGuid());
+            var domains = AuthoringHistoryDomainReader.Read(result, inputCopy, history);
             return new(id, shape, new(info.Ready != 0, info.Done != 0, info.Valid != 0, info.Solid != 0,
                 info.AlgorithmStatus, info.ErrorAvailable != 0 ? info.ApproximationError : null,
-                info.ContinuityLimit >= 0 ? info.ContinuityLimit : null, message), history.ToArray());
+                info.ContinuityLimit >= 0 ? info.ContinuityLimit : null, message), history.ToArray(),
+                inputCopy, domains);
         }
         catch { shape?.Dispose(); foreach (var item in history) item.Dispose(); throw; }
     }

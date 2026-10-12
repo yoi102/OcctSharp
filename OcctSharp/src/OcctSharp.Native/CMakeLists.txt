@@ -30,7 +30,6 @@ set(OCCTSHARP_MANUAL_NATIVE_SOURCES
   src/Modeling/LocalHoles.cpp
   src/Modeling/Freeform.cpp
   src/Modeling/ScalarLaws.cpp
-  src/Modeling/GuidedInputs.cpp
   src/Modeling/GuidedSweep.cpp
   src/Modeling/GuidedLoft.cpp
   src/Modeling/GeometryInspection.cpp
@@ -108,6 +107,14 @@ set_source_files_properties(
   generated/Foundation/OcctSharp.Foundation.LegacyText.Generated.cpp
   generated/Foundation/OcctSharp.Foundation.LegacyTransient.Generated.cpp
   generated/Geometry/OcctSharp.Geometry.LegacyKnotBuffers.Generated.cpp
+  PROPERTIES SKIP_PRECOMPILE_HEADERS ON)
+
+set_source_files_properties(
+  generated/Modeling/OcctSharp.ConsumerGuidedInputs.Generated.cpp
+  generated/Modeling/OcctSharp.DefeatureTopologyHistory.Generated.cpp
+  generated/Modeling/OcctSharp.PeriodicExactDistance.Generated.cpp
+  generated/DataExchange/OcctSharp.ExactStepOffsets.Generated.cpp
+  generated/Visualization/OcctSharp.ConsumerInitialDisplay.Generated.cpp
   PROPERTIES SKIP_PRECOMPILE_HEADERS ON)
 
 add_library(OcctSharp.Native SHARED
@@ -211,6 +218,17 @@ set_target_properties(OcctSharp.Native PROPERTIES
 
 set(OCCTSHARP_RUNTIME_TARGETS ${OCCTSHARP_CORE_TOOLKITS})
 
+if(OCCTSHARP_DEPENDENCY_PROVIDER STREQUAL "vcpkg")
+  get_filename_component(OCCTSHARP_COMPILER_BIN "${CMAKE_CXX_COMPILER}" DIRECTORY)
+  add_custom_command(TARGET OcctSharp.Native POST_BUILD
+    COMMAND "${CMAKE_COMMAND}"
+      "-DBRIDGE=$<TARGET_FILE:OcctSharp.Native>"
+      "-DDEPENDENCY_BIN=${VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/$<IF:$<CONFIG:Debug>,debug/bin,bin>"
+      "-DOUTPUT=$<TARGET_FILE_DIR:OcctSharp.Native>"
+      "-DDUMPBIN=${OCCTSHARP_COMPILER_BIN}/dumpbin.exe"
+      -P "${PROJECT_SOURCE_DIR}/eng/copy-vcpkg-runtime.cmake"
+    VERBATIM)
+else()
 foreach(OCCT_TARGET IN LISTS OCCTSHARP_RUNTIME_TARGETS)
   add_custom_command(TARGET OcctSharp.Native POST_BUILD
     COMMAND "${CMAKE_COMMAND}" -E copy_if_different
@@ -247,3 +265,4 @@ add_custom_command(TARGET OcctSharp.Native POST_BUILD
     "$<IF:$<CONFIG:Debug>,${OCCT_THIRDPARTY_ROOT_NORMALIZED}/jemalloc-vc14-64/debug/bin/jemalloc.dll,${OCCT_THIRDPARTY_ROOT_NORMALIZED}/jemalloc-vc14-64/bin/jemalloc.dll>"
     "$<TARGET_FILE_DIR:OcctSharp.Native>"
   VERBATIM)
+endif()

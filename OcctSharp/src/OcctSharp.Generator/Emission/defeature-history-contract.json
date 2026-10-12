@@ -1,0 +1,28 @@
+{
+  "workflow": "defeature-history-v1",
+  "occtVersion": "8.0.1",
+  "headers": {
+    "BRepAlgoAPI_Defeaturing.hxx": "7704BFD05C1C931512E76AB44755708DB6E6FC088AE030036DBE32EE7069757A",
+    "BRepTools_History.hxx": "F7D7CB738DFC63E9772299480042BD63FC154C477A62DD7BEBDD573EC1BFEE7A",
+    "ShapeUpgrade_UnifySameDomain.hxx": "D116B92CE97CE9B7EF461E16711747DD39E5AC3C10634406846DA774F46F234D",
+    "BRepBuilderAPI_Copy.hxx": "213ECD5816C97C056CB39D496A44AB8CAB2D466423526E4F0FD44589BDC8280A"
+  },
+  "sourceOwner": "RepairSnapshot",
+  "sourceSlots": "copied full-map face indices",
+  "resultOwner": "LocalFeatureResult",
+  "resultCorrespondence": "native Modified/Generated/IsRemoved plus exact final TShape/location membership",
+  "composition": "BRepTools_History.Merge for optional safe-input same-domain unification",
+  "maximumSelectedFaces": 256,
+  "maximumTopology": 100000,
+  "rawHistoryHandleEscapes": false,
+  "declarationCoverageCredit": false,
+  "fixedSdkCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "abiMinor": 118,
+  "templates": {
+    "defeature-history-header.txt": "2A160003B2F26BCD05739774524F789663A4F87296DF97193ACF234B934BA245",
+    "defeature-history-interop.txt": "3EBBCBE68B661AA7B20201C69944E8D75D957CA9E63ABB96F5701EA55F4DC77C",
+    "defeature-history-managed.txt": "A8CB7379BA981B7AAB91A563E86D64FCCDC9A12348DF535DEA741F1285D82EB3",
+    "defeature-history-native.txt": "D9513BD1A4E33E25A5A0F3C3B46F94E2287C2265668013225C01A30D3A7982BC"
+  },
+  "headerBoundary": "C ABI declarations use .h with C11 guards; private C++ class contracts use .hxx."
+}

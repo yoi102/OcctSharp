@@ -1,3 +1,5 @@
+#include <ShapeProcess.hxx>
+#include "../../generated/DataExchange/OcctSharp.ExactStepOffsets.Generated.hxx"
 #include "../../generated/DataExchange/OcctSharp.DataExchange.MeshExchangeAdapters.Generated.hxx"
 #include "../../generated/DataExchange/OcctSharp.DataExchange.StepAdapters.Generated.hxx"
 #include "../../generated/Xde/OcctSharp.Xde.XdeAdapters.Generated.hxx"
@@ -308,9 +310,11 @@ std::vector<TDF_Label> ImportStepRootsIntoXdeDocument(
   ConfigureXdeReader(reader);
   if (ReadXdeStepFile(reader, file_path) != IFSelect_RetDone)
     throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, "OCCT could not read a STEP input through STEPCAF.");
+  OcctSharp_ExactStepOffsetReadScope exactOffsets(reader.ChangeReader());
   PreTransferStepStyleTargets(reader);
   if (!reader.Transfer(source_document))
     throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "A STEP input could not be transferred into an XDE document.");
+  OcctSharp_CompleteImportedExactPlanarOffsetPcurves(source_document);
   RecoverStepPresentationStyles(reader, source_document);
 
   return CloneXdeRootsIntoDocument(source_document, output_document, "STEP");
@@ -559,11 +563,13 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_step_options(
       {
         throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "OCCT could not read STEP into the XDE document.");
       }
+      OcctSharp_ExactStepOffsetReadScope exactOffsets(reader.ChangeReader());
       if (read_colors != 0) PreTransferStepStyleTargets(reader);
       if (!reader.Transfer(result->Document))
       {
         throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "OCCT could not transfer STEP into the XDE document.");
       }
+      OcctSharp_CompleteImportedExactPlanarOffsetPcurves(result->Document);
       if (read_colors != 0) RecoverStepPresentationStyles(reader, result->Document);
       *out_document = result;
     }
@@ -657,10 +663,13 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_step_options(
     DESTEP_Parameters parameters;
     OcctSharpGenerated::StepAdapters::DESTEP_Parameters_InitFromStatic_Bind(parameters)();
     parameters.WriteSchema = static_cast<DESTEP_Parameters::WriteMode_StepSchema>(schema);
-    if (!OcctSharpGenerated::XdeAdapters::STEPCAFControl_Writer_Transfer_Bind(writer)(document->Document, parameters, static_cast<STEPControl_StepModelType>(model_type)))
+    OcctSharp_ExactStepXdeWriteScope exportScope(document->Document);
+    if (exportScope.HasExactOffsets()) writer.SetShapeProcessFlags(ShapeProcess::OperationsFlags{});
+    if (!OcctSharpGenerated::XdeAdapters::STEPCAFControl_Writer_Transfer_Bind(writer)(exportScope.Document(), parameters, static_cast<STEPControl_StepModelType>(model_type)))
     {
       throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "OCCT could not transfer the XDE document to STEP.");
     }
+    exportScope.Complete(writer.ChangeWriter());
     const IFSelect_ReturnStatus writeStatus = writer.Write(file_path);
     if (writeStatus != IFSelect_RetDone)
     {

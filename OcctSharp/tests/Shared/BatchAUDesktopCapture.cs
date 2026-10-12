@@ -8,6 +8,7 @@ internal sealed class BatchAUDesktopCapture : IDisposable
 {
     nint device,context,duplicate;
     OutputDescription outputDesc;
+    int diagnosticFrame;
     internal BatchAUDesktopCapture(int x,int y)
     {
         Initialize(x,y);
@@ -55,6 +56,11 @@ internal sealed class BatchAUDesktopCapture : IDisposable
         try
         {
             Check(Call<Acquire>(duplicate,8)(duplicate,1000,frame,out resource));acquired=true;
+            if(Environment.GetEnvironmentVariable("OCCTSHARP_VISIBLE_FRAME_DIAGNOSTICS") is {} diagnostics)
+            {
+                Directory.CreateDirectory(diagnostics);
+                File.AppendAllText(Path.Combine(diagnostics,"dxgi-frames.jsonl"),System.Text.Json.JsonSerializer.Serialize(new{duplicate=(long)duplicate,frame=++diagnosticFrame,lastPresentTime=Marshal.ReadInt64(frame,0),lastMouseUpdateTime=Marshal.ReadInt64(frame,8),accumulatedFrames=Marshal.ReadInt32(frame,16),acquiredAt=System.Diagnostics.Stopwatch.GetTimestamp(),time=DateTimeOffset.UtcNow})+Environment.NewLine);
+            }
             texture=Query(resource,new("6f15aaf2-d208-4e89-9ab4-489535d34f9c"));var td=new TextureDescription();Call<GetTextureDesc>(texture,10)(texture,ref td);
             x-=outputDesc.Bounds.Left;y-=outputDesc.Bounds.Top;
             Require(td.Format==87&&x>=0&&y>=0&&x+width<=td.Width&&y+height<=td.Height,"Desktop capture bounds/format mismatch.");

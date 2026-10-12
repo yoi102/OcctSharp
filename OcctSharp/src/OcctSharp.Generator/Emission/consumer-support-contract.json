@@ -2,7 +2,7 @@
   "workflow": "exact-consumer-v1",
   "occtVersion": "8.0.1",
   "fixedSdkCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
-  "abiMinor": 117,
+  "abiMinor": 118,
   "headers": {
     "AIS_ColoredShape.hxx": "D7F65F7672721F4DE42F3A9B89CB287E2AC2559811F7B10DF2AABB4EFBE0FB81",
     "AIS_InteractiveContext.hxx": "6B370203ECE170AB06E6EA372A84596CEEF164233AFA1DC3471A224EB3FAA44B",
@@ -63,6 +63,7 @@
     "PrsMgr_Presentation.hxx": "E20BC0BEDC004E3938A2BA76A2F4AC73813F68299E87D3F114B9405CA0088380",
     "PrsMgr_PresentationManager.hxx": "A78864478A6D2E9182FE0BB3873E0E35A388971071A134BAD4629DF1BE1F22F3",
     "SelectMgr_Selection.hxx": "875C1E0512FF9D5D5B81A4EE8F62588AE605F9AFC0515E1069EBB892AEE0D2FA",
+    "Standard_NoSuchObject.hxx": "C2B7DAE2DD3313939CA1638F0744302A2AD713E31995A505AEC5E702961F26A0",
     "Standard_ProgramError.hxx": "4E92F1ED751959341E82DF93AEDC4454D32D59E831FB5EB6FF7DED80D3D5AB44",
     "StdPrs_ToolTriangulatedShape.hxx": "4E56229571F87BB05B2F126E72B262F0A03DF3E4514AA8D115B8F7C193C86A76",
     "StdSelect_BRepOwner.hxx": "7CA8C3029A77E4D99F5C8C5EAEB78F7E188ACD18F98E8CBFD49172594AAA1157",
@@ -73,6 +74,7 @@
     "TopTools_FormatVersion.hxx": "F805759441307BE718A765EC237C36370E13491608B7F3C3FD67D4B366BC7DBF",
     "TopTools_ShapeMapHasher.hxx": "0F10C93946DF144FA1CC46433B29C78EAD9D87CE991B6968886E8EAE01D60B8D",
     "TopoDS.hxx": "19A7792AEA2C5E280072435B8B3AB300E6A1B028FCF3F356092DA7FAB840BAEB",
+    "TopoDS_Compound.hxx": "9C6F3E6F8DB4BEC44E56B20E59CEAD79704052C84649734F200C30224CB1373B",
     "TopoDS_Edge.hxx": "4C0A8EFF67275ED8C9A0F9939B803F1B782B88ECAF8FB4FF65F05AC8FC660B74",
     "TopoDS_Face.hxx": "5EEBB6C64FEF14E9656AE2039550A7AA67E3678D31462A126FB8E9AACBA6613B",
     "TopoDS_Iterator.hxx": "40C7760B4B2FF635B5C4E614AB2823F40B2FEF8F14D77E8D9D27F84DC8D51391",
@@ -89,11 +91,13 @@
     "gp_Ax22d.hxx": "17D0F3829BFE1AF7AE1DD34E47699B2BB9FC618303E1D5A038B39B6E6A024A71",
     "gp_Circ.hxx": "2E5DB73A2A2D891FCFF196BF73ADA73F33318E3306886144E62C4D96AA596230",
     "gp_Circ2d.hxx": "808DA6352A5FB7A41B4193DF88DA451130ECCF6BCBDB874725D2691F8D7C0D0F",
+    "gp_Dir.hxx": "A732EC1495F2F1B8482D08041B978B3C3E077DE1ECF024AB8ABEAFDA7C10D2FF",
     "gp_Elips.hxx": "83E33ABE72DF7095D87879939A494F660A510FA4E394A47527152969091B0BAD",
     "gp_Elips2d.hxx": "EF3F264919C8044AFF753D231C177E4C6F05D4F367EE41ADF0FF95225C8DC86C",
     "gp_Lin.hxx": "341BCFA0EBCB293E6B2A3E9787AF27B221FD0D3AFA0396F8DB9F504C8205E484",
     "gp_Lin2d.hxx": "5D5E4237F41D88883F8A1C07BE3D2956C8A404F02D2820BA297DBF3DB84C7F01",
     "gp_Pln.hxx": "88CACBF7CEBEEB4350079FEC4E1231AF30689D791EBCE477A28F686D6676492D",
+    "gp_Pnt.hxx": "528547CE281C1BD222679156466039EEA9FA8CB8913D879092C3207FAC3716CC",
     "gp_Vec2d.hxx": "3161C95751F9C82BBBF01B9748D72C7F1C86B80D5584852F813C583F60D40C0A"
   },
   "files": [
@@ -335,10 +339,10 @@
       "sourcePath": "src/OcctSharp.Native/src/Modeling/GuidedCurvePreparation.cpp",
       "sourceSha256": "B6EC76BA022AD67C238DBF28040DBDD9A04407E6973B8D091C05B90801A2F3B2",
       "template": "consumer-guidedpreparation-native.txt",
-      "templateSha256": "36AB9289FB6FC4A187F38637F8FBC68DA8217D1B1FF60A9E060D20F57AEF0D28",
+      "templateSha256": "AAB077645E3A8BCACDBD7B7332641FA9C9E3A59332D5E9879E557AA4EFCB8CE0",
       "output": "src/OcctSharp.Native/generated/Modeling/OcctSharp.ConsumerGuidedPreparation.Generated.cpp",
       "module": "Modeling",
-      "origin": "Exact bounded guided offset conversion adapted to existing public copied-graph owner; no private copy/domain API claimed."
+      "origin": "Exact bounded guided offset conversion adapted to existing public copied-graph owner; no private copy/domain API claimed. Preview85 captures input/final membership without inferred identity."
     },
     {
       "sourcePath": "src/OcctSharp.Native/include/OcctSharp.Native.Authoring.h",
@@ -371,10 +375,10 @@
       "sourcePath": "src/OcctSharp.Native/src/Visualization/ViewerSources.cpp",
       "sourceSha256": "D6B0AB28FBAA2A70FF183BA5EEC12724A16DCCBC40FBBED4D4C7CFFEBE20F4E0",
       "template": "consumer-viewersources-cpp.txt",
-      "templateSha256": "9E6530923773BFE1AF4B9485F884F1C094C4BFF0A381ED34BD081544B43D44B9",
+      "templateSha256": "5355B929EF8580C691A4ED329BB4983E0BEBC6B1E4AB797F6755537072665B15",
       "output": "src/OcctSharp.Native/generated/Visualization/OcctSharp.ConsumerViewerSources.Generated.cpp",
       "module": "Visualization",
-      "origin": "Audited full application shared-source policy with original identity correspondence, owned styles/mesh, independent selectable instances and owner-thread IDs; bounded support only."
+      "origin": "Audited full application shared-source policy with original identity correspondence, owned styles/mesh, independent selectable instances and owner-thread IDs; bounded support only. Preview85 adds guarded initial mode before native Display."
     },
     {
       "sourcePath": "src/OcctSharp.Native/src/Visualization/ViewerSources.hxx",
@@ -465,6 +469,114 @@
       "output": "src/OcctSharp/Generated/Consumers/OcctViewer.Sources.Generated.cs",
       "module": "Visualization",
       "origin": "Audited full application shared-source policy with original identity correspondence, owned styles/mesh, independent selectable instances and owner-thread IDs; bounded support only."
+    },
+    {
+      "sourcePath": "src/OcctSharp.Modeling/Authoring/AuthoringInputCopy.cs",
+      "sourceSha256": "8FA6F30E4F1C09E9BCF700448E8EBF92750A13C0BE006A8526BC2149191AED60",
+      "template": "consumer-authoringinputcopy-managed.txt",
+      "templateSha256": "C5202FA88D23D0C3261C8E5105353EA8D81D09D5BCC457666706E7B0F19E1914",
+      "output": "src/OcctSharp/Generated/Modeling/AuthoringInputCopy.Generated.cs",
+      "module": "Modeling",
+      "origin": "Preview85 bounded consumer admission; header/template pinned; zero raw declaration credit."
+    },
+    {
+      "sourcePath": "src/OcctSharp.Modeling/Authoring/AuthoringHistoryDomains.cs",
+      "sourceSha256": "6078CFAFDE29F599C007067CAF33A0D8F1698633A75D943C26AA890F519AC71E",
+      "template": "consumer-authoringhistorydomains-managed.txt",
+      "templateSha256": "6078CFAFDE29F599C007067CAF33A0D8F1698633A75D943C26AA890F519AC71E",
+      "output": "src/OcctSharp/Generated/Modeling/AuthoringHistoryDomains.Generated.cs",
+      "module": "Modeling",
+      "origin": "Preview85 bounded consumer admission; header/template pinned; zero raw declaration credit."
+    },
+    {
+      "sourcePath": "audited SDK31 support extraction",
+      "sourceSha256": "C2A3C668FCAD66AD3965BA4CEF951186CDCE88C95C45455F84BF3658EDCEBB3A",
+      "template": "consumer-authoringruntime-managed.txt",
+      "templateSha256": "C2A3C668FCAD66AD3965BA4CEF951186CDCE88C95C45455F84BF3658EDCEBB3A",
+      "output": "src/OcctSharp/Generated/Modeling/ConsumerAuthoringRuntime.Generated.cs",
+      "module": "Modeling",
+      "origin": "Preview85 bounded consumer admission; header/template pinned; zero raw declaration credit."
+    },
+    {
+      "sourcePath": "audited SDK31 support extraction",
+      "sourceSha256": "B8B6A3AE3DFBEE23D8FC837CBFB540DF18B3EE80997D183DFCA646F18119B276",
+      "template": "consumer-authoringreports-interop.txt",
+      "templateSha256": "B8B6A3AE3DFBEE23D8FC837CBFB540DF18B3EE80997D183DFCA646F18119B276",
+      "output": "src/OcctSharp/Generated/Modeling/AuthoringReportsNativeMethods.Generated.cs",
+      "module": "Modeling",
+      "origin": "Preview85 bounded consumer admission; header/template pinned; zero raw declaration credit."
+    },
+    {
+      "sourcePath": "audited SDK31 support extraction",
+      "sourceSha256": "A5587082B7DB813B2554459F5271F2E5509E3BDE142A8EC5AC53F50E678341BC",
+      "template": "consumer-authoringreports-header.txt",
+      "templateSha256": "A5587082B7DB813B2554459F5271F2E5509E3BDE142A8EC5AC53F50E678341BC",
+      "output": "src/OcctSharp.Native/generated/Modeling/OcctSharp.ConsumerAuthoringReports.Generated.h",
+      "module": "Modeling",
+      "origin": "Preview85 bounded consumer admission; header/template pinned; zero raw declaration credit."
+    },
+    {
+      "sourcePath": "src/OcctSharp.Native/src/Modeling/GuidedInputCopy.hxx",
+      "sourceSha256": "06280F0E467C9166CCC3A304BA17721E1153A4AC744ADC4153D6B38A2263222C",
+      "template": "consumer-authoringcopydata-hxx.txt",
+      "templateSha256": "275E261F519E90D2F125DF306380D3C85351E8BE03F74A7AFA2D8C0803D54C4F",
+      "output": "src/OcctSharp.Native/generated/Modeling/OcctSharp.ConsumerAuthoringCopyData.Generated.hxx",
+      "module": "Modeling",
+      "origin": "Preview85 bounded consumer admission; header/template pinned; zero raw declaration credit."
+    },
+    {
+      "sourcePath": "src/OcctSharp.Native/src/Modeling/GuidedAuthoring.hxx",
+      "sourceSha256": "F6882B3A75F6890AACB0BB7950AC794590AA272C5D94EC16DF89021C86A7D2A5",
+      "template": "consumer-guidedauthoring-hxx.txt",
+      "templateSha256": "B66F564C61CC3F6A5066751CB40996835B93033AD4C3568990CF78FC8DE2A743",
+      "output": "src/OcctSharp.Native/generated/Modeling/OcctSharp.ConsumerGuidedAuthoring.Generated.hxx",
+      "module": "Modeling",
+      "origin": "Preview85 bounded consumer admission; header/template pinned; zero raw declaration credit."
+    },
+    {
+      "sourcePath": "src/OcctSharp.Native/src/Modeling/GuidedInputs.cpp",
+      "sourceSha256": "F52D6604E783A8762D5A7E17073659D6A1389684178A14F4DCB8E022AAB3E5F3",
+      "template": "consumer-guidedinputs-native.txt",
+      "templateSha256": "F52D6604E783A8762D5A7E17073659D6A1389684178A14F4DCB8E022AAB3E5F3",
+      "output": "src/OcctSharp.Native/generated/Modeling/OcctSharp.ConsumerGuidedInputs.Generated.cpp",
+      "module": "Modeling",
+      "origin": "Preview85 bounded consumer admission; header/template pinned; zero raw declaration credit."
+    },
+    {
+      "sourcePath": "src/OcctSharp/OcctViewer.InitialDisplay.cs",
+      "sourceSha256": "15E22E4343D0E7670B9F09E7A44477D77D0BBFA2EF37E6E95675D1F40D24BCC2",
+      "template": "consumer-initialdisplay-managed.txt",
+      "templateSha256": "FE6E0D42E6A5D5D52A5045877A691765317FF3A3068B040A6162BD26B5C94779",
+      "output": "src/OcctSharp/Generated/Consumers/OcctViewer.InitialDisplay.Generated.cs",
+      "module": "Visualization",
+      "origin": "Preview85 bounded consumer admission; header/template pinned; zero raw declaration credit."
+    },
+    {
+      "sourcePath": "src/OcctSharp/Interop/NativeMethods.InitialDisplay.cs",
+      "sourceSha256": "778313046E90B842ABC1959F76CC3EED6E10CD0C8455D64CC5822B7676846667",
+      "template": "consumer-initialdisplay-interop.txt",
+      "templateSha256": "778313046E90B842ABC1959F76CC3EED6E10CD0C8455D64CC5822B7676846667",
+      "output": "src/OcctSharp/Generated/Modeling/InitialDisplayNativeMethods.Generated.cs",
+      "module": "Modeling",
+      "origin": "Preview85 bounded consumer admission; header/template pinned; zero raw declaration credit."
+    },
+    {
+      "sourcePath": "audited SDK31 support extraction",
+      "sourceSha256": "26778DEB7E43FF0CC5ED482B7451FBC7DCAFA21C0ADB90BD6D4B0D61FA9A1225",
+      "template": "consumer-initialdisplay-header.txt",
+      "templateSha256": "26778DEB7E43FF0CC5ED482B7451FBC7DCAFA21C0ADB90BD6D4B0D61FA9A1225",
+      "output": "src/OcctSharp.Native/generated/Visualization/OcctSharp.ConsumerInitialDisplay.Generated.h",
+      "module": "Visualization",
+      "origin": "Preview85 bounded consumer admission; header/template pinned; zero raw declaration credit."
+    },
+    {
+      "sourcePath": "audited SDK31 support extraction",
+      "sourceSha256": "D41CAA3D9DD3D212A02A8C7EB0745E44889BAD5B5109B2B2C1FB92775599A909",
+      "template": "consumer-initialdisplay-native.txt",
+      "templateSha256": "D41CAA3D9DD3D212A02A8C7EB0745E44889BAD5B5109B2B2C1FB92775599A909",
+      "output": "src/OcctSharp.Native/generated/Visualization/OcctSharp.ConsumerInitialDisplay.Generated.cpp",
+      "module": "Visualization",
+      "origin": "Preview85 bounded consumer admission; header/template pinned; zero raw declaration credit."
     }
   ],
   "newAdmittedDeclarationStableIds": [],
@@ -472,8 +584,8 @@
   "limitations": [
     "Supporting templates retain human-maintained algorithm policy.",
     "Shape/occurrence hashes prove integrity only, never topology correspondence.",
-    "No private SDK31 success or unsupported periodic/export claim is imported.",
-    "Guided preparation retains existing public copied-graph history contract; no SDK26 input-copy or history-domain proof APIs are admitted.",
-    "Viewer sources retain owner-thread IDs, exact original/copy relations and independent instance overrides. No geometric matching or cross-viewer source sharing."
+    "Viewer sources retain owner-thread IDs, exact original/copy relations and independent instance overrides. No geometric matching or cross-viewer source sharing.",
+    "Preview85 admits bounded native copy/history membership; it does not prove complete occurrence paths or composed reference identity.",
+    "Private SDK31 evidence is provenance only. Fresh public delivery and strict external STEP rejection remain separate."
   ]
 }

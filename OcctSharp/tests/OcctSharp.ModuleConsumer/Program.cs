@@ -1,5 +1,7 @@
 using OcctSharp;
 
+OcctSharp.Tests.Shared.Preview85ConsumerWorkflow.Run();
+
 if(Environment.GetEnvironmentVariable("OCCTSHARP_BATCH_CE_CONSUMER_EVIDENCE") is {} ceEvidence)
     Environment.SetEnvironmentVariable("OCCTSHARP_BATCH_CE_EVIDENCE",Path.Combine(ceEvidence,"module-resources"));
 OcctSharp.Tests.Shared.BatchCEExchangeWorkflow.Run();

@@ -31,12 +31,12 @@
 
 namespace OcctSharp::Native
 {
-BRepExtrema_DistShapeShape ComputeExactDistance(
+OcctSharp_PeriodicExactDistance ComputeExactDistance(
   const OcctSharp_ShapeHandle* first, const OcctSharp_ShapeHandle* second)
 {
   ValidateUsableShape(first);
   ValidateUsableShape(second);
-  BRepExtrema_DistShapeShape operation(first->Value, second->Value);
+  OcctSharp_PeriodicExactDistance operation(first->Value, second->Value);
   if (!operation.IsDone() || operation.NbSolution() <= 0)
     throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT exact distance did not produce a solution.");
   return operation;
@@ -188,7 +188,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_distance(
   return Guard([&]
   {
     ValidateUsableShape(first); ValidateUsableShape(second);
-    BRepExtrema_DistShapeShape operation(first->Value, second->Value);
+    OcctSharp_PeriodicExactDistance operation(first->Value, second->Value);
     if (!operation.IsDone() || operation.NbSolution() <= 0)
       throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT shape distance did not produce a solution.");
 
@@ -210,7 +210,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_exact_distance_count(
   *count = 0;
   return Guard([&]
   {
-    const BRepExtrema_DistShapeShape operation = ComputeExactDistance(first, second);
+    const OcctSharp_PeriodicExactDistance operation = ComputeExactDistance(first, second);
     *count = operation.NbSolution();
   });
 }
@@ -223,7 +223,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_exact_distance_solution(
   *solution = {};
   return Guard([&]
   {
-    const BRepExtrema_DistShapeShape operation = ComputeExactDistance(first, second);
+    const OcctSharp_PeriodicExactDistance operation = ComputeExactDistance(first, second);
     if (index < 1 || index > operation.NbSolution())
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The exact-distance solution index is outside the valid 1-based range.");
 
@@ -287,7 +287,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_pair_classify(
   { SetLastError("Shape-pair tolerance must be finite and non-negative."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
   return Guard([&]
   {
-    const BRepExtrema_DistShapeShape extrema = ComputeExactDistance(first, second);
+    const OcctSharp_PeriodicExactDistance extrema = ComputeExactDistance(first, second);
     *distance = extrema.Value();
     if (*distance > tolerance) { *classification = 0; return; }
 
@@ -343,7 +343,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_digital_mockup_pair_analyze(
   {
     ValidateUsableShape(first);
     ValidateUsableShape(second);
-    const BRepExtrema_DistShapeShape extrema = ComputeExactDistance(first, second);
+    const OcctSharp_PeriodicExactDistance extrema = ComputeExactDistance(first, second);
     *distance = extrema.Value();
     const double contactTolerance = std::max(confusion_tolerance, fuzzy_tolerance);
     if (*distance > contactTolerance)

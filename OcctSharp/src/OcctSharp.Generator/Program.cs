@@ -185,6 +185,10 @@ static async Task<int> RunGenerationAsync(string occtRoot, string configPath, st
         bindingSet = bindingSet with { Files = [.. bindingSet.Files, .. viewerSupport] };
         IReadOnlyList<GeneratedFile> consumerSupport = ConsumerSupportWorkflowEmitter.Emit(configuration, occtRoot);
         bindingSet = bindingSet with { Files = [.. bindingSet.Files, .. consumerSupport] };
+        IReadOnlyList<GeneratedFile> modelingSupport = ModelingSupportWorkflowEmitter.Emit(configuration, occtRoot);
+        IReadOnlyList<GeneratedFile> exchangeSupport = ExchangeSupportWorkflowEmitter.Emit(configuration, occtRoot);
+        IReadOnlyList<GeneratedFile> inspectionSupport = InspectionSupportWorkflowEmitter.Emit(configuration, occtRoot);
+        bindingSet = bindingSet with { Files = [.. bindingSet.Files, .. modelingSupport, .. exchangeSupport, .. inspectionSupport] };
         GeneratedManifest manifest = GeneratedOutputWriter.Replace(outputRoot, bindingSet);
         GenerationReportSet reports = GenerationReportWriter.Create(report, bindingSet);
         GenerationReportWriter.Write(outputRoot, reports);

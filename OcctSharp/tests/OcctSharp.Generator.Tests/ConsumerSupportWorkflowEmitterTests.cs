@@ -28,7 +28,7 @@ public sealed class ConsumerSupportWorkflowEmitterTests
         using var contract = ConsumerSupportWorkflowEmitter.ReadContract();
         var files = ConsumerSupportWorkflowEmitter.CreateFiles(contract.RootElement);
         Assert.Equal(files.ToArray(), ConsumerSupportWorkflowEmitter.CreateFiles(contract.RootElement).ToArray());
-        Assert.Equal(41, files.Count);
+        Assert.Equal(53, files.Count);
         Assert.Empty(contract.RootElement.GetProperty("newAdmittedDeclarationStableIds").EnumerateArray());
         foreach (var file in files)
         {

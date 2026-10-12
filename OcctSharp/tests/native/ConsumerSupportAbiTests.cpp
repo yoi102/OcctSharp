@@ -1,6 +1,9 @@
 #include "OcctSharp.ConsumerSketch.Generated.h"
 #include "OcctSharp.ConsumerSerialization.Generated.h"
 #include "OcctSharp.ConsumerGuidedPreparation.Generated.h"
+#include "OcctSharp.ConsumerAuthoringReports.Generated.h"
+#include "OcctSharp.DefeatureTopologyHistory.Generated.h"
+#include "../Visualization/OcctSharp.ConsumerInitialDisplay.Generated.h"
 #include "../Visualization/OcctSharp.ConsumerViewerSources.Generated.h"
 #include <cstddef>
 #include <type_traits>
@@ -21,4 +24,14 @@ static_assert(offsetof(OcctSharp_SerializedOccurrenceRow, native_path_token_equa
 static_assert(offsetof(OcctSharp_SerializedOccurrenceRow, reserved) == 36);
 static_assert(std::is_standard_layout_v<OcctSharp_SketchExpressionNode>);
 static_assert(std::is_standard_layout_v<OcctSharp_SerializedOccurrenceRow>);
+static_assert(sizeof(OcctSharp_AuthoringCopyInfo) == 16);
+static_assert(sizeof(OcctSharp_AuthoringCopyArgumentInfo) == 16);
+static_assert(sizeof(OcctSharp_AuthoringCopyRowInfo) == 32);
+static_assert(offsetof(OcctSharp_AuthoringCopyRowInfo, target_index) == 12);
+static_assert(offsetof(OcctSharp_AuthoringCopyRowInfo, issues) == 28);
+static_assert(sizeof(OcctSharp_AuthoringHistoryDomainInfo) == 16);
+static_assert(sizeof(OcctSharp_AuthoringHistoryDomainRowInfo) == 48);
+static_assert(offsetof(OcctSharp_AuthoringHistoryDomainRowInfo, target_final_index) == 32);
+static_assert(offsetof(OcctSharp_AuthoringHistoryDomainRowInfo, reserved) == 44);
+static_assert(std::is_standard_layout_v<OcctSharp_AuthoringHistoryDomainRowInfo>);
 int main() { return 0; }

@@ -15,6 +15,8 @@ internal sealed class BatchAUVisibleWindow : IDisposable
     internal readonly nint Handle;
     readonly int screenX,screenY;
     readonly BatchAUDesktopCapture desktop;
+    int diagnosticFrame;
+    int sentInputDepth;
     internal Exception? InputError { get; set; }
     internal Action<uint,int,int>? RawInput;
     internal Action? RawPaint;
@@ -27,7 +29,9 @@ internal sealed class BatchAUVisibleWindow : IDisposable
         // for this test window and restore the thread's power request on disposal.
         _=SetThreadExecutionState(0x80000003);
         var monitor=new MonitorInfo{Size=(uint)Marshal.SizeOf<MonitorInfo>()};
-        if(!GetMonitorInfo(MonitorFromWindow(GetForegroundWindow(),2),ref monitor))throw new InvalidOperationException("Cannot locate active monitor.");
+        // Keep acceptance windows on the primary display. Following an unrelated
+        // foreground window can switch a test mid-suite onto an inactive display.
+        if(!GetMonitorInfo(MonitorFromWindow(0,1),ref monitor))throw new InvalidOperationException("Cannot locate primary monitor.");
         screenX=monitor.Work.Left+50;screenY=monitor.Work.Top+50;
         desktop=new(screenX,screenY);
         callback=Route;
@@ -41,6 +45,11 @@ internal sealed class BatchAUVisibleWindow : IDisposable
     }
     nint Route(nint hwnd,uint message,nuint wp,nint lp)
     {
+        if(message is 0x201 or 0x200 or 0x202 && Environment.GetEnvironmentVariable("OCCTSHARP_VISIBLE_FRAME_DIAGNOSTICS") is {} diagnostics)
+        {
+            Directory.CreateDirectory(diagnostics);
+            File.AppendAllText(Path.Combine(diagnostics,"window-input.jsonl"),System.Text.Json.JsonSerializer.Serialize(new{className,hwnd=(long)hwnd,message,x=(short)((long)lp&0xffff),y=(short)(((long)lp>>16)&0xffff),origin=sentInputDepth>0?"test":"desktop",time=DateTimeOffset.UtcNow})+Environment.NewLine);
+        }
         if(RawInput is {} input && message is 0x201 or 0x200 or 0x202){try{input(message,(short)((long)lp&0xffff),(short)(((long)lp>>16)&0xffff));}catch(Exception e){InputError=e;}return 0;}
         if(RawPaint is {} rawPaint && message==0xf){BeginPaint(hwnd,out var state);try{rawPaint();}catch(Exception e){InputError=e;}finally{EndPaint(hwnd,ref state);}return 0;}
 #if !DIRECT_MODULE_CONSUMER
@@ -65,7 +74,7 @@ internal sealed class BatchAUVisibleWindow : IDisposable
         return DefWindowProc(hwnd,message,wp,lp);
     }
     internal void Mouse(uint message,int x,int y,bool down=false)
-    {SendMessage(Handle,message,down?1u:0u,(nint)((y<<16)|(x&0xffff)));if(InputError is {} e)throw new InvalidOperationException("Actual HWND input route failed.",e);}
+    {sentInputDepth++;try{SendMessage(Handle,message,down?1u:0u,(nint)((y<<16)|(x&0xffff)));}finally{sentInputDepth--;}if(InputError is {} e)throw new InvalidOperationException("Actual HWND input route failed.",e);}
     internal void Resize(int width,int height){var frame=new Rect{Right=width,Bottom=height};AdjustWindowRectEx(ref frame,WindowStyle,false,8);SetWindowPos(Handle,-1,screenX,screenY,frame.Right-frame.Left,frame.Bottom-frame.Top,0x40);}
     internal byte[] Capture()
     {
@@ -78,7 +87,17 @@ internal sealed class BatchAUVisibleWindow : IDisposable
         _=DwmGetWindowAttribute(Handle,14,out int cloaked,4);GetWindowDisplayAffinity(Handle,out uint affinity);
         string? evidence=Environment.GetEnvironmentVariable("OCCTSHARP_BATCH_AU_EVIDENCE");
         if(!string.IsNullOrWhiteSpace(evidence)){Directory.CreateDirectory(evidence);var input=OpenInputDesktop(0,false,1);try{File.WriteAllText(Path.Combine(evidence,"window-state.json"),System.Text.Json.JsonSerializer.Serialize(new{hwnd=(long)Handle,point.X,point.Y,cloaked,affinity,visible=IsWindowVisible(Handle),foreground=(long)GetForegroundWindow(),process=Environment.ProcessId,station=DesktopName(GetProcessWindowStation()),desktop=DesktopName(GetThreadDesktop(GetCurrentThreadId())),inputDesktop=DesktopName(input)}));}finally{if(input!=0)CloseDesktop(input);}}
-        return desktop.Capture(point.X,point.Y,Size,Size);
+        byte[] pixels=desktop.Capture(point.X,point.Y,Size,Size);
+        // Failure diagnosis records the exact composited frame. It does not
+        // redraw, send extra input or change acceptance assertions.
+        if(Environment.GetEnvironmentVariable("OCCTSHARP_VISIBLE_FRAME_DIAGNOSTICS") is {} diagnostics)
+        {
+            string directory=Path.Combine(diagnostics,className);Directory.CreateDirectory(directory);
+            string name=(++diagnosticFrame).ToString("D3",System.Globalization.CultureInfo.InvariantCulture);
+            SavePng(Path.Combine(directory,name+".png"),pixels);
+            File.WriteAllText(Path.Combine(directory,name+".json"),System.Text.Json.JsonSerializer.Serialize(new{hwnd=(long)Handle,point.X,point.Y,cloaked,affinity,visible=IsWindowVisible(Handle),foreground=(long)GetForegroundWindow(),process=Environment.ProcessId}));
+        }
+        return pixels;
     }
     internal static int Changed(byte[] a,byte[] b)=>Enumerable.Range(0,a.Length/4).Count(i=>a[i*4]!=b[i*4]||a[i*4+1]!=b[i*4+1]||a[i*4+2]!=b[i*4+2]);
     internal static void PumpOnce(){for(int i=0;i<32&&PeekMessage(out var message,0,0,0,1);i++){TranslateMessage(ref message);DispatchMessage(ref message);}}

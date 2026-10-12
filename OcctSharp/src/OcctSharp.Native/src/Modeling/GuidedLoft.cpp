@@ -19,7 +19,8 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_guided_loft(const OcctSharp_ShapeHandl
     Require(o.reserved == 0 && count >= 2 && count <= 128 && o.maximum_degree >= 2 && o.maximum_degree <= 25
       && o.continuity >= 0 && o.continuity <= 2 && o.parameterization >= 0 && o.parameterization <= 2, "Invalid loft controls.");
     Positive(o.weight_1); Positive(o.weight_2); Positive(o.weight_3);
-    InputGraph graph(inputs, count); auto result = std::make_unique<OcctSharp_FeatureResultHandle>();
+    InputGraph graph(inputs, count, true); auto result = std::make_unique<OcctSharp_FeatureResultHandle>();
+    result->AuthoringCopy = graph.CopyReport;
     OcctSharp_AuthoringInfo state{}; state.continuity_limit = -1;
     try {
       BRepOffsetAPI_ThruSections builder(o.solid != 0, o.ruled != 0, o.tolerance);
@@ -67,16 +68,17 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_guided_loft(const OcctSharp_ShapeHandl
             const auto* corrected = o.compatibility ? compatibility.Generated().Seek(original) : nullptr;
             if (corrected) candidates = *corrected; else candidates.Append(original);
             for (const auto& candidate : candidates) {
-              for (const auto& generated : builder.Generated(candidate)) { Add(*result, generated, 1, source, i - 1, original.ShapeType()); mapped = true; }
-              for (const auto& modified : builder.Modified(candidate)) { Add(*result, modified, 0, source, i - 1, original.ShapeType()); mapped = true; }
+              for (const auto& generated : builder.Generated(candidate)) { Add(*result, generated, 1, source, i - 1, original.ShapeType(), original); mapped = true; }
+              for (const auto& modified : builder.Modified(candidate)) { Add(*result, modified, 0, source, i - 1, original.ShapeType(), original); mapped = true; }
             }
-            if (!mapped) Add(*result, {}, 5, source, i - 1, original.ShapeType());
+            if (!mapped) Add(*result, {}, 5, source, i - 1, original.ShapeType(), original);
           }
-          Add(*result, working(source + 1), 6, source, 0, graph.At(source).ShapeType());
+          Add(*result, working(source + 1), 6, source, 0, graph.At(source).ShapeType(), graph.At(source));
         }
         state.section_count = working.Length(); result->Message = "Explicit compatible working sections and composed exact edge history are copied; original inputs are unchanged.";
       } else result->Message = "OCCT loft did not complete.";
     } catch (const Standard_Failure& error) { state.done = 0; result->Message = error.GetMessageString(); }
+    FinishDomains(graph, *result);
     Finish(*result, state); *output = RegisterFeatureResult(std::move(result)); *info = state;
   });
 }

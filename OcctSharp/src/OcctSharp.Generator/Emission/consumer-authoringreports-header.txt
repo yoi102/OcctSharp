@@ -1,0 +1,53 @@
+#pragma once
+#include "OcctSharp.Native.Authoring.h"
+#ifdef __cplusplus
+extern "C" {
+#endif
+/* Version 1 describes source/copy argument membership by IsSame. TopExp maps
+   collapse orientation/shared internal occurrences; no occurrence or final-result proof.
+   Issues: missing=1, outside argument=2, kind mismatch=4, original reused=8,
+   multiple source arguments=16, multiple target arguments=32. */
+typedef struct OcctSharp_AuthoringCopyInfo {
+  int32_t schema_version, argument_count, row_count, reserved;
+} OcctSharp_AuthoringCopyInfo;
+typedef struct OcctSharp_AuthoringCopyArgumentInfo {
+  int32_t source_count, target_count, source_root_kind, target_root_kind;
+} OcctSharp_AuthoringCopyArgumentInfo;
+typedef struct OcctSharp_AuthoringCopyRowInfo {
+  int32_t argument_index, source_index, source_kind, target_index, target_kind,
+    source_memberships, target_memberships, issues;
+} OcctSharp_AuthoringCopyRowInfo;
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_authoring_copy_report_info(
+  const OcctSharp_FeatureResultHandle* result, OcctSharp_AuthoringCopyInfo* info);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_authoring_copy_report_argument(
+  const OcctSharp_FeatureResultHandle* result, int32_t index, OcctSharp_AuthoringCopyArgumentInfo* info);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_authoring_copy_report_row(
+  const OcctSharp_FeatureResultHandle* result, int32_t index, OcctSharp_AuthoringCopyRowInfo* info);
+
+/* History domain version 1: native source membership is in the captured copied
+   input maps, final target membership is checked after final-result replacement.
+   Source issues: no identity=1, invalid argument=2, outside copied argument=4,
+   kind mismatch=8, multiple arguments=16, legacy index differs=32 (informative).
+   Target issues: no shape=1, no final result=2, outside final result=4.
+   Neither TopExp membership nor indices prove complete occurrence paths. */
+typedef struct OcctSharp_AuthoringHistoryDomainInfo {
+  int32_t schema_version, row_count, final_topology_count, source_argument_count;
+} OcctSharp_AuthoringHistoryDomainInfo;
+typedef struct OcctSharp_AuthoringHistoryDomainRowInfo {
+  int32_t history_index, source_argument, legacy_source_index, source_kind,
+    copy_target_index, source_memberships, source_issues, target_kind,
+    target_final_index, target_issues, kind, reserved;
+} OcctSharp_AuthoringHistoryDomainRowInfo;
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_authoring_history_domain_info(
+  const OcctSharp_FeatureResultHandle* result, OcctSharp_AuthoringHistoryDomainInfo* info);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_authoring_history_domain_row(
+  const OcctSharp_FeatureResultHandle* result, int32_t index, OcctSharp_AuthoringHistoryDomainRowInfo* info);
+
+#ifdef __cplusplus
+}
+static_assert(sizeof(OcctSharp_AuthoringCopyInfo) == 16);
+static_assert(sizeof(OcctSharp_AuthoringCopyArgumentInfo) == 16);
+static_assert(sizeof(OcctSharp_AuthoringCopyRowInfo) == 32);
+static_assert(sizeof(OcctSharp_AuthoringHistoryDomainInfo) == 16);
+static_assert(sizeof(OcctSharp_AuthoringHistoryDomainRowInfo) == 48);
+#endif

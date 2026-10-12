@@ -1,0 +1,9 @@
+namespace OcctSharp;
+internal static class ConsumerAuthoringRuntime
+{
+    internal static void Require()
+    {
+        if (OcctRuntime.Info.AbiVersion.Minor < 118)
+            throw new NotSupportedException("Input-copy and history-domain reports require native ABI 1.118 or later.");
+    }
+}

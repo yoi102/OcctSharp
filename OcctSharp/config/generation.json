@@ -3585,5 +3585,14 @@
   ],
   "consumerSupportWorkflows": [
     "exact-consumer-v1"
+  ],
+  "modelingSupportWorkflows": [
+    "defeature-history-v1"
+  ],
+  "exchangeSupportWorkflows": [
+    "step-exact-offset-v1"
+  ],
+  "inspectionSupportWorkflows": [
+    "periodic-exact-distance-v1"
   ]
 }

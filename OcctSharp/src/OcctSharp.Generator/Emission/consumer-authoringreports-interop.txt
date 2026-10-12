@@ -1,0 +1,35 @@
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+namespace OcctSharp.Interop;
+[StructLayout(LayoutKind.Sequential)]
+internal struct AuthoringCopyInfoRaw { internal int SchemaVersion, ArgumentCount, RowCount, Reserved; }
+[StructLayout(LayoutKind.Sequential)]
+internal struct AuthoringCopyArgumentRaw { internal int SourceCount, TargetCount, SourceRootKind, TargetRootKind; }
+[StructLayout(LayoutKind.Sequential)]
+internal struct AuthoringCopyRowRaw
+{ internal int ArgumentIndex, SourceIndex, SourceKind, TargetIndex, TargetKind, SourceMemberships, TargetMemberships, Issues; }
+[StructLayout(LayoutKind.Sequential)]
+internal struct AuthoringHistoryDomainInfoRaw
+{ internal int SchemaVersion, RowCount, FinalTopologyCount, SourceArgumentCount; }
+[StructLayout(LayoutKind.Sequential)]
+internal struct AuthoringHistoryDomainRowRaw
+{ internal int HistoryIndex, SourceArgument, LegacySourceIndex, SourceKind, CopyTargetIndex, SourceMemberships,
+    SourceIssues, TargetKind, TargetFinalIndex, TargetIssues, Kind, Reserved; }
+internal static partial class NativeMethods
+{
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_authoring_history_domain_info")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus AuthoringHistoryDomainInfo(FeatureResultHandle result, out AuthoringHistoryDomainInfoRaw info);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_authoring_history_domain_row")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus AuthoringHistoryDomainRow(FeatureResultHandle result, int index, out AuthoringHistoryDomainRowRaw info);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_authoring_copy_report_info")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus AuthoringCopyReportInfo(FeatureResultHandle result, out AuthoringCopyInfoRaw info);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_authoring_copy_report_argument")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus AuthoringCopyReportArgument(FeatureResultHandle result, int index, out AuthoringCopyArgumentRaw info);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_authoring_copy_report_row")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus AuthoringCopyReportRow(FeatureResultHandle result, int index, out AuthoringCopyRowRaw info);
+}

@@ -1,0 +1,11 @@
+#pragma once
+#include "OcctSharp.Native.h"
+#ifdef __cplusplus
+extern "C" {
+#endif
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_defeature_topology_history(
+  const OcctSharp_ShapeHandle* source, const int32_t* face_indices, int32_t face_count,
+  int32_t unify_result, OcctSharp_FeatureResultHandle** output);
+#ifdef __cplusplus
+}
+#endif

@@ -1,0 +1,191 @@
+#pragma once
+#include "OcctSharp.Native.Authoring.h"
+#include "Modeling/Features.hxx"
+#include "OcctSharp.ConsumerAuthoringCopyData.Generated.hxx"
+#include <Standard_NoSuchObject.hxx>
+#include "Runtime/Error.hxx"
+#include "Runtime/Shape.hxx"
+#include <BRepBuilderAPI_Copy.hxx>
+#include <BRepCheck_Analyzer.hxx>
+#include <BRep_Tool.hxx>
+#include <BRep_Builder.hxx>
+#include <TopExp.hxx>
+#include <NCollection_IndexedMap.hxx>
+#include <TopTools_ShapeMapHasher.hxx>
+#include <TopoDS.hxx>
+#include <TopoDS_Compound.hxx>
+#include <gp_Dir.hxx>
+#include <gp_Pnt.hxx>
+#include <cmath>
+#include <string>
+#include <vector>
+
+namespace OcctSharp::Native::Authoring {
+using ShapeMap = NCollection_IndexedMap<TopoDS_Shape, TopTools_ShapeMapHasher>;
+inline void Require(bool condition, const char* message) {
+  if (!condition) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, message);
+}
+inline void Positive(double value) { Require(std::isfinite(value) && value > 0, "Authoring tolerances must be finite and positive."); }
+inline void Flag(int flag) { Require(flag == 0 || flag == 1, "A Boolean flag is invalid."); }
+inline gp_Pnt Point(OcctSharp_Xyz value) {
+  Require(std::isfinite(value.x) && std::isfinite(value.y) && std::isfinite(value.z), "Authoring coordinates must be finite.");
+  return gp_Pnt(value.x, value.y, value.z);
+}
+inline gp_Dir Direction(OcctSharp_Xyz value) { return gp_Dir(Point(value).XYZ()); }
+inline ShapeMap Map(const TopoDS_Shape& shape) {
+  ShapeMap result; TopExp::MapShapes(shape, result); return result;
+}
+// A single copy operation preserves shared TShapes and face/pcurve dependencies.
+struct InputGraph {
+  std::vector<TopoDS_Shape> Shapes;
+  std::shared_ptr<OcctSharp_AuthoringCopyData> CopyReport;
+  std::vector<ShapeMap> CopiedDomains;
+  explicit InputGraph(const OcctSharp_ShapeHandle* const* inputs, int count, bool captureCopy = false) {
+    Require(inputs != nullptr && count >= 1 && count <= 512, "Authoring requires one to 512 input shapes.");
+    TopoDS_Compound compound; BRep_Builder builder; builder.MakeCompound(compound);
+    for (int i = 0; i < count; ++i) {
+      ValidateUsableShape(inputs[i]);
+      const auto& source = inputs[i]->Value;
+      const bool wasFree = source.Free();
+      // TopoDS_Builder::Add freezes the component TShape, even in a temporary
+      // compound. Restore that flag on both paths so capturing never edits inputs.
+      try { builder.Add(compound, source); }
+      catch (...) { source.TShape()->Free(wasFree); throw; }
+      source.TShape()->Free(wasFree);
+    }
+    BRepBuilderAPI_Copy copy(compound, true, false);
+    Require(copy.IsDone(), "The authoring input graph could not be copied.");
+    for (int i = 0; i < count; ++i) {
+      auto shape = copy.ModifiedShape(inputs[i]->Value);
+      Require(!shape.IsNull(), "An input has no exact copy correspondence.");
+      shape.Orientation(inputs[i]->Value.Orientation()); Shapes.push_back(shape);
+    }
+    if (captureCopy) {
+      auto report = std::make_shared<OcctSharp_AuthoringCopyData>();
+      std::vector<ShapeMap> sources, targets;
+      ShapeMap sourceUnion, targetUnion;
+      std::vector<int> sourceMemberships, targetMemberships;
+      size_t rowCount = 0;
+      auto countMembership = [](const ShapeMap& domain, ShapeMap& all, std::vector<int>& memberships) {
+        for (int i = 1; i <= domain.Extent(); ++i) {
+          int index = all.Add(domain(i));
+          if (index > static_cast<int>(memberships.size())) memberships.push_back(0);
+          ++memberships[index - 1];
+        }
+      };
+      for (int argument = 0; argument < count; ++argument) {
+        sources.push_back(Map(inputs[argument]->Value)); targets.push_back(Map(Shapes[argument]));
+        const auto& source = sources.back(); const auto& target = targets.back();
+        rowCount += source.Extent();
+        Require(rowCount <= 1000000 && target.Extent() <= 1000000, "Authoring copy domains exceed their bounded limit.");
+        countMembership(source, sourceUnion, sourceMemberships);
+        countMembership(target, targetUnion, targetMemberships);
+        report->Arguments.push_back({source.Extent(), target.Extent(),
+          inputs[argument]->Value.ShapeType(), Shapes[argument].ShapeType()});
+      }
+      report->Rows.reserve(rowCount);
+      for (int argument = 0; argument < count; ++argument) {
+        const auto& source = sources[argument]; const auto& target = targets[argument];
+        for (int i = 1; i <= source.Extent(); ++i) {
+          const auto& original = source(i);
+          TopoDS_Shape copied;
+          try { copied = copy.ModifiedShape(original); }
+          catch (const Standard_NoSuchObject&) { /* Explicit missing relation, never infer a target. */ }
+          const int sourceCount = sourceMemberships[sourceUnion.FindIndex(original) - 1];
+          int targetIndex = -1, targetKind = -1, targetCount = 0, issues = 0;
+          if (sourceCount > 1) issues |= 16;
+          if (copied.IsNull()) issues |= 1;
+          else {
+            targetKind = copied.ShapeType(); targetIndex = target.FindIndex(copied) - 1;
+            const int unionIndex = targetUnion.FindIndex(copied);
+            targetCount = unionIndex > 0 ? targetMemberships[unionIndex - 1] : 0;
+            if (targetIndex < 0) issues |= 2;
+            if (targetKind != original.ShapeType()) issues |= 4;
+            if (sourceUnion.Contains(copied)) issues |= 8;
+            if (targetCount > 1) issues |= 32;
+          }
+          report->Rows.push_back({argument, i - 1, original.ShapeType(), targetIndex,
+            targetKind, sourceCount, targetCount, issues});
+        }
+      }
+      CopiedDomains = std::move(targets);
+      CopyReport = std::move(report);
+    }
+  }
+  const TopoDS_Shape& At(int index) const {
+    Require(index >= 0 && index < static_cast<int>(Shapes.size()), "An input shape index is out of range."); return Shapes[index];
+  }
+  const TopoDS_Shape& Typed(int index, TopAbs_ShapeEnum kind) const {
+    const auto& shape = At(index); Require(shape.ShapeType() == kind, "An authoring shape has an incorrect topology kind."); return shape;
+  }
+};
+inline void Add(OcctSharp_FeatureResultHandle& output, const TopoDS_Shape& shape, int kind,
+  int source = -1, int subshape = -1, int sourceKind = -1, const TopoDS_Shape& authoringSource = {}) {
+  Require(output.History.size() < 1000000, "Authoring history exceeds the bounded result limit.");
+  output.History.push_back({source, kind, shape, subshape, sourceKind, authoringSource});
+}
+template<class Algorithm> void History(Algorithm& algorithm, const InputGraph& graph,
+  OcctSharp_FeatureResultHandle& output) {
+  for (int source = 0; source < static_cast<int>(graph.Shapes.size()); ++source) {
+    const auto topology = Map(graph.Shapes[source]);
+    for (int i = 1; i <= topology.Extent(); ++i) {
+      const auto& shape = topology(i); bool mapped = false;
+      for (const auto& generated : algorithm.Generated(shape)) {
+        Add(output, generated, 1, source, i - 1, shape.ShapeType(), shape); mapped = true;
+      }
+      for (const auto& modified : algorithm.Modified(shape)) {
+        Add(output, modified, 0, source, i - 1, shape.ShapeType(), shape); mapped = true;
+      }
+      if (!mapped) Add(output, {}, 5, source, i - 1, shape.ShapeType(), shape);
+    }
+  }
+}
+inline void FinishDomains(const InputGraph& graph, OcctSharp_FeatureResultHandle& output) {
+  if (!graph.CopyReport) return;
+  auto report = std::make_shared<OcctSharp_AuthoringHistoryDomainData>();
+  ShapeMap finalTopology;
+  if (!output.Result.IsNull()) finalTopology = Map(output.Result);
+  Require(finalTopology.Extent() <= 1000000 && output.History.size() <= 1000000,
+    "Authoring History domains exceed their bounded limit.");
+  report->Info = {1, static_cast<int32_t>(output.History.size()), finalTopology.Extent(),
+    static_cast<int32_t>(graph.CopiedDomains.size())};
+  report->Rows.reserve(output.History.size());
+  for (int i = 0; i < static_cast<int>(output.History.size()); ++i) {
+    const auto& item = output.History[i];
+    int sourceIndex = -1, sourceMemberships = 0, sourceIssues = 0;
+    if (item.AuthoringSource.IsNull()) sourceIssues |= 1;
+    else {
+      for (const auto& domain : graph.CopiedDomains)
+        if (domain.Contains(item.AuthoringSource)) ++sourceMemberships;
+      if (item.SourceIndex < 0 || item.SourceIndex >= static_cast<int>(graph.CopiedDomains.size())) sourceIssues |= 2;
+      else {
+        sourceIndex = graph.CopiedDomains[item.SourceIndex].FindIndex(item.AuthoringSource) - 1;
+        if (sourceIndex < 0) sourceIssues |= 4;
+        else if (sourceIndex != item.SubshapeIndex) sourceIssues |= 32;
+      }
+      if (item.SourceKind != item.AuthoringSource.ShapeType()) sourceIssues |= 8;
+      if (sourceMemberships > 1) sourceIssues |= 16;
+    }
+    int targetKind = -1, finalIndex = -1, targetIssues = 0;
+    if (output.Result.IsNull()) targetIssues |= 2;
+    if (item.Shape.IsNull()) targetIssues |= 1;
+    else {
+      targetKind = item.Shape.ShapeType();
+      if (!output.Result.IsNull()) {
+        finalIndex = finalTopology.FindIndex(item.Shape) - 1;
+        if (finalIndex < 0) targetIssues |= 4;
+      }
+    }
+    report->Rows.push_back({i, item.SourceIndex, item.SubshapeIndex, item.SourceKind,
+      sourceIndex, sourceMemberships, sourceIssues, targetKind, finalIndex, targetIssues, item.Kind, 0});
+  }
+  output.AuthoringDomains = std::move(report);
+}
+inline void Finish(OcctSharp_FeatureResultHandle& output, OcctSharp_AuthoringInfo& info) {
+  info.history_count = static_cast<int>(output.History.size());
+  info.valid = !output.Result.IsNull() && BRepCheck_Analyzer(output.Result).IsValid();
+  info.solid = !output.Result.IsNull() && output.Result.ShapeType() == TopAbs_SOLID;
+  output.Info.succeeded = info.done; output.Info.result_is_valid = info.valid;
+  output.Info.generated_count = info.history_count;
+}
+}

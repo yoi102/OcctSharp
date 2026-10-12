@@ -6,6 +6,18 @@ if(NOT WIN32 OR NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
   message(FATAL_ERROR "The initial OcctSharp baseline supports Windows x64 only.")
 endif()
 
+set(OCCTSHARP_DEPENDENCY_PROVIDER "precompiled" CACHE STRING "precompiled or vcpkg")
+set_property(CACHE OCCTSHARP_DEPENDENCY_PROVIDER PROPERTY STRINGS precompiled vcpkg)
+
+if(OCCTSHARP_DEPENDENCY_PROVIDER STREQUAL "vcpkg")
+  if(NOT VCPKG_TARGET_TRIPLET STREQUAL "x64-windows")
+    message(FATAL_ERROR "The pinned vcpkg provider requires x64-windows.")
+  endif()
+  find_package(OpenCASCADE 8.0.1 EXACT CONFIG REQUIRED)
+  if(NOT TARGET TKD3DHost)
+    message(FATAL_ERROR "Use the pinned OcctSharp overlay with USE_D3D enabled.")
+  endif()
+elseif(OCCTSHARP_DEPENDENCY_PROVIDER STREQUAL "precompiled")
 if(NOT DEFINED OCCT_ROOT OR OCCT_ROOT STREQUAL "")
   message(FATAL_ERROR "OCCT_ROOT must point to the opencascade-8.0.1-vc14-64 directory.")
 endif()
@@ -32,7 +44,10 @@ find_package(
   COMPONENTS FoundationClasses ModelingData ModelingAlgorithms Visualization ApplicationFramework DataExchange
   PATHS "${OCCT_ROOT_NORMALIZED}/cmake"
   NO_DEFAULT_PATH)
+else()
+  message(FATAL_ERROR "Unknown OCCTSHARP_DEPENDENCY_PROVIDER.")
+endif()
 
-set(OCCTSHARP_NATIVE_OUTPUT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/artifacts/native")
+set(OCCTSHARP_NATIVE_OUTPUT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/artifacts/native" CACHE PATH "Native runtime output root")
 
 add_subdirectory(src/OcctSharp.Native)

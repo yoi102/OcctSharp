@@ -263,12 +263,19 @@ TopoDS_Shape PartitionKnotSpans(const TopoDS_Shape& shape,
 struct Moments
 {
   std::array<double, 10> value{};
+  std::array<double, 10> correction{};
   std::array<double, 10> error{};
   void Add(const Moments& other, const double weight = 1)
   {
     for (size_t i = 0; i < value.size(); ++i)
     {
-      value[i] += weight * other.value[i];
+      // Carry each child integral's compensated remainder into the next
+      // quadrature level, rather than rounding it away at every boundary.
+      const double term = weight * (other.value[i] - other.correction[i]);
+      const double adjusted = term - correction[i];
+      const double next = value[i] + adjusted;
+      correction[i] = (next - value[i]) - adjusted;
+      value[i] = next;
       error[i] += std::abs(weight) * other.error[i];
     }
   }

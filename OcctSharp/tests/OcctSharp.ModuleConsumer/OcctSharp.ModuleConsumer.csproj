@@ -8,6 +8,9 @@
     <OcctSharpPackageVersion Condition="'$(OcctSharpPackageVersion)' == ''">8.0.1-preview.25</OcctSharpPackageVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="../Shared/Preview85ConsumerWorkflow.cs" Link="Shared/Preview85ConsumerWorkflow.cs" />
+    <None Include="../OcctSharp.Runtime.Tests/Fixtures/b18-exact-step/*.brep" Link="Fixtures/b18-exact-step/%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <None Include="../OcctSharp.Runtime.Tests/Fixtures/b18-periodic-interior/*.brep" Link="Fixtures/b18-periodic-interior/%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
     <Compile Include="../Shared/BatchCEExchangeWorkflow.cs" Link="Shared/BatchCEExchangeWorkflow.cs" />
     <None Include="../Fixtures/OwnedMeshResources/**/*" Link="Fixtures/OwnedMeshResources/%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
 

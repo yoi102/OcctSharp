@@ -14,6 +14,9 @@ public sealed record DiscoveryConfiguration(
 
     public IReadOnlyList<string> ViewerSupportWorkflows { get; init; } = [];
     public IReadOnlyList<string> ConsumerSupportWorkflows { get; init; } = [];
+    public IReadOnlyList<string> ModelingSupportWorkflows { get; init; } = [];
+    public IReadOnlyList<string> ExchangeSupportWorkflows { get; init; } = [];
+    public IReadOnlyList<string> InspectionSupportWorkflows { get; init; } = [];
 
     public bool AutoGenerationScopes { get; init; }
 

@@ -3,6 +3,12 @@
 - Updated2026-10-12 (Asia/Tokyo).
 - BR–CI18/18 authorized batches frozen local PASS; planned batches remaining0.
 - Final local candidate Preview.84 / ABI1.117 / bridge0.132.0.
+- Active authorized consumer migration/publication: [Preview.85 plan](CADORYX_PUBLIC_PREVIEW85_PLAN.md).
+  Preview.85 / ABI1.118 / bridge0.133.0 implemented:399 outputs,4472 forwarders,220 exact fixtures;
+  Generator410/410, Release Runtime2255/2255, C11 ABI95 headers/25 layouts and API+104/-0 PASS.
+  Debug full attempt1:2244/2255; primary-monitor placement correction focused58/58 PASS; full rerun active.
+  Native exports+9 C/+2 compiler symbols/-0;14 local packages created; clean consumers/remote NOT RUN.
+  [Pinned vcpkg recovery](DEPENDENCY_RECOVERY.md) prepared; clean source restore active, build/runtime NOT RUN.
 - Authority: OcctSharp/artifacts/batch-ci/delivery-result.json. CH Preview.83 packages remain immutable.
 - [Whole-round freeze and remaining work](BATCH_CI_ROUND_FREEZE.md); [continuous plan](NEXT_ROUND_BR_CI_PLAN.md).
 - [Unchanged overall/module accounting](PROGRESS_PREVIEW_83.md):116366 declarations, Emitted28020, Manual598,

@@ -1,0 +1,77 @@
+#include "Modeling/GuidedAuthoring.hxx"
+
+using namespace OcctSharp::Native;
+using namespace OcctSharp::Native::Authoring;
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_authoring_copy_inputs(const OcctSharp_ShapeHandle* const* inputs,
+  int32_t count, OcctSharp_FeatureResultHandle** output) {
+  if (output) *output = nullptr;
+  return Guard([&] {
+    Require(output != nullptr, "The authoring copy output is null."); InputGraph graph(inputs, count, true);
+    auto result = std::make_unique<OcctSharp_FeatureResultHandle>();
+    result->AuthoringCopy = graph.CopyReport;
+    for (int i = 0; i < count; ++i) Add(*result, graph.Shapes[i], 7, i);
+    result->Info.generated_count = count; result->Info.succeeded = 1;
+    *output = RegisterFeatureResult(std::move(result));
+  });
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_authoring_history(const OcctSharp_FeatureResultHandle* result,
+  int32_t index, OcctSharp_AuthoringHistoryInfo* info, OcctSharp_ShapeHandle** shape) {
+  if (shape) *shape = nullptr;
+  return Guard([&] {
+    Require(info != nullptr && shape != nullptr, "An authoring history output is null."); ValidateFeatureResult(result);
+    Require(index >= 0 && index < static_cast<int>(result->History.size()), "History index is out of range.");
+    const auto& item = result->History[index];
+    auto* value = item.Shape.IsNull() ? nullptr : AllocateShape(item.Shape);
+    *info = {item.SourceIndex, item.SubshapeIndex, item.SourceKind, item.Kind}; *shape = value;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_authoring_copy_report_info(
+  const OcctSharp_FeatureResultHandle* result, OcctSharp_AuthoringCopyInfo* info) {
+  if (info) *info = {};
+  return Guard([&] {
+    Require(info != nullptr, "The authoring copy report output is null."); ValidateFeatureResult(result);
+    if (result->AuthoringCopy) *info = {1, static_cast<int32_t>(result->AuthoringCopy->Arguments.size()),
+      static_cast<int32_t>(result->AuthoringCopy->Rows.size()), 0};
+  });
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_authoring_copy_report_argument(
+  const OcctSharp_FeatureResultHandle* result, int32_t index, OcctSharp_AuthoringCopyArgumentInfo* info) {
+  if (info) *info = {};
+  return Guard([&] {
+    Require(info != nullptr, "The authoring copy argument output is null."); ValidateFeatureResult(result);
+    Require(result->AuthoringCopy && index >= 0 && index < static_cast<int>(result->AuthoringCopy->Arguments.size()),
+      "The authoring copy argument index is out of range.");
+    *info = result->AuthoringCopy->Arguments[index];
+  });
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_authoring_copy_report_row(
+  const OcctSharp_FeatureResultHandle* result, int32_t index, OcctSharp_AuthoringCopyRowInfo* info) {
+  if (info) *info = {};
+  return Guard([&] {
+    Require(info != nullptr, "The authoring copy row output is null."); ValidateFeatureResult(result);
+    Require(result->AuthoringCopy && index >= 0 && index < static_cast<int>(result->AuthoringCopy->Rows.size()),
+      "The authoring copy row index is out of range.");
+    *info = result->AuthoringCopy->Rows[index];
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_authoring_history_domain_info(
+  const OcctSharp_FeatureResultHandle* result, OcctSharp_AuthoringHistoryDomainInfo* info) {
+  if (info) *info = {};
+  return Guard([&] {
+    Require(info != nullptr, "The authoring History-domain output is null."); ValidateFeatureResult(result);
+    if (result->AuthoringDomains) *info = result->AuthoringDomains->Info;
+  });
+}
+OcctSharp_Status OCCTSHARP_CALL occtsharp_authoring_history_domain_row(
+  const OcctSharp_FeatureResultHandle* result, int32_t index, OcctSharp_AuthoringHistoryDomainRowInfo* info) {
+  if (info) *info = {};
+  return Guard([&] {
+    Require(info != nullptr, "The authoring History-domain row output is null."); ValidateFeatureResult(result);
+    Require(result->AuthoringDomains && index >= 0 && index < static_cast<int>(result->AuthoringDomains->Rows.size()),
+      "The authoring History-domain row index is out of range.");
+    *info = result->AuthoringDomains->Rows[index];
+  });
+}

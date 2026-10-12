@@ -71,7 +71,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_guided_sweep(const OcctSharp_ShapeHand
     Require(o.frame == 6 || o.contact == 0, "Auxiliary contact requires an auxiliary spine.");
     Require(lawInput == nullptr || (sectionCount == 1 && o.frame != 6), "Homothetic laws require one section and cannot use auxiliary-spine framing.");
     Require(o.contact != 2 || sectionCount == 1, "Border contact computes one automatic scale law and requires exactly one section.");
-    InputGraph graph(inputs, count); const auto spine = TopoDS::Wire(graph.Typed(0, TopAbs_WIRE));
+    InputGraph graph(inputs, count, true); const auto spine = TopoDS::Wire(graph.Typed(0, TopAbs_WIRE));
     ShapeMap orderedVertices;
     for (BRepTools_WireExplorer it(spine); it.More(); it.Next()) orderedVertices.Add(it.CurrentVertex());
     TopoDS_Vertex start, end; TopExp::Vertices(spine, start, end); if (!end.IsNull()) orderedVertices.Add(end);
@@ -101,6 +101,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_guided_sweep(const OcctSharp_ShapeHand
       }
     }
     auto result = std::make_unique<OcctSharp_FeatureResultHandle>();
+    result->AuthoringCopy = graph.CopyReport;
     OcctSharp_AuthoringInfo state{}; state.continuity_limit = o.frame == 6 && o.contact != 0 ? 0 : -1;
     try {
       OcctSharpGenerated::LocalMakePipeShellBuilder builder(spine); builder.SetIsBuildHistory(true); Frame(builder, spine, graph, o);
@@ -146,6 +147,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_guided_sweep(const OcctSharp_ShapeHand
         } else result->Message = "OCCT guided sweep did not complete.";
       }
     } catch (const Standard_Failure& error) { state.done = 0; result->Result.Nullify(); result->Message = error.GetMessageString(); }
+    FinishDomains(graph, *result);
     Finish(*result, state); *output = RegisterFeatureResult(std::move(result)); *info = state;
   });
 }

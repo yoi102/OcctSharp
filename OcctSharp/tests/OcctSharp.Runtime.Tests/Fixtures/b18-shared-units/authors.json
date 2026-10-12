@@ -1,0 +1,45 @@
+{
+  "description": "Three actual representations share one authored manifold solid, with independent mm/inch/metre contexts. Explicit representation names 0/1/2 identify factors; native probe verifies the public ordinal expectation. No fitted geometry.",
+  "files": [
+    {
+      "path": "line-1.000000-0.step",
+      "source": "C:\\Users\\yoiri\\source\\repos\\OcctSharp\\OcctSharp\\artifacts\\cadoryx-exact-offset-step-generated-31-draft-7\\moment-root-runtime-release-1\\line-1.000000-0.step",
+      "sha256": "C6DB814041CB58880CA7A94206A9539B78C2C4061F8B8B0AD4A45B0A50D97A80",
+      "factors": [
+        1,
+        25.4,
+        1000
+      ]
+    },
+    {
+      "path": "line-1.000000-1.step",
+      "source": "C:\\Users\\yoiri\\source\\repos\\OcctSharp\\OcctSharp\\artifacts\\cadoryx-exact-offset-step-generated-31-draft-7\\moment-root-runtime-release-1\\line-1.000000-1.step",
+      "sha256": "2A7915413AC2832C574114DF7D7F5E0F9335185CBB4E9FAD7D46304F55ADE9C0",
+      "factors": [
+        1000,
+        25.4,
+        1
+      ]
+    },
+    {
+      "path": "circle-1.000000-0.step",
+      "source": "C:\\Users\\yoiri\\source\\repos\\OcctSharp\\OcctSharp\\artifacts\\cadoryx-exact-offset-step-generated-31-draft-7\\moment-root-runtime-release-1\\circle-1.000000-0.step",
+      "sha256": "80AE910BC78D85255893837C61CCA61C8EB00BB07D7EB7A389218D59D4D15A89",
+      "factors": [
+        1,
+        25.4,
+        1000
+      ]
+    },
+    {
+      "path": "circle-1.000000-1.step",
+      "source": "C:\\Users\\yoiri\\source\\repos\\OcctSharp\\OcctSharp\\artifacts\\cadoryx-exact-offset-step-generated-31-draft-7\\moment-root-runtime-release-1\\circle-1.000000-1.step",
+      "sha256": "A9AF1FE6CFF3F09820EC9F9139C654A77933D4D77922B7F3731DF903C490D25F",
+      "factors": [
+        1000,
+        25.4,
+        1
+      ]
+    }
+  ]
+}

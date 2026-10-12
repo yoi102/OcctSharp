@@ -13,8 +13,8 @@ internal static class Program
     [STAThread]
     public static int Main(string[] args)
     {
-        bool old=args[0]=="old";var version=OcctRuntime.Info.AbiVersion;
-        if(version.Major!=1 || (old ? version.Minor!=116 : version.Minor<117)) throw new InvalidOperationException("Unexpected actual native ABI: "+version);
+        bool old=args[0]=="old", oldPublic=args[0]=="old-public";var version=OcctRuntime.Info.AbiVersion;
+        if(version.Major!=1 || (old ? version.Minor!=116 : oldPublic ? version.Minor!=117 : version.Minor<118)) throw new InvalidOperationException("Unexpected actual native ABI: "+version);
         var checks=new List<string>();
         void Check(string name, Action action, Type refusal)
         {
@@ -23,6 +23,33 @@ internal static class Program
             if(!old)checks.Add(name);
         }
         using var box=ShapeFactory.CreateBox(1,2,3);
+        if (oldPublic)
+        {
+            void Refused(string name, Action action)
+            {
+                try { action(); }
+                catch (NotSupportedException) { checks.Add(name); return; }
+                throw new InvalidOperationException("Public ABI 1.117 accepted a new ABI 1.118 contract: " + name);
+            }
+            Refused("input copy", () => { using var copy = AuthoringInputCopy.Create([box]); });
+            using var snapshot = RepairSnapshot.Create(box);
+            var face = snapshot.Topology.First(item => item.Kind == ShapeKind.Face).Selection;
+            Refused("defeature history", () => { using var result = DefeatureHistoryModeling.Build(snapshot, [face]); });
+            nint guardWindow=CreateWindowEx(0,"STATIC","Preview85 public ABI guard",0x80000000,-32000,-32000,320,320,0,0,0,0);
+            if(guardWindow==0)throw new InvalidOperationException("Probe HWND failed");
+            try
+            {
+                using var viewer=OcctViewer.Create(guardWindow);
+                Refused("initial display", () => { using var presentation = viewer.DisplayInMode(box, ViewerDisplayMode.Shaded); });
+                using var legacy = viewer.Display(box); viewer.FitAll();
+                if (viewer.Rendering.CaptureColor(new(64,64)).CopyPixels().Length != 64*64*4)
+                    throw new InvalidOperationException("Legacy viewer failed on public ABI 1.117");
+            }
+            finally { _=DestroyWindow(guardWindow); }
+            File.WriteAllText(args[1],JsonSerializer.Serialize(new{state="PASS",oldPublic,actualAbi=version.ToString(),checks}));
+            Console.WriteLine("Public ABI 1.117: new ABI 1.118 contracts refused explicitly; legacy rendering PASS.");
+            return 0;
+        }
         Check("exact sketch",()=>{_ = SketchCurveExpression2d.FromCurve(SketchCurve2d.Segment(default,new(2,0))).Evaluate(.5);},typeof(BadImageFormatException));
         Check("reference graph",()=>{_=BrepReferenceSnapshot.Capture(box);},typeof(NotSupportedException));
         Check("occurrence graph",()=>{_=BrepOccurrenceSnapshot.Capture(box);},typeof(NotSupportedException));

@@ -50,12 +50,13 @@ public sealed partial class GuidedSweepPlan : IDisposable
     public ScalarLawDefinition? ScaleLaw { get; }
     public int SectionCount => sections.Length;
     public int InputCount => inputs.Length;
+    public AuthoringInputCopyReport InputCopy { get; }
     public int? GuideOrSupportInputIndex => secondaryIndex >= 0 ? secondaryIndex : null;
     public IReadOnlyList<GuidedSectionDefinition> Sections => Array.AsReadOnly(sections.Select(s => new GuidedSectionDefinition(
         s.ShapeIndex, s.LocationIndex >= 0 ? s.LocationIndex : null, s.Contact != 0, s.Correction != 0)).ToArray());
     private GuidedSweepPlan(Shape[] inputs, SweepSectionRaw[] sections, int secondary,
-        GuidedSweepOptions options, ScalarLawDefinition? law)
-    { this.inputs = inputs; this.sections = sections; secondaryIndex = secondary; Options = options; ScaleLaw = law; }
+        GuidedSweepOptions options, ScalarLawDefinition? law, AuthoringInputCopyReport inputCopy)
+    { this.inputs = inputs; this.sections = sections; secondaryIndex = secondary; Options = options; ScaleLaw = law; InputCopy = inputCopy; }
     public static GuidedSweepPlan Create(Shape spine, IEnumerable<GuidedSweepSection> sections,
         GuidedSweepOptions? options = null, Shape? guideOrSupport = null, ScalarLawDefinition? scaleLaw = null)
     {
@@ -78,7 +79,7 @@ public sealed partial class GuidedSweepPlan : IDisposable
             if (section.SpineVertex is not null) { location = source.Count; source.Add(section.SpineVertex); }
             raw.Add(new() { ShapeIndex = profile, LocationIndex = location, Contact = section.WithContact ? 1 : 0, Correction = section.WithCorrection ? 1 : 0 });
         }
-        return new(AuthoringBridge.CopyInputs(source), raw.ToArray(), secondary, options, scaleLaw);
+        return new(AuthoringBridge.CopyInputs(source, out var inputCopy), raw.ToArray(), secondary, options, scaleLaw, inputCopy);
     }
     public AuthoringDiagnostics Preflight() { using var result = Execute(0, 2); return result.Diagnostics; }
     /// <summary>OCCT samples an equally spaced count along the spine; no arbitrary station list is implied.</summary>
@@ -106,7 +107,7 @@ public sealed partial class GuidedSweepPlan : IDisposable
                     First = ScaleLaw?.Domain.First ?? 0, Last = ScaleLaw?.Domain.Last ?? 0 };
                 NativeError.ThrowIfFailed(NativeMethods.GuidedSweep(p, length, s, sections.Length, in options,
                     ScaleLaw is null ? null : &law, out AuthoringInfoRaw info, out nint output), "guided_sweep");
-                return AuthoringBridge.Read(Id, output, info);
+                return AuthoringBridge.Read(Id, output, info, InputCopy.TargetDomainId);
             }
         });
     }

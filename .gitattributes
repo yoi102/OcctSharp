@@ -21,3 +21,5 @@ OcctSharp/src/OcctSharp/Generated/** -text whitespace=blank-at-eol,blank-at-eof,
 # CAD fixtures are identity-checked data; retain writer spacing and exact bytes.
 OcctSharp/tests/Fixtures/** -text whitespace=-trailing-space,cr-at-eol
 OcctSharp/tests/**/Fixtures/** -text whitespace=-trailing-space,cr-at-eol
+# Preserve upstream port/patch bytes, including unified-diff context lines.
+OcctSharp/config/dependencies/overlays/opencascade/** -text whitespace=-trailing-space,cr-at-eol

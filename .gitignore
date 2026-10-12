@@ -34,6 +34,18 @@ OcctSharp/reports/*.tmp
 *.pdb
 *.ilk
 *.exp
+*.pch
+*.ipch
+*.idb
+*.ipdb
+*.iobj
+**/CMakeFiles/
+**/CMakeCache.txt
+**/*.tlog/
+OcctSharp/**/*.nupkg
+
+# Compiler object directories; do not ignore *.obj CAD mesh fixtures.
+OcctSharp/**/*.dir/
 
 # OS files
 Thumbs.db

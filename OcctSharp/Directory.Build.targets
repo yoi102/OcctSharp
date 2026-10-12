@@ -1,4 +1,17 @@
 <Project>
+  <!-- The managed modules and single native bridge form one validated family.
+       This target only runs during pack's project-reference version resolution. -->
+  <Target Name="PinOcctSharpPackageFamilyVersions"
+          AfterTargets="_GetProjectReferenceVersions"
+          Condition="'$(IsPackable)' == 'true' and '$(OcctSharpPackageVersion)' != ''">
+    <Error Condition="'@(_ProjectReferencesWithVersions)' != '' and '%(_ProjectReferencesWithVersions.ProjectVersion)' != '$(OcctSharpPackageVersion)'"
+           Text="An OcctSharp package dependency differs from the validated package family version." />
+    <ItemGroup>
+      <_ProjectReferencesWithVersions Update="@(_ProjectReferencesWithVersions)">
+        <ProjectVersion>[$(OcctSharpPackageVersion)]</ProjectVersion>
+      </_ProjectReferencesWithVersions>
+    </ItemGroup>
+  </Target>
   <ItemGroup Condition="'$(CopyOcctSharpNativeRuntime)' == 'true'">
     <_OcctSharpNativeBuildInput Include="$(MSBuildThisFileDirectory)CMakeLists.txt" />
     <_OcctSharpNativeBuildInput Include="$(MSBuildThisFileDirectory)CMakePresets.json" />

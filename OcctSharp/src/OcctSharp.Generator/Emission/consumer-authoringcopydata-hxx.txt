@@ -1,0 +1,14 @@
+#pragma once
+#include "OcctSharp.ConsumerAuthoringReports.Generated.h"
+#include <vector>
+
+// Independently owned values on the existing FeatureResult owner; no shape handles.
+struct OcctSharp_AuthoringCopyData {
+  std::vector<OcctSharp_AuthoringCopyArgumentInfo> Arguments;
+  std::vector<OcctSharp_AuthoringCopyRowInfo> Rows;
+};
+
+struct OcctSharp_AuthoringHistoryDomainData {
+  OcctSharp_AuthoringHistoryDomainInfo Info{};
+  std::vector<OcctSharp_AuthoringHistoryDomainRowInfo> Rows;
+};

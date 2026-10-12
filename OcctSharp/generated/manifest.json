@@ -28166,6 +28166,20 @@
       "outputShard": "WriterDiagnostics"
     },
     {
+      "relativePath": "src/OcctSharp.Native/generated/DataExchange/OcctSharp.ExactStepOffsets.Generated.cpp",
+      "sha256": "FC72ACF3F64B3027B679D9910CD7E0363A9838185D27AE3E8534D63504622A8D",
+      "productModule": "DataExchange",
+      "apiLayer": "Runtime",
+      "outputShard": "ExactStepOffsetSupport"
+    },
+    {
+      "relativePath": "src/OcctSharp.Native/generated/DataExchange/OcctSharp.ExactStepOffsets.Generated.hxx",
+      "sha256": "ECFE320993AD4138DB6985784ACC4614FD1C84CCDEAF5A978F7A48AB00CEC579",
+      "productModule": "DataExchange",
+      "apiLayer": "Runtime",
+      "outputShard": "ExactStepOffsetSupport"
+    },
+    {
       "relativePath": "src/OcctSharp.Native/generated/Documents/OcctSharp.Documents.DirectCollectionPersistence.Generated.hxx",
       "sha256": "F0853DA10D320648324154F9664C481D8630B8E5B5DFFEAFD0B8B02C5819FE7B",
       "productModule": "Documents",
@@ -28936,8 +28950,36 @@
       "outputShard": "SharedHandles.NativeHeader"
     },
     {
+      "relativePath": "src/OcctSharp.Native/generated/Modeling/OcctSharp.ConsumerAuthoringCopyData.Generated.hxx",
+      "sha256": "E4E3B2AF334DB175E92666AC72F7B20DC2D9EE83C2C1E99599136AE76B4686A4",
+      "productModule": "Modeling",
+      "apiLayer": "Runtime",
+      "outputShard": "ExactConsumerSupport"
+    },
+    {
+      "relativePath": "src/OcctSharp.Native/generated/Modeling/OcctSharp.ConsumerAuthoringReports.Generated.h",
+      "sha256": "2EFC65BB2E51A58FD56A44F1B37675B33A8C03B4E10B526BC711B7E4FB10A195",
+      "productModule": "Modeling",
+      "apiLayer": "Runtime",
+      "outputShard": "ExactConsumerSupport"
+    },
+    {
+      "relativePath": "src/OcctSharp.Native/generated/Modeling/OcctSharp.ConsumerGuidedAuthoring.Generated.hxx",
+      "sha256": "78DF99CF951ACE511BCF669FB5ED7A511A7B968267495768CB23F911C8898C22",
+      "productModule": "Modeling",
+      "apiLayer": "Runtime",
+      "outputShard": "ExactConsumerSupport"
+    },
+    {
+      "relativePath": "src/OcctSharp.Native/generated/Modeling/OcctSharp.ConsumerGuidedInputs.Generated.cpp",
+      "sha256": "CE807FC9437707F3F50C1FE43FF98221BF2CA066E2FB89CA5B82202DEC7839E0",
+      "productModule": "Modeling",
+      "apiLayer": "Runtime",
+      "outputShard": "ExactConsumerSupport"
+    },
+    {
       "relativePath": "src/OcctSharp.Native/generated/Modeling/OcctSharp.ConsumerGuidedPreparation.Generated.cpp",
-      "sha256": "6DD803B9CD405F2B7CCF13AA955EBC050F05EE2C70B000EDF2EFDAAC5E13C586",
+      "sha256": "3331F924355499E89F7BC14CA063AF8CC21B52B0B4A0A5E5D8933871765DD4D0",
       "productModule": "Modeling",
       "apiLayer": "Runtime",
       "outputShard": "ExactConsumerSupport"
@@ -29018,6 +29060,20 @@
       "productModule": "Modeling",
       "apiLayer": "Runtime",
       "outputShard": "ExactConsumerSupport"
+    },
+    {
+      "relativePath": "src/OcctSharp.Native/generated/Modeling/OcctSharp.DefeatureTopologyHistory.Generated.cpp",
+      "sha256": "E259B81F0673C2912D91CA93C38C1E6FC7F17FA47612F1D41404DDB4BFC97C42",
+      "productModule": "Modeling",
+      "apiLayer": "Runtime",
+      "outputShard": "DefeatureHistorySupport"
+    },
+    {
+      "relativePath": "src/OcctSharp.Native/generated/Modeling/OcctSharp.DefeatureTopologyHistory.Generated.h",
+      "sha256": "E0F66C75B6412F368B4B22CC692B95E6CA54776FBBC4F6EB853568B6175CDE5F",
+      "productModule": "Modeling",
+      "apiLayer": "Runtime",
+      "outputShard": "DefeatureHistorySupport"
     },
     {
       "relativePath": "src/OcctSharp.Native/generated/Modeling/OcctSharp.Modeling.AssemblyDiagnostics.Generated.cpp",
@@ -29265,6 +29321,20 @@
       "outputShard": "Values.NativeHeader"
     },
     {
+      "relativePath": "src/OcctSharp.Native/generated/Modeling/OcctSharp.PeriodicExactDistance.Generated.cpp",
+      "sha256": "165ACB487F8D8B5D1BAC2F94F4405D48B8ED17A0D1CAFBB08443FA400F40A84B",
+      "productModule": "Modeling",
+      "apiLayer": "Runtime",
+      "outputShard": "PeriodicExactDistanceSupport"
+    },
+    {
+      "relativePath": "src/OcctSharp.Native/generated/Modeling/OcctSharp.PeriodicExactDistance.Generated.hxx",
+      "sha256": "C3F3705CE5AF7B9D3CD45BEE37A9A50C52522EC019B32B6B1A00B04FEE3D375A",
+      "productModule": "Modeling",
+      "apiLayer": "Runtime",
+      "outputShard": "PeriodicExactDistanceSupport"
+    },
+    {
       "relativePath": "src/OcctSharp.Native/generated/Runtime/OcctSharp.Runtime.OwnedSupport.Generated.cpp",
       "sha256": "BBA65E6DEA2EA9F88EF0FBF4C70C793FB0C0A5F31A42A65714DAF49148531826",
       "productModule": "Runtime",
@@ -29284,6 +29354,20 @@
       "productModule": "Runtime",
       "apiLayer": "Runtime",
       "outputShard": "SharedHandles.NativeSupport"
+    },
+    {
+      "relativePath": "src/OcctSharp.Native/generated/Visualization/OcctSharp.ConsumerInitialDisplay.Generated.cpp",
+      "sha256": "F74C81F19744977C166BE57B84B6FCA67FDD850867C4485704FA92F795669DE1",
+      "productModule": "Visualization",
+      "apiLayer": "Runtime",
+      "outputShard": "ExactConsumerSupport"
+    },
+    {
+      "relativePath": "src/OcctSharp.Native/generated/Visualization/OcctSharp.ConsumerInitialDisplay.Generated.h",
+      "sha256": "7159F1853B311A8FFECA5F5440FCF3845A334FB308A25B199BB5C0709BBE1F38",
+      "productModule": "Visualization",
+      "apiLayer": "Runtime",
+      "outputShard": "ExactConsumerSupport"
     },
     {
       "relativePath": "src/OcctSharp.Native/generated/Visualization/OcctSharp.ConsumerOwnedSourceMesh.Generated.hxx",
@@ -29315,7 +29399,7 @@
     },
     {
       "relativePath": "src/OcctSharp.Native/generated/Visualization/OcctSharp.ConsumerViewerSources.Generated.cpp",
-      "sha256": "3A1F74C4B10534273CD9ADAB0628C9EC9F9A5EEF321AB3E8F775A5C484A3B424",
+      "sha256": "C6CC6F1F6BA49EE00A95D7B270AF18792552289C5F0F90690CBACC026538B9B7",
       "productModule": "Visualization",
       "apiLayer": "Runtime",
       "outputShard": "ExactConsumerSupport"
@@ -29641,6 +29725,13 @@
       "productModule": "Xde",
       "apiLayer": "Raw",
       "outputShard": "XdeMetadata"
+    },
+    {
+      "relativePath": "src/OcctSharp/Generated/Consumers/OcctViewer.InitialDisplay.Generated.cs",
+      "sha256": "35CE33F1E314144CA7557B93E0D07DF9BB7953204E03F201F7E274821AF23F1F",
+      "productModule": "Visualization",
+      "apiLayer": "SafeManaged",
+      "outputShard": "ExactConsumerSupport"
     },
     {
       "relativePath": "src/OcctSharp/Generated/Consumers/OcctViewer.Sources.Generated.cs",
@@ -30315,6 +30406,27 @@
       "outputShard": "SharedHandles.ManagedRaw"
     },
     {
+      "relativePath": "src/OcctSharp/Generated/Modeling/AuthoringHistoryDomains.Generated.cs",
+      "sha256": "EE2FF440FB8F3A5EF86B6ED9E7C63BF0B1A6F8625AFA545F3699DF6D0A7FEC0F",
+      "productModule": "Modeling",
+      "apiLayer": "SafeManaged",
+      "outputShard": "ExactConsumerSupport"
+    },
+    {
+      "relativePath": "src/OcctSharp/Generated/Modeling/AuthoringInputCopy.Generated.cs",
+      "sha256": "2323B9AF8313E2D84525FBAD692CFF889BDCE3B59991C26132C347C24B3241E8",
+      "productModule": "Modeling",
+      "apiLayer": "SafeManaged",
+      "outputShard": "ExactConsumerSupport"
+    },
+    {
+      "relativePath": "src/OcctSharp/Generated/Modeling/AuthoringReportsNativeMethods.Generated.cs",
+      "sha256": "3689122FBAEF27555221BEEFC32E319C07F5FE62D363807C3CF5D4955C75C1E8",
+      "productModule": "Modeling",
+      "apiLayer": "SafeManaged",
+      "outputShard": "ExactConsumerSupport"
+    },
+    {
       "relativePath": "src/OcctSharp/Generated/Modeling/BrepOccurrenceSnapshot.Generated.cs",
       "sha256": "A99FBDA9C786BD1F854589DA388F862EC3342D8554B4B9730C77F94A4749DA25",
       "productModule": "Modeling",
@@ -30329,6 +30441,27 @@
       "outputShard": "ExactConsumerSupport"
     },
     {
+      "relativePath": "src/OcctSharp/Generated/Modeling/ConsumerAuthoringRuntime.Generated.cs",
+      "sha256": "B3B788467C89FA2451CAACFDFD24661F6CE852E21A46227DDF68428A7CA12106",
+      "productModule": "Modeling",
+      "apiLayer": "SafeManaged",
+      "outputShard": "ExactConsumerSupport"
+    },
+    {
+      "relativePath": "src/OcctSharp/Generated/Modeling/DefeatureHistory.NativeMethods.Generated.cs",
+      "sha256": "31C7350DD62AA870AFCE21054D4E223F0973D7E204DFF974D5E20D10E6932A52",
+      "productModule": "Modeling",
+      "apiLayer": "Runtime",
+      "outputShard": "DefeatureHistorySupport"
+    },
+    {
+      "relativePath": "src/OcctSharp/Generated/Modeling/DefeatureHistoryModeling.Generated.cs",
+      "sha256": "49F6ECB9EB5FC731AEFD213A9FBAEE4B5EBF777768CC5D0479EB461DB50916E3",
+      "productModule": "Modeling",
+      "apiLayer": "Runtime",
+      "outputShard": "DefeatureHistorySupport"
+    },
+    {
       "relativePath": "src/OcctSharp/Generated/Modeling/GuidedPreparation.Generated.cs",
       "sha256": "17041FB6E08F6139214129C44D41794A02A56F523996915982B73C962E2D46BC",
       "productModule": "Modeling",
@@ -30338,6 +30471,13 @@
     {
       "relativePath": "src/OcctSharp/Generated/Modeling/GuidedPreparationNativeMethods.Generated.cs",
       "sha256": "02A5F00022600FAAFF1FCC4194959B3338FC23425B85A0D1FBB2FCADCC169836",
+      "productModule": "Modeling",
+      "apiLayer": "SafeManaged",
+      "outputShard": "ExactConsumerSupport"
+    },
+    {
+      "relativePath": "src/OcctSharp/Generated/Modeling/InitialDisplayNativeMethods.Generated.cs",
+      "sha256": "66665785726B201D2FDA14FCF47FD30945D64DD073421C0C898DFE9DE22BE553",
       "productModule": "Modeling",
       "apiLayer": "SafeManaged",
       "outputShard": "ExactConsumerSupport"
@@ -30701,12 +30841,44 @@
       "sha256": "6822B9CA2875D9F4CED1A09BBCD440E4E1E62122B841BACFF6DF0B81D2473EBF"
     },
     {
+      "resourceName": "OcctSharp.Generator.Emission.consumer-authoringcopydata-hxx.txt",
+      "sha256": "275E261F519E90D2F125DF306380D3C85351E8BE03F74A7AFA2D8C0803D54C4F"
+    },
+    {
+      "resourceName": "OcctSharp.Generator.Emission.consumer-authoringhistorydomains-managed.txt",
+      "sha256": "6078CFAFDE29F599C007067CAF33A0D8F1698633A75D943C26AA890F519AC71E"
+    },
+    {
+      "resourceName": "OcctSharp.Generator.Emission.consumer-authoringinputcopy-managed.txt",
+      "sha256": "C5202FA88D23D0C3261C8E5105353EA8D81D09D5BCC457666706E7B0F19E1914"
+    },
+    {
+      "resourceName": "OcctSharp.Generator.Emission.consumer-authoringreports-header.txt",
+      "sha256": "A5587082B7DB813B2554459F5271F2E5509E3BDE142A8EC5AC53F50E678341BC"
+    },
+    {
+      "resourceName": "OcctSharp.Generator.Emission.consumer-authoringreports-interop.txt",
+      "sha256": "B8B6A3AE3DFBEE23D8FC837CBFB540DF18B3EE80997D183DFCA646F18119B276"
+    },
+    {
+      "resourceName": "OcctSharp.Generator.Emission.consumer-authoringruntime-managed.txt",
+      "sha256": "C2A3C668FCAD66AD3965BA4CEF951186CDCE88C95C45455F84BF3658EDCEBB3A"
+    },
+    {
       "resourceName": "OcctSharp.Generator.Emission.consumer-brepoccurrencesnapshot-managed.txt",
       "sha256": "AF793D6D39DEA72F8B2AA5DDCECA6006948EB65DF47D8B76FC670866E5F63D6E"
     },
     {
       "resourceName": "OcctSharp.Generator.Emission.consumer-brepreferencesnapshot-managed.txt",
       "sha256": "6ADDB7F9513376B765E5C6A5CA0F0AD85CA9A0613AC25010BA10D46B2AFB4BFA"
+    },
+    {
+      "resourceName": "OcctSharp.Generator.Emission.consumer-guidedauthoring-hxx.txt",
+      "sha256": "B66F564C61CC3F6A5066751CB40996835B93033AD4C3568990CF78FC8DE2A743"
+    },
+    {
+      "resourceName": "OcctSharp.Generator.Emission.consumer-guidedinputs-native.txt",
+      "sha256": "F52D6604E783A8762D5A7E17073659D6A1389684178A14F4DCB8E022AAB3E5F3"
     },
     {
       "resourceName": "OcctSharp.Generator.Emission.consumer-guidedpreparation-header.txt",
@@ -30722,7 +30894,23 @@
     },
     {
       "resourceName": "OcctSharp.Generator.Emission.consumer-guidedpreparation-native.txt",
-      "sha256": "2828857C305FE937563662ACF0C73B1892EE172F534E738DA499929C6AA26DE4"
+      "sha256": "AAB077645E3A8BCACDBD7B7332641FA9C9E3A59332D5E9879E557AA4EFCB8CE0"
+    },
+    {
+      "resourceName": "OcctSharp.Generator.Emission.consumer-initialdisplay-header.txt",
+      "sha256": "26778DEB7E43FF0CC5ED482B7451FBC7DCAFA21C0ADB90BD6D4B0D61FA9A1225"
+    },
+    {
+      "resourceName": "OcctSharp.Generator.Emission.consumer-initialdisplay-interop.txt",
+      "sha256": "778313046E90B842ABC1959F76CC3EED6E10CD0C8455D64CC5822B7676846667"
+    },
+    {
+      "resourceName": "OcctSharp.Generator.Emission.consumer-initialdisplay-managed.txt",
+      "sha256": "FE6E0D42E6A5D5D52A5045877A691765317FF3A3068B040A6162BD26B5C94779"
+    },
+    {
+      "resourceName": "OcctSharp.Generator.Emission.consumer-initialdisplay-native.txt",
+      "sha256": "D41CAA3D9DD3D212A02A8C7EB0745E44889BAD5B5109B2B2C1FB92775599A909"
     },
     {
       "resourceName": "OcctSharp.Generator.Emission.consumer-occtsharp-native-sketchexpression-header.txt",
@@ -30842,7 +31030,7 @@
     },
     {
       "resourceName": "OcctSharp.Generator.Emission.consumer-support-contract.json",
-      "sha256": "50DA6A5942AFE1DBC21C91678E1AB931BA59EE5A1758233772589DB587D5C259"
+      "sha256": "1698CEEB8C9BA442E6B9D5913060DF8EE4407E9301B6D67B9A2EF89FC19F9524"
     },
     {
       "resourceName": "OcctSharp.Generator.Emission.consumer-viewersource-cs.txt",
@@ -30850,7 +31038,7 @@
     },
     {
       "resourceName": "OcctSharp.Generator.Emission.consumer-viewersources-cpp.txt",
-      "sha256": "59DFE477542A537B6D17B3D26F884807658F464E60A8F65A8127699B9E528E6A"
+      "sha256": "5355B929EF8580C691A4ED329BB4983E0BEBC6B1E4AB797F6755537072665B15"
     },
     {
       "resourceName": "OcctSharp.Generator.Emission.consumer-viewersources-hxx.txt",
@@ -30891,6 +31079,26 @@
     {
       "resourceName": "OcctSharp.Generator.Emission.curve-sampling-native.txt",
       "sha256": "8D6D57290C57FF13C0E693A2FB84755566D1E602E24ED7B92263C52DEF1F622E"
+    },
+    {
+      "resourceName": "OcctSharp.Generator.Emission.defeature-history-contract.json",
+      "sha256": "B8903FB3CCA70046A37903D1CD81E6559CA0EF0D3D690C1FD45F7867EFC96773"
+    },
+    {
+      "resourceName": "OcctSharp.Generator.Emission.defeature-history-header.txt",
+      "sha256": "2A160003B2F26BCD05739774524F789663A4F87296DF97193ACF234B934BA245"
+    },
+    {
+      "resourceName": "OcctSharp.Generator.Emission.defeature-history-interop.txt",
+      "sha256": "3EBBCBE68B661AA7B20201C69944E8D75D957CA9E63ABB96F5701EA55F4DC77C"
+    },
+    {
+      "resourceName": "OcctSharp.Generator.Emission.defeature-history-managed.txt",
+      "sha256": "A8CB7379BA981B7AAB91A563E86D64FCCDC9A12348DF535DEA741F1285D82EB3"
+    },
+    {
+      "resourceName": "OcctSharp.Generator.Emission.defeature-history-native.txt",
+      "sha256": "D9513BD1A4E33E25A5A0F3C3B46F94E2287C2265668013225C01A30D3A7982BC"
     },
     {
       "resourceName": "OcctSharp.Generator.Emission.direct-collections-managed.txt",
@@ -30995,6 +31203,18 @@
     {
       "resourceName": "OcctSharp.Generator.Emission.hatching-workspaces-native.txt",
       "sha256": "A94F9162CD9B36D99CB47D6082FB6118E58751818C790565BC96780F419C1598"
+    },
+    {
+      "resourceName": "OcctSharp.Generator.Emission.inspection-periodic-contract.json",
+      "sha256": "377D97E112F0C2C197CCB59126730F9309C2FC199F026E25140CDEFECEB28A72"
+    },
+    {
+      "resourceName": "OcctSharp.Generator.Emission.inspection-periodic-header.txt",
+      "sha256": "8EC8CD6A844383114D92200CBA8555A6DF39DE17FF3DE19C6DAC2ED701E62019"
+    },
+    {
+      "resourceName": "OcctSharp.Generator.Emission.inspection-periodic-native.txt",
+      "sha256": "E046DA27722622D1F4BC431615B3D781972FB21DA197619C8E0F29307DC8D425"
     },
     {
       "resourceName": "OcctSharp.Generator.Emission.legacy-foundation-collections-native.txt",
@@ -31223,6 +31443,18 @@
     {
       "resourceName": "OcctSharp.Generator.Emission.spline-workspaces-native.txt",
       "sha256": "82DFDE36DAEA9CE1F816354A99B6E81A3268BAE5EB284E136CF1676ED24F8CAE"
+    },
+    {
+      "resourceName": "OcctSharp.Generator.Emission.step-exact-offset-contract.json",
+      "sha256": "259C415B6D4173C57B4A1983D9EE7A1008E8D2A0A4547CA05DD7A1C7DA258A3D"
+    },
+    {
+      "resourceName": "OcctSharp.Generator.Emission.step-exact-offset-header.txt",
+      "sha256": "76D80CC0A0BCAB7AEA0D503E27DC66550C0F10A7410BD392EFEC9477B5B4B576"
+    },
+    {
+      "resourceName": "OcctSharp.Generator.Emission.step-exact-offset-native.txt",
+      "sha256": "B31E9BF5AE5E7073D06D5D1AA0AC88EC6044E1FC24AB8F9C321644CD85A9C710"
     },
     {
       "resourceName": "OcctSharp.Generator.Emission.stepcaf-workspaces-managed.txt",

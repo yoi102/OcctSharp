@@ -1,0 +1,72 @@
+#pragma once
+#include <cstdint>
+#include <Standard_Handle.hxx>
+#include <utility>
+#include <vector>
+#include <memory>
+class STEPControl_Writer;
+class STEPControl_Reader;
+class StepGeom_OffsetCurve3d;
+class TopoDS_Shape;
+struct OcctSharp_ExactStepOffsetReport
+{
+  int32_t RepairedEdges = 0;
+  int32_t RepairedExtrusions = 0;
+};
+// Internal, synchronous STEP graph completion. The caller retains the original
+// shape and writer. No native address, inferred topology or new C ABI is exposed.
+OcctSharp_ExactStepOffsetReport OcctSharp_CompleteExactStepOffsets(
+  STEPControl_Writer& writer, const TopoDS_Shape& original);
+// Uses the writer's actual shape mappers, including XDE definition placements.
+OcctSharp_ExactStepOffsetReport OcctSharp_CompleteTransferredExactStepOffsets(STEPControl_Writer& writer);
+
+// OCCT 8.0.1 scales an offset's basis but omits its distance factor. This
+// synchronous guard supplies that factor only during transfer, then restores
+// the caller-owned STEP model exactly, including on transfer failure. Shared
+// conflicting unit contexts use a private model with actual context-local copy
+// mappings; the complete original reader/session is restored afterward.
+class OcctSharp_ExactStepOffsetReadScope final
+{
+  std::vector<std::pair<occ::handle<StepGeom_OffsetCurve3d>,double>> myOriginals;
+  std::unique_ptr<STEPControl_Reader> mySavedReader;
+  STEPControl_Reader* myReader=nullptr;
+public:
+  explicit OcctSharp_ExactStepOffsetReadScope(STEPControl_Reader& reader);
+  ~OcctSharp_ExactStepOffsetReadScope();
+  OcctSharp_ExactStepOffsetReadScope(const OcctSharp_ExactStepOffsetReadScope&)=delete;
+  OcctSharp_ExactStepOffsetReadScope& operator=(const OcctSharp_ExactStepOffsetReadScope&)=delete;
+  int32_t AdjustedCount() const;
+};
+
+// Only freshly imported, caller-local BReps may be passed. Preserve exact basis
+// parameters and topology; no fitting, range change or tolerance inflation.
+int32_t OcctSharp_CompleteImportedExactPlanarOffsetPcurves(const TopoDS_Shape& shape);
+
+class TDocStd_Document;
+int32_t OcctSharp_CompleteImportedExactPlanarOffsetPcurves(const occ::handle<TDocStd_Document>& document);
+
+// Admit only a shape with actual exact-offset geometry. Transfer a deep private
+// geometry copy without the lossy/mutating shape-process pass. Other inputs keep
+// the existing writer route. Unique actual transfer bindings remain mandatory.
+bool OcctSharp_TransferExactStepOffsets(STEPControl_Writer& writer,const TopoDS_Shape& original);
+
+#include <memory>
+class TDocStd_Application;
+class BRepBuilderAPI_Copy;
+// Owns the temporary document and exact copier mapping for one XDE write.
+// Full label/attribute relocation precedes a private binary-memory reload.
+// Source author state, geometry and document ownership remain unchanged.
+class OcctSharp_ExactStepXdeWriteScope final
+{
+  occ::handle<TDocStd_Application> myApplication;
+  occ::handle<TDocStd_Document> myDocument;
+  std::unique_ptr<BRepBuilderAPI_Copy> myExactGeometry;
+public:
+  explicit OcctSharp_ExactStepXdeWriteScope(const occ::handle<TDocStd_Document>& source);
+  ~OcctSharp_ExactStepXdeWriteScope();
+  const occ::handle<TDocStd_Document>& Document() const;
+  bool HasExactOffsets() const;
+  OcctSharp_ExactStepOffsetReport Complete(STEPControl_Writer& writer) const;
+  OcctSharp_ExactStepXdeWriteScope(const OcctSharp_ExactStepXdeWriteScope&)=delete;
+  OcctSharp_ExactStepXdeWriteScope& operator=(const OcctSharp_ExactStepXdeWriteScope&)=delete;
+};

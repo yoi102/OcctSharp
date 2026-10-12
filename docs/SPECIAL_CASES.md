@@ -2873,3 +2873,16 @@ are qualified at namespace emission. No new manual binding exception is added.
 80 exact existing Manual calls move to TM068; viewer registry, owner-thread,
 input/device policy and bounded support templates remain explicit infrastructure.
 See [CG admission](BATCH_CG_RENDER_RESOURCES_ADMISSION.json). No new Manual SDK row.
+
+## Preview85 consumer support and retained algorithm policy
+
+Per [ADR-0140](adr/0140-public-consumer-copy-history-and-exact-exchange.md),
+new copy/history values, native input graph support, initial display and the
+defeature/exact-STEP/periodic-distance helpers are generator-owned bounded
+templates. They add zero raw declaration credit. Existing native result storage,
+guided algorithm integration and STEP call/reader ownership remain manual
+orchestration within the existing exception groups; public generated delegates
+are retained. SC-067 quadrature accumulation now carries compensation between
+levels without changing rules, convergence thresholds or budgets. Safe NamedData
+drivers are reused for private STEP export document copies. No new manual raw
+SDK declaration or lifetime category is introduced.

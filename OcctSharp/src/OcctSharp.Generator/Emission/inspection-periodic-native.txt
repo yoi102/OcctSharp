@@ -1,0 +1,326 @@
+#include <BRepTools.hxx>
+#include <BRepClass_FaceClassifier.hxx>
+#include <Geom_RectangularTrimmedSurface.hxx>
+#include <Geom_Surface.hxx>
+#include <Precision.hxx>
+#include <array>
+#include "OcctSharp.PeriodicExactDistance.Generated.hxx"
+#include <BRep_Tool.hxx>
+#include <Geom_TrimmedCurve.hxx>
+#include <GeomAPI_ProjectPointOnCurve.hxx>
+#include <NCollection_IndexedMap.hxx>
+#include <TopTools_ShapeMapHasher.hxx>
+#include <TopExp.hxx>
+#include <TopoDS.hxx>
+#include <Standard_OutOfRange.hxx>
+#include <Standard_DomainError.hxx>
+#include <algorithm>
+#include <cmath>
+#include <limits>
+
+OcctSharp_PeriodicExactDistance::OcctSharp_PeriodicExactDistance(
+  const TopoDS_Shape& first,const TopoDS_Shape& second)
+  :myNative(first,second),myDistance(myNative.IsDone()&&myNative.NbSolution()>0
+    ?myNative.Value():std::numeric_limits<double>::infinity())
+{
+  CompleteVertexEdge(first,second,false);
+  CompleteVertexEdge(second,first,true);
+  if(myCorrections.empty())RefinePeriodicInteriors(first,second);
+}
+void OcctSharp_PeriodicExactDistance::Accept(Witness witness,const double distance)
+{
+  if(!std::isfinite(distance))throw Standard_DomainError("Periodic distance produced a nonfinite witness.");
+  const double floor=64*std::numeric_limits<double>::epsilon()*std::max(1.,distance);
+  if(distance<myDistance-floor)
+  {
+    myCorrections.clear();myDistance=distance;myCorrections.push_back(std::move(witness));
+  }
+  else if(!myCorrections.empty()&&std::abs(distance-myDistance)<=floor)
+  {
+    for(const auto& previous:myCorrections)
+      if(previous.firstSupport.IsSame(witness.firstSupport)&&previous.secondSupport.IsSame(witness.secondSupport)
+        &&std::abs(previous.edgeParameter-witness.edgeParameter)<=floor)return;
+    myDistance=std::min(myDistance,distance);myCorrections.push_back(std::move(witness));
+  }
+}
+void OcctSharp_PeriodicExactDistance::CompleteVertexEdge(
+  const TopoDS_Shape& vertexShape,const TopoDS_Shape& edgeShape,const bool edgeOnFirst)
+{
+  NCollection_IndexedMap<TopoDS_Shape,TopTools_ShapeMapHasher> vertices,edges;
+  TopExp::MapShapes(vertexShape,TopAbs_VERTEX,vertices);TopExp::MapShapes(edgeShape,TopAbs_EDGE,edges);
+  if(vertices.IsEmpty())return;
+  for(int e=1;e<=edges.Extent();++e)
+  {
+    const auto edge=TopoDS::Edge(edges(e));if(BRep_Tool::Degenerated(edge))continue;
+    double first,last;auto curve=BRep_Tool::Curve(edge,first,last);
+    int depth=0;
+    while(!curve.IsNull())
+    {
+      const auto trim=occ::down_cast<Geom_TrimmedCurve>(curve);if(trim.IsNull())break;
+      if(++depth>64)throw Standard_DomainError("Periodic distance trim depth exceeded.");
+      curve=trim->BasisCurve();
+    }
+    if(curve.IsNull()||!curve->IsPeriodic())continue;
+    const double period=curve->Period(),base=curve->FirstParameter();
+    if(!std::isfinite(first)||!std::isfinite(last)||last<=first
+      ||!std::isfinite(period)||period<=0||!std::isfinite(base))
+      throw Standard_DomainError("Periodic distance needs a finite original interval and period.");
+    if(first>=base&&last<=base+period)continue;
+    // Normalize ONLY the projection domain. Never rebuild the source edge or
+    // overwrite its range/pcurve. Cross-seam intervals are split at a true period.
+    const double turns=std::floor((first-base)/period);
+    const double shift=turns*period,normalizedFirst=first-shift;
+    if(!std::isfinite(shift)||normalizedFirst<base||normalizedFirst>=base+period
+      ||std::abs(turns)>1./(64*std::numeric_limits<double>::epsilon()))
+      throw Standard_DomainError("Periodic distance cannot preserve the original parameter resolution.");
+    const double span=std::min(last-first,period),upper=std::min(normalizedFirst+span,base+period);
+    for(int v=1;v<=vertices.Extent();++v)
+    {
+      const auto vertex=TopoDS::Vertex(vertices(v));const gp_Pnt point=BRep_Tool::Pnt(vertex);
+      const auto project=[&](double lower,double higher,double originalLower)
+      {
+        if(higher<=lower)return;
+        const auto acceptParameter=[&](double parameter)
+        {
+          const double original=originalLower+(parameter-lower);
+          // Endpoint supports are already computed by the native solver.
+          if(original<=first||original>=last)return;
+          const gp_Pnt witness=curve->Value(original);
+          if(edgeOnFirst)Accept({witness,point,edge,vertex,original,true},point.Distance(witness));
+          else Accept({point,witness,vertex,edge,original,false},point.Distance(witness));
+        };
+        GeomAPI_ProjectPointOnCurve projection(point,curve,lower,higher);
+        for(int p=1;p<=projection.NbPoints();++p)acceptParameter(projection.Parameter(p));
+        // A seam is artificial to the bounded projector but interior to the
+        // ORIGINAL edge. Retain it as a possible constrained minimum.
+        acceptParameter(lower);acceptParameter(higher);
+      };
+      project(normalizedFirst,upper,first);
+      const double remaining=span-(upper-normalizedFirst);
+      if(remaining>0)project(base,base+remaining,first+(upper-normalizedFirst));
+    }
+  }
+}
+
+namespace
+{
+  // A native support supplies identity. Parameters remain in that support's
+  // original domain; no topology is rebuilt, paired by distance, or rebound.
+  struct InteriorSupport
+  {
+    TopoDS_Shape shape;
+    occ::handle<Geom_Curve> curve;
+    occ::handle<Geom_Surface> surface;
+    int dimensions=0;
+    bool periodic=false;
+    std::array<double,2> lower{},upper{};
+    struct Jet{gp_Pnt point;std::array<gp_Vec,2> first;std::array<std::array<gp_Vec,2>,2> second;};
+    explicit InteriorSupport(const TopoDS_Shape& original):shape(original)
+    {
+      if(shape.ShapeType()==TopAbs_EDGE)
+      {
+        curve=BRep_Tool::Curve(TopoDS::Edge(shape),lower[0],upper[0]);if(curve.IsNull())return;
+        auto basis=curve;
+        for(int depth=0;;++depth){auto trim=occ::down_cast<Geom_TrimmedCurve>(basis);if(trim.IsNull())break;
+          if(depth>=64)throw Standard_DomainError("Periodic interior curve trim depth exceeded.");basis=trim->BasisCurve();}
+        periodic=basis->IsPeriodic();dimensions=1;
+      }
+      else if(shape.ShapeType()==TopAbs_FACE)
+      {
+        surface=BRep_Tool::Surface(TopoDS::Face(shape));if(surface.IsNull())return;
+        BRepTools::UVBounds(TopoDS::Face(shape),lower[0],upper[0],lower[1],upper[1]);auto basis=surface;
+        for(int depth=0;;++depth){auto trim=occ::down_cast<Geom_RectangularTrimmedSurface>(basis);if(trim.IsNull())break;
+          if(depth>=64)throw Standard_DomainError("Periodic interior surface trim depth exceeded.");basis=trim->BasisSurface();}
+        periodic=basis->IsUPeriodic()||basis->IsVPeriodic();dimensions=2;
+      }
+    }
+    bool Contains(const std::array<double,2>& parameters) const
+    {
+      if(dimensions==0)return false;
+      for(int i=0;i<dimensions;++i)
+        if(!std::isfinite(parameters[i])||!std::isfinite(lower[i])||!std::isfinite(upper[i])
+          ||parameters[i]<=lower[i]||parameters[i]>=upper[i])return false;
+      if(dimensions==2)
+      {
+        BRepClass_FaceClassifier classifier(TopoDS::Face(shape),gp_Pnt2d(parameters[0],parameters[1]),Precision::PConfusion());
+        if(classifier.State()!=TopAbs_IN)return false;
+      }
+      return true;
+    }
+    Jet Evaluate(const std::array<double,2>& parameters) const
+    {
+      Jet result;
+      if(dimensions==1)curve->D2(parameters[0],result.point,result.first[0],result.second[0][0]);
+      else
+      {
+        surface->D2(parameters[0],parameters[1],result.point,result.first[0],result.first[1],
+          result.second[0][0],result.second[1][1],result.second[0][1]);
+        result.second[1][0]=result.second[0][1];
+      }
+      return result;
+    }
+  };
+  struct InteriorSystem
+  {
+    InteriorSupport::Jet first,second;
+    std::array<double,4> gradient{};
+    std::array<std::array<double,4>,4> hessian{};
+    double residual=0,roundoff=0;
+  };
+  InteriorSystem Stationarity(const InteriorSupport& first,const InteriorSupport& second,
+    const std::array<double,2>& p,const std::array<double,2>& q)
+  {
+    InteriorSystem result;result.first=first.Evaluate(p);result.second=second.Evaluate(q);
+    const gp_Vec delta(result.second.point,result.first.point);
+    const int count=first.dimensions+second.dimensions;
+    auto derivative=[&](int index){return index<first.dimensions?result.first.first[index]:result.second.first[index-first.dimensions];};
+    auto sign=[&](int index){return index<first.dimensions?1.:-1.;};
+    for(int i=0;i<count;++i)
+    {
+      const auto d=derivative(i);const double magnitude=d.Magnitude();
+      if(!std::isfinite(magnitude)||magnitude<=std::numeric_limits<double>::min())
+        throw Standard_DomainError("Periodic interior derivative is degenerate.");
+      result.gradient[i]=sign(i)*delta.Dot(d);
+      result.residual=std::max(result.residual,std::abs(result.gradient[i])/magnitude);
+      for(int j=0;j<count;++j)
+      {
+        result.hessian[i][j]=sign(i)*sign(j)*d.Dot(derivative(j));
+        if(i<first.dimensions&&j<first.dimensions)result.hessian[i][j]+=delta.Dot(result.first.second[i][j]);
+        else if(i>=first.dimensions&&j>=first.dimensions)
+          result.hessian[i][j]-=delta.Dot(result.second.second[i-first.dimensions][j-first.dimensions]);
+      }
+    }
+    const auto& a=result.first.point;const auto& b=result.second.point;
+    const double scale=1+delta.Magnitude()+std::max({std::abs(a.X()),std::abs(a.Y()),std::abs(a.Z()),std::abs(b.X()),std::abs(b.Y()),std::abs(b.Z())});
+    result.roundoff=128*std::numeric_limits<double>::epsilon()*scale;
+    if(!std::isfinite(result.residual)||!std::isfinite(result.roundoff))
+      throw Standard_DomainError("Periodic interior stationarity is nonfinite.");
+    return result;
+  }
+  bool MinimumStep(const InteriorSystem& system,int count,std::array<double,4>& step)
+  {
+    // Cholesky admits only a proved nonsingular local-minimum Hessian. Parallel,
+    // degenerate or indefinite native candidates retain their native result.
+    std::array<std::array<double,4>,4> lower{};std::array<double,4> intermediate{};
+    double scale=0;for(int i=0;i<count;++i)scale=std::max(scale,std::abs(system.hessian[i][i]));
+    if(!std::isfinite(scale)||scale<=0)return false;
+    for(int i=0;i<count;++i)for(int j=0;j<=i;++j)
+    {
+      double value=system.hessian[i][j];for(int k=0;k<j;++k)value-=lower[i][k]*lower[j][k];
+      if(!std::isfinite(value))return false;
+      if(i==j){if(value<=64*std::numeric_limits<double>::epsilon()*scale)return false;lower[i][j]=std::sqrt(value);}
+      else lower[i][j]=value/lower[j][j];
+    }
+    for(int i=0;i<count;++i){double value=-system.gradient[i];for(int j=0;j<i;++j)value-=lower[i][j]*intermediate[j];intermediate[i]=value/lower[i][i];}
+    for(int i=count-1;i>=0;--i){double value=intermediate[i];for(int j=i+1;j<count;++j)value-=lower[j][i]*step[j];step[i]=value/lower[i][i];if(!std::isfinite(step[i]))return false;}
+    return true;
+  }
+  bool RefineInterior(const InteriorSupport& first,const InteriorSupport& second,
+    std::array<double,2>& p,std::array<double,2>& q,gp_Pnt& firstPoint,gp_Pnt& secondPoint)
+  {
+    if(first.dimensions==0||second.dimensions==0||(!first.periodic&&!second.periodic)||!first.Contains(p)||!second.Contains(q))return false;
+    bool changed=false;const int count=first.dimensions+second.dimensions;
+    const auto initial=Stationarity(first,second,p,q);
+    const double initialDistance=initial.first.point.Distance(initial.second.point);
+    for(int iteration=0;iteration<16;++iteration)
+    {
+      const auto system=Stationarity(first,second,p,q);
+      if(system.residual<=system.roundoff)
+      {
+        if(!changed)return false;
+        firstPoint=system.first.point;secondPoint=system.second.point;return true;
+      }
+      std::array<double,4> step{};if(!MinimumStep(system,count,step))return false;
+      bool accepted=false;
+      for(int backtrack=0;backtrack<16;++backtrack)
+      {
+        const double factor=std::ldexp(1.,-backtrack);auto nextP=p,nextQ=q;
+        for(int i=0;i<first.dimensions;++i)nextP[i]+=factor*step[i];
+        for(int i=0;i<second.dimensions;++i)nextQ[i]+=factor*step[first.dimensions+i];
+        if(!first.Contains(nextP)||!second.Contains(nextQ))continue;
+        const auto next=Stationarity(first,second,nextP,nextQ);
+        if(next.first.point.Distance(next.second.point)>initialDistance+next.roundoff)continue;
+        if(next.residual>=system.residual&&next.residual>next.roundoff)continue;
+        p=nextP;q=nextQ;changed=true;accepted=true;break;
+      }
+      if(!accepted)return false;
+    }
+    return false;
+  }
+}
+void OcctSharp_PeriodicExactDistance::RefinePeriodicInteriors(const TopoDS_Shape& first,const TopoDS_Shape& second)
+{
+  if(!myNative.IsDone()||myNative.NbSolution()==0||myNative.InnerSolution())return;
+  bool hasInterior=false;
+  for(int i=1;i<=myNative.NbSolution()&&!hasInterior;++i)
+    hasInterior=myNative.SupportTypeShape1(i)!=BRepExtrema_IsVertex&&myNative.SupportTypeShape2(i)!=BRepExtrema_IsVertex;
+  if(!hasInterior)return;
+  NCollection_IndexedMap<TopoDS_Shape,TopTools_ShapeMapHasher> firstMembers,secondMembers;
+  bool membersMapped=false;
+  std::vector<InteriorWitness> results;results.reserve(static_cast<size_t>(myNative.NbSolution()));bool changed=false;
+  for(int i=1;i<=myNative.NbSolution();++i)
+  {
+    InteriorWitness witness{myNative.PointOnShape1(i),myNative.PointOnShape2(i),myNative.SupportOnShape1(i),myNative.SupportOnShape2(i),myNative.SupportTypeShape1(i),myNative.SupportTypeShape2(i)};
+    if(witness.firstType==BRepExtrema_IsOnEdge)myNative.ParOnEdgeS1(i,witness.firstU);
+    if(witness.secondType==BRepExtrema_IsOnEdge)myNative.ParOnEdgeS2(i,witness.secondU);
+    if(witness.firstType==BRepExtrema_IsInFace)myNative.ParOnFaceS1(i,witness.firstU,witness.firstV);
+    if(witness.secondType==BRepExtrema_IsInFace)myNative.ParOnFaceS2(i,witness.secondU,witness.secondV);
+    const bool interiorFirst=witness.firstType==BRepExtrema_IsOnEdge||witness.firstType==BRepExtrema_IsInFace;
+    const bool interiorSecond=witness.secondType==BRepExtrema_IsOnEdge||witness.secondType==BRepExtrema_IsInFace;
+    if(interiorFirst&&interiorSecond)
+    {
+      const InteriorSupport a(witness.firstSupport),b(witness.secondSupport);
+      std::array<double,2> p{witness.firstU,witness.firstV},q{witness.secondU,witness.secondV};
+      gp_Pnt pa,pb;
+      // Derivative evaluation can fail for a native nonsmooth candidate. That
+      // individual candidate is left exactly as returned; no result is invented.
+      bool refined=false;try{refined=RefineInterior(a,b,p,q,pa,pb);}catch(const Standard_Failure&){refined=false;}
+      if(refined)
+      {
+        // Only a candidate that actually needs correction incurs an author
+        // topology traversal. The proof still precedes adopting any result.
+        if(!membersMapped){TopExp::MapShapes(first,firstMembers);TopExp::MapShapes(second,secondMembers);membersMapped=true;}
+        if(firstMembers.Contains(witness.firstSupport)&&secondMembers.Contains(witness.secondSupport))
+        {
+          witness.firstU=p[0];witness.firstV=p[1];witness.secondU=q[0];witness.secondV=q[1];
+          witness.firstPoint=pa;witness.secondPoint=pb;changed=true;
+        }
+      }
+    }
+    results.push_back(std::move(witness));
+  }
+  if(!changed)return;
+  double minimum=std::numeric_limits<double>::infinity();
+  for(const auto& witness:results)minimum=std::min(minimum,witness.firstPoint.Distance(witness.secondPoint));
+  if(!std::isfinite(minimum))throw Standard_DomainError("Periodic refined interior distance is nonfinite.");
+  myDistance=minimum;myInteriors=std::move(results);
+}
+const OcctSharp_PeriodicExactDistance::InteriorWitness& OcctSharp_PeriodicExactDistance::Interior(int index) const
+{
+  if(index<1||index>static_cast<int>(myInteriors.size()))throw Standard_OutOfRange("Periodic interior distance index.");
+  return myInteriors[static_cast<size_t>(index-1)];
+}
+
+const OcctSharp_PeriodicExactDistance::Witness& OcctSharp_PeriodicExactDistance::Correction(int index) const
+{
+  if(index<1||index>static_cast<int>(myCorrections.size()))throw Standard_OutOfRange("Periodic distance index.");
+  return myCorrections[static_cast<size_t>(index-1)];
+}
+bool OcctSharp_PeriodicExactDistance::IsDone() const{return !myCorrections.empty()||myNative.IsDone();}
+int OcctSharp_PeriodicExactDistance::NbSolution() const{return myCorrections.empty()?myNative.NbSolution():static_cast<int>(myCorrections.size());}
+double OcctSharp_PeriodicExactDistance::Value() const{return myDistance;}
+bool OcctSharp_PeriodicExactDistance::InnerSolution() const{return myCorrections.empty()&&myNative.InnerSolution();}
+gp_Pnt OcctSharp_PeriodicExactDistance::PointOnShape1(int i) const{return myCorrections.empty()?(myInteriors.empty()?myNative.PointOnShape1(i):Interior(i).firstPoint):Correction(i).firstPoint;}
+gp_Pnt OcctSharp_PeriodicExactDistance::PointOnShape2(int i) const{return myCorrections.empty()?(myInteriors.empty()?myNative.PointOnShape2(i):Interior(i).secondPoint):Correction(i).secondPoint;}
+TopoDS_Shape OcctSharp_PeriodicExactDistance::SupportOnShape1(int i) const{return myCorrections.empty()?(myInteriors.empty()?myNative.SupportOnShape1(i):Interior(i).firstSupport):Correction(i).firstSupport;}
+TopoDS_Shape OcctSharp_PeriodicExactDistance::SupportOnShape2(int i) const{return myCorrections.empty()?(myInteriors.empty()?myNative.SupportOnShape2(i):Interior(i).secondSupport):Correction(i).secondSupport;}
+BRepExtrema_SupportType OcctSharp_PeriodicExactDistance::SupportTypeShape1(int i) const{return myCorrections.empty()?(myInteriors.empty()?myNative.SupportTypeShape1(i):Interior(i).firstType):(Correction(i).edgeOnFirst?BRepExtrema_IsOnEdge:BRepExtrema_IsVertex);}
+BRepExtrema_SupportType OcctSharp_PeriodicExactDistance::SupportTypeShape2(int i) const{return myCorrections.empty()?(myInteriors.empty()?myNative.SupportTypeShape2(i):Interior(i).secondType):(Correction(i).edgeOnFirst?BRepExtrema_IsVertex:BRepExtrema_IsOnEdge);}
+void OcctSharp_PeriodicExactDistance::ParOnEdgeS1(int i,double& p) const
+{if(myCorrections.empty()){if(myInteriors.empty()){myNative.ParOnEdgeS1(i,p);return;}const auto& w=Interior(i);if(w.firstType!=BRepExtrema_IsOnEdge)throw Standard_DomainError("Support is not an edge.");p=w.firstU;return;}const auto& w=Correction(i);if(!w.edgeOnFirst)throw Standard_DomainError("First support is not an edge.");p=w.edgeParameter;}
+void OcctSharp_PeriodicExactDistance::ParOnEdgeS2(int i,double& p) const
+{if(myCorrections.empty()){if(myInteriors.empty()){myNative.ParOnEdgeS2(i,p);return;}const auto& w=Interior(i);if(w.secondType!=BRepExtrema_IsOnEdge)throw Standard_DomainError("Support is not an edge.");p=w.secondU;return;}const auto& w=Correction(i);if(w.edgeOnFirst)throw Standard_DomainError("Second support is not an edge.");p=w.edgeParameter;}
+void OcctSharp_PeriodicExactDistance::ParOnFaceS1(int i,double& u,double& v) const
+{if(myCorrections.empty()){if(myInteriors.empty()){myNative.ParOnFaceS1(i,u,v);return;}const auto& w=Interior(i);if(w.firstType!=BRepExtrema_IsInFace)throw Standard_DomainError("Support is not a face.");u=w.firstU;v=w.firstV;return;}throw Standard_DomainError("First support is not a face.");}
+void OcctSharp_PeriodicExactDistance::ParOnFaceS2(int i,double& u,double& v) const
+{if(myCorrections.empty()){if(myInteriors.empty()){myNative.ParOnFaceS2(i,u,v);return;}const auto& w=Interior(i);if(w.secondType!=BRepExtrema_IsInFace)throw Standard_DomainError("Support is not a face.");u=w.secondU;v=w.secondV;return;}throw Standard_DomainError("Second support is not a face.");}

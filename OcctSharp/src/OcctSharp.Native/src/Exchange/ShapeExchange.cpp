@@ -1,3 +1,5 @@
+#include <BRepBuilderAPI_Copy.hxx>
+#include "../../generated/DataExchange/OcctSharp.ExactStepOffsets.Generated.hxx"
 #include "../../generated/DataExchange/OcctSharp.DataExchange.StepAdapters.Generated.hxx"
 #include "../../generated/MeshData/OcctSharp.MeshData.MeshAdapters.Generated.hxx"
 // Native Exchange/ShapeExchange implementation. Public contracts and ownership are unchanged.
@@ -103,12 +105,14 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_read_step(
       throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, "OCCT could not read the STEP file.");
     }
 
+    OcctSharp_ExactStepOffsetReadScope exactOffsets(reader);
     if (OcctSharpGenerated::StepAdapters::XSControl_Reader_TransferRoots_Bind(reader)() <= 0)
     {
       throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "The STEP file produced no transferable roots.");
     }
 
     TopoDS_Shape shape = OcctSharpGenerated::StepAdapters::XSControl_Reader_OneShape_Bind(reader)();
+    OcctSharp_CompleteImportedExactPlanarOffsetPcurves(shape);
     if (shape.IsNull())
     {
       throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "The STEP transfer produced a null shape.");
@@ -171,11 +175,13 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_read_step_report(
       throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, "OCCT could not read the STEP file.");
     out_report->candidate_root_count = OcctSharpGenerated::StepAdapters::STEPControl_Reader_NbRootsForTransfer_Bind(reader)();
     out_report->system_length_unit = OcctSharpGenerated::StepAdapters::STEPControl_Reader_SystemLengthUnit_Bind(reader)();
+    OcctSharp_ExactStepOffsetReadScope exactOffsets(reader);
     out_report->transferred_root_count = OcctSharpGenerated::StepAdapters::XSControl_Reader_TransferRoots_Bind(reader)();
     out_report->shape_count = OcctSharpGenerated::StepAdapters::XSControl_Reader_NbShapes_Bind(reader)();
     if (out_report->transferred_root_count <= 0)
       throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "The STEP file produced no transferable roots.");
     TopoDS_Shape shape = OcctSharpGenerated::StepAdapters::XSControl_Reader_OneShape_Bind(reader)();
+    OcctSharp_CompleteImportedExactPlanarOffsetPcurves(shape);
     if (shape.IsNull())
       throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "The STEP transfer produced a null shape.");
     *out_shape = AllocateShape(std::move(shape));
@@ -273,10 +279,14 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_step_reader_transfer_root(
     const int32_t root_count = OcctSharpGenerated::StepAdapters::STEPControl_Reader_NbRootsForTransfer_Bind(reader->Reader)();
     if (root_index < 0 || root_index >= root_count)
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The zero-based STEP root index is outside the candidate range.");
+    OcctSharp_ExactStepOffsetReadScope exactOffsets(reader->Reader);
     OcctSharpGenerated::StepAdapters::XSControl_Reader_ClearShapes_Bind(reader->Reader)();
     if (!OcctSharpGenerated::StepAdapters::STEPControl_Reader_TransferRoot_Bind(reader->Reader)(root_index + 1))
       throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "OCCT could not transfer the selected STEP root.");
     TopoDS_Shape shape = OcctSharpGenerated::StepAdapters::XSControl_Reader_OneShape_Bind(reader->Reader)();
+    BRepBuilderAPI_Copy importedCopy(shape, true, false);
+    shape = importedCopy.Shape();
+    OcctSharp_CompleteImportedExactPlanarOffsetPcurves(shape);
     if (shape.IsNull())
       throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "The selected STEP root produced a null shape.");
     *out_shape = AllocateShape(std::move(shape));
@@ -348,9 +358,11 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_write_step(
     ValidateShape(shape);
     ValidatePath(file_path);
     STEPControl_Writer writer;
-    if (writer.Transfer(shape->Value, STEPControl_AsIs) != IFSelect_RetDone)
+    if (!OcctSharp_TransferExactStepOffsets(writer, shape->Value))
     {
-      throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "OCCT could not transfer the shape to STEP.");
+      if (writer.Transfer(shape->Value, STEPControl_AsIs) != IFSelect_RetDone)
+        throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "OCCT could not transfer the shape to STEP.");
+      OcctSharp_CompleteExactStepOffsets(writer, shape->Value);
     }
 
     if (writer.Write(file_path) != IFSelect_RetDone)
