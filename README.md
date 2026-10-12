@@ -52,10 +52,7 @@ Keep OcctSharp package references on the same version.
 | `OcctSharp.Visualization`, `OcctSharp.DataExchange`, `OcctSharp.Xde`, `OcctSharp.IVtk`, `OcctSharp.Draw` | Visualization, exchange, XDE and optional toolkit bindings; individual capability limits still apply. |
 | `OcctSharp.Native.win-x64` | Shared Windows x64 native bridge and OCCT runtime distribution. |
 
-`OcctSharp.Native.win-x64` remains supported and is not deprecated. The published
-Preview.85 package uses the qualified precompiled 62-DLL provider. The contributor
-vcpkg build route has a separate dependency manifest and does not replace this
-published payload or the application's native package dependency.
+
 
 ## Preview.85 delivery and coverage
 
