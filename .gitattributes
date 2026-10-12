@@ -14,8 +14,12 @@ CMakeLists.txt text eol=lf
 *.bat text eol=crlf
 *.dll -text
 OcctSharp/src/OcctSharp.Generator/Emission/*.txt text eol=lf
+# Keep the qualified embedded template identity across Git checkouts.
+OcctSharp/src/OcctSharp.Generator/Emission/transfer-records-native.txt -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 OcctSharp/runtime/win-x64/licenses/** -text whitespace=-trailing-space
 # Preserve generator-owned byte hashes, including mixed template line endings.
+OcctSharp/generated/manifest.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+OcctSharp/runtime/win-x64/runtime-manifest.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 OcctSharp/src/OcctSharp.Native/generated/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 OcctSharp/src/OcctSharp/Generated/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 # CAD fixtures are identity-checked data; retain writer spacing and exact bytes.

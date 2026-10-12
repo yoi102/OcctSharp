@@ -60,10 +60,16 @@ try {
     $sdkView = Join-Path $InstallRoot 'occtsharp-sdk'
     $sdkIncludes = Join-Path $sdkView 'inc'
     $sourceIncludes = Join-Path $InstallRoot "$($identity.triplet)/include/opencascade"
+    $supplement = Get-Content (Join-Path $manifest 'generator-header-supplement.json') -Raw | ConvertFrom-Json
+    $sourceNames = @(Get-ChildItem -LiteralPath $sourceIncludes -Recurse -File | ForEach-Object { [IO.Path]::GetRelativePath($sourceIncludes,$_.FullName) } | Sort-Object)
+    if (@($supplement.headers.name | Where-Object { $_ -cin $sourceNames }).Count) { throw 'Supplemented headers unexpectedly occur in the core port.' }
+    $fullNames = @(@($sourceNames) + @($supplement.headers.name) | Sort-Object)
     if ((Test-Path -LiteralPath $sdkIncludes) -and @(Get-ChildItem -LiteralPath $sdkIncludes -Recurse -File).Count) {
-        $sourceNames = @(Get-ChildItem -LiteralPath $sourceIncludes -Recurse -File | ForEach-Object { [IO.Path]::GetRelativePath($sourceIncludes,$_.FullName) } | Sort-Object)
         $viewNames = @(Get-ChildItem -LiteralPath $sdkIncludes -Recurse -File | ForEach-Object { [IO.Path]::GetRelativePath($sdkIncludes,$_.FullName) } | Sort-Object)
-        if (@(Compare-Object $sourceNames $viewNames -CaseSensitive).Count) { throw 'SDK view has stale header names; recover into a fresh install root.' }
+        # Allow the original core-only view to be upgraded once. No unknown or
+        # partial header set is accepted; final qualification requires fullNames.
+        if (@(Compare-Object $sourceNames $viewNames -CaseSensitive).Count -and
+            @(Compare-Object $fullNames $viewNames -CaseSensitive).Count) { throw 'SDK view has stale header names; recover into a fresh install root.' }
         foreach ($name in $sourceNames) {
             if ((Get-FileHash -LiteralPath (Join-Path $sourceIncludes $name)).Hash -cne (Get-FileHash -LiteralPath (Join-Path $sdkIncludes $name)).Hash) {
                 throw "SDK view contains changed header bytes: $name"
@@ -72,12 +78,22 @@ try {
     }
     [IO.Directory]::CreateDirectory($sdkIncludes) | Out-Null
     Copy-Item -Path (Join-Path $InstallRoot "$($identity.triplet)/include/opencascade/*") -Destination $sdkIncludes -Recurse -Force
+    $downloadRoot = if ([string]::IsNullOrWhiteSpace($env:VCPKG_DOWNLOADS)) { Join-Path $VcpkgRoot 'downloads' } else { $env:VCPKG_DOWNLOADS }
+    & (Join-Path $PSScriptRoot 'restore-generator-headers.ps1') -ArchivePath (Join-Path $downloadRoot $supplement.sourceArchive) -IncludeRoot $sdkIncludes
+    $viewNames = @(Get-ChildItem -LiteralPath $sdkIncludes -Recurse -File | ForEach-Object { [IO.Path]::GetRelativePath($sdkIncludes,$_.FullName) } | Sort-Object)
+    if (@(Compare-Object $fullNames $viewNames -CaseSensitive).Count) { throw 'The complete generator SDK header view is inconsistent.' }
+    $headerManifestPath = Join-Path $sdkView 'header-manifest.json'
+    [ordered]@{state='PASS';headers=@($viewNames | ForEach-Object {
+        [ordered]@{path=$_;sha256=(Get-FileHash -LiteralPath (Join-Path $sdkIncludes $_)).Hash}
+    })} | ConvertTo-Json -Depth 4 | Set-Content -LiteralPath $headerManifestPath -Encoding utf8
     $inputs = @(Get-ChildItem -LiteralPath $manifest -Recurse -File | Sort-Object FullName | ForEach-Object {
         [ordered]@{ path=[IO.Path]::GetRelativePath($manifest, $_.FullName).Replace('\','/'); sha256=(Get-FileHash -LiteralPath $_.FullName).Hash }
     })
     $report = [ordered]@{ state='PASS'; provider=$identity.provider; registryCommit=$head; triplet=$identity.triplet;
         installRoot=$InstallRoot; sdkView=$sdkView; vcpkgRoot=$VcpkgRoot; vcpkgVersion=(& $executable version | Out-String).Trim();
-        statusSha256=(Get-FileHash -LiteralPath $status).Hash; requiredEmpty=[bool]$RequireEmpty; binaryCacheDisabled=[bool]$NoBinaryCache;
+        statusSha256=(Get-FileHash -LiteralPath $status).Hash; sdkHeaders=$viewNames.Count; supplementedHeaders=$supplement.headers.Count;
+        sdkHeaderManifestSha256=(Get-FileHash -LiteralPath $headerManifestPath).Hash;
+        requiredEmpty=[bool]$RequireEmpty; binaryCacheDisabled=[bool]$NoBinaryCache;
         recordedUtc=[DateTimeOffset]::UtcNow.ToString('o'); inputs=$inputs }
     $report | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath (Join-Path $InstallRoot 'occtsharp-provider.json') -Encoding utf8
     Write-Host "Pinned vcpkg restore PASS: $InstallRoot"

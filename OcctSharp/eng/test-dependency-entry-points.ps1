@@ -35,6 +35,29 @@ $badProvider = Join-Path $fixture 'bad-provider'
 Reject 'build rejects unqualified provider' 'recovery entry point first' {
     & (Join-Path $PSScriptRoot 'build-vcpkg.ps1') -InstallRoot $badProvider
 }
+$badRuntime = Join-Path $fixture 'bad-runtime'
+$badRuntimeBin = Join-Path $badRuntime 'runtime/Release'
+[IO.Directory]::CreateDirectory($badRuntimeBin) | Out-Null
+$runtimeManifestPath = Join-Path $badRuntime 'runtime-manifest-Release.json'
+@{state='FAIL';configuration='Release'} | ConvertTo-Json | Set-Content -LiteralPath $runtimeManifestPath
+Reject 'runtime rejects unqualified build' 'native build manifest is required' {
+    & (Join-Path $PSScriptRoot 'verify-vcpkg-runtime.ps1') -BuildRoot $badRuntime
+}
+@{state='BUILD_PASS_RUNTIME_NOT_RUN';configuration='Release';provider='fixture';files=@(@{path='occt/OcctSharp.Native.dll';sha256='0'*64})} |
+    ConvertTo-Json -Depth 4 | Set-Content -LiteralPath $runtimeManifestPath
+Reject 'runtime rejects missing native payload' 'DLL names differ' {
+    & (Join-Path $PSScriptRoot 'verify-vcpkg-runtime.ps1') -BuildRoot $badRuntime
+}
+Set-Content -LiteralPath (Join-Path $badRuntimeBin 'OcctSharp.Native.dll') -Value 'modified payload'
+Reject 'runtime rejects modified native payload' 'runtime changed' {
+    & (Join-Path $PSScriptRoot 'verify-vcpkg-runtime.ps1') -BuildRoot $badRuntime
+}
+$badArchive = Join-Path $fixture 'wrong-source.tar.gz'
+Set-Content -LiteralPath $badArchive -Value 'untrusted source bytes'
+Reject 'header recovery rejects different source archive' 'differs from the pinned SHA512' {
+    & (Join-Path $PSScriptRoot 'restore-generator-headers.ps1') -ArchivePath $badArchive -IncludeRoot (Join-Path $fixture 'unused-headers')
+}
+if (Test-Path -LiteralPath (Join-Path $fixture 'unused-headers')) { throw 'Invalid source archive created an SDK view.' }
 if ((Get-Content -LiteralPath (Join-Path $nonempty 'retained.txt') -Raw).Trim() -cne 'retain') { throw 'Negative recovery checks modified retained content.' }
 [ordered]@{state='PASS';checks=@($checks);count=$checks.Count;fixture=$fixture;networkUsed=$false;nativeBuildStarted=$false} |
     ConvertTo-Json -Depth 4 | Set-Content -LiteralPath (Join-Path $OutputRoot 'result.json') -Encoding utf8

@@ -128,6 +128,14 @@
 #include <TransferBRep_Reader.hxx>
 #include <TransferBRep_ShapeListBinder.hxx>
 #include <TransferBRep_TransferResultInfo.hxx>
+#include <TopoDS_Compound.hxx>
+#include <TopoDS_CompSolid.hxx>
+#include <TopoDS_Solid.hxx>
+#include <TopoDS_Shell.hxx>
+#include <TopoDS_Face.hxx>
+#include <TopoDS_Wire.hxx>
+#include <TopoDS_Edge.hxx>
+#include <TopoDS_Vertex.hxx>
 #include <Interface_CheckIterator.hxx>
 #include <Interface_Check.hxx>
 #include <unordered_set>

@@ -1,0 +1,921 @@
+{
+  "schemaVersion": "1.0",
+  "sourceArchive": "Open-Cascade-SAS-OCCT-V8_0_1.tar.gz",
+  "headers": [
+    {
+      "name": "BOPTest_DrawableShape.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/BOPTest/BOPTest_DrawableShape.hxx",
+      "sha256": "A601215A0537453E7B0D62E03662130719A1307E4585FE143FD743B0FC269A7A"
+    },
+    {
+      "name": "BOPTest_Objects.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/BOPTest/BOPTest_Objects.hxx",
+      "sha256": "77F179AA85BE866720751993B70946A6B006CB112C9647ADEE2450497472419B"
+    },
+    {
+      "name": "BOPTest.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/BOPTest/BOPTest.hxx",
+      "sha256": "6177F06B7804C5FEB27CA7B7E983DBF5AEDB19876402FCEE64245D14F42EC31E"
+    },
+    {
+      "name": "BRepTest_DrawableHistory.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/BRepTest/BRepTest_DrawableHistory.hxx",
+      "sha256": "8CE2DABAEB3A8D284A8E5667399E549B388621C7492CB4E6F4C18D9952332039"
+    },
+    {
+      "name": "BRepTest_Objects.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/BRepTest/BRepTest_Objects.hxx",
+      "sha256": "FBDA16A476F7BFDCDA680F4F5797B355A48CDE65FFDB1FB3FD966432EA7D3CB0"
+    },
+    {
+      "name": "BRepTest.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/BRepTest/BRepTest.hxx",
+      "sha256": "30635E1E9FA83289650CACA0A25606440ED3F3101BE30E7A7C0D29E4887DDE8A"
+    },
+    {
+      "name": "D3DHostTest.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKD3DHostTest/D3DHostTest/D3DHostTest.hxx",
+      "sha256": "EFCE822832D1562B64403E4228B4761EEF4301FCAEAED338F51DDB81ADEC4EF1"
+    },
+    {
+      "name": "DBRep_DrawableShape.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/DBRep/DBRep_DrawableShape.hxx",
+      "sha256": "20D54C7EF06632171FD692D7D4510FC83118C01D6A8640AFFB79B31258CE76B9"
+    },
+    {
+      "name": "DBRep_Edge.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/DBRep/DBRep_Edge.hxx",
+      "sha256": "960E5F91199D6834D037725651E1FA75C2A25222982E67161618CE2C3F98FC8B"
+    },
+    {
+      "name": "DBRep_Edge.lxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/DBRep/DBRep_Edge.lxx",
+      "sha256": "EB339755900DB36C2CDF9BD758A818B731F983C8982A6D07C1309A50C029BB9D"
+    },
+    {
+      "name": "DBRep_Face.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/DBRep/DBRep_Face.hxx",
+      "sha256": "38077A2F95DBAAE5D0C0C617DF707F212718052CA5A4D82478D803AA1CF00117"
+    },
+    {
+      "name": "DBRep_Face.lxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/DBRep/DBRep_Face.lxx",
+      "sha256": "CA3366ED76BB2EE140772F7116CDC4F232B323A295FEC690C269AD69A28ABA4D"
+    },
+    {
+      "name": "DBRep_HideData.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/DBRep/DBRep_HideData.hxx",
+      "sha256": "243CABD3924B41DEAFB76583338A3EFAC3CF34F53693E1C1894A7366D39D2DF8"
+    },
+    {
+      "name": "DBRep_IsoBuilder.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/DBRep/DBRep_IsoBuilder.hxx",
+      "sha256": "F61521B6FF94B93B9834B03E16756DE2A7943A528912DF2639A54AF0ABAF3425"
+    },
+    {
+      "name": "DBRep_Params.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/DBRep/DBRep_Params.hxx",
+      "sha256": "B3795FA1137DDE4CE348DB932F22C8A6B32304B54515BBCDE70270B91AF9345D"
+    },
+    {
+      "name": "DBRep.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/DBRep/DBRep.hxx",
+      "sha256": "79EC2FA53A728398E9FA411AD0A817B297B4AAC33FBE565F04F5DB3AF9335D39"
+    },
+    {
+      "name": "DDataStd_DrawDriver.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DDataStd/DDataStd_DrawDriver.hxx",
+      "sha256": "B7F959DC3FE72FA3A04E6B76EE38FDBD78C950D10D38AA7798E6D143E2BE6A9B"
+    },
+    {
+      "name": "DDataStd_DrawPresentation.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DDataStd/DDataStd_DrawPresentation.hxx",
+      "sha256": "861957E0FEFAE6CF582B7849D82BDAFA706046DDF713337212E71E1E5194DA86"
+    },
+    {
+      "name": "DDataStd_TreeBrowser.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DDataStd/DDataStd_TreeBrowser.hxx",
+      "sha256": "71F0E7B0BC69491D35BF6979D15D69F9796F3D1652BFFFE9BD1BAEE2130A79F3"
+    },
+    {
+      "name": "DDataStd.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DDataStd/DDataStd.hxx",
+      "sha256": "7B4CDEF473CD6ABE433536B7C9ACB43358207D62B83A3C57D359563F7FC2BB08"
+    },
+    {
+      "name": "DDF_AttributeBrowser.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DDF/DDF_AttributeBrowser.hxx",
+      "sha256": "28779A0919D351B31778E4A11B2F69B026DCE57B455271A4C3396531BE63B986"
+    },
+    {
+      "name": "DDF_Browser.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DDF/DDF_Browser.hxx",
+      "sha256": "52ADFB0E1110DBC0ACC7F2EA1578F9E8FCDC0AF2680BCD9E880472602E990582"
+    },
+    {
+      "name": "DDF_Data.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DDF/DDF_Data.hxx",
+      "sha256": "9F110EC586FDFD80E419C84B2E5D91E261B4106F41D3EB11364C4FFBDFA5FA81"
+    },
+    {
+      "name": "DDF_Transaction.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DDF/DDF_Transaction.hxx",
+      "sha256": "0B6279231F474B0EE11479245DC9ACEE56A1434C10621BB3F1875EC734F3060F"
+    },
+    {
+      "name": "DDF.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DDF/DDF.hxx",
+      "sha256": "82F9530E575A1389235B9FC84D11FA2E266BA96C7A1773FBEAAC333961A5A44D"
+    },
+    {
+      "name": "DDocStd_DrawDocument.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DDocStd/DDocStd_DrawDocument.hxx",
+      "sha256": "BD96B42E38F722058271027D035611583894C318B72265454DC2EB5A6AA0E5A1"
+    },
+    {
+      "name": "DDocStd.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DDocStd/DDocStd.hxx",
+      "sha256": "0091881AC98FAED681E633B72DCC417556A28B63423C9C5F4D94322F9225445F"
+    },
+    {
+      "name": "DNaming_BooleanOperationDriver.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DNaming/DNaming_BooleanOperationDriver.hxx",
+      "sha256": "5EC45943353C71F017A9CD170ECE7FC65658993D5ADF5F9EE832EDF589ED1791"
+    },
+    {
+      "name": "DNaming_BoxDriver.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DNaming/DNaming_BoxDriver.hxx",
+      "sha256": "50863F6515421CEA6BC3E7A67FFB3EAA9E6C00432EC3CEABD01253621856F443"
+    },
+    {
+      "name": "DNaming_CylinderDriver.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DNaming/DNaming_CylinderDriver.hxx",
+      "sha256": "5F8BD82E8C2C8FD44D945C70A12117929EB4521873A8A1973AF1FDFBB46E41B0"
+    },
+    {
+      "name": "DNaming_FilletDriver.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DNaming/DNaming_FilletDriver.hxx",
+      "sha256": "218181F5BF6D7E190C883A1F860E954703D564816D768C2F78749503EB148040"
+    },
+    {
+      "name": "DNaming_Line3DDriver.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DNaming/DNaming_Line3DDriver.hxx",
+      "sha256": "B9E6C154EF05359308F1F361BECCE715FCBDE2947FA11F35FE92DD1AD15AFDCE"
+    },
+    {
+      "name": "DNaming_PointDriver.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DNaming/DNaming_PointDriver.hxx",
+      "sha256": "9494CEDDBEA31C37AF6471318A7D666246947B38FBB0FE15391855561DE78453"
+    },
+    {
+      "name": "DNaming_PrismDriver.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DNaming/DNaming_PrismDriver.hxx",
+      "sha256": "70BBB9531754129445645FF51395D90038DDAF4FAE95B42B47E856154E508AEC"
+    },
+    {
+      "name": "DNaming_RevolutionDriver.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DNaming/DNaming_RevolutionDriver.hxx",
+      "sha256": "3D9F926430E16DB5E603959EDB1C8AA8D7EC85C8C713910F86B27EAD958B2B11"
+    },
+    {
+      "name": "DNaming_SelectionDriver.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DNaming/DNaming_SelectionDriver.hxx",
+      "sha256": "566E1E551A873302067CC284ED4C1EB36A80BA57C3BF326A92D87D45F4433804"
+    },
+    {
+      "name": "DNaming_SphereDriver.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DNaming/DNaming_SphereDriver.hxx",
+      "sha256": "D4BDF9E835E385778222AC4C2F677594061DE5661955CE2B192AB6AD48F86931"
+    },
+    {
+      "name": "DNaming_TransformationDriver.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DNaming/DNaming_TransformationDriver.hxx",
+      "sha256": "5D1DC70496F9E119CA2D4458E6F0CAE7D84B4F6EF4C393B6AE7E157BCF50CEA9"
+    },
+    {
+      "name": "DNaming.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DNaming/DNaming.hxx",
+      "sha256": "D91E5BDD367EBCC209B633C97A3ACF683A81CD472C174CE95DF00880991E91E6"
+    },
+    {
+      "name": "DPrsStd.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DPrsStd/DPrsStd.hxx",
+      "sha256": "8D769EA33BD7165DBB483415B0BEF006199FA909D684FC47D72C5DD91C823F88"
+    },
+    {
+      "name": "Draw_Appli.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_Appli.hxx",
+      "sha256": "4CF24A621FEAB90A7E44E7956169E7561C85608C12A9AE3CA85D5357A452A884"
+    },
+    {
+      "name": "Draw_Axis2D.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_Axis2D.hxx",
+      "sha256": "1AADA93A789ED16DE3EBC78E84DD0911775FFB980DBDE7A57E9089A1AEF4DD86"
+    },
+    {
+      "name": "Draw_Axis3D.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_Axis3D.hxx",
+      "sha256": "E71C3B3A91940D7D489BB6E7642005068598407A2CF64A857C33E938D2BC3ADF"
+    },
+    {
+      "name": "Draw_Box.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_Box.hxx",
+      "sha256": "782FE720EA19FB7C69E6B56A317D9E4E792BC8F08A569F692112419F0242930A"
+    },
+    {
+      "name": "Draw_Chronometer.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_Chronometer.hxx",
+      "sha256": "899E3FBBBE12884A7ACF27561FB29A11C88072CB4A1AA1940DDD1C73B8E4552E"
+    },
+    {
+      "name": "Draw_Circle2D.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_Circle2D.hxx",
+      "sha256": "17C4B86C381D94759DB650E118002912499E0E52B43AA9A547E893C28CFA5B3D"
+    },
+    {
+      "name": "Draw_Circle3D.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_Circle3D.hxx",
+      "sha256": "D5690F8AC047FF01B9E3AD10F4BC4A5F1E11B1D998D4D2047CB0770FE64E5115"
+    },
+    {
+      "name": "Draw_Color.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_Color.hxx",
+      "sha256": "C923EC1CD9B8E9CD28811081B2C2B9369936B33B2CFBDB1CC87A61CAD2447E8F"
+    },
+    {
+      "name": "Draw_ColorKind.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_ColorKind.hxx",
+      "sha256": "4A72B6CC023170793D0A774C7DF84033118772D80BA56A4B5F1C9D7A696FEB11"
+    },
+    {
+      "name": "Draw_Display.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_Display.hxx",
+      "sha256": "2BD2D1358F558D02E9792D24C3BDA95476A65C36870DE3FCE3D9D4F80B47CBB7"
+    },
+    {
+      "name": "Draw_Drawable2D.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_Drawable2D.hxx",
+      "sha256": "9F384EF8552FE9E146720E592F35320B640A33F1C2586D84E15C92534870A0A5"
+    },
+    {
+      "name": "Draw_Drawable3D.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_Drawable3D.hxx",
+      "sha256": "461CF3F4CD091904E6E37CB463B1BCA62BCE4583A279C3A358C3243ADA9268B7"
+    },
+    {
+      "name": "Draw_Failure.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_Failure.hxx",
+      "sha256": "DD41E06DF66FFB9DCA49AEAED0438152A50658C7C0A83D707E330D39D13BA9D8"
+    },
+    {
+      "name": "Draw_Grid.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_Grid.hxx",
+      "sha256": "50D25ABA94839B790C3A88CD1E9BED581A3E2A6462F62C340B9B3720B020634E"
+    },
+    {
+      "name": "Draw_Grid.lxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_Grid.lxx",
+      "sha256": "333201C536237CE8218A736CD7953915B397292E97F9D2C0E3E93456F146B174"
+    },
+    {
+      "name": "Draw_Interpretor.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_Interpretor.hxx",
+      "sha256": "63E6CE8CD2E36423AAA211871FCF12C4FB6BDDDF86DCBD8A247912C9464DB9CD"
+    },
+    {
+      "name": "Draw_Main.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_Main.hxx",
+      "sha256": "B9E4B436C84E45B9B47D31651A44A9D4588DE0EA5ADB4A53B30D87DCA8E79CFF"
+    },
+    {
+      "name": "Draw_Marker2D.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_Marker2D.hxx",
+      "sha256": "A64C5C5E8413AD64EB37C5F838C1C42464912E3EB33CBB01B611A64448E3155B"
+    },
+    {
+      "name": "Draw_Marker3D.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_Marker3D.hxx",
+      "sha256": "B98DC206BA459ED8AB7E49830B7EAE6967C86A7CA7140C7AEAA0981C16938469"
+    },
+    {
+      "name": "Draw_MarkerShape.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_MarkerShape.hxx",
+      "sha256": "323ACC8798FEC1EF72C2FB0D523584A4E6DCC9FC66F4A28C5BE4FE56697551E8"
+    },
+    {
+      "name": "Draw_Number.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_Number.hxx",
+      "sha256": "97C832A42980CAFDF8C055100335718525115751B0BAD7078CE5C6243ED377CD"
+    },
+    {
+      "name": "Draw_PInterp.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_PInterp.hxx",
+      "sha256": "9C6F099BD144F2BBBF9DA0D25202038E35CC568E1871F001827D2CCB839BF1B1"
+    },
+    {
+      "name": "Draw_PluginMacro.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_PluginMacro.hxx",
+      "sha256": "B44817B5D822E9A20C3D8C85341DED94937CEB8A5048D3C6E071B8463633B804"
+    },
+    {
+      "name": "Draw_Printer.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_Printer.hxx",
+      "sha256": "6CE73C6C489E6E2A01361B76D8232A58F9771AD9CD7392887904FD47393A7208"
+    },
+    {
+      "name": "Draw_ProgressIndicator.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_ProgressIndicator.hxx",
+      "sha256": "D533B3F10A206257E8568320140BD463E998718565282175F574962C3E27E1C5"
+    },
+    {
+      "name": "Draw_Segment2D.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_Segment2D.hxx",
+      "sha256": "459EBB8EE9A45E8FB61DC9881367A0228FDBEB0D6FC41997F17CB785813A3CB5"
+    },
+    {
+      "name": "Draw_Segment3D.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_Segment3D.hxx",
+      "sha256": "D1E4E6D70A5439B07A704C6E5828E8BECCE7152AFAAE50091CC1AC9484F1001C"
+    },
+    {
+      "name": "Draw_Text2D.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_Text2D.hxx",
+      "sha256": "1FD75449E7BA075102F7B080172F0EDC98AD4132DA7FB20FB309EE8470538B59"
+    },
+    {
+      "name": "Draw_Text3D.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_Text3D.hxx",
+      "sha256": "C88EC389C4B0E0971AEE22A011CFA6E7D779B54EA72D6C2CD6036E4CC1C637B0"
+    },
+    {
+      "name": "Draw_View.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_View.hxx",
+      "sha256": "91B00566298EE20FC675D1EF24695833E57290E38ECC52C00849C75803F86A0A"
+    },
+    {
+      "name": "Draw_Viewer.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_Viewer.hxx",
+      "sha256": "2AA9A8774ED7FF445A27A27EE07C09867ACCEA4B8815B03146A3498B7F09BDCB"
+    },
+    {
+      "name": "Draw_Window.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw_Window.hxx",
+      "sha256": "5C0647B774A6693785D3E52848DE51A15B54C97697E7A96FE7FA742C3FE3DF49"
+    },
+    {
+      "name": "Draw.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/Draw/Draw.hxx",
+      "sha256": "19D4F28B12150EEA9B6F01C8274F974CF2B164F0CE049FD4A3633A318F263378"
+    },
+    {
+      "name": "DrawDim_Angle.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DrawDim/DrawDim_Angle.hxx",
+      "sha256": "FC880A60033719DCBA9786314056E42040A0045CF42D1970E65CE9E6F4DF108B"
+    },
+    {
+      "name": "DrawDim_Dimension.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DrawDim/DrawDim_Dimension.hxx",
+      "sha256": "A8B7077EF55744C3754DFBD1BA5F916978113075B7FD99B77B4FA35F16769925"
+    },
+    {
+      "name": "DrawDim_Distance.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DrawDim/DrawDim_Distance.hxx",
+      "sha256": "E29AD986F78D6E104EEDBFB7078C0F8457083FDF5EE59E01FAE979C3CCEE5F75"
+    },
+    {
+      "name": "DrawDim_PlanarAngle.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DrawDim/DrawDim_PlanarAngle.hxx",
+      "sha256": "CD9966A47881C491AB51FC30321D674F1A193541B00915662DDC5693A021E131"
+    },
+    {
+      "name": "DrawDim_PlanarDiameter.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DrawDim/DrawDim_PlanarDiameter.hxx",
+      "sha256": "35BEA7958AC5C0BC6ED624952C2626EAFA22008F1E2DD499B6BF5E0014A90A9E"
+    },
+    {
+      "name": "DrawDim_PlanarDimension.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DrawDim/DrawDim_PlanarDimension.hxx",
+      "sha256": "F82461291C8790005341CE4523C06A417301F941967B2DC643F6EDBE9E16968D"
+    },
+    {
+      "name": "DrawDim_PlanarDistance.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DrawDim/DrawDim_PlanarDistance.hxx",
+      "sha256": "86CF2779FDD564EB5249F03EDE2064C616002BE66906D36520BCCB767436E4D2"
+    },
+    {
+      "name": "DrawDim_PlanarRadius.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DrawDim/DrawDim_PlanarRadius.hxx",
+      "sha256": "846C9DA4E656A56DFD8C9D6A1B00607BD4C7F4D5C327F3876DE1ECFD6EBAFF4A"
+    },
+    {
+      "name": "DrawDim_Radius.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DrawDim/DrawDim_Radius.hxx",
+      "sha256": "541652950AEA2E3452395BF88923C333557A881BBB209E1D0783A597ED6A38D9"
+    },
+    {
+      "name": "DrawDim.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DrawDim/DrawDim.hxx",
+      "sha256": "E1E3F57A635165BB657F28B2AC937F42EE88832DC17730DA56005D535EE70F69"
+    },
+    {
+      "name": "DrawFairCurve_Batten.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/DrawFairCurve/DrawFairCurve_Batten.hxx",
+      "sha256": "26B669F453C20230C711190E8923DE410A3DD1AFB253C86B41062028FF653B96"
+    },
+    {
+      "name": "DrawFairCurve_MinimalVariation.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/DrawFairCurve/DrawFairCurve_MinimalVariation.hxx",
+      "sha256": "6E92A98E758795F23B3D916A3D82F233EC212ED1CFFA13FC27A9AE51A1BFDE11"
+    },
+    {
+      "name": "DrawTrSurf_BezierCurve.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/DrawTrSurf/DrawTrSurf_BezierCurve.hxx",
+      "sha256": "EA980E98966E77C27321D74419F67BB64D24383442A000B16075732315633184"
+    },
+    {
+      "name": "DrawTrSurf_BezierCurve2d.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/DrawTrSurf/DrawTrSurf_BezierCurve2d.hxx",
+      "sha256": "0A560D28F480C2EB58D87517D0F7CBC7A0EA4CEE4F0D2644F4BC8AE9E05FAD55"
+    },
+    {
+      "name": "DrawTrSurf_BezierSurface.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/DrawTrSurf/DrawTrSurf_BezierSurface.hxx",
+      "sha256": "BB275C985B1DB3070948EA858B7B29DFB3FAB76533DF5699CD185F41CB32B510"
+    },
+    {
+      "name": "DrawTrSurf_BSplineCurve.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/DrawTrSurf/DrawTrSurf_BSplineCurve.hxx",
+      "sha256": "7663766E8F91806F5D67B8C007D168E154B972C3AB6A07DB5FFB173987ACCAC5"
+    },
+    {
+      "name": "DrawTrSurf_BSplineCurve2d.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/DrawTrSurf/DrawTrSurf_BSplineCurve2d.hxx",
+      "sha256": "82A0612D4504749DBFEB7AAB2CFB9000C26F8E011E6E7FA81400F575C22E3752"
+    },
+    {
+      "name": "DrawTrSurf_BSplineSurface.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/DrawTrSurf/DrawTrSurf_BSplineSurface.hxx",
+      "sha256": "CE5D27C199B270E50502E86DD7B38F4F7219DE6FB4C2F4B3E61842E9F177A686"
+    },
+    {
+      "name": "DrawTrSurf_Curve.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/DrawTrSurf/DrawTrSurf_Curve.hxx",
+      "sha256": "A0859E674A69E91C654E117E1EFC82BF3BEC39CE6ABBCD9D9E507225891715BD"
+    },
+    {
+      "name": "DrawTrSurf_Curve2d.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/DrawTrSurf/DrawTrSurf_Curve2d.hxx",
+      "sha256": "B82A89B4BCAB8BD9ACCE569D5084DD8E53F86EA698887060E421202909D7E9B9"
+    },
+    {
+      "name": "DrawTrSurf_Drawable.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/DrawTrSurf/DrawTrSurf_Drawable.hxx",
+      "sha256": "DDC3733819419A86D43AF8201CD6385229F81DA9D8B9245FFF1B65DFB0990E01"
+    },
+    {
+      "name": "DrawTrSurf_Params.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/DrawTrSurf/DrawTrSurf_Params.hxx",
+      "sha256": "E73D787345D2FA95095B6EF214489BE2DC4E5D0DE60F49334FC0958458E9612F"
+    },
+    {
+      "name": "DrawTrSurf_Point.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/DrawTrSurf/DrawTrSurf_Point.hxx",
+      "sha256": "B96A3B8916D5BAB1A98C6D97552402E210A3A8F8ED68FB9DA50954097B9FA4E0"
+    },
+    {
+      "name": "DrawTrSurf_Polygon2D.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/DrawTrSurf/DrawTrSurf_Polygon2D.hxx",
+      "sha256": "A88865AAFE50AF25968A10CBC371CA8DC646D18A05CCA542E16F5DC901F57E29"
+    },
+    {
+      "name": "DrawTrSurf_Polygon3D.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/DrawTrSurf/DrawTrSurf_Polygon3D.hxx",
+      "sha256": "BD7B1ECD19A0B22A5AF4119BCBD0EB4AE9387F54C7371C26FD5887ABA4C73570"
+    },
+    {
+      "name": "DrawTrSurf_Surface.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/DrawTrSurf/DrawTrSurf_Surface.hxx",
+      "sha256": "F4F6E5971DDDE4F2FF69910976799EF63320B2C9EC1570A9C129D4C90A1E8AE8"
+    },
+    {
+      "name": "DrawTrSurf_Triangulation.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/DrawTrSurf/DrawTrSurf_Triangulation.hxx",
+      "sha256": "A5A9E69F254ADCFDF994915B67AA87EAB99C3121912FD8669650F7D379E2EFA7"
+    },
+    {
+      "name": "DrawTrSurf_Triangulation2D.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/DrawTrSurf/DrawTrSurf_Triangulation2D.hxx",
+      "sha256": "C65AD743A82C4E3EB65D6A5C75E1307B9FD7CAF17E38124D8E0B3A0387B00D62"
+    },
+    {
+      "name": "DrawTrSurf.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDraw/DrawTrSurf/DrawTrSurf.hxx",
+      "sha256": "B9FC643DD0359602D4DD1FD41873921126F1C00EA1140513919833ADA55DFEFD"
+    },
+    {
+      "name": "GeometryTest_DrawableQualifiedCurve2d.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/GeometryTest/GeometryTest_DrawableQualifiedCurve2d.hxx",
+      "sha256": "9AB4C62EC0A0890C86958A4EA599A6389D13B5594DBB45B369A3663B96CC5537"
+    },
+    {
+      "name": "GeometryTest.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/GeometryTest/GeometryTest.hxx",
+      "sha256": "3C184A98C23B39642AC1E26C137F9FBA4187A310F663BFD842E5E7A547A40EFC"
+    },
+    {
+      "name": "GeomliteTest.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/GeomliteTest/GeomliteTest.hxx",
+      "sha256": "A17F4A7BD098F689B4B9EB569B435CDD7AB335864F356E3DAF803B6894F48783"
+    },
+    {
+      "name": "HLRTest_DrawableEdgeTool.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/HLRTest/HLRTest_DrawableEdgeTool.hxx",
+      "sha256": "21EA02917B4631A17156F6C9F2DD181600751E9D55F7FE8E7B9B8CDE9306749D"
+    },
+    {
+      "name": "HLRTest_DrawablePolyEdgeTool.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/HLRTest/HLRTest_DrawablePolyEdgeTool.hxx",
+      "sha256": "58249C670543E519608485C2BF76804AF061195929001DCB01D95F1CC9B06424"
+    },
+    {
+      "name": "HLRTest_DrawablePolyEdgeTool.lxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/HLRTest/HLRTest_DrawablePolyEdgeTool.lxx",
+      "sha256": "CBE076A7E002189BCF42E7C499036CABA6FC6C38CFA8886E660802C67A5BFA7F"
+    },
+    {
+      "name": "HLRTest_OutLiner.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/HLRTest/HLRTest_OutLiner.hxx",
+      "sha256": "E75FF3373899853F459C6733957F6175815FBFA669228DD4272873F697027991"
+    },
+    {
+      "name": "HLRTest_OutLiner.lxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/HLRTest/HLRTest_OutLiner.lxx",
+      "sha256": "D83723E7F983B0804FA5263C42CB1A926EC113108D7BB861A52AF903D3A64FB9"
+    },
+    {
+      "name": "HLRTest_Projector.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/HLRTest/HLRTest_Projector.hxx",
+      "sha256": "42017E02FEBFBF5A4DA384848A976025EA5BF77F30B22FEE58889E12257839E5"
+    },
+    {
+      "name": "HLRTest_ShapeData.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/HLRTest/HLRTest_ShapeData.hxx",
+      "sha256": "9C62CC2F6CF4093F3337177A32AF954C83104BC5EE441F55173DEB2F317BB78A"
+    },
+    {
+      "name": "HLRTest_ShapeData.lxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/HLRTest/HLRTest_ShapeData.lxx",
+      "sha256": "8DDE2726702212048BB715A90EAA14D94A55A45D2F27AFE0C91FD15F2D554B25"
+    },
+    {
+      "name": "HLRTest.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/HLRTest/HLRTest.hxx",
+      "sha256": "E527C5C8BEF1D1B35B4CA90264E76F3D7275CA7A743559E6E63E77E5CCBA3566"
+    },
+    {
+      "name": "IVtk_Interface.hxx",
+      "archivePath": "OCCT-8_0_1/src/Visualization/TKIVtk/IVtk/IVtk_Interface.hxx",
+      "sha256": "FF9F820E52D9A7BA5CAFD44D395AB5128FEE654068B13FC2AB747C12AC8EA3C5"
+    },
+    {
+      "name": "IVtk_IShape.hxx",
+      "archivePath": "OCCT-8_0_1/src/Visualization/TKIVtk/IVtk/IVtk_IShape.hxx",
+      "sha256": "58725E27E46BEDE994F4D318FE9E8B513C8F2511B40D684B89DA904066851FD0"
+    },
+    {
+      "name": "IVtk_IShapeData.hxx",
+      "archivePath": "OCCT-8_0_1/src/Visualization/TKIVtk/IVtk/IVtk_IShapeData.hxx",
+      "sha256": "9B5C7920B61FCB10F6BB3EA5819D1AB77D9756DF4401241E98FB8889B86C162C"
+    },
+    {
+      "name": "IVtk_IShapeMesher.hxx",
+      "archivePath": "OCCT-8_0_1/src/Visualization/TKIVtk/IVtk/IVtk_IShapeMesher.hxx",
+      "sha256": "F1426F511E62B86E50332F76F2DACEF1BB5541E176FD81B83ED9A957169AC3AB"
+    },
+    {
+      "name": "IVtk_IShapePickerAlgo.hxx",
+      "archivePath": "OCCT-8_0_1/src/Visualization/TKIVtk/IVtk/IVtk_IShapePickerAlgo.hxx",
+      "sha256": "E159004CD89F58F5EFDB4332E884DE5B0A7FD4E419AA644A5E615A4911EC9815"
+    },
+    {
+      "name": "IVtk_IView.hxx",
+      "archivePath": "OCCT-8_0_1/src/Visualization/TKIVtk/IVtk/IVtk_IView.hxx",
+      "sha256": "D22A83F1CFC717BA5E2BD9B82E3BEBACA25B34C7E3BC89E882A5E24FD96FAFFC"
+    },
+    {
+      "name": "IVtk_Types.hxx",
+      "archivePath": "OCCT-8_0_1/src/Visualization/TKIVtk/IVtk/IVtk_Types.hxx",
+      "sha256": "39D410B9FF14A8695DCF70D5E7D437CA8C9B1EBC67CEFFAD216DD56893C60214"
+    },
+    {
+      "name": "IVtkDraw_HighlightAndSelectionPipeline.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKIVtkDraw/IVtkDraw/IVtkDraw_HighlightAndSelectionPipeline.hxx",
+      "sha256": "27CC7E7614608147D9535459E9EC18C84582FF90A9D6441F359B2F84FC5CD297"
+    },
+    {
+      "name": "IVtkDraw_Interactor.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKIVtkDraw/IVtkDraw/IVtkDraw_Interactor.hxx",
+      "sha256": "EDD5098E43B6E02C2CDA5A732F94F164D1BD1FFB761000818D73E6C82251CA40"
+    },
+    {
+      "name": "IVtkDraw.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKIVtkDraw/IVtkDraw/IVtkDraw.hxx",
+      "sha256": "6C20AB658AFE99651FB1D61BDEAEC981E335931A40B6E76FEFA825B6F99AD782"
+    },
+    {
+      "name": "IVtkOCC_SelectableObject.hxx",
+      "archivePath": "OCCT-8_0_1/src/Visualization/TKIVtk/IVtkOCC/IVtkOCC_SelectableObject.hxx",
+      "sha256": "AC33A2E8F94CF4074D6C06C77A338D2CD4A1324802354793DF7149DFF7EDAAA2"
+    },
+    {
+      "name": "IVtkOCC_Shape.hxx",
+      "archivePath": "OCCT-8_0_1/src/Visualization/TKIVtk/IVtkOCC/IVtkOCC_Shape.hxx",
+      "sha256": "228148BF53AD8A8063B699CE1BC2F660BC541BE2D1B6F03450D24B9201EEEE7F"
+    },
+    {
+      "name": "IVtkOCC_ShapeMesher.hxx",
+      "archivePath": "OCCT-8_0_1/src/Visualization/TKIVtk/IVtkOCC/IVtkOCC_ShapeMesher.hxx",
+      "sha256": "3266A08EC43948488E58DD6BDA59D4BEA259EBE1867C7AFF27A68FFD357BEB63"
+    },
+    {
+      "name": "IVtkOCC_ShapePickerAlgo.hxx",
+      "archivePath": "OCCT-8_0_1/src/Visualization/TKIVtk/IVtkOCC/IVtkOCC_ShapePickerAlgo.hxx",
+      "sha256": "3488095B30437AEFAC5F0B228FD9100BAD3D98FA9AC1A80FC71B14DE1FD543DA"
+    },
+    {
+      "name": "IVtkOCC_ViewerSelector.hxx",
+      "archivePath": "OCCT-8_0_1/src/Visualization/TKIVtk/IVtkOCC/IVtkOCC_ViewerSelector.hxx",
+      "sha256": "258F75A9F8A72069733C660596662B12FB80F7838EF0DD6A9626F3B92BD6EB28"
+    },
+    {
+      "name": "IVtkTools_DisplayModeFilter.hxx",
+      "archivePath": "OCCT-8_0_1/src/Visualization/TKIVtk/IVtkTools/IVtkTools_DisplayModeFilter.hxx",
+      "sha256": "8C9DF0D070F3DB6C5D4AE3A59FCF22A9DF18FC390396F61326F0F02E90C648B1"
+    },
+    {
+      "name": "IVtkTools_ShapeDataSource.hxx",
+      "archivePath": "OCCT-8_0_1/src/Visualization/TKIVtk/IVtkTools/IVtkTools_ShapeDataSource.hxx",
+      "sha256": "EC03B5FEC0148540A8669CD763F9A2C51A546FCACC5B5E0E728B7CF0BB51A7BF"
+    },
+    {
+      "name": "IVtkTools_ShapeObject.hxx",
+      "archivePath": "OCCT-8_0_1/src/Visualization/TKIVtk/IVtkTools/IVtkTools_ShapeObject.hxx",
+      "sha256": "7A0CCAB2C89304816D28DA14E988ADC0F43408228FBA0901680E0DCBDA691CF0"
+    },
+    {
+      "name": "IVtkTools_ShapePicker.hxx",
+      "archivePath": "OCCT-8_0_1/src/Visualization/TKIVtk/IVtkTools/IVtkTools_ShapePicker.hxx",
+      "sha256": "B2B2A0DC0E6029F25D089A87CBEF35571F9BCE37BCFEA102B6624AE68E84343E"
+    },
+    {
+      "name": "IVtkTools_SubPolyDataFilter.hxx",
+      "archivePath": "OCCT-8_0_1/src/Visualization/TKIVtk/IVtkTools/IVtkTools_SubPolyDataFilter.hxx",
+      "sha256": "FE828B6E7CB5F0FE91AEFBD443BEC7F1AAD5723DC588A3FE1132CF1641860488"
+    },
+    {
+      "name": "IVtkTools.hxx",
+      "archivePath": "OCCT-8_0_1/src/Visualization/TKIVtk/IVtkTools/IVtkTools.hxx",
+      "sha256": "A2E0F738561CADC4A88905FED5EA8347AF023C05579403448B460BED5BB2B419"
+    },
+    {
+      "name": "IVtkVTK_ShapeData.hxx",
+      "archivePath": "OCCT-8_0_1/src/Visualization/TKIVtk/IVtkVTK/IVtkVTK_ShapeData.hxx",
+      "sha256": "16AD17A68C51B9F6EF30C54EA236C4600479735CC7A6F2E0019A0BE5742E79CB"
+    },
+    {
+      "name": "IVtkVTK_View.hxx",
+      "archivePath": "OCCT-8_0_1/src/Visualization/TKIVtk/IVtkVTK/IVtkVTK_View.hxx",
+      "sha256": "E7A49A4E99CC062C32F5CCB275A0D9EB026BC6ED7B290E1BB04BCD35196A303B"
+    },
+    {
+      "name": "MeshTest_CheckTopology.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/MeshTest/MeshTest_CheckTopology.hxx",
+      "sha256": "B41B8219845B1C2CF3A6E00A92AF0FD0DA007C394F2C502156D57E76755EF347"
+    },
+    {
+      "name": "MeshTest.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/MeshTest/MeshTest.hxx",
+      "sha256": "35C0422588B76FD8CCAE33A1EAB0210BA5E190A3498176D1E863A66CB06E5DF0"
+    },
+    {
+      "name": "ModelDefinitions.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKDCAF/DNaming/ModelDefinitions.hxx",
+      "sha256": "10607ABE3138A3E54D7B705044608FB0040D0DEFDD8B190CF600168B4CF6A8D7"
+    },
+    {
+      "name": "OpenGlTest.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKOpenGlTest/OpenGlTest/OpenGlTest.hxx",
+      "sha256": "75B91C375C45A0F181788D6D6EDF1F2279FEA3949E3456857B7441AAB7D35515"
+    },
+    {
+      "name": "QABugs.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKQADraw/QABugs/QABugs.hxx",
+      "sha256": "A091BC5442762055E0811AEFB223FFF7AE245978BC413DBF818C95ED7221B5E1"
+    },
+    {
+      "name": "QADNaming.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKQADraw/QADNaming/QADNaming.hxx",
+      "sha256": "7A8AF4949E7FC8DF947C53CF4E50E534AB91A071EB4875CAA55A205F45F4C9A0"
+    },
+    {
+      "name": "QADraw.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKQADraw/QADraw/QADraw.hxx",
+      "sha256": "F87EE9C09FCCCA43393793C0735917D21D7757BD7926EF32302A653CA1A5E8BE"
+    },
+    {
+      "name": "SWDRAW_ShapeAnalysis.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/SWDRAW/SWDRAW_ShapeAnalysis.hxx",
+      "sha256": "7A436304539D4B17FAC9CD649DEC85C0663F6373BB7A6763B6A8009927F455D0"
+    },
+    {
+      "name": "SWDRAW_ShapeCustom.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/SWDRAW/SWDRAW_ShapeCustom.hxx",
+      "sha256": "191ABE6912201EB258E004C73935B533C5091989C7A5F5C787CB2077F6F6BAEB"
+    },
+    {
+      "name": "SWDRAW_ShapeExtend.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/SWDRAW/SWDRAW_ShapeExtend.hxx",
+      "sha256": "866B2C5AF58DA2E01FECC1BDF0B7B4DDA470BD87D16F7A7A3A8538F730A21C13"
+    },
+    {
+      "name": "SWDRAW_ShapeFix.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/SWDRAW/SWDRAW_ShapeFix.hxx",
+      "sha256": "37580C58A86D2EAB121A1EE132BE8F4A75EE7A37BF98080A0CFD3D0AE7DD31FB"
+    },
+    {
+      "name": "SWDRAW_ShapeProcess.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/SWDRAW/SWDRAW_ShapeProcess.hxx",
+      "sha256": "73AADB0DFACD1A48D823E644BEF58D1A0D2C8DF9F065BEE6705C28309AA7A4E4"
+    },
+    {
+      "name": "SWDRAW_ShapeProcessAPI.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/SWDRAW/SWDRAW_ShapeProcessAPI.hxx",
+      "sha256": "AE64E8370083D79FDEFF46A55AA37E98ACC2490385B421D198583C97B433644B"
+    },
+    {
+      "name": "SWDRAW_ShapeTool.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/SWDRAW/SWDRAW_ShapeTool.hxx",
+      "sha256": "793112CBF47ACD2E0310CF4D2017C7C1374B441EC5C273A7407AE73C96D0C6AC"
+    },
+    {
+      "name": "SWDRAW_ShapeUpgrade.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/SWDRAW/SWDRAW_ShapeUpgrade.hxx",
+      "sha256": "057B6B92E3B6FE043A17640A19B6FFF3E4ED7A1584C13364AAEE41D7287B56BC"
+    },
+    {
+      "name": "SWDRAW.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTopTest/SWDRAW/SWDRAW.hxx",
+      "sha256": "1743937582420110C4FBC8267E66EB3C78600295A9FEEE5583EE17BF7EC0BEBC"
+    },
+    {
+      "name": "TObjDRAW.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKTObjDRAW/TObjDRAW/TObjDRAW.hxx",
+      "sha256": "6F60E1D1492CA27FAE14E4C83E7ABC579D14FF7E413C83BED92CB3C8D479A783"
+    },
+    {
+      "name": "ViewerTest_AutoUpdater.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKViewerTest/ViewerTest/ViewerTest_AutoUpdater.hxx",
+      "sha256": "20BC39DE57D2BECEA846B5F0671ABBE3C6766C863E8A2ACC386DDBBE811DE94F"
+    },
+    {
+      "name": "ViewerTest_CmdParser.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKViewerTest/ViewerTest/ViewerTest_CmdParser.hxx",
+      "sha256": "F0F6DA6CA5F3A5BC544EA8D4BC41C420049DBA3E0F4D86E5494D173CFDB6179F"
+    },
+    {
+      "name": "ViewerTest_ContinuousRedrawer.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKViewerTest/ViewerTest/ViewerTest_ContinuousRedrawer.hxx",
+      "sha256": "28E2B56C96DA5D3791B4401E5607574783B4901EFABEA77B1EC68B1CBD705968"
+    },
+    {
+      "name": "ViewerTest_EventManager.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKViewerTest/ViewerTest/ViewerTest_EventManager.hxx",
+      "sha256": "954269B4B7A37AA2087EA692CC59D41E1642A4FE3435C1C9ED185B7CBAE49013"
+    },
+    {
+      "name": "ViewerTest_V3dView.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKViewerTest/ViewerTest/ViewerTest_V3dView.hxx",
+      "sha256": "EC674F7807AD2E70786FC5F615AB373B2B4075188BCC51F4C052D4F2836F1E86"
+    },
+    {
+      "name": "ViewerTest.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKViewerTest/ViewerTest/ViewerTest.hxx",
+      "sha256": "13822A0D68E9815305643888E2F563A2F02DBECAB844849543433119270B0EDA"
+    },
+    {
+      "name": "XDEDRAW_Colors.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKXDEDRAW/XDEDRAW/XDEDRAW_Colors.hxx",
+      "sha256": "1570F4C22897D56F5DE18139C60FD3A31EEF33E6DD8187C70C262180763B72D8"
+    },
+    {
+      "name": "XDEDRAW_Common.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKXDEDRAW/XDEDRAW/XDEDRAW_Common.hxx",
+      "sha256": "7ABCBF7C472C841EE2B1B0EE127781B930C33AE1229CBCBD3628EB6C03306E38"
+    },
+    {
+      "name": "XDEDRAW_GDTs.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKXDEDRAW/XDEDRAW/XDEDRAW_GDTs.hxx",
+      "sha256": "89AFC4389C2B99B81B08BB1CB6B13B6F7AD50DD41533E8454F8B6E0602F9A827"
+    },
+    {
+      "name": "XDEDRAW_Layers.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKXDEDRAW/XDEDRAW/XDEDRAW_Layers.hxx",
+      "sha256": "A71E7F96884223FD6D33831ECD0F17F9EA325D8D8E286A9EAE6B1744A70842C6"
+    },
+    {
+      "name": "XDEDRAW_Notes.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKXDEDRAW/XDEDRAW/XDEDRAW_Notes.hxx",
+      "sha256": "48E3DDFC62CEAD3D511C04979B80DE8DD5225F12678C118E62B6B6BD2331AA7C"
+    },
+    {
+      "name": "XDEDRAW_Props.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKXDEDRAW/XDEDRAW/XDEDRAW_Props.hxx",
+      "sha256": "81F991ED354D8A92F3D29FC608417D72B9C0157F413A4A2403CE62EF0168D514"
+    },
+    {
+      "name": "XDEDRAW_Shapes.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKXDEDRAW/XDEDRAW/XDEDRAW_Shapes.hxx",
+      "sha256": "D409E0B1FFC023A8D7A521572135609A58760869147B882B3A74B39FEF3472DD"
+    },
+    {
+      "name": "XDEDRAW_Views.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKXDEDRAW/XDEDRAW/XDEDRAW_Views.hxx",
+      "sha256": "F560226B6631A6E15FAAE30F0F25D577DD72208F9593D7B5D321028D7B59E777"
+    },
+    {
+      "name": "XDEDRAW.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKXDEDRAW/XDEDRAW/XDEDRAW.hxx",
+      "sha256": "50C78DCE7CA702D98F6E81FCDA089211B05998E13925388479E60485B1A911F1"
+    },
+    {
+      "name": "XSDRAW_Functions.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKXSDRAW/XSDRAW/XSDRAW_Functions.hxx",
+      "sha256": "6D4AD8F8E0754262A4AC26BF219A3F42C20A614538D03555263AAA08CC47F693"
+    },
+    {
+      "name": "XSDRAW_Vars.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKXSDRAW/XSDRAW/XSDRAW_Vars.hxx",
+      "sha256": "66F9FB82458C99491D4F6ECC1F6D3611CA50967FC701F4D3C2783E1807B31C82"
+    },
+    {
+      "name": "XSDRAW.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKXSDRAW/XSDRAW/XSDRAW.hxx",
+      "sha256": "6376F3FE976C8CAD6B3101CF810A32D9A4BF384CA1CF3A53966A523AE6623635"
+    },
+    {
+      "name": "XSDRAWDE.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKXSDRAWDE/XSDRAWDE/XSDRAWDE.hxx",
+      "sha256": "C547DC3AF3CD8A50562345435CC095CB8D187F21910DD1E0E5FE571A547EEE14"
+    },
+    {
+      "name": "XSDRAWGLTF.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKXSDRAWGLTF/XSDRAWGLTF/XSDRAWGLTF.hxx",
+      "sha256": "DD107CC059BF09A064AED5C3B164264D126520620F7AF31402D658A26458CAFB"
+    },
+    {
+      "name": "XSDRAWIGES.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKXSDRAWIGES/XSDRAWIGES/XSDRAWIGES.hxx",
+      "sha256": "FC828AE3CFB1631141A98C8802382C94E54C999A987A1355C10F491CF0795B48"
+    },
+    {
+      "name": "XSDRAWOBJ.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKXSDRAWOBJ/XSDRAWOBJ/XSDRAWOBJ.hxx",
+      "sha256": "B360D2142DAC5667D812AB59A8ED9D2D8F5D01921E8603E04C04A4E099E1B9BF"
+    },
+    {
+      "name": "XSDRAWPLY.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKXSDRAWPLY/XSDRAWPLY/XSDRAWPLY.hxx",
+      "sha256": "C0C708D643BB381FA0658ECFBFAE5BB4D7F4A9071ADE9FDB96024699C956F067"
+    },
+    {
+      "name": "XSDRAWSTEP.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKXSDRAWSTEP/XSDRAWSTEP/XSDRAWSTEP.hxx",
+      "sha256": "21DD12C9C323240AC8E6490E0638B02FA70560785E37E95ABE8EE920AD0AA228"
+    },
+    {
+      "name": "XSDRAWSTL_DataSource.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKXSDRAWSTL/XSDRAWSTL/XSDRAWSTL_DataSource.hxx",
+      "sha256": "640D11C2FCFD3093F8D7A936EADC8A07C5057275FE475A4F6DF4E7202907D370"
+    },
+    {
+      "name": "XSDRAWSTL_DataSource3D.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKXSDRAWSTL/XSDRAWSTL/XSDRAWSTL_DataSource3D.hxx",
+      "sha256": "57A95EB061D49B3048788C0CD9F4BBD866B53837DA4DD4CDD9CC7581D3545EB6"
+    },
+    {
+      "name": "XSDRAWSTL_DrawableMesh.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKXSDRAWSTL/XSDRAWSTL/XSDRAWSTL_DrawableMesh.hxx",
+      "sha256": "B948331F3407903E9D46EF5031A5FD5CF1D921579DD89D1F5829D1D3CD4E3466"
+    },
+    {
+      "name": "XSDRAWSTL.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKXSDRAWSTL/XSDRAWSTL/XSDRAWSTL.hxx",
+      "sha256": "1FCF5129491748C9758E7D22E361DB40173C8F0AC9C1DC5BD6B310B74B10A763"
+    },
+    {
+      "name": "XSDRAWVRML.hxx",
+      "archivePath": "OCCT-8_0_1/src/Draw/TKXSDRAWVRML/XSDRAWVRML/XSDRAWVRML.hxx",
+      "sha256": "62D67DA4B5B8BE59E7410E3DBFE2958D50D432440AD6C548627CD3B54B399BE0"
+    }
+  ]
+}

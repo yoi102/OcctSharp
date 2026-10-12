@@ -30,6 +30,12 @@
     }
   ],
   "features": {
+    "ffmpeg": {
+      "description": "Preserve generated Media time-conversion semantics",
+      "dependencies": [
+        { "name": "ffmpeg", "default-features": false, "features": ["avcodec", "avformat", "swscale"] }
+      ]
+    },
     "freeimage": {
       "description": "Enable optional usage of freeimage",
       "dependencies": [

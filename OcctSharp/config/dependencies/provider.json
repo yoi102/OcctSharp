@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "provider": "vcpkg-occt801-d3d-original-headers-v1",
+  "provider": "vcpkg-occt801-d3d-media-original-headers-v2",
   "registryCommit": "e456309491fd875487bf02b8a0dca76c1b1b00cc",
   "toolVersion": "2026-09-26-51bf87ca6e9bf3e622d84ff323bd202ab1ca0c0b",
   "toolSha256": "2A4AE1467B9E797964C60C919D057B9E5DC1EC03F4B9632C1150026DB25201F2",
@@ -8,7 +8,10 @@
   "sourceCommit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
   "sourceArchiveSha512": "bbe7099071cbf5397940ebc6e66ec05f8023d5e5aae6142870e14b93aa6f8f94c30980ef421e717f0fbfbc23b3520c3ccfe8a939c4caba3ccbf325060e26eb52",
   "triplet": "x64-windows",
-  "features": ["freeimage", "freetype", "rapidjson", "tbb"],
-  "overlayChanges": ["USE_D3D enabled", "FFMPEG and OPENVR disabled", "Preserve original SDK header bytes instead of rewriting include delimiters"],
+  "features": ["ffmpeg", "freeimage", "freetype", "rapidjson", "tbb"],
+  "ffmpegVersion": "9.0.2#1",
+  "ffmpegPortTree": "b9e158fe3e4f9d727af5e5904e1121d844267df3",
+  "ffmpegSourceArchiveSha512": "21bf3fbcdfd2f41ea6edeab40433fecfe362b09ecaa177a652471b54f9357011b4f74dab18245ab1c26f1a473b94205490baecb42289afd2effd603cd0b22b59",
+  "overlayChanges": ["USE_D3D enabled", "FFMPEG enabled for existing generated Media semantics", "OPENVR disabled", "Preserve original SDK header bytes instead of rewriting include delimiters"],
   "publicationPayload": "Existing precompiled provider until separately qualified"
 }

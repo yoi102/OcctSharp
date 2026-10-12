@@ -5,37 +5,51 @@ versioned native C ABI, generated low-level bindings, and friendly managed CAD A
 modeling, STEP/IGES/STL exchange, XDE assemblies and metadata, meshing, inspection, and
 Windows visualization.
 
-Current local package candidate: `8.0.1-preview.45` for Windows x64; complete local
-gates pass, with final delivery freeze tracked in STATUS. [STATUS](docs/STATUS.md) records full gates. The NuGet graph
+Current version: `8.0.1-preview.85` for Windows x64, ABI1.118 / bridge0.133.0.
+[STATUS](docs/STATUS.md) records validation, publication and downstream acceptance.
+The NuGet graph
 contains 12 managed modules, the `OcctSharp` facade, and one shared
-`OcctSharp.Native.win-x64` package with 62 DLLs in the application's `occt/`
+`OcctSharp.Native.win-x64` precompiled-provider package with62 DLLs in the application's `occt/`
 directory. No machine-wide OCCT installation or PATH change is required.
 
-[Batch AT](docs/BATCH_AT_EXCHANGE_SESSIONS.md) adds private STEP/IGES file sessions,
-copied headers and checks, domain-scoped entity selections, and restored metadata
-export. It reuses existing transfer/writer workflows; schemas and geometry units
-remain read-only. AP–AT are delivered. [AU](docs/BATCH_AU_SELECTION_WORKSPACES.md)
-adds parent-bound selecting volumes and world-hit diagnostics; its visible-frame
-and final delivery gates are still open.
+[Preview.85 admission](docs/CADORYX_PUBLIC_PREVIEW85_PLAN.md) adds owned authoring
+copies and history domains, defeature history, initial display modes, exact STEP
+offset graphs and periodic distance prerequisites. These reusable support rules
+are generator-owned; support-file counts do not grant raw declaration credit.
 Declaration migration coverage and product completion are separate; external
 CAD, hosted CI, signing and public publication have their own acceptance gates.
 
 ## Install
 
 ```powershell
-dotnet add package OcctSharp --version 8.0.1-preview.55 --source ./OcctSharp/artifacts/packages
+dotnet add package OcctSharp --version 8.0.1-preview.85 --source https://api.nuget.org/v3/index.json
 ```
 
 A narrow consumer can reference a module directly, for example:
 
 ```powershell
-dotnet add package OcctSharp.Modeling --version 8.0.1-preview.55 --source ./OcctSharp/artifacts/packages
+dotnet add package OcctSharp.Modeling --version 8.0.1-preview.85 --source https://api.nuget.org/v3/index.json
 ```
 
 The supported runtime baseline is .NET 10, Windows x64, and OCCT 8.0.1.
-Preview.45 passes local gates; its final identity freeze is tracked in STATUS. Public publication is a separate gate. Create the
-local package feed with `OcctSharp/eng/pack.ps1` using the contributor toolchain, or run
+Confirm version availability from the publication receipt linked in STATUS. Create the
+local package feed with `OcctSharp/eng/pack.ps1` using the contributor toolchain and
+select `./OcctSharp/artifacts/packages` as the source, or run
 the repository samples directly with the committed runtime.
+
+For a fixed source dependency toolchain, see [pinned vcpkg recovery](docs/DEPENDENCY_RECOVERY.md).
+This is for contributors rebuilding OcctSharp itself. Cadoryx and other NuGet
+consumers receive the native DLLs through their packages and require no vcpkg.
+From the inner `OcctSharp/` directory:
+
+```powershell
+./eng/restore-dependencies.ps1 -RequireEmpty -NoBinaryCache
+./eng/build-vcpkg.ps1 -InstallRoot ./artifacts/dependencies/vcpkg-installed
+```
+
+This independent provider has configuration-specific runtime manifests and its
+own runtime/license qualification. The published precompiled payload retains
+its separately validated62-DLL manifest.
 
 ## Configure review lighting and capture copied frames
 

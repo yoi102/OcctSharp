@@ -21,6 +21,7 @@ endif()
 
 vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
     FEATURES
+        ffmpeg      USE_FFMPEG
         freeimage   USE_FREEIMAGE
         freetype    USE_FREETYPE
         rapidjson   USE_RAPIDJSON
@@ -44,7 +45,6 @@ vcpkg_cmake_configure(
         -DINSTALL_TEST_CASES=OFF
         -DUSE_TK=OFF
         -DUSE_D3D=ON
-        -DUSE_FFMPEG=OFF
         -DUSE_OPENVR=OFF
 )
 

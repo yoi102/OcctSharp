@@ -143,6 +143,16 @@ target_include_directories(OcctSharp.Native
   PUBLIC
     "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>")
 
+if(OCCTSHARP_DEPENDENCY_PROVIDER STREQUAL "vcpkg")
+  if(NOT IS_DIRECTORY "${OCCTSHARP_GENERATOR_SDK_INCLUDE_DIR}" OR
+     NOT EXISTS "${OCCTSHARP_GENERATOR_SDK_INCLUDE_DIR}/BOPTest_DrawableShape.hxx")
+    message(FATAL_ERROR "Recover the complete, qualified generator SDK header view first.")
+  endif()
+  # Generated handle declarations include optional toolkit types. Their original
+  # headers come from the fixed source archive; libraries retain the core graph.
+  target_include_directories(OcctSharp.Native PRIVATE "${OCCTSHARP_GENERATOR_SDK_INCLUDE_DIR}")
+endif()
+
 set(OCCTSHARP_CORE_TOOLKITS
   # FoundationClasses
   TKernel

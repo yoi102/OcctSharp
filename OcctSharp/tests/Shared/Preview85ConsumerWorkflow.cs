@@ -40,8 +40,11 @@ internal static class Preview85ConsumerWorkflow
                 "sweep volume");
         }
 
-        using var hole = FeatureModeling.CutHole(box, new(6, 6, 20), new(0, 0, -1), 1, 30, true,
-            new() { FuzzyTolerance = 1e-7, NonDestructive = true, RepairInputs = false, UnifyResult = true });
+        using var cylinder = ShapeFactory.CreateCylinder(1, 30);
+        using var cutter = cylinder.Transformed(ShapeTransform.CreateTranslationAndRotationZ(6, 6, -10, 0));
+        using var sourceSnapshot = RepairSnapshot.Create(box);
+        using var cutterSnapshot = RepairSnapshot.Create(cutter);
+        using var hole = BooleanHistoryModeling.Build(TopologyBooleanOperation.Cut, [sourceSnapshot, cutterSnapshot]);
         using var snapshot = RepairSnapshot.Create(hole.RequireShape());
         var faces = snapshot.Topology.Where(item =>
         {

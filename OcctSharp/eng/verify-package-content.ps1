@@ -74,7 +74,20 @@ $checksumPaths = [Collections.Generic.Dictionary[string, string]]::new([StringCo
 foreach ($name in @('api-diff.json', 'provenance.json', 'release-gates.json', 'sbom.cdx.json')) {
     $checksumPaths.Add($name, (Join-Path $releaseRoot $name))
 }
-$checksumPaths.Add([IO.Path]::GetFileName($facadePath), $facadePath)
+$snapshotPath = Join-Path $releaseRoot 'package-inputs.json'
+$snapshot = Get-Content -LiteralPath $snapshotPath -Raw | ConvertFrom-Json
+if ($snapshot.state -cne 'PASS' -or $snapshot.packageVersion -cne $PackageVersion -or
+    @($snapshot.packages).Count -ne 14) { throw 'Invalid release package snapshot.' }
+$checksumPaths.Add('package-inputs.json', $snapshotPath)
+foreach ($package in $snapshot.packages) {
+    if ([IO.Path]::GetFileName($package.name) -cne $package.name -or
+        $package.name -cnotlike "OcctSharp*.$PackageVersion.nupkg") { throw 'Invalid release package name.' }
+    $packageFile = Join-Path $packages $package.name
+    if ((Get-FileHash -LiteralPath $packageFile -Algorithm SHA256).Hash -cne $package.sha256) {
+        throw "Release package snapshot mismatch: '$($package.name)'."
+    }
+    $checksumPaths.Add($package.name, $packageFile)
+}
 $seen = [Collections.Generic.HashSet[string]]::new([StringComparer]::Ordinal)
 foreach ($line in Get-Content -LiteralPath (Join-Path $releaseRoot 'checksums.sha256')) {
     if ($line -cnotmatch '^([0-9A-F]{64})  (.+)$') { throw 'Malformed release checksum.' }
@@ -103,4 +116,4 @@ if (-not $outputFile.StartsWith($artifactPrefix, [StringComparison]::OrdinalIgno
 }
 [IO.Directory]::CreateDirectory((Split-Path -Parent $outputFile)) | Out-Null
 [IO.File]::WriteAllText($outputFile, ($report | ConvertTo-Json) + [Environment]::NewLine, [Text.UTF8Encoding]::new($false))
-Write-Host "Package content PASS: $($documents.Count) stable documents, $($manifest.files.Count) runtime/license files, five checksums and final provenance."
+Write-Host "Package content PASS: $($documents.Count) stable documents, $($manifest.files.Count) runtime/license files, $($seen.Count) checksums and final provenance."

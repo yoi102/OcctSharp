@@ -1,15 +1,21 @@
 # Current Status
 
-- Updated2026-10-12 (Asia/Tokyo).
+- Updated2026-10-13 (Asia/Tokyo).
 - BR–CI18/18 authorized batches frozen local PASS; planned batches remaining0.
-- Final local candidate Preview.84 / ABI1.117 / bridge0.132.0.
-- Active authorized consumer migration/publication: [Preview.85 plan](CADORYX_PUBLIC_PREVIEW85_PLAN.md).
+- Latest public delivery Preview.85 / ABI1.118 / bridge0.133.0;14 packages published and remotely verified.
+- Completed public consumer migration/publication: [Preview.85 delivery](PREVIEW85_DELIVERY.md).
   Preview.85 / ABI1.118 / bridge0.133.0 implemented:399 outputs,4472 forwarders,220 exact fixtures;
   Generator410/410, Release Runtime2255/2255, C11 ABI95 headers/25 layouts and API+104/-0 PASS.
-  Debug full attempt1:2244/2255; primary-monitor placement correction focused58/58 PASS; full rerun active.
-  Native exports+9 C/+2 compiler symbols/-0;14 local packages created; clean consumers/remote NOT RUN.
-  [Pinned vcpkg recovery](DEPENDENCY_RECOVERY.md) prepared; clean source restore active, build/runtime NOT RUN.
-- Authority: OcctSharp/artifacts/batch-ci/delivery-result.json. CH Preview.83 packages remain immutable.
+  Template include correction requalified Release/Debug Generator410/Runtime2255; actual Debug2255/62 loaded DLLs PASS.
+  Native exports+9 C/+2 compiler symbols/-0; final14 packages/two consumers/content/checksums local PASS.
+  Corrected-source cold399/410/2255 PASS; remote14 payloads/catalog hashes/repository signatures PASS.
+  Two fresh SDK10.0.401 public-only consumers restore/build/runtime PASS; direct has no facade and both match62 DLLs.
+  [Pinned vcpkg recovery](DEPENDENCY_RECOVERY.md): v1 full Runtime2253/2255 (disabled FFmpeg); v2 empty/no-binary-cache recovery and both bridges/actual Runtime2255/2255 PASS.
+  V2 independent84 DLLs/22 license texts per configuration PASS, exports41509 unchanged; sampled loaded modules Release84/Debug40.
+  Debug module snapshot is partial. V1 failed2253/2255 is retained; published provider remains precompiled62.
+  Independent provider authority: OcctSharp/artifacts/cadoryx-public-sdk85/vcpkg-media-qualification.json.
+- BR–CI authority: OcctSharp/artifacts/batch-ci/delivery-result.json. CH Preview.83 packages remain immutable.
+  Preview.85 authority: OcctSharp/artifacts/cadoryx-public-sdk85/public-delivery.json; published packages immutable.
 - [Whole-round freeze and remaining work](BATCH_CI_ROUND_FREEZE.md); [continuous plan](NEXT_ROUND_BR_CI_PLAN.md).
 - [Unchanged overall/module accounting](PROGRESS_PREVIEW_83.md):116366 declarations, Emitted28020, Manual598,
   Blocked38341, Skipped49407, Pending0; parser exclusions28. Non-Skipped28618/66959=42.7396%.
@@ -25,7 +31,7 @@
 -598 Manual rows link to31 owner/algorithm exception groups; full migration admission remains separate.
   Pinned AppSweep deferred.18 planned batches do not establish whole-SDK or product completion.
 - Next work: exact consumer-driven admission, reusable generator rules, narrow Blocked/exclusion causes and separate AppSweep audit.
-- Repository source delivery is recorded in Git history. Hosted CI, signing, public NuGet, external CAD, physical GPU removal,
+- Repository source delivery is recorded in Git history. Public NuGet/repository signatures/fresh remote consumers PASS. Hosted CI, author signing, external CAD, physical GPU removal,
   physical display/input latency, mixed-DPI/RDP and human application acceptance: NOT RUN.
 
 ### Cadoryx A5 private render-health continuation (2026-10-11)

@@ -28125,7 +28125,7 @@
     },
     {
       "relativePath": "src/OcctSharp.Native/generated/DataExchange/OcctSharp.DataExchange.TransferRecords.Generated.cpp",
-      "sha256": "DDC4125BF0B7970DE47DA1A10762C4D08C34343982E8F50405CC69E946E23DA5",
+      "sha256": "6EEEB259DEA0FEBEF2473E76B06438BAC4C0F3C95F04B9435089170446B109A2",
       "productModule": "DataExchange",
       "apiLayer": "Raw",
       "outputShard": "TransferRecords"
@@ -31510,7 +31510,7 @@
     },
     {
       "resourceName": "OcctSharp.Generator.Emission.transfer-records-native.txt",
-      "sha256": "22CBD619D68D476FC9E5EFA06BEDFBE46948D8323AC08E268919E837000483B6"
+      "sha256": "DD5F30D9B913B935214EB070714958023EE3F0C43DA2D4183BFF69689CE2DEB2"
     },
     {
       "resourceName": "OcctSharp.Generator.Emission.unit-diagnostic-workflow-managed.txt",
