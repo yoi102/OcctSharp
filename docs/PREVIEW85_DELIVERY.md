@@ -56,6 +56,15 @@ nuget.org; implicit SDK library-packs sources were explicitly disabled.
 Published packages are immutable. Subsequent source/build-tool/documentation
 maintenance in this checkout is not retrospectively included in those packages.
 
+After source delivery,117 verified disposable cache targets were removed:
+37,663,196,524 bytes (35.08 GiB by logical file size). This covers public project
+bin/obj, native objects/PCH, pack staging, temporary consumer caches and this
+provider's disposable vcpkg build/package trees. Final packages, signed remote
+packages, runtime DLLs/manifests/licenses, installed prefixes, sources/fixtures,
+private preparations and786 archived dependency logs remain. Jasper/OpenEXR/zstd
+source cache trees containing symbolic links were retained. The exact deletion
+receipt is `cleanup-result.json`; no global cache or Cadoryx directory was removed.
+
 ## Independent source dependency provider
 
 The [pinned vcpkg route](DEPENDENCY_RECOVERY.md) is for OcctSharp contributors.

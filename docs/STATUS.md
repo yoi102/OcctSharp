@@ -14,6 +14,8 @@
   V2 independent84 DLLs/22 license texts per configuration PASS, exports41509 unchanged; sampled loaded modules Release84/Debug40.
   Debug module snapshot is partial. V1 failed2253/2255 is retained; published provider remains precompiled62.
   Independent provider authority: OcctSharp/artifacts/cadoryx-public-sdk85/vcpkg-media-qualification.json.
+  Source committed/pushed;117 disposable cache targets removed,35.08 GiB logical bytes; final artifacts/evidence preserved.
+  Three symbolic-link source cache trees retained; cleanup authority: cadoryx-public-sdk85/cleanup-result.json.
 - BR–CI authority: OcctSharp/artifacts/batch-ci/delivery-result.json. CH Preview.83 packages remain immutable.
   Preview.85 authority: OcctSharp/artifacts/cadoryx-public-sdk85/public-delivery.json; published packages immutable.
 - [Whole-round freeze and remaining work](BATCH_CI_ROUND_FREEZE.md); [continuous plan](NEXT_ROUND_BR_CI_PLAN.md).
